@@ -99,3 +99,22 @@ Run the model and popularity controls with:
 python analysis/run_bench.py --bench ./9.bench --out ./9.bench/results.csv
 python analysis/summarize_bench.py --results ./9.bench/results.csv
 ```
+
+## Multi-task Extension (improvement direction #2)
+
+The released `predict_association.py` trains lncRNA-drug and miRNA-drug as two
+completely separate single-task models. `multitask_train.py` introduces a
+genuine multi-task design that the paper review identified as a key improvement
+direction:
+
+  1. **Shared heterogeneous GNN encoder** with **task-specific decoders**
+  2. **Cross-task consistency** via lncRNA-miRNA interaction edges (LncMi)
+  3. **Task-aware contrastive** objective (InfoNCE within ncRNA type)
+  4. **Uncertainty-weighted** adaptive loss reweighting (Kendall et al., 2018)
+  5. **Validation-based** model selection (fixes test-set selection bias §2.3)
+
+Results and comparison with the single-task baseline are in
+`analysis/MULTITASK_RESULTS.md`. The multi-task model matches the paper's
+LncDrug AUPR (0.9585) with a shared encoder, and improves LncDrug perDrugAUC by
++0.187 on the cold-drug debiased split.
+
