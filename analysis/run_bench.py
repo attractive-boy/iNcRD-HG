@@ -31,7 +31,15 @@ from torch_geometric.data import Data
 from bench_metrics import pairwise_metrics, ranking_metrics
 
 TASKS = [("lncRNA", "LncDrug", "LncLnc"), ("miRNA", "MiDrug", "MiMi")]
-SPLITS = ["random", "matched", "cold_rna", "cold_drug", "cold_pair"]
+SPLITS = [
+    "random", "matched_drug", "matched_rna", "matched_both",
+    "cold_rna", "cold_drug", "cold_pair", "matched",
+]
+DEFAULT_SPLITS = [
+    "random", "matched_drug", "matched_rna", "matched_both",
+    "cold_rna", "cold_drug", "cold_pair",
+]
+DEGREE_CONTROLS = ["degree", "rna_degree", "degree_product"]
 
 # Encoders exactly as compare_base_GNN.py defines them; ASAP is LEConv there.
 ENCODERS = {
@@ -197,11 +205,28 @@ def run_flat(bench, split, rna_type, edge_type, sim_type, name, seed, device,
 # degree control
 # --------------------------------------------------------------------------
 
-def run_degree(bench, split, rna_type, edge_type, device):
-    """The control from popularity_bias_diagnosis.py: drug degree, nothing else."""
+def run_degree(bench, split, rna_type, edge_type, device, method):
+    """Endpoint-popularity controls: no biology, no ncRNA--drug features."""
     train_data, _, test_data = load_split(bench, split, edge_type, device)
-    degree = collections.Counter(train_data[rna_type, edge_type, "drug"].edge_index[1].tolist())
-    return (lambda pairs: np.array([degree[int(d)] for d in pairs[1]], dtype=float)), test_data
+    key = (rna_type, edge_type, "drug")
+    rna_degree = collections.Counter(train_data[key].edge_index[0].tolist())
+    drug_degree = collections.Counter(train_data[key].edge_index[1].tolist())
+
+    if method == "degree":
+        def score(pairs):
+            return np.array([drug_degree[int(d)] for d in pairs[1]], dtype=float)
+    elif method == "rna_degree":
+        def score(pairs):
+            return np.array([rna_degree[int(r)] for r in pairs[0]], dtype=float)
+    elif method == "degree_product":
+        def score(pairs):
+            return np.array([
+                np.log1p(rna_degree[int(r)]) * np.log1p(drug_degree[int(d)])
+                for r, d in pairs.T.tolist()
+            ], dtype=float)
+    else:
+        raise ValueError(f"unknown degree control: {method}")
+    return score, test_data
 
 
 def _safe_auc(y, s):
@@ -235,9 +260,9 @@ def main():
     parser.add_argument("--bench", default="./9.bench")
     parser.add_argument("--out", default="./9.bench/results.csv")
     parser.add_argument("--seeds", type=int, nargs="+", default=[666, 0, 1])
-    parser.add_argument("--splits", nargs="+", default=SPLITS, choices=SPLITS)
+    parser.add_argument("--splits", nargs="+", default=DEFAULT_SPLITS, choices=SPLITS)
     parser.add_argument("--methods", nargs="+",
-                        default=["degree", "iNcRD-HG"] + list(ENCODERS))
+                        default=DEGREE_CONTROLS + ["iNcRD-HG"] + list(ENCODERS))
     parser.add_argument("--device", default="cuda")
     args = parser.parse_args()
 
@@ -252,10 +277,12 @@ def main():
             print(f"\n=== {split} / {edge_type} ===")
             for method in args.methods:
                 per_seed = []
-                seeds = [0] if method == "degree" else args.seeds
+                seeds = [0] if method in DEGREE_CONTROLS else args.seeds
                 for seed in seeds:
-                    if method == "degree":
-                        fn, td = run_degree(args.bench, split, rna_type, edge_type, device)
+                    if method in DEGREE_CONTROLS:
+                        fn, td = run_degree(
+                            args.bench, split, rna_type, edge_type, device, method
+                        )
                     elif method == "iNcRD-HG":
                         fn, td = run_hetero(args.bench, split, rna_type, edge_type, seed, device)
                     else:

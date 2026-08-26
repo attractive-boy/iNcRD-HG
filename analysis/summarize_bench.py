@@ -8,8 +8,14 @@ import argparse
 
 import pandas as pd
 
-SPLIT_ORDER = ["random", "matched", "cold_rna", "cold_drug", "cold_pair"]
-METHOD_ORDER = ["degree", "iNcRD-HG", "GAT", "GraphSAGE", "ASAP", "GeneralGNN", "GraphConv", "GCN"]
+SPLIT_ORDER = [
+    "random", "matched_drug", "matched_rna", "matched_both",
+    "cold_rna", "cold_drug", "cold_pair",
+]
+METHOD_ORDER = [
+    "degree", "rna_degree", "degree_product", "iNcRD-HG",
+    "GAT", "GraphSAGE", "ASAP", "GeneralGNN", "GraphConv", "GCN",
+]
 METRICS = {
     "auc": "global AUC (pooled over drugs)",
     "auc_per_drug": "per-drug macro AUC",
@@ -61,9 +67,9 @@ def main():
     # Seed stability: a method whose spread swamps the reported margins is not
     # separable from its baselines no matter which way the mean falls.
     print("\n### seed spread on the debiased splits (per-drug macro AUC std)")
-    spread = frame[frame.split != "random"].pivot_table(
+    spread = frame[~frame.split.isin(["random", "matched"])].pivot_table(
         index="method", columns=["task", "split"], values="auc_per_drug_std"
-    ).reindex([m for m in METHOD_ORDER if m != "degree"])
+    ).reindex([m for m in METHOD_ORDER if m not in ("degree", "rna_degree", "degree_product")])
     print(spread.round(3).to_string())
 
     if args.csv_out:

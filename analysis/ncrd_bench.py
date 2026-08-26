@@ -5,20 +5,28 @@ reward drug popularity.
 `analysis/popularity_bias_diagnosis.py` shows the released split is solved to
 AUC 0.978 by drug degree alone, because `T.RandomLinkSplit` draws negatives
 uniformly over (ncRNA, drug) while positives pile onto a few studied drugs.
-This module builds five splits that close that gap:
+This module builds popularity-controlled splits:
 
   random     the original protocol, uniform negatives -- kept as a reference
              point so the drop on the other splits is directly readable
-  matched    same positives, but every negative sits on the SAME drug as the
+  matched_drug
+             same positives, but every negative sits on the SAME drug as the
              positive it is matched to, so the drug marginal is identical in
              both classes and popularity carries no information
+  matched_rna
+             negatives share the ncRNA with a positive, neutralising the
+             ncRNA-popularity marginal
+  matched_both
+             negatives share the drug and the ncRNA degree bin, neutralising
+             both endpoints' coarse popularity signal
   cold_rna   ncRNAs are partitioned by node; test ncRNAs have no drug edge in
              the training graph at all, only expression similarity and ceRNA
              links, so the model must generalise from what the ncRNA *is*
   cold_drug  the same for drugs
   cold_pair  test pairs where both endpoints are held out
 
-Every split except `random` uses same-drug negatives.
+Every split except `random` uses popularity-controlled negatives.  `matched`
+is retained as a backward-compatible alias for `matched_drug`.
 
 Files are written in exactly the schema `3.heter_data` uses, so existing
 training code reads them without modification:
@@ -42,9 +50,27 @@ import torch_geometric.transforms as T
 from torch_geometric.data import HeteroData
 
 TASKS = [("lncRNA", "LncDrug"), ("miRNA", "MiDrug")]
-SPLITS = ["random", "matched", "cold_rna", "cold_drug", "cold_pair"]
+SPLITS = [
+    "random", "matched_drug", "matched_rna", "matched_both",
+    "cold_rna", "cold_drug", "cold_pair", "matched",
+]
+DEFAULT_SPLITS = [
+    "random", "matched_drug", "matched_rna", "matched_both",
+    "cold_rna", "cold_drug", "cold_pair",
+]
+MATCHING_BY_SPLIT = {
+    "random": "none",
+    "matched": "drug",
+    "matched_drug": "drug",
+    "matched_rna": "rna",
+    "matched_both": "both",
+    "cold_rna": "drug",
+    "cold_drug": "drug",
+    "cold_pair": "drug",
+}
 FRACTIONS = (0.6, 0.2, 0.2)  # train / val / test
 NEG_RATIO = 2.0  # matches the released protocol
+DEGREE_BINS = 4
 
 
 # --------------------------------------------------------------------------
@@ -120,7 +146,7 @@ def partition_positives(positives, kind, num_rna, num_drug, rng):
     pairs = positives.t().numpy()
     meta = {}
 
-    if kind in ("random", "matched"):
+    if kind in ("random", "matched", "matched_drug", "matched_rna", "matched_both"):
         order = rng.permutation(len(pairs))
         n_train = int(FRACTIONS[0] * len(pairs))
         n_val = int(FRACTIONS[1] * len(pairs))
@@ -152,9 +178,9 @@ def partition_positives(positives, kind, num_rna, num_drug, rng):
 # negative sampling
 # --------------------------------------------------------------------------
 
-def sample_uniform_negatives(positives, known, num_rna, num_drug, rng):
+def sample_uniform_negatives(positives, known, num_rna, num_drug, rng, neg_ratio):
     """The released protocol: any (ncRNA, drug) pair that is not a known positive."""
-    wanted = int(NEG_RATIO * positives.shape[1])
+    wanted = int(neg_ratio * positives.shape[1])
     out = set()
     while len(out) < wanted:
         r = int(rng.integers(0, num_rna))
@@ -164,13 +190,30 @@ def sample_uniform_negatives(positives, known, num_rna, num_drug, rng):
     return np.array(sorted(out)).T
 
 
-def sample_matched_negatives(positives, known, allowed_rna, rng, strict):
-    """Negatives on the same drug as the positive they are matched to.
+def degree_bins(rna_degrees, num_bins=DEGREE_BINS):
+    """Map ncRNA training degree to a deterministic popularity bin."""
+    degrees = np.asarray(rna_degrees, dtype=float)
+    positive = degrees[degrees > 0]
+    if positive.size == 0 or num_bins <= 1:
+        return np.zeros_like(degrees, dtype=int)
+    edges = np.unique(np.quantile(positive, np.linspace(0, 1, num_bins + 1)[1:-1]))
+    if edges.size == 0:
+        return np.zeros_like(degrees, dtype=int)
+    return np.searchsorted(edges, degrees, side="right")
 
-    Because each drug then contributes the same share of both classes, a scorer
-    that only knows drug identity sits exactly at AUC 0.5.
 
-    A heavily studied drug can want more negatives than the candidate pool holds
+def sample_matched_negatives(
+    positives, known, allowed_rna, rng, strict, matching="drug",
+    neg_ratio=NEG_RATIO, num_drug=None, rna_degree_bins=None,
+):
+    """Draw negatives that preserve a chosen endpoint-popularity marginal.
+
+    ``drug`` fixes the drug marginal, ``rna`` fixes the ncRNA marginal, and
+    ``both`` fixes the drug marginal while also matching the ncRNA's coarse
+    training-degree bin.  A scorer that only knows the fixed endpoint therefore
+    sits at AUC 0.5.
+
+    A heavily studied group can want more negatives than the candidate pool holds
     -- in the cold splits the pool is a single node fold, and even transductively
     the most connected drug is associated with over a third of all lncRNAs.
     Simply capping the negatives there would quietly restore the popularity
@@ -179,26 +222,60 @@ def sample_matched_negatives(positives, known, allowed_rna, rng, strict):
     whatever negatives the pool allows, since the bias only has to be neutral in
     the sets we score.  Returns the surviving positives alongside.
     """
-    by_drug = {}
+    if matching == "rna" and num_drug is None:
+        raise ValueError("num_drug is required for RNA-matched negatives")
+    if matching == "both" and rna_degree_bins is None:
+        raise ValueError("rna_degree_bins is required for degree-matched negatives")
+
+    groups = {}
     for r, d in positives.T.tolist():
-        by_drug.setdefault(d, []).append(r)
+        if matching == "drug":
+            key = int(d)
+        elif matching == "rna":
+            key = int(r)
+        elif matching == "both":
+            key = (int(rna_degree_bins[int(r)]), int(d))
+        else:
+            raise ValueError(f"unknown matching mode: {matching}")
+        groups.setdefault(key, []).append((int(r), int(d)))
 
     kept_pos, negatives, dropped = [], set(), 0
-    for drug, rows in by_drug.items():
-        pool = [r for r in allowed_rna if (r, drug) not in known]
-        capacity = int(len(pool) // NEG_RATIO)
+    for key, rows in groups.items():
+        if matching == "drug":
+            drug = key
+            pool = [
+                (int(r), drug) for r in allowed_rna
+                if (int(r), drug) not in known and (int(r), drug) not in negatives
+            ]
+        elif matching == "rna":
+            rna = key
+            pool = [
+                (rna, int(d)) for d in range(num_drug)
+                if (rna, int(d)) not in known and (rna, int(d)) not in negatives
+            ]
+        else:
+            _, drug = key
+            pool = [
+                (int(r), drug) for r in allowed_rna
+                if int(rna_degree_bins[int(r)]) == key[0]
+                and (int(r), drug) not in known and (int(r), drug) not in negatives
+            ]
+        capacity = int(len(pool) // neg_ratio)
         if strict and capacity < len(rows):
             dropped += len(rows) - capacity
-            rows = list(rng.choice(rows, size=capacity, replace=False)) if capacity else []
+            rows = [
+                (int(pair[0]), int(pair[1]))
+                for pair in rng.choice(rows, size=capacity, replace=False)
+            ] if capacity else []
         if not rows:
             continue
-        kept_pos.extend((int(r), int(drug)) for r in rows)
-        take = min(int(NEG_RATIO * len(rows)), len(pool))
-        for r in rng.choice(pool, size=take, replace=False):
-            negatives.add((int(r), int(drug)))
+        kept_pos.extend(rows)
+        take = min(int(neg_ratio * len(rows)), len(pool))
+        chosen = rng.choice(len(pool), size=take, replace=False)
+        negatives.update(pool[int(i)] for i in chosen)
 
-    pos_arr = np.array(sorted(kept_pos)).T if kept_pos else np.empty((2, 0), dtype=int)
-    neg_arr = np.array(sorted(negatives)).T if negatives else np.empty((2, 0), dtype=int)
+    pos_arr = np.array(sorted(kept_pos)).T if len(kept_pos) else np.empty((2, 0), dtype=int)
+    neg_arr = np.array(sorted(negatives)).T if len(negatives) else np.empty((2, 0), dtype=int)
     return pos_arr, neg_arr, dropped
 
 
@@ -206,7 +283,10 @@ def sample_matched_negatives(positives, known, allowed_rna, rng, strict):
 # assembly
 # --------------------------------------------------------------------------
 
-def build_split(base, rna_type, edge_type, kind, seed):
+def build_split(
+    base, rna_type, edge_type, kind, seed,
+    neg_ratio=NEG_RATIO, degree_bin_count=DEGREE_BINS,
+):
     rng = np.random.default_rng(seed)
     rev_type = "rev_" + edge_type
 
@@ -214,6 +294,9 @@ def build_split(base, rna_type, edge_type, kind, seed):
     num_rna = base[rna_type].node_id.numel()
     num_drug = base["drug"].node_id.numel()
     known = {(int(r), int(d)) for r, d in positives.t().tolist()}
+    matching = MATCHING_BY_SPLIT[kind]
+    rna_degrees = np.bincount(positives[0].numpy(), minlength=num_rna)
+    rna_degree_bins = degree_bins(rna_degrees, degree_bin_count)
 
     parts, meta = partition_positives(positives, kind, num_rna, num_drug, rng)
     train_pos, val_pos, test_pos = parts
@@ -234,7 +317,7 @@ def build_split(base, rna_type, edge_type, kind, seed):
             continue
 
         if kind == "random":
-            neg = sample_uniform_negatives(pos, known, num_rna, num_drug, rng)
+            neg = sample_uniform_negatives(pos, known, num_rna, num_drug, rng, neg_ratio)
             sup_pos, dropped = pos, 0
         else:
             # Confine negatives to the same ncRNA fold as the positives, so a
@@ -245,7 +328,9 @@ def build_split(base, rna_type, edge_type, kind, seed):
             else:
                 allowed = list(range(num_rna))
             sup_pos, neg, dropped = sample_matched_negatives(
-                pos, known, list(allowed), rng, strict=(name != "train")
+                pos, known, list(allowed), rng, strict=(name != "train"),
+                matching=matching, neg_ratio=neg_ratio, num_drug=num_drug,
+                rna_degree_bins=rna_degree_bins,
             )
 
         if sup_pos.size == 0:
@@ -261,8 +346,12 @@ def build_split(base, rna_type, edge_type, kind, seed):
             # only from the target relation would let the model read the drug's
             # profile off the other relation -- the leak that
             # predict_simulated_drug.py leaves open.
-            held = set().union(*[meta["drug_folds"][i] for i in range(3)
-                                 if i != ("train", "val", "test").index(name)])
+            # Train and val graphs expose only training drugs; the test graph
+            # may expose train+val drugs because its message graph contains
+            # train+val positives.  Test drugs remain fully invisible.
+            fold = ("train", "val", "test").index(name)
+            visible = {0} if fold in (0, 1) else {0, 1}
+            held = set().union(*[meta["drug_folds"][i] for i in range(3) if i not in visible])
             other_rna, other_edge = ("miRNA", "MiDrug") if rna_type == "lncRNA" else ("lncRNA", "LncDrug")
             oi = data[other_rna, other_edge, "drug"].edge_index
             data[other_rna, other_edge, "drug"].edge_index = oi[:, ~torch.isin(oi[1], torch.tensor(sorted(held)))]
@@ -286,7 +375,9 @@ def build_split(base, rna_type, edge_type, kind, seed):
 
     meta.update(
         rna_type=rna_type, edge_type=edge_type, kind=kind, seed=seed,
+        matching=matching, neg_ratio=neg_ratio, degree_bin_count=degree_bin_count,
         num_rna=num_rna, num_drug=num_drug,
+        rna_degree_bins=rna_degree_bins.tolist(),
         known_pairs=sorted(known),
         train_pos=train_pos.tolist(), val_pos=val_pos.tolist(), test_pos=test_pos.tolist(),
     )
@@ -298,7 +389,9 @@ def main():
     parser.add_argument("--root", default=".")
     parser.add_argument("--out", default="./9.bench")
     parser.add_argument("--seed", type=int, default=666)
-    parser.add_argument("--splits", nargs="+", default=SPLITS, choices=SPLITS)
+    parser.add_argument("--splits", nargs="+", default=DEFAULT_SPLITS, choices=SPLITS)
+    parser.add_argument("--neg-ratio", type=float, default=NEG_RATIO)
+    parser.add_argument("--degree-bins", type=int, default=DEGREE_BINS)
     args = parser.parse_args()
 
     base = load_base_graph(args.root)
@@ -306,7 +399,10 @@ def main():
     for kind in args.splits:
         os.makedirs(f"{args.out}/{kind}", exist_ok=True)
         for rna_type, edge_type in TASKS:
-            outputs, meta = build_split(base, rna_type, edge_type, kind, args.seed)
+            outputs, meta = build_split(
+                base, rna_type, edge_type, kind, args.seed,
+                neg_ratio=args.neg_ratio, degree_bin_count=args.degree_bins,
+            )
             for name, data in outputs.items():
                 if data is None:
                     print(f"  {kind:10s} {edge_type:8s} {name:5s}  EMPTY -- no positives in this fold")

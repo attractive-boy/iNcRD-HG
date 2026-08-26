@@ -68,3 +68,34 @@ python graph_explain.py -e 'MiDrug' -f 'test' -i '0' -k 100 –p
 Case study visualization:
 ```bash
 python plot_case_drug.py -i '0' -k 100
+```
+
+## Popularity-Controlled Benchmark
+
+Generate the debiased benchmark after preparing `./3.heter_data`:
+
+```bash
+python analysis/ncrd_bench.py --out ./9.bench
+```
+
+The benchmark writes one directory per split: `random`, `matched_drug`,
+`matched_rna`, `matched_both`, `cold_rna`, `cold_drug`, and `cold_pair`.
+The files use the same `HeteroData` schema as the released training scripts.
+Audit every generated split before reporting results:
+
+```bash
+python analysis/audit_bench.py \
+  --bench ./9.bench \
+  --splits random matched_drug matched_rna matched_both cold_rna cold_drug cold_pair \
+  --json-out ./9.bench/audit.json
+```
+
+The audit fails if held-out positives appear in message-passing edges, sampled
+negatives collide with known positives, requested matching marginals are broken,
+or cold-drug graphs contain cross-task association edges to invisible drugs.
+Run the model and popularity controls with:
+
+```bash
+python analysis/run_bench.py --bench ./9.bench --out ./9.bench/results.csv
+python analysis/summarize_bench.py --results ./9.bench/results.csv
+```
