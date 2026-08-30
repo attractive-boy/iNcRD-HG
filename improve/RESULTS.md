@@ -45,7 +45,7 @@ judged on hyperparameters tuned for the base decoder. It gets **worse**, and
 the collapse (peaks near 0.95, ends near 0.62) reproduces at every lr — so it
 is a property of the change, not of the tuning.
 
-## Why the protocol has no headroom
+## Why the model-side changes have no headroom
 
 Two results in the table explain each other and are worth more than the deltas.
 
@@ -63,9 +63,10 @@ not an improvement to stop relying on the drug prior — it is a regression.
 Together: a scorer that reads only a drug's training degree already reaches
 **0.9775** on LncDrug, against `base` at 0.9866. The 0.009 that separates them
 is what is actually available to a model, and `base`'s own seed std is 0.0005.
-The protocol is saturated. Anything that makes the model more relational moves
-away from the metric; anything that makes it better at reading degree is
-redundant, because it already does.
+Anything that makes the model more relational moves away from the metric;
+anything that makes it better at reading degree is redundant, because it
+already does. What *does* buy a gain is a better estimate of the sampling
+propensity itself — see "The one thing that does improve" below.
 
 ## What is left if the number has to go up
 
