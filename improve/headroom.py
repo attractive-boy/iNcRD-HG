@@ -1,0 +1,134 @@
+# Where does the remaining error live, and is the drug prior orthogonal to the model?
+#
+# Two questions the arm sweep could not answer:
+#
+# 1. The degree-only scorer reaches 0.9775 and the model 0.9866, but their
+#    scores correlate at rho~0.84 -- they do not fail on the same edges.  A
+#    blend `model + alpha * log1p(drug_degree)`, with alpha chosen on the
+#    validation fold, can in principle beat both.  This is the one lever that
+#    works *with* the protocol instead of against it.
+# 2. If the residual errors sit on low-degree drugs there is ncRNA-side signal
+#    left to capture; if they are spread evenly across the degree range, the
+#    remaining gap is label noise and the protocol really is at its ceiling.
+import argparse
+import os
+import sys
+
+import numpy as np
+import pandas as pd
+import torch
+from sklearn.metrics import average_precision_score, roc_auc_score
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from improve.run import ARMS, TASKS, evaluate, load_splits, set_seed
+from improve.model import Model
+
+
+def train_capture(run_dir, task, seed, device):
+    """Train `base`; return val/test scores at the val-selected epoch."""
+    t = TASKS[task]
+    key = (t['rna'], task, 'drug')
+    set_seed(seed)
+    train_data, val_data, test_data = load_splits(run_dir, task, {}, device)
+    model = Model(train_data, t['channels'], t['aggr'], t['rna']).to(device)
+    opt = torch.optim.RMSprop(model.parameters(), lr=t['lr'], alpha=0.99)
+    li = train_data[key].edge_label_index
+    lb = train_data[key].edge_label
+
+    best_val, cap = -1.0, None
+    for _ in range(1, t['epochs']):
+        model.train()
+        opt.zero_grad()
+        torch.nn.functional.binary_cross_entropy_with_logits(
+            model(train_data.x_dict, train_data.edge_index_dict, li), lb).backward()
+        opt.step()
+        va, _ = evaluate(model, val_data, key)
+        if va > best_val:
+            best_val = va
+            model.eval()
+            with torch.no_grad():
+                cap = {}
+                for name, d in (('val', val_data), ('test', test_data)):
+                    cap[name] = model(d.x_dict, d.edge_index_dict,
+                                      d[key].edge_label_index).cpu().numpy()
+    # Drug training degree, from the training message-passing edges only.
+    deg = torch.zeros(train_data['drug'].num_nodes)
+    di = train_data[key].edge_index[1].cpu()
+    deg.scatter_add_(0, di, torch.ones_like(di, dtype=torch.float))
+    out = {}
+    for name, d in (('val', val_data), ('test', test_data)):
+        out[name] = dict(
+            score=cap[name],
+            y=d[key].edge_label.cpu().numpy(),
+            drug=d[key].edge_label_index[1].cpu().numpy())
+    return out, deg.numpy()
+
+
+def zscore(v):
+    return (v - v.mean()) / (v.std() + 1e-12)
+
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument('--run-dir', default='.')
+    p.add_argument('--tasks', nargs='+', default=list(TASKS))
+    p.add_argument('--seeds', nargs='+', type=int, default=[666, 0, 1, 2, 3])
+    p.add_argument('--out', required=True)
+    args = p.parse_args()
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    alphas = np.concatenate([[0.0], np.linspace(0.05, 3.0, 60)])
+    rows, diag = [], []
+
+    for task in args.tasks:
+        for seed in args.seeds:
+            cap, deg = train_capture(args.run_dir, task, seed, device)
+            prior = {k: np.log1p(deg[cap[k]['drug']]) for k in cap}
+
+            # alpha selected on val, applied once to test
+            zs = {k: zscore(cap[k]['score']) for k in cap}
+            zp = {k: zscore(prior[k]) for k in cap}
+            val_auc = [roc_auc_score(cap['val']['y'], zs['val'] + a * zp['val'])
+                       for a in alphas]
+            a_star = float(alphas[int(np.argmax(val_auc))])
+            blend = zs['test'] + a_star * zp['test']
+            rows.append(dict(
+                task=task, seed=seed, alpha=a_star,
+                model_auc=roc_auc_score(cap['test']['y'], zs['test']),
+                model_aupr=average_precision_score(cap['test']['y'], zs['test']),
+                prior_auc=roc_auc_score(cap['test']['y'], zp['test']),
+                blend_auc=roc_auc_score(cap['test']['y'], blend),
+                blend_aupr=average_precision_score(cap['test']['y'], blend),
+                spearman=float(pd.Series(zs['test']).corr(
+                    pd.Series(zp['test']), method='spearman'))))
+            print(f"{task} seed={seed} alpha={a_star:.2f} "
+                  f"model={rows[-1]['model_auc']:.4f} "
+                  f"prior={rows[-1]['prior_auc']:.4f} "
+                  f"blend={rows[-1]['blend_auc']:.4f}", flush=True)
+
+            # Where the model's residual error lives, by drug training degree.
+            t = cap['test']
+            d = pd.DataFrame(dict(y=t['y'], s=zs['test'],
+                                  deg=deg[t['drug']], drug=t['drug']))
+            d['bin'] = pd.qcut(d['deg'], 4, labels=False, duplicates='drop')
+            for b, g in d.groupby('bin', observed=True):
+                if g['y'].nunique() < 2:
+                    continue
+                diag.append(dict(task=task, seed=seed, bin=str(b), n=len(g),
+                                 pos=int(g['y'].sum()),
+                                 auc=roc_auc_score(g['y'], g['s'])))
+
+    df = pd.DataFrame(rows)
+    df.to_csv(args.out, index=False)
+    pd.DataFrame(diag).to_csv(args.out.replace('.csv', '_bydeg.csv'), index=False)
+    print('\n=== blend vs model (paired) ===')
+    df['delta'] = df['blend_auc'] - df['model_auc']
+    print(df.groupby('task')[['model_auc', 'prior_auc', 'blend_auc', 'delta',
+                              'alpha', 'spearman']].mean()
+          .to_string(float_format=lambda v: f'{v:.4f}'))
+    print('\n=== residual error by drug training degree ===')
+    print(pd.DataFrame(diag).groupby(['task', 'bin'], observed=True)[['auc', 'n', 'pos']]
+          .mean().to_string(float_format=lambda v: f'{v:.4f}'))
+
+
+if __name__ == '__main__':
+    main()

@@ -75,6 +75,50 @@ redundant, because it already does.
   published 0.9857 / 0.9585. This is seed selection, not an improvement, and the
   spread it is drawn from is 0.0005 wide. It should not be reported as a gain.
 
+## The ceiling, measured three ways
+
+Asked directly whether the protocol can be improved on at all, three
+independent measurements say no, and the third one says why.
+
+**The drug prior is already fully absorbed** (`improve/headroom.py`). The
+degree-only scorer and the model correlate at rho≈0.87 but not 1.0, so a blend
+`z(model) + alpha * z(log drug degree)` with alpha selected on validation could
+in principle beat both. It does not: LncDrug **−0.0002** (validation picks
+alpha≈0.6, it does not transfer, 2/5 seeds gain), MiDrug **0.0000** (validation
+picks alpha=0 on 4/5 seeds). There is no error the prior can fix that the model
+has not already fixed.
+
+**The residual error is not concentrated anywhere reachable.** Test AUC
+recomputed inside quartiles of drug training degree, 5 seeds:
+
+| task | q1 (low deg) | q2 | q3 | q4 (high deg) | global |
+|---|---|---|---|---|---|
+| LncDrug | 0.937 | 0.912 | 0.550 | — | 0.9860 |
+| MiDrug | 0.857 | 0.851 | 0.837 | 0.791 | 0.9556 |
+
+Conditioning on degree drops the model from 0.956 to 0.79–0.86 (MiDrug) — so
+the global figure is overwhelmingly the *between*-degree ordering, and what is
+left inside a degree stratum is the part the model genuinely cannot do.
+
+**And the metric barely pays for fixing it** (`improve/metric_decomp.py`).
+Global AUC is `P(score_pos > score_neg)` over every positive x negative pair in
+the test fold. Split that pair set by whether the two edges share a drug:
+
+| task | ranking pairs | same-drug (biology) | cross-drug (drug prior) |
+|---|---|---|---|
+| LncDrug | 354,482 | 1,266 (**0.36%**) | 353,216 (99.64%) |
+| MiDrug | 2,324,168 | 7,235 (**0.31%**) | 2,316,933 (99.69%) |
+
+**99.7% of the metric is "does a positive on a popular drug outrank a negative
+on a rare one".** A model that became a *perfect* within-drug ranker overnight —
+from 0.65 to 1.0 — would move global AUC by **0.0012**. That is the entire
+budget available to any biologically real improvement, and it is twice the seed
+noise. The protocol does not have a ceiling that better modelling can reach; it
+has a metric that almost never asks the question the model is being improved at.
+
+This is measured on the author's own frozen split with no debiasing applied, so
+it stands independently of any benchmark redesign.
+
 ## Reproducing
 
 Data prep and all runs use `--run-dir` = a directory holding
