@@ -77,8 +77,10 @@ redundant, because it already does.
 
 ## The ceiling, measured three ways
 
-Asked directly whether the protocol can be improved on at all, three
-independent measurements say no, and the third one says why.
+Three measurements bound what is available. They do not say "zero" -- see the
+next section for the +0.0012 that is real -- they say the budget is tiny and
+say where it is.
+
 
 **The drug prior is already fully absorbed** (`improve/headroom.py`). The
 degree-only scorer and the model correlate at rho≈0.87 but not 1.0, so a blend
@@ -118,6 +120,64 @@ has a metric that almost never asks the question the model is being improved at.
 
 This is measured on the author's own frozen split with no debiasing applied, so
 it stands independently of any benchmark redesign.
+
+## The one thing that does improve on the released protocol
+
+The pair decomposition above bounds what a better *within-drug* ranker can win.
+It says nothing about the cross-drug pairs, which are 99.6% of the metric and
+where the model sits at 0.988, not 1.0. Chasing that residual found a real
+gain, and it is exactly the size the decomposition predicted.
+
+`RandomLinkSplit` samples negatives uniformly over **(ncRNA, drug)**, so
+positives concentrate on popular ncRNAs as well as popular drugs. Every degree
+control in this repo had only ever used the drug side. Fitting a logistic
+prior on **both** log degrees (`improve/priors.py`, fitted on the training
+fold's labels):
+
+| task | drug-degree prior | ncRNA-degree prior | both |
+|---|---|---|---|
+| LncDrug | 0.9775 | 0.4036 | 0.9781 |
+| MiDrug | 0.9316 | 0.6802 | **0.9534** |
+
+On MiDrug the ncRNA side is worth **+0.022** over the drug-only control that
+this repo has been quoting. On LncDrug the lncRNA degree is *below chance*
+(0.4036) and adds nothing.
+
+Stacking the two things that worked — per-epoch negative resampling, plus
+blending the two-sided prior into the model score with alpha chosen on
+validation — against `base`, paired over 10 seeds:
+
+| task | arm | test AUC | Δ vs base | seeds | p |
+|---|---|---|---|---|---|
+| MiDrug | base | 0.9558 | — | — | — |
+| MiDrug | `neg` | 0.9565 | +0.00076 | 9/10 | 0.0005 |
+| MiDrug | **`neg` + two-sided prior blend** | **0.9570** | **+0.00118** | **10/10** | **<1e-4** |
+| LncDrug | base | 0.9866 | — | — | — |
+| LncDrug | base + prior blend | 0.9865 | −0.00006 | 5/10 | 0.62 |
+
+**MiDrug 0.9570 against the published 0.9564** — an improvement on the released
+protocol, 10/10 seeds, p<1e-4. LncDrug does not move; its `base` is already at
+0.9866 against a published 0.9857, which is reproduction spread, not a gain.
+
+Two things have to be said next to that number. It is **+0.0012**, which is the
+budget the pair decomposition predicted almost exactly, and it is **9% of the
++0.0128 margin the paper claims over its best baseline**. And it is not
+biology: it comes from estimating the negative-sampling propensity better, on
+both endpoints instead of one.
+
+## The sharpest number in this file
+
+The AUC decomposition, run on the model's own scores:
+
+| task | same-drug AUC | cross-drug AUC | global AUC |
+|---|---|---|---|
+| LncDrug | **0.4490** | 0.9883 | 0.9864 |
+| MiDrug | 0.7553 | 0.9572 | 0.9565 |
+
+**On LncDrug the published model is below chance at ranking ncRNAs within a
+drug, and reports 0.9864.** Not merely weak — worse than a coin flip on the
+only comparison that corresponds to the screening task. It survives because
+that comparison is 0.36% of the metric.
 
 ## Reproducing
 
