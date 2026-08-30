@@ -194,3 +194,40 @@ python improve/ensemble.py --arm base --out 9.improve/ens.csv
 ```
 
 Per-seed CSVs for every number above are in `improve/results/`.
+
+## LncDrug: the residual is located, and nothing reaches it
+
+The residual was localised before anything was designed against it
+(`improve/rare_drug.py`, 10 seeds, per-positive win rate against all negatives):
+
+| | positives on low-degree drugs | on high-degree drugs |
+|---|---|---|
+| per-positive win rate | **0.8892** | 0.9891 |
+| share of all positives | **2.6%** | 97.4% |
+| share of all error | **21.5%** | 78.5% |
+
+Spearman(win rate, drug degree) = 0.82. So 2.6% of positives carry 21.5% of the
+error, and they are exactly the positives on drugs that are rare in lncRNA
+space. Fixing them completely is worth **0.0029 AUC** — 2.4x the MiDrug gain,
+and precisely targeted.
+
+Three sources of side information were tested against it. All fail:
+
+| mechanism | prior alone | blended into the model |
+|---|---|---|
+| raw drug degree (control) | 0.9775 | −0.0002 |
+| **chemical-similarity-smoothed degree** | 0.9703 | −0.0003 |
+| **cross-task degree** (the drug's MiDrug degree) | 0.9771 | −0.0003 |
+| **ChemBERTa → expected degree** (ridge) | 0.9771 | −0.0002 |
+| all of them together | 0.9779 | +0.0002 |
+
+The cross-task arm is the notable one: when LncDrug is the task, the full MiDrug
+edge set sits in the graph untouched, so a drug that is rare in lncRNA space may
+be well studied in miRNA space. That is the paper's own pan-ncRNA premise stated
+as a propensity, and it scores **below** the drug's own degree.
+
+Read together with the smoothing and ChemBERTa results: **nothing available —
+not chemistry, not the other ncRNA task, not learned drug structure — predicts
+which rare drugs have lncRNA associations.** Those positives are not merely
+hard for this architecture; they carry no signal any of the released modalities
+can supply. LncDrug's 0.9866 stands, and the 0.0029 above it is not reachable.
