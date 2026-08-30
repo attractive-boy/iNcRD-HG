@@ -6,6 +6,7 @@ import torch
 import torch_geometric.transforms as T
 import numpy as np
 import random
+import os
 
 # %%
 SEED = 666
@@ -17,6 +18,11 @@ torch.backends.cudnn.deterministic = True
 
 # Extracting edges of homogeneous graphs from similarity matrix
 def homo_sim_net(sim_file,sim_score):
+    # The released data ships only the Kendall matrices; 'pea'/'spe' are
+    # alternatives the paper does not use.  Skip them instead of crashing.
+    if not os.path.exists(sim_file):
+        print(f'{sim_file} not in the data release, skipped')
+        return None
     sim_mat = pd.read_csv(sim_file,header=None)
     sim_mat = np.abs(sim_mat)
     rows, columns = np.where(sim_mat > sim_score)
