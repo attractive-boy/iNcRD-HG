@@ -47,7 +47,25 @@ ARMS = {
     'neg+dec+deg': dict(neg_resample=True, decoder='rich', degree_enc=True),
     'all': dict(neg_resample=True, decoder='rich', degree_enc=True,
                 feat_norm=True),
+    # Relation fusion.  The released model fuses per-relation messages with a
+    # fixed reduction (min on LncDrug, mean on MiDrug); `relattn` learns it.
+    # The aggr_* arms are the controls it has to beat -- otherwise a win is
+    # just "min was a bad choice", which is a hyperparameter, not a mechanism.
+    'relattn': dict(encoder='relattn'),
+    'aggr_sum': dict(aggr='sum'),
+    'aggr_mean': dict(aggr='mean'),
+    'aggr_max': dict(aggr='max'),
+    # Joint supervision from the other ncRNA relation.  LncDrug has 1267
+    # training positives against MiDrug's 5394, and the two share every drug
+    # node, so the other task's edges can sharpen the drug embeddings that
+    # LncDrug's decoder reads.  The cross-task DEGREE failed
+    # (improve/cross_task_prior.py); cross-task supervision is a different
+    # mechanism and is tested separately here.
+    'multitask': dict(multitask=True),
+    'multitask+neg': dict(multitask=True, neg_resample=True),
 }
+
+OTHER_TASK = {'LncDrug': ('MiDrug', 'miRNA'), 'MiDrug': ('LncDrug', 'lncRNA')}
 
 
 def set_seed(seed):
@@ -87,8 +105,24 @@ def run_one(run_dir, task, arm, seed, device):
     set_seed(seed)
     train_data, val_data, test_data = load_splits(run_dir, task, cfg, device)
 
-    model = Model(train_data, t['channels'], t['aggr'], t['rna'],
-                  decoder=cfg.get('decoder', 'concat')).to(device)
+    model = Model(train_data, t['channels'], cfg.get('aggr', t['aggr']),
+                  t['rna'], decoder=cfg.get('decoder', 'concat'),
+                  encoder=cfg.get('encoder', 'hetero')).to(device)
+    aux = None
+    if cfg.get('multitask'):
+        # A second decoder head on the other ncRNA relation, sharing the
+        # encoder.  Its positives are that relation's edges as they sit in this
+        # task's graph -- a different node type entirely, so no target-task
+        # test edge can appear among them.
+        o_task, o_rna = OTHER_TASK[task]
+        from improve.model import EdgeDecoder
+        aux_dec = EdgeDecoder(t['channels'], o_rna,
+                              mode=cfg.get('decoder', 'concat')).to(device)
+        model.aux_decoder = aux_dec
+        aux = dict(task=o_task, rna=o_rna,
+                   pos=train_data[o_rna, o_task, 'drug'].edge_index,
+                   n_src=train_data[o_rna].num_nodes,
+                   n_dst=train_data['drug'].num_nodes)
     opt = torch.optim.RMSprop(model.parameters(), lr=t['lr'], alpha=0.99)
 
     # Fixed training labels as shipped by RandomLinkSplit.
@@ -119,6 +153,16 @@ def run_one(run_dir, task, arm, seed, device):
         opt.zero_grad()
         pred = model(train_data.x_dict, train_data.edge_index_dict, cur_index)
         loss = F.binary_cross_entropy_with_logits(pred, cur_label)
+        if aux is not None:
+            z_dict = model.encoder(train_data.x_dict, train_data.edge_index_dict)
+            a_neg = negative_sampling(
+                aux['pos'], num_nodes=(aux['n_src'], aux['n_dst']),
+                num_neg_samples=2 * aux['pos'].size(1), method='sparse')
+            a_idx = torch.cat([aux['pos'], a_neg], dim=1)
+            a_lbl = torch.cat([torch.ones(aux['pos'].size(1), device=device),
+                               torch.zeros(a_neg.size(1), device=device)])
+            loss = loss + F.binary_cross_entropy_with_logits(
+                model.aux_decoder(z_dict, a_idx), a_lbl)
         loss.backward()
         opt.step()
 

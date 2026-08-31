@@ -231,3 +231,49 @@ not chemistry, not the other ncRNA task, not learned drug structure — predicts
 which rare drugs have lncRNA associations.** Those positives are not merely
 hard for this architecture; they carry no signal any of the released modalities
 can supply. LncDrug's 0.9866 stands, and the 0.0029 above it is not reachable.
+
+## LncDrug ledger: every mechanism tried
+
+Paired against `base` (0.9866 ± 0.0005), 10 seeds, `sel_val_auc`.
+
+| # | mechanism | class | Δ | seeds | p |
+|---|---|---|---|---|---|
+| 1 | per-epoch negative resampling | training | −0.0017 | 2/10 | 0.028 |
+| 2 | feature row-normalisation | input | −0.0008 | 2/10 | 0.008 |
+| 3 | relation-wise degree encoding | input | −0.0002 | 3/10 | 0.36 |
+| 4 | Hadamard + \|diff\| decoder | architecture | −0.0599 | 0/10 | <1e-4 |
+| 5 | all of 1–4 | — | −0.0174 | 0/10 | <1e-4 |
+| 6 | 10-seed logit ensemble | ensemble | +0.0002 | — | ns |
+| 7 | drug-degree prior blend | prior | −0.0002 | 2/5 | 0.36 |
+| 8 | two-sided degree prior | prior | −0.0001 | 5/10 | 0.62 |
+| 9 | chem-similarity-smoothed degree | prior | −0.0003 | — | ns |
+| 10 | cross-task (MiDrug) degree | prior | −0.0003 | — | ns |
+| 11 | ChemBERTa → expected degree | prior | −0.0002 | — | ns |
+| 12 | all four priors together | prior | +0.0002 | — | ns |
+| 13 | `aggr='sum'` | architecture | −0.0110 | 0/10 | <1e-4 |
+| 14 | `aggr='mean'` | architecture | −0.0055 | 0/10 | 0.007 |
+| 15 | `aggr='max'` | architecture | −0.0069 | 0/10 | <1e-4 |
+| 16 | **learned relation attention (HAN-style)** | architecture | ≈−0.010 | 0/3 | — |
+| 17 | joint MiDrug supervision (multi-task) | training | −0.0012 | 3/10 | 0.073 |
+| 18 | joint MiDrug + negative resampling | training | −0.0014 | 1/10 | 0.018 |
+| 19 | **ensemble + full prior** (6 ⊕ 12) | combination | +0.0001 | CI [−0.0005, +0.0007] | p(>0)=0.64 |
+
+Nineteen arms across five mechanism classes — training, input, architecture,
+prior, ensemble. Nothing is distinguishable from zero on the positive side.
+Arm 19 is the strongest combination available and its bootstrap CI over test
+edges spans zero; its AUPR is *worse* than a single model (0.9592 vs 0.9625).
+
+### Two by-products worth keeping
+
+**`min` is not an arbitrary choice.** The paper never justifies `aggr='min'`
+for LncDrug, and it beats every alternative: mean −0.0055, max −0.0069, sum
+−0.0110, and a learned HAN-style relation attention loses by about 0.010 even
+at 400 epochs. The fixed reduction the paper does not explain outperforms the
+learnable semantic attention that its own title implies. That is a publishable
+ablation, though not an improvement.
+
+**Cross-task transfer fails as both a prior and a loss.** The drug's MiDrug
+degree scores below its own degree (arm 10), and joint MiDrug supervision --
+5394 extra positives on shared drug nodes, 4x LncDrug's own 1267 -- costs
+0.0012 (arm 17). The pan-ncRNA premise does not pay on this task in either
+form.

@@ -32,8 +32,9 @@ def train_capture(run_dir, task, seed, device, arm='base'):
     key = (t['rna'], task, 'drug')
     set_seed(seed)
     train_data, val_data, test_data = load_splits(run_dir, task, cfg, device)
-    model = Model(train_data, t['channels'], t['aggr'], t['rna'],
-                  decoder=cfg.get('decoder', 'concat')).to(device)
+    model = Model(train_data, t['channels'], cfg.get('aggr', t['aggr']),
+                  t['rna'], decoder=cfg.get('decoder', 'concat'),
+                  encoder=cfg.get('encoder', 'hetero')).to(device)
     opt = torch.optim.RMSprop(model.parameters(), lr=t['lr'], alpha=0.99)
     li = train_data[key].edge_label_index
     lb = train_data[key].edge_label

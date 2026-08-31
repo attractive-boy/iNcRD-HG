@@ -67,11 +67,17 @@ class EdgeDecoder(torch.nn.Module):
 
 class Model(torch.nn.Module):
     def __init__(self, data, hidden_channels, aggr_str, rna_type,
-                 decoder='concat', norm=False, residual=False):
+                 decoder='concat', norm=False, residual=False, encoder='hetero'):
         super().__init__()
-        encoder = GNNEncoder(hidden_channels, hidden_channels,
+        if encoder == 'relattn':
+            # Learned relation-level fusion instead of to_hetero's fixed aggr.
+            from improve.relattn import RelAttnEncoder
+            self.encoder = RelAttnEncoder(data.metadata(), hidden_channels,
+                                          hidden_channels)
+        else:
+            enc = GNNEncoder(hidden_channels, hidden_channels,
                              norm=norm, residual=residual)
-        self.encoder = to_hetero(encoder, data.metadata(), aggr=aggr_str)
+            self.encoder = to_hetero(enc, data.metadata(), aggr=aggr_str)
         self.decoder = EdgeDecoder(hidden_channels, rna_type, mode=decoder)
 
     def forward(self, x_dict, edge_index_dict, edge_label_index):
