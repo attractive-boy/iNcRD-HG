@@ -277,3 +277,63 @@ degree scores below its own degree (arm 10), and joint MiDrug supervision --
 5394 extra positives on shared drug nodes, 4x LncDrug's own 1267 -- costs
 0.0012 (arm 17). The pan-ncRNA premise does not pay on this task in either
 form.
+
+## Is +0.01 available? An oracle says no.
+
+Every propensity estimator here failed, which shows the estimators failed, not
+that the information is absent. `improve/oracle.py` separates the two: it reads
+the **test fold's own labels** to compute each drug's and each ncRNA's true
+positive rate, then scores test edges with them. It cannot be built without the
+answers, so it is not a method — it is an upper bound on every scorer whose
+inputs are the two endpoints' identities.
+
+The leave-one-out correction is what makes it a bound rather than a fiction.
+An endpoint appearing once in the fold has an empirical rate equal to its own
+label; including it, "oracle" AUC reaches 0.9983 and the apparent headroom is
++0.0114, all of which is label memorisation. Excluding each edge from its own
+endpoint's rate:
+
+| task | model | oracle drug | oracle ncRNA | oracle both | model ⊕ oracle | headroom |
+|---|---|---|---|---|---|---|
+| LncDrug | 0.9861 | 0.9672 | 0.4811 | 0.9731 | 0.9864 | **+0.0003** |
+| MiDrug | 0.9557 | 0.9277 | 0.6265 | 0.9415 | 0.9563 | **+0.0007** |
+
+The blend alpha is chosen **on test**, deliberately — this is meant to be
+optimistic. A scorer that knows both endpoints' true positive rates in the test
+fold, fused with the model at a test-optimal weight, is worth **+0.0003** on
+LncDrug. The whole propensity family is closed.
+
+### The arithmetic for +0.01
+
+Global AUC = 0.0036 × AUC_same + 0.9964 × AUC_cross, and the model sits at
+0.0036 × 0.449 + 0.9964 × 0.9883 = 0.9863.
+
+Reaching 0.9963 requires AUC_cross ≥ **0.99987** even with a *perfect*
+within-drug ranker — one error in every 7,700 cross-drug pairs, from a model
+currently below chance at ranking within a drug. The two routes bound as:
+
+| route | ceiling | how it was bounded |
+|---|---|---|
+| within-drug (biology) | +0.0020 | 0.36% pair share, 0.449 → 1.0 |
+| propensity (cross-drug) | +0.0003 | leave-one-out oracle, test-optimal blend |
+| **both, simultaneously, with oracles** | **≈ +0.0023** | |
+
+**+0.01 is ruled out by measurement.** The maximum available on LncDrug is about
++0.002, and collecting it requires a perfect within-drug ranker *and* a
+propensity oracle that reads the test labels.
+
+## Every layer of the model, and what it was worth
+
+| layer | what was changed | best result |
+|---|---|---|
+| input features | row-L2 norm, relation-wise degree encoding | −0.0002 (deg, ns) |
+| graph structure | cross-task edges as prior and as loss | −0.0003 / −0.0012 |
+| encoder | GeneralConv → HAN-style relation attention | ≈ −0.010 |
+| relation fusion | min → sum / mean / max / learned | −0.0055 … −0.0110 (min wins) |
+| decoder | concat → Hadamard + \|diff\| | −0.0599 |
+| loss | fixed → per-epoch resampled negatives; multi-task | −0.0017 / −0.0012 |
+| training | 10-seed logit ensemble | +0.0002 (ns) |
+| post-hoc | 5 propensity priors, blended | +0.0002 (ns) |
+
+All eight layers. The model is not under-engineered on this protocol; the
+protocol has nothing left to pay for.
