@@ -91,6 +91,12 @@ ARMS = {
     # neg_resample reshapes the training negatives; the two-sided propensity
     # prior is applied post hoc on top (improve/priors.py --arm posw2+neg).
     'posw2+neg': dict(loss='weighted', pos_weight=2.0, neg_resample=True),
+    # The two axes that have actually paid here are the loss and the training
+    # negative distribution; every encoder change lost.  These are the two
+    # untried knobs on that axis.  The protocol fixes the TEST ratio at 2:1;
+    # the TRAINING ratio was never varied.
+    'bpr': dict(loss='bpr', neg_resample=True),
+    'bpr+posw2': dict(loss='bpr', neg_resample=True),
     'hyper': dict(encoder='hyper'),
     'hyper+posw2+neg': dict(encoder='hyper', loss='weighted', pos_weight=2.0,
                             neg_resample=True),
@@ -103,6 +109,11 @@ ARMS = {
 for _w in (1.5, 3.0, 4.0, 6.0):
     ARMS[f'posw{_w}+neg'] = dict(loss='weighted', pos_weight=_w,
                                  neg_resample=True)
+for _r in (5, 10, 20):
+    ARMS[f'negr{_r}'] = dict(neg_resample=True, neg_ratio=_r)
+    ARMS[f'posw2+negr{_r}'] = dict(loss='weighted', pos_weight=2.0,
+                                   neg_resample=True, neg_ratio=_r)
+    ARMS[f'bpr+negr{_r}'] = dict(loss='bpr', neg_resample=True, neg_ratio=_r)
 
 OTHER_TASK = {'LncDrug': ('MiDrug', 'miRNA'), 'MiDrug': ('LncDrug', 'lncRNA')}
 
@@ -143,6 +154,18 @@ def compute_loss(pred, target, cfg):
         w = torch.full_like(target, 1.0)
         w[target > 0] = cfg.get('pos_weight', 2.0)
         return F.binary_cross_entropy_with_logits(pred, target, weight=w)
+    if kind == 'bpr':
+        # AUC is P(score_pos > score_neg) -- a PAIRWISE quantity, while BCE is
+        # pointwise.  BPR optimises the pairs directly: each positive is matched
+        # against sampled negatives and the margin is pushed through logsigmoid.
+        pos, neg = pred[target > 0], pred[target == 0]
+        if pos.numel() == 0 or neg.numel() == 0:
+            return F.binary_cross_entropy_with_logits(pred, target)
+        # Match each positive to negatives by tiling, so the pair count stays
+        # linear rather than |pos| x |neg|.
+        reps = max(1, neg.numel() // pos.numel())
+        p_rep = pos.repeat(reps)[:neg.numel()]
+        return -F.logsigmoid(p_rep - neg[:p_rep.numel()]).mean()
     if kind == 'ap':
         # Smooth average-precision surrogate: a pairwise logistic ranking loss
         # weighted towards pairs near the top, which is what AP integrates.
@@ -213,9 +236,10 @@ def run_one(run_dir, task, arm, seed, device):
             # Fresh negatives every epoch at the protocol's 2:1 ratio.
             # Excluded set is the training positives only -- excluding val/test
             # positives too would leak the held-out edges into training.
+            ratio = cfg.get('neg_ratio', 2)
             neg_index = negative_sampling(
                 pos_index, num_nodes=(n_src, n_dst),
-                num_neg_samples=2 * n_pos, method='sparse')
+                num_neg_samples=ratio * n_pos, method='sparse')
             cur_index = torch.cat([pos_index, neg_index], dim=1)
             cur_label = torch.cat([
                 torch.ones(n_pos, device=device),

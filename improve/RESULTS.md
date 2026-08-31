@@ -648,3 +648,38 @@ Four of six cells clear the paper's printed figures. Two of those four are the
 author's own model under 10-seed evaluation and must be labelled as
 reproduction, not improvement. The two MiDrug cells are a mechanism, paired,
 10/10 seeds, p<1e-5.
+
+## The one mechanism that works on both tasks: `posw2`
+
+Cost-sensitive weighting of the positive class at `pos_weight=2.0`, applied
+alone. All eight cells, paired over 10 seeds:
+
+| task | fold | metric | base | `posw2` | Δ | seeds | t | Wilcoxon |
+|---|---|---|---|---|---|---|---|---|
+| **MiDrug** | S_test | **AUPR** | 0.9151 | **0.9172** | **+0.0021** | **10/10** | **1e-4** | **0.0020** |
+| **MiDrug** | S_test | **AUC** | 0.9558 | **0.9563** | **+0.0006** | **8/10** | **0.030** | **0.037** |
+| **LncDrug** | S_val | **AUPR** | 0.9507 | **0.9537** | **+0.0031** | **8/10** | **0.0092** | **0.0098** |
+| LncDrug | S_val | AUC | 0.9822 | 0.9828 | +0.0006 | 8/10 | 0.17 | 0.16 |
+| MiDrug | S_val | AUPR | 0.9174 | 0.9179 | +0.0005 | 7/10 | 0.081 | 0.13 |
+| LncDrug | S_test | AUC | 0.9866 | 0.9868 | +0.0002 | 5/10 | 0.41 | 0.49 |
+| MiDrug | S_val | AUC | 0.9551 | 0.9550 | −0.0001 | 5/10 | 0.41 | 0.70 |
+| LncDrug | S_test | AUPR | 0.9622 | 0.9620 | −0.0002 | 4/10 | 0.89 | 0.77 |
+
+**Three significant positives, five nulls, zero significant negatives**, and the
+two significant cells sit on *different tasks* — MiDrug's test fold and
+LncDrug's validation fold. Every other mechanism in this file is significantly
+negative somewhere: `neg` is −0.0017 on LncDrug test, `bpr` is −0.0028,
+`posw2+neg` is −0.0015, every encoder change is −0.004 to −0.038.
+
+This is the answer to "is there anything that improves on both": `posw2` is it,
+with one caveat that has to be printed rather than buried — **on LncDrug it is
+significant on the validation fold only**; its LncDrug test cells are null in
+both directions (+0.0002, −0.0002, both p>0.4).
+
+The honest one-line claim: *cost-sensitive weighting improves AUPR on both
+ncRNA types — MiDrug S_test +0.0021 (p=1e-4) and LncDrug S_val +0.0031
+(p=0.009) — and is never significantly harmful on any task, fold or metric.*
+
+Per-task best configurations, if a larger number is wanted at the cost of the
+cross-task claim: MiDrug `posw2+neg` (test AUC 0.9570 / AUPR 0.9175) or `bpr`
+(0.9577 / 0.9178, but validation does not select it).
