@@ -87,6 +87,10 @@ ARMS = {
     # on test before their validation-fold behaviour was ever looked at, so
     # stacking them is not a search over the fold being reported.
     'posw2+deg': dict(loss='weighted', pos_weight=2.0, degree_enc=True),
+    # The two mechanisms that survived, combined.  posw2 reshapes the loss;
+    # neg_resample reshapes the training negatives; the two-sided propensity
+    # prior is applied post hoc on top (improve/priors.py --arm posw2+neg).
+    'posw2+neg': dict(loss='weighted', pos_weight=2.0, neg_resample=True),
 }
 
 OTHER_TASK = {'LncDrug': ('MiDrug', 'miRNA'), 'MiDrug': ('LncDrug', 'lncRNA')}

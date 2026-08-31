@@ -532,3 +532,44 @@ a fold-specific fluke, but MiDrug's effect is 6x smaller and clears neither
 test. Report it as corroborating direction, not as a second result — one
 significant cell out of two is exactly the pattern that does not survive being
 described as "improves AUPR on both tasks".
+
+## Combining the two mechanisms
+
+`posw2` (cost-sensitive weighting) and `neg` (per-epoch negative resampling) are
+independent — one reshapes the loss, the other the training negatives. Combined:
+
+### MiDrug / S_test — additive, and it clears the paper on both metrics
+
+| arm | AUC | Δ | seeds | p | AUPR | Δ | seeds | p |
+|---|---|---|---|---|---|---|---|---|
+| base | 0.9558 | — | — | — | 0.9151 | — | — | — |
+| `neg` | 0.9565 | +0.0008 | 9/10 | 5e-4 | 0.9157 | +0.0006 | 7/10 | 0.066 |
+| `posw2` | 0.9563 | +0.0006 | 8/10 | 0.030 | 0.9172 | +0.0021 | 10/10 | 1e-4 |
+| **`posw2+neg`** | **0.9570** | **+0.0012** | **10/10** | **7.6e-06** | **0.9175** | **+0.0024** | **10/10** | **1.4e-06** |
+| *paper* | *0.9564* | | | | *0.9165* | | | |
+
+The combination beats each component on both metrics at 10/10 seeds, and lands
+above the paper's printed 0.9564 / 0.9165. Adding the two-sided propensity prior
+on top (5 seeds) moves AUC 0.9566 → 0.9570 and AUPR 0.9158 → 0.9161 — it
+overlaps with what the loss changes already capture, so the prior is not part of
+the headline.
+
+`posw2` was never run on MiDrug until this point; the loss-shaping batch was
+LncDrug-only. Its MiDrug AUPR effect (+0.0021, 10/10, p=1e-4) is larger and far
+more significant than the LncDrug validation effect that prompted the batch.
+
+### LncDrug — the combination is worse than `posw2` alone
+
+| arm | val AUPR | Δ | seeds | p |
+|---|---|---|---|---|
+| `posw2` | 0.9537 | **+0.0031** | 8/10 | 0.0092 |
+| `posw2+neg` | 0.9510 | +0.0004 | 5/10 | 0.71 |
+
+`neg` is negative on LncDrug (−0.0007 val AUPR), and it eats the gain. On
+LncDrug's test fold `posw2+neg` is −0.0015 AUPR (3/10, p=0.047), significantly
+worse than base.
+
+**So there is no single configuration that wins everywhere**: `posw2+neg` for
+MiDrug, `posw2` alone for LncDrug. Reporting one configuration per task is
+normal for this literature (the author already tunes lr / channels / aggr per
+task), but it has to be stated, not hidden behind a single "our method" row.
