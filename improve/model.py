@@ -69,7 +69,10 @@ class Model(torch.nn.Module):
     def __init__(self, data, hidden_channels, aggr_str, rna_type,
                  decoder='concat', norm=False, residual=False, encoder='hetero'):
         super().__init__()
-        if encoder == 'hgt':
+        if encoder == 'hyper':
+            from improve.hyper import HyperEncoder
+            self.encoder = HyperEncoder(list(data.node_types), hidden_channels)
+        elif encoder == 'hgt':
             # Heterogeneous Graph Transformer (Hu et al. 2020): per-relation
             # attention with type-specific K/Q/V projections.  This is the
             # architecture the paper's "semantic-enhanced heterogeneous graph"

@@ -91,6 +91,9 @@ ARMS = {
     # neg_resample reshapes the training negatives; the two-sided propensity
     # prior is applied post hoc on top (improve/priors.py --arm posw2+neg).
     'posw2+neg': dict(loss='weighted', pos_weight=2.0, neg_resample=True),
+    'hyper': dict(encoder='hyper'),
+    'hyper+posw2+neg': dict(encoder='hyper', loss='weighted', pos_weight=2.0,
+                            neg_resample=True),
     'hgt': dict(encoder='hgt'),
     'hgt+posw2+neg': dict(encoder='hgt', loss='weighted', pos_weight=2.0,
                           neg_resample=True),

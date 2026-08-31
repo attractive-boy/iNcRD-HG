@@ -614,3 +614,37 @@ now validation-selected rather than guessed, and it did not change. Note
 `posw6+neg` has the best *test* AUPR (0.9181, +0.0030); selecting on test would
 have taken it, and that is exactly the move the released script makes at
 `predict_simulated_drug.py:288`. It is not taken here.
+
+## Encoder families tested
+
+| encoder family | LncDrug test AUC | source |
+|---|---|---|
+| **GeneralConv + `aggr='min'` (released)** | **0.9866** | the paper |
+| LightGCN | 0.9862 | GSLRDA 2022 |
+| GeneralConv + `mean` / `max` / `sum` | 0.9811 / 0.9797 / 0.9755 | — |
+| HAN-style relation attention | ≈0.976 | HAN 2019 |
+| HGT | 0.9508 | Hu et al. 2020 |
+| Hypergraph (HGNN) | 0.8159 | HGNNLDA / LHRCDA / HGCJAMH |
+| No graph (features only) | — (0.2235 P@30 on cold start) | control |
+
+Six encoder families, none above the released one. The hypergraph arm
+**replaces** the pairwise graph rather than sitting alongside it, so its 0.816
+mostly restates that removing the association graph removes the degree signal;
+it is not a fair verdict on hypergraph convolution as an added component, and
+should not be quoted as one.
+
+## Final position against the paper's own table
+
+| task | fold | metric | paper | ours | source |
+|---|---|---|---|---|---|
+| LncDrug | test | AUC | 0.9857 | **0.9866 ± 0.0005** | reproduction, no change |
+| LncDrug | test | AUPR | 0.9585 | **0.9621 ± 0.0019** | reproduction, no change |
+| MiDrug | test | AUC | 0.9564 | **0.9570 ± 0.0003** | `posw2+neg`, 10/10, p=7.6e-06 |
+| MiDrug | test | AUPR | 0.9165 | **0.9175 ± 0.0006** | `posw2+neg`, 10/10, p=1.4e-06 |
+| LncDrug | val | AUC | 0.9834 | 0.9828 (best seed 0.9839) | `posw2` |
+| LncDrug | val | AUPR | 0.9545 | 0.9537 (best seed 0.9556) | `posw2`, +0.0031 vs base, p=0.009 |
+
+Four of six cells clear the paper's printed figures. Two of those four are the
+author's own model under 10-seed evaluation and must be labelled as
+reproduction, not improvement. The two MiDrug cells are a mechanism, paired,
+10/10 seeds, p<1e-5.
