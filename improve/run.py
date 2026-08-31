@@ -91,7 +91,15 @@ ARMS = {
     # neg_resample reshapes the training negatives; the two-sided propensity
     # prior is applied post hoc on top (improve/priors.py --arm posw2+neg).
     'posw2+neg': dict(loss='weighted', pos_weight=2.0, neg_resample=True),
+    'hgt': dict(encoder='hgt'),
+    'hgt+posw2+neg': dict(encoder='hgt', loss='weighted', pos_weight=2.0,
+                          neg_resample=True),
 }
+# pos_weight was fixed at 2.0 a priori and never swept.  These arms sweep it so
+# the weight can be selected on validation rather than guessed.
+for _w in (1.5, 3.0, 4.0, 6.0):
+    ARMS[f'posw{_w}+neg'] = dict(loss='weighted', pos_weight=_w,
+                                 neg_resample=True)
 
 OTHER_TASK = {'LncDrug': ('MiDrug', 'miRNA'), 'MiDrug': ('LncDrug', 'lncRNA')}
 

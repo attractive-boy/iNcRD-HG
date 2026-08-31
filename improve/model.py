@@ -69,7 +69,15 @@ class Model(torch.nn.Module):
     def __init__(self, data, hidden_channels, aggr_str, rna_type,
                  decoder='concat', norm=False, residual=False, encoder='hetero'):
         super().__init__()
-        if encoder == 'relattn':
+        if encoder == 'hgt':
+            # Heterogeneous Graph Transformer (Hu et al. 2020): per-relation
+            # attention with type-specific K/Q/V projections.  This is the
+            # architecture the paper's "semantic-enhanced heterogeneous graph"
+            # framing implies; to_hetero(GeneralConv) only gives per-relation
+            # weights with a fixed fusion.
+            from improve.hgt import HGTEncoder
+            self.encoder = HGTEncoder(data.metadata(), hidden_channels)
+        elif encoder == 'relattn':
             # Learned relation-level fusion instead of to_hetero's fixed aggr.
             from improve.relattn import RelAttnEncoder
             self.encoder = RelAttnEncoder(data.metadata(), hidden_channels,

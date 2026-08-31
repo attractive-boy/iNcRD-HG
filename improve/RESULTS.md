@@ -573,3 +573,44 @@ worse than base.
 MiDrug, `posw2` alone for LncDrug. Reporting one configuration per task is
 normal for this literature (the author already tunes lr / channels / aggr per
 task), but it has to be stated, not hidden behind a single "our method" row.
+
+## The largest architectural change: HGT
+
+Heterogeneous Graph Transformer (Hu et al. 2020) — relation-specific key/query/
+value projections with learned attention over incoming edges, and attention-
+weighted fusion across relations. This replaces *both* halves of
+`to_hetero(GeneralConv, aggr=...)` and is the standard realisation of what
+"semantic-enhanced heterogeneous graph learning" names.
+
+| config | LncDrug test AUC | test AUPR |
+|---|---|---|
+| base | **0.9866** | **0.9621** |
+| HGT, author's schedule (lr 5e-4, 100 ep) | 0.9508 | 0.8748 |
+| HGT, lr 5e-4, 400 ep | 0.9540 | 0.8844 |
+| HGT, lr 1e-3, 400 ep | 0.9482 | 0.8805 |
+
+**−0.03 AUC and −0.08 AUPR at every configuration tried.** Together with the
+HAN-style relation attention (−0.010) and LightGCN (−0.0004), the pattern is
+consistent across three independent attention/propagation redesigns: the more
+expressive the relational machinery, the worse this protocol scores it. That is
+the `dec` result again — modelling genuine relational interaction costs
+performance on a metric that is 99.7% a degree comparison.
+
+## pos_weight, selected on validation
+
+`pos_weight=2.0` was fixed a priori. Sweeping it and selecting on the validation
+fold (val AUC + val AUPR), MiDrug:
+
+| arm | val AUC | val AUPR | test AUC | test AUPR |
+|---|---|---|---|---|
+| **`posw2+neg`** | **0.9551** | **0.9179** | **0.9570** | 0.9175 |
+| `posw3+neg` | 0.9549 | 0.9180 | 0.9566 | 0.9175 |
+| `posw1.5+neg` | 0.9549 | 0.9174 | 0.9568 | 0.9171 |
+| `posw4+neg` | 0.9547 | 0.9179 | 0.9566 | 0.9180 |
+| `posw6+neg` | 0.9543 | 0.9175 | 0.9563 | **0.9181** |
+
+Validation picks **2.0**, which is the a priori value — so the headline number is
+now validation-selected rather than guessed, and it did not change. Note
+`posw6+neg` has the best *test* AUPR (0.9181, +0.0030); selecting on test would
+have taken it, and that is exactly the move the released script makes at
+`predict_simulated_drug.py:288`. It is not taken here.
