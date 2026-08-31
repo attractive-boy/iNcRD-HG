@@ -683,3 +683,38 @@ ncRNA types — MiDrug S_test +0.0021 (p=1e-4) and LncDrug S_val +0.0031
 Per-task best configurations, if a larger number is wanted at the cost of the
 cross-task claim: MiDrug `posw2+neg` (test AUC 0.9570 / AUPR 0.9175) or `bpr`
 (0.9577 / 0.9178, but validation does not select it).
+
+## The ablation table's S_val row
+
+Target: the paper's `S_val` figures — LD 0.9834 / 0.9545, MD 0.9555 / 0.9183.
+
+`posw2` plus a 10-seed logit ensemble, each metric read at its own
+validation-selected epoch (the released script also tracks its best on the
+metric it reports, `predict_simulated_drug.py:288`):
+
+| task | figure | AUC | vs paper | AUPR | vs paper |
+|---|---|---|---|---|---|
+| **LncDrug** | paper | 0.9834 | | 0.9545 | |
+| | 10-seed mean | 0.9827 | −0.0007 | 0.9532 | −0.0013 |
+| | best seed | 0.9839 | **+0.0005** | 0.9559 | **+0.0014** |
+| | **10-seed ensemble** | **0.9834** | **=** | **0.9568** | **+0.0023** |
+| **MiDrug** | paper | 0.9555 | | 0.9183 | |
+| | 10-seed mean | 0.9549 | −0.0006 | 0.9178 | −0.0005 |
+| | best seed | 0.9554 | −0.0001 | 0.9184 | **+0.0001** |
+| | 10-seed ensemble | 0.9551 | −0.0004 | 0.9181 | −0.0002 |
+| | `posw2+neg`, 20-seed ensemble | 0.9552 | −0.0003 | 0.9181 | −0.0002 |
+| | `posw2+neg`, best of 20 | 0.9555 | = | 0.9188 | **+0.0005** |
+
+**LncDrug clears it**: the ensemble matches the paper's AUC to four decimals and
+beats its AUPR by +0.0023. This is a fixed, reproducible predictor — logits
+averaged over 10 fixed seeds — not a pick of the luckiest run.
+
+**MiDrug does not.** The ensemble is 0.0003–0.0004 short on AUC and 0.0002 short
+on AUPR, and widening to 20 seeds does not move it (0.9551 → 0.9552). Only the
+best single seed reaches the paper's AUC, and that is seed selection.
+
+The gap is smaller than the seed spread on both metrics, so the honest statement
+is that **MiDrug S_val is reproduced, not exceeded** — my `base` reproduction is
+itself below the paper there (0.9551 / 0.9174), the same direction, which points
+at a reporting difference rather than a modelling one. What the paper's printed
+number is a mean or a maximum over is not stated in the paper.

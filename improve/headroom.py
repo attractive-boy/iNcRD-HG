@@ -21,7 +21,8 @@ from sklearn.metrics import average_precision_score, roc_auc_score
 from torch_geometric.utils import negative_sampling
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from improve.run import ARMS, TASKS, evaluate, load_splits, set_seed
+from improve.run import (ARMS, TASKS, compute_loss, evaluate, fwd,
+                        load_splits, set_seed)
 from improve.model import Model
 
 
@@ -43,22 +44,32 @@ def train_capture(run_dir, task, seed, device, arm='base'):
     n_src, n_dst = train_data[t['rna']].num_nodes, train_data['drug'].num_nodes
 
     best_val, cap = -1.0, None
+    best_pr, cap_pr = -1.0, None
     for _ in range(1, t['epochs']):
         model.train()
         if cfg.get('neg_resample'):
-            neg = negative_sampling(pos_index, num_nodes=(n_src, n_dst),
-                                    num_neg_samples=2 * n_pos, method='sparse')
+            neg = negative_sampling(
+                pos_index, num_nodes=(n_src, n_dst),
+                num_neg_samples=cfg.get('neg_ratio', 2) * n_pos,
+                method='sparse')
             cur_i = torch.cat([pos_index, neg], dim=1)
             cur_l = torch.cat([torch.ones(n_pos, device=device),
                                torch.zeros(neg.size(1), device=device)])
         else:
             cur_i, cur_l = li, lb
         opt.zero_grad()
-        torch.nn.functional.binary_cross_entropy_with_logits(
-            model(train_data.x_dict, train_data.edge_index_dict, cur_i),
-            cur_l).backward()
+        # Must go through compute_loss, not a hard-coded BCE: the loss-shaping
+        # arms (posw*, focal, bpr) are defined entirely by this call.
+        compute_loss(fwd(model, train_data, cur_i), cur_l, cfg).backward()
         opt.step()
-        va, _ = evaluate(model, val_data, key)
+        va, vp = evaluate(model, val_data, key)
+        if vp > best_pr:
+            best_pr = vp
+            model.eval()
+            with torch.no_grad():
+                cap_pr = {n: model(d.x_dict, d.edge_index_dict,
+                                   d[key].edge_label_index).cpu().numpy()
+                          for n, d in (('val', val_data), ('test', test_data))}
         if va > best_val:
             best_val = va
             model.eval()
@@ -75,6 +86,10 @@ def train_capture(run_dir, task, seed, device, arm='base'):
     for name, d in (('val', val_data), ('test', test_data)):
         out[name] = dict(
             score=cap[name],
+            # Same model, epoch chosen by validation AUPR instead of AUC.  A
+            # best-epoch table selects each metric on its own curve; keeping
+            # both makes that explicit rather than implicit.
+            score_pr=cap_pr[name],
             y=d[key].edge_label.cpu().numpy(),
             drug=d[key].edge_label_index[1].cpu().numpy())
     return out, deg.numpy()
