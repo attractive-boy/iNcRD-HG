@@ -22,7 +22,7 @@ import numpy as np
 import pandas as pd
 import torch
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import average_precision_score, roc_auc_score
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from improve.headroom import train_capture, zscore
@@ -79,15 +79,20 @@ def main():
             ob = LogisticRegression(max_iter=1000).fit(X, y).decision_function(X)
 
             row = dict(task=task, seed=seed, model=roc_auc_score(y, s),
+                       model_aupr=average_precision_score(y, s),
                        oracle_drug=roc_auc_score(y, od),
                        oracle_rna=roc_auc_score(y, orr),
-                       oracle_both=roc_auc_score(y, ob))
+                       oracle_both=roc_auc_score(y, ob),
+                       oracle_both_aupr=average_precision_score(y, ob))
             # Best blend of the model with the oracle, alpha chosen ON TEST --
-            # deliberately optimistic, since this is an upper bound.
+            # deliberately optimistic, since this is an upper bound.  AUC and
+            # AUPR are maximised independently: AUPR is not a function of AUC,
+            # so its ceiling has to be measured, not inferred from the AUC one.
             zt, zo = zscore(s), zscore(ob)
-            row['blend_oracle_best'] = max(
-                roc_auc_score(y, zt + a * zo)
-                for a in np.linspace(0.0, 4.0, 81))
+            grid = [zt + a * zo for a in np.linspace(0.0, 4.0, 81)]
+            row['blend_oracle_best'] = max(roc_auc_score(y, g) for g in grid)
+            row['blend_oracle_best_aupr'] = max(
+                average_precision_score(y, g) for g in grid)
             rows.append(row)
             print(f"{task} seed={seed} model={row['model']:.4f} "
                   f"oracle_drug={row['oracle_drug']:.4f} "
@@ -98,9 +103,14 @@ def main():
     df = pd.DataFrame(rows)
     df.to_csv(args.out, index=False)
     df['headroom'] = df['blend_oracle_best'] - df['model']
+    df['headroom_aupr'] = df['blend_oracle_best_aupr'] - df['model_aupr']
     print('\n=== upper bound on the whole propensity family ===')
     print(df.groupby('task')[['model', 'oracle_drug', 'oracle_rna',
                               'oracle_both', 'blend_oracle_best', 'headroom']]
+          .mean().to_string(float_format=lambda v: f'{v:.4f}'))
+    print('\n=== the same bound, measured on AUPR ===')
+    print(df.groupby('task')[['model_aupr', 'oracle_both_aupr',
+                              'blend_oracle_best_aupr', 'headroom_aupr']]
           .mean().to_string(float_format=lambda v: f'{v:.4f}'))
 
 

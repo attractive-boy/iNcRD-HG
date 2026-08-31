@@ -396,8 +396,20 @@ Nothing. `posw2`'s +0.0002 AUC is 5/10 seeds at p=0.41 — noise at exactly the
 scale the seed spread predicts. The AP surrogate diverges on 2 of 10 seeds;
 that is an implementation limitation, not a verdict on AP-surrogate losses.
 
-AUPR is as saturated as AUC, for the same reason: both are dominated by the
-cross-drug ordering, and both read it off the same exhausted degree structure.
+AUPR is as saturated as AUC — measured, not inferred. AUPR is not a function
+of AUC, so the oracle bound was recomputed against it directly, maximising the
+blend weight on AUPR independently:
+
+| task | metric | model | model ⊕ oracle | headroom |
+|---|---|---|---|---|
+| LncDrug | AUC | 0.9860 | 0.9864 | **+0.0004** |
+| LncDrug | AUPR | 0.9610 | 0.9613 | **+0.0003** |
+| MiDrug | AUC | 0.9556 | 0.9563 | **+0.0008** |
+| MiDrug | AUPR | 0.9150 | 0.9160 | **+0.0010** |
+
+AUPR's residual is 3x AUC's, but the part of it reachable by any endpoint-level
+scorer is the same size. Both metrics are dominated by the cross-drug ordering
+and both read it off the same exhausted degree structure.
 
 ## Where headroom actually exists in the author's own protocol
 
