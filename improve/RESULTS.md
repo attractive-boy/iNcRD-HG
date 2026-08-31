@@ -462,3 +462,56 @@ The graph earns its place here, which it does not on the random split:
 removing relational structure was free or beneficial. And the chemical-transfer
 mechanism fails on both surfaces — the prediction that it would be the only
 signal left once degree is removed is wrong.
+
+## S_val, LncDrug: cost-sensitive weighting
+
+The paper reports an `S_val` row alongside `S_test`. Every experiment above used
+validation only to pick an epoch and never recorded it, so this is a fold the
+arms had not been scored on.
+
+Reproduction is *below* the paper here, the opposite of the test fold:
+
+| | paper `S_val` LD | `base`, 10 seeds |
+|---|---|---|
+| AUC | 0.9834 | 0.9822 ± 0.0007 (max 0.9835) |
+| AUPR | 0.9545 | 0.9507 ± 0.0025 (max 0.9540) |
+
+Re-scoring the arms on the validation fold:
+
+| arm | val AUPR | Δ | seeds | t-test | Wilcoxon | val AUC | Δ | p |
+|---|---|---|---|---|---|---|---|---|
+| base | 0.9507 | — | — | — | — | 0.9822 | — | — |
+| **`posw2`** | **0.9537 ± 0.0017** | **+0.0031** | **8/10** | **0.0092** | **0.0098** | 0.9828 | +0.0006 | 0.17 |
+| `deg` | 0.9514 | +0.0008 | 4/10 | 0.40 | 0.56 | 0.9825 | +0.0003 | 0.38 |
+| `posw2+deg` | 0.9520 | +0.0014 | 6/10 | 0.13 | 0.16 | 0.9825 | +0.0003 | 0.39 |
+| `featnorm` | 0.9511 | +0.0005 | 4/10 | 0.66 | 0.85 | 0.9820 | −0.0002 | 0.36 |
+| `neg` | 0.9500 | −0.0007 | 5/10 | 0.61 | 0.70 | 0.9814 | −0.0008 | 0.10 |
+| `multitask` | 0.9500 | −0.0006 | 3/10 | 0.69 | 0.63 | 0.9808 | −0.0014 | 0.025 |
+| `aggr_mean` | 0.9481 | −0.0026 | 1/10 | 0.018 | 0.027 | 0.9760 | −0.0062 | 2e-4 |
+
+`posw2` is cost-sensitive weighting of the positive class (mDADGAN 2026's
+mechanism), at `pos_weight=2.0`. Two things make this a clean result rather
+than a search artefact: the weight was **fixed a priori**, not tuned, and the
+arm was **measured on test first** (+0.0002 AUC, p=0.41 — it looked dead) before
+the validation fold was ever examined. Stacking it with `deg` is worse
+(+0.0014), so the single component is the result.
+
+### What it does and does not clear
+
+| | paper | base | **posw2** |
+|---|---|---|---|
+| val AUPR, 10-seed mean | 0.9545 | 0.9507 | **0.9537** |
+| val AUPR, best seed | — | 0.9540 | **0.9556** |
+| val AUC, 10-seed mean | 0.9834 | 0.9822 | 0.9828 |
+| val AUC, best seed | — | 0.9835 | **0.9839** |
+
+Against the reproduced baseline the AUPR gain is significant at p<0.01 on both
+tests. Against the paper's *printed* figures, the 10-seed mean does not clear
+them (0.9537 vs 0.9545) while the best seed does (0.9556, 0.9839) — and the
+paper's single printed number is itself drawn from a spread this wide, so the
+best-seed comparison is like-for-like only if the paper also reports a best
+seed. State it as "+0.0031 AUPR over the reproduced baseline, 8/10 seeds,
+p=0.009", which is what was actually measured.
+
+Its test-fold AUPR is 0.9608 against base's 0.9621, so this is a validation-fold
+effect and should not be presented as a general one.

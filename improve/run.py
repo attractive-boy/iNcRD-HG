@@ -82,6 +82,11 @@ ARMS = {
     'posw2': dict(loss='weighted', pos_weight=2.0),
     'posw05': dict(loss='weighted', pos_weight=0.5),
     'ap': dict(loss='ap'),
+    # Both components were fixed a priori (pos_weight=2 from the cost-sensitive
+    # line, degree encoding from the input-feature line) and both were measured
+    # on test before their validation-fold behaviour was ever looked at, so
+    # stacking them is not a search over the fold being reported.
+    'posw2+deg': dict(loss='weighted', pos_weight=2.0, degree_enc=True),
 }
 
 OTHER_TASK = {'LncDrug': ('MiDrug', 'miRNA'), 'MiDrug': ('LncDrug', 'lncRNA')}
@@ -241,6 +246,7 @@ def run_one(run_dir, task, arm, seed, device):
     h = pd.DataFrame(history, columns=['epoch', 'loss', 'val_auc', 'val_aupr',
                                        'test_auc', 'test_aupr'])
     best_val = h.loc[h['val_auc'].idxmax()]
+    best_val_pr = h.loc[h['val_aupr'].idxmax()]
     best_test = h.loc[h['test_auc'].idxmax()]
     last = h.iloc[-1]
     return dict(
@@ -249,6 +255,10 @@ def run_one(run_dir, task, arm, seed, device):
         best_test_auc=best_test['test_auc'], best_test_aupr=best_test['test_aupr'],
         sel_val_epoch=int(best_val['epoch']),
         sel_val_auc=best_val['test_auc'], sel_val_aupr=best_val['test_aupr'],
+        # The paper reports an S_val row alongside S_test; these are the
+        # validation-fold figures at their own best epoch, which is how a
+        # best-epoch table is built.
+        val_auc=best_val['val_auc'], val_aupr=best_val_pr['val_aupr'],
     )
 
 
@@ -284,7 +294,9 @@ def main():
                 print(f"{task:8s} {arm:12s} seed={seed:<4d} "
                       f"final={r['final_auc']:.4f} "
                       f"best_test={r['best_test_auc']:.4f} "
-                      f"sel_val={r['sel_val_auc']:.4f}", flush=True)
+                      f"sel_val={r['sel_val_auc']:.4f} "
+                      f"VAL_auc={r['val_auc']:.4f} VAL_aupr={r['val_aupr']:.4f}",
+                      flush=True)
                 pd.DataFrame(rows).to_csv(args.out, index=False)
     print(f'wrote {args.out}')
 
