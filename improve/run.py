@@ -73,6 +73,15 @@ ARMS = {
     'lightgcn+neg': dict(encoder='lightgcn', neg_resample=True),
     'relneg': dict(reliable_neg=True),
     'lightgcn+relneg': dict(encoder='lightgcn', reliable_neg=True),
+    # Loss shaping for the ranking top, which is what AUPR measures and what
+    # nothing here has targeted.  AUPR's residual on LncDrug is 0.0376, nearly
+    # 3x the AUC residual, and the paper reports it as a headline.
+    # Cost-sensitive weighting is mDADGAN's (2026); focal is Lin et al. 2017.
+    'focal1': dict(loss='focal', gamma=1.0),
+    'focal2': dict(loss='focal', gamma=2.0),
+    'posw2': dict(loss='weighted', pos_weight=2.0),
+    'posw05': dict(loss='weighted', pos_weight=0.5),
+    'ap': dict(loss='ap'),
 }
 
 OTHER_TASK = {'LncDrug': ('MiDrug', 'miRNA'), 'MiDrug': ('LncDrug', 'lncRNA')}
@@ -97,6 +106,33 @@ def load_splits(run_dir, task, cfg, device):
     if cfg.get('degree_enc'):
         splits = add_degree_encoding(splits)
     return [d.to(device) for d in splits]
+
+
+def compute_loss(pred, target, cfg):
+    """BCE by default; the loss-shaping arms replace it."""
+    kind = cfg.get('loss')
+    if kind == 'focal':
+        # Focal (Lin et al. 2017): down-weight the easy examples so gradient
+        # goes to the hard positives that decide the top of the ranking.
+        g = cfg.get('gamma', 2.0)
+        bce = F.binary_cross_entropy_with_logits(pred, target, reduction='none')
+        p_t = torch.exp(-bce)
+        return ((1 - p_t) ** g * bce).mean()
+    if kind == 'weighted':
+        # Cost-sensitive, as mDADGAN uses: reweight the positive class.
+        w = torch.full_like(target, 1.0)
+        w[target > 0] = cfg.get('pos_weight', 2.0)
+        return F.binary_cross_entropy_with_logits(pred, target, weight=w)
+    if kind == 'ap':
+        # Smooth average-precision surrogate: a pairwise logistic ranking loss
+        # weighted towards pairs near the top, which is what AP integrates.
+        pos, neg = pred[target > 0], pred[target == 0]
+        if pos.numel() == 0 or neg.numel() == 0:
+            return F.binary_cross_entropy_with_logits(pred, target)
+        diff = pos.unsqueeze(1) - neg.unsqueeze(0)
+        w = torch.softmax(pos, dim=0).unsqueeze(1)
+        return -(w * F.logsigmoid(diff)).sum() / w.sum().clamp(min=1e-12)
+    return F.binary_cross_entropy_with_logits(pred, target)
 
 
 def fwd(model, data, idx):
@@ -183,7 +219,7 @@ def run_one(run_dir, task, arm, seed, device):
 
         opt.zero_grad()
         pred = fwd(model, train_data, cur_index)
-        loss = F.binary_cross_entropy_with_logits(pred, cur_label)
+        loss = compute_loss(pred, cur_label, cfg)
         if aux is not None:
             z_dict = model.encoder(train_data.x_dict, train_data.edge_index_dict)
             a_neg = negative_sampling(

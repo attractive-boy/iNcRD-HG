@@ -376,3 +376,38 @@ ceiling through genuine pair-level accuracy, and to gain +0.01 it needs
 cross-drug AUC of 0.99987 — while the best within-drug AUC any method in this
 repo's debiased benchmark reaches is 0.79 (GCN on `matched`/LncDrug), against
 iNcRD-HG's 0.648 and the current model's 0.449 on the released fold.
+
+## Loss shaping for AUPR
+
+AUPR's residual on LncDrug is 0.0376, nearly 3x the AUC residual, and the paper
+reports it as a headline — but no arm here had targeted the top of the ranking,
+which is what AUPR measures. Focal loss (Lin et al. 2017) and cost-sensitive
+class weighting (mDADGAN 2026) do exactly that.
+
+| arm | AUPR Δ | p | AUC Δ | p |
+|---|---|---|---|---|
+| `focal1` (γ=1) | −0.0011 | 0.32 | −0.0008 | 0.002 |
+| `focal2` (γ=2) | −0.0006 | 0.57 | −0.0013 | 0.002 |
+| `posw2` | −0.0001 | 0.89 | +0.0002 (5/10) | 0.41 |
+| `posw05` | −0.0007 | 0.59 | −0.0007 | 0.010 |
+| `ap` (AP surrogate) | −0.2478 | 0.04 | −0.2767 | 0.07 |
+
+Nothing. `posw2`'s +0.0002 AUC is 5/10 seeds at p=0.41 — noise at exactly the
+scale the seed spread predicts. The AP surrogate diverges on 2 of 10 seeds;
+that is an implementation limitation, not a verdict on AP-surrogate losses.
+
+AUPR is as saturated as AUC, for the same reason: both are dominated by the
+cross-drug ordering, and both read it off the same exhausted degree structure.
+
+## Where headroom actually exists in the author's own protocol
+
+The released protocol is not only the random-split table. `predict_simulated_
+drug.py` implements a leave-one-drug-out experiment scored with Precision@30
+and NDCG@30, and it is a separate table in the paper. That surface is nowhere
+near saturated, and iNcRD-HG is known to be weak on it: on this repo's
+popularity-controlled `cold_drug`/LncDrug split, a plain GCN reaches per-drug
+AUC **0.846** against iNcRD-HG's **0.627** — a 0.22 gap, two orders of magnitude
+above anything available on the random split.
+
+That is where an improvement of publishable size can exist on the author's data
+and the author's protocol. It is untouched by everything in this file.
