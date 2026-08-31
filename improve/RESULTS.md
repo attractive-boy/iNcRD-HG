@@ -423,3 +423,42 @@ above anything available on the random split.
 
 That is where an improvement of publishable size can exist on the author's data
 and the author's protocol. It is untouched by everything in this file.
+
+## Cold-start drugs (the author's leave-one-drug-out protocol)
+
+`predict_simulated_drug.py` removes every edge of a target drug and ranks all
+ncRNAs against it with Precision@30 / NDCG@30. The test set is one drug, so the
+drug prior is constant across it and the degree shortcut cannot operate. This
+was the surface predicted to have headroom.
+
+Reimplemented with honest selection (epoch on a 10% held-out slice of the
+training edges, not on the test drug's own Precision@30 as at
+`predict_simulated_drug.py:288`). Nine target drugs × 3 seeds, LncDrug:
+
+| arm | P@30 | NDCG@30 | AUC | ΔP@30 vs base | seeds | p |
+|---|---|---|---|---|---|---|
+| **base (iNcRD-HG)** | **0.3173** | **0.3762** | **0.6017** | — | — | — |
+| `aggr_mean` | 0.3296 | 0.3863 | 0.5861 | +0.0123 | 13/27 | 0.12 |
+| `aggr_max` | 0.3111 | 0.3657 | 0.5635 | −0.0062 | 11/27 | 0.65 |
+| `aggr_sum` | 0.2901 | 0.3511 | 0.5609 | −0.0272 | 9/27 | 0.10 |
+| `nograph` (features only) | 0.2235 | 0.2974 | 0.5955 | −0.0938 | 4/27 | 0.0001 |
+| `chem_only` (similar-drug transfer) | 0.2185 | 0.2348 | 0.5505 | −0.0988 | 2/27 | <1e-4 |
+
+### Correcting an overclaim
+
+This surface was motivated by "iNcRD-HG 0.627 vs a plain GCN 0.846 on
+cold_drug/LncDrug — a 0.22 gap". That number comes from this repo's
+`ncrd_bench` cold_drug construction, which uses drug-matched negatives and
+per-drug AUC. It is **not** the author's leave-one-drug-out protocol, and the
+gap does not reproduce here: base sits at AUC 0.6017 and every alternative
+architecture tried lands at or below it. The 0.22 was imported across two
+different split constructions and should not have been quoted as headroom on
+this one.
+
+### What the surface does say
+
+The graph earns its place here, which it does not on the random split:
+`nograph` costs **−0.094 P@30** (4/27 seeds, p=1e-4), where on the random split
+removing relational structure was free or beneficial. And the chemical-transfer
+mechanism fails on both surfaces — the prediction that it would be the only
+signal left once degree is removed is wrong.
