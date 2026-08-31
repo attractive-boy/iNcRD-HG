@@ -63,6 +63,16 @@ ARMS = {
     # mechanism and is tested separately here.
     'multitask': dict(multitask=True),
     'multitask+neg': dict(multitask=True, neg_resample=True),
+    # Methods from the 2022-2025 ncRNA-drug literature, reimplemented.
+    # LightGCN (GSLRDA's backbone) is the strongest bet on this protocol: no
+    # feature transform, no nonlinearity, symmetric-normalised propagation --
+    # the closest thing to a smoothed degree model, and 99.7% of the metric is
+    # a degree comparison.  Reliable negatives are DMGAT / LSNSCDA.
+    'lightgcn': dict(encoder='lightgcn'),
+    'lightgcn_mlp': dict(encoder='lightgcn', lgn_decoder='mlp'),
+    'lightgcn+neg': dict(encoder='lightgcn', neg_resample=True),
+    'relneg': dict(reliable_neg=True),
+    'lightgcn+relneg': dict(encoder='lightgcn', reliable_neg=True),
 }
 
 OTHER_TASK = {'LncDrug': ('MiDrug', 'miRNA'), 'MiDrug': ('LncDrug', 'lncRNA')}
@@ -89,10 +99,17 @@ def load_splits(run_dir, task, cfg, device):
     return [d.to(device) for d in splits]
 
 
+def fwd(model, data, idx):
+    # LightGCN needs the graph itself to build its normalised adjacency.
+    if model.__class__.__name__ == 'LightGCN':
+        return model(data.x_dict, data.edge_index_dict, idx, data=data)
+    return model(data.x_dict, data.edge_index_dict, idx)
+
+
 @torch.no_grad()
 def evaluate(model, data, key):
     model.eval()
-    pred = model(data.x_dict, data.edge_index_dict, data[key].edge_label_index)
+    pred = fwd(model, data, data[key].edge_label_index)
     y = data[key].edge_label.cpu().numpy()
     s = pred.cpu().numpy()
     return roc_auc_score(y, s), average_precision_score(y, s)
@@ -147,11 +164,25 @@ def run_one(run_dir, task, arm, seed, device):
             cur_label = torch.cat([
                 torch.ones(n_pos, device=device),
                 torch.zeros(neg_index.size(1), device=device)])
+        elif cfg.get('reliable_neg') and epoch > 20:
+            # DMGAT / LSNSCDA: keep the candidates the current model scores
+            # most confidently negative.  Warm up on the shipped negatives
+            # first, otherwise the selector is untrained noise.
+            from improve.sota import reliable_negatives
+            model.eval()
+            neg_index = reliable_negatives(
+                lambda c: fwd(model, train_data, c), pos_index,
+                n_src, n_dst, 2 * n_pos, device)
+            model.train()
+            cur_index = torch.cat([pos_index, neg_index], dim=1)
+            cur_label = torch.cat([
+                torch.ones(n_pos, device=device),
+                torch.zeros(neg_index.size(1), device=device)])
         else:
             cur_index, cur_label = label_index, label
 
         opt.zero_grad()
-        pred = model(train_data.x_dict, train_data.edge_index_dict, cur_index)
+        pred = fwd(model, train_data, cur_index)
         loss = F.binary_cross_entropy_with_logits(pred, cur_label)
         if aux is not None:
             z_dict = model.encoder(train_data.x_dict, train_data.edge_index_dict)

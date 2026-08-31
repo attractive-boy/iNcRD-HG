@@ -337,3 +337,42 @@ propensity oracle that reads the test labels.
 
 All eight layers. The model is not under-engineered on this protocol; the
 protocol has nothing left to pay for.
+
+## Methods from the current literature
+
+Searched OpenAlex for 2024-06 onward in this exact area (ncRNA/miRNA/circRNA–
+drug association prediction). The mechanism classes that had not been tested
+here are reliable-negative selection (DMGAT 2025, LSNSCDA 2024), LightGCN-style
+propagation (GSLRDA 2022 and its descendants), adaptive-mask graph contrastive
+learning (DMAGCL 2025) and metapath guidance (MPHGNN 2026).
+
+Two were reimplemented and run on the frozen LncDrug fold, both chosen because
+they fit what this metric rewards rather than because they are recent:
+
+| arm | method | source | LncDrug Δ vs base | seeds | p |
+|---|---|---|---|---|---|
+| `lightgcn` | symmetric-normalised propagation over ID embeddings, no feature transform, no nonlinearity, layer-averaged, inner-product decoder | LightGCN / GSLRDA | **−0.0004** | 4/10 | 0.096 |
+| `relneg` | negatives resampled each epoch as the pool candidates the current model scores most confidently negative | DMGAT / LSNSCDA | **−0.0056** | 1/5 | 0.10 |
+
+LightGCN was given its own tuning (lr 1e-3 and 5e-3, 600 epochs, selected on
+validation) because its embeddings are randomly initialised and the author's
+100-epoch schedule undertrains them. Its best configuration reaches 0.9862
+against base's 0.9866.
+
+LightGCN was the strongest prior bet in the whole investigation — no feature
+transform, no nonlinearity, pure normalised propagation, i.e. the closest thing
+in the literature to a smoothed degree model, on a metric that is 99.7% a
+degree comparison. It still loses, which is the same result as arm 3: the
+degree structure is already fully extracted, so a method that extracts it more
+directly has nothing to add.
+
+### Why searching further does not help
+
+The +0.0023 ceiling is a property of the **metric and the fold**, not of the
+architecture. Any scorer is a function of (ncRNA, drug); the pair decomposition
+splits its AUC into a 0.36% same-drug part and a 99.64% cross-drug part
+regardless of how the score is computed. A new method can only exceed the
+ceiling through genuine pair-level accuracy, and to gain +0.01 it needs
+cross-drug AUC of 0.99987 — while the best within-drug AUC any method in this
+repo's debiased benchmark reaches is 0.79 (GCN on `matched`/LncDrug), against
+iNcRD-HG's 0.648 and the current model's 0.449 on the released fold.
