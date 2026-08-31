@@ -515,3 +515,20 @@ p=0.009", which is what was actually measured.
 
 Its test-fold AUPR is 0.9608 against base's 0.9621, so this is a validation-fold
 effect and should not be presented as a general one.
+
+### Does it replicate on MiDrug?
+
+Direction yes, magnitude no.
+
+| task | val AUPR base | val AUPR `posw2` | Δ | seeds | t-test | Wilcoxon |
+|---|---|---|---|---|---|---|
+| LncDrug | 0.9507 | 0.9537 | **+0.0031** | 8/10 | **0.0092** | **0.0098** |
+| MiDrug | 0.9174 | 0.9179 | +0.0005 | 7/10 | 0.081 | 0.13 |
+
+val AUC on MiDrug is flat (−0.0001, 5/10, p=0.41).
+
+The sign agrees on both tasks, which makes the LncDrug result less likely to be
+a fold-specific fluke, but MiDrug's effect is 6x smaller and clears neither
+test. Report it as corroborating direction, not as a second result — one
+significant cell out of two is exactly the pattern that does not survive being
+described as "improves AUPR on both tasks".
