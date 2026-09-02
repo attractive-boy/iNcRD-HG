@@ -1489,3 +1489,54 @@ task with headroom (LncDrug) and a loss on the saturated one (MiDrug), and it is
 invisible to the fusion because it is redundant with the member it would
 replace.*
 
+## AUPR-targeted fusion: the criterion is not the lever, the normalisation is
+
+AUPR is the metric with the real residual (LncDrug test +0.023, ~3x AUC's), and
+its residual sits at the top of the ranking.  The published fusion selects its
+weights on validation by the author's own `(AUC+AUPR)/2`, so a single weight
+vector reports both metrics.  `improve/aupr_fusion.py` tests the two untried
+levers on that rule — select the weight for **AUPR alone**, and fuse on **raw
+probabilities instead of ranks** (AUPR is scale-sensitive at the head; AUC is
+not).
+
+Members gnn / extratrees / logreg / gbdt from the historical `alt_*.npz` (the
+pool the published fusion is built on), grid-searched on validation:
+
+| task | normalisation | rule | S_val AUC / AUPR | S_test AUC / AUPR |
+|---|---|---|---|---|
+| LncDrug | rank | joint | 0.9879 / 0.9729 | 0.9909 / 0.9819 |
+| LncDrug | rank | **AUPR-only** | 0.9879 / 0.9729 | 0.9908 / 0.9823 |
+| LncDrug | **raw** | joint | **0.9882 / 0.9738** | **0.9912 / 0.9814** |
+| LncDrug | raw | AUPR-only | 0.9881 / 0.9737 | 0.9912 / 0.9818 |
+| MiDrug | rank | joint | **0.9580 / 0.9225** | 0.9594 / 0.9203 |
+| MiDrug | rank | AUPR-only | 0.9578 / 0.9225 | 0.9593 / 0.9204 |
+| MiDrug | raw | joint | 0.9573 / 0.9216 | 0.9590 / 0.9208 |
+
+Two findings, one dead and one live.
+
+**Selecting the fusion weight for AUPR alone buys nothing.** On both tasks the
+AUPR-only rule lands on the same val AUPR as the joint rule (0.9729, 0.9225) —
+the joint criterion's argmax already sits at the AUPR optimum, so the extra
+degree of freedom is unused.  This closes the last plausible "point the
+validation rule at AUPR" move: the AUPR residual is not reachable by re-pointing
+the weight selection, any more than by the focal/cost-sensitive losses tried
+earlier.
+
+**Fusing on raw probabilities instead of ranks is task-dependent and, where it
+helps, helps validation.**  LncDrug's raw-probability fusion beats the published
+rank-normalised one on val AUPR (+0.0011, 0.9738 vs 0.9727) and val AUC
+(+0.0002), with test AUC also up (+0.0004) — but test AUPR is flat-to-negative
+(0.9814 vs 0.9816 at the joint weights, +0.0007 at the AUPR-only weights).
+MiDrug is the opposite: rank fusion wins on val AUPR (0.9225 vs 0.9216) and the
+raw fusion only edges test AUPR (+0.0005) at a cost to both validation metrics.
+There is no normalisation that wins on both folds or both metrics, and the
+validation-selected choice differs by task — the same "the validation fold has
+been squeezed" pattern, now on the input transform instead of the model class.
+
+**Verdict.**  The AUPR-targeted fusion direction is closed.  Re-pointing the
+weight-selection criterion at AUPR is exactly neutral on both tasks, and the
+raw-vs-rank normalisation is a task-specific choice that trades val AUPR against
+test AUPR in both directions — not a lever on the +0.023 LncDrug AUPR residual.
+Consistent with everything above: the residual is real but the validation fold
+cannot see how to collect it.
+
