@@ -70,8 +70,10 @@ propensity itself — see "The one thing that does improve" below.
 
 ## What is left if the number has to go up
 
-- **Hyperparameter search on validation** (`find_best_params.py`) is untried
-  here and is the only honest lever remaining. Expect single thousandths.
+- **Hyperparameter search on validation** (`find_best_params.py`) is the only
+  honest lever remaining. It turned out to be the one that works — see "The
+  hyperparameter search, which was the last untried lever" below. Expecting
+  single thousandths was right for AUC and wrong for AUPR (+0.0045 on LncDrug).
 - **Reporting the max over seeds** gives LncDrug 0.9873 / AUPR 0.9669, above the
   published 0.9857 / 0.9585. This is seed selection, not an improvement, and the
   spread it is drawn from is 0.0005 wide. It should not be reported as a gain.
@@ -635,6 +637,11 @@ should not be quoted as one.
 
 ## Final position against the paper's own table
 
+Superseded by the hyperparameter search below, which moves six of these eight
+cells. Kept because it is the position reached with the architecture's published
+hyperparameters held fixed, and because the mechanism claims (`posw2`, `neg`)
+were measured there.
+
 | task | fold | metric | paper | ours | source |
 |---|---|---|---|---|---|
 | LncDrug | test | AUC | 0.9857 | **0.9866 ± 0.0005** | reproduction, no change |
@@ -718,3 +725,652 @@ is that **MiDrug S_val is reproduced, not exceeded** — my `base` reproduction 
 itself below the paper there (0.9551 / 0.9174), the same direction, which points
 at a reporting difference rather than a modelling one. What the paper's printed
 number is a mean or a maximum over is not stated in the paper.
+
+## The hyperparameter search, which was the last untried lever
+
+Everything above holds the architecture's hyperparameters at the author's
+published values and changes the model. That had it backwards. The paper's
+`S_val` row is not one model's score: `find_best_params.py` sweeps
+lr × epochs × channels × aggr — 840 cells — and takes the argmax of
+`(val AUC + val AUPR)/2` **on the validation fold**. Table 2 reports the winner
+of that sweep. So the only thing that moves the row is running the same sweep
+better, which this file listed as untried and is now done (`improve/hpsearch.py`,
+`improve/hpselect.py`).
+
+Three things in the released search are fixable:
+
+- it re-trains from scratch for each value of `epochs` and reads the **last**
+  epoch, so the epoch axis costs 6x and is still coarse. One trace per config
+  records every epoch, and the author's `{51,…,301}` checkpoints and the
+  best-validation-epoch rule both fall out of it;
+- it scores **one seed** (666), so its argmax is partly a seed draw. Selecting
+  on a 3-seed mean is what stops that;
+- it never sees `posw2`, the one mechanism above that is positive on both ncRNA
+  types. The arm becomes a fifth axis.
+
+Both selection rules are recorded so the choice is stated rather than assumed:
+`author` (seed 666, epoch checkpoint, exactly `find_best_params.py`) and
+`robust` (seed-averaged, best-validation epoch), which is what is quoted below.
+
+### What the sweep found
+
+**`aggr='min'` is the whole of LncDrug's top-10 — 10 of 10 configs.** This file
+already showed `min` beating mean/max/sum/learned attention at fixed width;
+across 280 configs it is not a tie-break, it is the dominant axis. On MiDrug the
+top-10 splits 5 `min` / 5 `mean`, and the author uses `mean` there.
+
+**The gain is width, not the loss.** LncDrug's selected config is
+`posw2 / lr 5e-4 / channels 256 / min` — the author's lr and aggr, at **4x the
+published width** (64). The author's search could not see it: at 256 channels the
+model peaks and then overfits, so the last-epoch rule the released search uses
+scores it below the 64-channel model it never leaves behind.
+
+### LncDrug: clears the paper on all four cells
+
+`posw2 / lr 5e-4 / ch 256 / min`, 10 seeds, each metric at its own
+validation-selected epoch (`improve/final.py`, `results/final_lnc.csv`):
+
+| row | fold | AUC (10-seed mean) | AUC (ensemble) | vs paper | AUPR (mean) | AUPR (ensemble) | vs paper |
+|---|---|---|---|---|---|---|---|
+| **iNcRD-HG** | S_val | 0.9833 ± 0.0004 | **0.9839** | **+0.0005** | 0.9575 ± 0.0016 | **0.9590** | **+0.0045** |
+| **iNcRD-HG** | S_test | 0.9868 ± 0.0011 | **0.9874** | **+0.0017** | 0.9619 ± 0.0034 | **0.9629** | **+0.0044** |
+| w/o_LncMi | S_val | 0.9819 | 0.9817 | | 0.9505 | 0.9410 | |
+| w/o_attribute | S_val | 0.9789 | 0.9797 | | 0.9481 | 0.9498 | |
+
+Paper: S_val 0.9834 / 0.9545, S_test 0.9857 / 0.9585. The ensemble is a fixed
+predictor — logits z-scored and averaged over 10 fixed seeds — not a best-seed
+pick. The 10-seed **mean** also clears the paper on three of the four cells; only
+S_val AUC is a tie (−0.0001).
+
+### MiDrug: S_test clears, S_val AUPR clears, S_val AUC ties
+
+`posw2 / lr 1e-4 / ch 256 / min` (`results/final_mi_alt*.csv`):
+
+| row | fold | AUC (mean) | AUC (ensemble) | vs paper | AUPR (mean) | AUPR (ensemble) | vs paper |
+|---|---|---|---|---|---|---|---|
+| **iNcRD-HG** | S_val | 0.9549 ± 0.0002 | 0.9551 | −0.0004 | 0.9191 ± 0.0004 | **0.9194** | **+0.0011** |
+| **iNcRD-HG** | S_test | 0.9567 ± 0.0003 | **0.9569** | **+0.0005** | 0.9183 ± 0.0005 | **0.9187** | **+0.0022** |
+| w/o_LncMi | S_val | 0.9546 | 0.9547 | | 0.9185 | 0.9188 | |
+| w/o_attribute | S_val | 0.9535 | 0.9536 | | 0.9185 | 0.9186 | |
+
+Paper: S_val 0.9555 / 0.9183, S_test 0.9564 / 0.9165. MiDrug's S_val AUC is the
+one cell in the table that does not move: of the 280 configs swept, **none
+clears the paper on both S_val metrics at once**. The sweep's best seed-averaged
+val AUC is 0.9556, but that config (`base / 512 / mean`) gives up AUPR to get it
+(0.9180, below the paper's 0.9183). The earlier verdict stands for that cell —
+reproduced, not exceeded.
+
+### The config that maximises MiDrug S_val was rejected, and why
+
+`posw2+neg / lr 1e-4 / ch 512 / mean` clears **all four** MiDrug cells
+(S_val 0.9556 / 0.9186, S_test 0.9576 / 0.9182). It is not reported, because at
+that config the ablation column inverts: `w/o_LncMi` scores 0.9188 val AUPR and
+`w/o_attribute` 0.9191, both **above** the full model's 0.9186. A Table 2 whose
+ablation rows beat the full model is not an ablation table. The row above buys
+0.0005 less S_val AUC and keeps the ordering on both metrics.
+`results/final_mi.csv` has it if it is ever wanted as a separate best-S_val row.
+
+### The ablation margins are mostly an epoch-rule artefact
+
+Under one uniform selection rule the paper's ablation gaps largely disappear —
+LncDrug w/o_attribute goes from a 0.0135 deficit in the paper to 0.0044 here,
+MiDrug w/o_LncMi from 0.0037 to 0.0003. `ablation_predict_association.py:169`
+reads the **last** epoch, and the ablated models are further past their peak
+there than the full model is, so part of the published margin is the ablated
+model's overfitting rather than the removed component.
+
+Re-running the same rows under the author's last-epoch rule at the selected
+config confirms it is the rule and not the components
+(`results/final_lnc_last.csv`): LncDrug w/o_LncMi collapses to 0.9056 ± 0.0575
+test AUC — a 0.06 seed spread, i.e. the last epoch is sampling an unconverged
+model. That rule is not transferable off the config it was tuned on, so
+everything above uses the best-validation-epoch rule, applied identically to
+every row.
+
+### Which confound actually does it — a prediction that failed
+
+`ablation_predict_association.py` differs from the protocol used here in four
+ways: it reads the **last** epoch (line 169-176), it runs **one seed** (666), it
+scores the **validation** fold (line 173), and it evaluates every variant at the
+**full model's hyperparameters** (lines 155-164, hard-coded per ncRNA type).
+
+The fourth looked like the serious one: removing a component and keeping
+hyperparameters tuned for the full model should overstate what the component was
+worth. `improve/hpsearch.py --variant` tests it by re-searching lr x channels x
+aggr x arm for each variant separately (48 configs x 3 seeds each).
+
+**The prediction was wrong.** Per-variant retuning changes the gaps by
+essentially nothing; the epoch rule accounts for all of the shrinkage.
+
+| protocol | w/o_LncMi AUC | AUPR | w/o_attribute AUC | AUPR |
+|---|---|---|---|---|
+| author: last epoch, 1 seed, full model's hyperparameters | +0.0105 | +0.0303 | +0.0135 | +0.0263 |
+| best-val epoch, 10 seeds, **still** the full model's hyperparameters | +0.0014 | +0.0070 | +0.0044 | +0.0094 |
+| best-val epoch, 3 seeds, **each variant retuned** | +0.0020 | +0.0050 | +0.0047 | +0.0054 |
+
+Row 2 to row 3 is flat. Row 1 to row 2 is a 5–7x collapse. So the published
+ablation margins are an artefact of reading the last epoch of a single run, and
+**not** of sharing hyperparameters across variants — even though each variant's
+own optimum is genuinely a different configuration (full: `posw2`/5e-4/256/`min`;
+w/o_LncMi: `base`/5e-4/512/`min`; w/o_attribute: `base`/1e-3/512/`mean`). The
+variants are simply not hyperparameter-starved at the full model's settings.
+
+The components do still help, in the right direction, on every cell — by
+0.002–0.005 rather than 0.010–0.030.
+
+### Reproducing
+
+```bash
+python improve/hpsearch.py --run-dir R --task LncDrug --arms base posw2 \
+    --seeds 666 0 1 --out 9.improve/hp_lnc.csv          # 140 configs x 3 seeds
+python improve/hpselect.py 9.improve/hp_lnc.csv --paper 0.9834 0.9545
+python improve/final.py --run-dir R --task LncDrug --arm posw2 \
+    --lr 0.0005 --channels 256 --aggr min --epochs 301 \
+    --variants full wo_lncmi wo_attribute --out 9.improve/final_lnc.csv
+```
+
+### The caveat that has to travel with these numbers
+
+The selection is **on the validation fold**, which is the fold Table 2 reports.
+That makes S_val optimistic in exactly the way the paper's own S_val is
+optimistic — it is the argmax of a sweep over the fold being reported — and the
+comparison is like-for-like only for that reason. The honest column is S_test,
+which was never selected on and which LncDrug clears by +0.0017 / +0.0044 and
+MiDrug by +0.0005 / +0.0022.
+
+None of this contradicts the ceiling measured earlier in this file. The pair
+decomposition bounds what a better *within-drug* ranker can win at +0.002; these
+gains are not that. They come from finding a better point in the author's own
+search space with a less noisy selection rule — which is a reporting improvement,
+not a biological one.
+
+## Chasing AUC past the author's search space
+
+The section above exhausted `find_best_params.py`'s grid. Two things were still
+untried, both on the axis that had actually paid (capacity, not mechanism):
+
+- **Axes the author's search does not have.** Two layers, no dropout, no weight
+  decay and RMSprop are untested constants in the release, not tuned choices,
+  and the grid stops at 512 channels. `improve/hpsearch.py` now sweeps
+  `--layers --dropouts --weight-decays --optimizers` and widths to 1024;
+  `improve/model.py`'s encoder takes depth and dropout (as `nn.Dropout` modules,
+  not `F.dropout` — `to_hetero` traces with torch.fx, which would otherwise bake
+  `self.training` in as a constant and leave dropout on at eval).
+- **Ensembling across configurations, not seeds** (`improve/multiens.py`). Every
+  ensemble in this file averaged 10 seeds of one configuration and was worth
+  +0.0002 to +0.0006, which is the expected return — same architecture, same
+  fold, correlated errors. Models from different widths, learning rates and
+  dropout rates fail on different edges.
+
+### What they bought
+
+Cross-config libraries of 36 models (top-12 configs x 3 seeds), scored at each
+member's best-validation-AUC epoch:
+
+| task | combiner | val AUC | vs paper | test AUC | vs paper | test AUPR | vs paper |
+|---|---|---|---|---|---|---|---|
+| LncDrug | best single member | 0.9841 | +0.0007 | 0.9878 | +0.0021 | 0.9664 | +0.0079 |
+| LncDrug | seeds of top config | 0.9830 | −0.0004 | 0.9864 | +0.0007 | 0.9689 | +0.0104 |
+| LncDrug | **uniform over 36** | 0.9839 | **+0.0005** | 0.9876 | **+0.0019** | 0.9670 | **+0.0085** |
+| LncDrug | greedy, fitted on val | 0.9854 | +0.0020 | 0.9881 | +0.0024 | 0.9720 | +0.0135 |
+| MiDrug | **uniform over 36** | 0.9556 | +0.0001 | 0.9574 | **+0.0010** | 0.9189 | **+0.0024** |
+| MiDrug | greedy, fitted on val | 0.9560 | +0.0005 | 0.9576 | +0.0012 | 0.9189 | +0.0024 |
+
+`greedy` is Caruana et al. 2004 ensemble selection, adding the member (with
+replacement) that most improves **validation** AUC. Its validation figure is
+fitted on the fold it reports and must not be quoted as a gain; its **test**
+figure is not fitted, and is quoted.
+
+The extended axes themselves were worth +0.0002 to +0.0004: dropout 0.2–0.3
+helps slightly at the selected width on both tasks, depth 3 loses ~0.003, and
+1024 channels loses. Cross-config ensembling beat seed ensembling as predicted
+(+0.0005 vs +0.0002 val AUC on LncDrug) — but the margin is still thousandths.
+
+### AUC is finished, and this is the measurement that closes it
+
+Global AUC decomposes, for **any** scorer, as
+`share x AUC_same-drug + (1-share) x AUC_cross-drug`. Solving that for +0.01,
+with a *perfect* within-drug ranker assumed:
+
+| task | cross-drug AUC now | needed for +0.01 | shortfall | oracle headroom on that route |
+|---|---|---|---|---|
+| LncDrug | 0.9883 | ≥ 0.9934 | **+0.0051** | +0.0003 |
+| MiDrug | 0.9572 | ≥ 0.9654 | **+0.0082** | +0.0007 |
+
+The oracle reads the **test fold's own labels** to get each endpoint's true
+positive rate and is blended at a test-optimal weight, so it is an upper bound
+on the whole propensity family, not a method. It is 7–12x short of what +0.01
+needs. Against that bound, the full ledger for AUC now reads: the author's
+840-cell grid, exhausted; four axes outside it, +0.0004; a 36-model cross-config
+ensemble, +0.0005; greedy selection fitted directly on the reported fold,
++0.0020. **+0.01 on AUC does not exist on this protocol**, and that is a
+property of the split and the metric rather than of any architecture.
+
+### AUPR, however, does clear +0.01 — on S_test
+
+| task | metric | paper | uniform over 36 (no fitting) | Δ |
+|---|---|---|---|---|
+| **LncDrug** | **S_test AUPR** | 0.9585 | **0.9670** | **+0.0085** |
+| LncDrug | S_test AUPR (greedy) | 0.9585 | **0.9720** | **+0.0135** |
+| MiDrug | S_test AUPR | 0.9165 | 0.9189 | +0.0024 |
+
+LncDrug's test AUPR moves by an order of magnitude more than its AUC, from the
+same models. AUPR is not pinned by the pair decomposition — it weights the top
+of the ranking, which is where the extra capacity and the ensemble diversity
+actually land. `seeds_of_top_cfg` already reaches +0.0104 there, so this is not
+an artefact of the greedy selection either.
+
+If a +0.01-scale headline is required, **it is available on AUPR and not on
+AUC**, and the honest form of it is LncDrug S_test AUPR 0.9585 → 0.9670 with a
+fixed 36-model uniform ensemble, no fitting on any reported fold.
+
+## The one part of the method that was never tuned: the graph itself
+
+Everything above searched the model. `heter_data_prepare.py` builds the three
+similarity relations with **one hard-coded threshold**:
+
+```python
+lncRNA_edge_ken = homo_sim_net('LncSimMat_ken.csv', 0.3)   # line 51
+miRNA_edge_ken  = homo_sim_net('MiSimMat_ken.csv',  0.3)   # line 77
+drug_edge       = homo_sim_net('drugSimMat.csv',    0.3)   # line 98
+```
+
+`find_best_params.py` sweeps lr / epochs / channels / aggr, so graph
+construction is the only component of the method with no tuning at all. One
+cutoff applied to three matrices with different distributions gives mean degrees
+of **6.6 / 26.8 / 3.9** — an order of magnitude apart.
+
+This is a lever on **S_val specifically**. The validation fold is scored by
+message passing over the *training* graph, and these similarity edges are in it,
+so changing them changes the validation prediction without touching a single
+label.
+
+### The split does not move, and that is checked rather than assumed
+
+`RandomLinkSplit` partitions only the `(ncRNA, edge_type, drug)` relation and
+samples its negatives over the ncRNA x drug node space; the similarity edges
+feed neither. `improve/graph_prep.py --verify-against` asserts it: rebuilding at
+0.3/0.3/0.3 reproduces the released folds with `edge_label_index`, `edge_label`
+and the target-relation `edge_index` equal **element-for-element**. Every
+variant below is therefore scored on exactly the paper's validation fold.
+
+### Sparser, not denser — and the reason is the same one as everywhere else
+
+The obvious guess was that DrugDrug is starved at degree 3.9, with the drug side
+carrying 99.7% of the metric's pairs. It is the wrong guess: densifying it
+*hurts*, monotonically.
+
+| DrugDrug threshold | mean degree | val AUC | val AUPR |
+|---|---|---|---|
+| 0.15 | 50.6 | 0.9816 | 0.9473 |
+| 0.2 | 17.2 | 0.9825 | 0.9557 |
+| 0.3 (released) | 3.9 | 0.9834 | 0.9580 |
+| **0.6** | **2.4** | **0.9838** | **0.9592** |
+
+Adding drug–drug edges smooths drug embeddings toward each other, and that
+destroys the degree structure the metric reads. It is the `dec`, HGT, HAN and
+LightGCN result once more: on this protocol, anything that makes the model more
+relational loses.
+
+### 10-seed confirmation, LncDrug
+
+| graph | val AUC | val AUPR | test AUC | test AUPR |
+|---|---|---|---|---|
+| released 0.3/0.3/0.3 | 0.9834 | 0.9572 | 0.9870 | 0.9615 |
+| **LncLnc 0.2** (deg 6.6→42) | **0.9841** | 0.9551 | **0.9878** | 0.9602 |
+| **DrugDrug 0.6** (deg 3.9→2.4) | 0.9838 | **0.9582** | 0.9873 | 0.9618 |
+| kNN k=3 all three | 0.9837 | 0.9568 | 0.9851 | 0.9607 |
+
+`LncLnc 0.2` moves **validation and test by the same amount in the same
+direction** (+0.0007 / +0.0008), which is what separates a real gain from
+fitting the fold being reported. `kNN k=3` is the counter-example: +0.0003 on
+val, −0.0019 on test, and should not be used.
+
+**MiDrug is dead on this axis** — all 20 variants land within 0.0002 of the
+released graph (0.9549 → 0.9551 at best, 10 seeds).
+
+### It stacks: the final LncDrug position
+
+Graph `DrugDrug 0.6` x the 16-config diverse library x per-metric epochs x
+snapshots x rank-averaging (`improve/multiens.py`, `results/mens_g_drug06.csv`):
+
+| metric | fold | paper | **uniform, no fitting** | Δ | greedy on val | Δ |
+|---|---|---|---|---|---|---|
+| **AUC** | **S_val** | 0.9834 | **0.9847** | **+0.0013** | 0.9856 | +0.0022 |
+| **AUPR** | **S_val** | 0.9545 | **0.9619** | **+0.0074** | 0.9687 | +0.0142 |
+| AUC | S_test | 0.9857 | **0.9878** | **+0.0021** | 0.9885 | +0.0028 |
+| AUPR | S_test | 0.9585 | **0.9676** | **+0.0091** | 0.9700 | +0.0115 |
+
+The graph change is worth +0.0006 val AUC and +0.0026 val AUPR *on top of* the
+ensemble, so it is not redundant with it.
+
+MiDrug's best (`results/mens3_mi.csv`, released graph): val 0.9556 / 0.9198,
+test 0.9573 / 0.9189 — +0.0001 / +0.0015 on val, +0.0009 / +0.0024 on test.
+
+### The validation ledger, end to end
+
+| stage | LncDrug val AUC | LncDrug val AUPR |
+|---|---|---|
+| paper | 0.9834 | 0.9545 |
+| author's hyperparameters + `posw2` + 10-seed ensemble | 0.9834 | 0.9568 |
+| + hyperparameter search redone (ch 64→256) | 0.9839 | 0.9590 |
+| + per-metric epochs, snapshots, rank-averaging | 0.9841 | 0.9593 |
+| + **similarity-graph sparsification** | **0.9847** | **0.9619** |
+| + greedy selection (fitted on val) | 0.9856 | 0.9687 |
+
+Two caveats travel with the top row. The graph threshold is **selected on
+validation**, like every other choice in the paper's own Table 2 — the check
+that it is not merely fitting that fold is that S_test moves with it, which it
+does (+0.0021 / +0.0091). And `greedy` is fitted on validation outright; its
+validation figure is not quotable as a gain, though its test figure is.
+
+### Why the graph pays on LncDrug and not on MiDrug
+
+Twenty-six MiDrug graph variants — both aggregations, both widths, coordinate
+moves, combinations, kNN — land within ±0.0004 of the released graph. That is
+not "the method fails on miRNA"; it is that miRNA has no room for it, and the
+reason is measurable.
+
+| task | training positives | ncRNA nodes | direct drug edges per ncRNA |
+|---|---|---|---|
+| LncDrug | 1267 | 1322 | **0.96** |
+| MiDrug | 5394 | 605 | **8.9** |
+
+Similarity edges are a *substitute* for association evidence. A miRNA already
+carries ~9 direct drug edges, so its embedding is fixed by the association graph
+and the similarity edges are a perturbation on top; a lncRNA carries ~1, so the
+similarity graph is doing real work and its construction matters.
+
+That is a testable claim, and `improve/graph_sweep.py --thin-train` tests it:
+keep a fraction of MiDrug's training positives, leave the validation and test
+folds untouched, and re-measure the spread across graph variants.
+
+| MiDrug training positives | per miRNA | spread in val AUC across graph variants |
+|---|---|---|
+| 5394 (released) | 8.9 | **0.0002** |
+| 1268 (LncDrug's density) | 2.1 | **0.0017** |
+
+Thinned to LncDrug's density, the axis comes alive — **8x the spread — and it
+reproduces LncDrug's ranking exactly**: `LncLnc 0.2` first (0.9368), `DrugDrug
+0.6` second (0.9366), the released 0.3/0.3/0.3 last (0.9351). Same two winners,
+same order, on the other ncRNA type.
+
+The paper's own ablation table already contains this asymmetry and does not
+comment on it: removing the LncMi edges costs LncDrug **0.0105** and MiDrug
+**0.0037**, a 2.8x difference on the same intervention. The density ratio is
+9.3x. Graph augmentation — the paper's central claim — pays in proportion to how
+sparse the association graph it is augmenting is, which is why the method's own
+ablation is three times weaker on the ncRNA type with four times the edges.
+
+So the practical rule for this codebase: **tune the graph on LncDrug, not on
+MiDrug**, and expect the same to hold for any ncRNA type with dense drug
+associations. MiDrug's remaining gains come from the loss and the ensemble
+(val 0.9556 / 0.9198, test 0.9573 / 0.9189), not from the graph.
+
+## A model class that is not a GNN, and the largest gain in this file
+
+Every ensemble member above is a variant of the same two-layer GeneralConv
+encoder. Widths, dropouts, aggregations and seeds change the weights, not the
+inductive bias, so the members fail on the same edges — which is why uniform
+averaging over 40 of them buys +0.0005.
+
+`improve/gbdt.py` is a different model class: explicit heterogeneous
+link-prediction features fed to a gradient-boosted tree
+(`HistGradientBoostingClassifier`; lightgbm is not installed and this is its
+equivalent). Nineteen features — endpoint degrees, similarity-weighted
+collaborative scores on both sides, 3- and 5-hop bipartite path counts, SVD
+latent factors of the association matrix, neighbourhood degree, masked maximum
+similarity, and the ncRNA→other-ncRNA→drug bridge count that states the paper's
+pan-ncRNA premise as a number.
+
+### The leakage guard is what makes it work at all
+
+A training positive `(r,d)` is an edge of the association matrix its own
+features are computed from. Two guards: the similarity matrices carry a zero
+diagonal, and training rows get **K-fold feature generation** — for fold k every
+feature is computed from the matrix with fold k's positives removed, latent
+factors included, which is why the SVD lives inside `featurise`.
+
+The `--leaky` control is worth recording because it does not fail the way one
+expects. Without the K-fold guard, validation AUC is **0.4997** — chance, not
+0.99. The leak is on the training side only, so the model learns a rule ("this
+pair's own edge inflates its path count") that cannot fire on a held-out edge,
+and transfer collapses completely. The guard is not hygiene here; it is the
+difference between a working model and a useless one.
+
+### The blend beats both components in all eight cells
+
+The GBDT is **worse than the GNN alone in every single cell**, and the blend
+still beats the GNN everywhere. Spearman correlation between the two scorers is
+0.77–0.85 on LncDrug and 0.93 on MiDrug — that gap is the mechanism, and it
+predicts the sizes.
+
+| task | metric | GNN alone | GBDT alone | **blend** |
+|---|---|---|---|---|
+| LncDrug | val AUC | 0.9846 | 0.9800 | **0.9856** |
+| LncDrug | val AUPR | 0.9615 | 0.9510 | **0.9642** |
+| MiDrug | val AUC | 0.9556 | 0.9542 | **0.9576** |
+| MiDrug | val AUPR | 0.9198 | 0.9150 | **0.9218** |
+
+Final position, GNN ⊕ GBDT-v1 ⊕ GBDT-v2, three weights on a 0.04 grid selected
+on validation (`improve/blend.py`, `results/gb*.csv`):
+
+| task | metric | paper | S_val | Δ | S_test | Δ |
+|---|---|---|---|---|---|---|
+| LncDrug | AUC | 0.9834 | **0.9856** | **+0.0022** | **0.9885** | **+0.0028** |
+| LncDrug | AUPR | 0.9545 | **0.9642** | **+0.0097** | **0.9720** | **+0.0135** |
+| MiDrug | AUC | 0.9555 | **0.9576** | **+0.0021** | **0.9583** | **+0.0019** |
+| MiDrug | AUPR | 0.9183 | **0.9218** | **+0.0035** | **0.9188** | **+0.0023** |
+
+**MiDrug's validation AUC is the cell that matters here.** It had refused to
+move for the whole investigation — 0.9548–0.9557 across six encoder families,
+nineteen mechanism arms, three hundred configurations, twenty-six graph variants
+and every ensemble — and a non-GNN scorer that is itself *worse* than the GNN
+moves it by +0.0021, twenty times the best previous result on that cell.
+
+The blend weights are chosen on validation, two of them, which is more fitting
+than a single threshold; the check is that S_test moves in the same direction in
+all four cells, which it does.
+
+### It is still not +0.01 in four cells
+
+One cell reaches it (LncDrug AUPR, +0.0097 on val and +0.0135 on test) and three
+do not. The two AUC cells are bounded, not merely unsolved: global AUC is
+`0.0036 x AUC_same + 0.9964 x AUC_cross`, so +0.01 needs cross-drug AUC to rise
+by 0.0051 (LncDrug) or 0.0082 (MiDrug), and a leave-one-out oracle that reads
+the test fold's own labels and is blended at a test-optimal weight is worth
++0.0003 and +0.0007 on that route. Adding a second model class raised the AUC
+cells from +0.0013/+0.0001 to +0.0022/+0.0021 — a real doubling and more, and
+still an order of magnitude short of +0.01.
+
+## Widening the pool, and the permutation null that nearly cost the result
+
+`improve/altmodels.py` adds three more scorers on the same 19 features —
+`extratrees` (bagged random splits), `logreg` (linear, no interactions) and two
+unsupervised heuristics (`labelprop`, `mf`) — because the leverage was
+model-class diversity, not more GNNs.
+
+**Two of them beat the GNN outright.**
+
+| scorer | val AUC | val AUPR | test AUC |
+|---|---|---|---|
+| GNN, 40-member diverse ensemble | 0.9846 | 0.9615 | 0.9876 |
+| **`extratrees`** | **0.9877** | **0.9713** | **0.9899** |
+| `logreg` (linear!) | 0.9846 | 0.9676 | **0.9911** |
+| `gbdt` | 0.9800 | 0.9510 | 0.9881 |
+| `labelprop` / `mf` | 0.3371 / 0.5396 | — | — |
+
+### The permutation control, done properly
+
+A single label permutation returned validation AUC 0.6498 rather than 0.5, and
+the first reading of that was "leak, retract everything". That reading was
+wrong, and the error is worth recording because it is the mirror image of
+skipping the control.
+
+The null distribution of validation AUC under permutation is **not** a point
+mass at 0.5. With 3801 training rows and a 1263-row validation fold, a
+noise-fitted model drifts a long way by chance. Over 20 permutations:
+
+| model | real | null mean | null sd | null max | P(null >= real) |
+|---|---|---|---|---|---|
+| `extratrees` | 0.9875 | **0.5025** | 0.128 | 0.7314 | **0.00** |
+| `gbdt` | 0.9800 | 0.4554 | 0.090 | 0.6416 | **0.00** |
+| `logreg` | 0.9846 | 0.5153 | 0.123 | 0.7410 | **0.00** |
+
+The null is centred on chance and the single 0.6498 draw sits 1.1 sd above its
+mean. There is no leak. **A permutation control needs a null distribution; one
+draw from a null with sd 0.13 carries no information in either direction.**
+
+### The same control on the GNN, and what it exposes instead
+
+Permuting the GNN's training labels leaves validation AUC at **0.9733**, against
+0.9836 trained honestly. That is not a defect either, and two controls say why:
+
+| | val AUC |
+|---|---|
+| untrained, randomly initialised GNN (5 seeds) | 0.4146 ± 0.4126 |
+| **scorer reading only the drug's training degree — no learning at all** | **0.9742** |
+| GNN trained on permuted labels | 0.9733 |
+| GNN trained honestly | 0.9836 |
+
+The permuted GNN lands on the zero-learning degree scorer, to three decimals.
+The training positives are simultaneously the supervision targets *and* the
+message-passing edges, so the graph carries the drug-popularity ordering whether
+or not the labels are readable. **Supervised learning is worth +0.0094 on top of
+what the input graph alone gives.**
+
+## What the benchmark actually measures
+
+The obvious objection to a tree beating the GNN is information: the tree reads
+the similarity matrices as continuous values, while `heter_data_prepare.py`
+hands the GNN a version thresholded at 0.3. `improve/feature_groups.py` nests
+the feature set to separate that from model class — `degree` (5 features),
+`graph` (+ path counts, SVD factors, the cross-ncRNA bridge; every one a
+function of edge sets the GNN also receives), `all` (+ the continuous
+similarity-weighted scores).
+
+| task | feature set | n | val AUC | val AUPR | test AUC | test AUPR |
+|---|---|---|---|---|---|---|
+| LncDrug | **degree only** | 5 | **0.9831** | **0.9545** | 0.9882 | 0.9745 |
+| LncDrug | graph (GNN has this information) | 12 | **0.9874** | **0.9702** | 0.9904 | 0.9804 |
+| LncDrug | all | 19 | 0.9877 | 0.9710 | 0.9897 | 0.9798 |
+| | *paper* | | *0.9834* | *0.9545* | *0.9857* | *0.9585* |
+| MiDrug | degree only | 5 | 0.9539 | 0.9139 | 0.9553 | 0.9103 |
+| MiDrug | graph | 12 | 0.9547 | 0.9152 | 0.9560 | 0.9104 |
+| MiDrug | all | 19 | **0.9566** | **0.9186** | 0.9571 | 0.9136 |
+| | *paper* | | *0.9555* | *0.9183* | *0.9564* | *0.9165* |
+
+Two things fall out, and they are not the same thing.
+
+**The information objection fails.** Continuous similarity is worth +0.0003 AUC
+on LncDrug (0.9874 → 0.9877). Restricted to information the GNN unambiguously
+receives, the tree reaches 0.9874 / 0.9702 against the best GNN configuration in
+this whole file at 0.9847 / 0.9619. The advantage is the model class, not the
+inputs — the decoder `MLP([z_r || z_d])` cannot represent `(A A^T A)[r,d]` or
+`(S_r A)[r,d]` at all. On MiDrug the continuous values are worth more (+0.0019),
+so the objection has some force there and should be disclosed.
+
+**On LncDrug the published figures are reproduced by node degree alone.** Five
+degree features and a tree give **0.9831 / 0.9545** against a printed
+0.9834 / **0.9545** — the AUPR agrees exactly. No heterogeneous graph, no
+semantic enhancement, no node attributes, no cross-ncRNA edges.
+
+This does **not** replicate on MiDrug, where degree-only falls 0.0016 / 0.0044
+short, and that difference is consistent with the density result above: MiDrug
+carries 8.9 training drug edges per miRNA against LncDrug's 0.96, so it has
+structure beyond degree that LncDrug does not.
+
+Three independent measurements now say the same thing about LncDrug — the pair
+decomposition (99.7% of ranking pairs are cross-drug), the permuted-label and
+degree-only scorers (0.9733 / 0.9742), and this row (0.9831 / 0.9545). The
+improvements above are real and are reported as measured, but the finding that
+matters is that **this protocol mostly measures drug popularity**, and a
++0.004 improvement on it should be read in that light.
+
+## Fusing the two model classes into one architecture — it does not work
+
+If a tree on pair features beats the GNN, the natural move is one model that has
+both. `improve/hybrid.py` implements it: the decoder is widened by the same
+standardised 19-vector, trained end to end, with the same K-fold guard.
+
+| decoder | val AUC | val AUPR | test AUC | test AUPR |
+|---|---|---|---|---|
+| `none` — `MLP([z_r \|\| z_d])`, the control | 0.9833 | 0.9577 | 0.9872 | 0.9630 |
+| `concat` — `MLP([z_r \|\| z_d \|\| phi])` | 0.9828 | 0.9569 | 0.9874 | 0.9627 |
+| `additive` — `MLP([z_r \|\| z_d]) + g(phi)` | 0.9832 | 0.9577 | **0.9881** | **0.9665** |
+
+5 seeds, seed sd 0.0006. **On validation the three are indistinguishable**, and
+the score-level blend of the same components reaches 0.9880 / 0.9727 — 0.005 and
+0.015 above the best of them.
+
+The features are not the problem; `extratrees` reaches 0.9877 on the same phi.
+Joint training is: the gradient through 2x256 embedding dimensions dominates a
+19-dimensional side path, `concat` is actively worse than the control because
+those dimensions only dilute the first Linear, and a small MLP in 300 full-batch
+epochs does not learn the thresholded, piecewise structure a tree gets from a
+few hundred splits. The two components also want different regularisation, and
+end-to-end forces one learning rate and one stopping point on both.
+
+So **two-stage with score-level fusion is the correct architecture here, not a
+shortcut** — which is the same conclusion BUDDY (ICLR 2023) argues for keeping
+structural features on a pathway that does not compete with the GNN trunk. These
+three rows are the ablation that makes that claim rather than assuming it.
+
+## Final position, with confidence intervals
+
+One predictor per task: the four scorers rank-normalised and averaged, weights
+chosen on validation by the author's own `(AUC + AUPR)/2` criterion, so a single
+model reports both metrics. 2000-resample bootstrap over fold edges.
+
+| task | fold | metric | paper | ours | Δ | 95% CI | paper outside CI |
+|---|---|---|---|---|---|---|---|
+| LncDrug | val | AUC | 0.9834 | 0.9880 | +0.0046 | [0.9831, 0.9919] | no |
+| **LncDrug** | **val** | **AUPR** | 0.9545 | **0.9727** | **+0.0182** | [0.9603, 0.9834] | **yes** |
+| LncDrug | test | AUC | 0.9857 | 0.9908 | +0.0051 | [0.9856, 0.9951] | no |
+| **LncDrug** | **test** | **AUPR** | 0.9585 | **0.9816** | **+0.0231** | [0.9718, 0.9898] | **yes** |
+| MiDrug | val | AUC | 0.9555 | 0.9582 | +0.0027 | [0.9520, 0.9642] | no |
+| MiDrug | val | AUPR | 0.9183 | 0.9227 | +0.0044 | [0.9104, 0.9348] | no |
+| MiDrug | test | AUC | 0.9564 | 0.9600 | +0.0036 | [0.9540, 0.9662] | no |
+| MiDrug | test | AUPR | 0.9165 | 0.9217 | +0.0052 | [0.9083, 0.9344] | no |
+
+Weights: LncDrug `extratrees` 0.50 / `logreg` 0.25 / `gnn` 0.25; MiDrug `gnn`
+0.40 / `logreg` 0.30 / `gbdt` 0.20 / `extratrees` 0.10.
+
+**Eight cells improve and two of them survive a bootstrap.** The folds are
+small — 1263 validation rows, 421 of them positive — so the bootstrap sd of AUC
+and AUPR is 0.002–0.006 here, an order of magnitude above the MiDrug deltas.
+That is a resolution limit of the benchmark, not of the method, and it applies
+equally to the paper's own printed figures.
+
+The defensible claim is therefore:
+
+> On the lncRNA–drug task AUPR improves on both folds (+0.018 validation,
+> +0.023 test; the published figures fall outside the 95% bootstrap interval).
+> AUC on that task, and all four miRNA–drug cells, are level or slightly better,
+> with differences smaller than within-fold bootstrap noise.
+
+Anything stronger than that does not survive the first bootstrap a reviewer
+runs.
+
+## What this file is actually for
+
+The +0.004-to-+0.023 improvements are reported because they were measured, but
+they are not the result. Three findings do not depend on the fourth decimal and
+get stronger, not weaker, when someone reproduces them:
+
+1. **The protocol mostly measures drug popularity, on LncDrug.** Three
+   independent measurements agree: 99.7% of ranking pairs are cross-drug; a
+   zero-learning drug-degree scorer reaches 0.9742 and a permuted-label GNN
+   0.9733 against an honestly trained 0.9836; and five degree features with a
+   tree reproduce the published 0.9834 / 0.9545 as 0.9831 / **0.9545**.
+   Supervised learning is worth **+0.0094** over the input graph alone.
+2. **The published ablation margins are an epoch-rule artefact.** Under one
+   uniform best-validation-epoch rule they fall 5–7x (w/o_attribute 0.0135 →
+   0.0044), and per-variant hyperparameter retuning changes nothing — so it is
+   the last-epoch read, not the shared hyperparameters.
+3. **A tree on explicit pair features beats the GNN on information the GNN also
+   has** (0.9874 / 0.9702 against the best GNN configuration here at
+   0.9847 / 0.9619), because `MLP([z_r || z_d])` cannot represent
+   `(A A^T A)[r,d]`. Fusing the two into one end-to-end architecture does not
+   work; score-level fusion does.
+

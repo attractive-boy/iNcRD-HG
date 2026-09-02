@@ -12,24 +12,46 @@ from torch_geometric.nn import GeneralConv, to_hetero
 
 
 class GNNEncoder(torch.nn.Module):
-    """The author's encoder.  `norm` and `residual` are off by default."""
+    """The author's encoder.  `norm` and `residual` are off by default.
 
-    def __init__(self, hidden_channels, out_channels, norm=False, residual=False):
+    `layers=2` and `dropout=0` reproduce the released encoder exactly:
+    conv1 -> LeakyReLU(0.1) -> conv2.  Depth and dropout are axes the author's
+    search never had -- `find_best_params.py` sweeps only lr, epochs, channels
+    and aggr, so two layers with no regularisation is an untested constant, not
+    a tuned choice.
+
+    Dropout is an `nn.Dropout` module rather than `F.dropout` on purpose:
+    `to_hetero` traces this with torch.fx, and a functional call would bake
+    `self.training` in as a constant at trace time, leaving dropout active
+    during evaluation.
+    """
+
+    def __init__(self, hidden_channels, out_channels, norm=False,
+                 residual=False, layers=2, dropout=0.0):
         super().__init__()
-        self.conv1 = GeneralConv((-1, -1), hidden_channels)
-        self.conv2 = GeneralConv((-1, -1), out_channels)
+        assert layers >= 1
+        dims = [hidden_channels] * (layers - 1) + [out_channels]
+        self.convs = torch.nn.ModuleList(
+            [GeneralConv((-1, -1), d) for d in dims])
+        self.drops = torch.nn.ModuleList(
+            [torch.nn.Dropout(dropout) for _ in range(len(dims) - 1)])
         self.norm = torch.nn.LayerNorm(hidden_channels) if norm else None
         self.residual = residual
 
     def forward(self, x, edge_index):
-        h = self.conv1(x, edge_index)
-        if self.norm is not None:
-            h = self.norm(h)
-        h = F.leaky_relu(h, negative_slope=0.1)
-        out = self.conv2(h, edge_index)
-        if self.residual:
-            out = out + h
-        return out
+        h = x
+        last = len(self.convs) - 1
+        for i, conv in enumerate(self.convs):
+            prev = h
+            h = conv(h, edge_index)
+            if i < last:
+                if self.norm is not None and i == 0:
+                    h = self.norm(h)
+                h = F.leaky_relu(h, negative_slope=0.1)
+                h = self.drops[i](h)
+            elif self.residual:
+                h = h + prev
+        return h
 
 
 class EdgeDecoder(torch.nn.Module):
@@ -67,7 +89,8 @@ class EdgeDecoder(torch.nn.Module):
 
 class Model(torch.nn.Module):
     def __init__(self, data, hidden_channels, aggr_str, rna_type,
-                 decoder='concat', norm=False, residual=False, encoder='hetero'):
+                 decoder='concat', norm=False, residual=False, encoder='hetero',
+                 layers=2, dropout=0.0):
         super().__init__()
         if encoder == 'hyper':
             from improve.hyper import HyperEncoder
@@ -87,7 +110,8 @@ class Model(torch.nn.Module):
                                           hidden_channels)
         else:
             enc = GNNEncoder(hidden_channels, hidden_channels,
-                             norm=norm, residual=residual)
+                             norm=norm, residual=residual, layers=layers,
+                             dropout=dropout)
             self.encoder = to_hetero(enc, data.metadata(), aggr=aggr_str)
         self.decoder = EdgeDecoder(hidden_channels, rna_type, mode=decoder)
 

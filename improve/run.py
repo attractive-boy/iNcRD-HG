@@ -107,6 +107,7 @@ ARMS = {
 # pos_weight was fixed at 2.0 a priori and never swept.  These arms sweep it so
 # the weight can be selected on validation rather than guessed.
 for _w in (1.5, 3.0, 4.0, 6.0):
+    ARMS[f'posw{_w}'] = dict(loss='weighted', pos_weight=_w)
     ARMS[f'posw{_w}+neg'] = dict(loss='weighted', pos_weight=_w,
                                  neg_resample=True)
 for _r in (5, 10, 20):
