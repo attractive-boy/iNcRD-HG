@@ -1,0 +1,5 @@
+task,meta,gate,extra_neg,members,n_train,n_fit,val_auc,val_aupr,test_auc,test_aupr,gnn_alpha,valg_auc,valg_aupr,testg_auc,testg_aupr,weights
+LncDrug,nnls,none,5.0,extratrees+xt35+mlp+gbdt+logreg,3801.0,10136.0,0.9869076568062694,0.9746648193598084,0.9915313048335317,0.9855828151898213,0.22,0.9878357716329743,0.9747063652304814,0.9915538729752144,0.9846008881728923,extratrees=0.000 xt35=0.157 mlp=0.224 gbdt=0.222 logreg=0.092
+LncDrug,val_grid,-,5.0,extratrees+xt35+mlp+gbdt+logreg+gnn,,,0.9879613069210849,0.9759028410950501,0.9921082029552982,0.9855842369153578,,,,,,xt35=0.20 mlp=0.50 gbdt=0.10 gnn=0.20
+LncDrug,uniform,-,5.0,extratrees+xt35+mlp+gbdt+logreg,,,0.9871178226256905,0.9743596673655487,0.9913408861380832,0.9852742376446391,,,,,,
+LncDrug,best_on_val(extratrees),-,5.0,extratrees+xt35+mlp+gbdt+logreg,,,0.9872969572502976,0.9711668066553782,0.9904677811567301,0.9836605182979204,,,,,,

@@ -1352,6 +1352,174 @@ The defensible claim is therefore:
 Anything stronger than that does not survive the first bootstrap a reviewer
 runs.
 
+## Fitting the fusion on the training fold instead of the reported one
+
+`poolplus.py` and `feature_extra.py` closed the mechanism search with a result
+that points somewhere else. `mlp` is the highest single-member **test** AUC on
+both tasks (LncDrug 0.9917, MiDrug 0.9593), above every GNN configuration and
+every tree in the pool, and `xt35` improves LncDrug on all four cells — and the
+author's `(AUC + AUPR)/2` validation rule assigns both of them weight **0.00**.
+So the binding constraint was no longer "is there a better member", it was that
+the selector is a 1263-row fold (LncDrug; 3234 on MiDrug) whose bootstrap sd is
+0.002–0.006, an order of magnitude above the differences it is ranking.
+
+`improve/stack.py` tests three changes against that, all of them symmetric
+across the two ncRNA types by construction. **One of the three works, and it
+works on one task.**
+
+| # | change | LncDrug | MiDrug |
+|---|---|---|---|
+| 1 | OOF stacking — meta-learner fitted on the training fold's out-of-fold member scores | −0.0005 test AUC vs the val-fitted combiner, but nothing fitted on val except one scalar | −0.0006 test AUC, same |
+| 2 | degree-gated weights | **−0.0014 … −0.0060** test AUPR; `--gate both` collapses to val AUC 0.65 | **−0.015** test AUPR |
+| 3 | extra sampled negatives | **+0.0025 test AUPR, CI [+0.0005, +0.0050]** | +0.0005, CI [−0.0016, +0.0026] |
+
+### Change 1: it buys honesty, not accuracy
+
+Every member already gets K-fold-guarded features (`gbdt.py`: for fold k,
+features come from the association matrix with fold k's positives deleted).
+Nesting one more level — fit the member on folds ≠ k, predict fold k — turns
+the training fold into honest out-of-fold member scores, so the combiner can be
+fitted on 3801 rows (LncDrug) / 9714 (MiDrug) instead of 1263 / 3234.
+
+`val_grid` in the table below is the combiner being replaced, run on
+**identical member scores**: non-negative weights on a simplex grid, argmax of
+the author's own `(AUC + AUPR)/2`, fitted on validation.
+
+| task | combiner | val AUC / AUPR | test AUC / AUPR | fitted on val |
+|---|---|---|---|---|
+| LncDrug | `val_grid` | 0.9880 / 0.9759 | **0.9921 / 0.9856** | 6 weights |
+| LncDrug | `nnls` OOF ⊕ GNN | 0.9878 / 0.9747 | 0.9916 / 0.9846 | 1 scalar |
+| LncDrug | `uniform` | 0.9871 / 0.9744 | 0.9913 / 0.9853 | **nothing** |
+| MiDrug | `val_grid` | 0.9585 / 0.9244 | **0.9604 / 0.9228** | 6 weights |
+| MiDrug | `nnls` OOF ⊕ GNN | 0.9582 / 0.9225 | 0.9598 / 0.9212 | 1 scalar |
+| MiDrug | `uniform` | 0.9578 / 0.9192 | 0.9590 / 0.9178 | **nothing** |
+
+The prediction was that the val-fitted weights were fitting noise and would lose
+on test. **They do not** — `val_grid` is the best test column on both tasks. Its
+advantage is small (0.0005–0.0010 AUC) and it costs six weights fitted on the
+reported fold, so the trade is real and should be stated rather than hidden: the
+OOF stack gives up ~0.0006 test AUC to make S_val a held-out number. On a
+2-member pool the OOF stack *did* win on test (0.9895 vs 0.9884), which is why
+this looked promising; with the full 5-member pool it does not, and the
+2-member result was the artefact.
+
+The GNN enters as one val-selected scalar because it has no training-fold
+scores — producing them means retraining it K times, which is the open item on
+this route.
+
+### Change 2: degree-gated weights are negative on both tasks
+
+The pair oracle in `altmodels.py` says "pick whichever member ranks each pair
+correctly" is worth 0.9904 against a 0.9846 blend, and a constant weight vector
+cannot recover any of that. Making the weights a function of the drug's
+training degree (3 bins, interaction terms) is the cheapest way to try:
+
+| task | arm | test AUC | test AUPR |
+|---|---|---|---|
+| LncDrug | `nnls`, no gate | 0.9915 | 0.9856 |
+| LncDrug | `nnls`, gate on drug degree | 0.9899 | 0.9817 |
+| LncDrug | `nnls`, gate on both degrees (9 bins) | **0.6432** | 0.5913 |
+| MiDrug | `nnls`, no gate | 0.9592 | 0.9189 |
+| MiDrug | `nnls`, gate on drug degree | 0.9454 | 0.9126 |
+
+Nine bins x 5 members is 54 parameters and it degenerates completely. Three bins
+is 18 and it loses by 0.0016–0.014. The 83% of the pair oracle that a flat
+weight cannot reach is **not** reachable by conditioning on degree either — the
+members do not have complementary degree ranges, they have complementary
+individual edges, and nothing at endpoint granularity separates those.
+
+### Change 3: more negatives, and it is real on LncDrug
+
+Every tree in this repo is fitted on the frozen 2:1 labelled set — 3801 rows out
+of 1322 x 216 = 285,552 possible pairs. The GNN arm `neg` (resample negatives
+each epoch) is *not* this: it reshuffles a fixed budget rather than enlarging it,
+and it was never tried on the tree members at all. Extra negatives are sampled
+from pairs absent from the **training** association matrix (strict: nothing
+about the val/test edge sets is read), featurised through the same per-fold
+guard, and used to fit the base members only — the combiner still sees the
+protocol's 2:1 balance and the evaluation negatives are untouched.
+
+At 5x the positive count it lifts the members, not just the fusion — LncDrug
+`mlp` val AUPR 0.9648 → 0.9736, `gbdt` 0.9525 → 0.9610 — and every combiner
+moves with them. Paired bootstrap over test edges, 2000 resamples
+(`improve/boot_pair.py`):
+
+| task | combiner | metric | 0 → 5x | delta | 95% CI | P(Δ>0) |
+|---|---|---|---|---|---|---|
+| **LncDrug** | `val_grid` | test AUPR | 0.9831 → 0.9856 | **+0.0025** | **[+0.0005, +0.0050]** | **0.997** |
+| **LncDrug** | `val_grid` | test AUC | 0.9913 → 0.9921 | **+0.0008** | **[+0.0001, +0.0018]** | **0.982** |
+| **LncDrug** | `uniform` | test AUPR | 0.9819 → 0.9853 | **+0.0034** | **[+0.0003, +0.0076]** | **0.988** |
+| LncDrug | `uniform` | test AUC | 0.9903 → 0.9913 | +0.0010 | [−0.0000, +0.0024] | 0.967 |
+| MiDrug | `val_grid` | test AUPR | 0.9223 → 0.9228 | +0.0005 | [−0.0016, +0.0026] | 0.698 |
+| MiDrug | `val_grid` | test AUC | 0.9602 → 0.9604 | +0.0002 | [−0.0007, +0.0010] | 0.651 |
+| MiDrug | `uniform` | test AUPR | 0.9186 → 0.9178 | **−0.0008** | [−0.0037, +0.0020] | 0.303 |
+
+Three LncDrug cells have a 95% interval that excludes zero, including the
+`uniform` combiner which fits nothing on any fold. **All eight MiDrug cells span
+zero**, the best reaches P(Δ>0) = 0.90 on validation only, and the unfitted
+combiner is negative. Sampling 10x instead of 5x saturates (LncDrug `val_grid`
+test 0.9917/0.9848; MiDrug 0.9607/0.9232), so the mechanism is not
+budget-starved at 5x.
+
+**It also breaks the linear member on MiDrug.** `logreg` val AUPR falls
+0.9163 → 0.8722 at 5x. The obvious diagnosis is the shifted class prior, and
+`--balance-extra` tests it by downweighting the negatives so their total mass is
+unchanged: it recovers only to 0.8926. So it is not a prior shift — a single
+linear boundary genuinely cannot cover the wider negative region, and that drags
+`uniform` and `nnls` down with it. The balance correction is kept because it
+helps LncDrug's fitted combiners (+0.0004 test AUC), not because it fixed
+MiDrug.
+
+### Why the asymmetry, again
+
+This is the density result for the fourth time. MiDrug carries 8.9 training drug
+edges per miRNA against LncDrug's 0.96, so its collaborative features are
+already estimated from enough evidence that widening the negative pool adds
+little; LncDrug's are estimated from ~1 edge per node, so the extra negatives
+sharpen a boundary that was genuinely underdetermined. Graph tuning
+(0.0017 vs 0.0002 spread), the `w/o_LncMi` ablation (0.0105 vs 0.0037),
+`feature_extra`'s +6 columns (LncDrug all four cells, MiDrug flat-negative), and
+now extra negatives all split the same way and in the same ratio.
+
+### Position after this section
+
+| task | fold | metric | paper | previous best in this file | now |
+|---|---|---|---|---|---|
+| LncDrug | test | AUC | 0.9857 | 0.9908 | **0.9921** |
+| LncDrug | test | AUPR | 0.9585 | 0.9816 | **0.9856** |
+| LncDrug | val | AUC | 0.9834 | 0.9880 | 0.9880 |
+| LncDrug | val | AUPR | 0.9545 | 0.9727 | **0.9759** |
+| MiDrug | test | AUC | 0.9564 | 0.9600 | 0.9604 |
+| MiDrug | test | AUPR | 0.9165 | 0.9217 | 0.9228 |
+| MiDrug | val | AUC | 0.9555 | 0.9582 | 0.9585 |
+| MiDrug | val | AUPR | 0.9183 | 0.9227 | 0.9244 |
+
+Part of the LncDrug movement is the pool expansion `poolplus`/`feature_extra`
+already measured (0.9908 → 0.9913 test AUC, 0.9816 → 0.9831 AUPR); the rest is
+change 3. **MiDrug's four cells move by 0.0003–0.0017 and not one of them
+survives a bootstrap** — unchanged from every other section in this file.
+
+The question this section was opened to answer was "is there a mechanism that
+improves both ncRNA types". The answer it produces is no: of three changes
+designed to be type-symmetric, two are negative on both and one is significant
+on lncRNA only. `posw2` remains the only mechanism in this file that is
+positive on both, and it is +0.0021 / +0.0031.
+
+### Reproducing
+
+```bash
+python improve/stack.py --run-dir $R --net-dir $R/2.construct_network \
+    --task LncDrug --gnn $R/9.improve/gnn_lnc.npz --seeds 666 0 1 --folds 5 \
+    --gate none --extra-neg 5 --balance-extra --metas nnls \
+    --dump-scores $R/9.improve/stk_LncDrug_n5.npz --out /tmp/stk.csv
+
+python improve/boot_pair.py --a $R/9.improve/stk_LncDrug_n0.npz \
+    --b $R/9.improve/stk_LncDrug_n5.npz --key val_grid --boot 2000
+```
+
+`--gate {drug,both}` reproduces the negative arms; `--extra-neg 0` is the
+control every delta above is measured against, on the same member scores.
+
 ## What this file is actually for
 
 The +0.004-to-+0.023 improvements are reported because they were measured, but

@@ -1,0 +1,5 @@
+task,meta,gate,extra_neg,members,n_train,n_fit,val_auc,val_aupr,test_auc,test_aupr,gnn_alpha,valg_auc,valg_aupr,testg_auc,testg_aupr,weights
+MiDrug,nnls,none,0.0,extratrees+xt35+mlp+gbdt+logreg,9714.0,9714.0,0.9577784394243446,0.9216131794744636,0.9588687220545159,0.9188792386587847,0.34,0.9580699415876993,0.922573617835514,0.9596313605556913,0.9205950262529983,extratrees=0.000 xt35=0.237 mlp=0.261 gbdt=0.212 logreg=0.102
+MiDrug,val_grid,-,0.0,extratrees+xt35+mlp+gbdt+logreg+gnn,,,0.9581359867272933,0.9231051036800808,0.9602492160635546,0.9222687961884674,,,,,,mlp=0.30 gbdt=0.20 logreg=0.20 gnn=0.30
+MiDrug,uniform,-,0.0,extratrees+xt35+mlp+gbdt+logreg,,,0.9578679338154558,0.9215249546378167,0.9588558142096442,0.918606797458557,,,,,,
+MiDrug,best_on_val(mlp),-,0.0,extratrees+xt35+mlp+gbdt+logreg,,,0.9570069805625067,0.9219005776023034,0.9593183453175502,0.9209416669466954,,,,,,
