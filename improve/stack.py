@@ -191,6 +191,11 @@ def main():
     p.add_argument('--gnn', default=None,
                    help='npz from multiens --dump-scores; blended in with one '
                         'val-selected scalar (the GNN has no OOF train scores)')
+    p.add_argument('--gnn-oof', default=None,
+                   help='npz from improve/gnn_oof.py with gnn_train/gnn_val/'
+                        'gnn_test; the GNN enters the meta-learner as a full '
+                        'member with out-of-fold training scores instead of a '
+                        'val-selected scalar')
     p.add_argument('--combiner', default='auc_r_uniform_top8cfg')
     p.add_argument('--models', nargs='+',
                    default=['extratrees', 'xt35', 'mlp', 'gbdt', 'logreg'])
@@ -320,7 +325,23 @@ def main():
         print(f'  {name:11s} oof {a_oof:.4f} | val {av:.4f}/{pv:.4f} '
               f'| test {at:.4f}', flush=True)
 
-    if args.gnn:
+    if args.gnn_oof:
+        g = np.load(args.gnn_oof)
+        assert np.array_equal(g['y_train'], y['train']), 'train label order differs'
+        assert np.array_equal(g['y_val'], y['val']), 'val label order differs'
+        # The OOF scores cover the protocol's own 3801 rows; extra-neg rows are
+        # not used by the meta-learner (it fits on `real`), so pad with NaN.
+        gnn_tr = g['gnn_train']
+        if len(gnn_tr) < tr_idx.shape[1]:
+            gnn_tr = np.concatenate(
+                [gnn_tr, np.full(tr_idx.shape[1] - len(gnn_tr), np.nan)])
+        Z['train']['gnn'] = gnn_tr
+        for f in ('val', 'test'):
+            Z[f]['gnn'] = g[f'gnn_{f}']
+        args.models = list(args.models) + ['gnn']
+        print(f"  {'gnn':11s} oof {roc_auc_score(y['train'], g['gnn_train']):.4f}"
+              f" | val {scores(y['val'], Z['val']['gnn'])[0]:.4f}", flush=True)
+    elif args.gnn:
         g = np.load(args.gnn)
         assert np.array_equal(g['y_val'], y['val']), 'val label order differs'
         for f in ('val', 'test'):
@@ -329,6 +350,12 @@ def main():
     # ---- rank-normalise per column per dataset, then assemble design matrices.
     names = list(args.models)
     R = {f: {n: rk(Z[f][n]) for n in Z[f]} for f in FOLDS}
+    # rank-normalise the gnn train column over the protocol rows only (the
+    # NaN-padded extra-neg tail must not shift the ranks).
+    if args.gnn_oof:
+        gv = R['train']['gnn']
+        gv[:n_real] = rk(Z['train']['gnn'][:n_real])
+        gv[n_real:] = np.nan
     M = {f: np.stack([R[f][n] for n in names], axis=1) for f in FOLDS}
 
     # ---- change 2: weights as a function of degree.

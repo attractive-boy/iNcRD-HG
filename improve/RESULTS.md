@@ -1780,6 +1780,45 @@ and no amount of weight resolution moves it.  This was the last untried degree
 of freedom on the AUC/AUPR headline that did not refit a member or change the
 selection fold.
 
+## The GNN's out-of-fold scores: the last open item, closed
+
+`stack.py`'s OOF meta-learner fits on the training fold's out-of-fold member
+scores, but the GNN could never join it — its training-fold scores mean
+retraining it K times, so it entered only as a validation-selected scalar
+(`stack.py:1408` explicitly flags this as the open item on the route).
+`improve/gnn_oof.py` closes it: for fold k it trains a base GNN on the training
+graph with fold k's positives removed (the same per-fold guard as
+`gnn_emb_feat.py`), scores fold k's rows, and repeats; a full-graph GNN scores
+validation and test.  `stack.py --gnn-oof` then lets the GNN enter the
+meta-learner as a full member with honest OOF training scores, instead of a
+single val-selected weight.
+
+GNN train OOF: 0.9866 (LncDrug), 0.9629 (MiDrug) — below the best tree members
+(mlp OOF 0.9839/0.9534), confirming the GNN is the weakest member in the pool.
+
+`val_grid` control (6 members now, weights on validation) against the previous
+headline where the GNN entered as a scalar:
+
+| task | GNN entry | val AUC / AUPR | test AUC / AUPR |
+|---|---|---|---|
+| LncDrug | scalar (previous) | 0.9880 / 0.9759 | 0.9921 / 0.9856 |
+| LncDrug | **full OOF member** | 0.9879 / 0.9760 | 0.9921 / **0.9861** |
+| MiDrug | scalar (previous) | 0.9585 / 0.9244 | 0.9604 / 0.9228 |
+| MiDrug | full OOF member | 0.9584 / 0.9243 | 0.9602 / 0.9221 |
+
+LncDrug test AUPR gains +0.0005 (0.9856 → 0.9861) at a grid weight of 0.10;
+MiDrug loses 0.0007 (0.9228 → 0.9221) because the OOF base GNN is weaker than
+the multiens ensemble and dilutes mlp.  Both deltas are inside bootstrap noise
+(sd 0.002–0.006).
+
+**Verdict.**  The open item is closed and it changes nothing reportable.  The
+GNN is the pool's weakest member, its OOF scores are not better than its
+val-selected scalar entry, and on MiDrug letting it in as a full member is
+slightly harmful.  The headline stands at LncDrug test AUC 0.9921 / AUPR 0.9856
+and MiDrug 0.9604 / 0.9228, with the OOF meta-learner route confirmed dead on
+both tasks: the val-fitted grid beats it even with the GNN given honest
+training-fold scores.
+
 
 ## Multi-view similarity, and the replication control that killed it
 
