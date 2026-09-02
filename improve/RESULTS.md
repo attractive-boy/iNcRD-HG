@@ -1708,3 +1708,50 @@ test AUPR in both directions — not a lever on the +0.023 LncDrug AUPR residual
 Consistent with everything above: the residual is real but the validation fold
 cannot see how to collect it.
 
+## GNN embeddings as tree features: the reverse hybrid is also negative
+
+`improve/hybrid.py` fed the 19 pair features INTO the GNN decoder and failed —
+the embedding dimensions swamp the side path.  The untried reverse is to feed
+the GNN's own learned embeddings INTO the tree member (`improve/gnn_emb_feat.py`),
+so the tree sees the latent structure the GNN recovered as explicit numbers and
+can learn interactions between the two channels that score-level fusion (linear
+in ranks) cannot.  Features: `emb_dot`, `emb_norm`, `emb_cos`, `emb_dot_a`
+(z·z, |z_r−z_d|, cosine, standardised dot) plus 12 leading principal components
+of the concatenated pair.
+
+The leak guard is harder than in gbdt.py: a node embedding is a function of the
+whole message-passing graph, so a training positive leaks into both endpoint
+embeddings.  The guard is per-fold GNN training — for fold k, a GNN is trained
+on the graph with fold k's positives removed and that fold's rows get its
+embeddings; val/test use a full-training-graph GNN.  (The `--leaky` control
+confirms it matters: full-graph embeddings on training rows collapse the tree
+to val ~0.93, the same "leak is training-side, transfer collapses" failure as
+gbdt.py.)
+
+extratrees, 3 seeds, on the base 29 + 6 continuous features with and without the
+16 embedding columns:
+
+| task | set | val AUC | val AUPR | test AUC | test AUPR |
+|---|---|---|---|---|---|
+| LncDrug | base+extra (35) | 0.9869 | 0.9678 | 0.9892 | 0.9782 |
+| LncDrug | **+emb (51)** | 0.9864 | **0.9606** | 0.9882 | 0.9766 |
+| MiDrug | base+extra (35) | 0.9562 | 0.9179 | 0.9558 | 0.9113 |
+| MiDrug | +emb (51) | 0.9556 | 0.9176 | 0.9569 | 0.9140 |
+
+**Negative on LncDrug (val AUPR −0.0072, test AUPR −0.0016) and noise on
+MiDrug** (val −0.0003 AUPR, test +0.0027 AUPR).  The diagnostic explains why:
+the GNN's `emb_dot` alone scores only 0.761 AUC on LncDrug, an order of
+magnitude below the explicit `log_deg` features — the latent structure the GNN
+recovered on this protocol *is* drug popularity, which the explicit degree
+features already state more cleanly, so 16 correlated embedding dimensions only
+dilute the tree's splits.
+
+This is the same coin as `hybrid.py`: feeding GNN structure into the feature
+path is redundant with what the explicit features already carry, exactly as
+feeding explicit features into the GNN decoder was redundant with what the
+embeddings carry.  Both directions of the two-channel idea fail on this
+protocol because the information is saturated on both sides.  The one-line
+claim from this branch: *GNN embeddings add no information to the tree members
+that the explicit pair features do not already state, and on the task with
+headroom (LncDrug) they actively hurt.*
+
