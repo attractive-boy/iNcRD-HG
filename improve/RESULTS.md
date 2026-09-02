@@ -1780,3 +1780,100 @@ and no amount of weight resolution moves it.  This was the last untried degree
 of freedom on the AUC/AUPR headline that did not refit a member or change the
 selection fold.
 
+
+## Multi-view similarity, and the replication control that killed it
+
+`heter_data_prepare.py` uses exactly one similarity matrix per node type:
+`LncSimMat_ken.csv` / `MiSimMat_ken.csv` (Kendall tau over the 938-sample
+expression profile) and `drugSimMat.csv` (Tanimoto over Morgan fingerprints,
+built by `drug_similarity.py`). Every feature in `gbdt.py` that is not pure
+degree reads one of those two matrices, so a single correlation coefficient
+defines "similar" for the whole method — and it was never compared against an
+alternative. `heter_data_prepare.py` even refers to `pea`/`spe` variants the
+release does not ship, and nothing downstream uses them.
+
+This was the last route on the list that adds **information** rather than using
+the existing information better, and it was aimed at MiDrug: `feature_groups.py`
+measured that task gaining +0.0019 from continuous similarity against LncDrug's
++0.0003, so MiDrug is the one whose score depends on what the similarity matrix
+says. `improve/simviews.py` swaps in Pearson, Spearman, cosine and a Gaussian
+interaction profile kernel, alone and fused, with `--mode replace` leaving the
+29 features untouched so any delta is attributable to the similarity definition.
+
+### Fusing views does nothing; swapping one view does something
+
+Ten arms, `extratrees`, 3 seeds. Deltas against the released `ken | ken`:
+
+| arm | LncDrug test AUC / AUPR | MiDrug test AUC / AUPR |
+|---|---|---|
+| `pearson` \| `ken` | +0.0007 / −0.0006 | **+0.0012 / +0.0030** |
+| `ken` \| `ken+cosine` (ChemBERTa) | **+0.0015 / +0.0034** | −0.0004 / +0.0006 |
+| `ken+pearson+spearman` \| `ken` | +0.0002 / +0.0012 | +0.0003 / +0.0010 |
+| all five views \| `ken` | +0.0001 / +0.0007 | −0.0002 / +0.0006 |
+| **`ken+gip` \| `ken+cosine+gip`** | **+0.0011 / +0.0019** | **+0.0007 / +0.0011** |
+
+Two things read off this. **Fusion is not the mechanism** — averaging five views
+is worth less than swapping to the single best one, so what matters is *which*
+coefficient, not *how many*. And the best single view is **task-dependent**:
+MiDrug wants Pearson on the ncRNA side, LncDrug wants ChemBERTa cosine added on
+the drug side, and neither transfers.
+
+The one arm positive on all four test cells was `S_r = ken+gip`,
+`S_d = ken+cosine+gip` — one extra view per side. At 5 seeds it is positive on
+all **eight** cells, and a 2000-resample paired bootstrap over fold edges
+(`improve/boot_pair.py`) puts two of them outside zero:
+
+| task | fold | metric | ken → multi-view | delta | 95% CI | P(Δ>0) |
+|---|---|---|---|---|---|---|
+| **LncDrug** | val | AUC | 0.9865 → 0.9879 | **+0.0015** | **[+0.0003, +0.0027]** | **0.991** |
+| **LncDrug** | val | AUPR | 0.9654 → 0.9715 | **+0.0061** | **[+0.0018, +0.0111]** | **0.999** |
+| LncDrug | test | AUC | 0.9888 → 0.9897 | +0.0009 | [−0.0006, +0.0028] | 0.854 |
+| LncDrug | test | AUPR | 0.9777 → 0.9793 | +0.0017 | [−0.0021, +0.0057] | 0.807 |
+| MiDrug | val | AUPR | 0.9189 → 0.9202 | +0.0013 | [−0.0015, +0.0043] | 0.824 |
+| MiDrug | test | AUC | 0.9569 → 0.9575 | +0.0007 | [−0.0006, +0.0019] | 0.851 |
+
+Eight cells positive, two significant, consistent direction on both ncRNA types.
+That is the strongest "improves both tasks" candidate in this file, and it is
+wrong.
+
+### The control: does it replicate on another model class?
+
+The bootstrap resamples edges, so more seeds would not have widened the
+evidence — the folds are the limit, not the fits. The control that *does* add
+information is a different inductive bias on the same features: if the
+similarity definition carries real signal, a boosted tree, a linear model and an
+MLP should all see it. Cells improved out of four, per model class:
+
+| model class | LncDrug | MiDrug |
+|---|---|---|
+| `extratrees` (the arm was found on this) | **4/4** | **4/4** |
+| `gbdt` | 3/4 | **0/4** |
+| `logreg` | 3/4 | **0/4** |
+| `mlp` | **0/4** | 2/4 |
+| **total** | **10/16** | **6/16** |
+
+**16 of 32 cells — exactly chance.** The 8/8 result is `extratrees`-specific;
+`gbdt` and `logreg` are unanimously *negative* on MiDrug and `mlp` is
+unanimously negative on LncDrug. The multi-view change is noise that happened to
+land positive on the one model class it was searched on.
+
+This is worth more than the arm it killed. Every single-member result in this
+file — `xt35`'s +0.0023, the pool members in `poolplus.py`, this one — was
+measured on one model class, and the bootstrap that "confirmed" two cells here
+would have confirmed them just as confidently for a null effect, because the
+bootstrap tests the fold, not the mechanism. **Cross-model-class replication is
+the cheaper and stronger control, and it should run before any single-member
+gain is reported.**
+
+### Position
+
+Nothing changes. The released `ken` matrices stay. `improve/simviews.py --model
+{extratrees,gbdt,logreg,mlp}` reproduces the table above; the per-view sweep is
+in `results/simviews_{LncDrug,MiDrug}.csv`.
+
+Counting today's four candidate mechanisms — OOF stacking, degree-gated fusion
+weights, extra sampled negatives, multi-view similarity — **none improves both
+ncRNA types.** Extra negatives is real and is LncDrug-only (bootstrap-confirmed,
+and it does not replicate on MiDrug); the other three are negative or noise.
+`posw2` remains the only mechanism in this file that is positive on both, at
++0.0021 (MiDrug S_test AUPR) and +0.0031 (LncDrug S_val AUPR).
