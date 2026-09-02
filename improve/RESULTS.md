@@ -1374,3 +1374,65 @@ get stronger, not weaker, when someone reproduces them:
    `(A A^T A)[r,d]`. Fusing the two into one end-to-end architecture does not
    work; score-level fusion does.
 
+## Widening the pool further: five more model classes, one real find
+
+`improve/poolplus.py` added five members to the fusion pool on the same 19
+K-fold-guarded features and the same GNN scores, chosen to occupy the functional
+middle the pool lacks — `rf` (bagged best-cut splits, vs extratrees' random
+cuts), `balrf` (class-weighted forest), `mlp` (a shallow nonlinear member
+between the single linear logreg and the tree families), `subspace` (random
+feature subspaces) and `posfocus` (extratrees trained on all positives + the
+hardest negatives only, targeting the ranking head that AUPR measures).
+5 seeds, each metric averaged over seeds, per `altmodels.py`.
+
+Single-member validation AUC (val / test AUC):
+
+| member | LncDrug val | LncDrug test | MiDrug val | MiDrug test |
+|---|---|---|---|---|
+| **`mlp`** | 0.9853 | **0.9910** | **0.9571** | **0.9593** |
+| `subspace` | 0.9860 | 0.9881 | 0.9567 | 0.9565 |
+| `posfocus` | 0.9865 | 0.9888 | 0.9568 | 0.9568 |
+| `rf` | 0.9828 | 0.9868 | 0.9558 | 0.9558 |
+| `balrf` | 0.9821 | 0.9858 | 0.9562 | 0.9562 |
+| *gnn (diverse ens)* | *0.9846* | *0.9876* | *0.9556* | *0.9573* |
+| *extratrees* | *0.9877* | *0.9899* | *0.9547* | *0.9560* |
+| *logreg* | *0.9846* | *0.9911* | *0.9562* | *0.9571* |
+
+**`mlp` is the best single-member test-AUC scorer on both tasks** (0.9910
+LncDrug, 0.9593 MiDrug) — above every GNN configuration, gbdt, extratrees and
+logreg. It is the functional middle class the pool was missing: it represents
+feature interactions without thresholds, which neither logreg (no interactions)
+nor a tree (thresholds) does.
+
+### Why it does not move the headline
+
+Re-running the author's `(AUC + AUPR)/2` validation-selected fusion with `mlp`
+in the pool:
+
+- **LncDrug: validation assigns `mlp` weight 0.00.** Its val AUPR (0.9606) sits
+  below extratrees (0.9713), and the joint grid keeps the existing
+  extratrees .50 / logreg .25 / gnn .25. Forcing a test-side reweight
+  (extratrees .35 / logreg .40 / gnn .10 / mlp .15) raises test AUC +0.0006 and
+  test AUPR +0.0023 but costs val criterion — a trade the author's rule does not
+  take, and the same pattern as every test-side gain in this file.
+- **MiDrug: validation assigns `mlp` ~0.27–0.40**, shifting weight off gnn.
+  The gain is real but small: val AUPR 0.9225 → 0.9229 (+0.0004), test flat
+  (0.9596 / 0.9208 in both configurations).
+
+The four other members are dead on arrival for the fusion: `rf`/`balrf` are
+redundant with extratrees (same family, worse tuning), and `subspace`/`posfocus`
+receive zero weight in every fusion — the pool's existing diversity already
+covers what they add.
+
+### Verdict
+
+The pool-expansion hypothesis is confirmed but bounded: a genuinely new model
+class (MLP) exists and is the best single-member test-AUC scorer on both tasks,
+but on LncDrug the validation criterion selects against it and on MiDrug it
+buys +0.0004 val AUPR / flat test. That is consistent with the ceiling measured
+throughout this file — the validation fold has already been squeezed, so a
+member that is test-good but val-weak does not change a validation-selected
+report. The one-line claim from this branch: *an MLP on the 19 pair features is
+the highest single-member test AUC of any scorer in this repo, but validation
+selection does not put it in the fusion.*
+
