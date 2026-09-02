@@ -215,6 +215,10 @@ def main():
     p.add_argument('--weight-step', type=float, default=0.1,
                    help='simplex step for the val_grid control combiner')
     p.add_argument('--dump-scores', default=None)
+    p.add_argument('--dump-members', default=None,
+                   help='also save the per-member rank-normalised val/test '
+                        'scores, so a finer weight search can reuse them '
+                        'without refitting')
     p.add_argument('--out', required=True)
     args = p.parse_args()
 
@@ -434,6 +438,13 @@ def main():
     if args.dump_scores:
         np.savez(args.dump_scores, y_val=y['val'], y_test=y['test'], **dumps)
         print(f'wrote {args.dump_scores}')
+    if args.dump_members:
+        names_dump = [n for n in ref_names]
+        np.savez(args.dump_members,
+                 **{f'{n}_val': R['val'][n] for n in names_dump},
+                 **{f'{n}_test': R['test'][n] for n in names_dump},
+                 y_val=y['val'], y_test=y['test'])
+        print(f'wrote {args.dump_members}')
 
 
 if __name__ == '__main__':

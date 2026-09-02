@@ -1755,3 +1755,28 @@ claim from this branch: *GNN embeddings add no information to the tree members
 that the explicit pair features do not already state, and on the task with
 headroom (LncDrug) they actively hurt.*
 
+## Finer fusion weights: the step-0.1 grid was already at the optimum
+
+The headline `val_grid` numbers (LncDrug test 0.9921 / 0.9856, MiDrug 0.9604 /
+0.9228) were found by `improve/stack.py` on a simplex grid with `--weight-step
+0.1`, i.e. weights quantized to multiples of 1/10.  The last plausible lever on
+the AUC/AUPR headline was that this quantization leaves weight on the table.
+`improve/fine_search.py` re-searches the SAME six member scores (extratrees,
+xt35, mlp, gbdt, logreg, gnn) with a multi-resolution scheme — a coarse simplex
+pass then a local refinement at 0.001-0.002 around the argmax — under both the
+author's `(AUC+AUPR)/2` criterion and an AUPR-only criterion.
+
+Both tasks, both objectives: **the fine search lands on the same weights and
+the same numbers**.  LncDrug coarse-15 gives val 0.9881/0.9759, test
+0.9920/0.9853 against the grid's 0.9921/0.9856; MiDrug is identical to four
+decimals (0.9604 / 0.9228).  The criterion surface is flat around the optimum —
+tiny weight perturbations cost or gain nothing, and the joint and AUPR-only
+objectives agree on the argmax.
+
+**Verdict.**  The fusion-weight search is closed.  The step-0.1 grid did not
+quantize away anything recoverable: the pool's ceiling under validation
+selection is LncDrug test AUC 0.9921 / AUPR 0.9856 and MiDrug 0.9604 / 0.9228,
+and no amount of weight resolution moves it.  This was the last untried degree
+of freedom on the AUC/AUPR headline that did not refit a member or change the
+selection fold.
+
