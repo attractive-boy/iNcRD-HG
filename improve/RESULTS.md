@@ -1436,3 +1436,56 @@ report. The one-line claim from this branch: *an MLP on the 19 pair features is
 the highest single-member test AUC of any scorer in this repo, but validation
 selection does not put it in the fusion.*
 
+## Continuous-feature enrichment: real on the single member, absent in the fusion
+
+`improve/feature_extra.py` adds six continuous columns to the 29 base features —
+`katz` (geometric-decay path sum), `deg_gap` / `deg_ratio` (degree difference and
+ratio between the endpoints), `wpath3` (similarity-weighted 3-path `S_r A A^T
+S_d`), and `adamic_adar_r/d` (degree-refined endpoint propensities, i.e. a
+sharper version of the exact cross-drug signal the metric reads).  All six are
+functions of the same (A, S_r, S_d) as the existing set, so the K-fold guard
+covers them unchanged.  `improve/poolplus.py` now exposes this as the `xt35`
+pool member.
+
+Single-member extratrees, 5 seeds, current-code baseline:
+
+| task | set | val AUC | val AUPR | test AUC | test AUPR |
+|---|---|---|---|---|---|
+| LncDrug | base29 | 0.9864 | 0.9651 | 0.9888 | 0.9778 |
+| LncDrug | **+6** | **0.9870** | **0.9674** | **0.9894** | **0.9782** |
+| MiDrug | base29 | 0.9568 | 0.9188 | 0.9568 | 0.9117 |
+| MiDrug | +6 | 0.9565 | 0.9183 | 0.9561 | 0.9118 |
+
+**LncDrug improves on all four cells** (val AUPR +0.0023, test AUC +0.0006),
+stable across 5 seeds and reproduced in a per-feature leave-one-out ablation:
+dropping any of the six costs 0.0008–0.0016 val AUPR, so the gain is not one
+feature but the block.  **MiDrug is flat-to-negative on every cell**, the same
+density asymmetry measured throughout this file (LncDrug 0.96 direct drug edges
+per ncRNA vs MiDrug 8.9 — the sparse side has room for similarity structure, the
+dense side does not).
+
+### The fusion does not reward it, and the reason is the same as the MLP
+
+Re-running the author's `(AUC+AUPR)/2` validation-selected fusion with `xt35` in
+the pool: validation assigns it **weight 0.00**, on both the historical and the
+current-code baselines, because `xt35` and `extratrees` are the same model class
+(Spearman 0.95+ on both folds) and the +6 information is fully absorbed by the
+existing member's weight.  Swapping `xt35` for `extratrees` at fixed weights
+does not help either (test AUC 0.9906 vs 0.9908), because the single-member gain
+is inside the model's ranking head, not in new pair-level wins the blend can
+collect.
+
+### Verdict
+
+The feature-enrichment hypothesis is confirmed at the model level and denied at
+the fusion level.  Six new continuous features improve the strongest tree member
+on LncDrug by a stable +0.0023 val AUPR / +0.0006 test AUC — a real, reproducible
+model-level result that matches the file's density finding exactly.  But a
+validation-selected score-level fusion of members that are 0.95-correlated with
+what is already in the pool does not pay for that gain; it is the MLP result
+again, in the same-model-class version.  The one-line claim from this branch:
+*continuous feature enrichment is a genuine single-member improvement on the
+task with headroom (LncDrug) and a loss on the saturated one (MiDrug), and it is
+invisible to the fusion because it is redundant with the member it would
+replace.*
+

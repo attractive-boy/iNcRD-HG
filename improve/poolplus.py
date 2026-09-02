@@ -8,7 +8,7 @@
 # pair").
 #
 # This adds members with deliberately DIFFERENT biases from the ones already in
-# the pool, on the SAME 19 K-fold-guarded features and the SAME GNN scores:
+# the pool, on the SAME K-fold-guarded features and the SAME GNN scores:
 #
 #   rf        -- RandomForest: bagged tree splits.  Extratrees draws random
 #                cut points; a forest draws the best cut per feature, so it is
@@ -28,6 +28,12 @@
 #   balrf     -- RandomForest with class_weight='balanced'.  A cost-sensitive
 #                prior on the positive class, cheap and independent of the
 #                others.
+#   xt35      -- extratrees on the base 29 features + 6 continuous enrichment
+#                columns (katz, deg_gap, deg_ratio, wpath3, adamic_adar_r/d).
+#                `improve/feature_extra.py` measured this as a real single-member
+#                gain on LncDrug (val AUPR +0.0023, test AUC +0.0006 over the
+#                current-code base) and slightly negative on MiDrug.  Same
+#                model class as extratrees, more information.
 #
 # Every member is fit per-seed on the same K-fold feature matrix and averaged
 # over seeds, exactly like altmodels.py.  Scores are dumped in the same npz
@@ -51,6 +57,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from improve.feature_extra import extra_columns
 from improve.gbdt import EPS, build_inputs, featurise
 from improve.run import TASKS
 
@@ -79,6 +86,9 @@ def fitted(name, seed, extra=None):
     if name == 'posfocus':
         return ExtraTreesClassifier(n_estimators=500, min_samples_leaf=3,
                                     n_jobs=-1, random_state=seed)
+    if name == 'xt35':
+        return ExtraTreesClassifier(n_estimators=500, min_samples_leaf=3,
+                                    n_jobs=-1, random_state=seed)
     raise ValueError(name)
 
 
@@ -99,7 +109,8 @@ def main():
     p.add_argument('--gnn', required=True, help='npz from multiens --dump-scores')
     p.add_argument('--combiner', default='auc_r_uniform_top8cfg')
     p.add_argument('--models', nargs='+',
-                   default=['rf', 'balrf', 'mlp', 'subspace', 'posfocus'])
+                   default=['rf', 'balrf', 'mlp', 'subspace', 'posfocus',
+                            'xt35'])
     p.add_argument('--folds', type=int, default=5)
     p.add_argument('--seeds', nargs='+', type=int, default=[666, 0, 1])
     p.add_argument('--out', required=True)
@@ -114,10 +125,14 @@ def main():
     y = {f: rows[f][1] for f in ('val', 'test')}
 
     X = {f: featurise(rows[f][0], A, S_r, S_d, bridge, Xr=attrs[0], Xd=attrs[1]) for f in ('val', 'test')}
+    # xt35 uses the base features + the 6 continuous enrichment columns.
+    X35 = {f: pd.concat([X[f].reset_index(drop=True),
+                        extra_columns(rows[f][0], A, S_r, S_d)], axis=1)
+           for f in ('val', 'test')}
     tr_idx, tr_y = rows['train']
     rng = np.random.RandomState(0)
     fold = rng.randint(0, args.folds, size=tr_idx.shape[1])
-    parts = []
+    parts, parts35 = [], []
     for k in range(args.folds):
         m = fold == k
         Ak = A.copy()
@@ -126,7 +141,12 @@ def main():
         f = featurise(tr_idx[:, m], Ak, S_r, S_d, bridge, Xr=attrs[0], Xd=attrs[1])
         f.index = np.where(m)[0]
         parts.append(f)
+        f35 = pd.concat([f.reset_index(drop=True),
+                         extra_columns(tr_idx[:, m], Ak, S_r, S_d)], axis=1)
+        f35.index = np.where(m)[0]
+        parts35.append(f35)
     X['train'] = pd.concat(parts).sort_index()
+    X35['train'] = pd.concat(parts35).sort_index()
 
     # posfocus: train on all positives + the hardest negatives only.  "Hard" =
     # the negatives whose feature vector is most similar to the mean positive
@@ -146,15 +166,16 @@ def main():
 
     for name in args.models:
         acc = {f: [] for f in ('val', 'test')}
+        Xm = X35 if name == 'xt35' else X
         for seed in args.seeds:
             clf = fitted(name, seed)
             if name == 'posfocus':
                 Xtr, ytr = X['train'].iloc[hard_idx], tr_y[hard_idx]
             else:
-                Xtr, ytr = X['train'].values, tr_y
+                Xtr, ytr = Xm['train'].values, tr_y
             clf.fit(Xtr, ytr)
             for f in ('val', 'test'):
-                acc[f].append(clf.predict_proba(X[f].values)[:, 1])
+                acc[f].append(clf.predict_proba(Xm[f].values)[:, 1])
         S[name] = {f: np.mean(acc[f], axis=0) for f in ('val', 'test')}
         print(f"  {name:10s} val AUC {roc_auc_score(y['val'], S[name]['val']):.4f}"
               f"  AUPR {average_precision_score(y['val'], S[name]['val']):.4f}"
