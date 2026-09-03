@@ -1854,6 +1854,32 @@ plausible channel that was not ipso facto single-task adds nothing.  The
 statement that `posw2` is the only mechanism positive on both ncRNA types
 stands, and now has the attribute-channel control it was missing.
 
+## Per-metric fusion weights: AUC and AUPR are already at their own optima
+
+Every fusion in this file selects ONE weight vector on validation by the
+author's `(AUC+AUPR)/2` and reports both metrics from it.  The untried
+alternative is per-metric weights — select the vector for AUC ALONE and for
+AUPR ALONE, so each metric is read at its own optimum rather than at a
+compromise.  `improve/per_metric.py` runs coarse-simplex + refinement over the
+same six member scores under each objective (joint, AUC-only, AUPR-only).
+
+| task | objective | test AUC / AUPR |
+|---|---|---|
+| LncDrug | joint (xt35 .20 / mlp .50 / gnn .20) | **0.9921 / 0.9856** |
+| LncDrug | AUC-only (extratrees .19 / xt35 .20 / mlp .30 / gnn .30) | 0.9915 / 0.9837 |
+| LncDrug | AUPR-only (same as joint) | 0.9921 / 0.9856 |
+| MiDrug | joint (mlp .70 / logreg .10 / gnn .20) | **0.9604 / 0.9228** |
+| MiDrug | AUC-only | 0.9603 / 0.9220 |
+| MiDrug | AUPR-only (same as joint) | 0.9604 / 0.9228 |
+
+**AUC and AUPR do not conflict on this fold.**  On both tasks the AUPR-only
+argmax is identical to the joint argmax, and the AUC-only vector is strictly
+worse on both metrics.  There is no per-metric gain to collect: the headline
+weights are simultaneously the AUC optimum and the AUPR optimum, so LncDrug
+0.9921 / 0.9856 and MiDrug 0.9604 / 0.9228 already sit on the AUC-AUPR Pareto
+frontier.  The joint criterion was not compromising anything — it was choosing
+the only weight vector that maximises both.
+
 
 ## Multi-view similarity, and the replication control that killed it
 

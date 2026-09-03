@@ -26,6 +26,10 @@ def crit_aupr(s, y):
     return average_precision_score(y, s)
 
 
+def crit_auc(s, y):
+    return roc_auc_score(y, s)
+
+
 def simplex(m, n):
     """Non-negative weight vectors summing to 1 on a grid of 1/n."""
     def rec(k, left):
@@ -73,11 +77,11 @@ def main():
                    help='coarse simplex resolution (default 20 = step 0.05)')
     p.add_argument('--fine-scale', type=float, default=0.002,
                    help='refinement step around the coarse argmax')
-    p.add_argument('--objective', default='joint', choices=['joint', 'aupr'],
+    p.add_argument('--objective', default='joint', choices=['joint', 'aupr', 'auc'],
                    help='criterion to select weights on the validation fold')
     args = p.parse_args()
 
-    crit_sel = crit_aupr if args.objective == 'aupr' else crit
+    crit_sel = {'joint': crit, 'aupr': crit_aupr, 'auc': crit_auc}[args.objective]
 
     d = np.load(args.members)
     y = {f: d[f'y_{f}'] for f in ('val', 'test')}
