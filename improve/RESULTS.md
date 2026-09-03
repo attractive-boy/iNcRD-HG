@@ -1819,6 +1819,41 @@ and MiDrug 0.9604 / 0.9228, with the OOF meta-learner route confirmed dead on
 both tasks: the val-fitted grid beats it even with the GNN given honest
 training-fold scores.
 
+## RNA-FM sequence embeddings: a two-task information channel that is not there
+
+Every mechanism since `posw2` was single-task (graph tuning, feature_extra,
+extra negatives all pay on LncDrug only), and the reason measured is MiDrug's
+density.  The one remaining information source that is symmetric by
+construction is the **ncRNA attribute channel**: the released data build uses a
+938-dim expression profile (LncExp / MiExp) for the ncRNA side, and a separate
+build (`incrd-run/3.heter_data/*_rnafm.pth`) replaces it with 1578-dim RNA-FM
+sequence embeddings on the same nodes.  `improve/rnafm_attr.py` swaps the
+ncRNA attribute block inside `featurise` from the released profile to the
+RNA-FM embedding, holding the folds, similarity matrices, drug attributes and
+members fixed.
+
+extratrees, 3 seeds, all other features identical:
+
+| task | attr | val AUC / AUPR | test AUC / AUPR |
+|---|---|---|---|
+| LncDrug | release (expr) | 0.9869 / 0.9678 | 0.9892 / 0.9782 |
+| LncDrug | RNA-FM | 0.9867 / 0.9674 | 0.9892 / 0.9790 |
+| MiDrug | release (expr) | 0.9562 / 0.9179 | 0.9558 / 0.9113 |
+| MiDrug | RNA-FM | 0.9562 / 0.9175 | 0.9562 / 0.9117 |
+
+Flat on both tasks: test AUPR moves +0.0008 (LncDrug) and +0.0004 (MiDrug),
+both val AUPRs fall slightly.  The sequence channel carries nothing the
+expression profile does not already state, and neither carries information the
+metric rewards — ncRNA-side structure is 0.36% of the ranking pairs.  This is
+the `gnn_emb_feat` result for the input features: a new ncRNA-side channel
+cannot beat the wall that the metric does not reward ncRNA-side information.
+
+**Verdict.**  The two-task information-channel question is now measured rather
+than argued.  RNA-FM is symmetric across tasks and flat on both — the last
+plausible channel that was not ipso facto single-task adds nothing.  The
+statement that `posw2` is the only mechanism positive on both ncRNA types
+stands, and now has the attribute-channel control it was missing.
+
 
 ## Multi-view similarity, and the replication control that killed it
 
