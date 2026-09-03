@@ -1880,6 +1880,39 @@ weights are simultaneously the AUC optimum and the AUPR optimum, so LncDrug
 frontier.  The joint criterion was not compromising anything — it was choosing
 the only weight vector that maximises both.
 
+## The GNN combiners and the tree hyperparameters: two last levers, both flat
+
+Two remaining untried degrees of freedom on the headline, both measured and
+both closed.
+
+**The pipeline has used one GNN combiner all along; the others are not better
+on test.** `multiens.py` dumps 18 GNN score vectors (`auc_*`/`aupr_*` × r/z ×
+uniform/greedy), and `stack.py --gnn` reads exactly one (`auc_r_uniform_top8cfg`).
+The AUPR-optimised combiners look dramatically better on validation —
+`aupr_r_greedy_on_val` reaches val AUPR 0.9678 against 0.9533 — but that is the
+`greedy_on_val` artefact (weights fitted on the fold being reported).  On test,
+every single-combiner swap lands at or below the current number: the best swap
+(`aupr_r_greedy_on_val`) gives test 0.9920 / 0.9849 against the current
+0.9921 / 0.9856, and admitting three GNN combiners as independent members gives
+0.9919 / 0.9844.  There is no GNN combiner the pipeline should have used
+instead.  `improve/multignn_pool.py` reproduces this.
+
+**`max_features='sqrt'` is the sklearn default, not a discovery.**  Sweeping the
+extratrees tree hyperparameters on the raw 29 features appeared to find a large
+gain (val AUPR 0.9551 → 0.9659 from `max_features='sqrt'`), but the comparison
+was against an explicit `max_features=None` — a degenerate configuration that is
+not and never was the baseline.  `ExtraTreesClassifier` and
+`RandomForestClassifier` default to `max_features='sqrt'` in sklearn 1.3.2, so
+every tree member in the pool has always been fitted with it.  The apparent gain
+was a baseline error.  The actual default configuration is already the best
+point on that axis, which is why changing it either way loses.
+
+**Verdict.**  The two last levers — the choice of GNN combiner and the tree
+hyperparameters — are flat.  The headline LncDrug 0.9921 / 0.9856 and MiDrug
+0.9604 / 0.9228 stands as the optimum of the current pool under the current
+selection rule, and the search space around it is now exhausted from both the
+member side and the combiner side.
+
 
 ## Multi-view similarity, and the replication control that killed it
 
