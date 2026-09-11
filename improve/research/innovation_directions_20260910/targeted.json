@@ -1,0 +1,285 @@
+[
+  {
+    "source": "arxiv_search",
+    "query": "\"in-context\" AND \"link prediction\"",
+    "error": "<urlopen error [Errno 104] Connection reset by peer>",
+    "records": []
+  },
+  {
+    "source": "arxiv_search",
+    "query": "\"foundation\" AND \"link prediction\"",
+    "error": "<urlopen error [Errno 104] Connection reset by peer>",
+    "records": []
+  },
+  {
+    "source": "arxiv_search",
+    "query": "\"conformal\" AND \"link prediction\"",
+    "error": "<urlopen error [Errno 104] Connection reset by peer>",
+    "records": []
+  },
+  {
+    "source": "arxiv_search",
+    "query": "\"GFlowNet\" AND \"biological\"",
+    "error": "<urlopen error [Errno 104] Connection reset by peer>",
+    "records": []
+  },
+  {
+    "source": "CrossRef",
+    "query": "universal inductive knowledge graph reasoning MOTIF TRIX",
+    "url": "https://api.crossref.org/works?query.bibliographic=universal+inductive+knowledge+graph+reasoning+MOTIF+TRIX&rows=8&filter=from-pub-date%3A2025-01-01%2Cuntil-pub-date%3A2026-09-10",
+    "records": [
+      {
+        "source": "CrossRef",
+        "query": "universal inductive knowledge graph reasoning MOTIF TRIX",
+        "title": "Adaptive inductive knowledge graph reasoning for conditional queries",
+        "doi": "10.1016/j.neucom.2026.133732",
+        "url": "https://doi.org/10.1016/j.neucom.2026.133732",
+        "date": [
+          [
+            2026,
+            7
+          ]
+        ],
+        "venue": "Neurocomputing",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "universal inductive knowledge graph reasoning MOTIF TRIX",
+        "title": "Graph Percolation Embeddings for Efficient Knowledge Graph Inductive Reasoning",
+        "doi": "10.1109/tkde.2024.3508064",
+        "url": "https://doi.org/10.1109/tkde.2024.3508064",
+        "date": [
+          [
+            2025,
+            3
+          ]
+        ],
+        "venue": "IEEE Transactions on Knowledge and Data Engineering",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "universal inductive knowledge graph reasoning MOTIF TRIX",
+        "title": "Research on Fault Identification and Decision for UHV Bushing Based on Knowledge Graph Rule Reasoning and Inductive Graph Convolutional Network",
+        "doi": "10.3390/inventions11040083",
+        "url": "https://doi.org/10.3390/inventions11040083",
+        "date": [
+          [
+            2026,
+            8,
+            14
+          ]
+        ],
+        "venue": "Inventions",
+        "abstract": "To address the challenges of integrating multi-source heterogeneous data, fragmented fault knowledge, and the limited capability of traditional rule engines in recognizing edge cases for ultra-high voltage (UHV) bushing fault diagnosis, this paper proposes a fault identification and decision-making method based on knowledge graph (KG) rule reasoning and inductive graph convolutional network (Inductive GCN). First, a triple-matching strategy is employed to perform entity extraction and relation mining from fault cases, constructing a fault knowledge graph that transforms unstructured fault case texts into a structured knowledge graph. Second, a rule engine based on a multi-source feature rule set is designed, utilizing the entropy weight method and the RETE algorithm to achieve interpretable symbolic reasoning. On this basis, a double-layer inductive graph convolutional network is introduced to learn implicit fault patterns by aggregating topological information from neighboring nodes, and a confidence-driven dynamic weighted fusion strategy is adopted to achieve complementary advantages between the two models. Finally, a large language model is introduced to generate operation and maintenance decision recommendations. Experimental results demonstrate that the proposed method achieves an identification accuracy of 98.1% on a test set of 159 samples, which is 10.7 percentage points higher than that of a single rule engine and 6.9 percentage points higher than that of a single inductive graph convolution network. The standard deviation of accuracy across different test batches is only 0.0029. These results demonstrate the effectiveness and stability of the proposed method, providing a practical technical solution for UHV bushing fault identification."
+      },
+      {
+        "source": "CrossRef",
+        "query": "universal inductive knowledge graph reasoning MOTIF TRIX",
+        "title": "GraphOracle: Efficient Fully-Inductive Knowledge Graph Reasoning via Relation-Dependency Graphs",
+        "doi": "10.1609/aaai.v40i23.38978",
+        "url": "https://doi.org/10.1609/aaai.v40i23.38978",
+        "date": [
+          [
+            2026,
+            3,
+            14
+          ]
+        ],
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "abstract": "Knowledge graph reasoning in the fully-inductive setting—where both entities and relations at test time are unseen during training—remains an open challenge. In this work, we introduce GraphOracle, a novel framework that achieves robust fully-inductive reasoning by transforming each knowledge graph into a Relation-Dependency Graph (RDG). The RDG encodes directed precedence links between relations, capturing essential compositional patterns while drastically reducing graph density. Conditioned on a query relation, a multi-head attention mechanism propagates information over the RDG to produce context-aware relation embeddings. These embeddings then guide a second GNN to perform inductive message passing over the original knowledge graph, enabling prediction on entirely new entities and relations. Comprehensive experiments on 60 benchmarks demonstrate that GraphOracle outperforms prior methods by up to 25% in fully-inductive and 28% in cross-domain scenarios. Our analysis further confirms that the compact RDG structure and attention-based propagation are key to efficient and accurate generalization"
+      },
+      {
+        "source": "CrossRef",
+        "query": "universal inductive knowledge graph reasoning MOTIF TRIX",
+        "title": "HiMod: Hierarchical Modeling with Graph Perturbation for Enhanced Inductive Knowledge Graph Reasoning",
+        "doi": "10.1145/3796713",
+        "url": "https://doi.org/10.1145/3796713",
+        "date": [
+          [
+            2026,
+            4,
+            10
+          ]
+        ],
+        "venue": "ACM Transactions on Knowledge Discovery from Data",
+        "abstract": "Inductive reasoning aims to infer missing knowledge for unseen entities and relations. Existing methods exhibit limited generalization capabilities due to their dependence on localized structural patterns and inadequate handling of graph imbalance. To address these challenges, we propose a novel Hi erarchical Mod eling with Graph Perturbation-Enhanced Network (HiMod), which effectively integrates hierarchical relation modeling with a dynamic perturbation mechanism to enhance the generalization ability of inductive reasoning models. HiMod leverages a hierarchical relation modeling mechanism that maps specific relations to higher-level general concepts within a global semantic framework. This allows for capturing semantic commonalities across relations, enabling robust reasoning for unseen queries. Simultaneously, a dynamic perturbation mechanism is introduced to adjust perturbation strength based on node importance and graph sparsity, facilitating deeper exploration of the latent semantic space and mitigating the effects of graph imbalance. Extensive experiments on three benchmark inductive knowledge graph reasoning datasets demonstrate that HiMod achieves the most significant MRR improvements among the four split versions, with 11.17% on WN18RR, 4.61% on FB15K-237, and 5.47% on NELL-995. Our code is available at https://github.com/HubuKG/HiMod ."
+      },
+      {
+        "source": "CrossRef",
+        "query": "universal inductive knowledge graph reasoning MOTIF TRIX",
+        "title": "Knowledge Graph Contrastive Learning for Recommendation Via Knowledge-Aware Reasoning",
+        "doi": "10.2139/ssrn.5382854",
+        "url": "https://doi.org/10.2139/ssrn.5382854",
+        "date": [
+          [
+            2025
+          ]
+        ],
+        "venue": "",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "universal inductive knowledge graph reasoning MOTIF TRIX",
+        "title": "Knowledge Graph Contrastive Learning for Recommendation Via Knowledge-Aware Reasoning",
+        "doi": "10.2139/ssrn.5272966",
+        "url": "https://doi.org/10.2139/ssrn.5272966",
+        "date": [
+          [
+            2025
+          ]
+        ],
+        "venue": "",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "universal inductive knowledge graph reasoning MOTIF TRIX",
+        "title": "Graph Computing Based Knowledge Reasoning in Electric Power System Considering Knowledge Graph Sparsity",
+        "doi": "10.17775/cseejpes.2022.04120",
+        "url": "https://doi.org/10.17775/cseejpes.2022.04120",
+        "date": [
+          [
+            2025
+          ]
+        ],
+        "venue": "CSEE Journal of Power and Energy Systems",
+        "abstract": ""
+      }
+    ]
+  },
+  {
+    "source": "CrossRef",
+    "query": "Graph Prior Fitted Networks link prediction",
+    "url": "https://api.crossref.org/works?query.bibliographic=Graph+Prior+Fitted+Networks+link+prediction&rows=8&filter=from-pub-date%3A2025-01-01%2Cuntil-pub-date%3A2026-09-10",
+    "records": [
+      {
+        "source": "CrossRef",
+        "query": "Graph Prior Fitted Networks link prediction",
+        "title": "Granular concept-enhanced relational graph convolution networks for link prediction in knowledge graph",
+        "doi": "10.1016/j.ins.2024.121698",
+        "url": "https://doi.org/10.1016/j.ins.2024.121698",
+        "date": [
+          [
+            2025,
+            3
+          ]
+        ],
+        "venue": "Information Sciences",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "Graph Prior Fitted Networks link prediction",
+        "title": "GPFN: Prior-Data Fitted Networks for Genomic Prediction",
+        "doi": "10.1109/tcbbio.2025.3596744",
+        "url": "https://doi.org/10.1109/tcbbio.2025.3596744",
+        "date": [
+          [
+            2025,
+            11
+          ]
+        ],
+        "venue": "IEEE Transactions on Computational Biology and Bioinformatics",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "Graph Prior Fitted Networks link prediction",
+        "title": "Improving Link Prediction Algorithms Based on Graph Neural Networks",
+        "doi": "10.1109/nnice64954.2025.11063835",
+        "url": "https://doi.org/10.1109/nnice64954.2025.11063835",
+        "date": [
+          [
+            2025,
+            1,
+            10
+          ]
+        ],
+        "venue": "2025 5th International Conference on Neural Networks, Information and Communication Engineering (NNICE)",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "Graph Prior Fitted Networks link prediction",
+        "title": "Radio link failure prediction in 5G networks using graph neural networks",
+        "doi": "10.1109/compsac65507.2025.00098",
+        "url": "https://doi.org/10.1109/compsac65507.2025.00098",
+        "date": [
+          [
+            2025,
+            7,
+            8
+          ]
+        ],
+        "venue": "2025 IEEE 49th Annual Computers, Software, and Applications Conference (COMPSAC)",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "Graph Prior Fitted Networks link prediction",
+        "title": "Link-level Blocking Prediction for Dynamic Network Slicing using Graph Neural Networks",
+        "doi": "10.1109/icccn65249.2025.11133986",
+        "url": "https://doi.org/10.1109/icccn65249.2025.11133986",
+        "date": [
+          [
+            2025,
+            8,
+            4
+          ]
+        ],
+        "venue": "2025 34th International Conference on Computer Communications and Networks (ICCCN)",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "Graph Prior Fitted Networks link prediction",
+        "title": "Temporal multi-modal knowledge graph generation for link prediction",
+        "doi": "10.1016/j.neunet.2024.107108",
+        "url": "https://doi.org/10.1016/j.neunet.2024.107108",
+        "date": [
+          [
+            2025,
+            5
+          ]
+        ],
+        "venue": "Neural Networks",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "Graph Prior Fitted Networks link prediction",
+        "title": "Link Prediction with Physics-Inspired Graph Neural Networks",
+        "doi": "10.1109/ijcnn64981.2025.11227954",
+        "url": "https://doi.org/10.1109/ijcnn64981.2025.11227954",
+        "date": [
+          [
+            2025,
+            6,
+            30
+          ]
+        ],
+        "venue": "2025 International Joint Conference on Neural Networks (IJCNN)",
+        "abstract": ""
+      },
+      {
+        "source": "CrossRef",
+        "query": "Graph Prior Fitted Networks link prediction",
+        "title": "Enhancing link prediction in complex networks using GraphSAGE with graph diffusion convolution",
+        "doi": "10.1007/s44354-026-00038-x",
+        "url": "https://doi.org/10.1007/s44354-026-00038-x",
+        "date": [
+          [
+            2026,
+            7,
+            17
+          ]
+        ],
+        "venue": "Discover Networks",
+        "abstract": ""
+      }
+    ]
+  }
+]

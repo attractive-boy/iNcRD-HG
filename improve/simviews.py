@@ -65,6 +65,20 @@ PAPER = {'LncDrug': dict(val=(0.9834, 0.9545), test=(0.9857, 0.9585)),
          'MiDrug': dict(val=(0.9555, 0.9183), test=(0.9564, 0.9165))}
 VIEWS = ('ken', 'pearson', 'spearman', 'cosine', 'gip')
 
+# Drug-side views loaded from disk rather than computed from `attrs`.  `atc` is
+# the WHO ATC classification fetched by `improve/drug_target.py`: similarity is
+# the deepest shared prefix (anatomical / therapeutic / pharmacological /
+# chemical subgroup) over the two drugs' code sets, scaled to [0, 1].  It is a
+# therapeutic classification, not a structural one, so it scores as similar
+# exactly the pairs Tanimoto and ChemBERTa miss -- same mechanism, different
+# scaffold.  Spearman against the released Tanimoto matrix is +0.089.
+#
+# Unlike `gip` it is not a function of `A`, so it caches like `ken` and needs no
+# per-fold rebuild.  Its companion channel, target-overlap Jaccard over ChEMBL
+# mechanism targets, was measured and dropped: 0.41% of drug pairs are non-zero
+# against ATC's 15.0%, and its edge-weighted coverage on LncDrug is 23.1%.
+EXTRA = {}
+
 
 def _clean(M):
     M = np.nan_to_num(np.asarray(M, dtype=np.float32), nan=0.0)
@@ -103,6 +117,12 @@ def view(name, X, A, released):
         d2 = sq[:, None] + sq[None, :] - 2 * (A @ A.T)
         g = A.shape[0] / max(sq.sum(), EPS)
         return _clean(np.exp(-g * np.maximum(d2, 0)))
+    if name in EXTRA:
+        M = EXTRA[name]
+        if M.shape[0] != X.shape[0]:
+            raise ValueError(f"view '{name}' is {M.shape[0]}x{M.shape[0]}, "
+                             f"this node type has {X.shape[0]} nodes")
+        return _clean(M)
     raise ValueError(name)
 
 
@@ -128,6 +148,9 @@ def main():
                    help='views fused for S_r; default: sweep each alone')
     p.add_argument('--drug-views', nargs='+', default=['ken'],
                    help="'ken' means the released Tanimoto matrix")
+    p.add_argument('--atc-mat', default=None,
+                   help='npy of the ATC similarity matrix from '
+                        'improve/drug_target.py; enables the `atc` drug view')
     p.add_argument('--model', default='extratrees')
     p.add_argument('--folds', type=int, default=5)
     p.add_argument('--seeds', nargs='+', type=int, default=[666, 0, 1])
@@ -136,6 +159,10 @@ def main():
                         'improve/boot_pair.py. Requires a single arm.')
     p.add_argument('--out', required=True)
     args = p.parse_args()
+
+    if args.atc_mat:
+        EXTRA['atc'] = np.load(args.atc_mat).astype(np.float32)
+        print(f"loaded atc view {EXTRA['atc'].shape} from {args.atc_mat}")
 
     splits, key, A, S_r0, S_d0, bridge, attrs = build_inputs(
         args.run_dir, args.net_dir, args.task, 'cpu')

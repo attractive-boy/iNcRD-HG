@@ -68,3 +68,25 @@ python graph_explain.py -e 'MiDrug' -f 'test' -i '0' -k 100 –p
 Case study visualization:
 ```bash
 python plot_case_drug.py -i '0' -k 100
+```
+
+## Replacement backbone experiments (2026-09-10)
+
+The current experimental replacement is **graph-derived pair features + TabM
+(ICLR 2025)**. It has its own training and prediction entry points, frozen
+configuration files and verified checkpoints. The original scripts remain
+available for reproduction and comparison.
+
+On the existing outer validation partition, the three-seed mean AP changes from
+0.943892 to 0.966260 for LncDrug and from 0.919169 to 0.921461 for MiDrug.
+Global AUC also improves on both tasks. LncDrug's per-drug macro AP decreases;
+these results concern a reused validation partition, not a new independent test.
+
+See [usage, architecture and fixed configurations](improve/GRAPH_TABM.md),
+[the four-architecture comparison](improve/results/backbone_comparison_20260910/REPORT.md),
+and [the literature check](improve/research/backbone_replacement_20260910/RESEARCH.md).
+
+```bash
+/data1/licheng/miniconda3/envs/ncRNAdrug/bin/python -m improve.predict_backbone \
+    --task MiDrug --drug-index 0 --out mi_drug0_scores.csv --device cuda:0
+```

@@ -1,0 +1,114 @@
+{
+  "created_at_utc": "2026-09-10T01:30:48.591926+00:00",
+  "protocol_sha256": "34d3e93e93ce64b7b15bad401a7ce1af26b84eec4b9f7adffe5231f3420562aa",
+  "audit_source_sha256": "7e47bad8200317b0fbe18cce494653d9b52161e8027164a2b8ddf101d6bf2551",
+  "scope": "Fixed untrained structural diagnostics on training-internal holdout only; not performance of the proposed neural architecture.",
+  "outer_evaluations": 0,
+  "test_evaluations": 0,
+  "tasks": {
+    "LncDrug": {
+      "n_rna": 1322,
+      "n_drug": 216,
+      "fit_rows": 3040,
+      "fit_positive_pairs": 1013,
+      "inner_queries": 760,
+      "inner_positives": 253,
+      "same_rna_type_relation_edges": 6128,
+      "drug_relation_edges": 420,
+      "queries_with_one_axis_support": 75,
+      "queries_with_two_changed_endpoints_support": 10,
+      "two_changed_endpoints_support_fraction": 0.013157894736842105,
+      "support_count_quantiles": {
+        "0": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "1": 9.0
+      },
+      "centered_row_sum_max_abs": 1.7763568394002505e-15,
+      "centered_col_sum_max_abs": 7.194522755327171e-13,
+      "fixed_diagnostics": {
+        "endpoint_frequency": {
+          "auc": 0.642273000132532,
+          "aupr": 0.5556433647259218,
+          "macro_drug_aupr": 0.6836476657085033,
+          "eligible_drugs": 23
+        },
+        "one_axis_paths": {
+          "auc": 0.6311091361258585,
+          "aupr": 0.5030090127572965,
+          "macro_drug_aupr": 0.6048914757666422,
+          "eligible_drugs": 23
+        },
+        "joint_support": {
+          "auc": 0.6263107015615377,
+          "aupr": 0.49254584377028887,
+          "macro_drug_aupr": 0.6048914757666422,
+          "eligible_drugs": 23
+        },
+        "centered_joint_support": {
+          "auc": 0.47457726220268026,
+          "aupr": 0.42495706112502024,
+          "macro_drug_aupr": 0.6651207596720523,
+          "eligible_drugs": 23
+        }
+      },
+      "input_sha256": {
+        "inner.npz": "4f124ee0ae1df9a7eab9453c3bf6fb77143dad1c010c86e4ea2a9dce57096350",
+        "train_graph.pth": "4fa7e42a30b279ef2bde97a11cd7d38c675ec46331200e23c6c98bf00d82d3db"
+      }
+    },
+    "MiDrug": {
+      "n_rna": 605,
+      "n_drug": 216,
+      "fit_rows": 7769,
+      "fit_positive_pairs": 2589,
+      "inner_queries": 1943,
+      "inner_positives": 647,
+      "same_rna_type_relation_edges": 15022,
+      "drug_relation_edges": 420,
+      "queries_with_one_axis_support": 613,
+      "queries_with_two_changed_endpoints_support": 409,
+      "two_changed_endpoints_support_fraction": 0.21049922799794132,
+      "support_count_quantiles": {
+        "0": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "1": 34.0
+      },
+      "centered_row_sum_max_abs": 1.7763568394002505e-15,
+      "centered_col_sum_max_abs": 4.524158825347513e-14,
+      "fixed_diagnostics": {
+        "endpoint_frequency": {
+          "auc": 0.920262918121625,
+          "aupr": 0.8914057100578319,
+          "macro_drug_aupr": 0.578377093098364,
+          "eligible_drugs": 82
+        },
+        "one_axis_paths": {
+          "auc": 0.8008299225294332,
+          "aupr": 0.6936342824136517,
+          "macro_drug_aupr": 0.4535762183034767,
+          "eligible_drugs": 82
+        },
+        "joint_support": {
+          "auc": 0.7737975127368483,
+          "aupr": 0.6673825398731923,
+          "macro_drug_aupr": 0.5020303323663228,
+          "eligible_drugs": 82
+        },
+        "centered_joint_support": {
+          "auc": 0.43225559085618337,
+          "aupr": 0.42755479384259487,
+          "macro_drug_aupr": 0.4857477565994141,
+          "eligible_drugs": 82
+        }
+      },
+      "input_sha256": {
+        "inner.npz": "303979e010989198ebf4cf754a0b93dfc76054d89b6b1420237fb929c794ea97",
+        "train_graph.pth": "9bc416f0c1e326e81157a2069ee0750e47c51de0dddb0684560d49fc8c0816b9"
+      }
+    }
+  }
+}

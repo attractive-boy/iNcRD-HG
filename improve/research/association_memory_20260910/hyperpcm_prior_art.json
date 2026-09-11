@@ -1,0 +1,155 @@
+{
+  "retrieved_at_utc": "2026-09-10T01:43:30.508368+00:00",
+  "scope": "Targeted metadata and abstract review; not exhaustive novelty certification",
+  "responses": [
+    {
+      "source": "arXiv",
+      "query": "all:HyperPCM",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3AHyperPCM&max_results=5&sortBy=relevance",
+      "records": []
+    },
+    {
+      "source": "CrossRef",
+      "query": "HyperPCM",
+      "url": "https://api.crossref.org/works?query.bibliographic=HyperPCM&rows=5",
+      "records": [
+        {
+          "source": "CrossRef",
+          "query": "HyperPCM",
+          "title": "HyperPCM: Robust Task-Conditioned Modeling of DrugTarget Interactions",
+          "doi": "10.1021/acs.jcim.3c01417.s001",
+          "year": null,
+          "authors": [],
+          "venue": "",
+          "url": "https://doi.org/10.1021/acs.jcim.3c01417.s001",
+          "abstract": ""
+        },
+        {
+          "source": "CrossRef",
+          "query": "HyperPCM",
+          "title": "HyperPCM: Robust Task-Conditioned Modeling of Drug–Target Interactions",
+          "doi": "10.1021/acs.jcim.3c01417",
+          "year": 2024,
+          "authors": [
+            "Emma Svensson",
+            "Pieter-Jan Hoedt",
+            "Sepp Hochreiter",
+            "Günter Klambauer"
+          ],
+          "venue": "Journal of Chemical Information and Modeling",
+          "url": "https://doi.org/10.1021/acs.jcim.3c01417",
+          "abstract": ""
+        }
+      ]
+    },
+    {
+      "source": "arXiv",
+      "query": "all:\"drug\" AND all:\"closed-form\"",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22drug%22+AND+all%3A%22closed-form%22&max_results=5&sortBy=relevance",
+      "records": [
+        {
+          "source": "arXiv",
+          "query": "all:\"drug\" AND all:\"closed-form\"",
+          "title": "Modelling functionalized drug release for a spherical capsule",
+          "doi": null,
+          "year": 2023,
+          "authors": [
+            "Elliot J. Carr",
+            "Giuseppe Pontrelli"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2307.13224v1",
+          "abstract": "Advances in material design has led to the rapid development of novel materials with increasing complexity and functions in bioengineering. In particular, functionally graded materials (FGMs) offer important advantages in various fields of application. In this work, we consider a heterogeneous reaction-diffusion model for an FGM spherical drug releasing system that generalizes the multi-layer configuration to arbitrary spatially-variable coefficients. Our model proposes a possible form for the drug diffusivity and reaction rate functions exhibiting fixed average material properties and a drug release profile that can be continuously varied between the limiting cases of a homogeneous system (constant coefficients) and two-layer system (stepwise coefficients). A hybrid analytical-numerical solution is then used to solve the model, which provides closed-form expressions for the drug concentration and drug release profiles in terms of generalized Fourier series. The resulting concentration and mass profiles show how the release rate can be controlled and continuously varied between a fast (homogeneous) and slow (two-layer) release."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"drug\" AND all:\"closed-form\"",
+          "title": "No Equations Needed: Learning System Dynamics Without Relying on Closed-Form ODEs",
+          "doi": null,
+          "year": 2025,
+          "authors": [
+            "Krzysztof Kacprzyk",
+            "Mihaela van der Schaar"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2501.18563v2",
+          "abstract": "Data-driven modeling of dynamical systems is a crucial area of machine learning. In many scenarios, a thorough understanding of the model's behavior becomes essential for practical applications. For instance, understanding the behavior of a pharmacokinetic model, constructed as part of drug development, may allow us to both verify its biological plausibility (e.g., the drug concentration curve is non-negative and decays to zero) and to design dosing guidelines. Discovery of closed-form ordinary differential equations (ODEs) can be employed to obtain such insights by finding a compact mathematical equation and then analyzing it (a two-step approach). However, its widespread use is currently hindered because the analysis process may be time-consuming, requiring substantial mathematical expertise, or even impossible if the equation is too complex. Moreover, if the found equation's behavior does not satisfy the requirements, editing it or influencing the discovery algorithms to rectify it is challenging as the link between the symbolic form of an ODE and its behavior can be elusive. This paper proposes a conceptual shift to modeling low-dimensional dynamical systems by departing from the traditional two-step modeling process. Instead of first discovering a closed-form equation and then analyzing it, our approach, direct semantic modeling, predicts the semantic representation of the dynamical system (i.e., description of its behavior) directly from data, bypassing the need for complex post-hoc analysis. This direct approach also allows the incorporation of intuitive inductive biases into the optimization algorithm and editing the model's behavior directly, ensuring that the model meets the desired specifications. Our approach not only simplifies the modeling pipeline but also enhances the transparency and flexibility of the resulting models compared to traditional closed-form ODEs."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"drug\" AND all:\"closed-form\"",
+          "title": "EquiBind: Geometric Deep Learning for Drug Binding Structure Prediction",
+          "doi": null,
+          "year": 2022,
+          "authors": [
+            "Hannes Stärk",
+            "Octavian-Eugen Ganea",
+            "Lagnajit Pattanaik",
+            "Regina Barzilay",
+            "Tommi Jaakkola"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2202.05146v4",
+          "abstract": "Predicting how a drug-like molecule binds to a specific protein target is a core problem in drug discovery. An extremely fast computational binding method would enable key applications such as fast virtual screening or drug engineering. Existing methods are computationally expensive as they rely on heavy candidate sampling coupled with scoring, ranking, and fine-tuning steps. We challenge this paradigm with EquiBind, an SE(3)-equivariant geometric deep learning model performing direct-shot prediction of both i) the receptor binding location (blind docking) and ii) the ligand's bound pose and orientation. EquiBind achieves significant speed-ups and better quality compared to traditional and recent baselines. Further, we show extra improvements when coupling it with existing fine-tuning techniques at the cost of increased running time. Finally, we propose a novel and fast fine-tuning model that adjusts torsion angles of a ligand's rotatable bonds based on closed-form global minima of the von Mises angular distance to a given input atomic point cloud, avoiding previous expensive differential evolution strategies for energy minimization."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"drug\" AND all:\"closed-form\"",
+          "title": "Modelling mass diffusion for a multi-layer sphere immersed in a semi-infinite medium: application to drug delivery",
+          "doi": null,
+          "year": 2018,
+          "authors": [
+            "Elliot J. Carr",
+            "Giuseppe Pontrelli"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/1801.05136v1",
+          "abstract": "We present a general mechanistic model of mass diffusion for a composite sphere placed in a large ambient medium. The multi-layer problem is described by a system of diffusion equations coupled via interlayer boundary conditions such as those imposing a finite mass resistance at the external surface of the sphere. While the work is applicable to the generic problem of heat or mass transfer in a multi-layer sphere, the analysis and results are presented in the context of drug kinetics for desorbing and absorbing spherical microcapsules. We derive an analytical solution for the concentration in the sphere and in the surrounding medium that avoids any artificial truncation at a finite distance. The closed-form solution in each concentric layer is expressed in terms of a suitably-defined inverse Laplace transform that can be evaluated numerically. Concentration profiles and drug mass curves in the spherical layers and in the external environment are presented and the dependency of the solution on the mass transfer coefficient at the surface of the sphere analyzed."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"drug\" AND all:\"closed-form\"",
+          "title": "Combined P-value Functions for Compatible Effect Estimation and Hypothesis Testing in Drug Regulation",
+          "doi": null,
+          "year": 2025,
+          "authors": [
+            "Samuel Pawel",
+            "Małgorzata Roos",
+            "Leonhard Held"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2503.10246v2",
+          "abstract": "The two-trials rule in drug regulation requires statistically significant results from two pivotal trials to demonstrate efficacy. However, it is unclear how the effect estimates from both trials should be combined to quantify the drug effect. Fixed-effect meta-analysis is commonly used but may yield confidence intervals that exclude the value of no effect even when the two-trials rule is not fulfilled. We systematically address this by recasting the two-trials rule and meta-analysis in a unified framework of combined p-value functions, where they are variants of Wilkinson's and Stouffer's combination methods, respectively. This allows us to obtain compatible combined p-values, effect estimates, and confidence intervals, which we derive in closed-form. Additionally, we provide new results for Edgington's, Fisher's, Pearson's, and Tippett's p-value combination methods. When both trials have the same true effect, all methods can consistently estimate it, although some show bias. When true effects differ, the two-trials rule and Pearson's method are conservative (converging to the less extreme effect), Fisher's and Tippett's methods are anti-conservative (converging to the more extreme effect), and Edgington's method and meta-analysis are balanced (converging to a weighted average). Notably, Edgington's confidence intervals asymptotically always include the individual trial effects, while meta-analytic confidence intervals shrink to a point at the weighted average effect. We conclude that all of these methods may be appropriate depending on the estimand of interest. We implement combined p-value function inference for two trials in the R package twotrials, allowing researchers to easily perform compatible hypothesis testing and effect estimation."
+        }
+      ]
+    },
+    {
+      "source": "arXiv",
+      "query": "all:\"drug\" AND all:\"hypernetwork\"",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22drug%22+AND+all%3A%22hypernetwork%22&max_results=5&sortBy=relevance",
+      "records": [
+        {
+          "source": "arXiv",
+          "query": "all:\"drug\" AND all:\"hypernetwork\"",
+          "title": "HyperSBINN: A Hypernetwork-Enhanced Systems Biology-Informed Neural Network for Efficient Drug Cardiosafety Assessment",
+          "doi": null,
+          "year": 2024,
+          "authors": [
+            "Inass Soukarieh",
+            "Gerhard Hessler",
+            "Hervé Minoux",
+            "Marcel Mohr",
+            "Friedemann Schmidt",
+            "Jan Wenzel",
+            "Pierre Barbillon",
+            "Hugo Gangloff",
+            "Pierre Gloaguen"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2408.14266v2",
+          "abstract": "Mathematical modeling in systems toxicology enables a comprehensive understanding of the effects of pharmaceutical substances on cardiac health. However, the complexity of these models limits their widespread application in early drug discovery. In this paper, we introduce a novel approach to solving parameterized models of cardiac action potentials by combining meta-learning techniques with Systems Biology-Informed Neural Networks (SBINNs). The proposed method, hyperSBINN, effectively addresses the challenge of predicting the effects of various compounds at different concentrations on cardiac action potentials, outperforming traditional differential equation solvers in speed. Our model efficiently handles scenarios with limited data and complex parameterized differential equations. The hyperSBINN model demonstrates robust performance in predicting APD90 values, indicating its potential as a reliable tool for modeling cardiac electrophysiology and aiding in preclinical drug development. This framework represents an advancement in computational modeling, offering a scalable and efficient solution for simulating and understanding complex biological systems."
+        }
+      ]
+    }
+  ]
+}

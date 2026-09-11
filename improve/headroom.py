@@ -21,7 +21,7 @@ from sklearn.metrics import average_precision_score, roc_auc_score
 from torch_geometric.utils import negative_sampling
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from improve.run import (ARMS, TASKS, compute_loss, evaluate, fwd,
+from improve.run import (ARMS, TASKS, compute_loss, evaluate, fwd, mask_edges,
                         load_splits, set_seed)
 from improve.model import Model
 
@@ -35,8 +35,16 @@ def train_capture(run_dir, task, seed, device, arm='base'):
     train_data, val_data, test_data = load_splits(run_dir, task, cfg, device)
     model = Model(train_data, t['channels'], cfg.get('aggr', t['aggr']),
                   t['rna'], decoder=cfg.get('decoder', 'concat'),
-                  encoder=cfg.get('encoder', 'hetero')).to(device)
-    opt = torch.optim.RMSprop(model.parameters(), lr=t['lr'], alpha=0.99)
+                  encoder=cfg.get('encoder', 'hetero'),
+                  norm=bool(cfg.get('norm')),
+                  residual=bool(cfg.get('res'))).to(device)
+    opt = torch.optim.RMSprop(model.parameters(), lr=t['lr'], alpha=0.99,
+                              weight_decay=cfg.get('wd', 0))
+    if cfg.get('optimizer') == 'adamw':
+        opt = torch.optim.AdamW(model.parameters(), lr=t['lr'],
+                                weight_decay=cfg.get('wd', 0))
+    sched = torch.optim.lr_scheduler.CosineAnnealingLR(
+        opt, T_max=t['epochs']) if cfg.get('cosine') else None
     li = train_data[key].edge_label_index
     lb = train_data[key].edge_label
     pos_index = li[:, lb == 1]
@@ -45,7 +53,7 @@ def train_capture(run_dir, task, seed, device, arm='base'):
 
     best_val, cap = -1.0, None
     best_pr, cap_pr = -1.0, None
-    for _ in range(1, t['epochs']):
+    for epoch in range(1, t['epochs']):
         model.train()
         if cfg.get('neg_resample'):
             neg = negative_sampling(
@@ -58,11 +66,31 @@ def train_capture(run_dir, task, seed, device, arm='base'):
         else:
             cur_i, cur_l = li, lb
         opt.zero_grad()
+        drop = cfg.get('edge_drop')
+        if drop and cfg.get('drop_start'):
+            frac = min(1.0, epoch / max(1, cfg.get('anneal_epochs', 50)))
+            drop = drop + (cfg['drop_start'] - drop) * (1 - frac)
+        train_edge_index = train_data.edge_index_dict if not drop else {
+            k: mask_edges(edge_index, drop)
+            for k, edge_index in train_data.edge_index_dict.items()
+        }
+        tr_x = None
+        if cfg.get('feat_drop'):
+            tr_x = {k: x * (torch.rand(x.shape, device=x.device)
+                            > cfg['feat_drop']).float()
+                    for k, x in train_data.x_dict.items()}
         # Must go through compute_loss, not a hard-coded BCE: the loss-shaping
         # arms (posw*, focal, bpr) are defined entirely by this call.
-        compute_loss(fwd(model, train_data, cur_i), cur_l, cfg).backward()
+        compute_loss(fwd(model, train_data, cur_i, train_edge_index, tr_x),
+                     cur_l, cfg).backward()
         opt.step()
-        va, vp = evaluate(model, val_data, key)
+        if sched is not None:
+            sched.step()
+        mc = cfg.get('mc', 1)
+        drop_r = cfg.get('edge_drop', 0.0)
+        va, vp, _, _ = evaluate(
+            model, val_data, key, drop_r if mc > 1 else 0.0, mc,
+            cfg.get('mc_rate'), bool(cfg.get('mc_full')))
         if vp > best_pr:
             best_pr = vp
             model.eval()

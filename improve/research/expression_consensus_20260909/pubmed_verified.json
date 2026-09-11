@@ -1,0 +1,61 @@
+{
+  "source": "PubMed",
+  "query": "(ncRNA OR miRNA OR lncRNA) AND \"drug resistance\" AND (\"contrastive learning\" OR \"masked autoencoder\" OR \"self-supervised\")",
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28ncRNA+OR+miRNA+OR+lncRNA%29+AND+%22drug+resistance%22+AND+%28%22contrastive+learning%22+OR+%22masked+autoencoder%22+OR+%22self-supervised%22%29&retmax=12&retmode=json",
+  "records": [
+    {
+      "source": "PubMed",
+      "query": "(ncRNA OR miRNA OR lncRNA) AND \"drug resistance\" AND (\"contrastive learning\" OR \"masked autoencoder\" OR \"self-supervised\")",
+      "title": "MIFNDRA: an innovative knowledge-enhanced multimodal fusion and graph learning framework for predicting drug resistance-related ncRNAs.",
+      "doi": "10.1093/bib/bbag322",
+      "pmid": "42308423",
+      "year": 2026,
+      "authors": [
+        "Jianan Sui",
+        "Weirong Cui",
+        "Xiaojie Jin",
+        "Hongliang Duan",
+        "Jingjing Guo"
+      ],
+      "venue": "Briefings in bioinformatics",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42308423/",
+      "abstract": "Drug resistance is a significant challenge in cancer treatment, greatly impacting treatment efficacy. Non-coding RNAs (ncRNAs) play crucial roles in mediating drug resistance, yet few computational models effectively predict drug resistance-associated ncRNAs. Existing methods often overlook the complex sequence patterns of ncRNA and their intricate interrelationships, resulting in suboptimal performance. To address these challenges, we propose MIFNDRA, a multimodal integrative framework that jointly models ncRNA and drug features to identify drug resistance-related ncRNAs. MIFNDRA employs a pre-trained Graph Isomorphism Network to extract drug structural features and a pre-trained SpliceBERT model to encode ncRNA sequences. It also incorporates various similarity features for both drugs and ncRNAs, while improving representation through a novel ncRNA interaction network that includes interactions between different ncRNA types as a strategy for knowledge enhancement. By leveraging advanced graph learning techniques, including residual GraphSAGE and contrastive learning, the model improves the identification of drug resistance-associated ncRNAs. Additionally, we curated a new benchmark dataset pairing ncRNA sequences with drug SMILES and resistance annotations. Comprehensive experiments demonstrate that MIFNDRA achieved state-of-the-art performance. Case studies on cisplatin and gemcitabine further validate the model's robustness and potential in advancing drug resistance research and drug development. The data and code required for this work are available at https://github.com/SJNNNN/MIFNDRA."
+    },
+    {
+      "source": "PubMed",
+      "query": "(ncRNA OR miRNA OR lncRNA) AND \"drug resistance\" AND (\"contrastive learning\" OR \"masked autoencoder\" OR \"self-supervised\")",
+      "title": "AGCLNDA: Enhancing the Prediction of ncRNA-Drug Resistance Association Using Adaptive Graph Contrastive Learning.",
+      "doi": "10.1109/JBHI.2025.3531112",
+      "pmid": "40031186",
+      "year": 2025,
+      "authors": [
+        "Yanhao Fan",
+        "Che Zhang",
+        "Xiaowen Hu",
+        "Zhijian Huang",
+        "Lei Deng"
+      ],
+      "venue": "IEEE journal of biomedical and health informatics",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40031186/",
+      "abstract": "Non-coding RNAs (ncRNAs), which do not encode proteins, have been implicated in chemotherapy resistance in cancer treatment. Given the high costs and time requirements of traditional biological experiments, there is an increasing need for computational models to predict ncRNA-drug resistance associations. In this study, we introduce AGCLNDA, an adaptive contrastive learning method designed to uncover these associations. AGCLNDA begins by constructing a bipartite graph from existing ncRNA-drug resistance data. It then utilizes a light graph convolutional network (LightGCN) to learn vector representations for both ncRNAs and drugs. The method assesses resistance association scores through the inner product of these vectors. To tackle data sparsity and noise, AGCLNDA incorporates learnable augmented view generators and denoised view generators, which provide contrastive views for enhanced data augmentation. Comparative experiments demonstrate that AGCLNDA outperforms five other advanced methods. Case studies further validate AGCLNDA as an effective tool for predicting ncRNA-drug resistance associations."
+    },
+    {
+      "source": "PubMed",
+      "query": "(ncRNA OR miRNA OR lncRNA) AND \"drug resistance\" AND (\"contrastive learning\" OR \"masked autoencoder\" OR \"self-supervised\")",
+      "title": "Graph Neural Network with Self-Supervised Learning for Noncoding RNA-Drug Resistance Association Prediction.",
+      "doi": "10.1021/acs.jcim.2c00367",
+      "pmid": "35838124",
+      "year": 2022,
+      "authors": [
+        "Jingjing Zheng",
+        "Yurong Qian",
+        "Jie He",
+        "Zerui Kang",
+        "Lei Deng"
+      ],
+      "venue": "Journal of chemical information and modeling",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35838124/",
+      "abstract": "Noncoding RNA(ncRNA) is closely related to drug resistance. Identifying the association between ncRNA and drug resistance is of great significance for drug development. Methods based on biological experiments are often time-consuming and small-scale. Therefore, developing computational methods to distinguish the association between ncRNA and drug resistance is urgent. We develop a computational framework called GSLRDA to predict the association between ncRNA and drug resistance in this work. First, the known ncRNA-drug resistance associations are modeled as a bipartite graph of ncRNA and drug. Then, GSLRDA uses the light graph convolutional network (lightGCN) to learn the vector representation of ncRNA and drug from the ncRNA-drug bipartite graph. In addition, GSLRDA uses different data augmentation methods to generate different views for ncRNA and drug nodes and performs self-supervised learning, further improving the quality of learned ncRNA and drug vector representations through contrastive learning between nodes. Finally, GSLRDA uses the inner product to predict the association between ncRNA and drug resistance. To the best of our knowledge, GSLRDA is the first to apply self-supervised learning in association prediction tasks in the field of bioinformatics. The experimental results show that GSLRDA takes an AUC value of 0.9101, higher than the other eight state-of-the-art models. In addition, case studies including two drugs further illustrate the effectiveness of GSLRDA in predicting the association between ncRNA and drug resistance. The code and data sets of GSLRDA are available at https://github.com/JJZ-code/GSLRDA."
+    }
+  ]
+}

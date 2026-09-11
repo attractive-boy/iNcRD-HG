@@ -59,6 +59,13 @@ def sim_edges(path, thr=None, knn=None):
     if knn is not None:
         n = m.shape[0]
         mm = m.copy()
+        # The matrices contain NaN (LncSimMat_ken has two per row); the
+        # threshold path filters them (NaN > t is False) but argpartition
+        # would let them win a top-k slot, and a NaN weight would poison the
+        # message passing.  argpartition sorts -mm ascending, so NaN must
+        # become -inf here (i.e. +inf in the negated space) to sort to the
+        # bottom and never be selected.
+        mm[np.isnan(mm)] = -np.inf
         np.fill_diagonal(mm, -np.inf)
         idx = np.argpartition(-mm, kth=min(knn, n - 1) - 1, axis=1)[:, :knn]
         rows = np.repeat(np.arange(n), idx.shape[1])
@@ -68,8 +75,45 @@ def sim_edges(path, thr=None, knn=None):
     return np.vstack((rows, cols))
 
 
-def build(net_dir, lnc, mi, drug, knn=False):
-    """Reproduce construct_heterogeneous_network with configurable sparsity."""
+def signed_edges(path, thr=None, knn=None):
+    """Like `sim_edges` but on the SIGNED matrix, returning (pos, neg) pairs.
+
+    The released pipeline takes `np.abs` of every similarity matrix before
+    thresholding, so an anti-correlated pair (sim < -thr) enters the graph as a
+    positive-similarity edge and is message-passed identically to a strongly
+    co-expressed pair.  `signed_edges` keeps the sign: threshold mode returns
+    (sim > thr) and (sim < -thr) edge pairs; knn mode selects each node's k
+    most similar partners by |sim| and then splits them by sign.  The sign is
+    recoverable afterwards from the matrix, so the caller can weight the two
+    relations differently.
+    """
+    m = pd.read_csv(path, header=None).values
+    if knn is not None:
+        n = m.shape[0]
+        am = np.abs(m)
+        am[np.isnan(am)] = -np.inf
+        np.fill_diagonal(am, -np.inf)
+        idx = np.argpartition(-am, kth=min(knn, n - 1) - 1, axis=1)[:, :knn]
+        rows = np.repeat(np.arange(n), idx.shape[1])
+        cols = idx.ravel()
+        vals = m[rows, cols]
+        pos = np.vstack((rows[vals > 0], cols[vals > 0]))
+        neg = np.vstack((rows[vals < 0], cols[vals < 0]))
+        return pos, neg
+    rows, cols = np.where(m > thr)
+    pos = np.vstack((rows, cols))
+    rows, cols = np.where(m < -thr)
+    neg = np.vstack((rows, cols))
+    return pos, neg
+
+
+def build(net_dir, lnc, mi, drug, knn=False, signed=False):
+    """Reproduce construct_heterogeneous_network with configurable sparsity.
+
+    `signed=True` replaces each similarity relation with `_pos` and `_neg`
+    relations (from `signed_edges`), so the anti-correlation that the released
+    abs() discards survives as its own edge type.
+    """
     kw = (lambda v: dict(knn=int(v))) if knn else (lambda v: dict(thr=float(v)))
 
     lncRNA_names = pd.read_csv(f'{net_dir}/lncRNA.csv')
@@ -113,16 +157,27 @@ def build(net_dir, lnc, mi, drug, knn=False):
     data['drug'].x = (dr_f - dr_f.min(1, keepdim=True).values) / (
         dr_f.max(1, keepdim=True).values - dr_f.min(1, keepdim=True).values)
 
-    data['lncRNA', 'LncLnc', 'lncRNA'].edge_index = torch.tensor(
-        sim_edges(f'{net_dir}/LncSimMat_ken.csv', **kw(lnc)), dtype=torch.long)
+    if signed:
+        for nt, rel, fname in (('lncRNA', 'LncLnc', 'LncSimMat_ken.csv'),
+                               ('miRNA', 'MiMi', 'MiSimMat_ken.csv'),
+                               ('drug', 'DrugDrug', 'drugSimMat.csv')):
+            pos, neg = signed_edges(f'{net_dir}/{fname}', **kw(
+                {'lncRNA': lnc, 'miRNA': mi, 'drug': drug}[nt]))
+            data[nt, f'{rel}_pos', nt].edge_index = torch.tensor(
+                pos, dtype=torch.long)
+            data[nt, f'{rel}_neg', nt].edge_index = torch.tensor(
+                neg, dtype=torch.long)
+    else:
+        data['lncRNA', 'LncLnc', 'lncRNA'].edge_index = torch.tensor(
+            sim_edges(f'{net_dir}/LncSimMat_ken.csv', **kw(lnc)), dtype=torch.long)
+        data['miRNA', 'MiMi', 'miRNA'].edge_index = torch.tensor(
+            sim_edges(f'{net_dir}/MiSimMat_ken.csv', **kw(mi)), dtype=torch.long)
+        data['drug', 'DrugDrug', 'drug'].edge_index = torch.tensor(
+            sim_edges(f'{net_dir}/drugSimMat.csv', **kw(drug)), dtype=torch.long)
     data['lncRNA', 'LncDrug', 'drug'].edge_index = torch.tensor(
         ld.T.values, dtype=torch.long)
-    data['miRNA', 'MiMi', 'miRNA'].edge_index = torch.tensor(
-        sim_edges(f'{net_dir}/MiSimMat_ken.csv', **kw(mi)), dtype=torch.long)
     data['miRNA', 'MiDrug', 'drug'].edge_index = torch.tensor(
         md.T.values, dtype=torch.long)
-    data['drug', 'DrugDrug', 'drug'].edge_index = torch.tensor(
-        sim_edges(f'{net_dir}/drugSimMat.csv', **kw(drug)), dtype=torch.long)
     data['lncRNA', 'LncMi', 'miRNA'].edge_index = torch.tensor(
         lm.T.values, dtype=torch.long)
     return T.AddSelfLoops()(T.ToUndirected()(data))

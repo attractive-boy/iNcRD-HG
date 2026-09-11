@@ -1,0 +1,191 @@
+{
+  "created_at_utc": "2026-09-10T01:50:40.766015+00:00",
+  "scope": "Engineering probe only: four optimizer steps per task on fitting queries; no performance inference",
+  "seed": 666,
+  "rank": 16,
+  "device": "cuda:0",
+  "torch_version": "1.13.1+cu117",
+  "inner_holdout_evaluations": 0,
+  "outer_evaluations": 0,
+  "test_evaluations": 0,
+  "reference_protocol_sha256": "34d3e93e93ce64b7b15bad401a7ce1af26b84eec4b9f7adffe5231f3420562aa",
+  "source_sha256": {
+    "first_round_features.py": "df5e7022a7fe96be1a8e78a3a1be8ba98a298d5b0749720a2ac9187c19ac8404",
+    "first_round_inputs.py": "a0832cdfc8cc5d859630c5b22200111e024aad90f0740b2685667e14989fa937",
+    "network_feature_ablation.py": "ef84f97133f0c147e60a3a9429d609bb137c6147a77fc65b2ff1c74a879d448d",
+    "network_feature_inputs.py": "9fe9b52893b4a7ec0eb5748609bf5574adc32f7d7795e956e1e4387ee485b07b",
+    "model.py": "92e0bdea4192eba3dbd5563074fdf492604a2c35e2746d369bd448abd8bcbca2",
+    "run.py": "794eb4a9870b0f318c3f47db23cfdd6545f570d7aa5a84385c0e1d22efef77af",
+    "hybrid.py": "b3996f7004a58fa0069dc6297994dd12850238fb8a348c9dde8067b8fdc0738e",
+    "gbdt.py": "9cd4c0bcde93eb48de2f5fdfd5595c4be1ab36f3f9eb3aba7edd09d82cf972c0",
+    "feature_extra.py": "9a89ea1ad39df6af7b97b64a70c47e06a314c1db14f4232199ff847a2325fb24",
+    "features.py": "c92866f3c64fb61bd667e2402a30b3b741d8d79ac6bc05c67b943e227cfbb895",
+    "expression_consensus.py": "0a429cb4227a28cb1a6f583f6758fc5ae5459a8aa80654569cda4f2d119bee83",
+    "expression_consensus_modules.py": "26c9748f53ba5eb6c21515400b29b7c6af6c6c1dc0b34b9401338df281e54da8",
+    "expression_scale_mechanism.py": "bd78effc39b39eb9e180860deca96d1c3012e520d129dc1606eeafba091fc5c3",
+    "test_expression_consensus.py": "044300ce022894d9163ec4706b8043dc9b67c128348d4da50a7a6c05c98f8117",
+    "pair_exchange.py": "213465f826719784f49b5ff1481092087a6eaabd75a329ce434adcdd80705a3b",
+    "pair_exchange_modules.py": "cae2067b2283a207facd45e83d0096b3eb68c1eed7adab69f8f4775f2faa56e7",
+    "test_pair_exchange.py": "f80919f4f279e481a1f52204568079dba8042cb1353bd7bfbbd14527331435cc",
+    "support_operator_modules.py": "36b4193a40e77c6e60f8a5ce6cafc126ce632de230001692dbe6e308352738b8",
+    "test_support_operator.py": "c64ed20609d32b37c14941ae1e6362f466264b3471ebf7680ee731f03f05b28e"
+  },
+  "tasks": {
+    "LncDrug": {
+      "fitting_rows": 3040,
+      "inner_holdout_rows_not_scored": 760,
+      "target_encoder_edges": 0,
+      "reverse_target_encoder_edges": 0,
+      "fitting_query_support_overlap": 0,
+      "steps": [
+        {
+          "step": 1,
+          "fitting_query_rows": 1520,
+          "support_rows": 1520,
+          "training_bce": 0.6218260526657104,
+          "gradient_norms": {
+            "encoder": 0.4938845651968344,
+            "decoder.rna_basis": 0.03652217845580703,
+            "decoder.drug_prior": 0.04641726217247233,
+            "decoder.drug_key": 0.08662421715514872,
+            "decoder.ridge_head": 5.1887994399013015,
+            "decoder.raw_temperature": 0.013797074465164368
+          }
+        },
+        {
+          "step": 2,
+          "fitting_query_rows": 1520,
+          "support_rows": 1520,
+          "training_bce": 0.5152465105056763,
+          "gradient_norms": {
+            "encoder": 0.4656428857346021,
+            "decoder.rna_basis": 0.12837594329018065,
+            "decoder.drug_prior": 0.3649106777044503,
+            "decoder.drug_key": 0.011107085200161343,
+            "decoder.ridge_head": 0.2536452508399881,
+            "decoder.raw_temperature": 0.0013237975136808982
+          }
+        },
+        {
+          "step": 3,
+          "fitting_query_rows": 1520,
+          "support_rows": 1520,
+          "training_bce": 0.47396785020828247,
+          "gradient_norms": {
+            "encoder": 0.3315393794750376,
+            "decoder.rna_basis": 0.08620032160658174,
+            "decoder.drug_prior": 0.14048622704343294,
+            "decoder.drug_key": 0.010338425792304814,
+            "decoder.ridge_head": 3.7826072852046257,
+            "decoder.raw_temperature": 0.0011270145343597322
+          }
+        },
+        {
+          "step": 4,
+          "fitting_query_rows": 1520,
+          "support_rows": 1520,
+          "training_bce": 0.5679931640625,
+          "gradient_norms": {
+            "encoder": 0.12945499046965214,
+            "decoder.rna_basis": 0.029509054201524835,
+            "decoder.drug_prior": 0.04302584024702679,
+            "decoder.drug_key": 0.08741451991850717,
+            "decoder.ridge_head": 0.1369987998747815,
+            "decoder.raw_temperature": 0.010828800485616304
+          }
+        }
+      ],
+      "finite_nonzero_gradients": true,
+      "empty_support_equals_prior": true,
+      "prior_invariant_to_memory_labels": true,
+      "support_label_flip_mean_absolute_logit_change": 1.4592366218566895,
+      "operator_prior_mean_absolute_difference": 0.10636712610721588,
+      "initial_state_sha256": "e1aec283331c5b203a95f523d7bc2caff877af40dc181c0870124f51c1cd0078",
+      "final_state_sha256": "15b66249edf978d9168b2b6b608a59a2ed95e9ac27ec2f7af0bfbc8f73ff6ad7",
+      "input_sha256": {
+        "inner.npz": "4f124ee0ae1df9a7eab9453c3bf6fb77143dad1c010c86e4ea2a9dce57096350",
+        "train_graph.pth": "4fa7e42a30b279ef2bde97a11cd7d38c675ec46331200e23c6c98bf00d82d3db"
+      },
+      "elapsed_seconds": 5.058863092213869
+    },
+    "MiDrug": {
+      "fitting_rows": 7769,
+      "inner_holdout_rows_not_scored": 1943,
+      "target_encoder_edges": 0,
+      "reverse_target_encoder_edges": 0,
+      "fitting_query_support_overlap": 0,
+      "steps": [
+        {
+          "step": 1,
+          "fitting_query_rows": 3884,
+          "support_rows": 3885,
+          "training_bce": 0.5856316089630127,
+          "gradient_norms": {
+            "encoder": 0.5501021055894274,
+            "decoder.rna_basis": 0.0695433415104708,
+            "decoder.drug_prior": 0.10964361191411554,
+            "decoder.drug_key": 0.3044009868684499,
+            "decoder.ridge_head": 1.210157877378144,
+            "decoder.raw_temperature": 0.033039394060610384
+          }
+        },
+        {
+          "step": 2,
+          "fitting_query_rows": 3884,
+          "support_rows": 3885,
+          "training_bce": 0.5327709317207336,
+          "gradient_norms": {
+            "encoder": 0.15947996951716745,
+            "decoder.rna_basis": 0.0493657441679356,
+            "decoder.drug_prior": 0.1505147072730527,
+            "decoder.drug_key": 0.08040848902423127,
+            "decoder.ridge_head": 1.3260081801321673,
+            "decoder.raw_temperature": 0.021435756427070813
+          }
+        },
+        {
+          "step": 3,
+          "fitting_query_rows": 3884,
+          "support_rows": 3885,
+          "training_bce": 0.47563812136650085,
+          "gradient_norms": {
+            "encoder": 0.09502021159442656,
+            "decoder.rna_basis": 0.04981641891557148,
+            "decoder.drug_prior": 0.1206677912330843,
+            "decoder.drug_key": 0.018127984552023586,
+            "decoder.ridge_head": 0.9087391263420411,
+            "decoder.raw_temperature": 0.004849606720012033
+          }
+        },
+        {
+          "step": 4,
+          "fitting_query_rows": 3884,
+          "support_rows": 3885,
+          "training_bce": 0.4581013023853302,
+          "gradient_norms": {
+            "encoder": 0.047142982668259045,
+            "decoder.rna_basis": 0.027463106088131378,
+            "decoder.drug_prior": 0.06962097274652347,
+            "decoder.drug_key": 0.011732934353312078,
+            "decoder.ridge_head": 0.3392053078617369,
+            "decoder.raw_temperature": 0.002944661840725064
+          }
+        }
+      ],
+      "finite_nonzero_gradients": true,
+      "empty_support_equals_prior": true,
+      "prior_invariant_to_memory_labels": true,
+      "support_label_flip_mean_absolute_logit_change": 1.0472252368927002,
+      "operator_prior_mean_absolute_difference": 0.1840154081583023,
+      "initial_state_sha256": "096b4e9a2287ce45297a5466c811eaf5500d88271aa31531d66331bf430a321f",
+      "final_state_sha256": "6166594a0ecccdcb7d200593a33a2b0b03336d5ee196efc536aa398985cc1b8a",
+      "input_sha256": {
+        "inner.npz": "303979e010989198ebf4cf754a0b93dfc76054d89b6b1420237fb929c794ea97",
+        "train_graph.pth": "9bc416f0c1e326e81157a2069ee0750e47c51de0dddb0684560d49fc8c0816b9"
+      },
+      "elapsed_seconds": 0.6783556658774614
+    }
+  },
+  "probe_source_sha256": "37d3bc957c5000cba7defc3748a4294d3ce8f74957296e1b6521b132c3a9e46b",
+  "passed": true
+}

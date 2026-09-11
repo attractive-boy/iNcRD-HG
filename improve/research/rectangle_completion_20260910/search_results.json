@@ -1,0 +1,393 @@
+{
+  "retrieved_at_utc": "2026-09-10T06:33:39.658974+00:00",
+  "scope": "Targeted metadata and abstract review only; no systematic novelty claim",
+  "mcp_available": false,
+  "fallback": "Public arXiv, CrossRef, PubMed APIs",
+  "responses": [
+    {
+      "source": "arXiv",
+      "query": "ti:\"Neural\" AND ti:\"Common\" AND ti:\"Neighbor\"",
+      "url": "https://export.arxiv.org/api/query?search_query=ti%3A%22Neural%22+AND+ti%3A%22Common%22+AND+ti%3A%22Neighbor%22&max_results=5&sortBy=relevance",
+      "records": [
+        {
+          "source": "arXiv",
+          "query": "ti:\"Neural\" AND ti:\"Common\" AND ti:\"Neighbor\"",
+          "title": "Neural Common Neighbor with Completion for Link Prediction",
+          "doi": null,
+          "year": 2023,
+          "authors": [
+            "Xiyuan Wang",
+            "Haotong Yang",
+            "Muhan Zhang"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2302.00890v4",
+          "abstract": "In this work, we propose a novel link prediction model and further boost it by studying graph incompleteness. First, we introduce MPNN-then-SF, an innovative architecture leveraging structural feature (SF) to guide MPNN's representation pooling, with its implementation, namely Neural Common Neighbor (NCN). NCN exhibits superior expressiveness and scalability compared with existing models, which can be classified into two categories: SF-then-MPNN, augmenting MPNN's input with SF, and SF-and-MPNN, decoupling SF and MPNN. Second, we investigate the impact of graph incompleteness -- the phenomenon that some links are unobserved in the input graph -- on SF, like the common neighbor. Through dataset visualization, we observe that incompleteness reduces common neighbors and induces distribution shifts, significantly affecting model performance. To address this issue, we propose to use a link prediction model to complete the common neighbor structure. Combining this method with NCN, we propose Neural Common Neighbor with Completion (NCNC). NCN and NCNC outperform recent strong baselines by large margins, and NCNC further surpasses state-of-the-art models in standard link prediction benchmarks. Our code is available at https://github.com/GraphPKU/NeuralCommonNeighbor."
+        },
+        {
+          "source": "arXiv",
+          "query": "ti:\"Neural\" AND ti:\"Common\" AND ti:\"Neighbor\"",
+          "title": "Efficient Neural Common Neighbor for Temporal Graph Link Prediction",
+          "doi": null,
+          "year": 2024,
+          "authors": [
+            "Xiaohui Zhang",
+            "Yanbo Wang",
+            "Xiyuan Wang",
+            "Muhan Zhang"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2406.07926v2",
+          "abstract": "Temporal graphs are widespread in real-world applications such as social networks, as well as trade and transportation networks. Predicting dynamic links within these evolving graphs is a key problem. Many memory-based methods use temporal interaction histories to generate node embeddings, which are then combined to predict links. However, these approaches primarily focus on individual node representations, often overlooking the inherently pairwise nature of link prediction. While some recent methods attempt to capture pairwise features, they tend to be limited by high computational complexity arising from repeated embedding calculations, making them unsuitable for large-scale datasets like the Temporal Graph Benchmark (TGB). To address the critical need for models that combine strong expressive power with high computational efficiency for link prediction on large temporal graphs, we propose Temporal Neural Common Neighbor (TNCN). Our model achieves this balance by adapting the powerful pairwise modeling principles of Neural Common Neighbor (NCN) to an efficient temporal architecture. TNCN improves upon NCN by efficiently preserving and updating temporal neighbor dictionaries for each node and by using multi-hop common neighbors to learn more expressive pairwise representations. TNCN achieves new state-of-the-art performance on Review from five large-scale real-world TGB datasets, 6 out of 7 datasets in the transductive setting and 3 out of 7 in the inductive setting on small- to medium-scale datasets. Additionally, TNCN demonstrates excellent scalability, outperforming prominent GNN baselines by up to 30.3 times in speed on large datasets. Our code is available at https://github.com/GraphPKU/TNCN."
+        },
+        {
+          "source": "arXiv",
+          "query": "ti:\"Neural\" AND ti:\"Common\" AND ti:\"Neighbor\"",
+          "title": "High-order Graph Neural Networks with Common Neighbor Awareness for Link Prediction",
+          "doi": null,
+          "year": 2025,
+          "authors": [
+            "Ling Wang",
+            "Minglian Han"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2504.18758v1",
+          "abstract": "Link prediction is a fundamental task in dynamic graph learning (DGL), inherently shaped by the topology of the DG. Recent advancements in dynamic graph neural networks (DGNN), primarily by modeling the relationships among nodes via a message passing scheme, have significantly improved link prediction performance. However, DGNNs heavily rely on the pairwise node interactions, which neglect the common neighbor interaction in DGL. To address this limitation, we propose a High-order Graph Neural Networks with Common Neighbor Awareness (HGNN-CNA) for link prediction with two-fold ideas: a) estimating correlation score by considering multi-hop common neighbors for capturing the complex interaction between nodes; b) fusing the correlation into the message-passing process to consider common neighbor interaction directly in DGL. Experimental results on three real DGs demonstrate that the proposed HGNN-CNA acquires a significant accuracy gain over several state-of-the-art models on the link prediction task."
+        }
+      ]
+    },
+    {
+      "source": "arXiv",
+      "query": "all:\"link prediction\" AND all:\"higher-order\"",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22link+prediction%22+AND+all%3A%22higher-order%22&max_results=5&sortBy=relevance",
+      "records": [
+        {
+          "source": "arXiv",
+          "query": "all:\"link prediction\" AND all:\"higher-order\"",
+          "title": "Higher-order link prediction via local information",
+          "doi": null,
+          "year": 2023,
+          "authors": [
+            "Bo Liu",
+            "Rongmei Yang",
+            "Linyuan Lü"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2306.08215v1",
+          "abstract": "Link prediction has been widely studied as an important research direction. Higher-order link prediction has gained especially significant attention since higher-order networks provide a more accurate description of real-world complex systems. However, higher-order networks contain more complex information than traditional pairwise networks, making the prediction of higher-order links a formidable challenging task. Recently, researchers have discovered that local features have advantages over long-range features in higher-order link prediction. Therefore, it is necessary to develop more efficient and concise higher-order link prediction algorithms based on local features. In this paper, we proposed two similarity metrics via local information, simplicial decomposition weight (SDW) and closed ratio weight (CRW), to predict possible future higher-order interactions (simplices) in simplicial networks. These two algorithms capture local higher-order information at two aspects: simplex decomposition and cliques' state (closed or open). We tested their performance in eight empirical simplicial networks, and the results show that our proposed metrics outperform other benchmarks in predicting third-order and fourth-order interactions (simplices) in most cases. In addition, we explore the robustness of the proposed algorithms, and the results suggest that the performance of these novel algorithms is advanced under different sizes of training sets."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"link prediction\" AND all:\"higher-order\"",
+          "title": "Higher-Order Relations Skew Link Prediction in Graphs",
+          "doi": null,
+          "year": 2021,
+          "authors": [
+            "Govind Sharma",
+            "Aditya Challa",
+            "Paarth Gupta",
+            "M. Narasimha Murty"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2111.00271v1",
+          "abstract": "The problem of link prediction is of active interest. The main approach to solving the link prediction problem is based on heuristics such as Common Neighbors (CN) -- more number of common neighbors of a pair of nodes implies a higher chance of them getting linked. In this article, we investigate this problem in the presence of higher-order relations. Surprisingly, it is found that CN works very well, and even better in the presence of higher-order relations. However, as we prove in the current work, this is due to the CN-heuristic overestimating its prediction abilities in the presence of higher-order relations. This statement is proved by considering a theoretical model for higher-order relations and by showing that AUC scores of CN are higher than can be achieved from the model. Theoretical justification in simple cases is also provided. Further, we extend our observations to other similar link prediction algorithms such as Adamic Adar. Finally, these insights are used to propose an adjustment factor by taking into conscience that a random graph would only have a best AUC score of 0.5. This adjustment factor allows for a better estimation of generalization scores."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"link prediction\" AND all:\"higher-order\"",
+          "title": "Higher-Order Ranking and Link Prediction: From Closing Triangles to Closing Higher-Order Motifs",
+          "doi": null,
+          "year": 2019,
+          "authors": [
+            "Ryan A. Rossi",
+            "Anup Rao",
+            "Sungchul Kim",
+            "Eunyee Koh",
+            "Nesreen K. Ahmed",
+            "Gang Wu"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/1906.05059v1",
+          "abstract": "In this paper, we introduce the notion of motif closure and describe higher-order ranking and link prediction methods based on the notion of closing higher-order network motifs. The methods are fast and efficient for real-time ranking and link prediction-based applications such as web search, online advertising, and recommendation. In such applications, real-time performance is critical. The proposed methods do not require any explicit training data, nor do they derive an embedding from the graph data, or perform any explicit learning. Existing methods with the above desired properties are all based on closing triangles (common neighbors, Jaccard similarity, and the ilk). In this work, we investigate higher-order network motifs and develop techniques based on the notion of closing higher-order motifs that move beyond closing simple triangles. All methods described in this work are fast with a runtime that is sublinear in the number of nodes. The experimental results indicate the importance of closing higher-order motifs for ranking and link prediction applications. Finally, the proposed notion of higher-order motif closure can serve as a basis for studying and developing better ranking and link prediction methods."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"link prediction\" AND all:\"higher-order\"",
+          "title": "Simplicial Closure and higher-order link prediction",
+          "doi": null,
+          "year": 2018,
+          "authors": [
+            "Austin R. Benson",
+            "Rediet Abebe",
+            "Michael T. Schaub",
+            "Ali Jadbabaie",
+            "Jon Kleinberg"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/1802.06916v2",
+          "abstract": "Networks provide a powerful formalism for modeling complex systems by using a model of pairwise interactions. But much of the structure within these systems involves interactions that take place among more than two nodes at once; for example, communication within a group rather than person-to person, collaboration among a team rather than a pair of coauthors, or biological interaction between a set of molecules rather than just two. Such higher-order interactions are ubiquitous, but their empirical study has received limited attention, and little is known about possible organizational principles of such structures. Here we study the temporal evolution of 19 datasets with explicit accounting for higher-order interactions. We show that there is a rich variety of structure in our datasets but datasets from the same system types have consistent patterns of higher-order structure. Furthermore, we find that tie strength and edge density are competing positive indicators of higher-order organization, and these trends are consistent across interactions involving differing numbers of nodes. To systematically further the study of theories for such higher-order structures, we propose higher-order link prediction as a benchmark problem to assess models and algorithms that predict higher-order structure. We find a fundamental differences from traditional pairwise link prediction, with a greater role for local rather than long-range information in predicting the appearance of new interactions."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"link prediction\" AND all:\"higher-order\"",
+          "title": "Expressive Higher-Order Link Prediction through Hypergraph Symmetry Breaking",
+          "doi": null,
+          "year": 2024,
+          "authors": [
+            "Simon Zhang",
+            "Cheng Xin",
+            "Tamal K. Dey"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2402.11339v2",
+          "abstract": "A hypergraph consists of a set of nodes along with a collection of subsets of the nodes called hyperedges. Higher-order link prediction is the task of predicting the existence of a missing hyperedge in a hypergraph. A hyperedge representation learned for higher order link prediction is fully expressive when it does not lose distinguishing power up to an isomorphism. Many existing hypergraph representation learners, are bounded in expressive power by the Generalized Weisfeiler Lehman-1 (GWL-1) algorithm, a generalization of the Weisfeiler Lehman-1 algorithm. However, GWL-1 has limited expressive power. In fact, induced subhypergraphs with identical GWL-1 valued nodes are indistinguishable. Furthermore, message passing on hypergraphs can already be computationally expensive, especially on GPU memory. To address these limitations, we devise a preprocessing algorithm that can identify certain regular subhypergraphs exhibiting symmetry. Our preprocessing algorithm runs once with complexity the size of the input hypergraph. During training, we randomly replace subhypergraphs identified by the algorithm with covering hyperedges to break symmetry. We show that our method improves the expressivity of GWL-1. Our extensive experiments also demonstrate the effectiveness of our approach for higher-order link prediction on both graph and hypergraph datasets with negligible change in computation."
+        }
+      ]
+    },
+    {
+      "source": "arXiv",
+      "query": "all:\"bipartite\" AND all:\"multiplicative\"",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22bipartite%22+AND+all%3A%22multiplicative%22&max_results=5&sortBy=relevance",
+      "records": [
+        {
+          "source": "arXiv",
+          "query": "all:\"bipartite\" AND all:\"multiplicative\"",
+          "title": "Bipartite noisy hypercubes have large higher-order Cheeger separation",
+          "doi": null,
+          "year": 2015,
+          "authors": [
+            "Kelly Yancey",
+            "Matthew Yancey"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/1504.06561v3",
+          "abstract": "The expansion of a graph is typically associated with its spectral properties - testing whether a graph is an expander is usually done using Cheeger's inequality. One can also use multiple eigenvalues in a higher-order Cheeger's inequality to test a deeper set of properties on the graph. However Cheeger's inquality, and the higher-order Cheeger's inequality, can be imprecise tools. Recently Lee, Gharan, and Trevisan constructed the Noisy Hypercube to prove the sharpness of the gap between spectral expansion and edge expansion in the higher-order Cheeger's inequality. We are concerned with the dual problem: using the upper end of the Laplacian spectrum to test a graph's bipartite nature. This has been shown to have several applications, and recently a dual version of Cheeger's inequality and a dual version of the higher-order Cheeger's inequality have been presented. We construct the Bipartite Noisy Hypercube and use it to prove the sharpness of the gap between spectral bipartite expansion and bipartite edge expansion in the dual version of the dual higher-order Cheeger's inequality."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"bipartite\" AND all:\"multiplicative\"",
+          "title": "Sharp upper bounds for multiplicative Zagreb indices of bipartite graphs with given diameter",
+          "doi": null,
+          "year": 2017,
+          "authors": [
+            "Chunxiang Wang",
+            "Jia-Bao Liu",
+            "Shaohui Wang"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/1701.08389v2",
+          "abstract": "The first multiplicative Zagreb index of a graph $G$ is the product of the square of every vertex degree, while the second multiplicative Zagreb index is the product of the degree of each edge over all edges. In our work, we explore the multiplicative Zagreb indices of bipartite graphs of order $n$ with diameter $d$, and sharp upper bounds are obtained for these indices of graphs in $\\mathcal{B}(n,d)$, where $\\mathcal{B}(n, d)$ is the set of all $n$-vertex bipartite graphs with the diameter $d$. In addition, we explore the relationship between the maximal multiplicative Zagreb indices of graphs \\textcolor{blue}{within} $\\mathcal{B}(n, d)$. As consequences, those bipartite graphs with the largest, second-largest and smallest multiplicative Zagreb indices are characterized, and our results extend and enrich some known conclusions."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"bipartite\" AND all:\"multiplicative\"",
+          "title": "Approximate Bipartite $b$-Matching using Multiplicative Auction",
+          "doi": null,
+          "year": 2024,
+          "authors": [
+            "Bhargav Samineni",
+            "S M Ferdous",
+            "Mahantesh Halappanavar",
+            "Bala Krishnamoorthy"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2403.05781v1",
+          "abstract": "Given a bipartite graph $G(V= (A \\cup B),E)$ with $n$ vertices and $m$ edges and a function $b \\colon V \\to \\mathbb{Z}_+$, a $b$-matching is a subset of edges such that every vertex $v \\in V$ is incident to at most $b(v)$ edges in the subset. When we are also given edge weights, the Max Weight $b$-Matching problem is to find a $b$-matching of maximum weight, which is a fundamental combinatorial optimization problem with many applications. Extending on the recent work of Zheng and Henzinger (IPCO, 2023) on standard bipartite matching problems, we develop a simple auction algorithm to approximately solve Max Weight $b$-Matching. Specifically, we present a multiplicative auction algorithm that gives a $(1 - \\varepsilon)$-approximation in $O(m \\varepsilon^{-1} \\log \\varepsilon^{-1} \\log β)$ worst case time, where $β$ the maximum $b$-value. Although this is a $\\log β$ factor greater than the current best approximation algorithm by Huang and Pettie (Algorithmica, 2022), it is considerably simpler to present, analyze, and implement."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"bipartite\" AND all:\"multiplicative\"",
+          "title": "Multiplicative Auction Algorithm for Approximate Maximum Weight Bipartite Matching",
+          "doi": null,
+          "year": 2023,
+          "authors": [
+            "Da Wei Zheng",
+            "Monika Henzinger"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/2301.09217v5",
+          "abstract": "$\\newcommand{\\eps}{\\varepsilon}$We present an auction algorithm using multiplicative instead of constant weight updates to compute a $(1-\\eps)$-approximate maximum weight matching (MWM) in a bipartite graph with $n$ vertices and $m$ edges in time $O(m\\eps^{-1})$, beating the running time of the fastest known approximation algorithm of Duan and Pettie [JACM '14] that runs in $O(m\\eps^{-1}\\log \\eps^{-1})$. Our algorithm is very simple and it can be extended to give a dynamic data structure that maintains a $(1-\\eps)$-approximate maximum weight matching under (1) one-sided vertex deletions (with incident edges) and (2) one-sided vertex insertions (with incident edges sorted by weight) to the other side. The total time used is $O(m\\eps^{-1})$, where $m$ is the sum of the number of initially existing and inserted edges."
+        },
+        {
+          "source": "arXiv",
+          "query": "all:\"bipartite\" AND all:\"multiplicative\"",
+          "title": "The multiplication table problem for bipartite graphs",
+          "doi": null,
+          "year": 2014,
+          "authors": [
+            "Bhargav Narayanan",
+            "Julian Sahasrabudhe",
+            "István Tomon"
+          ],
+          "venue": "arXiv preprint",
+          "url": "http://arxiv.org/abs/1410.4532v2",
+          "abstract": "We investigate the following generalisation of the 'multiplication table problem' of Erdős: given a bipartite graph with $m$ edges, how large is the set of sizes of its induced subgraphs? Erdős's problem of estimating the number of distinct products $ab$ with $a,b \\le n$ is precisely the problem under consideration when the graph in question is the complete bipartite graph $K_{n,n}$. In this note, we prove that the set of sizes of the induced subgraphs of any bipartite graph with $m$ edges contains $Ω(m/(\\log m)^{12})$ distinct elements."
+        }
+      ]
+    },
+    {
+      "source": "crossref",
+      "query": "TankBind Trigonometry Aware Neural Networks Drug Protein Binding",
+      "error": "HTTP Error 429: Too Many Requests",
+      "records": []
+    },
+    {
+      "source": "CrossRef",
+      "query": "Highly accurate protein structure prediction with AlphaFold",
+      "url": "https://api.crossref.org/works?query.bibliographic=Highly+accurate+protein+structure+prediction+with+AlphaFold&rows=5",
+      "records": [
+        {
+          "source": "CrossRef",
+          "query": "Highly accurate protein structure prediction with AlphaFold",
+          "title": "Faculty Opinions recommendation of Highly accurate protein structure prediction with AlphaFold.",
+          "doi": "10.3410/f.740477161.793588722",
+          "year": 2021,
+          "authors": [
+            "Yann Herault"
+          ],
+          "venue": "Faculty Opinions – Post-Publication Peer Review of the Biomedical Literature",
+          "url": "https://doi.org/10.3410/f.740477161.793588722",
+          "abstract": ""
+        },
+        {
+          "source": "CrossRef",
+          "query": "Highly accurate protein structure prediction with AlphaFold",
+          "title": "Faculty Opinions recommendation of Highly accurate protein structure prediction with AlphaFold.",
+          "doi": "10.3410/f.740477161.793588825",
+          "year": 2021,
+          "authors": [
+            "Toni Gabaldón"
+          ],
+          "venue": "Faculty Opinions – Post-Publication Peer Review of the Biomedical Literature",
+          "url": "https://doi.org/10.3410/f.740477161.793588825",
+          "abstract": ""
+        },
+        {
+          "source": "CrossRef",
+          "query": "Highly accurate protein structure prediction with AlphaFold",
+          "title": "Faculty Opinions recommendation of Highly accurate protein structure prediction with AlphaFold.",
+          "doi": "10.3410/f.740477161.793596551",
+          "year": 2022,
+          "authors": [
+            "Benoit Coulombe"
+          ],
+          "venue": "Faculty Opinions – Post-Publication Peer Review of the Biomedical Literature",
+          "url": "https://doi.org/10.3410/f.740477161.793596551",
+          "abstract": ""
+        },
+        {
+          "source": "CrossRef",
+          "query": "Highly accurate protein structure prediction with AlphaFold",
+          "title": "Faculty Opinions recommendation of Highly accurate protein structure prediction with AlphaFold.",
+          "doi": "10.3410/f.740477161.793587604",
+          "year": 2021,
+          "authors": [
+            "Guillermo Montoya"
+          ],
+          "venue": "Faculty Opinions – Post-Publication Peer Review of the Biomedical Literature",
+          "url": "https://doi.org/10.3410/f.740477161.793587604",
+          "abstract": ""
+        },
+        {
+          "source": "CrossRef",
+          "query": "Highly accurate protein structure prediction with AlphaFold",
+          "title": "Faculty Opinions recommendation of Highly accurate protein structure prediction with AlphaFold.",
+          "doi": "10.3410/f.740477161.793587507",
+          "year": 2021,
+          "authors": [
+            "Jeffrey Skolnick"
+          ],
+          "venue": "Faculty Opinions – Post-Publication Peer Review of the Biomedical Literature",
+          "url": "https://doi.org/10.3410/f.740477161.793587507",
+          "abstract": ""
+        }
+      ]
+    },
+    {
+      "source": "PubMed",
+      "query": "(\"drug resistance\"[Title/Abstract]) AND (\"association prediction\"[Title/Abstract]) AND (\"higher-order\"[Title/Abstract] OR \"matrix completion\"[Title/Abstract] OR \"diffusion\"[Title/Abstract])",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22drug+resistance%22%5BTitle%2FAbstract%5D%29+AND+%28%22association+prediction%22%5BTitle%2FAbstract%5D%29+AND+%28%22higher-order%22%5BTitle%2FAbstract%5D+OR+%22matrix+completion%22%5BTitle%2FAbstract%5D+OR+%22diffusion%22%5BTitle%2FAbstract%5D%29&retmax=12&retmode=json",
+      "records": [
+        {
+          "source": "PubMed",
+          "query": "(\"drug resistance\"[Title/Abstract]) AND (\"association prediction\"[Title/Abstract]) AND (\"higher-order\"[Title/Abstract] OR \"matrix completion\"[Title/Abstract] OR \"diffusion\"[Title/Abstract])",
+          "title": "Higher-Order Dynamic Disentangled Intent Sensing and Bidirectional Joint Updating Framework for NcRNA-Drug Resistance Association Prediction.",
+          "doi": "10.1021/acs.jcim.6c01116",
+          "pmid": "42427293",
+          "year": 2026,
+          "authors": [
+            "Tiyao Liu",
+            "Shudong Wang",
+            "Baoming Feng",
+            "Shaoqiang Wang",
+            "Shiyuan Huang",
+            "Ziyi Gao",
+            "Hengtao Ding",
+            "Shanchen Pang"
+          ],
+          "venue": "Journal of chemical information and modeling",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42427293/",
+          "abstract": "Noncoding RNAs (ncRNAs) are critical regulators of drug response and disease progression, making accurate prediction of ncRNA-drug resistance associations a key task in pharmacogenomics and precision medicine. However, current methods largely rely on global neighborhood aggregation, which treats node contexts as homogeneous and overlooks fine-grained structural and semantic heterogeneity. Moreover, they often model ncRNAs and drugs as interchangeable nodes, disregarding their biological distinctions and asymmetric interactions, and failing to effectively integrate modality-specific and cross-modal features. To overcome these limitations, we propose HDBI, a higher-order dynamic disentangled framework for predicting ncRNA-drug resistance associations. HDBI integrates multiview hypergraph learning, disentangled representation modeling, and bidirectional cross-modal updating to capture heterogeneous topological and semantic patterns within ncRNA and drug spaces while preserving modality-specific characteristics and enabling cross-modal information exchange. Extensive experiments on two benchmark data sets demonstrate that HDBI consistently outperforms state-of-the-art methods. Case studies on 5-FU and Docetaxel further support the biological relevance of the predictions, with 22/30 and 21/30 top-ranked ncRNAs supported by PubMed evidence, respectively. Functional enrichment and molecular docking analyses further linked these predictions to drug-relevant pathways and structurally plausible regulatory interactions. These findings suggest that HDBI provides an effective and interpretable framework for prioritizing ncRNA-mediated drug resistance associations and guiding downstream mechanistic investigation."
+        },
+        {
+          "source": "PubMed",
+          "query": "(\"drug resistance\"[Title/Abstract]) AND (\"association prediction\"[Title/Abstract]) AND (\"higher-order\"[Title/Abstract] OR \"matrix completion\"[Title/Abstract] OR \"diffusion\"[Title/Abstract])",
+          "title": "MPHGNN: metapath-guided heterogeneous graph neural network for miRNA-drug resistance association prediction.",
+          "doi": "10.1093/bib/bbag013",
+          "pmid": "41608986",
+          "year": 2026,
+          "authors": [
+            "Guangsheng Huang",
+            "Yali Peng",
+            "Shuai Wu",
+            "Hang Wei",
+            "Shigang Liu"
+          ],
+          "venue": "Briefings in bioinformatics",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41608986/",
+          "abstract": "Aberrant expression of microRNAs (miRNAs) is closely associated with the pathogenesis and progression of various diseases, particularly cancer, as well as therapeutic responses. Identification of miRNA-drug resistance associations is critical for drug screening and precision medicine. However, conventional experimental approaches remain time-consuming and labor-intensive, while existing computational methods often face challenge in capturing higher-order semantic inference from sparse prior bipartite association network. To address this, we propose MPHGNN, a heterogeneous graph convolutional network (GCN) architecture for predicting miRNA-drug resistance associations. MPHGNN constructs a miRNA-gene-drug heterogeneous network with multimodal biological features, including miRNA expression profiles, drug structural descriptors, and gene functional similarities, and leverages dual learning modules at both metapath and global levels to capture localized patterns and global representations simultaneously. Experimental results demonstrate that MPHGNN outperforms state-of-the-art methods and enhances the discriminative ability of association representations. Interpretability analyses further reveal that metapaths effectively capture underlying biological mechanisms, while the constructed heterogeneous biological network makes important contributions to prediction."
+        },
+        {
+          "source": "PubMed",
+          "query": "(\"drug resistance\"[Title/Abstract]) AND (\"association prediction\"[Title/Abstract]) AND (\"higher-order\"[Title/Abstract] OR \"matrix completion\"[Title/Abstract] OR \"diffusion\"[Title/Abstract])",
+          "title": "Microbe-Drug Association Prediction Model Based on Adaptive Network Fusion of Structural-Topological Information With Integration Strategy.",
+          "doi": "10.1109/TCBBIO.2025.3557709",
+          "pmid": "40811312",
+          "year": 2025,
+          "authors": [
+            "Liugen Wang",
+            "Bai Zhang",
+            "Hanwen Wu",
+            "Yongle Shi",
+            "Xiang Chen",
+            "Yibing Ma",
+            "Jie Gao"
+          ],
+          "venue": "IEEE transactions on computational biology and bioinformatics",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40811312/",
+          "abstract": "Currently, microbial drug resistance has become a serious global problem. Investigating the relationship between microbes and drugs can facilitate understanding of microbial resistance to certain drugs and help develop more effective therapeutic strategies. Therefore, an efficient and rapid computational method for identifying microbe-drug associations is very important for optimizing antimicrobial therapy, monitoring drug resistance, and addressing bacterial resistance challenges. In this paper, a model called ANFAISMDA for identifying potential microbe-drug associations is proposed. First, Structural information of microbes and drugs is obtained based on 16S rRNA gene sequences of microbes and SMILES structures of drugs, respectively. Topological information of microbes and drugs is obtained based on symmetric matrix completion algorithm, respectively. Then, the structural and topological information is effectively fused according to our proposed adaptive network fusion algorithm. The algorithm combines network node and path information while also adaptively updating weights based on inter-network transmissibility. Finally, an integration strategy is proposed to significantly improve model performance and thereby more accurately identify novel microbe-drug associations. Overall, the reliability and validity of the model are fully verified by experiments. Further, we also have visualized the top 50 microbe-drug associations and have found some interesting association patterns. The results of the study show the importance of our approach in optimizing antimicrobial therapy, monitoring drug resistance, and addressing the challenges of bacterial resistance. In addition, the study confirms the usefulness of the model in gaining a deeper understanding of the complex mechanisms of microbe-drug associations."
+        },
+        {
+          "source": "PubMed",
+          "query": "(\"drug resistance\"[Title/Abstract]) AND (\"association prediction\"[Title/Abstract]) AND (\"higher-order\"[Title/Abstract] OR \"matrix completion\"[Title/Abstract] OR \"diffusion\"[Title/Abstract])",
+          "title": "DMGAT: predicting ncRNA-drug resistance associations based on diffusion map and heterogeneous graph attention network.",
+          "doi": "10.1093/bib/bbaf179",
+          "pmid": "40251829",
+          "year": 2025,
+          "authors": [
+            "Tingyu Liu",
+            "Qiuhao Chen",
+            "Renjie Liu",
+            "Yuzhi Sun",
+            "Yadong Wang",
+            "Yan Zhu",
+            "Tianyi Zhao"
+          ],
+          "venue": "Briefings in bioinformatics",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40251829/",
+          "abstract": "Non-coding RNAs (ncRNAs) play crucial roles in drug resistance and sensitivity, making them important biomarkers and therapeutic targets. However, predicting ncRNA-drug associations is challenging due to issues such as dataset imbalance and sparsity, limiting the identification of robust biomarkers. Existing models often fall short in capturing local and global sequence information, limiting the reliability of predictions. This study introduces DMGAT (diffusion map and heterogeneous graph attention network), a novel deep learning model designed to predict ncRNA-drug associations. DMGAT integrates diffusion maps for sequence embedding, graph convolutional networks for feature extraction, and GAT for heterogeneous information fusion. To address dataset imbalance, the model incorporates sensitivity associations and employs a random forest classifier to select reliable negative samples. DMGAT embeds ncRNA sequences and drug SMILES using the word2vec technique, capturing local and global sequence information. The model constructs a heterogeneous network by combining sequence similarity and Gaussian Interaction Profile kernel similarity, providing a comprehensive representation of ncRNA-drug interactions. Evaluated through five-fold cross-validation on a curated dataset from NoncoRNA and ncDR, DMGAT outperforms seven state-of-the-art methods, achieving the highest area under the receiver operating characteristic curve (0.8964), area under the precision-recall curve (0.8984), recall (0.9576), and F1-score (0.8285). The raw data are released to Zenodo with identifier 13929676. The source code of DMGAT is available at https://github.com/liutingyu0616/DMGAT/tree/main."
+        }
+      ]
+    }
+  ]
+}

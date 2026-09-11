@@ -1,0 +1,99 @@
+[
+  {
+    "id": "2608.18982",
+    "url": "https://arxiv.org/abs/2608.18982",
+    "metadata": {
+      "citation_title": "Monroe: A Molecular Foundation Model for In-Context Probabilistic Inference",
+      "citation_date": "2026/08/19",
+      "citation_online_date": "2026/08/19",
+      "citation_pdf_url": "https://arxiv.org/pdf/2608.18982",
+      "citation_arxiv_id": "2608.18982",
+      "citation_abstract": "Bioassay activity prediction is often data-limited because drug-discovery datasets rely on time-consuming and expensive wet-lab experiments for data generation and evaluation. This challenge has inspired recent research into molecular foundation models (MFMs), which aim to encode general-purpose chemical knowledge into molecular representations that generalize well in data-constrained scenarios. This paper presents Monroe, a new MFM with several innovations over the existing state of the art: increased scale allowing pre-training on over 81 million molecules from the PM6 quantum chemistry dataset; improved graph representation of stereochemistry; improved training losses including conformer denoising and embedding decorrelation; improved multi-task learning; and the use of a prior-data-fitted model (TabPFN) for downstream in-context prediction. Our evaluations use a principled pairwise comparison framework that measures statistically significant performance differences. Across established Polaris benchmarks, Monroe matches or exceeds existing MFMs, while on activity cliff benchmarks, designed to assess utility for molecular discovery, it achieves significant improvements over prior methods. Finally, ablation and transfer experiments show that PFN-based downstream predictors also substantially improve two leading existing models, MiniMol and CheMeleon, yielding new state-of-the-art variants we call MiniMol_PFN and CheMeleon_PFN, suggesting that our downstream adaptation strategy generalizes beyond Monroe. Source code is at github.com/blazejba/monroe.",
+      "authors": [
+        "Banaszewski, Blazej",
+        "Fitzgibbon, Andrew W."
+      ]
+    },
+    "history": "Submission history From: Blazej Banaszewski [ view email ] [v1] Wed, 19 Aug 2026 14:48:19 UTC (1,102 KB)",
+    "comments": "",
+    "retrieved_at_utc": "2026-09-10T14:46:09.498957+00:00",
+    "full_text_url": "https://arxiv.org/html/2608.18982v1",
+    "full_text_characters": 96073
+  },
+  {
+    "id": "2509.21489",
+    "url": "https://arxiv.org/abs/2509.21489",
+    "metadata": {
+      "citation_title": "GraphPFN: A Prior-Data Fitted Graph Foundation Model",
+      "citation_date": "2025/09/25",
+      "citation_online_date": "2026/08/20",
+      "citation_pdf_url": "https://arxiv.org/pdf/2509.21489",
+      "citation_arxiv_id": "2509.21489",
+      "citation_abstract": "Graph foundation models face several fundamental challenges including transferability across diverse domains and data scarcity, which calls into question the very feasibility of creating such models. However, despite similar challenges, the tabular domain has recently witnessed the emergence of the first successful foundation models such as TabPFN. These models are based on the prior-data fitted networks (PFN) framework, in which models are pretrained on carefully designed synthetic datasets to make predictions in an in-context learning setting. Recently, G2T-FM, a framework that converts graph node-level tasks into tabular tasks, has made the first step towards adopting PFNs for graphs, yet it is limited to hand-crafted features and was never pretrained on graph data. In this work, we make the next step by proposing GraphPFN, a PFN-based model designed and pretrained specifically for graph node-level tasks. Following the PFN framework, we first design a prior distribution of synthetic attributed graphs by using a novel combination of multi-level stochastic block models and a preferential attachment process for structure generation and graph-aware structured causal models for attribute generation. Then, we augment the tabular foundation model LimiX with attention-based graph neighborhood aggregation layers and train it on millions of synthetic graphs sampled from our prior. On diverse real-world graph datasets with node-level tasks, GraphPFN achieves state-of-the-art results in both in-context learning and finetuning regimes, outperforming G2T-FM, prior GFMs, and task-specific GNNs trained from scratch. More broadly, GraphPFN shows the potential of PFN-based models for building graph foundation models.",
+      "authors": [
+        "Eremeev, Dmitry",
+        "Platonov, Oleg",
+        "Bazhenov, Gleb",
+        "Babenko, Artem",
+        "Prokhorenkova, Liudmila"
+      ]
+    },
+    "history": "Submission history From: Gleb Bazhenov [ view email ] [v1] Thu, 25 Sep 2025 19:47:49 UTC (4,045 KB) [v2] Thu, 12 Feb 2026 17:15:33 UTC (5,027 KB) [v3] Mon, 22 Jun 2026 12:04:16 UTC (4,977 KB) [v4] Thu, 20 Aug 2026 16:00:48 UTC (4,977 KB)",
+    "comments": "",
+    "retrieved_at_utc": "2026-09-10T14:46:09.837446+00:00",
+    "full_text_url": "https://arxiv.org/html/2509.21489v4",
+    "full_text_characters": 91823
+  },
+  {
+    "id": "2606.31126",
+    "url": "https://arxiv.org/abs/2606.31126",
+    "metadata": {
+      "citation_title": "Can Tabular In-Context Learners Generalize to Biomolecular Property Prediction?",
+      "citation_date": "2026/06/30",
+      "citation_online_date": "2026/07/08",
+      "citation_pdf_url": "https://arxiv.org/pdf/2606.31126",
+      "citation_arxiv_id": "2606.31126",
+      "citation_abstract": "Predicting biomolecular properties from limited labeled data is a central bottleneck in protein engineering and small-molecule design. As strong pretrained encoders now supply rich fixed-length representations, the difficulty has shifted from representation learning to building a data-efficient predictor for the few-shot regime. Tabular foundation models such as TabPFN and TabICL are unlikely candidates for this role: they are in-context learners pretrained on synthetic tables drawn from random causal graphs, a generative prior with no obvious correspondence to the processes that produce protein sequences or molecular graphs. That this tabular, causal inductive bias should transfer to biomolecular data at all is counter-intuitive, yet we find it does. Treating each method as a predictor-representation pair, we evaluate across two domains. We find that on protein fitness regression tasks these in-context learning models coupled with ESM Cambrian representations achieve or exceed state-of-the-art results on ProteinGym, and outperform task-specific supervised regressors on a diverse esterase catalytic activity dataset. For small-molecule classification with ECFP/RDKit descriptors, no single predictor-representation pairing dominates across TDC ADMET, MoleculeNet, FS-Mol, and DrugOOD, but they are competitive with the existing task-specific state-of-the-art. Crucially, on both protein and small-molecule few-shot tasks, these predictor-representation pairs offer strong performance. We conclude that tabular foundation models can be strong biomolecular predictors, but only when coupled with expressive representations.",
+      "authors": [
+        "Guan, Davy",
+        "Zhang, Lu",
+        "Wijesinghe, Asiri",
+        "Zhu, Allen",
+        "Zhao, He",
+        "Power, Helen",
+        "Ahmed, F. Hafna",
+        "Warden, Andrew",
+        "Ong, Cheng Soon",
+        "Steinberg, Daniel M."
+      ]
+    },
+    "history": "Submission history From: Daniel Steinberg [ view email ] [v1] Tue, 30 Jun 2026 04:41:52 UTC (210 KB) [v2] Wed, 8 Jul 2026 06:12:00 UTC (149 KB)",
+    "comments": "",
+    "retrieved_at_utc": "2026-09-10T14:46:10.664654+00:00",
+    "full_text_url": "https://arxiv.org/html/2606.31126v2",
+    "full_text_characters": 52691
+  },
+  {
+    "id": "2609.05955",
+    "url": "https://arxiv.org/abs/2609.05955",
+    "metadata": {
+      "citation_title": "LoGIC: Budgeted Context Construction for Node-Level Graph In-Context Learning with Tabular Foundation Models",
+      "citation_date": "2026/09/05",
+      "citation_online_date": "2026/09/05",
+      "citation_pdf_url": "https://arxiv.org/pdf/2609.05955",
+      "citation_arxiv_id": "2609.05955",
+      "citation_abstract": "Tabular foundation models have become powerful graph learners. Systems such as G2T-FM and GraphPFN encode each node as a feature row and make predictions through in-context learning (ICL), with labeled rows serving as the prompt. Current protocols employ the complete training table as context, causing attention to scale quadratically with the labeled pool and introducing preprocessing and memory bottlenecks. We investigate context construction for node-level graph ICL: which labeled nodes and auxiliary unlabeled nodes should constitute the prompt for specified queries. We formulate this allocation in terms of two resources: a labeled-context budget for predictive evidence and an unlabeled-halo budget for adapter message passing without using label capacity. We present LoGIC, which retrieves labeled nodes via structural, feature-based, and coverage channels, shares each context across the queries in a graph-local cluster, incorporates an unlabeled halo for adapter backbones, and chooses the channel and context budget without test labels. Across three backbone configurations drawn from two model families on GraphLand, budgeted contexts maintain locally runnable full-context performance, stay competitive with published large-dataset results, and markedly lower peak memory requirements compared with full-context and whole-graph inference. They further permit frozen graph ICL on million-node graphs without retraining. Our analysis identifies when retrieval channels work best and connects their behavior with graph properties.",
+      "authors": [
+        "Yang, Mingqi",
+        "Guo, Zidong",
+        "Yang, Jihui",
+        "Zuo, Wenming"
+      ]
+    },
+    "history": "Submission history From: Mingqi Yang [ view email ] [v1] Sat, 5 Sep 2026 07:43:30 UTC (1,535 KB)",
+    "comments": "",
+    "retrieved_at_utc": "2026-09-10T14:46:11.147141+00:00",
+    "full_text_url": "https://arxiv.org/html/2609.05955v1",
+    "full_text_characters": 74865
+  }
+]

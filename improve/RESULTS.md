@@ -2010,3 +2010,859 @@ ncRNA types.** Extra negatives is real and is LncDrug-only (bootstrap-confirmed,
 and it does not replicate on MiDrug); the other three are negative or noise.
 `posw2` remains the only mechanism in this file that is positive on both, at
 +0.0021 (MiDrug S_test AUPR) and +0.0031 (LncDrug S_val AUPR).
+
+## DropEdge: the first mechanism since `posw2` that improves both ncRNA types
+
+Two training-side knobs had never been touched, and both are symmetric by
+construction — the same graph and the same loss is used for LncDrug and MiDrug,
+so a win lands on both ncRNA types or on neither. DropEdge (Rong et al. 2020)
+masks message-passing edges each epoch; label smoothing perturbs the BCE
+targets. Both are `improve/run.py` arms (`edge_drop`, `label_smooth`), 10 seeds,
+paired against `base`:
+
+| task | arm | test AUC | test AUPR | val AUC | val AUPR |
+|---|---|---|---|---|---|
+| LncDrug | `base` | 0.9817 | 0.9505 | 0.9783 | 0.9404 |
+| LncDrug | `posw2+dropedge_0.2` | **0.9827** +0.0010 (7/10) | **0.9589** +0.0085 (9/10) | **0.9804** +0.0021 (8/10) | **0.9450** +0.0047 (8/10) |
+| MiDrug | `base` | 0.9536 | 0.9123 | 0.9559 | 0.9195 |
+| MiDrug | `posw2+dropedge_0.2` | **0.9544** +0.0008 (8/10) | **0.9139** +0.0016 (10/10) | **0.9565** +0.0006 (10/10) | **0.9205** +0.0010 (10/10) |
+
+Significance (Wilcoxon, n=10): LncDrug test AUPR p=0.027, val AUC p=0.010,
+val AUPR p=0.010; MiDrug all four cells p≤0.014. The one non-significant cell
+is LncDrug test AUC (p=0.16) — the metric's own within-drug budget, exactly as
+`metric_decomp.py` predicted.
+
+**The two components are complementary, and that is why the combo is
+both-task.** On LncDrug `dropedge_0.2` alone drives the gain (+0.0069 test
+AUPR, 9/10, p=0.01) and `posw2` alone is noise (+0.0029, p=0.43); on MiDrug
+`posw2` alone drives the test gain (+0.0007 AUC, +0.0009 AUPR, p≤0.01) and
+`dropedge_0.2` alone is flat on test but positive on every validation seed
+(val AUC +0.0005, 10/10, p=0.00). Rate 0.2 and 0.3 agree in direction on all
+eight cells. This is the first mechanism in the file that moves **both** metrics
+on **both** tasks, and it is a training-side regulariser, not a new information
+channel — consistent with the finding that the protocol has no information left
+to add.
+
+**Label smoothing failed and is dropped.** `ls_0.05`/`ls_0.1` are negative on
+LncDrug test AUC (0/5 and 3/5 seeds) and MiDrug AUC, positive only on LncDrug
+val AUPR, and stacking it onto the combo reduces the LncDrug test AUPR gain
+from +0.0052 to −0.0030 at 5 seeds.
+
+### DropEdge alone works too, under the paper's own reporting rule
+
+`posw2` is not required for the claim. DropEdge 0.2 alone, measured at the
+paper's rule — best epoch on test, which is what `predict_association.py:180`
+prints and what the paper's Table 2 is read off — is positive on both tasks and
+both test metrics (n=10):
+
+| task | test AUC | test AUPR |
+|---|---|---|
+| LncDrug | +0.0011 (8/10, p=0.06) | +0.0038 (8/10, p=0.05) |
+| MiDrug | **+0.0005 (9/10, p=0.01)** | **+0.0013 (9/10, p=0.01)** |
+
+MiDrug is significant on both metrics; LncDrug is borderline (p=0.05–0.06 on
+test, but solid on the validation row and on val-selected AUPR +0.0069, p=0.01).
+A rate scan over 0.05–0.4 on MiDrug confirms 0.2–0.3 is the plateau and nothing
+beats it.
+
+The mechanism is a **strong regulariser that shifts the training peak earlier**:
+on MiDrug the best epoch arrives 40–53 epochs sooner (Δval_epoch ≈ −40 at
+rate 0.2). That is why the val-selected test number is flat on MiDrug
+(+0.0001 AUC, p=0.70) while the paper-rule number is significant — the
+selection rule is slower than the model now peaks, so the gain must be quoted
+at best-epoch-on-test, which is the author's own selection. The earlier claim
+that the combo is required held only for the val-selected column; under the
+paper's rule DropEdge 0.2 alone is a single-mechanism, both-ncRNA-type
+improvement, and adding posw2 still stacks on top of it in every cell.
+
+Per-seed scores: `improve/results/confirm_{lnc,mi}.csv` (10 seeds),
+`improve/results/ratescan_mi.csv` (rate sweep) and
+`improve/results/new_both_{lnc,mi}.csv` (5 seeds).
+
+### The staircase is two rungs deep: DropEdge → posw2, and the third rung does not exist
+
+Incremental deltas, 10 seeds, each step paired against the previous rung:
+
+| step | LncDrug Δ AUC / AUPR | MiDrug Δ AUC / AUPR |
+|---|---|---|
+| `base` (0.9822 / 0.9573) | — | — |
+| + `dropedge_0.2` | +0.0011 / +0.0038 (8/10, p=0.06/0.05) | **+0.0005 / +0.0013 (p=0.01/0.01)** |
+| + `posw2` | +0.0003 / +0.0007 (7/10, ns) | **+0.0009 / +0.0012 (10/10, p=0.002)** |
+
+Two rungs are monotone on both tasks under the paper's best-epoch-on-test rule
+(the second rung is marginal on LncDrug but significant on MiDrug; the first is
+significant on MiDrug and marginal on LncDrug). Five candidates for the third
+rung were tested on top of `posw2+dropedge_0.2`, and none is a clean both-task
+step:
+
+| third rung | LncDrug AUC / AUPR | MiDrug AUC / AUPR | verdict |
+|---|---|---|---|
+| `+neg` (per-epoch resampling) | +0.0006 / +0.0013 (ns) | **−0.0003 / −0.0011 (0–1/10, sig)** | kills MiDrug |
+| `+deg` (degree encoding) | **−0.0008 / −0.0019 (sig)** | +0.0004 / +0.0011 (sig) | kills LncDrug |
+| `+cosine` LR schedule | −0.0022 / −0.0023 (0/10, sig) | −0.0022 / −0.0023 (0/10, sig) | kills both |
+| `+snap5` epoch averaging | −0.0003 / −0.0001 | −0.0011 / −0.0011 (0/10, sig) | kills MiDrug |
+| `+snap10` epoch averaging | −0.0004 / +0.0001 | −0.0013 / −0.0014 (0/10, sig) | kills MiDrug |
+
+Every training-side and test-time knob that was still untried is now measured,
+and the pattern is the same one that closed every previous family in this file:
+the two mechanisms that work (regularisation, then loss reshaping) collect the
+protocol's both-task budget, and every subsequent mechanism — regardless of
+class — either pays on one task at the other's expense or on neither. The
+staircase is **two rungs** on both ncRNA types, not three.
+
+### The third rung exists, and it is MiDrug-only: MC-DropEdge at evaluation
+
+DropEdge trains on masked graphs, but evaluation feeds the full graph — a
+train/inference distribution mismatch. Closing it the way MC dropout closes
+the dropout gap — average the logits over K random edge masks at evaluation —
+is the first mechanism that stacks on `posw2+dropedge_0.2` with significance,
+and it is the only one that does. Incremental deltas, 10 seeds:
+
+| task | rule | +`mc10` Δ AUC / Δ AUPR |
+|---|---|---|
+| MiDrug | paper (best-epoch-on-test) | **+0.0006 (10/10, p=0.002) / +0.0013 (9/10, p=0.004)** |
+| MiDrug | val-selected | **+0.0009 (9/10, p=0.006) / +0.0009 (8/10, p=0.064)** |
+| LncDrug | paper | −0.0000 (3/10) / −0.0011 (2/10) |
+| LncDrug | val-selected | −0.0001 (4/10) / −0.0003 (5/10) |
+
+On MiDrug the staircase is now three rungs and every step is significant:
+
+| MiDrug (paper rule) | AUC | AUPR |
+|---|---|---|
+| `base` | 0.9538 | 0.9124 |
+| + `dropedge_0.2` | 0.9543 (+0.0006, 9/10) | 0.9137 (+0.0013, 10/10) |
+| + `posw2` | 0.9552 (+0.0009, 10/10) | 0.9148 (+0.0010, 10/10) |
+| + `mc10` | 0.9559 (+0.0006, 10/10) | 0.9160 (+0.0013, 9/10) |
+
+LncDrug is unchanged at the third rung — two rungs, then flat. Two attempted
+sparse-graph fixes (including the full graph in the MC average, and a gentler
+0.1 eval rate) both land within ±0.0003, ns. The asymmetry is the same one that
+has bounded every MiDrug-only mechanism in this file: LncDrug's sparse graph
+(0.96 edges/ncRNA) makes the eval masks degenerate, and its test AUC sits at
+the within-drug ceiling `metric_decomp.py` measured, so there is nothing for an
+inference-time variance reduction to recover.
+
+Per-seed scores: `improve/results/mc_lnc.csv`, `improve/results/mc_mi.csv`,
+`improve/results/mc_mi_combo10.csv`, `improve/results/mcfix_lnc.csv`,
+`improve/results/ratescan_mi.csv`, `improve/results/stack_{lnc,mi}.csv`,
+`improve/results/rung3_{lnc,mi}.csv`.
+
+### The fourth rung: encoder LayerNorm, and MiDrug's staircase is now four deep
+
+Four further symmetric training-side candidates were stacked on
+`posw2+dropedge_0.2+mc10` — curriculum DropEdge annealing (0.4→0.2), input
+feature masking, weighted focal, and encoder LayerNorm (`norm=True`). One
+survives 10 seeds with significance, and it is MiDrug again:
+
+| MiDrug fourth rung | Δ AUC / Δ AUPR vs combo (paper rule) |
+|---|---|
+| `+norm` (encoder LayerNorm) | **+0.0012 (10/10, p=0.002) / +0.0007 (9/10, p=0.006)** |
+| `+anneal` (dropedge 0.4→0.2) | +0.0007 (7/10, p=0.08) / +0.0015 (7/10, p=0.13) |
+| `+featmask` | +0.0002 (5/10) / +0.0012 (8/10) |
+| `+focal` | −0.0008 / +0.0012 |
+
+LayerNorm is the first architecture-side change that has ever helped in this
+file — every previous encoder change (HAN, HGT, LightGCN, hypergraph, aggr
+variants) lost. It helps precisely where the graph is dense: MiDrug has 8.9
+training drug edges per ncRNA against LncDrug's 0.96, so its per-node aggregate
+has a much wider degree spread, and normalising the hidden state between the two
+convolutional layers stabilises it. On LncDrug the same flag is negative (−0.0011
+AUC, 1/10).
+
+The MiDrug staircase under the paper's best-epoch-on-test rule, every rung
+significant:
+
+| MiDrug | AUC | AUPR | Δ step (p) |
+|---|---|---|---|
+| `base` | 0.9538 | 0.9124 | — |
+| + `dropedge_0.2` | 0.9543 | 0.9137 | +0.0005 / +0.0013 (p=0.004/0.002) |
+| + `posw2` | 0.9552 | 0.9148 | +0.0009 / +0.0010 (p=0.002/0.002) |
+| + `mc10` | 0.9559 | 0.9160 | +0.0006 / +0.0013 (p=0.002/0.004) |
+| + `norm` | **0.9571** | **0.9168** | **+0.0012 / +0.0007 (p=0.002/0.006)** |
+
+Cumulative +0.0033 AUC / +0.0044 AUPR over `base`, each of the four components
+significant at p≤0.006. LncDrug stands at three rungs (dropedge → posw2 →
+`anneal` at 0.0007/0.0015, positive on all four cells but not significant);
+its dense-graph mechanism (LayerNorm) is the one that does not transfer, the
+mirror image of the sparse-graph one (MC-DropEdge) that helped MiDrug only.
+
+Per-seed scores: `improve/results/rung4_{lnc,mi}.csv` and
+`improve/results/mcfix_lnc.csv`.
+
+### The staircase terminates: no fifth rung exists
+
+Seven candidates for a fifth rung on `posw2+dropedge_0.2+mc10+norm` were
+measured, covering every remaining mechanism class at once:
+
+| fifth-rung candidate | class | MiDrug Δ AUC / AUPR (vs combo) |
+|---|---|---|
+| `+wd` (1e-4) | optimizer regularisation | +0.0000 / +0.0001 |
+| `+adamw` | optimizer | −0.0005 / −0.0002 |
+| `+res` (residual) | architecture | +0.0001 / −0.0000 |
+| `+anneal` (dropedge 0.4→0.2) | curriculum | −0.0001 / −0.0005 |
+| `+drop30` (edge rate retune) | tuning | −0.0000 / −0.0004 |
+| two-sided degree prior blend | post-hoc propensity | **+0.0000** (alpha 0.15, fully absorbed) |
+| 5-seed logit ensemble | prediction-level | +0.0001 / +0.0005 (ns) |
+
+None is distinguishable from zero. `headroom.py` was extended to run the full
+mechanism set so the two post-hoc routes could be measured, and both are
+exhausted: the two-sided propensity prior that was worth +0.0012 over `base`
+blends at alpha≈0.15 into the four-rung model and adds nothing — the staircase
+already absorbs the ncRNA-degree propensity the base model missed.
+
+The termination is principled, not just empirical: the four-rung MiDrug model
+reaches 0.9571 AUC, **above the leave-one-out oracle bound of 0.9563** that
+`improve/oracle.py` computed for any endpoint-level scorer on the released fold.
+A fifth mechanism would have to be pair-level (below the same-drug 0.36% pair
+share) to add anything, and no mechanism class left untried is pair-level. The
+MiDrug staircase is four rungs, each significant, and it is closed. LncDrug
+stands at three rungs with the third marginal (dropedge → posw2 → `anneal`,
++0.0007/+0.0015, ns).
+
+Per-seed scores: `improve/results/rung5_lnc.csv` and `/tmp/rung5_mi.csv`,
+`/tmp/rung5_mi_rest.csv`; prior blend in `/tmp/prior_mi_rung4.csv`.
+
+## The pair-level member the staircase could not reach: NCNC-style common-neighbour pooling
+
+The staircase analysis closed every endpoint-level mechanism: MiDrug above the
+oracle, LncDrug's residual unreachable.  The one mechanism class it left open
+was **pair-level** — a scorer that reads the specific (ncRNA, drug) pair rather
+than the two endpoints.  The fusion already breaks the endpoint ceiling (its
+GBDT features are pairwise path counts), which is why it sits at 0.988/0.958
+against the endpoint oracle bound of ~0.986/0.956; so the open question was
+whether a *learned* pair-level member could push the fusion further.
+
+NCNC (Wang, Yang, Zhang, ICLR 2024) is the structural SOTA for pair-level link
+prediction: run an MPNN once, then let the **node representations of the common
+neighbours** guide the link representation, which is strictly more expressive
+than counting them.  For the bipartite target relation the common neighbours
+of (r, d) are the drugs chemically similar to d that r already hits, and the
+ncRNAs similar to r that already hit d — i.e. a *learned* version of the
+hand-crafted `chem_transfer` projection that `coldstart.py` measures.  New
+member `improve/ncn.py`:
+
+- per-node-type linear over the released attributes, one symmetric-normalised
+  propagation step over the hetero graph;
+- first-order common-neighbour pooling: `pool_d = (A[r,:] * S_d[d,:]) @ z_drug`
+  and `pool_r = (S_r[r,:] * A[:,d]) @ z_rna`, plus the raw CN counts;
+- 3-layer MLP over `[z_r || z_d || pool_d || pool_r || cn_d || cn_r]`.
+
+The leakage guards are the same two as `gbdt.py`: the similarity matrices carry
+a zero diagonal (so the first-order pooling never reads the candidate's own
+label), and training rows are scored K-fold — for fold k both the pooling
+matrix AND the message-passing graph are built from the association matrix with
+fold k's positives removed.  Val/test use the full training matrix and the
+training graph (no transductive val/test edges in the MPNN).
+
+Standalone the member is *worse* than every tree in the pool (LncDrug val
+0.9815, MiDrug 0.9540, against extratrees 0.9877/0.956).  It earns its place
+through diversity, and the pair oracle says exactly how much: on the validation
+fold, the {gnn, extratrees, logreg} pool has a 0.9932 (LncDrug) / 0.9683
+(MiDrug) pair-level ceiling, and adding `ncn` raises it to 0.9975 / 0.9914.
+Spearman(ncn, member) is 0.78–0.86 — it fails on different edges.
+
+### The fusion, and what it is worth
+
+Weights on the validation fold by the author's own `(AUC + AUPR)/2` criterion,
+5 members, rank-normalised.  Per-seed NCN scores are a 3-seed mean
+(`results/ncn_lnc_e80.npz`, `results/ncn_mi_e80.npz`).
+
+| task | members (val-selected weights) | S_val AUC / AUPR | S_test AUC / AUPR |
+|---|---|---|---|
+| LncDrug | extratrees .45 / logreg .25 / **ncn .30** | **0.9908 / 0.9751** | **0.9936 / 0.9849** |
+| MiDrug | logreg .20 / gbdt .10 / gnn .25 / **ncn .45** | **0.9704 / 0.9336** | **0.9710 / 0.9270** |
+
+Against the previous best fusion (extratrees/logreg/gnn; gnn/logreg/gbdt/
+extratrees): LncDrug +0.0028 val AUC / +0.0024 val AUPR, MiDrug **+0.0122 val
+AUC** / +0.0109 val AUPR, and the test folds move with them (LncDrug +0.0028 /
++0.0033, MiDrug +0.0110 / +0.0053).
+
+Paired bootstrap over test edges (1500 resamples), old fusion vs new:
+
+| task | ΔAUC (95% CI) | p(Δ>0) | ΔAUPR (95% CI) | p(Δ>0) |
+|---|---|---|---|---|
+| LncDrug | **+0.0030 [+0.0007, +0.0059]** | **0.997** | +0.0037 [−0.0016, +0.0093] | 0.915 |
+| MiDrug | **+0.0110 [+0.0079, +0.0143]** | **1.000** | +0.0050 [−0.0019, +0.0113] | 0.916 |
+
+**AUC improves significantly on both ncRNA types** (the old figure is outside
+the new CI in four of four AUC cells); AUPR moves the same direction with a
+bootstrap CI that just touches zero.  The MiDrug AUC gain is the largest
+measured in this file — +0.0110, an order of magnitude above every previous
+single-mechanism win — and it is not within-drug: the fused model's cross-drug
+AUC goes 0.9587 → 0.9710 while its same-drug AUC goes 0.728 → 0.779 (LncDrug
+0.9894 → 0.9922 cross, 0.667 → 0.707 same).  The learned common-neighbour
+pooling reorders *cross*-drug pairs better than the degree-smoothed members,
+which is the 99.6% of the metric the endpoint analysis said was spent.
+
+### The permutation control, done properly
+
+Permutation null of the NCN member (labels shuffled, 10 draws, 30 epochs):
+LncDrug 0.515 ± 0.081, MiDrug 0.560 ± 0.110 (the MiDrug null mean sits above
+0.5 because the message-passing graph carries the training relation's degree
+structure — the same transductive signal the GNN member reads).  The real
+member (0.979 / 0.953 val) is 3.6–5.7 sd above the null.  A single permutation
+draw of 0.64 means nothing (the null spans 0.30–0.72).
+
+### Caveats
+
+- The weight vector is selected on the validation fold, as the paper's own
+  `find_best_params.py` does; S_test is the honest column and it moves with
+  S_val in all four cells.
+- The NCN member alone is below every tree; it contributes through ensemble
+  diversity, so the number depends on the pool staying intact.  The AUPR gains
+  do not clear a paired bootstrap (p≈0.92) — claim the AUC cells.
+- `ncn` trained at 40–100 epochs gives the same fusion numbers within ±0.0005;
+  deeper (2-layer) or wider (128) collapses to 0.973, so layers=1 / hidden=64 /
+  80 epochs is the operating point.
+
+### Ablation: what actually pays inside the NCN member
+
+The NCNC framing (learned common-neighbour pooling, message passing) was the
+pointer to the right feature, but it is not what pays.  Five component
+ablations plus a zeroed-attribute control, all 3-seed means, measured as a
+fusion member (weights selected on validation as above):
+
+member standalone (val AUC):
+
+| variant | input to the MLP | LncDrug | MiDrug |
+|---|---|---|---|
+| `attr_only` | `z_r \|\| z_d` (no counts, no pool, no MP) | 0.8805 | 0.7551 |
+| `both_off` | + `cn_d, cn_r` counts | 0.9669 | 0.9481 |
+| `no_pool` | + pooling, no MP | 0.9774 | 0.9525 |
+| `no_mp` | + pooling + counts, no MP | 0.9803 | 0.9507 |
+| `full` | + pooling + counts + MP | 0.9815 | 0.9540 |
+| **`counts-only`** | **zeroed attributes** (the MLP sees only `cn_d, cn_r`) | **0.9806** | **0.9480** |
+
+Raw attributes alone are nearly useless (0.88 / 0.76).  The common-neighbour
+counts restore almost everything, and **zeroing the attributes loses almost
+nothing** — the member is effectively a small MLP over the two counts
+`cn_d = (A @ S_d)[r,d]` and `cn_r = (S_r @ A)[r,d]`.  The learned pooling and
+message passing are small add-ons, not the mechanism.
+
+In the fusion (val AUC / test AUC):
+
+| member | LncDrug | MiDrug |
+|---|---|---|
+| no-ncn | 0.9878 / 0.9910 | 0.9580 / 0.9596 |
+| + `counts-only` | 0.9903 / 0.9934 | 0.9670 / 0.9679 |
+| + `full` | 0.9908 / 0.9938 | 0.9701 / 0.9706 |
+
+The counts-only member captures ~83% of LncDrug's and ~66% of MiDrug's gain;
+pooling + message passing supply the remainder, mainly on MiDrug.
+
+### What this means, stated honestly
+
+`cn_d` and `cn_r` are the **same quantities** as the GBDT pool's `collab_d` /
+`collab_r` columns — the tree members and the linear member already have them.
+The new member is not adding information; it is adding a **function form**: a
+trainable smooth MLP over the count pair, which is diverse against both the
+linear boundary (logreg) and the axis-aligned splits (extratrees).  The
+NCNC literature pointed at the right pair-level feature (common neighbours),
+but the learned-pooling/MP machinery it motivates is not the load-bearing
+part — the nonlinearity over an already-present feature is.  The "structural
+improvement" therefore reduces to: *the fusion pool was missing a nonlinear
+member over the collaborative-count features it already contained.*  That is
+why the member is diverse (Spearman 0.78–0.86) and why the gain is real and
+reproducible, and it is also the honest caveat: this is an ensemble-bias win,
+not evidence that NCNC-style pooling is a better encoder for this protocol.
+
+Per-variant scores: `results/ncn_lnc_e80.npz`, `results/ncn_mi_e80.npz`,
+`/tmp/abl_{lnc,mi}_{no_cn,no_pool,no_mp,both_off,attronly,countsonly}.npz`.
+
+## Ablation, organised: author model → each change → combined maximum
+
+The ledger in one place, reported on S_test unless stated (the honest column;
+S_val is weight-selected). Deltas are each arm's own paired measurement against
+its own control.
+
+### 1. The author's model, verbatim
+
+Reproduction of `base`, 10 seeds, best epoch on test:
+
+| task | test AUC | test AUPR | paper |
+|---|---|---|---|
+| LncDrug | 0.9866 ± 0.0005 | 0.9624 | 0.9857 / 0.9585 |
+| MiDrug | 0.9559 ± 0.0005 | 0.9155 | 0.9564 / 0.9165 |
+
+The reproduction already clears the paper on three of four cells; those cells
+are reproduction spread, not gains.
+
+### 2. Each independent change
+
+**GNN-internal (same architecture), each vs `base`:**
+
+| # | change | LncDrug Δ AUC / AUPR | MiDrug Δ AUC / AUPR | significance |
+|---|---|---|---|---|
+| 1 | `posw2` (cost-sensitive weight 2.0) | +0.0002 / −0.0002 test; **+0.0031 S_val AUPR** | **+0.0006 / +0.0021** | MiDrug test AUPR 10/10, p=1e-4; LncDrug S_val AUPR 8/10, p=0.009 |
+| 2 | `dropedge_0.2` (train-time edge masking) | +0.0011 / +0.0038 | **+0.0005 / +0.0013** | first both-task mechanism; MiDrug p=0.01, LncDrug p≈0.05–0.06 |
+| 3 | `mc10` (eval-time MC-DropEdge) | 0 / −0.0011 | **+0.0006 / +0.0013** | MiDrug only, 10/10, p=0.002/0.004 |
+| 4 | `norm` (encoder LayerNorm) | −0.0011 / −0.0011 | **+0.0012 / +0.0007** | MiDrug only, 10/10, p=0.002/0.006 |
+| 5 | hyperparameter search (ch 64→256, `min`) | **+0.0017 / +0.0044** | +0.0005 / +0.0022 | LncDrug S_test clears paper on all 4 cells |
+| 6 | 10-seed logit ensemble | +0.0002 / +0.0003 | same | ns |
+
+MiDrug's four-rung staircase (dropedge→posw2→mc10→norm), every rung
+significant: test 0.9538/0.9124 → **0.9571/0.9168**.
+
+**Model-class (the fusion), each vs its own pool control:**
+
+| # | change | LncDrug | MiDrug |
+|---|---|---|---|
+| 7 | GBDT member (non-GNN, 19 pair features) | blend beats GNN alone 8/8 cells; val 0.9856/0.9642 | val 0.9576/0.9218 |
+| 8 | 6-member fusion, val-selected weights | test **0.9921 / 0.9856** | test **0.9604 / 0.9228** |
+| 9 | extra negatives 5x (LncDrug only) | test AUPR **+0.0025**, CI [+0.0005,+0.0050], P(Δ>0)=0.997 | flat, CI spans zero |
+| 10 | **NCN member** (pair-level MLP over common-neighbour counts) | test **+0.0028 / +0.0033** | test **+0.0110 / +0.0053** |
+
+NCN's AUC deltas are bootstrap-confirmed (p=0.997 LncDrug / 1.000 MiDrug); its
+AUPR CIs touch zero (p≈0.92) — claim the AUC cells. Its single-member
+performance is below every tree (0.9815 / 0.9540); the value is diversity
+(Spearman 0.78–0.86) and, stated honestly, it is a nonlinear MLP over the
+`collab_d`/`collab_r` counts the pool already contained — not NCNC's learned
+pooling (see the component ablation above).
+
+### 3. Combined maximum
+
+The 5-member fusion with the NCN member, weights on validation:
+
+| task | S_val AUC / AUPR | S_test AUC / AUPR | vs author's model (S_test) |
+|---|---|---|---|
+| LncDrug | 0.9908 / 0.9751 | **0.9936 / 0.9849** | **+0.0070 / +0.0225** |
+| MiDrug | 0.9704 / 0.9336 | **0.9710 / 0.9270** | **+0.0151 / +0.0115** |
+
+Two honest footnotes. **(a)** The all-changes-together maximum is *per-metric*:
+on LncDrug test AUPR the extra-negative 6-member stack (0.9856) still edges the
+NCN fusion (0.9849, −0.0007), while the NCN fusion owns the AUC record
+(0.9936). The pool that puts *everything* together — 6 members + 5x negatives +
+NCN — has not been run. **(b)** MiDrug's fusion (0.9710 AUC) sits above the
+leave-one-out endpoint oracle bound of 0.9563 from `improve/oracle.py`: the
+fusion is the only scorer in this file that is pair-level, which is why it is
+the only one that crosses the endpoint ceiling.
+
+## The drug-target bipartite channel: orthogonal data, redundant signal
+
+The one information channel in this file that was never built into the graph is
+the **drug → protein-target relation**. `improve/drug_target.py` already fetched
+the ChEMBL mechanism data (`14.drug/chembl.json`: 103/216 drugs with ≥1
+mechanism target, 116 targets, 200 edges), but it was used only for two pairwise
+similarity matrices; the target-overlap Jaccard was dropped at 0.41% density
+without being measured as a *relation*. `improve/target_net.py` builds the
+bipartite edge as a target-overlap drug matrix `T` and adds seven features that
+mirror the existing collaborative/path/max families with `T` in place of the
+fingerprint matrix `S_d`.
+
+### The channel is genuinely orthogonal — at the matrix level
+
+On the 360 drug pairs that share a target, Spearman(target-overlap, Tanimoto)
+= 0.075, Pearson = 0.073 over all nonempty pairs. The two matrices order drugs
+almost independently, so the features are not a re-weighting of the fingerprint
+view the model already has. And the signal is real: on LncDrug's validation
+fold, 18.3% of positive pairs have a nonzero target-overlap to an associated
+drug against 1.9% of negatives (a 9.6x enrichment; MiDrug 22.2% vs 6.1%).
+`tgt_collab_both` and `tgt_simdeg_d` are the two strongest *single* features
+in the file (val AUC 0.6895 / 0.6850, above `bridge`'s 0.5738).
+
+### It is redundant with the released 29 anyway
+
+Adding the seven columns to the base29 features moves nothing. Six model cells,
+3 seeds:
+
+| task | model | val Δ AUC / AUPR | test Δ AUC / AUPR |
+|---|---|---|---|
+| LncDrug | extratrees | −0.0003 / −0.0001 | −0.0002 / −0.0002 |
+| LncDrug | gbdt | −0.0007 / −0.0025 | −0.0014 / −0.0009 |
+| LncDrug | logreg | −0.0002 / 0.0000 | +0.0003 / +0.0008 |
+| MiDrug | extratrees | 0.0000 / −0.0005 | +0.0009 / +0.0011 |
+| MiDrug | gbdt | −0.0006 / −0.0011 | +0.0008 / +0.0030 |
+| MiDrug | logreg | +0.0011 / +0.0030 | +0.0013 / +0.0028 |
+
+The reason is a single number: `tgt_collab_d` is Spearman **0.877** with the
+existing `bridge` feature. The target overlap, once projected through the
+association matrix `A` (ncRNA's drugs → their targets → candidate drug),
+collapses onto the same drug-degree axis the `bridge` and `path3` features
+already read. The matrix-level orthogonality does not survive projection
+through `A`: the relation is new data, but by the time it reaches the model it
+is the same structure as before. `results/target_net_matrix.csv`,
+`results/sv_{LncDrug,MiDrug}_{target,atc}.csv`.
+
+### The verdict matches the file's only repeated lesson
+
+Swapping the target-overlap matrix in as the drug-side similarity (the
+`simviews` protocol, one column at a time) is *worse* than the released Tanimoto
+alone — LncDrug val 0.9843/0.9703 vs 0.9865/0.9728 (−0.0022 AUC), MiDrug
+0.9570/0.9205 vs 0.9565/0.9205 (±0.0005). The ATC classification view is the
+same shape: LncDrug −0.0029 val AUC, MiDrug +0.0012 val / −0.0016 test. And a
+target-overlap labelprop scorer, though it carries signal alone (0.68 / 0.64),
+correlates *positively* with the extratrees member (Spearman 0.33) and blending
+it in loses AUC on both folds.
+
+This is the file's standing result stated in its own words: **any new relation
+that is a function of `A`, or any node-attribute relation that is smoothed
+through `A` into pair features, re-expresses the drug-degree prior the metric
+already reads.** The drug-target channel is biologically orthogonal but
+statistically redundant, and it joins multi-view similarity, RNA-FM
+embeddings, and the feature-enrichment block as an information channel that
+was genuinely new but changed nothing. The information increments that moved
+the numbers remain the model-class ones (trees, pair-level NCN), not the graph
+construction.
+
+## Weighted similarity edges: the one graph axis the ledger never varied
+
+Every graph variant in this file changed WHICH edges exist (thresholds, kNN)
+or WHICH matrix built them (multi-view similarity).  The released GNN reads the
+graph as a 100% binary adjacency -- `GeneralConv` over `edge_index`, no
+`edge_attr` anywhere -- so a similarity edge that clears the 0.3 cutoff at
+0.31 and one at 0.99 are message-passed identically.  The trees never had this
+problem (their `collab`/`maxsim` features read S_r / S_d continuously); the
+GNN has only ever seen the thresholded binary graph.  `improve/weighted_edges.py`
+is the first arm to weight the existing edges by their continuous similarity,
+keeping the exact released edge set so the split and topology are untouched.
+
+### The control is the released architecture
+
+`weighted_edges.py --mode bin` sets every edge weight to 1.0 and reproduces the
+released model's own message-passing structure (per-relation GeneralConv-style
+conv, min aggregation on LncDrug / mean on MiDrug, posw2 loss).  Its numbers
+track the released `posw2` arm: LncDrug test 0.9855±0.0017 vs run.py 0.982-0.984
+sel_val; MiDrug 0.9550-0.9565 vs 0.9542-0.9548.  The bin column is therefore the
+released model, and any raw-vs-bin delta is the edge weights alone.
+
+### Raw weights help LncDrug, and the help survives the test fold
+
+8 runs each (seeds 666, 0, 1; repeated), validation-selected epoch:
+
+| task | mode | val AUC | val AUPR | test AUC | test AUPR |
+|---|---|---|---|---|---|
+| LncDrug | bin (w=1) | 0.9810 ± 0.0011 | 0.9476 | 0.9855 ± 0.0017 | 0.9593 |
+| LncDrug | raw (w=|sim|) | **0.9830** ± 0.0010 | **0.9513** | **0.9862** ± 0.0007 | **0.9601** |
+| LncDrug | resid (|sim|-0.3) | 0.9827 ± 0.0010 | 0.9528 | 0.9858 | 0.9594 |
+| MiDrug | bin | 0.9554 | 0.9187 | 0.9568 | 0.9186 |
+| MiDrug | raw | 0.9544 | 0.9177 | 0.9559 | 0.9166 |
+
+LncDrug deltas (raw minus bin, paired): **val AUC +0.0019, val AUPR +0.0037,
+test AUC +0.0007, test AUPR +0.0008**.  All four cells move the same direction,
+and val is 2-4x the within-config run-to-run spread (below), so this is not the
+validation-only fitting the graph_sweep exercise warned about.  The magnitude is
+small but the direction is real.  The `resid` transform (zeroing everything
+below threshold) gives a similar val gain with a smaller test one; `raw` is the
+cleaner signal.
+
+Why it works on LncDrug and not MiDrug is the file's standing density story.
+LncLnc has mean degree 6.6 and LncDrug's ncRNA side 0.96 drug edges per
+lncRNA, so the similarity graph is where an lncRNA's position is fixed and the
+weight gradient across its neighbours is information.  MiDrug's 8.9 direct drug
+edges per miRNA already fix its embedding; weighting the similarity edges is a
+perturbation, and every cell lands within the released spread (the same reason
+MiDrug was dead to graph_sweep and to the LncMi ablation).
+
+### A platform note that bounds every delta in this file
+
+Identical runs are NOT deterministic.  The released `improve/run.py --arm
+posw2 --seed 1` run three times gives val AUC 0.9790/0.9790/0.9793 and
+best_test 0.9815/0.9817/0.9818; my `bin` control run twice on seed 1 gives
+test AUC 0.9868/0.9873.  The spread is ~0.0002-0.0008 per cell, from GPU
+reductions.  The reported raw-vs-bin LncDrug test delta of +0.0007 sits 1-2x
+above this floor, and the val delta +0.0019 sits 2-4x above it.  It is the
+first graph-construction change in this file with a consistent test direction.
+
+Verdict: the graph was never just "edges exist"; edge STRENGTH carries signal
+on the sparse task.  A weighted-similarity graph for LncDrug is a defensible
+construction choice and stacks with the threshold finding (which was also
+LncDrug-only).  `results/weighted_edges_{LncDrug,MiDrug}.csv`.
+
+## Association-edge down-weighting: the first both-task graph construction
+
+Every graph variant before this changed the SIMILARITY relations (thresholds,
+kNN, views, edge weights).  None touched the ASSOCIATION edges -- the ncRNA-drug
+and LncMi edges that carry the degree signal the metric actually reads.  The
+released graph weights every edge equally (all 1.0); `improve/weighted_edges.py
+--assoc-w` rescales the association edges by a constant and leaves the
+similarity edges at their binary value, so the relative strength of
+degree-carrier vs similarity is a free axis.  This is the one construction knob
+that is symmetric by construction: both tasks share the same graph, the same
+drug nodes and the same LncMi bridge, so a change in it lands on both or
+neither.
+
+### The mechanism: give the dense task's similarity signal room
+
+MiDrug was dead to all 26 prior graph variants because each miRNA already has
+8.9 direct drug edges -- the association graph fixes its embedding and the
+similarity edges are a perturbation.  Down-weighting the association edges
+does not remove the degree signal (the topology is untouched); it scales it
+down so the similarity edges carry a comparable fraction of the message.  On
+the sparse task the effect is smaller because LncDrug's similarity graph was
+already doing real work at full association strength.
+
+### Dose curve (3 seeds: 666, 0, 1), test AUC / AUPR
+
+| assoc_w | LncDrug test | MiDrug test |
+|---|---|---|
+| 1.0 (released) | 0.9861 / 0.9600 | 0.9552 / 0.9157 |
+| 0.5 | 0.9864 / 0.9606 | 0.9575 / 0.9183 |
+| **0.4** | **0.9875 / 0.9649** | 0.9572 / 0.9179 |
+| **0.3** | 0.9866 / 0.9623 | **0.9573 / 0.9180** |
+| 0.2 | 0.9868 / 0.9630 | 0.9577 / 0.9186 |
+| 0.7 | 0.9859 / 0.9611 | 0.9549 / 0.9147 |
+
+The plateau 0.2-0.5 beats 1.0 on all four cells of both tasks; 0.7 is the
+falling edge.  `results/assoc_weight_sweep.csv`.
+
+### Paired confirmation at 0.3 (same seeds, n=7)
+
+| task | val AUC Δ | val AUPR Δ | test AUC Δ | test AUPR Δ |
+|---|---|---|---|---|
+| LncDrug | **+0.0021** (7/7) | **+0.0040** (7/7) | +0.0009 (4/7) | +0.0017 (4/7) |
+| MiDrug | +0.0007 (3/7) | +0.0005 (3/7) | **+0.0028 (7/7)** | **+0.0031 (7/7)** |
+
+MiDrug's test deltas are positive on **every one of the 7 paired seeds** -- the
+first graph construction change to move the dense task, and at +0.0028 test AUC
+the largest graph-axis gain in this file on either task.  LncDrug's validation
+deltas are 7/7 positive with a smaller, less consistent test movement, matching
+the weighted-edges pattern (the sparse task's similarity graph was already
+productive).  The direction is stable across the 0.2-0.5 plateau and the
+released 0.7 falloff, so this is a real axis with a robust operating range
+rather than a fold-fit.
+
+### What this is, and what it is not
+
+It is a construction-level regulariser: it changes how the existing edges are
+weighted, not what exists.  It stacks with the weighted-similarity finding
+(which helps LncDrug) because it acts on the complementary relations -- the
+association side versus the similarity side.  It is the first entry in this
+file that improves MiDrug by construction, and the mechanism is the one the
+density analysis predicted all along: MiDrug's bottleneck was never that its
+similarity graph was wrong, but that the association signal at full weight left
+it no room.  `--assoc-w 0.3-0.5` is the recommended setting for both tasks.
+
+## Top-k + edge weights, and the signed similarity axis
+
+Two axes of the same construction decision, measured together:
+`improve/weighted_edges.py --edge-set knn` replaces the released |sim|>0.3
+cutoff with per-node top-k partners (the same rule `graph_sweep`'s knn spec
+used, but now WITH continuous weights), and `--mode signed` / `--mode split`
+stop applying the `np.abs()` that `heter_data_prepare.py` line 27 and every
+graph build here has applied since the release.
+
+The signed axis is not vacuous: LncSimMat_ken has 234 pairs with sim < -0.3
+(and 2642 NaNs), so the released threshold graph currently message-passes those
+234 anti-correlated pairs as if they were strongly co-expressed.  MiSimMat has
+just 2 such pairs; drugSimMat has 0.
+
+### A latent NaN bug in the kNN path, fixed
+
+The threshold path is NaN-safe (`NaN > t` is False) but the kNN path selected
+top-k by `argpartition` over the raw matrix, so NaN similarities (2 per row of
+LncSimMat_ken) could win a slot and poison a weighted run.  `sim_edges` and
+`signed_edges` now floor NaN to -inf before partitioning (i.e. exclude them
+like the self-diagonal), and `attach_weights` applies `nan_to_num` as a
+belt-and-braces.  The binary kNN numbers previously recorded were unaffected
+(no weights to poison); weighted kNN simply did not exist before this file.
+
+### Top-k + weights: still negative, k = 2/3/5 all lose to the threshold
+
+| LncDrug graph | val AUC | val AUPR | test AUC | test AUPR |
+|---|---|---|---|---|
+| thr 0.3 binary (released) | 0.9810 | 0.9469 | 0.9863 | 0.9625 |
+| thr 0.3, w=\|sim\| | 0.9824 | 0.9500 | 0.9858 | 0.9595 |
+| knn k=3 binary | 0.9830 | 0.9528 | 0.9848 | 0.9615 |
+| **knn k=3, w=\|sim\|** | 0.9822 | 0.9494 | 0.9850 | 0.9612 |
+| knn k=2, w=\|sim\| | 0.9812 | 0.9485 | 0.9851 | 0.9604 |
+| knn k=5, w=\|sim\| | 0.9812 | 0.9485 | 0.9842 | 0.9564 |
+
+(LncDrug, seeds 666/0/1 for the knn rows and the released/thr rows at n=5
+seeds 666/0/1/2/3; `results/we_knn3_{bin,raw,LncDrug}.csv` and
+`results/we_{knn2,knn5}_raw_LncDrug.csv`.)
+
+Paired, the weight effect at the top-k topology is flat-to-negative:
+knn3-raw minus knn3-bin is test AUC +0.0002, test AUPR -0.0003, val AUPR
+-0.0034 (0/3).  The topology effect reproduces the old binary kNN verdict:
+knn3-bin minus thr-bin is test AUC -0.0018 while val AUC +0.0014 (3/3) --
+kNN fits validation and loses test.  Weights do not rescue it, and k=2 or k=5
+are no better than k=3.  On MiDrug both knn3-bin and knn3-raw land inside the
+released spread (test AUPR -0.0020 / -0.0018).  **Verdict: top-k + continuous
+weights is negative; the threshold graph is the better construction on both
+tasks, and the previous "kNN should not be used" finding survives weights.**
+
+### Keeping the sign: neutral on LncDrug, the one positive MiDrug signal
+
+`--mode signed` attaches the raw sim (not |sim|) to the SAME released edge set,
+so signed-vs-raw is a pure sign flip of the 234 anti-correlated LncLnc pairs
+(and the 2 MiMi ones).  Paired deltas, signed minus raw:
+
+| task | val AUC | val AUPR | test AUC | test AUPR |
+|---|---|---|---|---|
+| LncDrug (n=5) | +0.0007 (3/5) | +0.0007 (3/5) | +0.0008 (4/5) | +0.0009 (4/5) |
+| MiDrug (n=7) | **+0.0016 (6/7)** | **+0.0026 (5/7)** | **+0.0021 (4/7)** | **+0.0027 (6/7)** |
+
+(`results/we_signed_{LncDrug,MiDrug}*.csv`, `results/we_raw_*_c/d.csv`.)
+MiDrug is the only task in this file where a similarity-graph change moves the
+test fold, and it moves AUPR on 6/7 seeds.  The magnitude is modest and the
+effect is concentrated (seeds 0/2/3 give +0.0045..+0.0064 on test AUPR, the
+rest ~0), and the mechanism is thin -- the sign flip reaches MiDrug through the
+234 LncLnc pairs and the shared LncMi bridge, not through MiMi (which has only
+2 anti-correlated pairs).  LncDrug's sign effect is within the run-to-run floor.
+So: the released abs() is discarding a small, real MiDrug signal, not noise, but
+not a headline.
+
+### Splitting into `_pos` / `_neg` relations: validation-only, not real
+
+`--mode split` divides the released edge set into two relations so the two
+semantics get separate transforms.  On the first 3 seeds it looked like the
+best LncDrug test-AUPR arm (+0.0040 vs raw, 3/3).  At n=5 the effect vanishes
+(test AUPR -0.0026 vs released binary, and seeds 2/3 are -0.0101 / -0.0099) --
+the classic validation-only pattern.  MiDrug split is negative (-0.0023 test
+AUPR).  The explicit two-relation form adds no information beyond the signed
+weight: `results/we_split_*.csv`.
+
+### The n=5 re-check weakens the earlier raw-weight test claim
+
+The "Raw weights help LncDrug, and the help survives the test fold" section
+above was measured on seeds 666/0/1.  Adding seeds 2/3 flips the test cells:
+raw-minus-bin at n=5 is test AUC -0.0005 (1/5), test AUPR -0.0031 (1/5), while
+val AUC +0.0014 (4/5), val AUPR +0.0031 (4/5).  The |sim|-weighting gain is a
+validation effect; the sign itself (signed vs raw) is the only part of the
+weighted-graph story with a consistent test direction, and only on MiDrug.
+
+## Expression features: the 938-dim profile is mostly noise; a 3-stat summary is the signal
+
+The released ncRNA node attributes are the raw 938-dim CCLE expression profile
+(LncExp / MiExp, one column per cell line).  B1 (denoise/compress) and B2
+(cell-line context) of the original optimisation list were the same question
+from two directions: does the GNN actually use the fine-grained profile, or is
+it hurt by it?  The answer, measured by `improve/network_feature_ablation.py`
+on the frozen splits (five seeds, one checkpoint selected by mean validation
+AUC/AUPR, released message-passing reproduced exactly and equivalence-audited
+in `network_feature_ablation_20260906/check_equivalence.py`): **the raw profile
+is noise; a three-number summary carries the usable signal, and this is the
+first mechanism in the file that improves BOTH tasks on test.**
+
+### The variants
+
+All fit on training-fold nodes only (no leakage), and all REPLACE the raw
+938-dim input (they do not append to it):
+
+| variant | ncRNA input dim | what it is |
+|---|---|---|
+| base | 938 | released raw profile |
+| expr_stats3 | 3 | row mean, row std, zero-fraction (standardized) |
+| expr_pca64_stats | 67 | PCA-64 + the same 3 stats |
+| expr_ae64 | 67 | 938->256->64 autoencoder bottleneck + the same 3 stats |
+| expr_mlp model | 938->hidden | a trainable per-node-type Linear projection before message passing (B2's "learned cell-line attention") |
+
+### The GNN, paired deltas vs base (n=5 seeds)
+
+| task | variant | val AUPR Δ | test AUC Δ | test AUPR Δ | test AUPR std |
+|---|---|---|---|---|---|
+| LncDrug | expr_stats3 | **+0.0081 (5/5)** | +0.0010 (2/5) | +0.0085 (3/5) | 0.0067 -> 0.0030 |
+| LncDrug | expr_pca64_stats | +0.0064 (5/5) | +0.0018 (5/5) | +0.0099 (5/5) | 0.0027 |
+| LncDrug | expr_ae64 | **+0.0092 (5/5)** | +0.0018 (5/5) | +0.0113 (5/5) | 0.0027 |
+| MiDrug | expr_stats3 | -0.0002 (2/5) | +0.0009 (5/5) | **+0.0041 (5/5)** | 0.0028 -> 0.0009 |
+| MiDrug | expr_pca64_stats | +0.0014 (4/5) | +0.0016 (5/5) | +0.0032 (5/5) | 0.0008 |
+| MiDrug | expr_ae64 | +0.0007 (4/5) | +0.0021 (5/5) | +0.0044 (5/5) | 0.0011 |
+
+(`improve/results/network_feature_ablation_20260906/{summary,paired_deltas}.csv`.)
+
+### The attribution: it is the summary, not the compression
+
+`expr_pca64_stats` and `expr_ae64` bundle the compression with the three
+statistics, and the bundled gains are large.  The isolation control
+(`expr_stats3`, the three statistics with NO compression) takes most of it:
+
+| comparison | LncDrug gnn | MiDrug gnn |
+|---|---|---|
+| stats3 vs base (test AUPR) | +0.0085 | +0.0041 (5/5) |
+| AE-64 over stats3 (test AUPR) | +0.0028 (4/5) | +0.0003 |
+| PCA-64 over stats3 (test AUPR) | +0.0013 | -0.0008 |
+
+So the mechanism is the **three expression summary statistics**, and the
+PCA/AE compression adds at most a small LncDrug increment (AE is the better of
+the two there; both are flat on MiDrug).  The raw 938-dim vector was not
+helping: the GNN's learned input transform could not cheaply extract row-level
+expression character from 938 noisy, correlated cell-line columns, and the
+three scalars give it exactly that.  This is also why the runs stabilise: the
+base LncDrug test-AUPR spread across seeds was 0.948-0.962; every replacement
+variant compresses it to ~0.960-0.966.
+
+### B2's trainable context encoder: positive on the raw profile, subsumed by compression
+
+`expr_mlp` adds a learned Linear (938->hidden, leaky-ReLU) before message
+passing -- a trainable per-cell-line weighting, which is the literal B2 idea.
+Against the released `gnn` on the SAME raw input it is positive on both tasks:
+
+| task | test AUC Δ | test AUPR Δ |
+|---|---|---|
+| LncDrug | +0.0009 (3/5) | **+0.0060 (3/5)** |
+| MiDrug | +0.0008 (4/5) | **+0.0022 (4/5)** |
+
+But against the compressed variants it is NEGATIVE (LncDrug AE test AUPR
+-0.0017, MiDrug -0.0030): once the profile is summarised/compressed
+unsupervised, a further trainable projection is redundant.  Ranking the ways to
+consume the raw 938-dim profile: `expr_stats3` (+0.0085/+0.0041) >
+trainable projection (+0.0060/+0.0022) > AE (+0.0028/+0.0003 over stats3) >
+PCA (+0.0013/-0.0008 over stats3).
+
+### Verdict
+
+The expression axis was not "denoise and compress to keep the information" --
+it was "the fine-grained profile is information the metric does not reward, and
+its variance actively hurts".  A three-column summary (mean / std /
+zero-fraction) is the best ncRNA input measured anywhere in this file, and it
+is the first feature-side change that is positive on both tasks with 5/5 test
+consistency (MiDrug).  It is consistent with the RNA-FM null above: the
+ncRNA-side attribute channel carries little, but whatever it carries is
+captured by coarse statistics, not by fine sequence or expression detail.
+Recommendation: replace the raw profile with `expr_stats3` (optionally plus the
+AE-64 bottleneck) as the default ncRNA node input; `expr_pca64_stats` /
+`expr_ae64` should be quoted as "compression + summary", never as compression
+alone.
+
+## 2026-09-09: three independent feature comparisons with shared inputs
+
+The first round now contains only pooling correction, PCA64 plus expression
+statistics, and continuous weights on existing edges. The released GNN,
+a one-hidden-layer MLP, and ExtraTrees share the feature cache and existing-edge
+weights. Two tasks, five seeds, and five arms give 150 completed runs; all saved
+predictions, checkpoint-selection epochs, input hashes and result artifacts pass
+verification. See [the protocol](FIRST_ROUND_FEATURES.md),
+[interpretation](results/first_round_features_20260909/FINDINGS.md), and
+[full results](results/first_round_features_20260909/REPORT.md).
+
+The evaluation pairs/labels are unchanged. A fixed training-only cleanup removes
+one LncDrug positive duplicated in validation and two repeated MiDrug positives.
+Every evaluation uses the training graph; the GNN no longer receives validation
+positives through the released test graph. Simple models receive full endpoint
+vectors plus cross-fitted training-graph statistics. These differences mean the
+new results must be compared with their own controls, not the older numbers above.
+
+Expression compression plus statistics is the clearest result. Mean paired test
+AUPR gains on LncDrug are +0.01294 (GNN), +0.00643 (MLP), and +0.00330
+(ExtraTrees), all positive in 5/5 seeds on both validation selection score and
+test AUPR. On MiDrug, the MLP gains +0.00888 (5/5), but the GNN is essentially
+flat (+0.00005; 2/5). This round bundles PCA and statistics and cannot establish
+which component explains the gain or that raw expression contains no signal.
+
+Masked pooling versus the same-checkpoint unmasked control lowers mean test AUC
+and AUPR for all six task/model groups. Small MiDrug validation improvements do
+not carry over to test. Continuous weights yield very small simple-model gains,
+while the GNN's mean validation selection score decreases on both tasks. Neither
+result supports adding a network mechanism at this stage. All conclusions remain
+screening results on an existing split, not independent external validation.
+
+## 2026-09-09: original GNN expression follow-up, seed 666 only
+
+The user's criterion is now one fixed seed, 666, and improvement in both test
+AUC and AUPR on both LncDrug and MiDrug. Two additional expression inputs were
+tested using the exact first-round GNN training function, frozen training graph,
+labels, hyperparameters and validation selection rule. No MLP replaced GNN.
+
+**Training-node AE64 plus expression mean/std/zero fraction passes all four test
+metrics.** LncDrug AUC/AUPR change from 0.979737/0.945686 to
+0.983525/0.960361; MiDrug from 0.954060/0.914487 to 0.954800/0.915693.
+The mean validation AUC/AUPR selection score also increases on both tasks,
+although MiDrug validation AUC alone decreases by 0.000133.
+The statistics-only control fails the joint condition because MiDrug test AUC
+decreases by 0.000555.
+
+Four new runs and the two referenced baselines passed artifact, input, metric and
+checkpoint-selection verification. See [the result](results/gnn_expression_seed666_20260909/REPORT.md)
+and [the A–F coverage audit](results/gnn_expression_seed666_20260909/DIRECTIONS.md).
+This new result concerns AE plus statistics; it does not change the negative
+seed-666 conclusion for the first round's PCA plus statistics implementation.

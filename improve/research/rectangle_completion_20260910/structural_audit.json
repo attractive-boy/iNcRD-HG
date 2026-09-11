@@ -1,0 +1,80 @@
+{
+  "created_at_utc": "2026-09-10T06:37:01.560646+00:00",
+  "scope": "Untrained structural diagnostics, not model performance or a headroom bound",
+  "source_sha256": "041eecc1805f791b9e11ebd91e1acfc824eb5e1bf9050bdbd60c3522c89bd81c",
+  "reference_protocol_sha256": "7b688a30ed5f9f9f477bc8fbff3a0cd012654d7818d670e857fe49bc0b95a7aa",
+  "no_outer_evaluation": true,
+  "no_test_evaluation": true,
+  "tasks": {
+    "LncDrug": {
+      "n_rna": 1322,
+      "n_drug": 216,
+      "fitting_rows": 3040,
+      "fitting_positives": 1013,
+      "internal_rows": 760,
+      "positive_query_rna_without_fitting_positive_fraction": 0.6007905138339921,
+      "positive_query_drug_without_fitting_positive_fraction": 0.019762845849802372,
+      "singular_value_energy": {
+        "1": 0.3645000058744663,
+        "4": 0.7385951931379984,
+        "8": 0.8855981591507813,
+        "16": 0.9613311073062254,
+        "32": 0.9942130799152573,
+        "64": 0.9999999999999999
+      },
+      "diagnostics": {
+        "same_task_path3": {
+          "all_query_coverage": 0.17763157894736842,
+          "positive_query_coverage": 0.35177865612648224,
+          "fixed_score_auc": 0.641933874375346,
+          "fixed_score_ap": 0.5385860123509635
+        },
+        "cross_rna_path3": {
+          "all_query_coverage": 0.4697368421052632,
+          "positive_query_coverage": 0.383399209486166,
+          "fixed_score_auc": 0.5249082021657272,
+          "fixed_score_ap": 0.542603683616497
+        }
+      },
+      "input_sha256": {
+        "inner.npz": "4f124ee0ae1df9a7eab9453c3bf6fb77143dad1c010c86e4ea2a9dce57096350",
+        "train_graph.pth": "4fa7e42a30b279ef2bde97a11cd7d38c675ec46331200e23c6c98bf00d82d3db"
+      }
+    },
+    "MiDrug": {
+      "n_rna": 605,
+      "n_drug": 216,
+      "fitting_rows": 7769,
+      "fitting_positives": 2589,
+      "internal_rows": 1943,
+      "positive_query_rna_without_fitting_positive_fraction": 0.03709428129829984,
+      "positive_query_drug_without_fitting_positive_fraction": 0.027820710973724884,
+      "singular_value_energy": {
+        "1": 0.23702371923661752,
+        "4": 0.38158656909017,
+        "8": 0.5205855595889554,
+        "16": 0.709410247453408,
+        "32": 0.885907381766934,
+        "64": 0.9735985603052848
+      },
+      "diagnostics": {
+        "same_task_path3": {
+          "all_query_coverage": 0.6572310859495625,
+          "positive_query_coverage": 0.9335394126738794,
+          "fixed_score_auc": 0.9173267645543535,
+          "fixed_score_ap": 0.8788070408517914
+        },
+        "cross_rna_path3": {
+          "all_query_coverage": 0.6963458569222851,
+          "positive_query_coverage": 0.9350850077279753,
+          "fixed_score_auc": 0.9153828448489706,
+          "fixed_score_ap": 0.8772858948615476
+        }
+      },
+      "input_sha256": {
+        "inner.npz": "303979e010989198ebf4cf754a0b93dfc76054d89b6b1420237fb929c794ea97",
+        "train_graph.pth": "9bc416f0c1e326e81157a2069ee0750e47c51de0dddb0684560d49fc8c0816b9"
+      }
+    }
+  }
+}
