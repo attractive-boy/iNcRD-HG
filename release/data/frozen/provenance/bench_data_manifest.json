@@ -1,0 +1,297 @@
+{
+  "protocol": "val_auc_train_graph_only_v1",
+  "sources": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mirna_baselines_20260928/data/mirbase_mature.fa": {
+      "sha256": "52d69eeb3c23c5ed0f66c8c9f24e1ad2cd94cc34e72e4fc376c0dd438d2779ff",
+      "url": "https://www.mirbase.org/download/mature.fa"
+    },
+    "/data1/licheng/incrd-hg/incrd-run/3.heter_data/MiDrug_train_data.pth": {
+      "sha256": "1f838e2357c7a86eaf34f649e583f6f7d4c64286969e4d33402ceeca85696e44"
+    },
+    "/data1/licheng/incrd-hg/incrd-run/3.heter_data/MiDrug_val_data.pth": {
+      "sha256": "0cf07055738094634e9a822c93b950159ca3c940e2667caf0bda22031bc3c061"
+    },
+    "/data1/licheng/incrd-hg/incrd-run/3.heter_data/MiDrug_test_data.pth": {
+      "sha256": "821a6bdc694be05196e887f70ba17fea0527ab217cdbed64f3cf67842513435f"
+    },
+    "/data1/licheng/incrd-hg/incrd-run/2.construct_network/miRNA.csv": {
+      "sha256": "888eef5d3259b3ba335fec5f036d699f21b5bfbef01636d9582736316fa90f54"
+    },
+    "/data1/licheng/incrd-hg/incrd-run/2.construct_network/drug_smiles.csv": {
+      "sha256": "21b46bfc44100a468bd257cdabed0b0713f25e75bcf374d4850e63c41504d1f3"
+    },
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/new5_repro_20260919/repos/PLMF-MDA-main/data/unpacked2/data/MDR/miRNA_ID_R.xlsx": {
+      "sha256": "e15460670a5e3cdb50d1b216b9def4f5f460e2fe41e494048a82dc621bedbfa4"
+    },
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/new5_repro_20260919/repos/PLMF-MDA-main/data/unpacked2/data/MDR/drug_ID_R.xlsx": {
+      "sha256": "929ffa976b9e383dbef1327edab2d9da09c2b12484d16f24657b1313f5999cdc"
+    },
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/new5_repro_20260919/repos/PLMF-MDA-main/data/unpacked2/data/MDR/pos_MDA_R.edgelist": {
+      "sha256": "cb2a9a7a916f9b8680a728a29d7e04135d06dc9612f5d3ab7556fa0796cb5918"
+    },
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/new5_repro_20260919/repos/PLMF-MDA-main/data/unpacked2/data/MDR/neg_MDA_R.edgelist": {
+      "sha256": "20f0bf4cec3ca075ba73fdc231cdb95d312dcb3331a1dfa890bc50628b0bd4a2"
+    },
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/new5_repro_20260919/repos/PLMF-MDA-main/data/unpacked2/data/MDS/miRNA_ID_S.xlsx": {
+      "sha256": "c4128a2710ebef31aef0af96da7a635c335d8545e44e92bebb0bdea031d04ef0"
+    },
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/new5_repro_20260919/repos/PLMF-MDA-main/data/unpacked2/data/MDS/drug_ID_S.xlsx": {
+      "sha256": "a8ef922250434e6de3d3f043d7d9cfbf733baa8bbb57839b52ba2c20942f35f7"
+    },
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/new5_repro_20260919/repos/PLMF-MDA-main/data/unpacked2/data/MDS/pos_MDA_S.edgelist": {
+      "sha256": "433a5cf8e8959a5fbb3ac203766da2f3a014db8536ea3e93ce63217da9618bcf"
+    },
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/new5_repro_20260919/repos/PLMF-MDA-main/data/unpacked2/data/MDS/neg_MDA_S.edgelist": {
+      "sha256": "1c56452103801d4e76c92e04a136de79bb280df07e2e35322c7e08f95d2808df"
+    }
+  },
+  "datasets": {
+    "MiDrug": {
+      "n_mirna": 605,
+      "n_drug": 216,
+      "n_unique_sequences": 604,
+      "sequence_length_range": [
+        17,
+        27
+      ],
+      "folds": {
+        "0": {
+          "train": {
+            "n": 9712,
+            "positive": 3236,
+            "negative": 6476
+          },
+          "val": {
+            "n": 3234,
+            "positive": 1078,
+            "negative": 2156
+          },
+          "test": {
+            "n": 3234,
+            "positive": 1078,
+            "negative": 2156
+          },
+          "sha256": "1b5aad5cf7715939df77c78b6a6e233f0b031834de9d9b623be5a5ed0723eca1",
+          "content_pair_train_test_overlap": 4
+        }
+      }
+    },
+    "MDR": {
+      "n_mirna": 1317,
+      "n_drug": 105,
+      "n_unique_sequences": 1312,
+      "sequence_length_range": [
+        16,
+        27
+      ],
+      "folds": {
+        "0": {
+          "train": {
+            "n": 7791,
+            "positive": 3900,
+            "negative": 3891
+          },
+          "val": {
+            "n": 866,
+            "positive": 433,
+            "negative": 433
+          },
+          "test": {
+            "n": 2165,
+            "positive": 1078,
+            "negative": 1087
+          },
+          "sha256": "d77d3bc19dabb42b252066e5ac772a78cbfbbb240f92b1f3fd7d5573b888c527",
+          "content_pair_train_test_overlap": 2
+        },
+        "1": {
+          "train": {
+            "n": 7791,
+            "positive": 3894,
+            "negative": 3897
+          },
+          "val": {
+            "n": 866,
+            "positive": 433,
+            "negative": 433
+          },
+          "test": {
+            "n": 2165,
+            "positive": 1084,
+            "negative": 1081
+          },
+          "sha256": "c6a934380b397b75b3ce878b24845237c37967e0b2804e0b807efe9932a6aaaa",
+          "content_pair_train_test_overlap": 2
+        },
+        "2": {
+          "train": {
+            "n": 7792,
+            "positive": 3920,
+            "negative": 3872
+          },
+          "val": {
+            "n": 866,
+            "positive": 436,
+            "negative": 430
+          },
+          "test": {
+            "n": 2164,
+            "positive": 1055,
+            "negative": 1109
+          },
+          "sha256": "8aadbbcc067a4ac3e8b3a63ed7c33955bacb4a6429e19abe07a108766b3f4cec",
+          "content_pair_train_test_overlap": 2
+        },
+        "3": {
+          "train": {
+            "n": 7792,
+            "positive": 3873,
+            "negative": 3919
+          },
+          "val": {
+            "n": 866,
+            "positive": 430,
+            "negative": 436
+          },
+          "test": {
+            "n": 2164,
+            "positive": 1108,
+            "negative": 1056
+          },
+          "sha256": "9f66d80f6c24b83dd2b2bfb4899d80de36be8da66750452b3223d723379218bd",
+          "content_pair_train_test_overlap": 2
+        },
+        "4": {
+          "train": {
+            "n": 7792,
+            "positive": 3892,
+            "negative": 3900
+          },
+          "val": {
+            "n": 866,
+            "positive": 433,
+            "negative": 433
+          },
+          "test": {
+            "n": 2164,
+            "positive": 1086,
+            "negative": 1078
+          },
+          "sha256": "6ebabd7d0c26b26768af5a17c2cc9c79313e29cde91379036ae2a22f2952cf48",
+          "content_pair_train_test_overlap": 4
+        }
+      }
+    },
+    "MDS": {
+      "n_mirna": 1252,
+      "n_drug": 140,
+      "n_unique_sequences": 1243,
+      "sequence_length_range": [
+        16,
+        27
+      ],
+      "folds": {
+        "0": {
+          "train": {
+            "n": 7277,
+            "positive": 3643,
+            "negative": 3634
+          },
+          "val": {
+            "n": 809,
+            "positive": 405,
+            "negative": 404
+          },
+          "test": {
+            "n": 2022,
+            "positive": 1006,
+            "negative": 1016
+          },
+          "sha256": "e5ebc95290715379b24fdbfbaf87e360baa653f651ca97da9cec23b59daa0ad9",
+          "content_pair_train_test_overlap": 9
+        },
+        "1": {
+          "train": {
+            "n": 7277,
+            "positive": 3621,
+            "negative": 3656
+          },
+          "val": {
+            "n": 809,
+            "positive": 402,
+            "negative": 407
+          },
+          "test": {
+            "n": 2022,
+            "positive": 1031,
+            "negative": 991
+          },
+          "sha256": "936c44d0b4cf53a5b8b81030e7b8de8d5270ccc969930379756b494b23294db3",
+          "content_pair_train_test_overlap": 6
+        },
+        "2": {
+          "train": {
+            "n": 7277,
+            "positive": 3648,
+            "negative": 3629
+          },
+          "val": {
+            "n": 809,
+            "positive": 406,
+            "negative": 403
+          },
+          "test": {
+            "n": 2022,
+            "positive": 1000,
+            "negative": 1022
+          },
+          "sha256": "37fd73490a07d3c60ce6edc1c81b4a53af9aa6107cc0cba3a31b89ed8b5a42fa",
+          "content_pair_train_test_overlap": 6
+        },
+        "3": {
+          "train": {
+            "n": 7278,
+            "positive": 3640,
+            "negative": 3638
+          },
+          "val": {
+            "n": 809,
+            "positive": 405,
+            "negative": 404
+          },
+          "test": {
+            "n": 2021,
+            "positive": 1009,
+            "negative": 1012
+          },
+          "sha256": "d32e6e851e653e373960025397e207cef8364a9dc1b6c7af52ffb59777c9d16e",
+          "content_pair_train_test_overlap": 8
+        },
+        "4": {
+          "train": {
+            "n": 7278,
+            "positive": 3641,
+            "negative": 3637
+          },
+          "val": {
+            "n": 809,
+            "positive": 405,
+            "negative": 404
+          },
+          "test": {
+            "n": 2021,
+            "positive": 1008,
+            "negative": 1013
+          },
+          "sha256": "6117719af0f30f0319d4f22729463379d147b54d0f86c413349ad81632a90434",
+          "content_pair_train_test_overlap": 7
+        }
+      }
+    }
+  },
+  "MiDrug_identical_duplicate_rows_removed": {
+    "train": 2,
+    "val": 0,
+    "test": 0
+  }
+}
