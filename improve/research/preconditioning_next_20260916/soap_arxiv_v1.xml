@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/dBaZ5yJnikoox4NztEGboY6U4rs</id>
+  <title>arXiv Query: search_query=ti:SOAP AND (all:Shampoo OR all:optimizer)&amp;id_list=&amp;start=0&amp;max_results=6</title>
+  <updated>2026-09-15T22:12:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:SOAP+AND+(all:Shampoo+OR+all:optimizer)&amp;start=0&amp;max_results=6&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>20</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2509.03378v10</id>
+    <title>Understanding and Improving Shampoo and SOAP via Kullback-Leibler Minimization</title>
+    <updated>2026-06-22T12:44:13Z</updated>
+    <link href="https://arxiv.org/abs/2509.03378v10" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.03378v10" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Shampoo and its efficient variant, SOAP, employ structured second-moment estimations and have shown strong performance for training neural networks (NNs). In practice, however, Shampoo typically requires step-size grafting with Adam to be competitive, and SOAP mitigates this by applying Adam in Shampoo's eigenbasis -- at the cost of additional memory overhead from Adam in both methods. Prior analyses have largely relied on the Frobenius norm to motivate these estimation schemes. We instead recast their estimation procedures as covariance estimation under Kullback-Leibler (KL) divergence minimization, revealing a previously overlooked theoretical limitation and motivating principled redesigns. Building on this perspective, we develop $\textbf{KL-Shampoo}$ and $\textbf{KL-SOAP}$, practical schemes that match or exceed the performance of Shampoo and SOAP in NN pre-training while achieving SOAP-level per-iteration runtime. Notably, KL-Shampoo does not rely on Adam to attain competitive performance, eliminating the memory overhead introduced by Adam. Across our experiments, KL-Shampoo consistently outperforms SOAP, Shampoo, and even KL-SOAP, establishing the KL-based approach as a promising foundation for designing structured methods in NN optimization. An implementation of KL-Shampoo/KL-SOAP is available at https://github.com/yorkerlin/KL-Methods</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-03T14:55:15Z</published>
+    <arxiv:comment>an extended version of the ICLR 2026 paper (added a paragraph in Sec 3.2 about short-sided KL-Shampoo as scaled Muon when momentum is disabled)</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Wu Lin</name>
+    </author>
+    <author>
+      <name>Scott C. Lowe</name>
+    </author>
+    <author>
+      <name>Felix Dangel</name>
+    </author>
+    <author>
+      <name>Runa Eschenhagen</name>
+    </author>
+    <author>
+      <name>Zikun Xu</name>
+    </author>
+    <author>
+      <name>Roger B. Grosse</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.11321v2</id>
+    <title>SOAP: Improving and Stabilizing Shampoo using Adam</title>
+    <updated>2025-01-31T18:52:42Z</updated>
+    <link href="https://arxiv.org/abs/2409.11321v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.11321v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There is growing evidence of the effectiveness of Shampoo, a higher-order preconditioning method, over Adam in deep learning optimization tasks. However, Shampoo's drawbacks include additional hyperparameters and computational overhead when compared to Adam, which only updates running averages of first- and second-moment quantities. This work establishes a formal connection between Shampoo (implemented with the 1/2 power) and Adafactor -- a memory-efficient approximation of Adam -- showing that Shampoo is equivalent to running Adafactor in the eigenbasis of Shampoo's preconditioner. This insight leads to the design of a simpler and computationally efficient algorithm: $\textbf{S}$hampo$\textbf{O}$ with $\textbf{A}$dam in the $\textbf{P}$reconditioner's eigenbasis (SOAP).
+  With regards to improving Shampoo's computational efficiency, the most straightforward approach would be to simply compute Shampoo's eigendecomposition less frequently. Unfortunately, as our empirical results show, this leads to performance degradation that worsens with this frequency. SOAP mitigates this degradation by continually updating the running average of the second moment, just as Adam does, but in the current (slowly changing) coordinate basis. Furthermore, since SOAP is equivalent to running Adam in a rotated space, it introduces only one additional hyperparameter (the preconditioning frequency) compared to Adam. We empirically evaluate SOAP on language model pre-training with 360m and 660m sized models. In the large batch regime, SOAP reduces the number of iterations by over 40% and wall clock time by over 35% compared to AdamW, with approximately 20% improvements in both metrics compared to Shampoo. An implementation of SOAP is available at https://github.com/nikhilvyas/SOAP.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-17T16:18:05Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nikhil Vyas</name>
+    </author>
+    <author>
+      <name>Depen Morwani</name>
+    </author>
+    <author>
+      <name>Rosie Zhao</name>
+    </author>
+    <author>
+      <name>Mujin Kwun</name>
+    </author>
+    <author>
+      <name>Itai Shapira</name>
+    </author>
+    <author>
+      <name>David Brandfonbrener</name>
+    </author>
+    <author>
+      <name>Lucas Janson</name>
+    </author>
+    <author>
+      <name>Sham Kakade</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.26327v1</id>
+    <title>Reparametrizing Shampoo and SOAP for Subspace Basis Updates and BFloat16 Storage</title>
+    <updated>2026-05-25T21:03:03Z</updated>
+    <link href="https://arxiv.org/abs/2605.26327v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.26327v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Shampoo-based methods, such as KL-Shampoo and SOAP, have demonstrated strong performance in training neural networks and rely on QR decomposition. Because existing QR implementations require single-precision (FP32) arithmetic and remain computationally expensive, these methods become time- and memory-intensive when their preconditioning matrices are large. Moreover, using BFloat16 (BFP16) storage to reduce memory usage can degrade the performance of Shampoo-based methods. We propose a reparametrization of the preconditioner that supports BFP16 storage and forms a complete basis by combining updated basis vectors with unchanged ones. By updating only part of the basis through QR decomposition in a subspace, our approach reduces computational overhead while mitigating the performance degradation caused by BFP16 storage. Our approach applies broadly to Shampoo-based methods that employ QR decomposition, including KL-Shampoo, SOAP, and KL-SOAP. In particular, it improves the performance of SOAP and KL-SOAP under BFP16 storage, enabling KL-SOAP to match or exceed KL-Shampoo. Overall, our approach makes Shampoo-based methods more memory- and time-efficient.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-25T21:03:03Z</published>
+    <arxiv:comment>Preprint, working in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Alan Milligan</name>
+    </author>
+    <author>
+      <name>Zikun Xu</name>
+    </author>
+    <author>
+      <name>Simon Lacoste-Julien</name>
+    </author>
+    <author>
+      <name>Felix Dangel</name>
+    </author>
+    <author>
+      <name>Wu Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.22938v1</id>
+    <title>Understanding SOAP from the Perspective of Gradient Whitening</title>
+    <updated>2025-09-26T21:13:02Z</updated>
+    <link href="https://arxiv.org/abs/2509.22938v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.22938v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Shampoo with Adam in the Preconditioner's eigenbasis (SOAP) has recently emerged as a promising optimization algorithm for neural network training, achieving superior training efficiency over both Adam and Shampoo in language modeling tasks. In this work, we analyze Adam, Shampoo, and SOAP from the perspective of gradient whitening, interpreting their preconditioners as approximations to the whitening matrix, which captures second-order curvature information. We further establish a theoretical equivalence between idealized versions of SOAP and Shampoo under the Kronecker product assumption. To empirically evaluate these insights, we reproduce the language modeling experiments using nanoGPT and grayscale image colorization. Our results show that SOAP exhibits similar convergence rate as Shampoo, and no significant advantage over both Adam and Shampoo in the final loss achieved, which aligns with their equivalence in theory.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-26T21:13:02Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yanqing Lu</name>
+    </author>
+    <author>
+      <name>Letao Wang</name>
+    </author>
+    <author>
+      <name>Jinbo Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.02620v2</id>
+    <title>Soap-bubble Optimization of Gaits</title>
+    <updated>2016-10-26T01:48:43Z</updated>
+    <link href="https://arxiv.org/abs/1609.02620v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.02620v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we present a geometric variational algorithm for optimizing the gaits of kinematic locomoting systems. The dynamics of this algorithm are analogous to the physics of a soap bubble, with the system's Lie bracket supplying an "inflation pressure" that is balanced by a "surface tension" term derived from a Riemannian metric on the system's shape space. We demonstrate this optimizer on a variety of system geometries (including Purcell's swimmer) and for optimization criteria that include maximizing displacement and efficiency of motion for both translation and turning motions.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-08T23:42:54Z</published>
+    <arxiv:comment>Accepted for the Proceedings of the 55th IEEE Conference on Decision and Control, December 2016</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Suresh Ramasamy</name>
+    </author>
+    <author>
+      <name>Ross L. Hatton</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.04823v3</id>
+    <title>Nearly optimal stability for Serrin's problem and the Soap Bubble theorem</title>
+    <updated>2019-12-16T05:17:25Z</updated>
+    <link href="https://arxiv.org/abs/1903.04823v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.04823v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present new quantitative estimates for the radially symmetric configuration concerning Serrin's overdetermined problem for the torsional rigidity, Alexandrov's Soap Bubble Theorem, and other related problems. The new estimates improve on those obtained in two our previous articles, and are in some cases optimal.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-03-12T10:27:48Z</published>
+    <arxiv:comment>20 pages. The present article contains results obtained in the PhD thesis [arXiv:1902.08584] of the second author of which the first author has been the advisor. The article has been accepted by Calculus of Variations and Partial Differential Equations. This amended version incorporates referee's suggestions. A final version is in print</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Rolando Magnanini</name>
+    </author>
+    <author>
+      <name>Giorgio Poggesi</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,238 @@
+[
+  {
+    "publication_status": "ICML 2025; verified against the PMLR proceedings",
+    "primary_url": "https://proceedings.mlr.press/v267/liu25cn.html",
+    "read_scope": [
+      "Accepted PDF: Section 3, Appendix B checkpoint, C.2, D.3",
+      "arXiv method and discussion",
+      "Official encoder and training forward source"
+    ],
+    "priority": "First: adapt the input-encoder mechanism to existing TabICLv2",
+    "evidence": "A shared input encoder is optimized while the entire TabPFN is frozen; the accepted Appendix D.3 ranks full TabPFNv2 and TabICL above original BETA.",
+    "limitation": "Experiments primarily use TabPFNv1 and accuracy. Neither superiority over TabICLv2 nor LncDrug AUC/AP protection is demonstrated.",
+    "code_url": "https://github.com/LAMDA-Tabular/BETA",
+    "slug": "beta",
+    "title": "TabPFN Unleashed: A Scalable and Effective Solution to Tabular Classification Problems",
+    "authors": [
+      "Liu, Si-Yang",
+      "Ye, Han-Jia"
+    ],
+    "first_posted": "2025/02/04",
+    "arxiv_id": "2502.02527",
+    "read_depth": "Selected full-text methods, results and/or limitations; not an independent reproduction",
+    "fulltext_file": "fulltext/beta.txt",
+    "fulltext_manifest": "beta_fulltext_manifest.json",
+    "accepted_pdf_manifest": "beta_icml_manifest.json",
+    "accepted_pdf_file": "PDFs/Liu_2025_ICML_Beta.pdf"
+  },
+  {
+    "publication_status": "NeurIPS 2024; exact Crossref DOI 10.52202/079017-2654 verified",
+    "read_scope": [
+      "Sections 3–4",
+      "Appendix F small-prompt excerpt",
+      "Official README"
+    ],
+    "priority": "Second: support-conditioned shared prototype generator",
+    "evidence": "Learned context embeddings can be used together with or instead of real context, and can optimize additional objectives.",
+    "limitation": "The paper does not establish that a dataset-specific prompt transfers across the two RNA tasks or protects both ranking metrics.",
+    "code_url": "https://github.com/penfever/TuneTables",
+    "slug": "tunetables",
+    "title": "TuneTables: Context Optimization for Scalable Prior-Data Fitted Networks",
+    "authors": [
+      "Feuer, Benjamin",
+      "Schirrmeister, Robin Tibor",
+      "Cherepanova, Valeriia",
+      "Hegde, Chinmay",
+      "Hutter, Frank",
+      "Goldblum, Micah",
+      "Cohen, Niv",
+      "White, Colin"
+    ],
+    "first_posted": "2024/02/17",
+    "arxiv_id": "2402.11137",
+    "primary_url": "https://arxiv.org/abs/2402.11137",
+    "read_depth": "Selected full-text methods, results and/or limitations; not an independent reproduction",
+    "fulltext_file": "fulltext/tunetables.txt",
+    "fulltext_manifest": "tunetables_fulltext_manifest.json"
+  },
+  {
+    "publication_status": "NIPS 2017, as stated in the official arXiv record",
+    "read_scope": [
+      "Section 3, especially equations 6–8"
+    ],
+    "priority": "Protection mechanism supporting the new adapters",
+    "evidence": "Project an update onto half-spaces defined by gradients of retained training-memory losses.",
+    "limitation": "Local first-order constraints and representative finite memory are assumed; this is not an outer AUC/AP guarantee.",
+    "code_url": "https://github.com/facebookresearch/GradientEpisodicMemory",
+    "slug": "gem",
+    "title": "Gradient Episodic Memory for Continual Learning",
+    "authors": [
+      "Lopez-Paz, David",
+      "Ranzato, Marc'Aurelio"
+    ],
+    "first_posted": "2017/06/26",
+    "arxiv_id": "1706.08840",
+    "primary_url": "https://arxiv.org/abs/1706.08840",
+    "read_depth": "Selected full-text methods, results and/or limitations; not an independent reproduction",
+    "fulltext_file": "fulltext/gem.txt",
+    "fulltext_manifest": "gem_fulltext_manifest.json"
+  },
+  {
+    "publication_status": "2026 preprint",
+    "read_scope": [
+      "Sections II–III, adapter-space constraints and dual solver",
+      "AG News evaluation description and limitations"
+    ],
+    "priority": "Engineering precedent; use a simpler verifiable projection for few constraints",
+    "evidence": "Approximate GEM projection in the LoRA subspace, evaluated on a three-task GPT-2/AG News setup.",
+    "limitation": "The iterative solver is approximate and the evidence does not cover tabular AUC/AP or ncRNA–drug prediction.",
+    "slug": "igem",
+    "title": "GEM-Style Constraints for PEFT with Dual Gradient Projection in LoRA",
+    "authors": [
+      "Tekmen, Brian",
+      "Yin, Jason",
+      "Tong, Qianqian"
+    ],
+    "first_posted": "2026/01/05",
+    "arxiv_id": "2601.02500",
+    "primary_url": "https://arxiv.org/abs/2601.02500",
+    "read_depth": "Selected full-text methods, results and/or limitations; not an independent reproduction",
+    "fulltext_file": "fulltext/igem.txt",
+    "fulltext_manifest": "igem_fulltext_manifest.json"
+  },
+  {
+    "publication_status": "2026 preprint",
+    "read_scope": [
+      "SCAR definition",
+      "Synthetic PU construction",
+      "Unlabeled token and unmasked row attention",
+      "Evaluation setup and limitations",
+      "Official model and inference source"
+    ],
+    "priority": "Longer-term observation-aware PU model, not a direct replacement",
+    "evidence": "Synthetic PU pretraining learns a distinct unlabeled token and joint inference over labeled positives and an unlabeled pool.",
+    "limitation": "SCAR, transductive query dependence, paper feature range up to 20 versus repository range 5–24, and unknown biological class prior.",
+    "code_url": "https://github.com/qinglong-tian/puicl",
+    "code_note": "Bundled latest.pt is listed in the repository tree (14,868,837 bytes), but was not downloaded or run. score_unlabeled returns negative/outlier probability.",
+    "slug": "puicl",
+    "title": "In-Context Positive-Unlabeled Learning",
+    "authors": [
+      "Liu, Siyan",
+      "Chang, Yi",
+      "Cheng, Manli",
+      "Tian, Qinglong",
+      "Li, Pengfei"
+    ],
+    "first_posted": "2026/05/07",
+    "arxiv_id": "2605.05591",
+    "primary_url": "https://arxiv.org/abs/2605.05591",
+    "read_depth": "Selected full-text methods, results and/or limitations; not an independent reproduction",
+    "fulltext_file": "fulltext/puicl.txt",
+    "fulltext_manifest": "puicl_fulltext_manifest.json"
+  },
+  {
+    "publication_status": "2026 preprint",
+    "read_scope": [
+      "Sections 3.3–4",
+      "General-domain Table 3 and discussion",
+      "Limitations",
+      "Appendix E implementation description"
+    ],
+    "priority": "Counter-evidence against repeating knowledge-attention fine-tuning",
+    "evidence": "Knowledge graph feature-attention priors plus LoRA help some nano models; reported general-domain TabICLv2 balanced accuracy declines from 0.763 to 0.749.",
+    "limitation": "Feature columns must map meaningfully to the knowledge graph; current graph-statistic columns are not gene-expression columns.",
+    "code_url": "https://github.com/bkolosk1/knowstfm",
+    "code_note": "Author-linked repository search and minimal README checked; implementation was not audited or run.",
+    "slug": "knowstfm",
+    "title": "KnowsTFM: Knowledge-Informed Fine-Tuning of Small Tabular Foundation Models",
+    "authors": [
+      "Koloski, Boshko",
+      "Jiang, Xiangjian",
+      "Pollak, Senja",
+      "Škrlj, Blaž",
+      "Jamnik, Mateja",
+      "Simidjievski, Nikola"
+    ],
+    "first_posted": "2026/06/29",
+    "arxiv_id": "2606.30258",
+    "primary_url": "https://arxiv.org/abs/2606.30258",
+    "read_depth": "Selected full-text methods, results and/or limitations; not an independent reproduction",
+    "fulltext_file": "fulltext/knowstfm.txt",
+    "fulltext_manifest": "knowstfm_fulltext_manifest.json"
+  },
+  {
+    "publication_status": "2026 preprint",
+    "read_scope": [
+      "Section 4 and Algorithm 1",
+      "Section 6 and limitations"
+    ],
+    "priority": "Optional context diversity mechanism; not the primary improvement route",
+    "evidence": "Query clustering and MMD retrieval trade off relevance and redundancy at a fixed context budget.",
+    "limitation": "Needs the full query batch; the paper notes cached-centroid streaming may diminish distribution-matching advantages. No official repository was located in the performed search.",
+    "slug": "crumb",
+    "title": "CRUMB: Efficient Prior Fitted Network Inference via Distributionally Matched Context Batching",
+    "authors": [
+      "Heredge, Jamie",
+      "Villani, Mattia J.",
+      "Deshpande, Pranav",
+      "Seshadri, Akshay",
+      "Kumar, Niraj"
+    ],
+    "first_posted": "2026/06/09",
+    "arxiv_id": "2606.11473",
+    "primary_url": "https://arxiv.org/abs/2606.11473",
+    "read_depth": "Selected full-text methods, results and/or limitations; not an independent reproduction",
+    "fulltext_file": "fulltext/crumb.txt",
+    "fulltext_manifest": "crumb_fulltext_manifest.json"
+  },
+  {
+    "publication_status": "2026 preprint",
+    "read_scope": [
+      "Sections 3.2–3.4",
+      "Sections 4.2–4.3",
+      "Appendix A training details"
+    ],
+    "priority": "Interpretability and diagnostic alternative",
+    "evidence": "Reprocess support rows as queries to obtain symmetric embeddings and use an explicit kernel label readout, with synthetic-task fine-tuning.",
+    "limitation": "Competitive average accuracy is not strict non-degradation; additional fine-tuning and calibration overhead are required. No official repository was located in the performed search.",
+    "slug": "kernelicl",
+    "title": "Interpretable Tabular Foundation Models via In-Context Kernel Regression",
+    "authors": [
+      "Miftachov, Ratmir",
+      "Charron, Bruno",
+      "Valentin, Simon"
+    ],
+    "first_posted": "2026/02/02",
+    "arxiv_id": "2602.02162",
+    "primary_url": "https://arxiv.org/abs/2602.02162",
+    "read_depth": "Selected full-text methods, results and/or limitations; not an independent reproduction",
+    "fulltext_file": "fulltext/kernelicl.txt",
+    "fulltext_manifest": "kernelicl_fulltext_manifest.json"
+  },
+  {
+    "publication_status": "2026 preprint",
+    "read_scope": [
+      "Methodology including equations 2–11",
+      "Experimental setup"
+    ],
+    "priority": "Experiment-management precedent, not a new prediction backbone",
+    "evidence": "Validate external repairs, use deployment evidence for activation, and retain fallback and failed-route records.",
+    "limitation": "Tolerance and harm-rate criteria differ from the user’s strict two-metric rule; controlled boundary tasks and a limited electricity setting do not establish ncRNA–drug improvement.",
+    "slug": "skilltfm",
+    "title": "SkillTFM: Gated Skill Evolution for Training-Free Adaptation of Tabular Foundation Models",
+    "authors": [
+      "He, Yi",
+      "Guan, Zhengkang",
+      "Wu, Anpeng",
+      "Cui, Peng",
+      "Wu, Fei",
+      "Kuang, Kun"
+    ],
+    "first_posted": "2026/08/06",
+    "arxiv_id": "2608.06137",
+    "primary_url": "https://arxiv.org/abs/2608.06137",
+    "read_depth": "Selected full-text methods, results and/or limitations; not an independent reproduction",
+    "fulltext_file": "fulltext/skilltfm.txt",
+    "fulltext_manifest": "skilltfm_fulltext_manifest.json"
+  }
+]

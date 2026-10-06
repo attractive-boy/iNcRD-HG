@@ -1,0 +1,626 @@
+{
+  "created_at_utc": "2026-09-16T02:36:49.074367+00:00",
+  "queries": [
+    {
+      "source": "arxiv_nbf_exact",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3ANBFNet&sortBy=lastUpdatedDate&sortOrder=descending&max_results=16",
+      "status": 200,
+      "file": "improve/research/path_reasoning_next_20260916/arxiv_nbf_exact_v3.xml",
+      "results": [
+        {
+          "title": "GRATE: Temporal Extensions for Inductive KG Foundation Models via Gated Rotary Attention",
+          "id": "http://arxiv.org/abs/2607.10197v1",
+          "published": "2026-07-11T08:22:17Z",
+          "summary": "Knowledge graph foundation models such as Ultra and Trix achieve strong inductive transfer by learning relation-graph representations that generalise to unseen entities and relations. Extending this transferability to temporal knowledge graphs (TKGs) remains challenging: existing temporal models tie their parameters to dataset-specific entities, relations, or timestamps and are not designed to transfer to TKGs with disjoint vocabularies. We propose GRATE (Gated Rotary Attention for Temporal Encoding), an entity-side message function that adds no learnable parameters and encodes time through relative time differences by rotating each edge message according to its time gap to the query and applying a query-conditioned gate to select temporally relevant signals. GRATE integrates into NBFNet-style KG foundation models while preserving structural transferability. Existing TKG benchmarks evaluate within shared train/test vocabularies and cannot directly test cross-dataset temporal transfer; we therefore construct GDELTIndT and WIKIIndT, inductive transfer benchmark suites with disjoint entities, relations, and timestamps spanning both interpolation and extrapolation. Across these benchmarks and held-out forecasting datasets, a single jointly pretrained GRATE checkpoint improves over the static base model in most settings."
+        },
+        {
+          "title": "KGPFN: Unlocking the Potential of Knowledge Graph Foundation Model via In-Context Learning",
+          "id": "http://arxiv.org/abs/2605.14907v1",
+          "published": "2026-05-14T14:41:19Z",
+          "summary": "Knowledge graph (KG) foundation models aim to generalize across graphs with unseen entities and relations by learning transferable relational structure. However, most existing methods primarily emphasize relation-level universality, while in-context learning, the other pillar of foundation models remains under-explored for KG reasoning. In KGs, context is inherently structured and heterogeneous: effective prediction requires conditioning on the local context around the query entities as well as the global context that summarizes how a relation behaves across many instances. We propose KGPFN, a KG foundation model using Prior-data Fitted Network that unifies transferable relational regularities with inference-time in-context learning from structured context. KGPFN first learns relation representations via message passing on relation graphs to capture cross-graph relational invariances. For query-specific reasoning, it encodes local neighborhoods using a multi-layer NBFNet as local context. To enable ICL at global scale, it constructs relation-specific global context by retrieving a large set of instances of the query relation together with their local neighborhoods, and aggregates them within a Prior-Data Fitted Network framework that combines feature-level and sample-level attention. Through multi-graph pretraining on diverse KGs, KGPFN learns when to instantiate reusable patterns and when to override them using contextual evidence. Experiments on 57 KG benchmarks demonstrate that KGPFN achieves strong adaptation to previously unseen graphs through in-context learning alone, consistently outperforming competitive fine-tuned KG foundation models. Our code is available at https://github.com/HKUST-KnowComp/KGPFN."
+        },
+        {
+          "title": "AlertStar: Path-Aware Alert Prediction on Hyper-Relational Knowledge Graphs",
+          "id": "http://arxiv.org/abs/2604.03104v1",
+          "published": "2026-04-03T15:26:51Z",
+          "summary": "Cyber-attacks continue to grow in scale and sophistication, yet existing network intrusion detection approaches lack the semantic depth required for path reasoning over attacker-victim interactions. We address this by first modelling network alerts as a knowledge graph, then formulating hyper-relational alert prediction as a hyper-relational knowledge graph completion (HR-KGC) problem, representing each network alert as a qualified statement (h, r, t, Q), where h and t are source and destination IPs, r denotes the attack type, and Q encodes flow-level metadata such as timestamps, ports, protocols, and attack intensity, going beyond standard KGC binary triples (h, r, t) that would discard this contextual richness. We introduce five models across three contributions: first, Hyper-relational Neural Bellman-Ford (HR-NBFNet) extends Neural Bellman-Ford Networks to the hyper-relational setting with qualifier-aware multi-hop path reasoning, while its multi-task variant MT-HR-NBFNet jointly predicts tail, relation, and qualifier-value within a single traversal pass; second, AlertStar fuses qualifier context and structural path information entirely in embedding space via cross-attention and learned path composition, and its multi-task extension MT-AlertStar eliminates the overhead of full knowledge graph propagation; third, HR-NBFNet-CQ extends qualifier-aware representations to answer complex first-order logic queries, including one-hop, two-hop chain, two-anchor intersection, and union, enabling multi-condition threat reasoning over the alert knowledge graph. Evaluated inductively on the Warden and UNSW-NB15 benchmarks across three qualifier-density regimes, AlertStar and MT-AlertStar achieve superior MR, MRR, and Hits@k, demonstrating that local qualifier fusion is both sufficient and more efficient than global path propagation for hyper-relational alert prediction."
+        },
+        {
+          "title": "Visual-Informed Speech Enhancement Using Attention-Based Beamforming",
+          "id": "http://arxiv.org/abs/2603.05270v1",
+          "published": "2026-03-05T15:19:41Z",
+          "summary": "Recent studies have demonstrated that incorporating auxiliary information, such as speaker voiceprint or visual cues, can substantially improve Speech Enhancement (SE) performance. However, single-channel methods often yield suboptimal results in low signal-to-noise ratio (SNR) conditions, when there is high reverberation, or in complex scenarios involving dynamic speakers, overlapping speech, or non-stationary noise. To address these issues, we propose a novel Visual-Informed Neural Beamforming Network (VI-NBFNet), which integrates microphone array signal processing and deep neural networks (DNNs) using multimodal input features. The proposed network leverages a pretrained visual speech recognition model to extract lip movements as input features, which serve for voice activity detection (VAD) and target speaker identification. The system is intended to handle both static and moving speakers by introducing a supervised end-to-end beamforming framework equipped with an attention mechanism. The experimental results demonstrated that the proposed audiovisual system has achieved better SE performance and robustness for both stationary and dynamic speaker scenarios, compared to several baseline methods."
+        },
+        {
+          "title": "A*Net and NBFNet Learn Negative Patterns on Knowledge Graphs",
+          "id": "http://arxiv.org/abs/2412.05114v1",
+          "published": "2024-12-06T15:15:18Z",
+          "summary": "In this technical report, we investigate the predictive performance differences of a rule-based approach and the GNN architectures NBFNet and A*Net with respect to knowledge graph completion. For the two most common benchmarks, we find that a substantial fraction of the performance difference can be explained by one unique negative pattern on each dataset that is hidden from the rule-based approach. Our findings add a unique perspective on the performance difference of different model classes for knowledge graph completion: Models can achieve a predictive performance advantage by penalizing scores of incorrect facts opposed to providing high scores for correct facts."
+        },
+        {
+          "title": "Inductive Knowledge Graph Completion with GNNs and Rules: An Analysis",
+          "id": "http://arxiv.org/abs/2308.07942v2",
+          "published": "2023-08-14T21:01:29Z",
+          "summary": "The task of inductive knowledge graph completion requires models to learn inference patterns from a training graph, which can then be used to make predictions on a disjoint test graph. Rule-based methods seem like a natural fit for this task, but in practice they significantly underperform state-of-the-art methods based on Graph Neural Networks (GNNs), such as NBFNet. We hypothesise that the underperformance of rule-based methods is due to two factors: (i) implausible entities are not ranked at all and (ii) only the most informative path is taken into account when determining the confidence in a given link prediction answer. To analyse the impact of these factors, we study a number of variants of a rule-based approach, which are specifically aimed at addressing the aforementioned issues. We find that the resulting models can achieve a performance which is close to that of NBFNet. Crucially, the considered variants only use a small fraction of the evidence that NBFNet relies on, which means that they largely keep the interpretability advantage of rule-based methods. Moreover, we show that a further variant, which does look at the full KG, consistently outperforms NBFNet."
+        },
+        {
+          "title": "Neural Bellman-Ford Networks: A General Graph Neural Network Framework for Link Prediction",
+          "id": "http://arxiv.org/abs/2106.06935v4",
+          "published": "2021-06-13T07:03:34Z",
+          "summary": "Link prediction is a very fundamental task on graphs. Inspired by traditional path-based methods, in this paper we propose a general and flexible representation learning framework based on paths for link prediction. Specifically, we define the representation of a pair of nodes as the generalized sum of all path representations, with each path representation as the generalized product of the edge representations in the path. Motivated by the Bellman-Ford algorithm for solving the shortest path problem, we show that the proposed path formulation can be efficiently solved by the generalized Bellman-Ford algorithm. To further improve the capacity of the path formulation, we propose the Neural Bellman-Ford Network (NBFNet), a general graph neural network framework that solves the path formulation with learned operators in the generalized Bellman-Ford algorithm. The NBFNet parameterizes the generalized Bellman-Ford algorithm with 3 neural components, namely INDICATOR, MESSAGE and AGGREGATE functions, which corresponds to the boundary condition, multiplication operator, and summation operator respectively. The NBFNet is very general, covers many traditional path-based methods, and can be applied to both homogeneous graphs and multi-relational graphs (e.g., knowledge graphs) in both transductive and inductive settings. Experiments on both homogeneous graphs and knowledge graphs show that the proposed NBFNet outperforms existing methods by a large margin in both transductive and inductive settings, achieving new state-of-the-art results."
+        }
+      ]
+    },
+    {
+      "source": "prototype_openalex",
+      "url": "https://api.openalex.org/works/https://doi.org/10.1109/tkde.2026.3731869",
+      "status": 200,
+      "file": "improve/research/path_reasoning_next_20260916/prototype_openalex_v3.json",
+      "results": [
+        {
+          "id": "https://openalex.org/W7211870777",
+          "doi": "https://doi.org/10.1109/tkde.2026.3731869",
+          "title": "Self-Explaining Graph Neural Network for Link Prediction Based on Path-Aware Prototype Learning",
+          "display_name": "Self-Explaining Graph Neural Network for Link Prediction Based on Path-Aware Prototype Learning",
+          "publication_year": 2026,
+          "publication_date": "2026-01-01",
+          "ids": {
+            "openalex": "https://openalex.org/W7211870777",
+            "doi": "https://doi.org/10.1109/tkde.2026.3731869"
+          },
+          "language": null,
+          "primary_location": {
+            "id": "doi:10.1109/tkde.2026.3731869",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1109/tkde.2026.3731869",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S30698027",
+              "display_name": "IEEE Transactions on Knowledge and Data Engineering",
+              "issn_l": "1041-4347",
+              "issn": [
+                "1041-4347",
+                "1558-2191",
+                "2326-3865"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "host_organization": "https://openalex.org/P4310320439",
+              "host_organization_name": "IEEE Computer Society",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320439",
+                "https://openalex.org/P4310319808"
+              ],
+              "host_organization_lineage_names": [
+                "IEEE Computer Society",
+                "Institute of Electrical and Electronics Engineers"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "IEEE Transactions on Knowledge and Data Engineering",
+            "raw_type": "journal-article"
+          },
+          "type": "article",
+          "indexed_in": [
+            "crossref"
+          ],
+          "open_access": {
+            "is_oa": false,
+            "oa_status": "closed",
+            "oa_url": null,
+            "any_repository_has_fulltext": false
+          },
+          "authorships": [
+            {
+              "author_position": "first",
+              "author": {
+                "id": "https://openalex.org/A5150651406",
+                "display_name": "Zhiyang Li",
+                "orcid": null
+              },
+              "institutions": [
+                {
+                  "id": "https://openalex.org/I157773358",
+                  "display_name": "Sun Yat-sen University",
+                  "ror": "https://ror.org/0064kty71",
+                  "country_code": "CN",
+                  "type": "education",
+                  "lineage": [
+                    "https://openalex.org/I157773358"
+                  ]
+                }
+              ],
+              "countries": [
+                "CN"
+              ],
+              "is_corresponding": false,
+              "raw_author_name": "Zhiyang Li",
+              "raw_affiliation_strings": [
+                "Sun Yat-sen University"
+              ],
+              "raw_orcid": null,
+              "affiliations": [
+                {
+                  "raw_affiliation_string": "Sun Yat-sen University",
+                  "institution_ids": [
+                    "https://openalex.org/I157773358"
+                  ]
+                }
+              ]
+            },
+            {
+              "author_position": "middle",
+              "author": {
+                "id": "https://openalex.org/A5004661443",
+                "display_name": "伊广灿",
+                "orcid": null
+              },
+              "institutions": [
+                {
+                  "id": "https://openalex.org/I157773358",
+                  "display_name": "Sun Yat-sen University",
+                  "ror": "https://ror.org/0064kty71",
+                  "country_code": "CN",
+                  "type": "education",
+                  "lineage": [
+                    "https://openalex.org/I157773358"
+                  ]
+                }
+              ],
+              "countries": [
+                "CN"
+              ],
+              "is_corresponding": false,
+              "raw_author_name": "Yancan Yi",
+              "raw_affiliation_strings": [
+                "Sun Yat-sen University"
+              ],
+              "raw_orcid": null,
+              "affiliations": [
+                {
+                  "raw_affiliation_string": "Sun Yat-sen University",
+                  "institution_ids": [
+                    "https://openalex.org/I157773358"
+                  ]
+                }
+              ]
+            },
+            {
+              "author_position": "middle",
+              "author": {
+                "id": "https://openalex.org/A5150638055",
+                "display_name": "Guannan Du",
+                "orcid": null
+              },
+              "institutions": [
+                {
+                  "id": "https://openalex.org/I157773358",
+                  "display_name": "Sun Yat-sen University",
+                  "ror": "https://ror.org/0064kty71",
+                  "country_code": "CN",
+                  "type": "education",
+                  "lineage": [
+                    "https://openalex.org/I157773358"
+                  ]
+                }
+              ],
+              "countries": [
+                "CN"
+              ],
+              "is_corresponding": false,
+              "raw_author_name": "Guannan Du",
+              "raw_affiliation_strings": [
+                "Sun Yat-sen University"
+              ],
+              "raw_orcid": null,
+              "affiliations": [
+                {
+                  "raw_affiliation_string": "Sun Yat-sen University",
+                  "institution_ids": [
+                    "https://openalex.org/I157773358"
+                  ]
+                }
+              ]
+            },
+            {
+              "author_position": "middle",
+              "author": {
+                "id": "https://openalex.org/A5100615783",
+                "display_name": "Yuxing Wang",
+                "orcid": "https://orcid.org/0000-0003-4510-2783"
+              },
+              "institutions": [
+                {
+                  "id": "https://openalex.org/I157773358",
+                  "display_name": "Sun Yat-sen University",
+                  "ror": "https://ror.org/0064kty71",
+                  "country_code": "CN",
+                  "type": "education",
+                  "lineage": [
+                    "https://openalex.org/I157773358"
+                  ]
+                }
+              ],
+              "countries": [
+                "CN"
+              ],
+              "is_corresponding": false,
+              "raw_author_name": "Yuxing Wang",
+              "raw_affiliation_strings": [
+                "Sun Yat-sen University"
+              ],
+              "raw_orcid": null,
+              "affiliations": [
+                {
+                  "raw_affiliation_string": "Sun Yat-sen University",
+                  "institution_ids": [
+                    "https://openalex.org/I157773358"
+                  ]
+                }
+              ]
+            },
+            {
+              "author_position": "last",
+              "author": {
+                "id": "https://openalex.org/A5103089044",
+                "display_name": "Zhiming Dai",
+                "orcid": "https://orcid.org/0000-0001-6211-6568"
+              },
+              "institutions": [
+                {
+                  "id": "https://openalex.org/I157773358",
+                  "display_name": "Sun Yat-sen University",
+                  "ror": "https://ror.org/0064kty71",
+                  "country_code": "CN",
+                  "type": "education",
+                  "lineage": [
+                    "https://openalex.org/I157773358"
+                  ]
+                }
+              ],
+              "countries": [
+                "CN"
+              ],
+              "is_corresponding": false,
+              "raw_author_name": "Zhiming Dai",
+              "raw_affiliation_strings": [
+                "Sun Yat-sen University"
+              ],
+              "raw_orcid": null,
+              "affiliations": [
+                {
+                  "raw_affiliation_string": "Sun Yat-sen University",
+                  "institution_ids": [
+                    "https://openalex.org/I157773358"
+                  ]
+                }
+              ]
+            }
+          ],
+          "institutions": [],
+          "countries_distinct_count": 1,
+          "institutions_distinct_count": 1,
+          "corresponding_author_ids": [],
+          "corresponding_institution_ids": [
+            "https://openalex.org/I157773358"
+          ],
+          "apc_list": {
+            "value": 2645,
+            "currency": "USD",
+            "value_usd": 2645
+          },
+          "apc_paid": null,
+          "fwci": 0.0,
+          "has_fulltext": false,
+          "cited_by_count": 0,
+          "citation_normalized_percentile": {
+            "value": 0.90907756,
+            "is_in_top_1_percent": false,
+            "is_in_top_10_percent": true
+          },
+          "cited_by_percentile_year": null,
+          "biblio": {
+            "volume": null,
+            "issue": null,
+            "first_page": "1",
+            "last_page": "13"
+          },
+          "is_retracted": false,
+          "is_paratext": false,
+          "is_xpac": false,
+          "primary_topic": {
+            "id": "https://openalex.org/T11273",
+            "display_name": "Advanced Graph Neural Networks",
+            "score": 0.9230999946594238,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1702",
+              "display_name": "Artificial Intelligence"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          "topics": [
+            {
+              "id": "https://openalex.org/T11273",
+              "display_name": "Advanced Graph Neural Networks",
+              "score": 0.9230999946594238,
+              "subfield": {
+                "id": "https://openalex.org/subfields/1702",
+                "display_name": "Artificial Intelligence"
+              },
+              "field": {
+                "id": "https://openalex.org/fields/17",
+                "display_name": "Computer Science"
+              },
+              "domain": {
+                "id": "https://openalex.org/domains/3",
+                "display_name": "Physical Sciences"
+              }
+            },
+            {
+              "id": "https://openalex.org/T12292",
+              "display_name": "Graph Theory and Algorithms",
+              "score": 0.01720000058412552,
+              "subfield": {
+                "id": "https://openalex.org/subfields/1707",
+                "display_name": "Computer Vision and Pattern Recognition"
+              },
+              "field": {
+                "id": "https://openalex.org/fields/17",
+                "display_name": "Computer Science"
+              },
+              "domain": {
+                "id": "https://openalex.org/domains/3",
+                "display_name": "Physical Sciences"
+              }
+            },
+            {
+              "id": "https://openalex.org/T12026",
+              "display_name": "Explainable Artificial Intelligence (XAI)",
+              "score": 0.012000000104308128,
+              "subfield": {
+                "id": "https://openalex.org/subfields/1702",
+                "display_name": "Artificial Intelligence"
+              },
+              "field": {
+                "id": "https://openalex.org/fields/17",
+                "display_name": "Computer Science"
+              },
+              "domain": {
+                "id": "https://openalex.org/domains/3",
+                "display_name": "Physical Sciences"
+              }
+            }
+          ],
+          "keywords": [
+            {
+              "id": "https://openalex.org/keywords/artificial-neural-network",
+              "display_name": "Artificial neural network",
+              "score": 0.5827000141143799
+            },
+            {
+              "id": "https://openalex.org/keywords/graph",
+              "display_name": "Graph",
+              "score": 0.4530999958515167
+            },
+            {
+              "id": "https://openalex.org/keywords/link",
+              "display_name": "Link (geometry)",
+              "score": 0.4284999966621399
+            },
+            {
+              "id": "https://openalex.org/keywords/time-delay-neural-network",
+              "display_name": "Time delay neural network",
+              "score": 0.335999995470047
+            },
+            {
+              "id": "https://openalex.org/keywords/deep-learning",
+              "display_name": "Deep learning",
+              "score": 0.29580000042915344
+            },
+            {
+              "id": "https://openalex.org/keywords/backpropagation",
+              "display_name": "Backpropagation",
+              "score": 0.2903999984264374
+            },
+            {
+              "id": "https://openalex.org/keywords/data-modeling",
+              "display_name": "Data modeling",
+              "score": 0.28040000796318054
+            }
+          ],
+          "concepts": [
+            {
+              "id": "https://openalex.org/C41008148",
+              "wikidata": "https://www.wikidata.org/wiki/Q21198",
+              "display_name": "Computer science",
+              "level": 0,
+              "score": 0.8567000031471252
+            },
+            {
+              "id": "https://openalex.org/C50644808",
+              "wikidata": "https://www.wikidata.org/wiki/Q192776",
+              "display_name": "Artificial neural network",
+              "level": 2,
+              "score": 0.5827000141143799
+            },
+            {
+              "id": "https://openalex.org/C154945302",
+              "wikidata": "https://www.wikidata.org/wiki/Q11660",
+              "display_name": "Artificial intelligence",
+              "level": 1,
+              "score": 0.5746999979019165
+            },
+            {
+              "id": "https://openalex.org/C132525143",
+              "wikidata": "https://www.wikidata.org/wiki/Q141488",
+              "display_name": "Graph",
+              "level": 2,
+              "score": 0.4530999958515167
+            },
+            {
+              "id": "https://openalex.org/C2778753846",
+              "wikidata": "https://www.wikidata.org/wiki/Q6554239",
+              "display_name": "Link (geometry)",
+              "level": 2,
+              "score": 0.4284999966621399
+            },
+            {
+              "id": "https://openalex.org/C119857082",
+              "wikidata": "https://www.wikidata.org/wiki/Q2539",
+              "display_name": "Machine learning",
+              "level": 1,
+              "score": 0.375
+            },
+            {
+              "id": "https://openalex.org/C175202392",
+              "wikidata": "https://www.wikidata.org/wiki/Q2434543",
+              "display_name": "Time delay neural network",
+              "level": 3,
+              "score": 0.335999995470047
+            },
+            {
+              "id": "https://openalex.org/C108583219",
+              "wikidata": "https://www.wikidata.org/wiki/Q197536",
+              "display_name": "Deep learning",
+              "level": 2,
+              "score": 0.29580000042915344
+            },
+            {
+              "id": "https://openalex.org/C155032097",
+              "wikidata": "https://www.wikidata.org/wiki/Q798503",
+              "display_name": "Backpropagation",
+              "level": 3,
+              "score": 0.2903999984264374
+            },
+            {
+              "id": "https://openalex.org/C124101348",
+              "wikidata": "https://www.wikidata.org/wiki/Q172491",
+              "display_name": "Data mining",
+              "level": 1,
+              "score": 0.29030001163482666
+            },
+            {
+              "id": "https://openalex.org/C67186912",
+              "wikidata": "https://www.wikidata.org/wiki/Q367664",
+              "display_name": "Data modeling",
+              "level": 2,
+              "score": 0.28040000796318054
+            },
+            {
+              "id": "https://openalex.org/C153180895",
+              "wikidata": "https://www.wikidata.org/wiki/Q7148389",
+              "display_name": "Pattern recognition (psychology)",
+              "level": 2,
+              "score": 0.2800000011920929
+            },
+            {
+              "id": "https://openalex.org/C88230418",
+              "wikidata": "https://www.wikidata.org/wiki/Q131476",
+              "display_name": "Graph theory",
+              "level": 2,
+              "score": 0.2784999907016754
+            },
+            {
+              "id": "https://openalex.org/C147168706",
+              "wikidata": "https://www.wikidata.org/wiki/Q1457734",
+              "display_name": "Recurrent neural network",
+              "level": 3,
+              "score": 0.2759000062942505
+            },
+            {
+              "id": "https://openalex.org/C177973122",
+              "wikidata": "https://www.wikidata.org/wiki/Q7860946",
+              "display_name": "Types of artificial neural networks",
+              "level": 4,
+              "score": 0.2676999866962433
+            },
+            {
+              "id": "https://openalex.org/C51675839",
+              "wikidata": "https://www.wikidata.org/wiki/Q1665681",
+              "display_name": "Intelligent Network",
+              "level": 2,
+              "score": 0.2599000036716461
+            },
+            {
+              "id": "https://openalex.org/C51632099",
+              "wikidata": "https://www.wikidata.org/wiki/Q3985153",
+              "display_name": "Training set",
+              "level": 2,
+              "score": 0.25760000944137573
+            }
+          ],
+          "mesh": [],
+          "locations_count": 1,
+          "locations": [
+            {
+              "id": "doi:10.1109/tkde.2026.3731869",
+              "is_oa": false,
+              "landing_page_url": "https://doi.org/10.1109/tkde.2026.3731869",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S30698027",
+                "display_name": "IEEE Transactions on Knowledge and Data Engineering",
+                "issn_l": "1041-4347",
+                "issn": [
+                  "1041-4347",
+                  "1558-2191",
+                  "2326-3865"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310320439",
+                "host_organization_name": "IEEE Computer Society",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310320439",
+                  "https://openalex.org/P4310319808"
+                ],
+                "host_organization_lineage_names": [
+                  "IEEE Computer Society",
+                  "Institute of Electrical and Electronics Engineers"
+                ],
+                "type": "journal"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "IEEE Transactions on Knowledge and Data Engineering",
+              "raw_type": "journal-article"
+            }
+          ],
+          "best_oa_location": null,
+          "sustainable_development_goals": [],
+          "awards": [],
+          "funders": [],
+          "has_content": {
+            "pdf": false,
+            "grobid_xml": false
+          },
+          "content_urls": null,
+          "referenced_works_count": 0,
+          "referenced_works": [],
+          "related_works": [],
+          "abstract_inverted_index": null,
+          "counts_by_year": [],
+          "updated_date": "2026-09-08T07:41:39.490200",
+          "created_date": "2026-09-08T00:00:00"
+        }
+      ]
+    }
+  ]
+}

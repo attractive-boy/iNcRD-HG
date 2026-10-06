@@ -1,0 +1,1101 @@
+[
+  {
+    "key": "link",
+    "url": "https://export.arxiv.org/api/query?search_query=ti%3A%22link+prediction%22+AND+submittedDate%3A%5B202501010000+TO+202609162359%5D&max_results=30&sortBy=submittedDate&sortOrder=descending",
+    "accessed_at_utc": "2026-09-16T11:59:34.388755+00:00",
+    "status": 200,
+    "sha256": "231b8b70c656e5f7329cd9e496c07d01566b68e599104d06ab67570615208769",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2609.11347v1",
+        "title": "Reification as a Transferable Vocabulary: Zero-Shot Link Prediction with Vanilla GNNs",
+        "published": "2026-09-10T10:26:09Z",
+        "updated": "2026-09-10T10:26:09Z",
+        "summary": "Knowledge graph foundation models such as ULTRA achieve zero-shot link prediction on unseen graphs through dedicated architectures that hard-code a transfer mechanism. In this work we move that mechanism out of the architecture and into the representation, by \\emph{reifying} the input graph: every fact becomes a node, connected to its subject, object, and relation type through a fixed vocabulary of six meta-relations, with relation types as anonymous shared nodes rather than model parameters. On this representation, five textbook GNNs (GAT, GINE with sum and with mean+max aggregation, GraphSAGE, R-GCN), each trained on a single knowledge graph of 4,245 triples for 30 minutes on one NVIDIA A100, transfer zero-shot to 40 inductive link-prediction benchmarks. The best of them, an off-the-shelf GAT, matches ULTRA, a dedicated foundation model pretrained on three graphs, across ULTRA's own evaluation suite. The same fixed vocabulary extends to relational databases, a row becoming an entity and a foreign-key column a relation type; a preliminary probe on two unseen databases, with no cell values, schema text or in-context labels, shows a model of this family pretrained on three knowledge graphs ranking foreign-key targets far above random-initialization and degree controls. We release the code, the checkpoints, and the evaluation pipeline for all 40 benchmarks."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.09658v1",
+        "title": "Link prediction in complex networks via fusing node centrality and local similarity indices",
+        "published": "2026-09-09T03:15:51Z",
+        "updated": "2026-09-09T03:15:51Z",
+        "summary": "Local similarity indices are widely used in link prediction on complex networks owing to their low computational cost; however, in sparse networks they assign a zero score to every node pair lacking common neighbors, which severely limits their predictive power. A natural remedy is to fuse node centrality indices with local similarity indices: the former provide global importance for the node pair, while the latter capture fine-grained local topology, and the two can be combined into complementary scores within a unified framework. This paper uses PageRank and DomiRank as two representative centrality measures and constructs a centrality--local-similarity fusion framework. The PageRank-based fusion proposed by Charikhi is first generalized to seven classical local similarity indices, and the universality of its improvement is systematically verified on nine real-world network datasets. Furthermore, the DomiRank centrality is introduced to build the DR-MD series of fused indices under a unified weighting coefficient, which overcomes the drawback that the PageRank-based fusion requires index-by-index weight tuning. Results of five-fold cross-validation together with Wilcoxon signed-rank tests show that, under the unified experimental protocol, all DR-MD indices consistently outperform the corresponding local baselines and their PR-MD counterparts on all nine datasets ($p=0.002$), and that the improvements remain robust against perturbations of $σ$ and the weighting coefficients within the near-critical parameter plateau; in particular, DR-RA achieves an average AUC of 0.7084, surpassing global methods such as Katz and RWR as well as several advanced similarity indices. The framework is inherently extensible, and its fusion paradigm can be straightforwardly generalized to couple other node centrality indices with local similarity indices."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.02638v1",
+        "title": "Oracle, will I ever learn? A study of prediction convergence and complementarity across link prediction models",
+        "published": "2026-09-02T14:14:36Z",
+        "updated": "2026-09-02T14:14:36Z",
+        "summary": "Knowledge graphs have become an important source of structured knowledge for Web applications, including search, question answering, and recommender systems. In these applications, link prediction can serve either as a prediction task itself or as a means to enrich incomplete knowledge graphs for downstream tasks. Interestingly, different link prediction models, or even different training runs of the same model, can produce substantially different predictions for the same query. This suggests a variability in the capture of the underlying knowledge by models, thus raising a fundamental question: to what extent do different models capture complementary knowledge, and how much of this knowledge could be recovered by combining them? We propose to measure model complementarity through the performance of an oracle that, for each query, selects the best prediction among a considered set of models, hence providing an upper bound on the performance achievable through model combination. Across several architectures and benchmarks, we find a substantial gap between individual models and their oracle, revealing that different models capture complementary knowledge. Yet, this complementarity rapidly saturates as more models are added, leaving a persistent subset of queries unsolved even by a large number of models. These findings reveal both the potential of model complementarity and a fundamental limit to what current link prediction models can collectively recover; thereby highlighting the need for further research to build robust Web applications."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.22981v1",
+        "title": "Hierarchy-Aware Semantic Losses for Knowledge Graph Link Prediction",
+        "published": "2026-08-24T08:40:50Z",
+        "updated": "2026-08-24T08:40:50Z",
+        "summary": "Knowledge graphs are often accompanied by ontological class hierarchies that encode valuable semantic information, yet many link prediction methods either ignore such hierarchies or incorporate them indirectly through additional graph edges. Recent work introduced hierarchy-aware graph neural networks (GNNs), which use semantic losses derived from box embeddings to encourage satisfaction of subclass relationships during GNN-based representation learning. While this approach has shown promise for biological regression tasks, its effectiveness for knowledge graph link prediction has not been investigated. In this paper we evaluate hierarchy-aware semantic losses on link prediction across three benchmark datasets: AIFB, CoDEx, and BioKG. We combine graph neural network encoders with box-embedding-based semantic losses that encourage learned representations to better satisfy ontology-derived class hierarchies, and compare this approach to both standard link prediction models and models incorporating subclass relations as graph edges. Across all datasets, hierarchy-aware semantic losses significantly improve mean reciprocal rank (MRR) and consistently outperform models that incorporate hierarchy information through additional subclass edges. Relative to the baseline GNN models, MRR improved by 7.6%, 2.4%, and 15.5% on AIFB, CoDEx, and BioKG, respectively. Furthermore, semantic losses consistently outperform the alternative of augmenting the graph with subclass edges. These results are consistent with ontology-derived class hierarchies providing complementary information to graph structure, and suggest that encouraging hierarchical consistency through semantic losses is an effective and comparatively parameter-efficient mechanism for improving knowledge graph link prediction."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.22727v1",
+        "title": "HAWKEYE: Seeing One Layer Deeper -- A Cohesion-Aware Structural Channel for Temporal Link Prediction",
+        "published": "2026-08-24T02:31:24Z",
+        "updated": "2026-08-24T02:31:24Z",
+        "summary": "State-of-the-art temporal-link-prediction (TLP) models are, in essence, multi-channel information aggregators: they combine an interaction-history channel, a time-encoding channel, and a structure channel. The first two have been refined relentlessly; the structure channel remains a crude afterthought -- DyGFormer encodes it as a 1--2-bit neighbour-cooccurrence count. We begin with a measurement: on sparse temporal graphs the classical 1-hop common-neighbour signal is near-random (discriminative AUC $\\approx 0.50$), because two nodes almost never share a direct neighbour; the genuinely discriminative signal lies one hop deeper -- the 2-hop cohesive bridge, whose discAUC reaches 0.73--0.98, on both bipartite and non-bipartite graphs. Motivated by this, we propose HAWKEYE, a cohesion-aware structural channel that incrementally maintains the classical k-family of cohesiveness indicators (degree $\\to$ k-core $\\to$ k-truss) and forms 2-hop cohesive-bridge features. HAWKEYE is a drop-in replacement for a temporal-graph model's native structure channel, with no change to the backbone. Swapping HAWKEYE into DyGFormer improves test AP/MRR over the cooccurrence channel by +0.6 to +10.8 points across six multi-seed-validated datasets (uci, enron, USLegis, CanParl, reddit, mooc). On the bipartite recommendation benchmark tgbl-subreddit, a 3-seed single-pass struct-only ablation shows HAWKEYE nearly doubling the baseline test MRR (0.103$\\pm$0.003 $\\to$ 0.204$\\pm$0.005, +10.1 points across all three seeds); the streaming pipeline scales to the 67M-edge tgbl-flight in five minutes per pass. We further characterise when it helps: the gain tracks a graph's training-free 2-hop discAUC and vanishes on degenerate or saturated graphs -- a predictable boundary. All code, data, and figure-generation scripts are released."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.09899v1",
+        "title": "Fairness in Link Prediction Beyond Demographic Parity: A Reproducibility Study",
+        "published": "2026-08-10T17:47:19Z",
+        "updated": "2026-08-10T17:47:19Z",
+        "summary": "In fair ranked link prediction, demographic parity ($Δ_\\mathrm{DP}$) is a common fairness metric. Yet, Mattos et al. (2025) argue that it fails to detect exposure bias because it ignores where links appear in the ranking. In this study, we reproduce this claim by showing that $Δ_\\mathrm{DP}$ can indicate aggregate parity even when some subgroup-pair links are systematically ranked lower than others. The proposed rank-aware Normalized Discounted KL-divergence (NDKL), however, does detect such disparities. We also reproduce the effectiveness of MORAL, a post-processing method that improves exposure-based fairness while maintaining competitive utility. Beyond reproduction, we assess robustness using synthetic homophily settings, categorical sensitive attributes, and additional fairness and utility metrics, including subgroup-pair-adapted Attention-Weighted Rank Fairness (AWRF). Overall, our results show that exposure-based metrics uncover biases hidden by $Δ_\\mathrm{DP}$ and that MORAL reduces these biases with minimal utility loss across diverse settings and datasets. We release a corrected, reproducible implementation at https://github.com/Floris93100/reproducing-MORAL."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.07029v1",
+        "title": "Hyperbolic Graph Embedders for Link Prediction and Topology Reconstruction",
+        "published": "2026-08-07T09:42:26Z",
+        "updated": "2026-08-07T09:42:26Z",
+        "summary": "Hyperbolic embeddings provide compact geometric representations of complex networks in hyperbolic spaces, but systematic comparisons of methods developed in machine learning, network science, and algorithmics remain rare. We benchmark 13 unsupervised hyperbolic graph embedders under a unified protocol for link prediction and topology reconstruction on synthetic and empirical networks. The protocol captures both missing-link recovery and the preservation of local and global network structure. Maximum-likelihood and representation-learning-based approaches, including hybrid variants, achieve the strongest overall performance, although no method dominates across all tasks and structural regimes. Performance is more strongly associated with embedding paradigm than with disciplinary origin. We identify the network regimes in which different paradigms succeed or fail and provide practical guidance for method selection in downstream applications."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.05016v1",
+        "title": "Link prediction on multi-relational graphs from an influence propagation perspective",
+        "published": "2026-08-05T16:21:46Z",
+        "updated": "2026-08-05T16:21:46Z",
+        "summary": "Predicting the existence and type of links (edges) between nodes in a multi-relational graph is key for applications from social interaction prediction to knowledge relationship identification. Enhancing local features with relevant global information is crucial for accurate link prediction, yet it remains challenging. We address this by modeling the relationship between node pairs as node influence. That is, whether the node influence can be propagated and what type of influence is propagated indicates where and what type the edge is, which will be the most relevant local and global information to predict the edges. To this end, we extend the Susceptible-Infectious-Recovered (SIR) epidemic model to capture the influence propagation of nodes on a large scale through sub-graph structures. Subsequently, these sub-graphs are compressed using virtual edges, thereby substantially reducing the computation associated with utilizing the global graph structure. Finally, we propose the Influential Graph Neural Predictor, referred to as IGNP, a link prediction framework guided by influence propagation. Extensive experiments demonstrate the superiority of the proposed method, which outperforms strong baselines by a large margin on the widely used and real-world datasets."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.29115v1",
+        "title": "Multi-Granularity Position Embedding of Graphs via Granular-Ball for Link Prediction",
+        "published": "2026-07-31T07:44:11Z",
+        "updated": "2026-07-31T07:44:11Z",
+        "summary": "Link prediction aims to identify potential or future connections within a given graph structure. Position information is essential for link prediction, as it distinguishes homogeneous nodes through their relative relationships, facilitating the accurate capture of structural patterns and implicit connections. Previous studies derive node positional information as distances to single-granularity landmarks, defined as the centers of homophilic regions, while neglecting the multi-granularity nature of homophilic structures and their hierarchical interrelations. We propose the Multi-Granularity Position Embedding of Graphs via Granular-Ball for Link Prediction (MGLP) method to obtain multi-granularity position embedding of graphs. Specifically, MGLP introduces an Adaptive Granular-Ball Graph Refinement mechanism to adaptively refine the graph into homophilic subdomains with optimal levels of granularity. The central nodes within subdomains are treated as landmarks, which form a Hierarchical Central Graph. Moreover, a novel Multi-granularity Hierarchical Distance encoding mechanism is proposed to capture both the homophilic structures within a graph and their hierarchical correlations, improving the discriminative power of nodes. Experimental results demonstrate that the multi-granularity position embedding generated by our method exhibits excellent performance and strong competitiveness compared to baseline algorithms for link prediction. Our codes are available in https://anonymous.4open.science/r/MGLP-D3C5/."
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.22167v1",
+        "title": "Early-Exit Graph Neural Networks for Link Prediction",
+        "published": "2026-06-20T17:56:36Z",
+        "updated": "2026-06-20T17:56:36Z",
+        "summary": "Graph Neural Networks are great for link prediction in various network-like structures; however, the question of their speed/quality tradeoff has been barely studied. While in practice the time it takes to do inference matters little for small benchmarks, the latency does limit applicability in large-scale domains. In this work, we explore early-exiting strategies that can be applied to Graph Neural Networks to solve the problem of link-prediction faster. We use no auxiliary losses to enforce early exiting, allowing it to emerge as an implicit property of the architecture. We show that our method enables early exiting in several setups, moving the Pareto frontier on the HeaRT benchmark for GCN and SAS-GNN backbones. Our findings show that inference speed of GNNs on many link-prediction problems can be improved, while losing little, or even winning in terms of prediction quality. The code is available in our repository: https://github.com/knyazer/link_prediction."
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.26132v1",
+        "title": "Code evolution for link prediction in complex networks",
+        "published": "2026-06-18T05:46:19Z",
+        "updated": "2026-06-18T05:46:19Z",
+        "summary": "The problem of predicting links in complex networks appears in different disciplines and has led to a variety of ingenious human-designed methods. We use this rich program space to explore the performance and behavior of automated code-evolution systems tasked to obtain machine-designed methods for link prediction. Despite being trained on limited data, algorithms evolved through code evolution outperform human-designed methods (with an average AUC score of 0.915 vs. 0.783, computed over 580 networks) and show improved computational efficiency, allowing them to be applied to networks with millions of links. The discovered methods follow approaches that have been employed in human-designed methods, but contain key innovations in the selection and combination of node- and link-features. This illustrates the role modern large language models and genetic algorithms can play in algorithmic innovation and scientific discovery more generally."
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.19775v1",
+        "title": "Rethinking Sampling Strategy in Link Prediction",
+        "published": "2026-06-18T04:19:22Z",
+        "updated": "2026-06-18T04:19:22Z",
+        "summary": "Many real-world networks are incomplete, making link prediction a fundamental challenge in network science. To train parameters and evaluate algorithms, observed links are usually divided into three subsets, namely training, validation, and probe sets. This division implicitly involves two sampling processes: first-stage sampling yields the probe set and second-stage sampling obtains the variation set. To date, our understanding of how these two sampling processes affect algorithm performance remains quite limited. To address this issue, we propose a sampling scheme called $β$-sampling, where the sampling probability of a link is proportional to the product of the degrees of its two endpoints raised to the power of $β$. Experiments on 45 real-world networks reveal that the structural characteristics of missing links, as simulated via varying probe sets, substantially impact prediction accuracy. When missing links tend to connect high-degree nodes, such links can be predicted accurately with ease. Furthermore, even with a fixed probe set, second-stage sampling still exerts a significant influence on prediction accuracy. Notably, the optimal second-stage sampling strategy differs from \\textit{random sampling} (which randomly selects links to form the validation set) and \\textit{consistent sampling} (which guarantees that links in the validation and probe sets share identical structural characteristics)."
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.03365v1",
+        "title": "Link Prediction or Perdition: the Seeds of Instability in Knowledge Graph Embeddings",
+        "published": "2026-06-02T09:13:50Z",
+        "updated": "2026-06-02T09:13:50Z",
+        "summary": "Embedding models (KGEMs) constitute the main link prediction approach to complete knowledge graphs. Standard evaluation protocols emphasize rank-based metrics such as MRR or Hits@$K$, but usually overlook the influence of random seeds on result stability. Moreover, these metrics conceal potential instabilities in individual predictions and in the organization of embedding spaces. In this work, we conduct a systematic stability analysis of multiple KGEMs across several datasets. We find that high-performance models actually produce divergent predictions at the triple level and highly variable embedding spaces. By isolating stochastic factors (i.e., initialization, triple ordering, negative sampling, dropout, hardware), we show that each independently induces instability of comparable magnitude. Furthermore, for a given model, hyperparameter configurations with better MRR are not guaranteed to be more stable. Moreover, voting, albeit a known remediation mechanism, only provides a limited enhancement of stability. These findings highlight critical limitations of current benchmarking protocols, and raise concerns about the reliability of KGEMs for knowledge graph completion."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.26290v3",
+        "title": "Dynamic Link Prediction with Temporally Enhanced Signed Graph Neural Networks",
+        "published": "2026-05-25T19:28:01Z",
+        "updated": "2026-09-12T06:12:08Z",
+        "summary": "Temporal signed networks (TSNs) model the time evolution of cooperative and adversarial relationships that arise in applications such as social media analysis, trust and reputation systems, and financial transaction networks. While graph neural networks (GNNs) perform well for static or unsigned link prediction, effective learning in temporal signed graphs remains challenging due to the interaction of signed relations, evolving structure, and balance-theoretic constraints. To address this gap, we propose a \\emph{modular} temporal enhancement framework for signed GNNs that integrates historical context into otherwise static architectures. The framework introduces a Historical Context Integration Module (HCIM) that combines learnable recency-aware temporal weighting, LSTM-based embedding trajectory modeling, and multi-head temporal attention to capture both short- and long-term signed interaction dynamics. Historical information is fused with current node representations using either global or node-adaptive weighting, allowing the architecture-agnostic framework to accommodate heterogeneous temporal behaviors. We instantiate the approach on the Self-Explainable Signed Graph Transformer (SE-SGformer), preserving interpretability while extending it with temporal awareness. Experiments on real-world and synthetic TSNs, including Bitcoin OTC, Bitcoin Alpha, Reddit, and small-world network models, demonstrate consistent and statistically significant improvements over the static baseline."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.22606v2",
+        "title": "Missing Links in Public Email and Covert Networks: A Comparative Evaluation of Link Prediction, Hyperlink Prediction, and ERGM Estimation",
+        "published": "2026-05-21T15:19:32Z",
+        "updated": "2026-06-04T19:18:23Z",
+        "summary": "We study missing-link inference in partially observed networks by systematically comparing dyadic link prediction (LP) with hyperlink prediction (HP) and an estimation-based ERGM comparator. LP serves as the primary baseline, using classical heuristics computed on the observed graph. HP extends this framework by scoring candidate higher-order structures (cliques) via lifted dyadic scores and via the CHEbyshev Spectral HyperlInk pREdictor (CHESHIRE). All methods are evaluated under a common masking protocol that removes dyadic evidence induced by held-out hyperlinks to ensure comparability. Across public email and covert-network datasets, LP remains strong for dyadic recovery, while HP -- particularly CHESHIRE -- provides gains when the inferential target is higher-order group structure. ERGMs offer an interpretable dependence-based complement through conditional tie probabilities. The contribution is a comparative, reproducible evaluation clarifying when LP, HP, and ERGM estimation are most appropriate under network missingness."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.21916v2",
+        "title": "A2QTGN: Adaptive Amplitude Quantum-Integrated Temporal Graph Network for Dynamic Link Prediction",
+        "published": "2026-05-21T02:38:29Z",
+        "updated": "2026-07-26T17:26:27Z",
+        "summary": "Dynamic link prediction is important for modeling evolving interactions in social, communication, financial, and transportation networks. Classical temporal graph models capture changes over time, but they may struggle to represent rapidly evolving node-edge interactions in large dynamic graphs. We propose A2QTGN (Adaptive Amplitude Quantum-Integrated Temporal Graph Network), a hybrid quantum-classical framework that introduces adaptive amplitude encoding as a temporal embedding layer within a Temporal Graph Network. Unlike fixed quantum embeddings, the proposed module maps temporally varying node features into quantum states and selectively refreshes their amplitude representations according to the magnitude of feature change. This allows the framework to preserve stable node information, emphasize meaningful temporal variations, and reduce redundant quantum re-encoding. Across five Temporal Graph Benchmark datasets, A2QTGN achieves test area under the curve (AUC) values of up to 0.9957 and mean reciprocal rank (MRR) values of up to 0.7832, including the highest MRR among the compared baselines on tgbl-review and tgbl-flight. Ablation results further show that the adaptive quantum embedding is central to the model performance: on a 25k-event subset of tgbl-wiki, it improves test accuracy by 13.36 percentage points over always updating and by 22.44 percentage points over using no updates. The trained model is also evaluated using noisy simulations based on an IBM quantum device, followed by a smaller real-device experiment. The results show that adaptive quantum embeddings can provide effective temporal representations for dynamic link prediction while remaining executable under current quantum hardware constraints."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.20257v1",
+        "title": "Instance Discrimination for Link Prediction",
+        "published": "2026-05-18T13:27:41Z",
+        "updated": "2026-05-18T13:27:41Z",
+        "summary": "Recently, instance discrimination models have emerged as a major solution for self-supervised learning. Having already demonstrated its effectiveness in the image domain, instance discrimination learning is now proving equally convincing in the graph domain, in particular for node classification. However, fewer contributions have tackled the link prediction task. In this contribution, we propose to adapt existing methods to this context. We first provide a rigorous evaluation of existing self-supervised models in the field of link prediction, showing that the main performance depends on the augmentation process (like in computer vision). We then propose a new structural augmentation based on the community structure that is relevant for link prediction. Our main contribution introduces two new models, L-GRACE and L-BGRL, based on link representations instead of node representations, which improve the performance of the existing methods, especially on unattributed graphs, and we show that they perform on par with the state of the art, both in supervised and self-supervised contexts."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.18211v1",
+        "title": "Leveraging Graph Structure in Seq2Seq Models for Knowledge Graph Link Prediction",
+        "published": "2026-05-18T10:56:14Z",
+        "updated": "2026-05-18T10:56:14Z",
+        "summary": "We introduce Graph-Augmented Sequence-to-Sequence (GA-S2S), a novel framework that integrates a T5-small encoder-decoder with a Relational Graph Attention Network (RGAT) to improve link prediction in knowledge graphs. While existing Seq2Seq models rely solely on surface-level textual descriptions of entities and relations and at best, flatten the neighborhoods of a query entity into a single linear sequence, thereby discarding the inherent graph structure, GA-S2S jointly encodes both textual features and the full $k$-hop subgraph topology surrounding the query entity. By integrating raw encoder outputs with RGAT's relation-aware embeddings, our model captures and leverages richer multi-hop relational patterns and textual information. Our preliminary experiments on the CoDEx dataset demonstrate that GA-S2S outperforms competitive Seq2Seq-based baseline models, achieving up to a 19\\% relative gain in link prediction accuracy."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.09408v1",
+        "title": "GravityGraphSAGE: Link Prediction in Directed Attributed Graphs",
+        "published": "2026-05-10T08:19:20Z",
+        "updated": "2026-05-10T08:19:20Z",
+        "summary": "Link prediction (inferring missing or future connections between nodes in a graph) is a fundamental problem in network science with widespread applications in, e.g., biological systems, recommender systems, finance and cybersecurity. The ability to accurately predict links has significant real-world applications, such as detecting fraudulent financial transactions or identifying drug-target interactions in biomedicine. Despite a rich literature, link prediction is still challenging, especially for graphs enriched with information on edges (direction) and nodes (attributes). In fact, research on link prediction, especially the one based on Graph Deep Learning (GDL), has mostly focused on undirected graphs, without fully leveraging node attributes. Here, we fill this gap by proposing Gravity-GraphSAGE (GG-SAGE), a modified version of GraphSAGE, a GDL model for node embeddings, composed of a gravity-inspired decoder. This implementation is the first example in the literature of a GraphSAGE backbone adopted for directed link prediction. Using the benchmark datasets Cora, Citeseer, PubMed and 16 real-world graphs from the online Netzschleuder repository, we show that our proposed model outperforms state-of-the-art GDL link prediction techniques. Using further experimental evidence, we relate the quality of the output of our model with various characteristics of the graph, suggesting that our framework scales well when applied to data of increasing complexity."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.16198v1",
+        "title": "A Survey on GNN-based Link Prediction: Techniques, Applications, and Challenges",
+        "published": "2026-04-29T01:34:00Z",
+        "updated": "2026-04-29T01:34:00Z",
+        "summary": "Graph Neural Networks (GNNs) have emerged as the leading paradigm for link prediction, enabling the inference of missing connections and the anticipation of potential future links. However, existing reviews lack systematic exploration specifically targeting underlying GNN architectures and diverse graph structures. To address this critical gap, this paper provides a comprehensive review of GNN-based link prediction from a novel and dedicated GNN perspective. We propose an innovative taxonomy that categorizes recent advancements based on techniques and applications. From a technique perspective, we focus on key GNN encoder architectures, including GCN-based, GAE-based, GAT-based, and GFormer-based methods, discussing their strengths and limitations. From an application perspective, we highlight prominent use cases of link prediction in knowledge graphs and recommendation systems, demonstrating their real-world impact. In addition, we examine the current challenges and discuss promising future directions."
+      },
+      {
+        "id": "http://arxiv.org/abs/2604.25978v1",
+        "title": "Mini-Batch Class Composition Bias in Link Prediction",
+        "published": "2026-04-28T14:03:50Z",
+        "updated": "2026-04-28T14:03:50Z",
+        "summary": "Prior work on node classification has shown that Graph Neural Networks (GNNs) can learn representations that transfer across graphs, when underlying graph properties are shared. For a fixed graph, one would then expect GNNs trained for link prediction to learn a representation consistent with that learnt for node classification. We show this intuition does not hold in the general case. Instead, we find popular link prediction models can learn a trivial mini-batch dependent heuristic, enabled by batch-normalisation layers, to solve the edge classification task. When correcting for this, we observe increased alignment of the network representation with node-class relevant features, suggesting the network has learnt a graph representation that better aligns with the underlying graph's properties. Our findings suggest that standard link prediction training may be leading us to overestimate link predictors' ability to learn a generalised representation of a graph that is consistent across tasks."
+      },
+      {
+        "id": "http://arxiv.org/abs/2604.10947v2",
+        "title": "Multi-Faceted Continual Knowledge Graph Embedding for Semantic-Aware Link Prediction",
+        "published": "2026-04-13T03:41:01Z",
+        "updated": "2026-04-20T06:23:28Z",
+        "summary": "Continual Knowledge Graph Embedding (CKGE) aims to continually learn embeddings for new knowledge, i.e., entities and relations, while retaining previously acquired knowledge. Most existing CKGE methods mitigate catastrophic forgetting via regularization or replaying old knowledge. They conflate new and old knowledge of an entity within the same embedding space to seek a balance between them. However, entities inherently exhibit multi-faceted semantics that evolve dynamically as their relational contexts change over time. A shared embedding fails to capture and distinguish these temporal semantic variations, degrading lifelong link prediction accuracy across snapshots. To address this, we propose a Multi-Faceted CKGE framework (MF-CKGE) for semantic-aware link prediction. During offline learning, MF-CKGE separates temporal old and new knowledge into distinct embedding spaces to prevent knowledge entanglement and employs semantic decoupling to reduce semantic redundancy, thereby improving space efficiency. During online inference, MF-CKGE adaptively identifies semantically query-relevant entity embeddings by quantifying their semantic importance, reducing interference from query-irrelevant noise. Experiments on eight datasets show that MF-CKGE achieves an average (maximum) improvement of 1.7% (2.7%) and 1.4% (3.8%) in MRR and Hits@10, respectively, over the best baseline. Our source code and datasets are available at: https://anonymous.4open.science/r/MF-CKGE-04E5."
+      },
+      {
+        "id": "http://arxiv.org/abs/2604.01379v1",
+        "title": "Can LLMs Predict Academic Collaboration? Topology Heuristics vs. LLM-Based Link Prediction on Real Co-authorship Networks",
+        "published": "2026-04-01T20:39:12Z",
+        "updated": "2026-04-01T20:39:12Z",
+        "summary": "Can large language models (LLMs) predict which researchers will collaborate? We study this question through link prediction on real-world co-authorship networks from OpenAlex (9.96M authors, 108.7M edges), evaluating whether LLMs can predict future scientific collaborations using only author profiles, without access to graph structure. Using Qwen2.5-72B-Instruct across three historical eras of AI research, we find that LLMs and topology heuristics capture distinct signals and are strongest in complementary settings. On new-edge prediction under natural class imbalance, the LLM achieves AUROC 0.714--0.789, outperforming Common Neighbors, Jaccard, and Preferential Attachment, with recall up to 92.9\\%; under balanced evaluation, the LLM outperforms \\emph{all} topology heuristics in every era (AUROC 0.601--0.658 vs.\\ best-heuristic 0.525--0.538); on continued edges, the LLM (0.687) is competitive with Adamic-Adar (0.684). Critically, 78.6--82.7\\% of new collaborations occur between authors with no common neighbor -- a blind spot where all topology heuristics score zero but the LLM still achieves AUROC 0.652 by reasoning from author metadata alone. A temporal metadata ablation reveals that research concepts are the dominant signal (removing concepts drops AUROC by 0.047--0.084). Providing pre-computed graph features to the LLM \\emph{degrades} performance due to anchoring effects, confirming that LLMs and topology methods should operate as separate, complementary channels. A socio-cultural ablation finds that name-inferred ethnicity and institutional country do not predict collaboration beyond topology, reflecting the demographic homogeneity of AI research. A node2vec baseline achieves AUROC comparable to Adamic-Adar, establishing that LLMs access a fundamentally different information channel -- author metadata -- rather than encoding the same structural signal differently."
+      },
+      {
+        "id": "http://arxiv.org/abs/2603.03963v1",
+        "title": "TFWaveFormer: Temporal-Frequency Collaborative Multi-level Wavelet Transformer for Dynamic Link Prediction",
+        "published": "2026-03-04T11:47:57Z",
+        "updated": "2026-03-04T11:47:57Z",
+        "summary": "Dynamic link prediction plays a crucial role in diverse applications including social network analysis, communication forecasting, and financial modeling. While recent Transformer-based approaches have demonstrated promising results in temporal graph learning, their performance remains limited when capturing complex multi-scale temporal dynamics. In this paper, we propose TFWaveFormer, a novel Transformer architecture that integrates temporal-frequency analysis with multi-resolution wavelet decomposition to enhance dynamic link prediction. Our framework comprises three key components: (i) a temporal-frequency coordination mechanism that jointly models temporal and spectral representations, (ii) a learnable multi-resolution wavelet decomposition module that adaptively extracts multi-scale temporal patterns through parallel convolutions, replacing traditional iterative wavelet transforms, and (iii) a hybrid Transformer module that effectively fuses local wavelet features with global temporal dependencies. Extensive experiments on benchmark datasets demonstrate that TFWaveFormer achieves state-of-the-art performance, outperforming existing Transformer-based and hybrid models by significant margins across multiple metrics. The superior performance of TFWaveFormer validates the effectiveness of combining temporal-frequency analysis with wavelet decomposition in capturing complex temporal dynamics for dynamic link prediction tasks."
+      },
+      {
+        "id": "http://arxiv.org/abs/2603.03867v1",
+        "title": "k-hop Fairness: Addressing Disparities in Graph Link Prediction Beyond First-Order Neighborhoods",
+        "published": "2026-03-04T09:20:06Z",
+        "updated": "2026-03-04T09:20:06Z",
+        "summary": "Link prediction (LP) plays a central role in graph-based applications, particularly in social recommendation. However, real-world graphs often reflect structural biases, most notably homophily, the tendency of nodes with similar attributes to connect. While this property can improve predictive performance, it also risks reinforcing existing social disparities. In response, fairness-aware LP methods have emerged, often seeking to mitigate these effects by promoting inter-group connections, that is, links between nodes with differing sensitive attributes (e.g., gender), following the principle of dyadic fairness. However, dyadic fairness overlooks potential disparities within the sensitive groups themselves. To overcome this issue, we propose $k$-hop fairness, a structural notion of fairness for LP, that assesses disparities conditioned on the distance between nodes in the graph. We formalize this notion through predictive fairness and structural bias metrics, and propose pre- and post-processing mitigation strategies. Experiments across standard LP benchmarks reveal: (1) a strong tendency of models to reproduce structural biases at different $k$-hops; (2) interdependence between structural biases at different hops when rewiring graphs; and (3) that our post-processing method achieves favorable $k$-hop performance-fairness trade-offs compared to existing fair LP baselines."
+      },
+      {
+        "id": "http://arxiv.org/abs/2602.14239v3",
+        "title": "A Hybrid TGN-SEAL Model for Dynamic Graph Link Prediction",
+        "published": "2026-02-15T17:16:47Z",
+        "updated": "2026-06-24T15:55:42Z",
+        "summary": "Predicting links in sparse, continuously evolving networks is a central challenge in network science. Conventional heuristic methods and deep learning models, including Graph Neural Networks (GNNs), are typically designed for static graphs and thus struggle to capture temporal dependencies. Snapshot-based techniques partially address this issue but often encounter data sparsity and class imbalance, particularly in networks with transient interactions such as telecommunication call detail records (CDRs). Temporal Graph Networks (TGNs) model dynamic graphs by updating node embeddings over time; however, their predictive accuracy under sparse conditions remains limited. In this study, we improve the TGN framework by extracting enclosing subgraphs around candidate links, enabling the model to jointly learn structural and temporal information. Experiments on a sparse CDR, email, message dataset show that our approach increases average precision by at least 2% over standard TGNs, demonstrating the advantages of integrating local topology for robust link prediction in dynamic networks."
+      },
+      {
+        "id": "http://arxiv.org/abs/2602.11802v2",
+        "title": "Structural Bias Beyond Homophily: A Study of Fairness in Link Prediction",
+        "published": "2026-02-12T10:29:44Z",
+        "updated": "2026-05-29T13:06:09Z",
+        "summary": "Graph link prediction (LP) plays a critical role in socially impactful applications such as job recommendation and friendship formation, making fairness a critical concern in this task. While many fairness-aware methods manipulate graph structures to mitigate prediction disparities, the topological biases inherent to social graphs remain poorly understood and are consistently conflated with homophily alone. In this work, we study the relationship between structural biases and fairness outcomes in LP. To this end, we formalize a taxonomy of topological bias measures and introduce a graph generation method producing a diverse corpus of synthetic graphs with controlled structural properties. Using this corpus, we show empirically that fairness outcomes are strongly correlated with graph topology, and that current fairness-aware methods remain sensitive to structural biases beyond homophily. These findings highlight the need for structurally grounded evaluations in fair graph learning."
+      },
+      {
+        "id": "http://arxiv.org/abs/2602.05424v2",
+        "title": "THOR: Inductive Link Prediction over Hyper-Relational Knowledge Graphs",
+        "published": "2026-02-05T08:15:49Z",
+        "updated": "2026-02-06T01:44:41Z",
+        "summary": "Knowledge graphs (KGs) have become a key ingredient supporting a variety of applications. Beyond the traditional triplet representation of facts where a relation connects two entities, modern KGs observe an increasing number of hyper-relational facts, where an arbitrary number of qualifiers associated with a triplet provide auxiliary information to further describe the rich semantics of the triplet, which can effectively boost the reasoning performance in link prediction tasks. However, existing link prediction techniques over such hyper-relational KGs (HKGs) mostly focus on a transductive setting, where KG embedding models are learned from the specific vocabulary of a given KG and subsequently can only make predictions within the same vocabulary, limiting their generalizability to previously unseen vocabularies. Against this background, we propose THOR, an inducTive link prediction technique for Hyper-relational knOwledge gRaphs. Specifically, we first introduce both relation and entity foundation graphs, modeling their fundamental inter- and intra-fact interactions in HKGs, which are agnostic to any specific relations and entities. Afterward, THOR is designed to learn from the two foundation graphs with two parallel graph encoders followed by a transformer decoder, which supports efficient masked training and fully-inductive inference. We conduct a thorough evaluation of THOR in hyper-relational link prediction tasks on 12 datasets with different settings. Results show that THOR outperforms a sizable collection of baselines, yielding 66.1%, 55.9%, and 20.4% improvement over the best-performing rule-based, semi-inductive, and fully-inductive techniques, respectively. A series of ablation studies also reveals our key design factors capturing the structural invariance transferable across HKGs for inductive tasks."
+      },
+      {
+        "id": "http://arxiv.org/abs/2602.04812v1",
+        "title": "Robust Generalizable Heterogeneous Legal Link Prediction",
+        "published": "2026-02-04T17:59:13Z",
+        "updated": "2026-02-04T17:59:13Z",
+        "summary": "Recent work has applied link prediction to large heterogeneous legal citation networks \\new{with rich meta-features}. We find that this approach can be improved by including edge dropout and feature concatenation for the learning of more robust representations, which reduces error rates by up to 45%. We also propose an approach based on multilingual node features with an improved asymmetric decoder for compatibility, which allows us to generalize and extend the prediction to more, geographically and linguistically disjoint, data from New Zealand. Our adaptations also improve inductive transferability between these disjoint legal systems."
+      },
+      {
+        "id": "http://arxiv.org/abs/2602.02161v1",
+        "title": "Generating Causal Temporal Interaction Graphs for Counterfactual Validation of Temporal Link Prediction",
+        "published": "2026-02-02T14:36:18Z",
+        "updated": "2026-02-02T14:36:18Z",
+        "summary": "Temporal link prediction (TLP) models are commonly evaluated based on predictive accuracy, yet such evaluations do not assess whether these models capture the causal mechanisms that govern temporal interactions. In this work, we propose a framework for counterfactual validation of TLP models by generating causal temporal interaction graphs (CTIGs) with known ground-truth causal structure. We first introduce a structural equation model for continuous-time event sequences that supports both excitatory and inhibitory effects, and then extend this mechanism to temporal interaction graphs. To compare causal models, we propose a distance metric based on cross-model predictive error, and empirically validate the hypothesis that predictors trained on one causal model degrade when evaluated on sufficiently distant models. Finally, we instantiate counterfactual evaluation under (i) controlled causal shifts between generating models and (ii) timestamp shuffling as a stochastic distortion with measurable causal distance. Our framework provides a foundation for causality-aware benchmarking."
+      }
+    ]
+  },
+  {
+    "key": "reasoning",
+    "url": "https://export.arxiv.org/api/query?search_query=%28ti%3A%22graph+reasoning%22+OR+ti%3A%22knowledge+graph%22%29+AND+%28all%3A%22path%22+OR+all%3A%22query-dependent%22%29+AND+submittedDate%3A%5B202601010000+TO+202609162359%5D&max_results=30&sortBy=submittedDate&sortOrder=descending",
+    "accessed_at_utc": "2026-09-16T11:59:34.390792+00:00",
+    "status": 200,
+    "sha256": "b2f36b44a23079098a25f10f19f46f81621a2012b9909c6057c875db56c0f0b2",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2609.13664v1",
+        "title": "Cost Characterization of Vertically Partitioned Federated Knowledge Graphs",
+        "published": "2026-09-12T02:47:14Z",
+        "updated": "2026-09-12T02:47:14Z",
+        "summary": "Knowledge graphs are increasingly distributed across autonomous organizations that share an entity space but own disjoint subsets of relations, forming a vertical partition. Answering a multi-hop query may require combining facts from several silos, making the partitioning strategy a key data management decision that affects communication, indexing, load balance, and query latency. However, the costs associated with different partitioning strategies remain insufficiently studied. We formalize vertical partitioning as a design space and compare four strategies: semantic domain grouping, frequency-balanced partitioning, co-occurrence graph-cut partitioning, and random partitioning. We evaluate them using five metrics: communication cost, candidate index size, cross-silo path length, load balance, and end-to-end query latency. Three of the five prove to be determined by the graph and the silo count rather than by the partition, which reduces the design problem to two conflicting axes, cross-silo path length and load balance. Experiments on MetaQA and PathQuestion use a fixed federated knowledge graph question-answering architecture based on TransE embeddings and a frozen BERT encoder across three silo configurations. By keeping the learning model unchanged, we isolate the effect of partitioning and show that the trade-off between locality and balance holds only where each silo can hold several relations, weakening as the number of silos increases. The study provides practical guidance for deployments constrained by cross-silo reasoning or by silo load."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.12230v1",
+        "title": "Repair Before Reinforce: Context-Augmented Knowledge Graph Reasoning for Multi-Hop Question Answering",
+        "published": "2026-09-10T21:39:11Z",
+        "updated": "2026-09-10T21:39:11Z",
+        "summary": "Question-answering often requires reasoning across multiple connected facts rather than retrieving a single isolated relation. Knowledge graphs (KGs) provide a structured way to represent such facts, but training large language models (LLMs) only on isolated KG head-relation-tail triples may limit their ability to learn the surrounding context needed for multi-hop reasoning. In this work, we propose a context-augmented training framework for multi-hop question-answering. Although generally applicable, we validate the framework in the context of disease-specific KGs, extracted using a reliable KG extraction framework called GraphMERT, for Gastroparesis and Diabetes. For each primary KG triple, we attach supporting triples extracted from the same source text chunk to form a context graph (CG). This creates two supervision settings: KG-grounded supervision, which uses only the target KG triple or path, and CG-grounded supervision, which uses the target KG triple or path together with supporting context triples. We train the Qwen3-14B model using supervised fine-tuning (SFT) under both settings, producing KGModel and CGModel variants. To strengthen the lower-hop factual foundation of the models, we introduce an LLM-judged, history-aware adaptive repair pipeline that identifies unresolved one-hop failures, continually fine-tunes on targeted repair examples, and removes or quarantines problematic noisy triples. This repair stage enables the models to reach 100% accuracy on the cleaned retained one-hop validation sets. Finally, we employ reinforcement learning (RL) using lower-hop question-answer items and evaluate generalization on harder 3-hop, 4-hop, and 5-hop tasks. Across both diseases, context-augmented supervision consistently improves multi-hop performance over KG-only supervision. RL initialized from repaired SFT checkpoints yields larger and more stable gains."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.11569v1",
+        "title": "Enabling Knowledge Graph Understanding at Scale with the EXplore Your Graphs ENgine (EXYGEN)",
+        "published": "2026-09-10T14:03:32Z",
+        "updated": "2026-09-10T14:03:32Z",
+        "summary": "We present EXYGEN (EXplore Your Graphs ENgine), a framework for knowledge graph (KG) understanding that enables conversational access to KGs at scale. We address two questions in sequence. First, how effectively can LLMs perform text-to-SPARQL generation given only automatically derived structured metadata and small graph samples, rather than task-specific fine-tuning? We integrate VoID descriptions and ShEx schemas into a retrieval-augmented generation (RAG) pipeline and ablate KG-derived context on the SciQA benchmark. Our best configuration -- combining ShEx schemas, retrieved triples, and example question-query pairs -- reaches an exact match of 0.419 on execution results without any LLM fine-tuning. We further find that lexical metrics such as F1 poorly predict query correctness, and that larger general-purpose LLMs can outperform smaller code-specialized ones once given sufficient context. Second, we ask how to generate the structured metadata that this method relies on from very large KGs, where KG metadata generation becomes computationally intractable. We introduce a predicate-coverage-aware parallel graph sampling strategy that preserves structural diversity while remaining computationally tractable. On OpenCitations Meta and GESIS, it retains high predicate coverage with minimal triple loss and reduces runtime by over 80x; on ORKG, sampling is not just faster but the only tractable path to obtain complete metadata. Together, these results show that structured schema context and lightweight prompting can substantially reduce reliance on fine-tuning for scalable conversational access to KGs, though closing the remaining gap to fully fine-tuned approaches will likely require reducing dependence on curated question-query exemplars -- whether through synthetic generation or an execution-feedback-driven approach -- and validating these findings beyond a single benchmark."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.11493v1",
+        "title": "From Document Silos to Process Intelligence: A Multi-Layer Knowledge Graph for CMC Process Development",
+        "published": "2026-09-10T12:59:04Z",
+        "updated": "2026-09-10T12:59:04Z",
+        "summary": "Chemistry, Manufacturing and Controls (CMC) process development generates an enormous body of technical information across a multi-stage, knowledge-intensive continuum from drug discovery to commercial manufacturing. This knowledge is traditionally fragmented across functions and heterogeneous formats, causing traceability gaps and significant knowledge-management costs during technology transfer and regulatory filing. We present a modular agentic-AI platform that converts a heterogeneous corpus of process-development documents into a queryable, dual-layer knowledge graph. A base knowledge layer builds a lexical graph with a Document-Section-Chunk hierarchy through lossless ingestion of digital, scanned, handwritten, and multilingual documents, while an intelligence layer extracts ontology-aligned entities and bridges cross-document concepts through a provenance-anchored domain graph. LLM agents operate across both layers, selecting the retrieval path best suited to each question. We evaluate the lexical layer with a novel three-tier protocol measuring the deployment-fidelity of a retrieval-augmented generation (RAG) system on proprietary data, demonstrated on 505 questions curated from 38 development reports of a Sanofi small-molecule program. Tier-1 multiple-choice accuracy of 95% signals strong platform reliability; the stricter Tier-2 LLM-judge pass rate of 85%, which degrades on comparative and corpus-wide questions, reveals a failure taxonomy that Tier-1 accuracy alone fails to capture. A router agent selects between layers according to question type. We anticipate this protocol will enable future designers of agentic platforms to assess their systems against nonpublic databases, and that graph-based architectures will see broader adoption in pharma as a means of transforming fragmented document repositories into structured process intelligence."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.10237v1",
+        "title": "The Answer Path and the Grounding Instruction in LLM Question Answering over Knowledge Graphs",
+        "published": "2026-09-09T14:31:11Z",
+        "updated": "2026-09-09T14:31:11Z",
+        "summary": "A graph retrieval-augmented generation pipeline chooses which triples to put in the prompt, a syntax to write them in, an order to write them in, and a sentence telling the model what to do with them. We vary all four over six large language models and two knowledge-graph question answering benchmarks. Two of the four choices move the answer and the other two are flat. The first is whether the answer path, the triples needed to reach the answer, is in the prompt at all. Holding the number of triples fixed and replacing every triple that is not on the chain with material from an unrelated entity changes answer accuracy by +0.003 F1, while removing the chain costs most of what the graph was worth. Retrieval budget belongs on recall, and precision in the range we can test buys nothing. There is no retriever here: subgraphs come from gold SPARQL, so precision describes the context we build, not a system setting. The second is the grounding instruction. With no facts in the prompt, telling a model to answer using only the provided facts drops F1 from 0.299 to 0.035, a factor of 8.63. That figure describes an evaluation with an empty context arm rather than a working pipeline, and an experiment that applies the instruction to its context arm but not to its no-context baseline manufactures a spurious finding that graph context hurts at depth. We found one in our own results and retract it. Syntax, triple order and subgraph size produce no effect we can measure at multi-hop depth. The comparison that would price the grounding instruction against correct context is not measurable with a format-sensitive scorer, because the instruction determines the response format; we report it as an open contrast rather than a number."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.06779v1",
+        "title": "DrugReason: Dynamic Multi-View Reasoning over Knowledge Graph and Language Evidence for Drug Repurposing",
+        "published": "2026-09-06T18:54:26Z",
+        "updated": "2026-09-06T18:54:26Z",
+        "summary": "Drug repurposing aims to identify new therapeutic uses for existing compounds and, compared with de novo drug discovery, offers a faster and more cost-effective path to clinical translation. However, the space of candidate drug-disease pairs is enormous and their underlying relationships often depend on complex multi-hop biological mechanisms, making it difficult to reliably predict which pairs represent true therapeutic relationships. Existing approaches tackle this from two directions: knowledge graph-based methods organize curated biomedical evidence into structured relational networks for grounded multi-hop reasoning, while LLM-based methods leverage pretrained knowledge to generate flexible mechanistic rationales. Yet neither is sufficient alone - KGs are confined to observed graph structure while LLMs lack factual grounding and risk hallucination. To address this gap, we propose DrugReason, a multi-view reasoning framework that integrates grounded KG reasoning with LLM-generated mechanistic inference for drug repurposing. DrugReason adaptively routes diverse reasoning paths to specialized experts conditioned on the query context, while a cross-expert distillation objective enables knowledge sharing without sacrificing expert specialization. Experiments on PharmaDB, DDInter, and DrugBank show that DrugReason improves average performance over strong single-view reasoning baselines and achieves competitive or superior results compared with graph-based alternatives, while providing interpretable routing-based predictions."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.03816v1",
+        "title": "When Vision Meets Graphs: A Survey on Graph Reasoning and Learning",
+        "published": "2026-09-03T13:19:22Z",
+        "updated": "2026-09-03T13:19:22Z",
+        "summary": "Graphs are a fundamental data structure underlying many problems in the natural and social sciences. Over the past decade, Graph Neural Networks (GNNs) have dominated graph machine learning, supported by solid theoretical foundations. Yet scientists often understand graph structure through vision: chemists read molecular diagrams and social scientists inspect network visualizations. Despite decades of work on graph visualization, most graph learning pipelines still treat graphs purely as symbolic structures, rarely leveraging the visual form of graphs. We argue that this gap deserves renewed attention in the era of powerful vision and vision-language models. This survey provides a first systematic overview of the emerging area we term vision meets graphs, which treats visual depictions of graphs as first-class inputs for reasoning and learning. We organize existing work into three threads. Vision for Graph Reasoning studies how models can use visual depictions of graphs to understand structure and carry out multi-step reasoning. Vision for Graph Learning explores how visual features can complement or augment graph encoders beyond known limitations of message passing. Scientific Graphs examines domains where standardized depiction conventions support both reasoning and learning. Our goal is to clarify what current methods can and cannot do, and to outline a path toward foundation models that perceive and reason about graphs as scientists do."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.02216v1",
+        "title": "PEARL: Path-Entity Aligned Relational Learning with Contextual Subgraphs for Inductive Knowledge Graph Completion",
+        "published": "2026-09-02T07:29:42Z",
+        "updated": "2026-09-02T07:29:42Z",
+        "summary": "Inductive knowledge graph completion (IKGC) aims to predict missing links involving entities unseen during training, requiring models to learn transferable relational and structural patterns. Existing subgraph- and path-based approaches often encode relational paths independently of their surrounding query subgraphs, although the predictive relevance of a path may vary across structural contexts. We propose PEARL, a Path-Entity Aligned Relational Learning framework that models paths as context-conditioned reasoning signals. PEARL constructs a query-specific contextual subgraph from the union of the query entities' neighborhoods and uses a large language model (LLM)-guided retriever to distill semantically relevant paths. It then builds a bipartite interaction graph over paths, contextual entities, and a global subgraph representation, allowing path embeddings to adapt to local and global structural evidence. To suppress noise introduced by the enlarged context, PEARL employs a dual-view contrastive objective that promotes representation consistency under stochastic contextual perturbations. Experiments on WN18RR, FB15k-237, and NELL-995 show that PEARL obtains the best average Hits@10 among the compared IKGC methods on all three benchmarks. Ablation studies, efficiency analyses, and case studies further validate the contributions of contextual subgraph modeling, semantic path retrieval, path-entity interaction, and contrastive regularization."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.02056v1",
+        "title": "HyGRAIL: Cost-Aware and Evidence-Grounded Scientific Hypothesis Discovery over Knowledge Graphs",
+        "published": "2026-09-02T03:34:21Z",
+        "updated": "2026-09-02T03:34:21Z",
+        "summary": "Scientific knowledge graphs organize entities and relations extracted from scientific literature, but they remain inherently incomplete. Missing typed links in such graphs can therefore represent plausible scientific hypotheses, such as unexplored associations between materials and applications. However, scientific hypothesis discovery is challenging because true discoveries are extremely sparse among typed candidate pairs: graph neural networks (GNNs) are efficient but unreliable for ambiguous cases, while large language models (LLMs) are knowledgeable but too costly to apply exhaustively and are not naturally grounded in graph structures. We propose HyGRAIL, a cost-aware and evidence-grounded framework that combines heterogeneous GNN triage with LLM-based hypothesis review. HyGRAIL first uses a GNN to score candidate hypotheses and identify a validation-calibrated ambiguous region, routing only graph-uncertain cases to LLM review. For each routed hypothesis, HyGRAIL retrieves node-level associations and multi-hop relational paths from the knowledge graph (KG), then converts this structured evidence into natural language through template-based or LLM-based naturalization. An LLM review agent finally judges each hard hypothesis using the naturalized evidence and validation-selected decision criteria. On MatKG, HyGRAIL achieves the best F1 score of 0.429, improving over the strongest prior baseline by 0.242 F1 points and over the GNN-only baseline by 0.322. Meanwhile, GNN triage reduces the LLM call rate by 54.36% on average. Ablation studies further show that retrieved graph evidence is crucial for reliable hypothesis verification and that compact, two-sided evidence is more effective than simply increasing retrieval quantity."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.29263v1",
+        "title": "RACER: Reinforced Agent Collaboration for Explainable Reasoning on Knowledge Graphs",
+        "published": "2026-08-29T13:36:36Z",
+        "updated": "2026-08-29T13:36:36Z",
+        "summary": "Large Language Models (LLMs) often suffer from hallucination and struggle with complex reasoning tasks requiring multi-hop domain knowledge. While integrating Knowledge Graphs (KGs) provides a structured and verifiable information source, current KG-enhanced LLM paradigms usually rely on single-agent path extraction and fixed prompting, lacking adaptability and facing huge search spaces. To address these challenges, we propose RACER, a Reinforced Agent Collaboration framework for Explainable Reasoning on knowledge graphs. RACER employs a semantic-aware action pruning and teacher-guided reinforcement learning mechanism to efficiently extract high-quality reasoning pathways from large-scale KGs. Furthermore, to mitigate single-path generation pitfalls, we introduce a cross-task accumulated shared memory graph paired with an attention-driven multi-path knowledge refinement module. Finally, RACER orchestrates these components through a four-role multi-agent collaboration system (GraphAgent, TemplateAgent, AnswerAgent, and CriticAgent) to dynamically refine prompts and evaluate answers. Extensive experiments on CommonsenseQA and OpenBookQA datasets demonstrate that RACER significantly outperforms state-of-the-art KG-enhanced LLM baselines with an average improvement of 5\\%, offering robust and highly interpretable reasoning capabilities."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.28279v1",
+        "title": "STEGNav: Spatio-Temporal Event Graph Reasoning for Multimodal Lifelong Object Navigation",
+        "published": "2026-08-28T12:42:16Z",
+        "updated": "2026-08-28T12:42:16Z",
+        "summary": "Multimodal lifelong navigation requires an agent to autonomously explore unseen environments while sequentially completing navigation tasks specified by object categories, language descriptions, or reference images. Existing methods primarily accomplish these tasks by constructing state-centric semantic scene graphs. By treating scene graphs as persistent repositories of semantic observations, these methods struggle to distinguish similar instances, jointly represent semantic targets and exploration frontiers, and effectively exploit navigation memory and trajectory experience. To address these limitations, we propose Spatio-Temporal Event Graph Navigation (STEGNav), a training-free framework that extends conventional scene graphs into spatio-temporal event graphs along complementary spatial and temporal axes. The spatial axis performs query-conditioned instance grounding and jointly represents semantic targets and occupancy-aware exploration frontiers characterized by reachability, path cost, and exploration utility. The temporal axis employs trajectory-aware dual-window memory to retain recent decision--trajectory events and verified cross-subtask navigation outcomes. A VLM-based navigation agent reasons over the resulting spatio-temporal event graph and selects either a target instance or an exploration frontier as its next navigation goal. STEGNav achieves 66.3% SR and 39.7 SPL on GOAT-Bench, as well as SR scores of 64.0% and 69.4% on HM3Dv1 and HM3Dv2, respectively. Ablation studies and error analyses validate the complementary effects of the two axes, demonstrating that event-driven spatio-temporal representations improve navigation reliability and cross-subtask experience reuse."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.26836v1",
+        "title": "SymbolLKG: Towards Verifiable Logical Reasoning via Logical Knowledge Graph and Symbolic Solvers",
+        "published": "2026-08-27T09:06:52Z",
+        "updated": "2026-08-27T09:06:52Z",
+        "summary": "Large Language Models (LLMs) have demonstrated remarkable proficiency in natural language understanding, yet they struggle with strict multi-step reasoning, frequently suffering from hallucinations and inconsistency. Existing solutions like Chain-of-Thought (CoT) lack rigorous verification mechanisms, while standard Retrieval-Augmented Generation (RAG) often misses the complex, structural dependencies inherent in logical tasks. To bridge this gap, we propose a Neuro-Symbolic architecture that integrates a Logical Knowledge Graph (LKG) with dynamic solver routing. Specifically, we introduce an ontology-based LKG that treats logical rules and constraints as first-class topological nodes, enabling explicit modeling of dependencies extracted from text. We further design a Logic Router to dynamically dispatch tasks to the optimal symbolic engine, which is supported by a topology-aware hybrid retrieval mechanism. Experimental results on logical reasoning benchmarks demonstrate that our framework significantly outperforms state-of-the-art prompting and RAG baselines, delivering higher accuracy and verifiable reasoning paths."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.25952v2",
+        "title": "Spatial-Knowledge-Graph-Grounded LLM Agents for Neighborhood Livability Evaluation",
+        "published": "2026-08-26T16:05:57Z",
+        "updated": "2026-08-29T14:12:55Z",
+        "summary": "Neighborhood livability is commonly assessed with static built-environment indicators, such as facility proximity, street connectivity, and access to public space. These measures describe available opportunities but do not directly represent how residents with different mobility capacities, household roles, schedules, and care responsibilities experience the neighborhood. This paper presents a prototype framework that uses a spatial knowledge graph (KG) and large language models (LLMs) to generate and revise household schedules, followed by rule-based feasibility checking and GIS-based network materialization. The spatial KG integrates residents, residences, facilities, neighborhood context, and sampled road hubs; Graph-RAG retrieves each household's nearby spatial context, including candidate POIs and approximate walking times, for the scheduling LLM. The LLM produces structured household schedules, while rules are used for lightweight repairs and auditable feasibility checks. The LLM then revises schedules in response to identified feasibility issues. A routing module derives the actual travel paths, travel times, modes, and event histories from the road network. The resulting events support synthetic resident-agent interviews about daily convenience, travel burden, activity feasibility, and household coordination. A prototype demonstration in a Shenzhen neighborhood shows that nominal facility availability does not necessarily imply convenient access: residents with limited mobility and households with care responsibilities experience greater travel and coordination burdens. The framework offers an auditable way to connect spatial opportunity, household activity constraints, and resident-specific livability interpretation, while keeping simulated experience distinct from observed perception."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.22688v1",
+        "title": "FashionKG-RAG: Knowledge Graph-Enhanced Retrieval-Augmented Generation for Fashion Question Answering",
+        "published": "2026-08-24T01:01:06Z",
+        "updated": "2026-08-24T01:01:06Z",
+        "summary": "Fashion is a knowledge-intensive domain in which effective decision-making depends on integrating multiple types of knowledge. Although Large Language Models (LLMs) have transformed many areas, their application in fashion remains limited by hallucinations and weak domain specialization. Knowledge Graph (KG)-based Retrieval-Augmented Generation (RAG) offers a promising way to add structured knowledge to LLMs. However, existing fashion KGs are typically restricted to product-level attributes or item relations, and fail to capture the broader fashion ecosystem. To bridge these gaps, we propose \\textbf{FashionEcoKG}, a comprehensive, domain-wide knowledge graph built with expert-level precision and professionalism. It is constructed through a three-stage agentic pipeline that extracts high-fidelity knowledge cores from authoritative textbooks and strengthens structural connectivity through cross-domain augmentation and generative expansion. To leverage this resource, we further develop \\textbf{PG-RAG} (Pruning-Grounding RAG), a training-free framework designed to handle the conceptual density and linguistic noise of fashion queries. Specifically, we introduce a Dual-Granularity Path Re-Ranking (DGPR) module of two stages. The Pruning-based Semantic Ranking (PSR) module distills each query into a skeleton form to improve retrieval recall, while the Grounding-based Agentic Ranking (GAR) performs point-wise scrutiny of candidate paths against the original full query to ensure global relevance. Experiments on a curated fashion QA dataset show that PG-RAG effectively leverages FashionEcoKG to improve retrieval and answer accuracy, outperforming both non-RAG and existing KG-RAG baselines."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.21243v1",
+        "title": "Adapting Knowledge Graphs for Behavior Denoising in Sequential Recommendation",
+        "published": "2026-08-21T15:54:39Z",
+        "updated": "2026-08-21T15:54:39Z",
+        "summary": "Sequential recommendation predicts the next item from a user's interaction history, but not every interaction is equally informative. Real logs combine persistent preferences with temporary needs, exploration, and incidental behavior, so some interactions can distort history representations or provide unreliable supervision. Existing denoising methods judge such interactions mainly from co-occurrence, order, or model predictions, without explicit evidence from relations between items. Knowledge graphs (KGs) offer this evidence, but item popularity, graph degree, uneven coverage, and widely shared entities can inflate connectivity and bias reliability estimates. Here we present AdaptedKG, which derives calibrated KG evidence for each training example without adding graph representations to the recommendation model. It first compares the observed context with structurally matched alternatives to identify relational paths that are unusually prominent and uses them to build a local KG view. It then compares each interaction with structurally matched reference items to calibrate its support within that view. The resulting retention coefficients gate historical representations and reweight target losses. All sample-specific scores are computed offline using training interactions and a fixed KG, so the backbone remains unchanged and no KG access is required at inference. Experiments show gains with a standard sequential recommender and multiple behavior-denoising sequential recommenders."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.15948v1",
+        "title": "Evidence-Carrying Validation for Knowledge Graphs",
+        "published": "2026-08-16T22:10:33Z",
+        "updated": "2026-08-16T22:10:33Z",
+        "summary": "Programs that consume a knowledge graph they do not maintain, such as applications, authoring platforms, and LLM agents, need to know whether the graph contains the information their task requires. Validating the graph against a schema can answer this question, but existing validation interfaces usually return a conformance bit or failure-oriented report without identifying why checks pass or the partial matches behind failures. We present an evidence-carrying validation interface: every selected node-shape check returns either a satisfaction trace or failure witness. These are mutually recursive objects that retain constraints, cardinality decisions, paths, and supporting triples. We implement this interface in Shifty, an experimental SHACL validator. Against two real-world shape graph corpora, materializing all-pair evidence costs a median 1.54-2.07X conformance-only validation. A case study then shows how programs combine passing and failing evidence to diagnose missing information and guide repair."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.14228v1",
+        "title": "AutoSchema: Live Schema Grounding for Agentic Text-to-Sparql over Heterogeneous Knowledge Graphs",
+        "published": "2026-08-14T12:02:53Z",
+        "updated": "2026-08-14T12:02:53Z",
+        "summary": "Life science knowledge graphs make large collections of structured data available through SPARQL, but each resource uses its own schema, identifiers, and links. TogoMCP helps language model agents query these resources by providing curated Metadata Interoperability Exchange files. Creating and maintaining these files still requires language model assisted drafting, validation, and manual review. We study \\emph{live schema grounding}, where an agent obtains the schema evidence needed for a question directly from the current endpoints. We present \\textsc{autoschema}, a general framework for live schema grounding that requires no training. It inspects live schemas, maps entity names in a question to graph identifiers, explores relation paths, and finds possible connections between resources during iterative query construction. We use TogoMCP as our main comparison framework. We evaluate \\textsc{autoschema} on Resource Focused Biomedical KGQA, Multi Resource Biomedical KGQA, Longitudinal Biomedical Semantic QA over BioASQ Task B, and Chemistry Knowledge Graph Transfer to a previously undocumented RDF graph. \\textsc{autoschema} improves mean factoid accuracy over TogoMCP in the biomedical KGQA tasks and gives consistent gains in the longitudinal BioASQ evaluation. It also reduces iteration budget exhaustion and uses fewer tool calls on average in the core evaluation. The transfer study gives preliminary evidence that live schema grounding can support irregular and previously unseen graphs without first creating a curated schema file."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.09779v1",
+        "title": "KGCaRe: Explainable Complex Conditional Question Answering using Automatic Knowledge Graph Construction and Context Retrieval with LLMs",
+        "published": "2026-08-10T16:05:58Z",
+        "updated": "2026-08-10T16:05:58Z",
+        "summary": "Answering complex conditional questions using Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) remains a challenge, particularly in domain-specific contexts where general-purpose LLMs and RAG tend to underperform. We hypothesize that augmenting RAG with unstructured and structured knowledge, extracted from both documents and knowledge graphs (KGs), can improve reasoning and answer accuracy for such tasks. To test this, we propose KGCaRe, a hybrid approach that combines neural retrieval with symbolic reasoning over LLM-generated KGs. KGCaRe constructs a KG from documents using a multi-prompt extraction strategy and stores it in a graph database. Simultaneously, the documents are embedded into a vector store to enable neural retrieval. KGCaRe performs innovative iterative graph traversal guided by the LLM to extract relevant triples, prune irrelevant information, and uses additional clue entities to traverse the graph again if the initial traversal does not provide satisfactory context to generate the answer. The relevant triples extracted from the KG in path form, along with semantically retrieved text passages, are then fed into custom KGCaRe prompts to generate answers to the complex conditional questions with explanations. We evaluate KGCaRe on two complex conditional QA datasets. Our results on these datasets show that KGCaRe consistently outperforms existing baselines, including Vanilla LLM, Code Prompt, Text Prompt, Think-on-Graph, Vanilla RAG, and HybridContextQA, across multiple LLMs such as Mistral, Mixtral, GPT-3.5, and GPT-4o. We publicly release the software pipeline that we developed to implement the proposed KGCaRe approach."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.09028v1",
+        "title": "PolicyKG: An Agentic LLM Pipeline for Translating Institutional Policies into SHACL Knowledge Graphs",
+        "published": "2026-08-10T02:28:57Z",
+        "updated": "2026-08-10T02:28:57Z",
+        "summary": "Institutional policies stay in natural language while the systems that check compliance demand machine-readable constraints. Bridging that gap is still done by hand. PolicyKG closes the loop. It is an LLM pipeline that reads a policy PDF, classifies each sentence as an obligation, permission, or prohibition, lifts the label into first-order deontic logic, and emits SHACL constraints. Four stages run on a LangGraph state machine with per-stage validators. The piece that matters most is the Corpus Adapter: a YAML vocabulary registry that grounds LLM predicates in a target ontology. Retargeting to a new domain means swapping the registry, not retraining a model. On the Asian Institute of Technology Policies and Procedures corpus (1,663 sentences, 443 rules), PolicyKG reaches 86.9% deontic classification accuracy (Cohen's kappa = .709). Three annotators independently re-label a 50-item sample and agree at Fleiss' kappa = .844. SHACL shape correctness on a 69-shape subset is F1 = .866. The FOL path handles 79.2% of rules; the rest go through a direct NL-to-SHACL fallback. We audited every one of the 443 rules for second- or higher-order constructs. An automated regex checklist flagged none, and a first-author pass on the 92 FOL-fallback cases confirmed the same. The exact upper 95% Clopper-Pearson bound on the true HOL rate is 0.67%. This is an audit finding for one corpus, not a proof of FOL sufficiency for institutional policy. Swapping the AIT registry for a GDPR registry raises exact property alignment from 1/15 to 11/15 (Fisher's exact p < .001; Cohen's h = 1.53). On the LexDeMod lease-contract benchmark (N = 200), Macro F1 drops to .370 because lease English uses \"shall be entitled\" for permission -- exactly the vocabulary mismatch registry swap is meant to fix. Repeated runs produce hash-identical SHACL outputs."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.05982v1",
+        "title": "THBKG: A Temporal Biomedical Knowledge Graph for Decision-Aligned Clinical Advancement Prediction",
+        "published": "2026-08-06T12:59:05Z",
+        "updated": "2026-08-06T12:59:05Z",
+        "summary": "Inadequate target--disease linkage accounts for 40--50\\% of Phase~II efficacy failures, so anticipating which programmes will advance would let sponsors back the hypotheses most likely to reach patients. What a programme can be judged on is the evidence that supported its linkage \\emph{when it entered the clinic}. No existing biomedical knowledge graph allows that evidence profile to be assembled as of a past date. We present the Temporal Heterogeneous Biomedical Knowledge Graph (THBKG), which describes and predicts therapeutic target--disease links through time: 110,396 entities and 11.1M edges across nineteen relation types, each edge carrying the year its evidence changed, so a pair's profile can be recovered as it stood when its own decision fell due. On this graph we define a decision-aligned benchmark that predicts, for a target--disease pair entering Phase~II, whether it advances to Phase~III on evidence datable before that decision. Graph propagation over the THBKG outranks every direct-evidence reference scored under the same decision-aligned protocol, reaching a relative success of 4.3--4.5 at the top ten pairs per therapeutic area. The gain concentrates on the 72.8\\% of pairs with no direct target--disease evidence at their decision point, where a direct-edge model has nothing to read: the encoders still rank five- to sixfold above chance, recovering the signal by propagating over the intervening biology. Adapting a path-based explainer to the decision-time subgraph decomposes each prediction into the evidence landscape behind the hypothesis for explainable prediction. We release the THBKG as a continually updated substrate for studying therapeutic target hypotheses by retrospective validation."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.01904v1",
+        "title": "CoEvoKG: Co-Evolving Knowledge Graphs with Self-Evolving Search Agents",
+        "published": "2026-08-03T08:39:16Z",
+        "updated": "2026-08-03T08:39:16Z",
+        "summary": "Large language models can improve with reinforcement learning for search agents, yet existing self play agents repeatedly generate tasks while discarding the knowledge gained during successful searches. We introduce CoEvoKG, a framework that turns a knowledge graph into both a source of verifiable training tasks and a persistent evidence memory for agent evolution. CoEvoKG jointly trains a task generator and a search agent: the generator creates multihop questions from entity chains sampled from the knowledge graph, while the agent learns from rewards for answer correctness and search trajectories whose entity paths are supported by graph evidence. When a search succeeds, CoEvoKG verifies and deduplicates the retrieved evidence, then writes it back to the corresponding graph nodes and edges. Future rounds reuse this enriched graph for task generation and reward computation, closing the loop between model self evolution and knowledge accumulation. Experiments on six QA benchmarks (NQ, TriviaQA, PopQA, HotpotQA, 2WikiMultiHopQA, and Bamboogle) with three backbone models show that CoEvoKG improves macro average accuracy over the corresponding base models by +11.2, +10.1, and +11.6 points on Qwen2.5-3B-Instruct, Qwen2.5-7B-Instruct, and Llama-3.1-8B-Instruct, respectively. Under matched training budgets, CoEvoKG further improves over competitive self play baselines and RL baselines for search agents by +2.6 to +3.7 macro average points across the three backbones. Code is available at https://github.com/lazzy1225/CoEvoKG."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.01732v1",
+        "title": "X-KGRank: A Knowledge Graph RAG Framework for Explainable Recommendations via Pattern Mining and LLM Re-Ranking",
+        "published": "2026-08-03T05:56:40Z",
+        "updated": "2026-08-03T05:56:40Z",
+        "summary": "Modern recommender systems produce predictions that users cannot interrogate. The two dominant improvements, collaborative filtering and LLM-based reasoning, each fall short: collaborative filtering captures behavioural signals but offers no reasoning, while large language models (LLMs) generate fluent explanations but hallucinate and are poorly grounded in a user's history. We present X-KGRank, a knowledge graph retrieval augmented framework that unifies structural collaborative filtering with LLM-based explanation. From the MovieLens-1M dataset (6,040 users, 3,704 items, 988,129 interactions) we construct a heterogeneous knowledge graph of 9,762 nodes and 999,264 edges spanning three relation types (RATED, HAS_GENRE, and CO_RATED) persisted in Neo4j. We train a LightGCN ranker with content-aware SBERT initialization and a rating weighted BPR objective, and apply a popularity selective routing strategy that grounds long-tail items (1,855 of 3,704) in knowledge-graph paths while serving popular items from pre-trained knowledge, reducing KG-augmented generations by roughly 50%. On the MovieLens-1M test set under a 99-sample protocol, X-KGRank achieves NDCG@10 = 0.2956 and Recall@10 = 0.5371, improving over a strong popularity baseline by 17.1% on both metrics, by 15.6% on NDCG@20 (0.3449 vs. 0.2983), and by 14.6% on MRR (0.2435 vs. 0.2124). Across three LLM backbones evaluated on 16 cases, a 1.5-billion-parameter model (Qwen2.5-1.5B) matches a 7-billion-parameter model (Mistral-7B) on heuristic explanation quality (0.97 vs. 0.94), yet qualitative analysis shows the smaller model is more prone to factual fabrication."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.27182v1",
+        "title": "GraphQAG: A Knowledge-Graph-Guided Visual Analytics Framework for Question-Answer Pairs Generation",
+        "published": "2026-07-29T17:52:53Z",
+        "updated": "2026-07-29T17:52:53Z",
+        "summary": "Question-answer (QA) pairs are widely used in knowledge base construction, question-answering systems, and the post-training of large language models (LLMs). However, important knowledge in long documents is often distributed across multiple paragraphs and connected through complex entity relationships. Such fragmented and relational knowledge poses substantial challenges for existing QA generation methods, which often fail to adequately cover core document content, cross-paragraph semantic connections, and multi-entity relationships. We present GraphQAG, a knowledge graph-guided visual analytics framework for generating high-quality QA pairs from long documents. GraphQAG follows a three-stage workflow. First, it constructs a document knowledge graph by segmenting the document into paragraphs and extracting salient entities and relations. Second, it builds a graph-based generation space from entities, relations, and multi-hop paths to constrain and guide LLM-based QA generation. Third, it uses the knowledge graph as an interactive visual representation, enabling users to explore document knowledge structures, inspect the coverage and evidence provenance of generated QA pairs, and iteratively refine the QA pair set through graph-based interactions. We evaluated GraphQAG through a user study with 16 participants, two case studies, and expert interviews. The results indicate that GraphQAG effectively supports users in identifying knowledge coverage gaps, examining generated QA pairs, and refining the QA pair set. These findings demonstrate the usefulness of combining knowledge graphs, LLM-based generation, and visual analytics for producing more comprehensive and trustworthy QA pairs from long documents."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.26909v1",
+        "title": "Dual-Path LLM Reasoning for Multimodal Few-Shot Knowledge Graph Completion",
+        "published": "2026-07-29T13:40:51Z",
+        "updated": "2026-07-29T13:40:51Z",
+        "summary": "Knowledge graph completion (KGC) aims to infer missing facts in knowledge graphs (KGs), thereby improving their completeness and supporting downstream intelligent applications. However, emerging entities and relations in real-world deployments make inductive KGC difficult, especially under few-shot and zero-shot settings. Multimodal information and Large Language Model (LLM)-derived priors can enrich sparse relational contexts, but they may also introduce noisy or hallucinated evidence. To address these issues, we propose DuPLeR, a \\textbf{Du}al-\\textbf{P}ath \\textbf{L}LM \\textbf{R}easoning framework for multimodal few-shot KGC. DuPLeR builds a calibrated relation graph by combining multimodal LLM-derived type priors with factual support structures, and performs dual-level structural reasoning over the refined relation topology. Moreover, a dual-pathway multimodal enhancement module regulates message passing with query-relevant multimodal signals and supplements entity representations after graph propagation. Experiments on eight inductive variants of two multimodal KG (MMKG) benchmarks show that DuPLeR achieves robust performance in data-scarce KGC scenarios."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.25641v1",
+        "title": "OmniPhys: Knowledge-Graph-Driven Benchmarking and Collective Optimization for Physical Commonsense in Text-to-Image Generation",
+        "published": "2026-07-28T12:27:25Z",
+        "updated": "2026-07-28T12:27:25Z",
+        "summary": "While text-to-image models exhibit remarkable visual fidelity, they frequently violate fundamental physical commonsense. Existing benchmarks often rely on coarse-grained descriptions, failing to diagnose the mastery of specific physical principles. Moreover, the high stochasticity of generative processes causes current prompt optimization methods to suffer from gradient hallucinations, where optimizers are misled by transient visual artifacts rather than systemic flaws. To address these challenges, we introduce OmniPhys, a rigorous benchmark of 1,551 samples grounded in a Physical Knowledge Graph. By aligning PhET simulations with standard curricula, OmniPhys operationalizes a knowledge-to-scenario pipeline that performs diagnostic stress tests via a dual-path verification protocol. We further propose OmniPrompt, an iterative framework that treats physical alignment as a discrete optimization problem. For each query, OmniPrompt aggregates K stochastic images into a per-query feedback buffer. Across training, it further merges feedback from batches of B queries before each meta-policy update, filtering seed and query-local noise. Evaluations across 12 representative text-to-image models reveal universal physical bottlenecks. Results demonstrate that OmniPrompt significantly enhances physical consistency across diverse backbones, proving the transferability and efficacy of our evolved meta-policies. The code and data are available at https://github.com/zjukg/OmniPhys"
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.24563v2",
+        "title": "TRACE-CTI: Auditable Post-Extraction Governance of TTP Claims with Knowledge Graphs",
+        "published": "2026-07-27T15:33:18Z",
+        "updated": "2026-07-28T19:41:26Z",
+        "summary": "Security Operations Centers increasingly rely on automated mapping of Cyber Threat Intelligence reports to MITRE ATT&CK, yet extractor outputs remain fallible and are often stored without the evidence, provenance, and validation history needed to decide whether an individual mapping should be trusted. We present TRACE- CTI, a post-extraction claim-governance framework that preserves run-level Predictions, aggregates them into configuration-level GraphAssertions, materializes setup-deduplicated corroboration as ConsensusAssertions, and exposes only GraphAssertions backed by policy-compliant validation grounds. The framework retains native evidence granularity, complete extraction provenance, versioned trust decisions, and non-destructive revocation history. We evaluate TRACE-CTI on two public CTI corpora comprising 65 reports and 5,303 sentences, using a controlled 2 x 3 matrix of retrievers and generator families, incrementally ingested across six GraphVersions. All setups are incorporated without schema modification; provenance paths remain complete, operational scopes remain disjoint, and every trusted GraphAssertion has an active qualifying validation ground. Cross-generator-family setup pairs exhibit greater output diversity than same-family pairs. At the final graph state, increasing setup support from k >= 1 to six-setup unanimity raises gold-aligned precision from 25.3% to 90.6%, while recall decreases from 88.2% to 16.3%. The graph also directly answers seven questions about provenance, trust, versioning, dependency, disagreement, and review-queue that the evaluated minimal flat output cannot fully answer without enrichment or reprocessing. These results support explicit, auditable governance of extracted TTP claims; the observed corroboration trajectory is descriptive and does not establish statistical independence or a causal model-family effect."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.18481v1",
+        "title": "Search-on-Graph-R1: Training Large Language Models to Search Knowledge Graphs with Reinforcement Learning",
+        "published": "2026-07-20T19:58:32Z",
+        "updated": "2026-07-20T19:58:32Z",
+        "summary": "Knowledge graph question answering (KGQA) requires navigating from topic entities to an answer several relations away. Recent methods prompt a frontier LLM to explore the graph through a retrieval tool, but their reliance on frontier-scale inference makes them costly to deploy. We present Search-on-Graph-R1 (\\sogrone{}), which internalizes this navigation into a compact 8B model through supervised fine-tuning (SFT) followed by reinforcement learning (RL). Our central idea is to scaffold a frontier teacher with each question's gold SPARQL query, so the teacher traverses a known answer-bearing path with a live \\texttt{Search} tool rather than having to discover the path itself. Since every call executes against a live Freebase server, the resulting trajectories are grounded in the knowledge graph by construction. On WebQSP, CWQ, and GrailQA, \\sogrone{} at 8B surpasses every frozen frontier-LLM system in our comparison and posts the strongest results on CWQ of any system we compare against. It does so using no auxiliary module at inference and no LLM judge during training. Isolating each training stage shows that SFT and RL contribute complementary gains, our approach transfers across model families, and RL learns to reach answers in fewer \\texttt{Search} calls than its SFT initialization."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.17935v1",
+        "title": "DeLIVeR: Decomposed Learning for Information-grounded Veracity Recognition via Reinforced Knowledge Graph Exploration",
+        "published": "2026-07-20T13:32:42Z",
+        "updated": "2026-07-20T13:32:42Z",
+        "summary": "Automated fact-checking remains a challenge for Large Language Models (LLMs) due to \"query brittleness\" in traditional retrieval systems. We propose DeLIVeR (Decomposed Learning for Information-grounded Veracity Recognition), a framework that treats evidence retrieval as a reinforced strategic exploration task. DeLIVeR utilizes a Planner LLM to decompose complex claims into targeted question sets, which are used to traverse structured Knowledge Graphs (KGs) for high-precision evidence. We optimize the Planner's policy using Group Relative Policy Optimization (GRPO) with a reward system prioritizing structural diversity and verdict accuracy. Our evaluation on LIAR, FEVER, and PolitiFact shows that DeLIVeR significantly outperforms state-of-the-art baselines. Using Qwen2.5-7B, our framework achieved peak F1-scores of 83.73, 84.57, and 79.70 respectively, representing a 10-15% improvement over HippoRAG2. By shifting to a reinforced question-planning strategy, DeLIVeR effectively bridges multi-hop reasoning gaps and provides an auditable, transparent path for verifiable misinformation detection."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.15592v1",
+        "title": "MGDT: MLLM-Guided Diffusion Transformer with Relation-Adaptive Mixture-of-Experts for Multimodal Knowledge Graph Completion",
+        "published": "2026-07-17T03:39:43Z",
+        "updated": "2026-07-17T03:39:43Z",
+        "summary": "Multimodal Knowledge Graph Completion (MKGC) requires inferring missing entities from structural, textual, and visual cues. Existing diffusion-based MKGC methods usually denoise directly on raw multimodal features. Such a design forces the denoiser to simultaneously perform relation-dependent cue selection, cross-modal semantic alignment, and structure-aware entity generation, which introduces noisy and semantically inconsistent conditions for diffusion and consequently leads to suboptimal completion performance. To address this limitation, we propose MGDT: MLLM-Guided Diffusion Transformer with Relation-Adaptive Mixture-of-Experts (MGDT), a novel MKGC framework built on an align-then-diffuse paradigm. MGDT first employs a Relation-Adaptive Semantic Routing Mixture-of-Experts (RASR-MoE) module to select relation-relevant multimodal semantic transformation paths and suppress irrelevant modality interference. MGDT then uses a frozen Multimodal Large Language Model (MLLM) as a semantic anchor to align the routed multimodal representations into a unified latent space and reduce cross-modal semantic heterogeneity. Finally, a Knowledge Graph Diffusion Transformer (KGDT) performs graph-conditioned denoising generation in the aligned space to produce the missing entity representation. Experiments on three benchmark datasets show that MGDT consistently outperforms strong baselines."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.14886v1",
+        "title": "Reachability-Aware Pretraining for Efficient Target-Oriented Path Exploration in Temporal Knowledge Graph Reasoning",
+        "published": "2026-07-16T11:59:01Z",
+        "updated": "2026-07-16T11:59:01Z",
+        "summary": "Temporal Knowledge Graph (TKG) reasoning under the extrapolation setting focuses on forecasting future time-stamped events (facts) from historical data in a temporal knowledge graph. Existing approaches, reinforcement learning (RL)-based multi-hop reasoning methods are prominent for TKG reasoning because they produce human-interpretable predictions via explicit multi-hop path tracing. However, during RL training, rewards are typically sparse, and exploration is highly inefficient due to the vast, time-evolving action space. These issues hinder efficient training and often limit overall performance. To address these challenges, we propose RAPTOR (Reachability-Aware Pretraining for Efficient Target-Oriented Path Exploration), a self-supervised pretraining method that injects a reachability-aware inductive bias to the agent. By learning to estimate the reachability of candidate actions to the target entity, RAPTOR reduces exploration over unpromising paths and provides a strong initialization for downstream RL fine-tuning. Experimental results on the ICEWS14, ICEWS05-15, and ICEWS18 datasets demonstrate that RAPTOR pretraining markedly improves the training efficiency and consistently outperforms conventional baselines, establishing it as an effective approach for enhancing RL-based multi-hop reasoning methods for TKG reasoning."
+      }
+    ]
+  },
+  {
+    "key": "cellular",
+    "url": "https://export.arxiv.org/api/query?search_query=%28ti%3AHodge+OR+ti%3ASimplicial+OR+ti%3ACellular%29+AND+%28all%3A%22neural%22+OR+all%3A%22learning%22%29+AND+submittedDate%3A%5B202401010000+TO+202609162359%5D&max_results=30&sortBy=submittedDate&sortOrder=descending",
+    "accessed_at_utc": "2026-09-16T11:59:34.392091+00:00",
+    "status": 200,
+    "sha256": "a4b83e03d3e83b49fb0f7adaba527cafac2cd266b595196a4c6de301cc40b7a1",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2609.12866v1",
+        "title": "Learning the Topology of a Simplicial Complex Using Noisy Simplicial Signals",
+        "published": "2026-09-11T13:51:27Z",
+        "updated": "2026-09-11T13:51:27Z",
+        "summary": "Graphs are a fundamental tool for modeling the irregular (non-Euclidean) structure of complex data. However, they are inherently limited to representing pairwise relationships, making them inadequate for datasets exhibiting higher-order interactions. Simplicial complexes (SCs) have emerged as a promising framework for capturing such higher-order dependencies. This paper focuses on the problem of identifying the topology of an SC from signals, which serves as the foundation for SC-based processing and learning schemes. We consider a setting where we observe noisy signals (features) associated with the nodes of the SC (0-simplices) and a subset of the edges (1-simplices). We assume the observed signals are smooth over the unknown SC topology, and that the higher-order interactions are sparse. Building on these assumptions, we formulate topology learning as a nonconvex optimization problem and propose an efficient block-coordinate descent (BCD) algorithm to solve it. A key step in our formulation is the modeling of the topology of the SC using binary edge and triangle selection vectors, combined with efficient greedy algorithms for optimizing such vectors. We establish theoretical convergence guarantees to a stationary point of a relaxed (penalized) version of the problem and discuss computational complexity. Multiple numerical experiments with both synthetic and real-world datasets validate the effectiveness of our approach, highlighting the capability of SC-learning methods to uncover and model higher-order relationships in complex datasets."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.06102v2",
+        "title": "Programmable Cellular Automata",
+        "published": "2026-09-05T13:54:18Z",
+        "updated": "2026-09-09T13:38:32Z",
+        "summary": "Cellular automata is a local computation paradigm where complex behavior can arise from local interactions between simple functions. This paradigm has been used to explain many systems such as biological processes, traffic simulation, computer networks, etc. In games, cellular automata have been used in games such as SimCity and for the generation of spatial content such as caves or dungeons. However, creating effective local rules is hard and unintuitive. Cellular automata can be effectively evolved, but may still be hard to interpret. In this work, we introduce the concept of programmable cellular automata, where we represent the system as Python code. We also modularize the cellular automata into local functions and a decision function. Local functions take a local neighborhood and return a value, while the decision function takes the output of the local functions and decides the value of the next state. Separating the cellular automata into modules written in Python helps with understanding how these systems are working. We also explore adding global functions where they take the whole state and compute a function from it. We tested generating levels for three different games from the PCG Benchmark. The results showed that global functions decrease the number of iterations that cellular automata need to solve a problem, and that we cannot find solutions for some problems with purely local functions. Looking into the generated functions, we can see common functions that have been used in different experiments, which not only helps us understand the generator but also helps us understand these games better and what is important for them."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.05696v1",
+        "title": "Bridging simulation length scales with cellular automata",
+        "published": "2026-09-04T20:05:58Z",
+        "updated": "2026-09-04T20:05:58Z",
+        "summary": "Multiscale simulation requires coupling physics models that operate at different characteristic length and time scales, because no single method spans the range needed for most problems of interest. Moving to a coarser-grained representation unlocks longer length and time scales, but it discards the microscopic interactions that build morphology. A fine-grained model can be initialized from an arbitrary packing and left to self-assemble into a physically meaningful structure; a lower-resolution model cannot, and must inherit its starting configuration from a higher-fidelity simulation. The length scales accessible to the coarse-grained model are therefore set not by the coarse-grained method itself, but by the largest fine-grained configuration that can be affordably equilibrated. A representative example is the scale-up from particle-based molecular dynamics (MD) to a lattice-based representation such as kinetic Monte Carlo (kMC). In this work, we present a cellular automata (CA) approach for generating arbitrarily large lattice starting configurations. CA is a natural fit for this task: short-ranged local rules drive the evolution of a lattice, and their repeated application gives rise to emergent long-range order, thematically mirroring how short-ranged interactions in MD produce self-assembled morphology. We use a configuration from a higher-fidelity simulation as a training set and learn the CA rules from it via logistic regression. As a proof of principle, we develop these rules for a hydrated anion exchange membrane (AEM), generate new starting configurations, and benchmark their performance in mesoscale kMC simulations against an MD-derived \"ground truth.\" We then demonstrate the ability to generate substantially larger lattices and show that their behavior in kMC is consistent with that of the smaller CA benchmark configurations."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.01675v1",
+        "title": "Random Forest-Informed Cellular Automaton for Large-Scale Wildfire Spread Modelling",
+        "published": "2026-09-01T08:06:53Z",
+        "updated": "2026-09-01T08:06:53Z",
+        "summary": "Accurate large-scale wildfire spread modelling requires models that capture both the environmental conditions associated with fire occurrence and the local dynamics of fire propagation. We propose a three-stage framework that combines a Random Forest (RF) model with a cellular automaton (CA). First, an RF model trained on the 2021 Canadian fire season estimates daily pixel-level fire-occurrence probabilities. Second, quantile gradient boosting models provide optional spread-rate priors for sensitivity analysis. Third, an RF-informed CA combines the RF probability layer with neighbourhood-driven spread on a 5 km grid. The RF model achieved AUC values of 0.725--0.795 on the 2022--2024 datasets, while the RF-informed CA achieved substantially higher spatial overlap than the evaluated CA-only baselines in the 2023 simulation. A higher-resolution simulation provides an additional qualitative assessment of local spatial errors. These results suggest that combining RF-derived probabilities with local CA spread can improve large-scale wildfire simulations under the tested conditions."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.30328v1",
+        "title": "Learning PDE Time-Stepping with Neural Cellular Automata",
+        "published": "2026-08-31T06:46:24Z",
+        "updated": "2026-08-31T06:46:24Z",
+        "summary": "Classical numerical solvers for partial differential equations (PDEs) are computationally expensive to solve repeatedly across varying initial conditions, motivating the need for learned surrogates. In this paper, we propose a trainable Neural Cellular Automata (NCA) based surrogate model for learning long time PDE dynamics. Rather than mapping an entire initial field to a full trajectory in one shot, our proposed model learns a small, local, homogeneous update rule that is applied identically and repeatedly at every grid cell, mirroring the locality of differential operators. We benchmark this framework against three baselines: PDE - Net, a modified physics-informed neural network (PINN), and a Fourier Neural Operator (FNO), on five canonical PDEs (heat, advection, Burgers, Allen - Cahn, and Fisher - KPP), evaluated at temporal domain two times beyond the training temporal domain. The proposed model achieves the lowest long-horizon relative errors on the majority of the experiments."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.28909v1",
+        "title": "Coarse to Fine: Iterative Adversarial Neural Cellular Automata for Medical Image Synthesis",
+        "published": "2026-08-28T22:16:35Z",
+        "updated": "2026-08-28T22:16:35Z",
+        "summary": "Large-scale, publicly available datasets have driven advances in deep learning, but privacy and legal restrictions often limit data sharing in medical imaging. Synthetic data generation offers a privacy-friendly alternative to enable the training of high-performance models on health data. While most state-of-the-art generative models produce high-quality images, they remain computationally expensive, which limits their applicability on resource-constrained hardware. We propose StyleGANCA, the first lightweight general-purpose NCA-based generative adversarial network. The architecture integrates a StyleGAN-inspired mapping network and adaptive style modulation into a multi-scale NCA synthesis process, enabling latent-controlled image generation through iterative local interactions. We evaluate StyleGANCA on BloodMNIST and PathMNIST against adversarial, variational, diffusion, and NCA-based baselines. Experimental results demonstrate that StyleGANCA achieves competitive image quality with substantially fewer parameters than baseline architectures, achieving the best FID and KID scores on PathMNIST with only 617k parameters. Furthermore, downstream experiments show that the generated images preserve class-specific information and effectively support the training of multi-class classifiers. Our code is publicly available at: https://github.com/MECLabTUDA/StyleGANCA"
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.26547v1",
+        "title": "Random Recursive Simplicial Complexes",
+        "published": "2026-08-27T02:36:40Z",
+        "updated": "2026-08-27T02:36:40Z",
+        "summary": "We investigate random recursive simplicial complexes growing by adding, at each step, a vertex together with a simplex formed by joining the new vertex with a randomly chosen existing simplex. We also add all faces of the new simplex to ensure that the resulting object remains a simplicial complex. If the choice of an existing simplex is uniform among simplices of dimension $<m$, the number $S_d$ of simplices of any admissible dimension $d\\leq m$ is an asymptotically self-averaging random variable. This feature allows us to determine the asymptotic growth law of the average of $S_d$ when the number of vertices diverges. We also probe the degree distribution, examine the probabilities of various extreme outcomes, and analyze the characteristics of the first vertex."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.17968v1",
+        "title": "Simplicial closure fragments the explosive cooperation transitions in higher-order public goods games",
+        "published": "2026-08-18T16:21:02Z",
+        "updated": "2026-08-18T16:21:02Z",
+        "summary": "Hypergraph (HG) and simplicial complex (SC) are two common representations of higher-order networks, and are often expected to differ mainly quantitatively when they encode comparable group interactions. Here we show that this expectation fails in evolutionary cooperation dynamics. Using a controlled higher-order public goods game (PGG) with minimal ad hoc parameters, we compare cooperation transitions on randomized HG and SC constructed from the same triangular backbone. We find that the impact of simplicial closure is selective: when the cooperation transition is continuous-like on HG, imposing simplicial closure mainly broadens the transition without changing its qualitative nature; however, when the transition is explosive and first-order-like on HG, simplicial closure will fragment the compact low/high bistability into a broad ensemble of metastable final states. Detailed analysis reveals that this selective effect arises from the dual role of simplicial closure in cooperative-nucleus dynamics: it promotes the survival of local cooperative nuclei while suppressing their conversion into system-wide cascades. Further experiments confirm that this fragmentation is not tied to a specific payoff form, but is a generic feature of explosive cooperation transitions in higher-order PGGs."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.16419v2",
+        "title": "PertMind: Eliciting Emergent Biological Reasoning in LLM via Reinforcement Learning on Cellular Perturbation Data",
+        "published": "2026-08-17T11:17:26Z",
+        "updated": "2026-08-22T05:21:26Z",
+        "summary": "Large language models can describe mechanisms, yet scalable post-training still depends on costly, manually curated biological reasoning traces. Here we show that cellular perturbation atlases can instead become reinforcement-learning environments, where measured gene responses provide computable rewards for biological reasoning. We introduce PertMind, which combines trusted-trajectory supervised initialization with gene-, pathway-, and format-level reinforcement signals. Trained only on forward perturbation-response prediction, PertMind improved response inference in unseen cellular contexts while retaining general language capabilities. It also transferred without task-specific post-training to reverse perturbation identification, double-perturbation reasoning, phenotypic-screen prioritization, and biological-process interpretation. PertMind further generated biological profiles that supported competitive gene, cell, and donor representations across multiscale downstream tasks. These results support the hypothesis that reinforcement on experimental endpoints can concentrate reusable biological strategies already accessible to pretrained models. More broadly, perturbation-derived reinforcement learning offers a scalable route for transforming expanding experimental atlases into training environments for general-purpose biological reasoning."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.14293v1",
+        "title": "Conditional Neural Optimal Transport for Predicting Cellular Phenotypes from Molecular Structure",
+        "published": "2026-08-14T13:25:04Z",
+        "updated": "2026-08-14T13:25:04Z",
+        "summary": "High-content microscopy enables systematic profiling of cellular responses to chemical perturbations, but the scale of the chemical space makes exhaustive phenotypic characterization experimentally infeasible. This motivates computational models that can predict image-derived phenotypes without acquiring the corresponding treated cells. We formulate molecule-induced phenotype prediction as an inductive conditional transport problem in image representation space. Given a negative-control phenotype and the structure of a molecule, we aim to predict the phenotype induced by the corresponding molecule. We first evaluate classical optimal transport baselines and show that static couplings do not yield useful predictions on large-scale phenotypic image datasets. We then introduce a molecule-conditioned Neural Optimal Transport (NOT) model with a Monge-Gap regularization training objective that learns to transport negative-control unperturbed phenotypes toward perturbed phenotypes using molecular structure as conditioning information. NOT recovers molecule-specific phenotypic effects while reducing microscopy-associated technical variation, thereby facilitating comparisons across experimental batches. On unseen active molecules, the model outperforms baseline approaches, demonstrating that chemically conditioned transport can generalize beyond the molecules observed during training. We identified the molecular encoder as the main limitation to this generalization, while transport in a compressed representation space improves performance and scalability. These results establish NOT as a promising framework for predicting cellular phenotypes from molecular structure and negative-control phenotypes, while highlighting the development of more informative molecular representations as a key direction for improving out-of-distribution performance."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.12431v1",
+        "title": "The energetic cost of mitigating AI attacks in cellular networks",
+        "published": "2026-08-12T12:42:46Z",
+        "updated": "2026-08-12T12:42:46Z",
+        "summary": "The integration of Artificial Intelligence (AI), generally as Machine Learning (ML) algorithms, in all levels and aspects of cellular networks demonstrates the success of data-driven algorithms; for example, the Radio Intelligence Controller (RIC) of the O-RAN paradigm bestows the network with optimised radio resource allocation, load balancing or energy efficiency functions, among others. Nevertheless, this dependency on data opens new security vulnerabilities, as attackers can alter data properties and steer ML models to underperform or degrade. Conversely, the developed mitigation strategies are effective, but they generate a computational load which, in consequence, results in an energy cost generally overlooked, even in the current energy-awareness context. In this work, consumption of a defence technique is characterised, and the challenges raised by the triad of ML accuracy, robustness and energy efficiency are outlined."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.02576v1",
+        "title": "Smooth Reparameterizations of Functions on Simplicial Product Spaces: Applications to Probabilistic Tensor Decomposition and Functional Data Registration",
+        "published": "2026-08-03T17:51:40Z",
+        "updated": "2026-08-03T17:51:40Z",
+        "summary": "We consider optimization problems defined on product spaces of simplices. Examples of this class of problems include learning low-rank discrete multivariate probability distributions via simplex constrained tensor decomposition and performing functional data registration under the Square Root Velocity Function (SRVF) representation. In this work, we demonstrate the feasibility of replacing the product simplex with a smooth, elementwise strictly convex reparameterization, resulting in an unconstrained optimization problem on a manifold. We show that performing such a reparameterization results in the second order Karush-Kuhn-Tucker (KKT) points on the smooth manifold being mapped to the weak second order KKT points on the product simplex. This leads to a Riemannian Gradient Descent (RGD) algorithm for solving the reparameterized problem, which outperforms Projected Gradient Descent (PGD), and provides a more faithful representation of the original function shapes while performing curve registration."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.02050v1",
+        "title": "TextNCA: Neural Cellular Automata for Language Modeling via Hierarchical Local Attention",
+        "published": "2026-08-03T10:47:05Z",
+        "updated": "2026-08-03T10:47:05Z",
+        "summary": "Can a strictly local, iterated, weight-shared computation primitive support language modelling, and which of those three properties actually drives the model's behaviour? We define \\textsc{TextNCA}, a 1D causal windowed-attention realisation of the Neural Cellular Automaton primitive, and study a hierarchical variant that cascades three stages with windows $w \\in \\{8, 32, 128\\}$ and $T_s$ shared-weight iterations per stage, all on WikiText-103 at roughly 30M parameters and 60k training steps. The model does not match a parameter-matched Transformer at this scale (Hier-TextNCA $60.3$ vs.\\ Transformer-6L $52.8$ and Transformer-12L $44.7$ PPL), so we treat it as an analytical probe rather than a proposed alternative. The behaviour we observe is largely explained by the staged narrow-to-wide schedule: a non-iterating sliding-window Transformer that reuses the same schedule comes within $+4.1$ PPL of the iterated model, while reversing, flattening, or breaking the monotonic ordering of the schedule costs between $+16.7$ and $+70.8$ PPL. Iteration adds a smaller bounded benefit on top of the schedule, with a clear optimum at $T_s{=}4$ and a U-shaped degradation beyond it. The GRU gate and learned per-step embeddings are required for that benefit to appear, and training with random $T_s$ yields an inference-time iteration-count knob at the cost of substantially higher absolute PPL. We position the work as a controlled reading of which parts of NCA-style computation carry the weight in language modelling."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.02688v1",
+        "title": "Learning Molecular Representations from Cellular Phenotypes with Structure Preservation",
+        "published": "2026-08-03T08:33:54Z",
+        "updated": "2026-08-03T08:33:54Z",
+        "summary": "Phenotypic drug discovery enables the discovery of functional relationships between molecular structures and cellular responses. However, existing multimodal representation learning methods often optimize cross-modal alignment without considering the intrinsic organization of chemical space, resulting in distorted molecular representations and loss of structural information. We propose \\textbf{PhenMol}, a structure-preserving framework for phenotype-aware molecular representation learning. PhenMol disentangles molecular and cellular representations into shared and private components, enabling phenotype-guided alignment while preserving chemical structures through a dedicated molecular branch. This design integrates cellular phenotype information without disrupting molecular neighborhood organization. Experiments on approximately $3.04 \\times 10^{4}$ molecule--cell morphology pairs demonstrate that PhenMol improves molecular property prediction across 270 bioactivity tasks, molecule--phenotype retrieval, and clinical trial outcome prediction. Moreover, ECFP4-based structural analysis shows that PhenMol better preserves molecular neighborhoods and reduces embedding distortion compared with existing multimodal alignment methods. These results highlight the importance of structure-aware constraints in multimodal molecular representation learning and provide an effective approach for integrating cellular phenotypes with chemical knowledge for drug discovery."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.28030v1",
+        "title": "MUL-T: Decoding Spatial Cellular Architecture in Multiplexed Tissue Images",
+        "published": "2026-07-30T11:15:12Z",
+        "updated": "2026-07-30T11:15:12Z",
+        "summary": "Understanding tissue organisation in multiplexed imaging requires modelling both cellular phenotypes and their spatial context. Existing approaches typically rely on handcrafted features, such as marker intensity statistics or cell-type proportions, which often fail to scale or generalise across cohorts with heterogeneous marker panels. We introduce MUL-T, a lightweight transformer framework that reframes tissue architecture as a masked contextual prediction task over discrete cell tokens. By learning contextualised [CLS] embeddings without task-specific supervision, the model captures higher-order cellular interactions while remaining computationally efficient. We evaluate MUL-T on several clinically relevant downstream tasks, including core-level tumour pattern classification, patient-level grading, PD-L1 positivity prediction, and cross-dataset treatment response prediction. Across tasks, MUL-T consistently outperforms classical feature-based baselines and achieves performance comparable to a foundation ViT model, despite substantially fewer parameters and lower training cost."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.27320v1",
+        "title": "Emulating Cosmic Structure Formation with a Lagrangian Neural Cellular Automaton",
+        "published": "2026-07-29T18:00:01Z",
+        "updated": "2026-07-29T18:00:01Z",
+        "summary": "Field-level inference of cosmological initial conditions from galaxy surveys requires a forward model that is simultaneously accurate in the non-linear regime, computationally efficient, and fully differentiable. Traditional N-body simulations are accurate but computationally prohibitive for iterative inference, while approximate solvers like Lagrangian Perturbation Theory (LPT) fail to capture the knotty halo-forming dynamics of the cosmic web at late times. We introduce the \\textit{Lagrangian Neural Cellular Automaton} (LNCA), a hybrid deep learning framework that can be applied to emulate structure formation as a local, iterative dynamical process on a comoving lattice. Unlike standard Eulerian Convolutional Neural Networks (CNNs) which map fixed density fields, the LNCA operates in the Lagrangian frame, advecting the computational graph itself to follow the flow of mass. By training the network to learn only the \\textit{residual} displacement corrections to the Zeldovich approximation, we achieve high-fidelity emulation of the non-linear physics while guaranteeing accuracy at large scales. We further constrain our model to produce complete trajectories, not just final states, by adopting an equivariant cellular automaton architecture, which recurrently iterates on its internal states to yield a dynamic history. The resulting model is strictly local, translationally and rotationally equivariant, and naturally supports continuous time integration, making it a reliable differentiable forward model for reconstructing the initial conditions of the universe from lightcone data. Our trained model supports percent-level precision in the power and cross spectra well into the non-linear regime ($k \\lesssim 0.5 \\, h \\text{Mpc}^{-1}$), while requiring $\\sim10^4$ times fewer learned parameters than comparable models which take the form of an interpretable internal dynamic rule set."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.25322v1",
+        "title": "From Cellular Responses to Pharmacological Domains: Multimodal Zero-Shot Drug Representation Learning",
+        "published": "2026-07-28T06:13:25Z",
+        "updated": "2026-07-28T06:13:25Z",
+        "summary": "Multimodal drug discovery enables drug representation learning beyond chemical structure by incorporating cellular responses such as gene expression and cell morphology. However, direct fusion and instance-level contrastive alignment may mix mechanism-related signals with modality-specific noise and incorrectly separate structurally dissimilar but biologically related compounds. This limitation can obscure transferable mechanism patterns required for predicting the properties of unseen compounds. We introduce PMRD, a pharmacological response domain-guided framework for multimodal zero-shot drug property prediction. PMRD separates mechanism-consistent factors from modality-specific information and constructs a consensus response domain across three modalities. Mechanism candidate augmentation identifies locally stable factors, while retrieval-geometry attribution dynamically reweights the alignment and augmentation objectives according to whether their updates preserve inter-drug discriminability.This feedback suppresses training signals that conflict with mechanism-discriminative retrieval. PMRD further combines complementary representations through reliability-aware multiview retrieval. Experiments on public datasets show improved zero-shot property prediction and more biologically coherent drug neighborhoods. Hard-negative analysis further indicates fewer conflicts between structurally dissimilar but response-related compounds. These results support PMRD as an effective framework for mechanism-aware multimodal drug representation learning.\\footnote{The code will be released upon publication.}"
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.24529v1",
+        "title": "Efficient Ultrasound Image Segmentation with Token-Conditioned Neural Cellular Automata",
+        "published": "2026-07-27T15:08:26Z",
+        "updated": "2026-07-27T15:08:26Z",
+        "summary": "Point-of-Care Ultrasound (POCUS) plays an important role in bedside diagnosis and clinical decision-making, particularly in resource-constrained settings. Recent deep learning methods have substantially improved ultrasound image segmentation, enabling accurate diagnosis and biometric estimation. However, their computational cost limits deployment on portable and low-resource devices. To address this challenge, we propose LiteAdaNCA-Net (LANCANet), a lightweight ultrasound segmentation framework that incorporates token-conditioned Neural Cellular Automata (NCA) adapters for iterative feature refinement. Specifically, structure-aware tokens guide local NCA refinement via Token FiLM, enabling boundary-aware feature refinement with minimal computational cost. We evaluate LANCANet on HC18, CCA, and PSFHS, and assess robustness on two independent African fetal head datasets collected from multiple clinical centers. Experimental results demonstrate that LANCANet achieves competitive or superior performance to recent lightweight CNN- and transformer-based methods. On HC18 and CCA, LANCANet achieves the highest Dice Similarity Coefficient (DSC) of 96.62\\% and 92.86\\%, respectively. On PSFHS, it achieves the best performance on the challenging pubic symphysis structure while maintaining competitive fetal head segmentation accuracy. Furthermore, despite being trained from scratch, LANCANet maintains competitive performance on the external KEN-FH and AFR-FH datasets under substantial domain shifts. These results show that token-conditioned NCA refinement improves segmentation accuracy and boundary localization while maintaining computational efficiency for resource-constrained clinical deployment. Our code is on \\href{https://anonymous.4open.science/r/LANCAN-21A0/README.md}{GitHub}."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.15726v2",
+        "title": "Transient State Reorganization and Cell Differentiation in the Developmental Dynamics of Growing Neural Cellular Automata",
+        "published": "2026-07-17T08:04:11Z",
+        "updated": "2026-07-22T10:24:15Z",
+        "summary": "Growing Neural Cellular Automata (GNCA) develop complex morphologies from a single seed cell through shared local rules, yet the internal dynamics of this process remain poorly understood. To investigate how GNCA grows, the full developmental trajectory of trained GNCA models was traced. The trajectory of cell state development revealed that morphological convergence often proceeds non-monotonically through transient intermediate configurations. In addition, channel-wise analysis showed that the hidden channels self-organize into modular groups in parallel with the visible form. Furthermore, geometric analysis of the cell state space indicated that cell states diversify within a low-dimensional, smooth manifold. To examine cell development in more detail, community detection on an $ε$-neighbour network of cells was conducted. This analysis successfully extracted discrete cell types from this continuous space, and identified transient cell-type communities during early development and stable, finer-grained types corresponding to spatially coherent regions of the mature morphology. The temporal coordination of these phenomena across multiple independent measures indicates that the developmental process of GNCA is a reorganization of transient states rather than incremental refinement."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.14475v1",
+        "title": "One-Shot Generative Design for Disordered Metamaterials via Self-Organizing Neural Cellular Automata",
+        "published": "2026-07-16T01:43:03Z",
+        "updated": "2026-07-16T01:43:03Z",
+        "summary": "Disordered metamaterials feature microstructures with inherent randomness and irregularity, enabling them to achieve broader property coverage and superior performance unavailable in their regular counterparts. Despite their promise, designing disordered microstructures is substantially harder than designing regular ones. Their design remains trapped between manual parameterizations with limited expressiveness, and generative AI that is data-hungry and struggles to generalize. To address these limitations, we propose a generative design framework based on Neural Cellular Automata that dynamically grows complex microstructures through learned local interaction rules, inspired by the self-organizing processes in natural materials. This framework requires only a single training template, yet accommodates diverse disordered microstructures and adapts to irregular domains and arbitrary discretizations. By manipulating the learned local rules, we can steer the growth process to generate microstructures unseen during training, providing control over orientation, anisotropy, and directional thickness without retraining. As a dynamic, local growth process, it naturally produces spatially varying microstructures that transition smoothly to enable location-specific mechanical properties. We demonstrate this in a multiscale mechanical cloaking design, where microstructures vary across the space to meet an optimized heterogeneous property distribution. Our design enables excellent cloaking performance without complicated post-processing and incompatible assembly common in existing methods. This data-efficient, generalizable approach opens access to previously intractable disordered materials for biomedical implants and soft robotics."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.12518v1",
+        "title": "Cellular Signal Constructed Convolutional Vision Transformer for High Accuracy Positioning",
+        "published": "2026-07-14T08:52:30Z",
+        "updated": "2026-07-14T08:52:30Z",
+        "summary": "Modern cellular systems employ wide bandwidths and large antenna arrays to meet high data rate requirements. The high spatial and temporal resolution for communication also enables high-accuracy positioning as an ancillary benefit. Standard convolutional neural networks (CNNs) and vision Transformers have demonstrated excellent performance in positioning by leveraging delay-angle domain channel representations. However, they still face practical challenges in complicated cellular environments with low signal-to-noise ratios and severe inter-cell interference. This paper proposes a hybrid convolutional vision Transformer (ConViT) architecture that integrates the local receptive fields of CNNs to suppress local noise and employs Transformers to capture global attention among different multipath components. Various fusion strategies for combining signals from multiple distributed base stations are also evaluated. An extended Kalman filter with sensor fusion is applied to further mitigate long tail fluctuations of model estimates. Comprehensive validation is conducted with commercial long-term-evolution signals received by a large antenna array in urban environments with non line-of-sight signals and strong inter-cell interference. ConViT achieves a distance root mean square error (RMSE) of 3.46 meters and a yaw RMSE of 2.54 degrees, significantly outperforming benchmark models, while maintaining a lower parameter count and reduced computational complexity. Finally, a correspondence analysis between delay-angle power distributions and Transformer attention weights demonstrates the interpretability of the model."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.12403v1",
+        "title": "Structured Fluctuations and the Information Dynamics of Self-Maintenance in Growing Neural Cellular Automata",
+        "published": "2026-07-14T06:23:20Z",
+        "updated": "2026-07-14T06:23:20Z",
+        "summary": "Growing Neural Cellular Automata (GNCA) are capable of robust self-maintenance and self-repair, yet the internal dynamical mechanisms that support these capabilities remain poorly understood. Here, we investigate the role of internal fluctuations--temporal micro-variability of hidden channel states--in a trained GNCA model, challenging the assumption that such variability is merely residual stochastic noise. Through systematic analysis spanning update-rate sweeps, spatial correlation measurements, dimensionality reduction of collective state trajectories, localized damage experiments, transfer entropy vector field estimation, and partial information decomposition, we show that internal fluctuations are spatially structured, dynamically coupled to an attracting collective state, and associated with distributed small-magnitude updates that contribute to damage recovery. Damage induces a global deviation in latent state space followed by gradual re-convergence, and suppressing distributed small-magnitude updates associated with baseline fluctuation dynamics outside a permissive radius that encompasses the majority of the cells significantly impairs recovery. Transfer entropy analysis characterizes a spatially differentiated repair response: corrective inward flow near the damage site coexists with outward perturbation propagation at greater distances. Partial information decomposition further suggests a regime shift from synergy-dominant resting computation to redundancy-increased coordination during recovery. These findings indicate that GNCA self-repair emerges from high-dimensional nonlinear collective dynamics in which internal fluctuations serve as a functional component supporting information flow, coordination, and return toward an attracting recurrent state."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.07016v1",
+        "title": "Multimodal Spatiotemporal-Frequency Fusion with Peak Enhancement for Cellular Traffic Forecasting",
+        "published": "2026-07-08T05:17:48Z",
+        "updated": "2026-07-08T05:17:48Z",
+        "summary": "Accurate forecasting of cellular network traffic is essential for network planning, resource allocation, and quality-of-service assurance in modern mobile communication systems. Real-world traffic often exhibits bursty endogenous dynamics and disturbances triggered by external urban events, which makes reliable prediction highly challenging. Most existing spatiotemporal traffic forecasting methods primarily focus on intrinsic traffic patterns or structural relationships within a single modality, and rarely model burst behavior together with exogenous contextual signals. To address this issue, we propose \\textbf{MSPF-Net}, a multimodal cellular traffic forecasting framework that integrates external contextual information. Specifically, MSPF-Net consists of a Spatiotemporal-Frequency Traffic Encoder for capturing temporal, spatial, and spectral traffic patterns, a Peak Enhancement Module for extracting burst-aware representations of sudden spikes, a News Context Representation Module for encoding urban news streams into exogenous contextual embeddings, and a Dynamic Fusion Prediction Module for adaptively integrating these heterogeneous signals to generate forecasts. Experiments on the Milano, Trento, and LTE traffic datasets demonstrate that jointly modeling traffic dynamics, burst patterns, and news contextual signals can effectively improve forecasting performance."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.03545v1",
+        "title": "Cellular Adaptation to Signal Fluctuations as Learning",
+        "published": "2026-07-03T18:07:26Z",
+        "updated": "2026-07-03T18:07:26Z",
+        "summary": "Cells represent one of the most fundamental units of life. Underlying their robust performance against environmental variability, such as temporal fluctuations of chemical signals, between different cell types, is a dynamical interrelation between the two components of an intracellular pathway: a gene-regulatory network and its upstream signal transducers. To understand how a single cell utilizes this feedback to self-regulate its gene-expressions, we develop a multiscale model of the pathway's components, in which the adaptive variables responsible for signal interpretation follow a feedback-induced learning process. We then derive a macroscopic theory capturing the covariations between these components - so-called collective modes. Our theory shows how cells can achieve robust output against signal fluctuations via self-regulation rather than simple noise suppression. Such robustness corresponds to a transition from random- to structured collective modes beyond a critical adaptation rate."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.03286v2",
+        "title": "Contextual Cellular Growth (ConCeG) of neural cells for realistic grey matter tissue generation for diffusion MRI simulations",
+        "published": "2026-07-03T12:53:44Z",
+        "updated": "2026-08-14T15:52:17Z",
+        "summary": "Accurate interpretation of diffusion magnetic resonance imaging (dMRI) signals in grey matter (GM) remains challenging due to the complex, heterogeneous, and densely packed cellular environment. Numerical phantoms provide a controlled framework for investigating the relationship between microstructure and diffusion signals, yet existing approaches often lack the morphological realism and multi-cellular organisation required to faithfully represent GM tissue. In this work, we introduce Contextual Cellular Growth (ConCeG), a generative framework for creating individual cells or constructing dense, three-dimensional, multi-cellular GM substrates informed by real neuronal and glial morphologies. The method combines topological neuron synthesis with a spatially constrained growth network, allowing for the controlled generation of heterogeneous cellular environments with realistic intra- and extracellular compartments. Synthetic cells are generated using morphological and topological characteristics derived from biological reconstructions. We validate the framework through comparisons of structural features with real cellular data, demonstrating strong agreement in branch order, length, angle, and tortuosity distributions. Power spectrum analysis further shows that both intracellular compartments reproduce the spatial correlations observed in biological tissue. Together, these results show ConCeG provides a biologically grounded framework for generating grey matter substrates suitable for large scale diffusion MRI simulation."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.01508v1",
+        "title": "scMTNI: Leveraging cellular trajectory and context to infer dynamic GRNs from single-cell multi-omics data",
+        "published": "2026-07-01T22:16:11Z",
+        "updated": "2026-07-01T22:16:11Z",
+        "summary": "Transcriptional gene regulatory networks (GRNs) depict the directed relationships between regulators and target genes, determining gene expression patterns in a cell-type-specific manner. Single-cell multi-omics technologies, such as single-cell RNA sequencing (scRNA-seq) and single-cell Assay for Transposase-Accessible Chromatin using sequencing (scATAC-seq), enable high-resolution measurement of cell-type-specific gene expression and regulation in an unprecedented way. However, tools for inferring cell-type-specific GRNs and modeling their dynamics remain scarce. To facilitate the inference and analysis of cell-type-specific GRNs in contexts such as cellular development or disease progression, where cell lineage structure and dynamics are important, we developed a multi-task learning framework, single-cell Multi-Task Network Inference (scMTNI). scMTNI and its associated network analyses tools offer a comprehensive package to define cell-type-specific GRNs and examine their dynamics. This book chapter describes the scMTNI tool and demonstrates its application to an existing cellular reprogramming single cell multi-modal dataset to infer cell-type-specific GRNs and identify key regulators of cellular fate transitions during cellular reprogramming."
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.25709v1",
+        "title": "Cellular Predictions on the Move: What about Data?",
+        "published": "2026-06-24T11:21:17Z",
+        "updated": "2026-06-24T11:21:17Z",
+        "summary": "Mobile cellular load forecasting is native to network resource optimization and delivery of services with reliability, latency and quality guarantees. The mainstream of machine learning research in the area is focused primarily on developing powerful learning structures for improved prediction accuracy. The data used for forecasting traditionally belong to the cellular domain and at most contain exogenous information about the surroundings of the base stations. We approach the prediction task from the perspective of data as a vital component of any data learning process. We hypothesize that substantial improvements could be achieved when the data inform on the processes that create the cellular load. Specifically, we propose to characterize the population dynamics -- the potential number of cellular traffic sources and their mobility -- in addition to employing historical time series of mobile data traffic. We validate our hypothesis for the rarely examined highway scenario. Comprehensive experiments show forecasting improvements on the order of $60\\%$ due to the use of these data alone."
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.23964v2",
+        "title": "3D Masked Autoencoders are Robust Learners of Volumetric and Multimodal Cellular Representations for Microscopy",
+        "published": "2026-06-22T21:45:15Z",
+        "updated": "2026-07-09T22:19:27Z",
+        "summary": "Self-supervised learning in fluorescence microscopy often relies on 2D projections, despite the inherently three-dimensional nature of cells. We present a systematic comparison of 2D and 3D masked autoencoders (MAE-2D vs. MAE-3D) on volumetric microscopy data. Under matched architectures and training protocols, MAE-3D consistently outperforms 2D max-projection and slice-based variants on downstream single-cell tasks. We further align visual representations with a pretrained protein language model (ESM2) and show that cross-modal supervision yields larger gains for volumetric models. Channel cross-attention and frequency-domain regularization are critical for leveraging 3D spatial context. On protein--protein interaction prediction, our best model achieves a ROC--AUC of 0.86, while on protein localization it reaches an AUC$_{\\text{micro}}$ of 0.95 and an F1$_{\\text{micro}}$ of 0.74, demonstrating competitive performance on both tasks. Overall, our findings highlight the potential of volumetric modeling and multimodal alignment for representation learning in single-cell microscopy."
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.21202v2",
+        "title": "Communication Heterogeneity and Collective Consensus in Neural Cellular Automata",
+        "published": "2026-06-19T08:15:29Z",
+        "updated": "2026-08-13T09:46:56Z",
+        "summary": "Reaching global agreement from purely local interactions is a defining problem of collective intelligence, and most models of it assume that all agents share a single communication protocol. We ask what happens when they do not. Using a Neural Cellular Automaton in which a population of cells must solve the density classification task, agreeing on a global majority that no individual can observe, we introduce ``languages'' as sub-populations that read one another's messages through a translation with a tunable ``linguistic distance''. We find that linguistic distance slows consensus, that it produces mild divergence between groups rather than full fragmentation, and that a collective whose shared rule was trained under diverse protocols is robust to mismatch; a homogeneously trained one is not. The findings hold on both a ring and a two-dimensional grid, and admit a natural reading as Ising relaxation, in which a foreign-language region acts as a boundary defect that leaves the system in a higher-energy, partially ordered state. These patterns are qualitatively consistent with effects reported in human group studies, suggesting that distance between communication protocols is a minimal mechanism sufficient to produce them, without anything language-specific."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.23571v1",
+        "title": "Equivariant Cellular Sheaves for Molecular Electronic Structure: Bridging Sheaf Cohomology and E(3)-Equivariant Hamiltonian Learning",
+        "published": "2026-06-14T18:50:59Z",
+        "updated": "2026-06-14T18:50:59Z",
+        "summary": "Equivariant message-passing networks are the standard model for molecular property and interatomic-potential prediction, and recent work predicts the electronic Hamiltonian itself in an E(3)-equivariant way. Separately, topological deep learning has extended graph networks to cellular sheaves. Our central observation is structural: in a localized atomic-orbital basis, the molecular single-particle Hamiltonian, after a constant shift that makes it positive semidefinite, is the Laplacian of a cellular sheaf on a regular cell complex built from the molecule. Making the restriction maps O(3)-steerable two-center kernels from bond geometry recovers the Slater-Koster form as a special case and yields an E(3)- and permutation-equivariant operator. Three consequences follow. First, the zeroth sheaf cohomology H^0 = ker L is a topological invariant equal to the non-bonding (zero-mode) orbitals, recovering the classical alternant non-bonding-orbital count as a lower bound. Second, the Hodge 1-Laplacian lets higher cells (rings) carry cycle and delocalization information through H^1. Third, the model strictly generalizes E(3)-equivariant message-passing networks and CW networks, and inherits the anti-oversmoothing of non-trivial sheaf diffusion. We prove equivariance, expressivity, and cohomological-correspondence results for the Equivariant Cellular Sheaf Networks, and validate them numerically: the Hamiltonian-to-sheaf embedding is exact to machine precision, the cohomology dimension reproduces non-bonding-orbital counts across eleven conjugated molecules, the sheaf Laplacian is O(3)-equivariant to machine precision, and the equivariant model attains lower error and rotation generalization on a directional electronic target. Our contribution is this sheaf-theoretic formalization and its invariants, not equivariant Hamiltonian prediction itself."
+      }
+    ]
+  },
+  {
+    "key": "crossref_path",
+    "url": "https://api.crossref.org/works?query=query+conditioned+knowledge+graph+path+reasoning+neural&rows=12&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-09-16",
+    "accessed_at_utc": "2026-09-16T11:59:36.085534+00:00",
+    "status": 200,
+    "sha256": "655bb209bbc95c53d60bda4c2047345ba0328930e456bb7d5a6dbbe8e7e51a40",
+    "records": [
+      {
+        "title": [
+          "Query-Guided Graph Neural Networks for Knowledge Graph Reasoning"
+        ],
+        "DOI": "10.2139/ssrn.5761851",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": null
+      },
+      {
+        "title": [
+          "Dynamic Query Answering with Neural Symbolic Reasoning Over Incomplete KG"
+        ],
+        "DOI": "10.1007/978-3-032-15858-1_9",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "Synthesis Lectures on Computer Science",
+          "Neural Symbolic Knowledge Graph Reasoning"
+        ]
+      },
+      {
+        "title": [
+          "Accurate Query Answering with Neural Symbolic Reasoning Over Incomplete KG"
+        ],
+        "DOI": "10.1007/978-3-032-15858-1_5",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "Synthesis Lectures on Computer Science",
+          "Neural Symbolic Knowledge Graph Reasoning"
+        ]
+      },
+      {
+        "title": [
+          "Ambiguous Query Answering with Neural Symbolic Reasoning Over Incomplete KG"
+        ],
+        "DOI": "10.1007/978-3-032-15858-1_7",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "Synthesis Lectures on Computer Science",
+          "Neural Symbolic Knowledge Graph Reasoning"
+        ]
+      },
+      {
+        "title": [
+          "Accurate Query Answering with Symbolic Reasoning Over Complete KGs"
+        ],
+        "DOI": "10.1007/978-3-032-15858-1_3",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "Synthesis Lectures on Computer Science",
+          "Neural Symbolic Knowledge Graph Reasoning"
+        ]
+      },
+      {
+        "title": [
+          "HyperKGR: Knowledge Graph Reasoning in Hyperbolic Space with Graph Neural Network Encoding Symbolic Path"
+        ],
+        "DOI": "10.18653/v1/2025.emnlp-main.1279",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing"
+        ]
+      },
+      {
+        "title": [
+          "Accurate Query Answering with LLMs Over Incomplete KG"
+        ],
+        "DOI": "10.1007/978-3-032-15858-1_6",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "Synthesis Lectures on Computer Science",
+          "Neural Symbolic Knowledge Graph Reasoning"
+        ]
+      },
+      {
+        "title": [
+          "Graph Attention Network-Guided Semantic Path Reasoning for Equipment Maintenance Knowledge Graph Completion"
+        ],
+        "DOI": "10.20944/preprints202602.0341.v1",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              4
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Knowledge graph completion via link prediction is critical for intelligent equipment maintenance systems to support accurate fault diagnosis and maintenance decision-making. However, existing approaches struggle to simultaneously capture local structural dependencies and perform effective multi-hop reasoning, due to limited receptive fields or inefficient path exploration mechanisms. Traditional path-based methods implicitly assume path symmetry, treating all reasoning chains equally without considering their task-specific relevance. To address this issue, we propose a GAT-guided semantic path reasoning framework that breaks this symmetry through attention-driven asymmetric weighting, integrating local structural encoding with global multi-hop inference. The key innovation lies in a target-guided biased path sampling strategy, which transforms graph attention network (GAT) attention weights into probabilistic transition biases, enabling adaptive exploration of high-quality semantic paths relevant to specific prediction targets. Specifically, GATs are employed to learn importance-aware local representations, which guide biased random walks to efficiently sample task-relevant reasoning paths while breaking the implicit symmetry assumption of uniform path exploration. The sampled paths are encoded and aggregated to form global semantic context representations, which are then fused with local embeddings through a gating mechanism for final link prediction. Extensive experiments on FB15k-237, WN18RR, and a real-world equipment maintenance knowledge graph demonstrate that the proposed method consistently outperforms state-of-the-art baselines, achieving an MRR of 0.614 on the maintenance dataset and 0.485 on WN18RR. Further analysis shows that the learned path attention weights provide interpretable asymmetric reasoning evidence, enhancing transparency and trustworthiness for safety-critical maintenance applications.</jats:p>",
+        "container-title": null
+      },
+      {
+        "title": [
+          "AdvQA: Query-Aware Adversarial Training for Knowledge Graph Reasoning"
+        ],
+        "DOI": "10.1109/bigdata66926.2025.11402136",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              8
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "2025 IEEE International Conference on Big Data (BigData)"
+        ]
+      },
+      {
+        "title": [
+          "Self-Optimizing Enterprise RAG+SQL Knowledge Agents: Unified Retrieval, Schema-Aware Query Translation, Event Graph Reasoning, and Adaptive Model Routing"
+        ],
+        "DOI": "10.21203/rs.3.rs-10798738/v1",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              25
+            ]
+          ]
+        },
+        "abstract": "<title>Abstract</title>\n                <p>Enterprise knowledge is fragmented across relational databases, PDFs, incident reports, tickets, logs, spreadsheets, policy documents, and operational runbooks. Retrieval-augmented generation (RAG) systems help with unstructured text, while text-to-SQL systems help with structured databases, but production workflows frequently require both forms of reasoning in the same answer. A finance analyst may ask for contract terms and revenue aggregates; a compliance officer may ask for a policy exception and the exact affected accounts; a support lead may ask for the causal sequence behind an incident and the customer records touched by it. This paper introduces the Self-Optimizing Enterprise RAG+SQL Knowledge Agent, a middleware architecture that unifies schema-aware SQL translation, document retrieval, event-schema knowledge graphs, execution validation, and adaptive model routing. The proposed agent decomposes enterprise questions into typed evidence plans, retrieves from hybrid vector and graph indexes, prunes relational schemas through schema relationship graphs, executes SQL in bounded read-only sandboxes, composes multi-source evidence, and continuously up-dates routing and retrieval policies from observed quality, latency, cost, and validation feedback. The design extends prior work on schema-aware query translation, EventForge hybrid RAG+KG storage, LLM-Advisor dynamic model routing, and feedback-control allocation. We provide a detailed architecture, objective function, routing policy, validation protocol, benchmark design, implementation blueprint, and risk analysis. The central claim is that enterprise question answering should be treated as a self-optimizing control problem over heterogeneous knowledgetools, not as a single prompt over retrieved text.</p>",
+        "container-title": null
+      },
+      {
+        "title": [
+          "Complex Query Answering"
+        ],
+        "DOI": "10.1007/978-3-031-72008-6_4",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              11,
+              22
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "Synthesis Lectures on Data, Semantics, and Knowledge",
+          "Knowledge Graph Reasoning"
+        ]
+      },
+      {
+        "title": [
+          "Fusing Multi-Layer Graph Attention Networks and Bidirectional Path Reasoning for Knowledge Graph Completion"
+        ],
+        "DOI": "10.25236/ajcis.2025.080501",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "Academic Journal of Computing &amp; Information Science"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "crossref_hodge",
+    "url": "https://api.crossref.org/works?query=Hodge+edge+flow+neural+network+link+prediction&rows=12&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-09-16",
+    "accessed_at_utc": "2026-09-16T11:59:36.237139+00:00",
+    "status": 200,
+    "sha256": "7293bbf60404af5a523de47921faec72e2ef1dda0a935ebeda800e172c8fd730",
+    "records": [
+      {
+        "title": [
+          "A Multi-Layer Transportation Network Link Prediction Algorithm Based on Graph Convolutional Neural Network"
+        ],
+        "DOI": "10.2139/ssrn.4984554",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": null
+      },
+      {
+        "title": [
+          "Graph Neural Network-Based Link Prediction for Highly Imbalanced Network Data"
+        ],
+        "DOI": "10.1115/detc2024-143786",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              25
+            ]
+          ]
+        },
+        "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>The rapid advancement of graph neural networks (GNN) has revolutionized the integration of complex network and neural network models, fostering diverse engineering applications such as the classification of assembly parts and the prediction of customer preferences. GNN-based link prediction (LP), as a representative study, has shown utility in resource allocation and system performance evaluation, as evidenced in the existing literature. However, the inherent challenge of imbalanced network data (i.e., sparse network) from engineering domains poses obstacles to accurate link predictions due to the lack of training data of positive links, leading to biases and reduced performance. In contrast to existing studies that focus on enhancing model architecture, this paper concentrates on exploring preprocessing methods, e.g., the data undersampling strategies, and two post-processing methods for accuracy calculation based on 1) probability threshold-based labeling and 2) probability rank-based labeling, and studies their impacts on the prediction results with a given GNN-based LP model architecture. Real-world network data sourced from shared mobility systems and product market systems, which exhibit various levels of imbalance, are used as test cases. This study contributes to a better understanding of effective data undersampling strategies and post-processing methods for handling imbalanced network data when applying GNN-based LP to real-world complex systems.</jats:p>",
+        "container-title": [
+          "Volume 3B: 50th Design Automation Conference (DAC)"
+        ]
+      },
+      {
+        "title": [
+          "Link Prediction and Maximum Flow in Transportation Network"
+        ],
+        "DOI": "10.53070/bbd.1593501",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              12,
+              21
+            ]
+          ]
+        },
+        "abstract": "<jats:p xml:lang=\"en\">This study conducted link prediction analysis and maximum flow analysis, which provide critical insights into alternative route inferences and traffic flow, based on real transportation network data. The dataset used in the analysis was specifically generated for this purpose. Data collection involved Bluetooth vehicle counting devices installed at 54 intersection points in the city center of Malatya, Turkey. The methodology leveraged approximately 50 million vehicle transition records to weight the transportation network graph. The Ford-Fulkerson method was utilized for the maximum flow analysis, while the Jaccard similarity metric was employed for the link prediction analysis. The graph construction and all analysis processes were carried out using the R programming language and the igraph graph library. The results of the analyses provided significant insights into alternative route corridors within the transportation network and the maximum traffic capacity of the roads. Consequently, the findings enabled the identification of critical points and potential congestion areas. The outcomes are expected to make a substantial contribution to enhancing the efficiency of the transportation network and improving traffic management strategies.</jats:p>",
+        "container-title": [
+          "Computer Science"
+        ]
+      },
+      {
+        "title": [
+          "Multi-Relational Graph Neural Network for Out-of-Domain Link Prediction"
+        ],
+        "DOI": "10.1109/ijcnn60899.2024.10650198",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              30
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "2024 International Joint Conference on Neural Networks (IJCNN)"
+        ]
+      },
+      {
+        "title": [
+          "Dynamic‐edge parallel attention graph network for internal flow field prediction in scramjet inlet"
+        ],
+        "DOI": "10.2139/ssrn.7193352",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": "<jats:p>High-accuracy, efficient flow field reconstruction on unstructured computational fluid dynamics (CFD) meshes is essential for iterative aerodynamic analysis and optimization, but remains difficult for conventional data-driven methods. To address these limitations, this paper proposes a dynamic-edge parallel attention graph network (DPGNet) for intake flow-field reconstruction. DPGNet combines a dynamic-edge graph isomorphism network with edge features (GINE) branch, which updates edge embeddings together with node representations to enhance local geometric and flow-interaction modelling, with a parallel Performer attention branch, which captures global flow dependencies with linear-complexity attention. Experiments on unstructured intake CFD data show that DPGNet achieves the lowest errors among representative GNN baselines. In particular, DPGNet obtains an average relative L_2 error of 0.0565, improving over the strongest baseline GINE by 27.28%. Ablation studies further indicate that the parallel attention branch consistently improves both accuracy and stability compared with dynamic-edge local propagation alone or serial attention coupling. These results suggest that decoupling dynamic local graph propagation from global context aggregation provides an effective strategy for high-fidelity flow-field reconstruction on complex unstructured meshes.</jats:p>",
+        "container-title": null
+      },
+      {
+        "title": [
+          "TAGNN: topology-aware graph neural network framework for link prediction"
+        ],
+        "DOI": "10.1038/s41598-026-48184-0",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              14
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "Scientific Reports"
+        ]
+      },
+      {
+        "title": [
+          "PA-RNTrGNN: Proximity-Aware Road Network-Enhanced Trajectory Graph Neural Network for Traffic Flow Prediction"
+        ],
+        "DOI": "10.2139/ssrn.5433212",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": null
+      },
+      {
+        "title": [
+          "Mass flow runout prediction using neural network emulators"
+        ],
+        "DOI": "10.5194/egusphere-egu26-4676",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              13
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Geohazard mass flow runout prediction is critical for protecting lives, infrastructure, and ecosystems. Rapid mass flows such as landslides, and avalanches are among the most destructive geohazards, often travelling many kilometres from their source. Uncertain initial conditions and strong sensitivity to topography make these events difficult to anticipate, particularly for downstream communities that may be exposed to severe impacts with little warning. In this context, computational speed is essential for enabling timely forecasting and scenario-based risk assessment.Accurately predicting runout requires models that are both physically realistic and computationally efficient. However, existing approaches face a fundamental trade-off between realism and speed, limiting their use for large-scale forecasting, ensemble analysis, and operational early warning.Here we demonstrate that neural networks can emulate the final outcomes of mass flow runouts across diverse real-world terrains. Our model is trained on approximately 90,000 high-fidelity simulations spanning more than 5,000 globally representative topographies. The model predicts both flow extent and deposit thickness with high spatial accuracy while achieving computation speeds orders of magnitude faster than numerical solvers. Importantly, the emulator reproduces key emergent physical behaviours, including avulsion and heterogeneous deposition patterns, and generalizes across a wide range of rheologies, volumes, and terrain types. Probabilistic outputs further enable scalable uncertainty quantification.These results show that data-driven emulation can shift geohazard runout forecasting from site-specific analysis towards rapid prediction frameworks, supporting impact-based early warning and regional-scale hazard assessment. We anticipate that this approach will form a foundation for next-generation forecasting models that integrate physical simulation and machine learning to address transient dynamics, multi-hazard interactions, and cascading effects relevant to landslide hazard forecasting in space and time.</jats:p>",
+        "container-title": null
+      },
+      {
+        "title": [
+          "Dual-branch subgraph-pattern attention graph neural network for link prediction"
+        ],
+        "DOI": "10.1117/12.3049976",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              11,
+              8
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "Fourth International Conference on Advanced Algorithms and Neural Networks (AANN 2024)"
+        ]
+      },
+      {
+        "title": [
+          "Prediction of Terrestrial Heat Flow in Songliao Basin Based on Deep Neural Network"
+        ],
+        "DOI": "10.22541/au.170708998.86840289/v1",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              4
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Heat flow is a geothermal parameter for indicating the heat sources\ndistribution and evaluating geothermal reservoirs. Only 1230 heat flow\npoints are distributed unevenly in China, mainly concentrated in the\nhigh-temperature geothermal areas and the southeast regions. The\nSongliao Basin is a potential geothermal field in China. Still, only 20\nmeasurement points are known, making it difficult to evaluate the\ngeothermal genetic mechanism. Sparse data interpolation using deep\nlearning methods have high accuracy and are widely used in fields such\nas image processing. In this work, we propose a deep neural network for\npredicting heat flow in the Songliao Basin. More than 4,000 global heat\nflow and 23 geological and geophysical parameters are used as reference\nconstraints for training. The uncertainty error of the prediction is\nestimated based on the correlation and distance-based generalized\nsensitivity analysis. The results show that the maximum heat flow is 85\nmW/m2, the average is 67.1 mW/m2, and the error with the measured data\nis 10.64%. The previous geophysical and geological interpretation\nresults indicate that the heat flow is higher in the west and lower in\nthe east, with high anomalies in the central region, which may be\nrelated to the uplift of the deep mantle and the depression of the\nshallow low-velocity sedimentary layer. Some high-temperature melt\nbodies are in the deep layers, forming the current potential geothermal\nfield. The measured data validates that the DNN is an effective method\nfor predicting regional-scale heat flow, providing reliable heat source\ninformation for evaluating geothermal resources.</jats:p>",
+        "container-title": null
+      },
+      {
+        "title": [
+          "Modulated Convolutional Neural Network for Radio Link Failure Prediction in 5G"
+        ],
+        "DOI": "10.1109/fnwf66845.2025.11317172",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              10
+            ]
+          ]
+        },
+        "abstract": null,
+        "container-title": [
+          "2025 IEEE Future Networks World Forum (FNWF)"
+        ]
+      },
+      {
+        "title": [
+          "Link Prediction Using Temporal Graph Neural Network Model"
+        ],
+        "DOI": "10.3390/electronics15030662",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              3
+            ]
+          ]
+        },
+        "abstract": "<jats:p>In this work, we present a Temporal Graph Neural Network (TGNN) architecture specifically designed for link prediction in dynamic graphs. The proposed approach is evaluated on a dynamic social network constructed from internal email communication between employees of Wrocław University of Science and Technology that was collected over a continuous period of 605 days. To capture short-term fluctuations in communication behavior, we introduce the use of very short temporal aggregation windows, down to a single day, for constructing temporal graph snapshots. This fine-grained temporal resolution allows the model to accurately learn evolving interaction patterns and adapt to the dynamic nature of social communication networks. The TGNN model demonstrates consistently high predictive performance, achieving 99.28% ROC-AUC (Receiver Operating Characteristic—Area Under Curve) and 99.17% Average Precision in link prediction tasks. These results confirm that the model is able to distinguish between existing and emerging communication links with high reliability across temporal intervals. The architecture, optimized exclusively for temporal link prediction, effectively utilizes its representational capacity for modeling edge formation processes in time-dependent networks. The findings highlight the potential of focused TGNN architectures and short-time-window modeling in improving predictive accuracy and temporal resolution in link prediction applications involving evolving social or organizational structures.</jats:p>",
+        "container-title": [
+          "Electronics"
+        ]
+      }
+    ]
+  }
+]

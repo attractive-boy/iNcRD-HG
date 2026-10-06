@@ -1,0 +1,2188 @@
+[
+  {
+    "name": "epmc_rna_prediction",
+    "provider": "epmc",
+    "query": "(miRNA OR lncRNA) AND \"drug resistance\" AND (\"prediction\" OR \"deep learning\") AND FIRST_PDATE:[2025-01-01 TO 2026-09-13]",
+    "status": 200,
+    "items": [
+      {
+        "title": "Ovarian Cancer Diagnosis and Chemoresistance Prediction Model Based on cfRNA Molecular Signature.",
+        "doi": "10.1002/advs.76274",
+        "pmid": "42467997",
+        "pmcid": "PMC13379254",
+        "firstPublicationDate": "2026-07-17",
+        "abstractText": "<h4>Background</h4>Ovarian cancer (OVCA) is a common and highly aggressive gynecologic malignancy often diagnosed at advanced stages. Approximately 30% of patients develop platinum resistance, resulting in disease recurrence and progression. Currently, no diagnostic or chemoresistance prediction model based on plasma cell-free RNA (cfRNA) profiling exists.<h4>Methods</h4>We recruited 304 participants and performed plasma cfRNA sequencing. After quality control, 172 OVCA patients and 70 healthy controls were assigned to the training set, and 44 OVCA patients with 18 controls to the test set. A DenseNet-based deep learning model was developed to analyze cfRNA features.<h4>Results</h4>The model distinguished OVCA patients from healthy controls with AUCs of 0.9997 in the training set and 0.9747 (95% CI: 0.9437-0.9963) in the test set. For chemoresistance prediction, it yielded AUCs of 0.9442 and 0.8421 (95% CI: 0.7504-0.9147), respectively. Our model outperformed comparative models across both tasks, though the performance advantage in the chemoresistance prediction task should be interpreted cautiously given the limited sample size. Interpretability analyses combined with bioinformatics identified FLOT1, IFITM3, and IFITM2 as putative diagnostic cfRNA biomarkers.<h4>Conclusion</h4>This plasma cfRNA-based deep learning model identifies OVCA patients and predicts chemoresistance, offering a non-invasive tool for early diagnosis and treatment stratification.<h4>Trial registration</h4>This study was registered in the Chinese Clinical Trial Registry under registration number ChiCTR2500099940."
+      },
+      {
+        "title": "MIFNDRA: an innovative knowledge-enhanced multimodal fusion and graph learning framework for predicting drug resistance-related ncRNAs.",
+        "doi": "10.1093/bib/bbag322",
+        "pmid": "42308423",
+        "pmcid": "PMC13275005",
+        "firstPublicationDate": "2026-05-01",
+        "abstractText": "Drug resistance is a significant challenge in cancer treatment, greatly impacting treatment efficacy. Non-coding RNAs (ncRNAs) play crucial roles in mediating drug resistance, yet few computational models effectively predict drug resistance-associated ncRNAs. Existing methods often overlook the complex sequence patterns of ncRNA and their intricate interrelationships, resulting in suboptimal performance. To address these challenges, we propose MIFNDRA, a multimodal integrative framework that jointly models ncRNA and drug features to identify drug resistance-related ncRNAs. MIFNDRA employs a pre-trained Graph Isomorphism Network to extract drug structural features and a pre-trained SpliceBERT model to encode ncRNA sequences. It also incorporates various similarity features for both drugs and ncRNAs, while improving representation through a novel ncRNA interaction network that includes interactions between different ncRNA types as a strategy for knowledge enhancement. By leveraging advanced graph learning techniques, including residual GraphSAGE and contrastive learning, the model improves the identification of drug resistance-associated ncRNAs. Additionally, we curated a new benchmark dataset pairing ncRNA sequences with drug SMILES and resistance annotations. Comprehensive experiments demonstrate that MIFNDRA achieved state-of-the-art performance. Case studies on cisplatin and gemcitabine further validate the model's robustness and potential in advancing drug resistance research and drug development. The data and code required for this work are available at https://github.com/SJNNNN/MIFNDRA."
+      },
+      {
+        "title": "Non-coding RNAs in cancer: multi-omics insights, liquid biopsy advances, drug resistance mechanisms, and the road to clinical translation.",
+        "doi": "10.3389/fonc.2026.1924660",
+        "pmid": "42694631",
+        "pmcid": "PMC13539376",
+        "firstPublicationDate": "2026-08-20",
+        "abstractText": "For most of the twentieth century, the transcriptional output of the human genome was thought to be biologically inert-a characterization that has been proven wrong in almost every important respect. Non-coding RNAs (ncRNAs) such as microRNAs (miRNAs), long non-coding RNAs (lncRNAs), circular RNAs (circRNAs), small nucleolar RNAs (snoRNAs) and PIWI-interacting RNAs (piRNAs) are now thought of as vital regulators of gene expression in all the stages of cancer pathogenesis, including the initial epigenetic changes, metastatic spread and the development of therapeutic resistance. This review highlights four areas where the clinical potential of ncRNAs is most promising: reconstruction of ncRNA regulatory networks by multi-omics integration; circulating ncRNAs as minimally invasive cancer biomarkers; causal roles of ncRNAs in drug resistance through epithelial-mesenchymal plasticity, metabolic reprogramming, and stromal communication; and translation of ncRNA targeting strategies to clinical trials. We will need to invest equally in mechanistic rigor and translational infrastructure to move forward."
+      },
+      {
+        "title": "Unravelling the nexus of non-coding RNAs in cancer stemness and therapeutic drug resistance.",
+        "doi": "10.3389/fcell.2026.1870002",
+        "pmid": "42625954",
+        "pmcid": "PMC13490769",
+        "firstPublicationDate": "2026-08-06",
+        "abstractText": "Cancer stem cells (CSCs) play a pivotal role in tumor initiation, progression, and therapy resistance. Emerging evidence suggests that non-coding RNAs (ncRNAs), including microRNAs (miRNAs) and long non-coding RNAs (lncRNAs), intricately regulate CSC properties. This article reviews current knowledge on the intricate interplay between ncRNAs, genetic and epigenetic factors having role in cancer stemness and associated phenotypes. We have also identified key stemness- and EMT-associated genes, including <i>OCT4</i>, <i>SOX2</i>, <i>NANOG</i>, <i>KLF4</i>, <i>CD44</i>, <i>ALDH1A1</i>, <i>BMI1</i>, <i>ZEB1</i>, <i>ZEB2</i>, <i>SNAIL</i>, <i>SLUG</i>, and <i>TWIST1</i> that are regulated by ncRNAs in different cancer types. Additionally, we have described how ncRNA-mediated regulation of these genes influences major signaling pathways, including Wnt/β-catenin, Notch, Hedgehog, PI3K/AKT/mTOR, JAK/STAT, NF-κB, Hippo/YAP, and TGF-β signaling. The mir-21, miR-34, miR-200, and let-7 families target self-renewal and epithelial-to-mesenchymal transition while lncRNAs like H19, HOTAIR, and MALAT1 remodel the regulatory and epigenetic landscape of cancer stem cells. Understanding the interplay between ncRNAs and CSCs offers new insights into potential targeted therapies for combating aggressive and therapy-resistant cancers. Additionally, combining ncRNA interventions with conventional modalities such as chemotherapy, epigenetic drugs along with the advance nanotechnology-based drug delivery systems could result into synergistic outcomes. However, delivery, efficacy, and safety challenges remain. Overall, the ncRNA-cancer stemness interplay warrants therapeutic advancements and clinical translation towards a promising treatment personalization."
+      },
+      {
+        "title": "MPHGNN: metapath-guided heterogeneous graph neural network for miRNA-drug resistance association prediction.",
+        "doi": "10.1093/bib/bbag013",
+        "pmid": "41608986",
+        "pmcid": "PMC12853127",
+        "firstPublicationDate": "2026-01-01",
+        "abstractText": "Aberrant expression of microRNAs (miRNAs) is closely associated with the pathogenesis and progression of various diseases, particularly cancer, as well as therapeutic responses. Identification of miRNA-drug resistance associations is critical for drug screening and precision medicine. However, conventional experimental approaches remain time-consuming and labor-intensive, while existing computational methods often face challenge in capturing higher-order semantic inference from sparse prior bipartite association network. To address this, we propose MPHGNN, a heterogeneous graph convolutional network (GCN) architecture for predicting miRNA-drug resistance associations. MPHGNN constructs a miRNA-gene-drug heterogeneous network with multimodal biological features, including miRNA expression profiles, drug structural descriptors, and gene functional similarities, and leverages dual learning modules at both metapath and global levels to capture localized patterns and global representations simultaneously. Experimental results demonstrate that MPHGNN outperforms state-of-the-art methods and enhances the discriminative ability of association representations. Interpretability analyses further reveal that metapaths effectively capture underlying biological mechanisms, while the constructed heterogeneous biological network makes important contributions to prediction."
+      },
+      {
+        "title": "Non-Coding RNAs in Gastrointestinal Stromal Tumors: Regulatory Networks, Drug Resistance, and Clinical Implications.",
+        "doi": "10.3390/ijms27167286",
+        "pmid": "42653297",
+        "pmcid": "PMC13513192",
+        "firstPublicationDate": "2026-08-15",
+        "abstractText": "Gastrointestinal stromal tumors (GISTs) are the most common mesenchymal tumors of the gastrointestinal tract and are usually driven by activating mutations in KIT or PDGFRA. Although these alterations define the core molecular biology of GISTs and guide targeted therapy, they do not fully explain the variability observed in tumor behavior, recurrence risk, or response to tyrosine kinase inhibitors. Non-coding RNAs (ncRNAs), including microRNAs (miRNAs), long non-coding RNAs (lncRNAs), and circular RNAs (circRNAs), have been increasingly studied as regulators of gene expression in GISTs. Recent evidence suggests that these molecules may influence KIT-centered signaling, autophagy, apoptosis, invasion, angiogenesis, and drug resistance. However, the strength of evidence differs considerably across individual ncRNAs, ranging from bioinformatic associations to functional validation in cell lines and in vivo models. This review summarizes current knowledge on ncRNA-mediated regulation in GIST biology, with emphasis on tumor progression, therapeutic resistance, and possible clinical relevance. Rather than treating ncRNAs as isolated biomarkers, they function as part of broader regulatory networks that interact with oncogenic signaling and epigenetic mechanisms. Although several ncRNAs appear promising as prognostic or predictive candidates, further validation in independent clinical cohorts is required before their integration into routine risk stratification or treatment decision-making."
+      },
+      {
+        "title": "Beyond Junk DNA: Emerging Roles of Non-Coding RNAs in Cancer and Therapeutic Innovation.",
+        "doi": "10.3390/biom16081110",
+        "pmid": "42650778",
+        "pmcid": "PMC13510930",
+        "firstPublicationDate": "2026-07-29",
+        "abstractText": "Non-coding RNAs (ncRNAs) are the biggest class of regulatory molecules in the human genome, which constitute ~98% of total transcripts, and were once considered as \"transcriptional noise\". This review will focus on the newly identified functions of non-coding RNAs (ncRNAs) in cancer biology and therapeutic innovations. We review the existing knowledge on microRNAs, long non-coding RNAs, and circular RNAs in the context of their different experimental and computational studies, and we highlight their mechanisms of action in cancer hallmarks such as proliferation and resistance to apoptosis, metastasis, and metabolic reprogramming. We evaluate the translational landscape of ncRNA-based therapeutics by examining clinical trials in progress and completed, delivery methods, and emerging technologies. This review aims to separate fact from fiction and offer a balanced view on the facts, which will help guide future research and clinical development in the field of ncRNA oncology."
+      },
+      {
+        "title": "Exosomes and lung cancer: Biogenesis, pathogenic mechanisms, biomarkers, and therapeutic applications.",
+        "doi": "10.1177/03000605261476145",
+        "pmid": "42615693",
+        "pmcid": "PMC13490820",
+        "firstPublicationDate": "2026-08-19",
+        "abstractText": "Lung cancer remains a global health crisis characterized by high mortality rates and pervasive therapeutic resistance. Recent advances in molecular oncology have identified exosomes, nanoscale extracellular vesicles with diameters of 30-150 nm, as pivotal mediators of the lateral transmission of bioactive molecular signals. This review provides a high-level synthesis of exosomal biogenesis and the nuanced roles these vesicles play in lung cancer. Specifically, we discuss how tumor-derived exosomes orchestrate remodeling of the tumor microenvironment, facilitate premetastatic niche formation, and drive immune evasion via the programmed death-1/programmed death-ligand 1 axis and recruitment of regulatory cells. A significant portion of this review is dedicated to exosomal noncoding RNAs, including microRNAs, long noncoding RNAs, and circular RNAs, emphasizing their stability as liquid biopsy substrates and their involvement in cross-resistance to tyrosine kinase inhibitors and immunotherapies. Furthermore, we evaluate the transition of exosomes from diagnostic candidates to therapeutic tools, including their utility as bio-inspired drug delivery systems and cancer vaccines. Finally, this narrative review critically examines the technical hurdles, ranging from standardized isolation methods to good manufacturing practice scalability that must be overcome to integrate exosome-based precision medicine into routine clinical management of patients with lung cancer."
+      },
+      {
+        "title": "Semantic-enhanced heterogeneous graph learning for identifying ncRNAs associated with drug resistance.",
+        "doi": "10.1093/bioinformatics/btag029",
+        "pmid": "41533702",
+        "pmcid": "PMC12866671",
+        "firstPublicationDate": "2026-01-01",
+        "abstractText": "<h4>Motivation</h4>Identifying non-coding RNAs (ncRNAs) associated with drug resistance is critical for elucidating molecular mechanisms underlying drug response, facilitating drug screening, and discovering novel therapeutic targets. While several graph neural network-based methods have been proposed to infer ncRNA-drug resistance associations, they remain fundamentally constrained by semantic distortion induced by a sparse bipartite network and neglect of relational semantics among molecular entities, ultimately compromising both predictive reliability and biological interpretability.<h4>Results</h4>In this study, we propose iNcRD-HG, a novel framework for identifying ncRNA-drug resistance associations. The framework addresses three critical aspects: constructing a context-enriched heterogeneous network that integrates six distinct molecular interaction types with bio-entity-specific attributes, developing a semantic-enhanced graph learning architecture that implements relation-type-aware message passing to capture complex contextual dependencies, and introducing an interpretability mechanism to reveal potential synergistic pathways underlying drug response. Experimental results demonstrate that iNcRD-HG achieves superior predictive performance across diverse benchmark datasets while deriving association features with strong discriminative capability. By identifying molecular synergistic contexts, iNcRD-HG provides mechanistically interpretable insights into ncRNA-mediated drug resistance.<h4>Availability and implementation</h4>Datasets and source codes are available at https://github.com/Biohang/iNcRD-HG."
+      },
+      {
+        "title": "Molecular mechanisms of 5-FU resistance in colorectal cancer: the regulatory role of lncRNAs.",
+        "doi": "10.1007/s00432-026-06508-7",
+        "pmid": "42184042",
+        "pmcid": "PMC13388584",
+        "firstPublicationDate": "2026-05-25",
+        "abstractText": "Long non-coding RNAs (lncRNAs) are non-coding RNAs (ncRNAs) that serve as key regulators of a variety of biological processes such as tumorigenesis and drug resistance. LncRNAs are more than 200 nucleotides in length and influence cancer progression by acting as miRNA sponges, regulating gene expression and promoting epigenetic changes. In colorectal cancer (CRC), lncRNAs promote 5-fluorouracil (5-FU) resistance by promoting DNA repair, inhibiting apoptosis, enhancing autophagy and epithelial-mesenchymal transition (EMT). Although most lncRNAs are upregulated in drug-resistant CRC cells, some lncRNAs act as inhibitors of tumor resistance. This article provides an overview of lncRNAs that play a role in mediating 5-FU resistance in colorectal cancer and their potential as biomarkers for predicting therapeutic efficacy."
+      },
+      {
+        "title": "Clinical Applications of Blood-Derived Extracellular Vesicle Biomarkers in Breast Cancer: A Scoping Review.",
+        "doi": "10.3390/ijms27104649",
+        "pmid": "42196625",
+        "pmcid": "PMC13206953",
+        "firstPublicationDate": "2026-05-21",
+        "abstractText": "Blood-derived extracellular vesicle (EV) biomarkers have emerged as promising liquid-biopsy analytes for monitoring treatment response and prognosis in breast cancer. This scoping review mapped the clinical evidence on blood-derived EV in breast cancer and identified key barriers to clinical translation. Following the Joanna Briggs Institute framework and PRISMA-ScR guidelines, we searched PubMed, Embase, and Web of Science for eligible studies published through November 2025. After duplicate removal, title and abstract screening, and full-text assessment, 64 clinical studies were included. Research activity increased markedly from 2020 onward, accounting for 87.5% (56/64) of included studies. The literature was concentrated in East Asia, particularly China (51.6%, 33/64). RNA-based biomarkers predominated (60.9%, 39/64), especially microRNAs (39.1%, 25/64). Prognostic outcomes were evaluated in 89.1% (57/64) of studies, treatment response in 51.6% (33/64), and both endpoints in 40.6% (26/64). Triple-negative breast cancer was the most frequently studied subtype in isolation (15.6%, 10/64). Methodological heterogeneity was substantial, and kit-based precipitation was the most common EV isolation method (57.8%, 37/64). EV biomarkers show promise for non-invasive monitoring in breast cancer, but methodological standardization, compliance with Minimal Information for Studies of Extracellular Vesicles guidelines, and large prospective validation studies remain necessary before routine clinical implementation."
+      },
+      {
+        "title": "Current Advances of Treatments, Therapeutic Targets, Biomarkers, Novel Drugs, and Machine Learning for Hypopharyngeal Squamous Cell Carcinoma.",
+        "doi": "10.1002/wjo2.70152",
+        "pmid": "42688387",
+        "pmcid": "PMC13535003",
+        "firstPublicationDate": "2026-09-01",
+        "abstractText": "Hypopharyngeal squamous cell carcinoma (HSCC) is an aggressive subtype of head and neck squamous cell carcinoma with insidious onset, early metastasis, and dismal prognosis. Conventional multimodal therapy achieves limited survival benefit, highlighting an urgent need for refined precision strategies. This review systematically summarizes the latest progress in HSCC, covering epidemiological characteristics, imaging diagnosis, prognostic prediction, surgical and non-surgical treatment advances, as well as coding and non-coding therapeutic targets, biomarkers, and candidate drugs. It further introduces the application of multi-omics and machine learning in HSCC research, analyzes current challenges and future directions, and provides a theoretical reference for precise diagnosis, individualized treatment, and prognostic evaluation of HSCC."
+      }
+    ]
+  },
+  {
+    "name": "epmc_mirna_target_models",
+    "provider": "epmc",
+    "query": "miRNA AND (target OR degradation) AND (foundation OR transformer) AND FIRST_PDATE:[2024-01-01 TO 2026-09-13]",
+    "status": 200,
+    "items": [
+      {
+        "title": "MiRformer: a dual-transformer-encoder framework for predicting microRNA-mRNA interactions from paired sequences.",
+        "doi": "10.1093/bioinformatics/btag222",
+        "pmid": "42412822",
+        "pmcid": "PMC13340221",
+        "firstPublicationDate": "2026-07-01",
+        "abstractText": "<h4>Motivation</h4>MicroRNAs (miRNAs) regulate gene expression by binding to target messenger RNAs (mRNAs), inducing translational repression or mRNA degradation. Accurate prediction of miRNA-mRNA interactions and precise localization of binding and cleavage sites are critical for understanding post-transcriptional regulation and for enabling RNA therapeutics. Existing computational methods often rely on handcrafted or indirect features, scale poorly to kilobase-long mRNA sequences, or provide limited interpretability.<h4>Results</h4>We present MiRformer, a transformer-based framework that jointly predicts miRNA-mRNA interactions and localizes miRNA binding and cleavage sites directly from raw sequence pairs. MiRformer employs a dual-transformer encoder architecture for miRNA and mRNA sequences and incorporates a sliding-window attention mechanism to efficiently model kilobase-long mRNA contexts while preserving nucleotide-level resolution. Across multiple benchmrks, MiRformer achieves state-of-the-art performance on interaction prediction, binding-site localization, and cleavage-site identification from experimental Human Degradome-seq data. Beyond accuracy, MiRformer provides strong interpretability: attention patterns consistently highlight miRNA seed regions within 500-nt mRNA windows, revealing clear and biologically meaningful interaction signals. When applied to jointly infer binding and cleavage sites across 13k miRNA-mRNA pairs, predicted sites frequently co-localize, supporting a miRNA-mediated degradation mechanism.<h4>Availability and implementation</h4>Python code and datasets are publicly available at https://github.com/li-lab-mcgill/miRformer."
+      },
+      {
+        "title": "A Context-Aware Graph Transformer Framework for microRNA-Gene Regulatory Inference Across Bulk Tumor and Single-Cell Cancer Data.",
+        "doi": "10.3390/genes17080846",
+        "pmid": "42650039",
+        "pmcid": "PMC13512291",
+        "firstPublicationDate": "2026-07-23",
+        "abstractText": "<b>Background</b>: MicroRNAs are key post-transcriptional regulators of gene expression and contribute to cancer progression, tumor heterogeneity, and context-dependent regulatory rewiring. However, most computational approaches rely on sequence-based target prediction or bulk expression association and are not designed to jointly model regulatory priors, expression context, and heterogeneous cancer states, particularly when matched single-cell microRNA/mRNA co-profiling data are scarce. <b>Methods</b>: We developed a context-aware graph transformer framework for microRNA-gene regulatory analysis across biological resolutions. The framework represents microRNAs, genes, and biological contexts as a heterogeneous graph, where contexts correspond to individual cells in single-cell data and tumor samples or subtype-defined profiles in bulk cohorts. Heterogeneous graph transformer learning generated regulatory embeddings, Bayesian topology optimization refined candidate microRNA-gene interactions, and a dominance-based competition layer with Dominance Share scoring identified master regulators and cooperative target modules. <b>Results</b>: We applied miR-CellMap to matched single-cell miRNA/mRNA co-sequencing data from K562 leukemia cells and paired bulk cancer datasets spanning pan-cancer and subtype-specific cohorts, including breast, colon, glioblastoma, lower-grade glioma, and ovarian cancer. The framework identified recurrent and dataset-specific miRNA regulatory programs, including regulators such as miR-186-5p, miR-214-3p, miR-27a-3p, and let-7 family members. Embedding-derived context analysis showed that predicted miRNA target programs were consistently closer to observed context-specific gene programs than random matched gene programs across all seven datasets. Dominance Share analysis further identified cooperative target modules and co-repressed target programs, supporting the use of miR-CellMap for interpretable cancer-focused miRNA regulatory discovery. <b>Conclusions</b>: This framework provides an interpretable strategy for mapping conserved, cancer-specific, and context-dependent microRNA-gene regulatory programs across single-cell and bulk cancer datasets."
+      },
+      {
+        "title": "Multi-granularity transformer contrastive learning and feature reconstruction for prediction of disease-related miRNAs.",
+        "doi": "10.1186/s12859-026-06396-1",
+        "pmid": "42056851",
+        "pmcid": "PMC13270722",
+        "firstPublicationDate": "2026-04-29",
+        "abstractText": "The increasing research confirms the function of microRNAs (miRNAs) play a vital role in the diagnosis, treatment, and prognosis of diseases. Screening the potential candidate miRNAs related to the diseases by the computational methods may be helpful for reducing the experimental cost for discovering the actual disease-miRNA associations. Most of the recent methods exploited the data from multiple sources to infer the association tendencies between miRNAs and diseases. However, these methods did not completely learn the features of the multi-source data from multiple granularities. This paper present an association prediction model based on multi-granularity transformer contrastive learning and feature reconstruction convolution (APMF). First, the strongly correlated node sequences are constructed by random walks, and then the features of the positive and negative node sequences for the target node are learned. Second, the multi-granularity transformer strategy is designed to refine the features of the miRNA, disease, and lncRNA nodes from fine-granularity and coarse-granularity, respectively. Third, the contrastive learning strategy is presented to maximize the consistency among the features of positive samples and the difference among the features of positive samples and negative ones. Finally, the feature reconstruction convolution is constructed to capture the diverse semantics of features and suppress the noises of the data. The experimental results indicate that APMF outperforms several state-of-the-art methods for prediction of disease-related miRNAs. The ablation experiments demonstrate the effectiveness of the multi-granularity transformer contrastive learning and the feature reconstruction convolution. The case analysis over three diseases also shows APMF’s ability in discovering the potential miRNA candidates for the diseases."
+      },
+      {
+        "title": "From rules to foundation models: a comprehensive review of machine learning approaches for siRNA design.",
+        "doi": "10.1093/nargab/lqag099",
+        "pmid": "42676509",
+        "pmcid": "PMC13527166",
+        "firstPublicationDate": "2026-08-31",
+        "abstractText": "Small interfering RNAs (siRNAs) are a clinically validated therapeutic modality with eight FDA-approved drugs, yet designing effective siRNAs remains computationally challenging due to complex dependencies on sequence composition, thermodynamic properties, target-site accessibility, and off-target interactions. Over two decades, computational approaches have evolved from empirical heuristics to deep learning systems integrating physical priors with learned representations. We review the complete landscape of machine learning methods for siRNA design, spanning classical scoring rules, pretrained RNA foundation models, transformer-based efficacy predictors, graph neural networks encoding siRNA/messenger RNA interaction topology, off-target prediction frameworks, and chemical modification-aware architectures. Across over 40 studies, we identify convergent findings: hybrid models integrating thermodynamic features with learned representations are among the strongest performers, although this evidence rests largely on single-model ablations and does not establish that foundation-model embeddings specifically are required; graph neural networks with leakage-aware data splitting address pervasive benchmark inflation; and off-target prediction has matured through empirical RNA-seq frameworks and structure-based features. We distinguish throughout between chemically unmodified siRNAs, which dominate public benchmarks, and the fully modified siRNAs used therapeutically, whose efficacy data remain scarce and whose prediction is correspondingly harder. We provide a taxonomy of methods, head-to-head performance comparisons, benchmark dataset descriptions, code availability, biology-informed interpretability analysis with formal saliency validation protocols, and concrete recommendations for advancing siRNA design. Critical gaps in uncertainty quantification, active learning, and prospective experimental validation are identified as priorities for clinical translation."
+      },
+      {
+        "title": "Canonical and non-canonical miRNA degradation shapes state transitions and stemness in breast cancer.",
+        "doi": "10.1038/s44318-026-00889-8",
+        "pmid": "42608480",
+        "pmcid": null,
+        "firstPublicationDate": "2026-08-17",
+        "abstractText": "Target-directed microRNA degradation (TDMD) is an emerging post-transcriptional mechanism that controls miRNA turnover, yet its role in human cancers remains largely unexplored. Here, we combine CRISPRi-mediated ZSWIM8 depletion, miRNA-seq, and AGO2-eCLIP to define the TDMD landscape across breast cancer subtypes. We identify 19 high-confidence TDMD substrates, including miR-29b-3p and miR-33a/b-5p, and show that TDMD shapes miRNA target occupancy and target repression. Integration with single-cell transcriptomics reveals that TDMD of miR-29b-3p triggered by NREP transcript is associated with transcriptional plasticity along the epithelial-mesenchymal axis and marks a stem-like subpopulation of malignat cells with tumor-initiating potential in triple-negative breast cancer. Unexpectedly, we also uncover a non-canonical TDMD mechanism, independent of ubiquitin ligase ZSWIM8 and the proteasome, which includes SERPINE1-triggered miR-30c-5p degradation, conferring paclitaxel resistance and enhancing sphere-forming potential. These findings establish target-directed microRNA degradation as a functional layer of miRNA regulation in cancer, linking miRNA decay to cellular state transitions and therapeutic response. Our results broaden the mechanistic spectrum of TDMD and provide a framework to investigate how regulated miRNA decay contributes to aggressive breast cancer phenotypes."
+      },
+      {
+        "title": "DBCL-DFNet: Dual-Branch Contrastive Learning for Multi-Omics Dynamic Fusion",
+        "doi": null,
+        "pmid": null,
+        "pmcid": "PMC13298311",
+        "firstPublicationDate": "2026-05-30",
+        "abstractText": null
+      },
+      {
+        "title": "OmicsTransformer: self-supervised masked consistency and uncertainty-aware fusion for robust multi-omics prediction.",
+        "doi": "10.1093/bioinformatics/btag468",
+        "pmid": "42371766",
+        "pmcid": "PMC13384059",
+        "firstPublicationDate": "2026-07-01",
+        "abstractText": "<h4>Motivation</h4>Multi-omics integration can improve cancer diagnosis and prognosis, but current models are limited by extreme dimensionality, redundant raw-feature similarities, missing assays, and incomplete pathway priors. We ask whether biologically meaningful patient manifolds can be learned directly from high-dimensional multi-omics data without heuristic graph construction or fixed knowledge-base constraints.<h4>Results</h4>We present OmicsTransformer, an end-to-end framework that projects each omics modality into latent patches, enforces masked semantic consistency through an Exponential Cosine Consistency Loss, models global patch dependencies with a Transformer encoder, and fuses modalities by sample-specific uncertainty. Across eight diagnostic and prognostic cohorts, OmicsTransformer achieved strong performance, including 89.4% accuracy for TCGA-BRCA subtyping and 90.6% area under the receiver operating characteristic curve (AUC) for TCGA-LGG grading. It improved recurrence prediction over the pathway-restricted DeepKEGG baseline by approximately 21.5 percentage points in accuracy (ACC) on TCGA-LIHC and 11.1 percentage points in ACC on TCGA-BLCA. Variance-weighted attribution with ensemble stability selection recovered reproducible cross-modal biomarker cores and non-canonical progression drivers.<h4>Availability and implementation</h4>Source code and datasets are freely available at https://github.com/FFJXX/OmicTransformer and https://doi.org/10.6084/m9.figshare.31523905. OmicsTransformer is implemented in PyTorch."
+      },
+      {
+        "title": "MicroRNAs in endometriosis: bioinformatics resources, machine learning strategies, and multi-omics perspectives.",
+        "doi": "10.1186/s12967-026-08310-y",
+        "pmid": "42185901",
+        "pmcid": "PMC13390208",
+        "firstPublicationDate": "2026-05-25",
+        "abstractText": "<h4>Background</h4>Endometriosis is a heterogeneous gynecological disorder characterized by chronic pain, infertility, and substantial impairment of quality of life. Increasing evidence indicates that microRNAs (miRNAs) are key regulators of endometriosis pathogenesis through their effects on inflammation, angiogenesis, cell proliferation, fibrosis, and hormone-responsive pathways.<h4>Methods</h4>In this review, we summarize the biological roles of miRNAs in endometriosis and discuss their emerging value as diagnostic biomarkers and therapeutic targets. We further examine major bioinformatics resources and analytical tools used in miRNA research, including databases, target prediction platforms, and expression profiling approaches, with emphasis on their relevance and limitations in the context of endometriosis. In addition, we review recent advances in machine learning and deep learning for miRNA identification, target prediction, regulatory network reconstruction, and miRNA-disease association modeling. Particular attention is given to multi-omics integration strategies, which may better capture the molecular heterogeneity of endometriosis and improve biologically informed stratification.<h4>Results</h4>This review highlights the key roles of miRNAs in endometriosis-related inflammation, angiogenesis, proliferation, fibrosis, and hormone-responsive signaling, and summarizes their potential as non-invasive biomarkers and therapeutic targets. It also emphasizes the value of bioinformatics, machine learning, and multi-omics approaches in identifying clinically relevant miRNA signatures, while acknowledging current challenges in standardization, validation, and interpretability.<h4>Conclusions</h4>Future studies should prioritize standardized multicenter datasets, explainable artificial intelligence, and integrative multi-omics frameworks to develop robust and clinically applicable miRNA-based diagnostic and therapeutic strategies for endometriosis."
+      },
+      {
+        "title": "MOTCS: A Cancer Subtype Classification and Key Biomarker Recognition Model Based on Multi-Omics Data Integration of Transformer.",
+        "doi": "10.3390/ijms27104237",
+        "pmid": "42196220",
+        "pmcid": "PMC13207841",
+        "firstPublicationDate": "2026-05-10",
+        "abstractText": "Cancer, as a complex disease with high heterogeneity, is gradually shifting from standardization to individualization. Current research indicates that integrating multi-omics data, including genome, transcriptome, and epigenome, can more comprehensively reveal the molecular features of tumors, thereby providing a more reliable basis for subtype classification. It is worth noting that driver genes, as key factors directly involved in tumorigenesis and development, when combined with multi-omics data, improve model interpretability. We proposed a cancer subtype classification model named MOTCS, which consists of four key steps: (1) The extraction of driver gene features from existing databases and the execution of preliminary feature selection for non-driver genes in different omics data; (2) the use of the transformer encoder to conduct feature representation learning for non-driver gene features and driver gene features, respectively; (3) the non-driver gene feature embeddings and driver gene feature embeddings of each omics learned are concatenated and input into the MLP classifier to obtain the classification probabilities of each subtype. (4) By integrating the above features through view association discovery networks, cross-omics feature representations are learned so as to achieve effective classification. The results show that MOTCS outperformed existing methods across all four datasets and that the introduction of driver genes will enhance the classification performance of MOTCS. MOTCS achieved precise classification of cancer subtypes by mining the feature embeddings of driver genes and non-driver gene features."
+      },
+      {
+        "title": "Advancing bioinformatics with language models: components, applications, and perspectives.",
+        "doi": "10.1093/bib/bbag367",
+        "pmid": "42430786",
+        "pmcid": "PMC13354062",
+        "firstPublicationDate": "2026-07-01",
+        "abstractText": "Large language models (LLMs) are deep learning-based artificial intelligence models that have achieved remarkable success in natural language processing. Typically composed of neural networks with billions of parameters, they are trained on massive unlabeled datasets using self-supervised or semi-supervised learning. Beyond language, LLMs hold immense potential for addressing complex bioinformatics challenges. This review provides a comprehensive overview of transformer-based model applications in genomics, transcriptomics, proteomics, drug discovery, and single-cell analysis. We discuss critical components, including tokenization strategies for diverse biological data, transformer architectures, attention mechanisms, and pretraining approaches. We also survey currently available foundation models and their downstream applications across bioinformatics domains. Finally, we highlight major challenges that remain insufficiently addressed in prior reviews and outline future perspectives and design principles for next-generation biological language models, offering practical guidance for both users and developers."
+      },
+      {
+        "title": "DNA framework-based molecular transformer for logic-driven precision diagnostics.",
+        "doi": "10.1126/sciadv.aeb5612",
+        "pmid": "41739939",
+        "pmcid": "PMC12935051",
+        "firstPublicationDate": "2026-02-25",
+        "abstractText": "Precision diagnostics requires logical integration of diverse biomarker information, but molecular heterogeneity and inconsistent identification kinetics hinder robust logic analysis. To overcome this, we develop a universal molecular transformer using DNA tetrahedral frameworks (DTFs) as programmable scaffolds. This system converts diverse biomarkers including proteins and variable-length nucleic acids into uniform 22-nucleotide DNA sequences, normalizing information dimensionality and identification kinetics. These uniform sequences serve as inputs for three fundamentals Boolean logic gates (AND, OR, and INHIBIT), enabling programmable molecular decision-making. Integrated on a gold-chip platform, the DTF transformer and logic system achieved statistically significant discrimination (<i>P</i> < 0.0001) among patients with prostate cancer, patients with benign prostatic hyperplasia, and healthy individuals using only two biomarkers (prostate-specific antigen and ALU115). By unifying signal transformation for Boolean logic computation, we resolve the critical challenges in molecular heterogeneity and establish a versatile platform for next-generation precision diagnostics."
+      },
+      {
+        "title": "DHGCMDA: a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction.",
+        "doi": "10.1186/s12859-026-06436-w",
+        "pmid": "41922959",
+        "pmcid": "PMC13169815",
+        "firstPublicationDate": "2026-04-01",
+        "abstractText": "BACKGROUND: Accumulating evidence demonstrates that microRNA (miRNA) dysregulation drives the pathogenesis of diverse human diseases via intricate, context-dependent molecular mechanisms. Hence, prediction of miRNA-disease association types is a critical prerequisite for dissecting functional roles of miRNAs in disease initiation and progression. Although computational methods offer cost-effective, time-efficient alternatives to wet-lab experiments for miRNA-disease association type prediction, most of them are hampered by three key limitations: excessive reliance on association-derived similarity metrics gives rise to quantification bias, traditional pairwise graph architectures inadequately capture high-order biological interactions, and existing representation learning strategies fail to generate consistent embeddings across heterogeneous views and modalities. RESULTS: To address these issues, this study presents DHGCMDA, a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction. Specifically, dual-view hypergraphs are first constructed based on heterogeneous similarity data to avoid excessive reliance on association-derived similarity metrics. A hypergraph convolutional network is then employed to capture high-order topological relationships between miRNAs and diseases, with its convolution cooperatively integrated with contrastive learning, intra-modality for cross-view consistency and cross-modality for embedding space alignment, to enhance feature representation quality. Finally, an attention-guided adaptive view fusion strategy dynamically weights and integrates distinct view representations, and type-aware message passing via heterogeneous graph Transformer simultaneously enables prediction of association presence and functional types. 5-fold cross-validation on HMDD v2.0 and v3.2 datasets demonstrates that DHGCMDA outperforms several state-of-the-art methods. Furthermore, case studies on breast neoplasms and hepatocellular carcinoma reveal that most predicted association types are corroborated by published literature, thereby validating the efficacy of DHGCMDA in miRNA-disease association type prediction. CONCLUSIONS: DHGCMDA exhibits robust discriminative power and generalization capability, providing a reliable computational alternative for miRNA-disease association type prediction. The source code is publicly available at https://github.com/CDMBlab/DHGCMDA ."
+      }
+    ]
+  },
+  {
+    "name": "epmc_mechanistic_drug",
+    "provider": "epmc",
+    "query": "TITLE:\"drug response\" AND (pathway OR mechanistic OR interpretable) AND FIRST_PDATE:[2025-01-01 TO 2026-09-13]",
+    "status": 200,
+    "items": [
+      {
+        "title": "scRADAR: Dissecting intratumoral drug response heterogeneity at single-cell resolution via mechanism-guided prototype routing.",
+        "doi": "10.1371/journal.pcbi.1014392",
+        "pmid": "42361193",
+        "pmcid": null,
+        "firstPublicationDate": "2026-06-26",
+        "abstractText": "Precision oncology requires resolving intratumoral heterogeneity to identify drug-resistant cell states associated with treatment failure and relapse. Although single-cell RNA sequencing enables characterization of heterogeneous resistance-associated states, single-cell drug-response phenotype prediction remains challenging because of sparsity, noise, class imbalance, and limited mechanistic interpretability. Here, we present scRADAR (Response Analysis via Drug-Aware Routing), a mechanism-guided prototype routing framework for predicting and interpreting drug-response phenotypes at single-cell resolution. Rather than relying on cell-line-anchored transfer learning, scRADAR learns directly from labeled single-cell cohorts. The framework integrates metabolic and signaling pathway activities to form a dual-view cellular representation, conditions pathway embeddings on drug mechanisms through feature-wise linear modulation, and uses sparse prototype routing to decompose predictions into interpretable response archetypes. Across nine independent cohorts, scRADAR showed strong predictive performance and consistent cross-cohort behavior, particularly under imbalanced settings. Post hoc attribution analyses highlighted candidate TGF-β-associated epithelial-to-mesenchymal transition signatures in Erlotinib-associated Resistant-labeled states and cytoskeletal/metabolic response-associated signatures in BET-inhibitor-associated Resistant-labeled states. These results suggest that scRADAR provides an interpretable framework for single-cell drug-response phenotype prediction and for generating hypotheses about resistance-associated programs from heterogeneous tumor transcriptomes."
+      },
+      {
+        "title": "Sparse integrative dictionary learning resolves conserved drug-response states in multiple myeloma (MM).",
+        "doi": "10.1016/j.cancergen.2026.08.002",
+        "pmid": "42600555",
+        "pmcid": null,
+        "firstPublicationDate": "2026-08-08",
+        "abstractText": "Multiple myeloma (MM) is a severe plasma-cell malignancy that continues to cause substantial morbidity and mortality despite major therapeutic advances. Although current therapies target distinct molecular processes, many patients eventually relapse, raising the question of whether diverse treatments impose different pressures that nevertheless converge on shared transcriptional adaptation programs. While many studies have profiled transcriptional changes before and after treatment, these responses are often analyzed within individual drugs, leaving recurrent programs across therapies insufficiently explored. Here, we developed PRISM-MM (Perturbation Response Inference by Sparse integrative Modeling for Multiple Myeloma), an interpretable sparse integrative dictionary-learning framework that decomposes drug-control transcriptional shifts into signed response programs while accounting for drug identity, study background and cell-source state. By incorporating paired scRNA-seq as a calibration layer, PRISM-MM preserved cell-state-level interpretability and outperformed representative perturbation-prediction models in recovering reproducible response structure. Applied to a curated multi-study MM perturbation compendium, PRISM-MM identified conserved treatment-associated programs validated in held-out bulk and external paired scRNA-seq datasets. These programs revealed a recurrent remodeling pattern characterized by depletion of plasma-cell-like secretory activity and enrichment of inflammatory, adhesion-associated and stress-tolerant immune-interface states. We further nominated state-maintaining genes and highlighted a RFXAP-centered immune-regulatory axis that may drive the Program 8 inflammatory adaptation state and shape MM drug response. Together, PRISM-MM provides an interpretable framework for discovering conserved drug-response programs and generating mechanistic hypotheses about treatment adaptation in MM."
+      },
+      {
+        "title": "DiffDR: A Diffusion-based Deep Learning Framework for Accurate Drug Response Imputation and Feature Selection.",
+        "doi": "10.2174/0113894501463062260519044005",
+        "pmid": "42283181",
+        "pmcid": null,
+        "firstPublicationDate": "2026-06-09",
+        "abstractText": "<h4>Introduction</h4>Molecular features play critical roles in shaping cellular responses to therapeutic agents, and understanding their influence on drug sensitivity and resistance is essential for explaining heterogeneous treatment outcomes. Integrating multi-omics molecular information can uncover complex cross-modal dependencies, identify potential biomarkers, and enhance drug response prediction. However, the high dimensionality and strong interdependencies of multi-omics data pose substantial modeling challenges, underscoring the need for robust, interpretable computational approaches.<h4>Methods</h4>This study presents DiffDR, a diffusion-based framework that models multi-omics features and drug representations through an energy-constrained diffusion module. This module encodes batched samples and efficiently propagates information while preventing over-smoothing, enabling the capture of both global and local dependencies without relying on explicit graph structures. To enhance model transparency, DiffDR incorporates an integrated gradient-based interpretability module that quantitatively attributes prediction outcomes to specific omics features.<h4>Results</h4>DiffDR demonstrates superior predictive performance compared with several state-of-theart drug response prediction methods. Ablation analysis indicates that the energy-constrained diffusion mechanism substantially improves predictive accuracy, confirming its effectiveness in handling high-dimensional multi-omics data.<h4>Discussion</h4>The findings highlight the value of DiffDR in capturing cross-modal molecular dependencies and providing interpretable insights into drug response mechanisms.<h4>Conclusion</h4>Overall, DiffDR represents a robust and interpretable approach for drug response prediction, enabling biologically meaningful mechanistic insights into molecular drivers of drug response."
+      },
+      {
+        "title": "drGT: interpretable drug response prediction with attention-guided gene attribution on a drug-cell-gene heterogeneous graph.",
+        "doi": "10.1186/s12859-026-06417-z",
+        "pmid": "42304175",
+        "pmcid": "PMC13523525",
+        "firstPublicationDate": "2026-06-16",
+        "abstractText": "<h4>Background</h4>For translational impact, both accurate drug response prediction and biological plausibility of predictive features are needed. We present drGT, a heterogeneous graph deep learning model over drugs, genes, and cell lines that couples prediction with mechanism-oriented interpretability via attention coefficients (ACs).<h4>Results</h4>We assess both predictive generalization (random, unseen-drug, unseen-cell, and zero-shot splits) and biological plausibility (use of text-mined PubMed gene-drug co-mentions and comparison to a structure-based DTI predictor) on GDSC, NCI60, and CTRP datasets. Across benchmarks, drGT consistently delivers top regression performance while maintaining competitive classification accuracy for drug sensitivity. Under random 5-fold cross-validation, drGT attains an AUROC of up to 0.945 (3rd overall) and an [Formula: see text] up to 0.690, outperforming all baselines on regression. In leave-one-out tests for unseen cell lines and drugs, drGT achieves AUROCs of 0.706 and 0.844, and [Formula: see text] values of 0.692 and 0.022, the only model yielding positive [Formula: see text] for unseen drugs. In zero-shot prediction, drGT achieves an AUROC of 0.786 and a regression [Formula: see text] of 0.334, both representing the highest scores among all models. For interpretability, AC-derived drug-gene links recover known biology: among 976 drugs with known DTIs, 36.9% of predicted links match established DTIs, and 63.7% are supported by either PubMed abstracts or a structure-based predictive model. Enrichment analyses of AC-prioritized genes reveal drug-perturbed biological processes, providing pathway-level explanations.<h4>Conclusions</h4>drGT advances predictive generalization and mechanism-centered interpretability, offering state-of-the-art regression accuracy and literature-supported biological hypotheses that demonstrate the use of graph learning from heterogeneous input data for biological discovery. Code: https://github.com/sciluna/drGT ."
+      },
+      {
+        "title": "Foundation models and deep learning for cancer drug response prediction: a framework for data, metrics, and validation.",
+        "doi": "10.1093/bib/bbag225",
+        "pmid": "42153322",
+        "pmcid": "PMC13184516",
+        "firstPublicationDate": "2026-05-01",
+        "abstractText": "The emergence of large-scale omics data and foundational models has renewed efforts in the field of cancer drug response prediction (DRP). Despite recent progress, challenges such as limited tumor heterogeneity in standard cell lines and inconsistencies in experimental protocols across studies persist. However, these challenges also open significant opportunities for innovation. The complex nature of drug responses, influenced by variations in new patients and new drugs, presents a critical area for advancing validation approaches that traditional machine learning approaches often overlook. This review provides a comprehensive overview of the current state of DRP using advanced machine-learning models, discussing data sources, model designs, and evaluation methods. We introduce a unified framework for testing these models with a focus on clinically relevant metrics. By evaluating a range of foundational and deep-learning models within this framework, we identify performance gaps and propose concrete strategies to advance these computational models for reliable use in personalized cancer treatment, thereby unlocking their full clinical potential."
+      },
+      {
+        "title": "A novel explainable AI for revealing determinants of cancer drug response through integrative multi-omics analysis.",
+        "doi": "10.3389/fonc.2026.1759001",
+        "pmid": "42232535",
+        "pmcid": "PMC13223125",
+        "firstPublicationDate": "2026-05-18",
+        "abstractText": "<h4>Introduction</h4>Cancer drug response rates differ across patients and cell lines; however, many current computational prediction models still function as uninterpretable black boxes, offering limited insight into why a given treatment works well for some patients or cell lines but poorly for others.<h4>Methods</h4>Here, we introduce an interpretable cancer drug response prediction framework that leverages multi-omics data from the Genomics of Drug Sensitivity in Cancer 2 (GDSC2) resource, including genomics, transcriptomics, and proteomics, where available, together with explicit chemical drug descriptors derived from SMILES and InChI representations. We use a Modified Neighbor-Joining Algorithm (MNJA) to generate topology-aware gene-sequence trees. Combined multi-omics and drug features are summarized into high-level deep descriptors via a decimal-scaled GoogLeNet (DS-GoogLeNet), together with lightweight handcrafted features. A Smoluchowski Kookaburra Optimization Algorithm (SKOA) then selects informative multimodal features, which are used to classify the sensitivity or resistance of each cell line-drug pair with an explainable Aranda Graph Attention Network (EA-GAT).<h4>Results</h4>By analyzing model behavior using SHAP-based feature attributions and subsequently subjecting SHAP-ranked genes to pathway enrichment analysis, we highlight the recurrent involvement of the PI3K/AKT/mTOR pathway and related downstream signaling cascades in drug response. Under leakage-safe stratified 10-fold cross-validation on 2614 GDSC2 cell line-drug pairs, the framework attains an accuracy of 95.87% and an F1-score of 95.87%, with an area under the receiver operating characteristic curve (AUROC) of 0.957 and an area under the precision-recall curve (AUPRC) of 0.946.<h4>Discussion</h4>Overall, the framework appears to predict drug response accurately while also supporting biologically meaningful interpretation, making it a useful computational tool for hypothesis generation and biomarker-focused investigation in oncology."
+      },
+      {
+        "title": "Intron Retention as a Homeostatic State Variable for Drug Response and Recovery: Lessons from Depression for Broader Applications.",
+        "doi": "10.3390/ijms27083539",
+        "pmid": "42074182",
+        "pmcid": "PMC13115884",
+        "firstPublicationDate": "2026-04-16",
+        "abstractText": "Clinically robust molecular biomarkers for depression have remained elusive, despite extensive transcriptomic research. This gap is consequential: depression is prevalent and heterogeneous, yet objective measures to quantify burden, stratify patients, and track recovery remain limited. Here, we review evidence that intron retention (IR) can serve as a homeostatic state variable-and therefore a sensitive biomarker-reporting stress adaptation and recovery at an upstream regulatory layer, often preceding or outperforming differential gene expression (DEG) readouts. Mechanistically, IR enables bidirectional fine-tuning of effective gene output: increased IR (IncIR) can throttle output under overload, whereas decreased IR (DecIR) releases this brake to restore gene output. Because these shifts are reversible and treatment-responsive, IR signatures can function not only as disease markers but also as pharmacodynamic metrics for blood-based monitoring of drug response and recovery. To evaluate the clinical utility of IR, we use depression as a proof of concept and focus on two interventions: (i) the Kampo formula hangekobokuto (HKT), which is associated with IR normalization consistent with reduced peripheral inflammatory load; and (ii) ketamine, where IR patterns measured before ketamine treatment in non-responders are linked to stronger innate-immune/antiviral activity, suggesting a higher inflammatory load that may limit treatment benefit. Finally, we discuss transdiagnostic extensions beyond depression, using early cognitive decline (mild cognitive impairment, MCI) as a stringent, biologically distal test case for blood-based IR/DI readouts and motivating independent cohort replication and longitudinal validation."
+      },
+      {
+        "title": "DiSPA: differential substructure-pathway attention for drug response prediction.",
+        "doi": "10.1093/bioinformatics/btag272",
+        "pmid": "42412793",
+        "pmcid": "PMC13340222",
+        "firstPublicationDate": "2026-07-01",
+        "abstractText": "<h4>Motivation</h4>Accurate prediction of drug response in precision medicine requires models that capture how specific chemical substructures interact with cellular pathway states. However, most existing deep learning approaches treat chemical and transcriptomic modalities independently or combine them only at late stages, limiting their ability to model fine-grained, context-dependent mechanisms of drug action. In addition, vanilla attention mechanisms are often sensitive to noise and sparsity in high-dimensional biological networks, hindering both generalization and interpretability.<h4>Results</h4>We present Differential Substructure-Pathway Attention (DiSPA), a framework that models bidirectional interactions between chemical substructures and pathway-level gene expression. DiSPA introduces differential cross-attention to suppress spurious associations while enhancing context-relevant interactions. On the GDSC benchmark, DiSPA achieves state-of-the-art performance, with strong improvements in the disjoint setting. These gains are consistent across random and drug-blind splits, suggesting improved robustness. Analyses of attention patterns indicate more selective and concentrated interactions compared to standard cross-attention. Exploratory evaluation shows that differential attention better prioritizes predefined target-related pathways, although this does not constitute mechanistic validation. DiSPA also shows promising generalization on external datasets (CTRP) and cross-dataset settings, although further validation is needed. It further enables zero-shot application to spatial transcriptomics, providing exploratory insights into region-specific drug sensitivity patterns without ground-truth validation.<h4>Availability and implementation</h4>Source code and data are available at https://github.com/sslim-aidrug/DiSPA."
+      },
+      {
+        "title": "An interpretable framework for cancer drug response prediction using integrated drug and multi-omics data with a hybrid Bi-LSTM-GRU network.",
+        "doi": "10.1016/j.compbiolchem.2026.109216",
+        "pmid": "42385452",
+        "pmcid": null,
+        "firstPublicationDate": "2026-06-26",
+        "abstractText": "Previous studies have shown that efficient and effective drugs and cell line representation can improve drug response prediction (DRP) in cancer therapy. Furthermore, the performance of DRP can be enhanced by integrating multi-omics data of cell lines with drugs. However, existing DRP models have shown drawbacks in extricating rich and effective features from the cell lines and representing the molecular structure of drugs available in the SMILES format. This article proposes an integrated drug and cell line representation-based hybrid deep learning architecture, HyDRP-LG (Hybrid Drug Response Predictor with Bi-LSTM-GRU), for enhancing drug response prediction. The model combines Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) networks to effectively capture complex interactions across integrated drug and multi-omics features in pan-cancer settings for personalized cancer treatment. Firstly, the drug molecular structures (SMILES string) are encoded to distinct embeddings to encapsulate molecular substructure data instead of using complex representations. Secondly, the high-dimensional transcriptomic data in the CCLE dataset is reduced in dimension using PCA from 17,736 to 500. The mutation (Genomic) and methylation (Epigenomic) data from the cell line are represented in their original binary forms and adjusted to the maximum length (735 and 400, respectively) of a sample required in the respective cell line. Lastly, the drugs and the cell line representations are integrated and put through a customized hybrid deep Bi-LSTM-GRU network for predicting the IC50 value. Experimental analysis using single and multi-omics features shows that the proposed HyDRP-LG model achieves improved predictive performance compared to reported DRP methods. SHAP-based feature interpretation identified eight key genes significantly associated with drug response, and pathway analysis revealed biological pathways relevant to cancer progression, providing interpretability beyond predictive accuracy."
+      },
+      {
+        "title": "Topology-Aware Deep Learning on Higher-Order Structures for Drug Response Prediction.",
+        "doi": "10.1002/advs.75816",
+        "pmid": "42199168",
+        "pmcid": "PMC13335842",
+        "firstPublicationDate": "2026-05-27",
+        "abstractText": "Accurate prediction of anticancer drug response remains a central challenge in precision oncology. Existing approaches often rely on pairwise modeling, overlooking higher-order dependencies among drugs and cell lines. We present TopDr, a topology-aware deep learning framework that encodes both drugs and cell lines as multiscale simplicial complexes, capturing interactions at the 0-, 1-, and 2-simplex levels. By jointly integrating local higher-order neighborhoods and global topological structures, TopDr generates enriched representations for sensitivity prediction. Across six benchmark datasets, TopDr consistently matches or surpasses state-of-the-art baselines in both regression and classification tasks. Beyond predictive accuracy, TopDr offers mechanism-level interpretability: attention over 1- and 2-simplices highlights drug pairs and triplets with significant pathway enrichment, while cell line groupings reveal biologically coherent expression modules. These results demonstrate that modeling multiscale higher-order topology yields predictions that are not only accurate and robust but also biologically interpretable, paving the way for more reliable drug response modeling."
+      },
+      {
+        "title": "Cancer drug response and resistance: molecular mechanisms and combating strategies.",
+        "doi": "10.1038/s41392-026-02924-w",
+        "pmid": "42543381",
+        "pmcid": "PMC13429696",
+        "firstPublicationDate": "2026-08-03",
+        "abstractText": "Despite remarkable advances in cancer drug treatment, including chemotherapy, targeted therapy, and immunotherapy, therapeutic resistance remains a formidable clinical barrier, limiting durable responses and long-term survival. Drug resistance can be broadly categorized as intrinsic, where tumors fail to respond to initial treatment, or acquired, which emerges during or after therapy due to adaptive or evolutionary processes. A comprehensive understanding of the multifactorial and dynamic nature of resistance is essential for improving treatment efficacy. In this review, we systematically examine the molecular and cellular determinants of drug response and resistance across 22 cancer types, highlighting key resistance mechanisms such as compensatory pathway activation, phenotypic plasticity, immune evasion, enhanced DNA damage repair, and the survival of drug-tolerant persister cells. These mechanisms are further contextualized across major therapeutic modalities, supported by clinical trials. We also present emerging strategies to overcome resistance, including rational drug combinations, novel agents, microbiome modulation, adaptive and intermittent therapies and advanced drug delivery systems, each illustrated with representative clinical studies. Moreover, we discuss cutting-edge tools that are revolutionizing resistance research, including single-cell and spatial multiomic profiling, patient-derived tumor organoid and xenograft (PDO/PDX) models, and artificial intelligence (AI)-powered predictive analytics. By integrating insights across molecular, cellular, and clinical dimensions, this review offers a strategic framework for understanding and tackling cancer drug resistance, with important translational implications for the future of precision oncology."
+      },
+      {
+        "title": "A RAIR-ATC transcriptional axis and multimodal drug-response modelling reveal class-level vulnerabilities in thyroid cancer.",
+        "doi": "10.3389/fphar.2026.1789743",
+        "pmid": "42232186",
+        "pmcid": "PMC13223037",
+        "firstPublicationDate": "2026-05-18",
+        "abstractText": "<h4>Introduction</h4>Radioiodine-refractory papillary thyroid carcinoma (RAIR PTC) and anaplastic thyroid carcinoma (ATC) are clinically challenging thyroid cancer states, yet the molecular continuum between radioiodine refractoriness, anaplastic transformation and targeted drug sensitivity remains unclear. We hypothesised that RAIR and ATC share a common transcriptional axis that can be distilled into a transferable signature to prioritise targeted therapies in RAIR-like models.<h4>Methods</h4>We integrated RNA-seq and microarray cohorts (TCGA-THCA, one RAIR vs. radioiodine-avid PTC cohort, and five ATC cohorts) to derive RAIR/ATC gene modules and annotate pathway activity (MSigDB Hallmark). A single-sample RAIR signature was applied to TCGA tumours and DepMap thyroid cell lines. We combined RAIR scores with PRISM drug-response AUC data (18 thyroid cell lines) to quantify differential sensitivity (ΔAUC) and trained an interpretable multimodal ridge model integrating cell and drug features to predict AUC. External transferability and pharmacology-oriented mechanisms were assessed in an independent thyroid RNA-seq cohort (GSE126698) using ssGSEA and mechanism-relevant pathways.<h4>Results</h4>RAIR and ATC upregulated modules converged on an EMT-angiogenesis-inflammatory/interferon axis, with ATC representing a more extreme state. The RAIR signature stratified TCGA tumours with graded activation of these programs and was largely independent of BRAF and TERT promoter status, while preserving pathway associations when transferred to DepMap. In PRISM, VEGFR/KDR and RAF/BRAF inhibitor classes showed the most negative class-averaged ΔAUC values, indicating preferential activity in RAIR-high thyroid lines. The multimodal ridge model improved AUC prediction over cell-only or drug-only baselines and was concordant with class-level sensitivity patterns. In GSE126698, RAIR scores retained robust associations with hypoxia and interferon/inflammatory programs and aligned with drug-mechanism pathways including KRAS signaling up and PI3K-AKT-mTOR signaling. Initial <i>in vitro</i> validation in a single RAIR-high/ATC-like thyroid cancer model provided proof-of-concept support for these predictions, with sorafenib showing dose-dependent cytotoxicity and suppression of RAF-MAPK signalling.<h4>Conclusion</h4>A module-based RAIR signature captures a disease-focused component of a broader RAIR-ATC axis, transfers to cell-line models and can be embedded into an interpretable multimodal framework for drug-response prediction and targeted drug-class prioritisation, prioritising VEGFR/KDR and RAF/BRAF inhibitor classes as candidates for further translational evaluation in RAIR-like thyroid models."
+      }
+    ]
+  },
+  {
+    "name": "arxiv_context_tabular",
+    "provider": "arxiv",
+    "query": "all:tabular AND (ti:retrieval OR ti:context OR ti:mixture OR ti:distillation) AND submittedDate:[202501010000 TO 202609132359]",
+    "error": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=25)"
+  },
+  {
+    "name": "arxiv_transfer",
+    "provider": "arxiv",
+    "query": "(all:\"multi-task\" OR all:multitask) AND (ti:\"negative transfer\" OR ti:conflict OR ti:Pareto) AND submittedDate:[202501010000 TO 202609132359]",
+    "error": "429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22multi-task%22+OR+all%3Amultitask%29+AND+%28ti%3A%22negative+transfer%22+OR+ti%3Aconflict+OR+ti%3APareto%29+AND+submittedDate%3A%5B202501010000+TO+202609132359%5D&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending"
+  },
+  {
+    "name": "arxiv_concepts",
+    "provider": "arxiv",
+    "query": "all:\"concept bottleneck\" AND (all:biology OR all:drug OR all:molecular) AND submittedDate:[202401010000 TO 202609132359]",
+    "error": "429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=all%3A%22concept+bottleneck%22+AND+%28all%3Abiology+OR+all%3Adrug+OR+all%3Amolecular%29+AND+submittedDate%3A%5B202401010000+TO+202609132359%5D&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending"
+  },
+  {
+    "name": "crossref_pu_bias",
+    "provider": "crossref",
+    "query": "positive unlabeled learning selected at random propensity graph",
+    "status": 200,
+    "items": [
+      {
+        "title": "Positive-unlabeled learning without instruments: identified sets for latent-class moments under selected-at-random labeling",
+        "doi": "10.2139/ssrn.6664249",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": "<jats:p>We study positive-unlabeled data under selected-at-random labeling when no valid instrument is available. We first show that, in this environment, the latent labeling rule and the posterior class probability are not point identified from the observables. We then shift attention from the unidentified latent probability itself to a finite-dimensional latent-class moment target and prove that this target is sharply set identified under a simple positivity bound. Our main result characterizes the exact identified region as a convex set generated by admissible inverse-selection weights and shows that this region depends only on the observable regression. We further derive a support-function representation of the identified set, which delivers sharp bounds on latent prevalence and, for suitable choices of the moment transformation, on positive-class feature means. Finally, we provide a simulation to demonstrate the effectiveness of our method.</jats:p>",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0003-7274-4471",
+            "authenticated-orcid": true,
+            "given": "Shaohui",
+            "family": "Wang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Positive Unlabeled Learning Selected Not At Random (PULSNAR): class proportion estimation without the selected completely at random assumption",
+        "doi": "10.7717/peerj-cs.2451",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              11,
+              5
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Positive and unlabeled (PU) learning is a type of semi-supervised binary classification where the machine learning algorithm differentiates between a set of positive instances (labeled) and a set of both positive and negative instances (unlabeled). PU learning has broad applications in settings where confirmed negatives are unavailable or difficult to obtain, and there is value in discovering positives among the unlabeled (<jats:italic>e.g</jats:italic>., viable drugs among untested compounds). Most PU learning algorithms make the selected completely at random (SCAR) assumption, namely that positives are selected independently of their features. However, in many real-world applications, such as healthcare, positives are not SCAR (<jats:italic>e.g</jats:italic>., severe cases are more likely to be diagnosed), leading to a poor estimate of the proportion, α, of positives among unlabeled examples and poor model calibration, resulting in an uncertain decision threshold for selecting positives. PU learning algorithms vary; some estimate only the proportion, α, of positives in the unlabeled set, while others calculate the probability that each specific unlabeled instance is positive, and some can do both. We propose two PU learning algorithms to estimate α, calculate calibrated probabilities for PU instances, and improve classification metrics: i) PULSCAR (positive unlabeled learning selected completely at random), and ii) PULSNAR (positive unlabeled learning selected not at random). PULSNAR employs a divide-and-conquer approach to cluster SNAR positives into subtypes and estimates α for each subtype by applying PULSCAR to positives from each cluster and all unlabeled. In our experiments, PULSNAR outperformed state-of-the-art approaches on both synthetic and real-world benchmark datasets.</jats:p>",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-4981-9020",
+            "authenticated-orcid": true,
+            "given": "Praveen",
+            "family": "Kumar",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1994-2893",
+            "authenticated-orcid": true,
+            "given": "Christophe G.",
+            "family": "Lambert",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "XG-PUL: A Network-Based Framework for Disease Gene Prioritization Using Graph Representation Learning and Positive-Unlabeled Learning",
+        "doi": "10.21203/rs.3.rs-10423323/v1",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              12
+            ]
+          ]
+        },
+        "abstract": "<title>Abstract</title>\n                <p>Identifying disease-associated genes through experimental approaches remains costly and time-consuming. Computational approaches based on biological networks provide an effective alternative for disease gene prioritization and disease module identification. However, existing machine learning methods often require reliable negative examples, whereas in disease gene prioritization only a limited number of confirmed disease genes are available and the remaining genes cannot be confidently considered negative samples. This positive--unlabeled (PU) learning setting introduces substantial label uncertainty and remains a major challenge for computational disease gene discovery.\nIn this study, we propose XG-PUL, a machine learning framework designed for disease gene prioritization under a PU learning scenario. XG-PUL employs a two-stage strategy in which label-independent node representations are first learned from the protein--protein interaction (PPI) network using Node2Vec. These representations are then integrated with complementary graph-topological features to capture both latent network patterns and explicit connectivity characteristics of genes. Subsequently, a bagging-based PU classifier is applied to aggregate multiple classifiers trained on different bootstrap samples of unlabeled genes, improving robustness against uncertainty in the unlabeled data.\nThe proposed framework was evaluated on ten complex disease datasets and compared with representative network-based methods and graph learning approaches. XG-PUL demonstrated improved ranking performance, achieving higher AUPR and F1-score values across the evaluated diseases and ranking thresholds, while maintaining competitive AUC-ROC performance. Functional enrichment analysis and literature-based validation further confirmed the biological relevance of prioritized candidates, showing that XG-PUL can recover genes involved in disease-related pathways and molecular mechanisms beyond known disease annotations. These results demonstrate that integrating label-independent network representation learning with PU learning provides a robust framework for disease gene prioritization in incomplete biological knowledge scenarios.</p>",
+        "authors": [
+          {
+            "given": "Mahdiyeh",
+            "family": "Ayouman",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Institute for Advanced Studies in Basic Sciences"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zahra",
+            "family": "Narimani",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Advanced Studies in Basic Sciences"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Graph Positive-Unlabeled Learning Via Bootstrapping Label Disambiguation",
+        "doi": "10.2139/ssrn.5046216",
+        "date": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Chunquan",
+            "family": "Liang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Luyue",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Xinyuan",
+            "family": "Feng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yuying",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Mei",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Shirui",
+            "family": "Pan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Hongming",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Positive-Unlabeled Learning in Implicit Feedback from Data Missing-Not-At-Random Perspective",
+        "doi": "10.3390/e28010041",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              29
+            ]
+          ]
+        },
+        "abstract": "<jats:p>The lack of explicit negative labels issue is a prevalent challenge in numerous domains, including CV, NLP, and Recommender Systems (RSs). To address this challenge, many negative sample completion methods are proposed, such as optimizing sample distribution through pseudo-negative sampling and confidence screening in CV, constructing reliable negative examples by leveraging textual semantics in NLP, and supplementing negative samples via sparsity analysis of user interaction behaviors and preference inference in RS for handling implicit feedback. However, most existing methods fail to adequately address the Missing-Not-At-Random (MNAR) nature of the data and the potential presence of unmeasured confounders, which compromise model robustness in practice. In this paper, we first formulate the prediction task in RS with implicit feedback as a positive-unlabeled (PU) learning problem. We then propose a two-phase debiasing framework consisting of exposure status imputation, followed by debiasing through the proposed doubly robust estimator. Moreover, our theoretical analysis shows that existing propensity-based approaches are biased in the presence of unmeasured confounders. To overcome this, we incorporate a robust deconfounding method in the debiasing phase to effectively mitigate the impact of unmeasured confounders. We conduct extensive experiments on three widely used real-world datasets to demonstrate the effectiveness and potential of the proposed methods.</jats:p>",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0007-9206-9484",
+            "authenticated-orcid": false,
+            "given": "Sichao",
+            "family": "Wang",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "KUKA Robotics China Co., Ltd., Shanghai 201702, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0002-0343-9249",
+            "authenticated-orcid": false,
+            "given": "Tianyu",
+            "family": "Xia",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Biostatistics, School of Public Health, Peking University, Beijing 100871, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0416-8172",
+            "authenticated-orcid": false,
+            "given": "Lingxiao",
+            "family": "Yang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Artificial Intelligence, Anhui University, Hefei 230601, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bootstrap Latent Prototypes for graph positive-unlabeled learning",
+        "doi": "10.1016/j.inffus.2024.102553",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              12
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-3569-6998",
+            "authenticated-orcid": false,
+            "given": "Chunquan",
+            "family": "Liang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yi",
+            "family": "Tian",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Dongmin",
+            "family": "Zhao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Mei",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shirui",
+            "family": "Pan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hongming",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jicheng",
+            "family": "Wei",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Uncertainty-aware graph representation learning with positive-unlabeled classification for biomarker discovery in peripheral artery disease",
+        "doi": "10.64898/2026.05.08.723757",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              13
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Peripheral artery disease (PAD) is a complex vascular disorder characterized by heterogeneous molecular mechanisms and incomplete functional annotation, limiting systematic biomarker discovery. Network-based learning approaches provide a powerful framework for disease gene prioritization; however, most existing methods produce overconfident predictions without explicitly accounting for model uncertainty or structural novelty. Here, we present an uncertainty-aware framework for PAD biomarker discovery that integrates unsupervised graph representation learning, positive–unlabeled (PU) classification, ensemble prediction, and mechanistic explainability. Node embeddings were learned using multiple unsupervised graph neural network (GNN) objectives and combined with heterogeneous classifiers to generate ensemble-averaged probability estimates and epistemic uncertainty. By jointly modeling predictive confidence and embedding-space novelty, we stratified candidates into high-confidence rediscoveries and structurally novel hypotheses under explicit uncertainty control. Across eight embedding objectives and five classifiers, ensemble aggregation produced stable, well-calibrated predictions and enabled prioritization of 100 candidate PAD-associated proteins. Probability-heavy candidates clustered tightly with known PAD proteins and were enriched for established vascular and hemostatic pathways, including extracellular matrix organization, integrin signaling, coagulation, and fibrinolysis. In contrast, novelty-heavy candidates occupied distinct embedding-space regions and partitioned into multiple coherent clusters enriched for upstream regulatory and signaling processes, including G protein-coupled receptor, ephrin receptor, kinase-driven, and NF-κB-associated pathways. Five-fold cross-validated comparison with established PU learning baselines demonstrated consistent improvement across all evaluation metrics (AUC 0.916 ± 0.019 vs. 0.821 ± 0.030 for the best baseline), and external validity was confirmed by significant enrichment of top candidates for related cardiovascular disease annotations (5.7× above background). Together, these results demonstrate that integrating uncertainty, novelty, and explainability enables calibrated and biologically grounded biomarker prioritization, with broad applicability to PAD and other complex diseases.</jats:p>",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-0158-6723",
+            "authenticated-orcid": false,
+            "given": "Venkat Siva Radha Krishna",
+            "family": "Ayyalasomayajula",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Amsterdam UMC - Locatie AMC: Amsterdam UMC Locatie AMC;"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Max L.",
+            "family": "Senders",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Amsterdam UMC - Locatie AMC: Amsterdam UMC Locatie AMC;"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jelmer M.",
+            "family": "Wolterink",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Twente: Universiteit Twente"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Kak Khee",
+            "family": "Yeung",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Amsterdam UMC - Locatie AMC: Amsterdam UMC Locatie AMC;"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Two-Stage Angular Alignment for Positive-Unlabeled Learning",
+        "doi": "10.5220/0013964100004067",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Vasileios",
+            "family": "Sevetlidis",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Athena Research Center, Xanthi, Greece"
+              },
+              {
+                "name": "Department of Production and Management Engineering, Democritus University of Thrace, Xanthi, Greece"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "George",
+            "family": "Pavlidis",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Athena Research Center, Xanthi, Greece"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Antonios",
+            "family": "Gasteratos",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Production and Management Engineering, Democritus University of Thrace, Xanthi, Greece"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A Federated Learning Method for Multi-Positive and Unlabeled Data Using an Ensemble of One-Positive and Unlabeled Learning Models",
+        "doi": "10.5626/jcse.2025.19.1.16",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              31
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Cheong Hee",
+            "family": "Park",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Review for \"Quantitative Analysis of Miniature Synaptic Calcium Transients Using Positive Unlabeled Deep Learning\"",
+        "doi": "10.1039/d4dd00197d/v1/review3",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              18
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": null
+      }
+    ]
+  },
+  {
+    "name": "crossref_support_adapt",
+    "provider": "crossref",
+    "query": "tabular foundation model support set conditional adaptation retrieval",
+    "status": 200,
+    "items": [
+      {
+        "title": "RAM: Retrieval Augmented Modelling for Tabular In-Context Few-Shot Domain Adaptation",
+        "doi": "10.14428/esann/2025.es2025-15",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Oleh",
+            "family": "Kostromin",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Felix",
+            "family": "Kossak",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Michael",
+            "family": "Zwick",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Complexity-Aware In-Context Retrieval for Reliable Large Language Model Execution in Tabular Data Analytics",
+        "doi": "10.2139/ssrn.6461838",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Large language models (LLMs) are increasingly used to translate natural language queries into executable tabular analytics, enabling intuitive interfaces for structured data analysis. However, reliability remains a major barrier to deployment in real-world analytic workflows. A key source of failure is operational mismatch, where retrieved in-context examples are semantically similar but computationally incompatible with the transformations required by a query. Existing prompting and retrieval strategies primarily optimize semantic similarity while overlooking the operational structure of analytic programs. To address this limitation, we propose Complexity-Aware In-Context Retrieval (CA-ICR), a retrieval framework that incorporates operational complexity into exemplar selection for LLM-based program generation. Each query is encoded as a compact operational complexity signature capturing core dataframe transformations, including filtering, aggregation, grouping, sorting, and conditional logic. These signatures enable retrieval of structurally aligned exemplars, which are combined with schema metadata and structured reasoning templates to guide executable code generation. We evaluate CA-ICR on the DataBench benchmark for executable tabular question answering across GPT-4o-mini, Claude 3.7 Sonnet, and CodeLlama models. CA-ICR achieves up to 92% executable accuracy and improves performance by 15–22 percentage points over instruction-only and semantic retrieval baselines. The approach reduces schema mismatch and operator-selection errors, lowers output variance, and improves robustness under long-context conditions. Additional experiments with supervised fine-tuning further confirm consistent gains, particularly for open-source models. These results demonstrate that modeling operational complexity as a retrieval signal significantly improves the reliability and robustness of LLM-based systems for natural language–driven tabular analytics.</jats:p>",
+        "authors": [
+          {
+            "given": "Yashasvi",
+            "family": "Kanchugantla",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9974-6950",
+            "authenticated-orcid": true,
+            "given": "Mohammad",
+            "family": "Masum",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Internationally Recruited Teachers’ Adaptation: A Qualitative Systematic Review of the Conditional Integrative Adaptation Model (CIAM)",
+        "doi": "10.47191/ijmra/v9-i6-84",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              30
+            ]
+          ]
+        },
+        "abstract": "<jats:p>This qualitative systematic review synthesized findings from 18 studies examining how internationally recruited teachers experience professional transition and adaptation across diverse international school contexts. Guided by the Conditional Integrative Adaptation Model (CIAM), the review examined five core domains: transition challenges, identity shifts, instructional adaptation, relational and emotional coping, and structural constraints. Findings demonstrated that all five domains appeared consistently across studies, supporting the applicability of CIAM as a framework for understanding teacher adaptation in international educational settings. Transition challenges and relational and emotional coping emerged as the most consistently emphasized domains, while identity shifts, instructional adaptation, and structural constraints showed greater contextual variation. More recent studies introduced additional subthemes that enriched the model, including minority identity awareness, credentialing and policy pressures, technology-mediated and inclusive pedagogical demands, expatriate support networks, and transnational career mobility. Rather than constituting separate domains, these elements extended and refined the explanatory depth of the original CIAM structure. The findings suggest that internationally recruited teachers’ adaptation is dynamic, context-dependent, and shaped by interactions among institutional conditions, professional expectations, and relational support. The synthesis highlights the importance of structured induction, mentorship, credentialing guidance, inclusive professional development, and sustained relational support systems in promoting successful adaptation and retention among internationally recruited teachers across international school contexts.</jats:p>",
+        "authors": [
+          {
+            "given": "Dafe E.",
+            "family": "Olenski, Ed.D",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Independent Researcher, Tampa, Florida, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Conditional Generative Adversarial Domain Adaptation Model for Alzheimer’s Disease Identification",
+        "doi": "10.2139/ssrn.5457669",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Abdulaziz",
+            "family": "zam",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fine-tuning an ICL Tabular Foundation Model for Multi-Omics Prediction",
+        "doi": "10.55277/researchhub.hdxexvcn",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              15
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Yinuo",
+            "family": "Cheng",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "TabSTAR: A Tabular Foundation Model for Tabular Data with Text Fields",
+        "doi": "10.52202/085713-5726",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Alan",
+            "family": "Arazi",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Technion"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Eilam",
+            "family": "Shapira",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Technion - IIT"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Roi",
+            "family": "Reichart",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Technion, Israel Institute of Technology"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Conditional Tabular Generative Adversarial Network-based Synthetic Data Generation for Model Generalisation Improvement",
+        "doi": "10.32890/jict2026.25.1.1",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              31
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Accessing extensive and varied datasets is essential for developing strong predictive models in data analytics. However, many real-world applications suffer from small and imbalanced datasets, leading to overfitting, poor generalisation, and low model performance. Traditional data augmentation techniques are often unsuitable for tabular data, as they fail to preserve complex feature relationships. To address this challenge, this study adapts the Conditional Tabular Generative Adversarial Network (CTGAN) for synthetic data generation. The proposed approach involves five phases: (1) Data Acquisition, 2) Data Preparation, (3) Model Training, (4) Synthetic Data Generation, and (5) Evaluation.  Experimental results on three benchmark datasets show that the proposed work produced data that closely adheres to the statistical distribution of the original dataset, with Wasserstein Distance &lt; 0.05 for numerical features and Jensen-Shannon Divergence &lt; 0.08 for categorical features. Additionally, models trained on datasets including synthetic and real data achieved up to 15% improvement in classification accuracy compared to those trained on real and small datasets alone. Training on a combination of real and synthetic data for the minority class in large datasets significantly improves the F1-score, with gains of approximately 9–10%. This approach also yields a modest increase in overall accuracy (around 1.5%), suggesting enhanced model generalisation. These results indicate that the adapted CTGAN is a viable option for data augmentation, addressing problems with limited and imbalanced data for machine learning data training.</jats:p>",
+        "authors": [
+          {
+            "given": "Yuhanis",
+            "family": "Yusof",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Computing, Universiti Utara Malaysia, Malaysia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Fathima",
+            "family": "Fajila",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Computing, Universiti Utara Malaysia, Malaysia"
+              },
+              {
+                "name": "Faculty of Applied Sciences, South Eastern University of Sri Lanka, Sri Lanka"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A Data Augmentation Model That Integrates an Autoencoder With a Conditional Tabular Generative Adversarial Network",
+        "doi": "10.1109/ccpqt66408.2025.11383215",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              24
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Hong",
+            "family": "Chen",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Liaoning University of Engineering Technology,College of Software,Huludao,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jinwei",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Liaoning University of Engineering Technology,College of Software,Huludao,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Haibo",
+            "family": "Jin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Liaoning University of Engineering Technology,College of Software,Huludao,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Cong",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Liaoning University of Engineering Technology,College of Software,Huludao,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Zi",
+            "family": "Yang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Liaoning University of Engineering Technology,College of Software,Huludao,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Synthetic Model Generation from Metamodel Using Conditional Tabular Generative Adversarial Network",
+        "doi": "10.1109/edis63605.2024.10783213",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              11,
+              3
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "El Abbassia",
+            "family": "Deba",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University Oran 1,dept. Computer Science,Oran,Algeria"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Abdelouadoud Sadeuk Ben",
+            "family": "Abbas",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University Oran 1,dept. Computer Science,Oran,Algeria"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Karima",
+            "family": "Berramla",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University Oran 1,dept. Computer Science,Oran,Algeria"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Conditional Variational Autoencoder with Bayesian Layers for Robust Tabular Data Generation from Small Datasets",
+        "doi": "10.2139/ssrn.5991727",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Insaf",
+            "family": "CHAIBI",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Hasna",
+            "family": "Njah",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "crossref_hetero_missing",
+    "provider": "crossref",
+    "query": "missing modalities uncertainty biological multimodal graph prediction",
+    "status": 200,
+    "items": [
+      {
+        "title": "Context-Aware Dynamic Graph Learning for Multimodal Emotion Recognition with Missing Modalities",
+        "doi": "10.1109/icassp55912.2026.11464400",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              3
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Miree",
+            "family": "Kim",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Sookmyung Women&#x2019;s University,Division of Software,South Korea"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Sunyoung",
+            "family": "Cho",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sookmyung Women&#x2019;s University,Division of Software,South Korea"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Data Mining and Uncertainty-Aware with Missing Modalities for Multimodal Sentiment Analysis",
+        "doi": "10.32604/cmc.2026.084057",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Ying",
+            "family": "Cao",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Penghui",
+            "family": "Zhao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xinyu",
+            "family": "Qiao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ningfan",
+            "family": "Zhan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xiaomei",
+            "family": "Zou",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Uncertainty-Calibrated Elastic Alignment for Multimodal Sentiment Analysis with Missing Modalities",
+        "doi": "10.18653/v1/2026.findings-acl.260",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Kang",
+            "family": "He",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yuzhe",
+            "family": "Ding",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Rao",
+            "family": "Fu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yukang",
+            "family": "Feng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kaipeng",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yiming",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Fei",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Chong",
+            "family": "Teng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Donghong",
+            "family": "Ji",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Context Reconstruction and Gated Fusion for Multimodal Sentiment Analysis with Uncertain Missing Modalities",
+        "doi": "10.2139/ssrn.6074315",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "zhongyuan",
+            "family": "Chen",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wanquan",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Chong",
+            "family": "Lu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A Contrastive Learning and Graph-based Approach for Missing Modalities in Multimodal Federated Learning",
+        "doi": "10.1109/ijcnn60899.2024.10650285",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              30
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Thu Hang",
+            "family": "Phung",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Hanoi University of Science and Technology,School of Information and Communication Technology,Vietnam"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Binh P.",
+            "family": "Nguyen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Victoria University of Wellington,School of Mathematics and Statistics,New Zealand"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Thanh Hung",
+            "family": "Nguyen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Hanoi University of Science and Technology,School of Information and Communication Technology,Vietnam"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Quoc",
+            "family": "Viet Hung Nguyen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Griffith University,School of Information and Communication Technology,Australia"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Phi",
+            "family": "Le Nguyen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Hanoi University of Science and Technology,School of Information and Communication Technology,Vietnam"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Thanh Trung",
+            "family": "Huynh",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Swiss Federal Institute of Technology Lausanne (EPFL),Switzerland"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Modalities Missing in Multimodal Sentiment Analysis",
+        "doi": "10.54097/pjawnx15",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              30
+            ]
+          ]
+        },
+        "abstract": "<jats:p>In recent years, sentiment analysis has been widely applied in various fields such as smart home, intelligent healthcare, and education. Multiple technologies such as eye movement recognition and text analysis are employed as means to determine the emotional state of users. However, during this process, factors such as sensor failures, privacy restrictions, and environmental disturbances can all lead to the problem of modal absence in sentiment analysis. Traditional multimodal approaches often fail to handle the correlations between different modalities during feature extraction, and when integrating features, they often neglect multi-scale emotional cues. This research aims to summarize typical multimodal feature fusion models. Based on four optimized models developed in recent years, it aims to summarize and outline the technical breakthroughs in the emerging model architectures in addressing the issue of modality absence in multimodal sentiment analysis, and also makes assumptions and prospects for future multimodal sentiment analysis in dealing with modality absence.</jats:p>",
+        "authors": [
+          {
+            "given": "Yisheng",
+            "family": "Zhu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Houston International Institution, Dalian Maritime University, Dalian, 116000, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Multimodal Invariant Feature Prompt Network for Brain Tumor Segmentation with Missing Modalities",
+        "doi": "10.2139/ssrn.4871781",
+        "date": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Yueqin",
+            "family": "Diao",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Huihui",
+            "family": "Fang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Hanyi",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Fan",
+            "family": "li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yanwu",
+            "family": "Xu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "UML: A Unified Multimodal Learning Framework for Cataract Postoperative Visual Acuity Prediction with Uncertain Missing Modalities",
+        "doi": "10.1109/icassp49660.2025.10889124",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              6
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Tongyu",
+            "family": "Yang",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Wuhan University,School of Computer Science,Wuhan,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Qian",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Wuhan University,School of Computer Science,Wuhan,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hua",
+            "family": "Zou",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Wuhan University,School of Computer Science,Wuhan,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Haifeng",
+            "family": "Jiang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Wuhan University,Aier Eye Hospital,Wuhan,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yong",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Wuhan University,Aier Eye Hospital,Wuhan,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "TMMM: Transformer in Multimodal Sentiment Analysis under Missing Modalities",
+        "doi": "10.1109/ijcnn60899.2024.10651217",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              30
+            ]
+          ]
+        },
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Huanyu",
+            "family": "Wu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Huazhong University of Science and Technology,Ministry of Education Key Laboratory of Image Processing and Intelligent Control, School of Artificial Intelligence and Automation,Wuhan,China,430074"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Siyang",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Huazhong University of Science and Technology,Ministry of Education Key Laboratory of Image Processing and Intelligent Control, School of Artificial Intelligence and Automation,Wuhan,China,430074"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Dongrui",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Huazhong University of Science and Technology,Ministry of Education Key Laboratory of Image Processing and Intelligent Control, School of Artificial Intelligence and Automation,Wuhan,China,430074"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Robust Multimodal Sentiment Analysis under Missing Modalities via Hierarchical Interaction and Differentiated Reconstruction",
+        "doi": "10.2139/ssrn.7027104",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Multimodal sentiment analysis (MSA) has become a crucial component of affective computing and multimodal video understanding, yet its reliability in real-world applications is severely compromised by inevitable data corruption and missing modalities (e.g., visual occlusion or frame loss). Current approaches exhibit limited cross-modal interaction, struggle to fully capture hierarchical dependencies, and often employ simplistic integrations of global and local features. Furthermore, conventional unified reconstruction strategies may cause irreversible semantic loss, significantly degrading model robustness under modality-deficient conditions. To address these critical challenges, we propose a novel framework: the Hierarchical Cross-Modal Transformer with Differentiated Modality Reconstruction (HCT-DMR). First, the HCT achieves deep fusion of multimodal features through a synergistic mechanism of hierarchical interaction and global semantic integration, effectively bridging modality gaps. Second, the DMR module applies mathematical constraints tailored to the distinct statistical distributions of text, audio, and video modalities (e.g., non-negative constraints for visual facial action units). This guarantees that the reconstructed features strictly align with their original semantic spaces, preventing representation degradation. Additionally, we introduce an Enhanced Temporal Encoding Architecture (ETEA) to strengthen non-verbal feature representation in complex temporal environments. Extensive experiments on three benchmark datasets (CMU-MOSI, CMU-MOSEI, and CH-SIMS) demonstrate that HCT-DMR establishes state-of-the-art robustness, providing a highly reliable sentiment prediction framework for complex, modality-deficient visual-linguistic scenarios.</jats:p>",
+        "authors": [
+          {
+            "given": "Chang",
+            "family": "Qi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4458-3917",
+            "authenticated-orcid": true,
+            "given": "Bin",
+            "family": "Gao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4519-7823",
+            "authenticated-orcid": true,
+            "given": "Xiaobai",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-0362-7224",
+            "authenticated-orcid": true,
+            "given": "Yutong",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shutian",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2886-8496",
+            "authenticated-orcid": true,
+            "given": "Zhengjun",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

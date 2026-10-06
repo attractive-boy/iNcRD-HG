@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Post-hoc Popularity Bias Correction in GNN-based Collaborative Filtering",
+    "id": "http://arxiv.org/abs/2510.12959v2",
+    "summary": "User historical interaction data is the primary signal for learning user preferences in collaborative filtering (CF). However, the training data often exhibits a long-tailed distribution, where only a few items have the majority of interactions. CF models trained directly on such imbalanced data are prone to learning popularity bias, which reduces personalization and leads to suboptimal recommendation quality. Graph Neural Networks (GNNs), while effective for CF due to their message passing mechanism, can further propagate and amplify popularity bias through their aggregation process. Existing approaches typically address popularity bias by modifying training objectives but fail to directly counteract the bias propagated during GNN's neighborhood aggregation. Applying weights to interactions during aggregation can help alleviate this problem, yet it risks distorting model learning due to unstable node representations in the early stages of training. In this paper, we propose a Post-hoc Popularity Debiasing (PPD) method that corrects for popularity bias in GNN-based CF and operates directly on pre-trained embeddings without requiring retraining. By estimating interaction-level popularity and removing popularity components from node representations via a popularity direction vector, PPD reduces bias while preserving user preferences. Experimental results show that our method outperforms state-of-the-art approaches for popularity bias correction in GNN-based CF.",
+    "published": "2025-10-14T20:10:08Z",
+    "updated": "2026-03-15T04:46:52Z",
+    "comment": "",
+    "doi": "10.1145/3774904.3792670",
+    "journal_ref": "In Proceedings of the ACM Web Conference 2026 (WWW '26), April 13-17, 2026, Dubai, United Arab Emirates. ACM, New York, NY, USA, 12 pages"
+  },
+  {
+    "title": "Rethinking Popularity Bias in Collaborative Filtering via Analytical Vector Decomposition",
+    "id": "http://arxiv.org/abs/2512.10688v6",
+    "summary": "Popularity bias fundamentally undermines the personalization capabilities of collaborative filtering (CF) models, causing them to disproportionately recommend popular items while neglecting users' genuine preferences for niche content. While existing approaches treat this as an external confounding factor, we reveal that popularity bias is an intrinsic geometric artifact of Bayesian Pairwise Ranking (BPR) optimization in CF models. Through rigorous mathematical analysis, we prove that BPR systematically organizes item embeddings along a dominant \"popularity direction\" where embedding magnitudes directly correlate with interaction frequency. This geometric distortion forces user embeddings to simultaneously handle two conflicting tasks-expressing genuine preference and calibrating against global popularity-trapping them in suboptimal configurations that favor popular items regardless of individual tastes. We propose Directional Decomposition and Correction (DDC), a universally applicable framework that surgically corrects this embedding geometry through asymmetric directional updates. DDC guides positive interactions along personalized preference directions while steering negative interactions away from the global popularity direction, disentangling preference from popularity at the geometric source. Extensive experiments across multiple BPR-based architectures demonstrate that DDC significantly outperforms state-of-the-art debiasing methods, reducing training loss to less than 5% of heavily-tuned baselines while achieving superior recommendation quality and fairness. Code is available in https://github.com/LingFeng-Liu-AI/DDC.",
+    "published": "2025-12-11T14:35:13Z",
+    "updated": "2026-01-18T07:44:20Z",
+    "comment": "Accepted by SIGKDD 2026(First Cycle)",
+    "doi": "",
+    "journal_ref": ""
+  },
+  {
+    "title": "Debiasing Message Passing to Mitigate Popularity Bias in GNN-based Collaborative Filtering",
+    "id": "http://arxiv.org/abs/2605.11145v1",
+    "summary": "Collaborative filtering (CF) models based on graph neural networks (GNNs) achieve strong performance in recommender systems by propagating user-item signals over interaction graphs. However, they are highly susceptible to popularity bias, since skewed interaction distributions and repeated message passing across high-order neighborhoods amplify the influence of popular items while suppressing long-tail ones. Existing debiasing approaches, including re-weighting objectives, regularization, causal methods, and post-processing, are less effective in GNN-based settings because they do not directly counteract bias propagated through the aggregation process, and recent in-aggregation weighting methods often rely on static heuristics or unstable embedding estimates. We propose Debiasing Popularity Amplification in Aggregation (DPAA), a popularity debiasing framework for GNN-based CF that integrates adaptive, embedding-aware interaction weighting and layer-wise weighting directly into message passing. DPAA assigns interaction-level weights from a representation-aware popularity signal, stabilized by a smooth transition from pre-trained to evolving model embeddings during training. It further introduces a layer-wise weighting that amplifies higher-order neighborhoods, surfacing long-range interactions with diverse and underexposed items. Experiments on real-world and semi-synthetic datasets show that DPAA outperforms state-of-the-art popularity-bias correction methods for GNN-based CF.",
+    "published": "2026-05-11T18:48:58Z",
+    "updated": "2026-05-11T18:48:58Z",
+    "comment": "",
+    "doi": "",
+    "journal_ref": ""
+  }
+]

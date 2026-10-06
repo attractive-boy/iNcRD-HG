@@ -1,0 +1,129 @@
+{
+  "source": {
+    "repository": "https://github.com/attractive-boy/iNcRD-HG",
+    "commit": "eb8de624a731a4c076143bf2f9c91e539affee43",
+    "files": [
+      {
+        "path": "predict_association.py",
+        "sha256": "8e13a7193945e2226fc17747ae2b17e80e7dee20d55dd1ea66a1b9c201aabfa5"
+      },
+      {
+        "path": "heter_data_prepare.py",
+        "sha256": "b5171608653ca44d3b25c125365363f70fc0b8081384d279f2fe7ade698040e1"
+      },
+      {
+        "path": "README.md",
+        "sha256": "6e659a73b68d4cb2d5279aea0582340fa365827fa801d7386a9567a3d4322639"
+      },
+      {
+        "path": "drug_language_feature.py",
+        "sha256": "cb5a50a457bca166aaafa63a804cac7d8de2c5df9dcb1088879755827f9544ef"
+      }
+    ]
+  },
+  "datasets": {
+    "MiDrug": {
+      "adaptation": "Original expression/ChemBERTa features and lncRNA-miRNA-drug auxiliary relations; exclude later circRNA extension; shared unique target pairs.",
+      "sources": [
+        {
+          "path": "/data1/licheng/incrd-hg/incrd-run/3.heter_data/MiDrug_train_data.pth",
+          "sha256": "1f838e2357c7a86eaf34f649e583f6f7d4c64286969e4d33402ceeca85696e44"
+        }
+      ],
+      "input_path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mirna_baselines_20260928/data/MiDrug_incrd_original_inputs.pt",
+      "input_sha256": "261af46231e3a44a7e2e7b60d64f582c99d1f697a86d777877d2de94e71ff84c",
+      "entities_sha256": "9658ec3963e6494324249aa3e4e8339997176361050b3fc5e3f10ade3a914eff",
+      "features": {
+        "lncRNA": [
+          1322,
+          938
+        ],
+        "miRNA": [
+          605,
+          938
+        ],
+        "drug": [
+          216,
+          768
+        ]
+      },
+      "side_edges": {
+        "lncRNA|LncLnc|lncRNA": 8772,
+        "lncRNA|LncDrug|drug": 2109,
+        "miRNA|MiMi|miRNA": 16232,
+        "drug|DrugDrug|drug": 852,
+        "lncRNA|LncMi|miRNA": 1841,
+        "drug|rev_LncDrug|lncRNA": 2109,
+        "miRNA|rev_LncMi|lncRNA": 1841
+      }
+    },
+    "MDR": {
+      "adaptation": "No released expression/lncRNA auxiliary network: 80-d 2+3-mer miRNA, original ChemBERTa-zinc-base-v1 768-d drug cache, symmetric cosine kNN(10), one self-loop per node.",
+      "sources": [
+        {
+          "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mphgnn_plmf_20260921/cache/drug_chemberta_zinc.npz",
+          "sha256": "fd8e6b3db11a289c2faff1352d5575f8d2f510f3d59424b7bd164512592f90f9"
+        },
+        {
+          "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mirna_baselines_20260928/data/MDR_content.npz",
+          "sha256": "0918efd6f4442bcfc1dde4cc91689fbe664f3e2b61cb83e9397505191dd215e9"
+        },
+        {
+          "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mirna_baselines_20260928/data/MDR_entities.json",
+          "sha256": "cd11826f86d9999c0a1553da6fdc971dd11ada7f03520cbcf9d760d7fe7659a1"
+        }
+      ],
+      "input_path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mirna_baselines_20260928/data/MDR_incrd_original_inputs.pt",
+      "input_sha256": "93674e8a10b5dde6108a6fe3f6613d1252c0fe442d9fad42e58b5620a8543c1e",
+      "entities_sha256": "cd11826f86d9999c0a1553da6fdc971dd11ada7f03520cbcf9d760d7fe7659a1",
+      "features": {
+        "miRNA": [
+          1317,
+          80
+        ],
+        "drug": [
+          105,
+          768
+        ]
+      },
+      "side_edges": {
+        "miRNA|MiMi|miRNA": 19943,
+        "drug|DrugDrug|drug": 1635
+      }
+    },
+    "MDS": {
+      "adaptation": "No released expression/lncRNA auxiliary network: 80-d 2+3-mer miRNA, original ChemBERTa-zinc-base-v1 768-d drug cache, symmetric cosine kNN(10), one self-loop per node.",
+      "sources": [
+        {
+          "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mphgnn_plmf_20260921/cache/drug_chemberta_zinc.npz",
+          "sha256": "fd8e6b3db11a289c2faff1352d5575f8d2f510f3d59424b7bd164512592f90f9"
+        },
+        {
+          "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mirna_baselines_20260928/data/MDS_content.npz",
+          "sha256": "9a748bfcf522c3809704eef8408a48cfeece869c6065728a580805cc2de5b90c"
+        },
+        {
+          "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mirna_baselines_20260928/data/MDS_entities.json",
+          "sha256": "49453b10916b5137a42b1f03bb946e1927a7b3f7b2a98318c8a2334764cd4d0b"
+        }
+      ],
+      "input_path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mirna_baselines_20260928/data/MDS_incrd_original_inputs.pt",
+      "input_sha256": "cbdbcdfa9d00366bc41eb123f0b058e5974af0f187d421ef4368c6b1140b30a6",
+      "entities_sha256": "49453b10916b5137a42b1f03bb946e1927a7b3f7b2a98318c8a2334764cd4d0b",
+      "features": {
+        "miRNA": [
+          1252,
+          80
+        ],
+        "drug": [
+          140,
+          768
+        ]
+      },
+      "side_edges": {
+        "miRNA|MiMi|miRNA": 18602,
+        "drug|DrugDrug|drug": 2178
+      }
+    }
+  }
+}

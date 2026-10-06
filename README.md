@@ -70,6 +70,80 @@ Case study visualization:
 python plot_case_drug.py -i '0' -k 100
 ```
 
+## PLMF-MDA: entity random-effects head + negative-pool audit (2026-09-28)
+
+A diagnosis round on the round-12 model F. Its query-hollow logit is already a
+sufficient statistic of its own inputs: stackers, hidden-space kNN, residual
+propagation over miRNA/drug relations, low-rank residual factorisation, per-drug
+heads, degree slopes, crossed family/seed/arm effects, row/column quotas and SVD
+smoothing of the full hollow score matrix are all <= 0 on held-out folds. The one
+residual structure left is **entity identity**: an empirical-Bayes random-intercept
+head (`--ebpost 10`) is fitted after epoch selection. It gives one ridge-logistic
+intercept per miRNA and per drug on the labelled train+val pairs, with the network
+logit as a fixed offset, and adds them to the test logits. It is the only positive
+module this round:
+
+| Surface (valsel) | F (R12 final) | F + EB head | delta (wins) |
+|---|---|---|---|
+| MDR 5cv x seeds 42-44 | 0.9554 / 0.9529 | **0.9560 / 0.9534** | +0.0006 / +0.0004 (15 / 13 of 15) |
+| MDR 80/20 x seeds 0-4 | 0.9565 / 0.9541 | **0.9572 / 0.9547** | +0.0006 / +0.0006 (5 / 5) |
+| MDS 5cv x seeds 42-44 | 0.9569 / 0.9555 | **0.9575 / 0.9561** | +0.0006 / +0.0006 (14 / 11) |
+| MDS 80/20 x seeds 0-4 | 0.9592 / 0.9576 | **0.9595 / 0.9578** | +0.0003 / +0.0002 (4 / 4) |
+
+The head also helps under the official protocol (+0.0001 to +0.0012). It adds
++0.0005 to +0.0015 on each of ten different bases, and the gain survives refitting
+with negatives drawn without any knowledge of positives or test cells. On the
+non-hollow plain model it is unstable. End-to-end versions (learnable intercepts, a
+profiled EB layer with leave-own-label-out intercepts) are weaker on MDR.
+
+Negative this round: cross-pair rectangle loss, a decoupled auxiliary head for the
+unlabeled/hard-negative terms, model-mined and easy-preferring hard negatives,
+HN weight 2, LayerNorm on endpoint states, EMA, dropout, and longer training.
+
+Audit: R11's hard negatives are drawn from the official negative-pool file minus the
+split pairs. Because every positive sits in some split, that pool never contains a
+test positive. Drawing from all non-graph, non-training cells instead
+(`--strict_pool`) costs F -0.0004/-0.0007 on MDR and -0.0001/-0.0003 on MDS
+(15 folds). About half of HN's MDR gain rests on this closed-world property.
+
+See [the report](improve/research/plmf_r13_20260927/REPORT_R13.md), runner
+(`improve/research/plmf_r13_20260927/run_r13.py`), tables (`make_tables.py`,
+`PLMF-MDA_r13_summary.xlsx`) and the offline probes in
+`improve/research/plmf_r13_20260927/probe/`.
+
+## PLMF-MDA: valsel-protocol graph repair + stacked training interventions (2026-09-27)
+
+Every previous round's valsel protocol removed the 10% of training positives held
+out for epoch selection **from the message graph** (at training, selection and test
+time alike), while the official PLMF-MDA protocol trains on all training positives.
+Because every pair channel is query-hollow (a pair's own edge never affects its own
+score), the held-out positives may stay in the graph: `--val_graph` (first found in
+round 10, integrated into the round-12 stack) restores message graph = all training
+positives and removes a self-inflicted handicap worth **+0.0028 to +0.0037 AUC**.
+Under the official protocol (100% training pairs) the repair contributes nothing —
+there the round-10/11 training interventions stack on the same base: hard negatives
+with BPR (+0.0017/+0.0026 MDR, +0.0011/+0.0020 MDS in 15 folds), unlabeled-cell BCE
+and exact hollow PPR/Katz (+0.0000 to +0.0004 each).  Six new architecture
+candidates (hollow attention NCN `--psa`, degree-routed MoE decoder, Adamic-Adar
+weighted path counts, multi-scale kNN, listwise losses, same-miRNA hard negatives)
+were screened and all fell below the gate — reported as honest negatives.
+
+| Surface | Baseline B (5cv x 3 seeds, 90% graph) | Final `VG+HN+UNL+PPRz` | Official protocol (100% train, test-best) |
+|---|---|---|---|
+| MDR AUC / AUPR | 0.9504 / 0.9464 | **0.9558 / 0.9534** | 0.9551 / 0.9530 (5cv seed42) |
+| MDS AUC / AUPR | 0.9530 / 0.9504 | **0.9574 / 0.9560** | 0.9582 / 0.9577 (5cv seed42) |
+| 80/20 x seeds 0-2 | 0.9517 / 0.9479 (MDR), 0.9556 / 0.9517 (MDS) | 0.9563 / 0.9542, 0.9608 / 0.9593 | 0.9565 / 0.9545, 0.9605 / 0.9587 |
+
+For comparison, the reproduced official baselines on the same splits are
+PLMF-MDA 0.9243/0.9146 (MDR 5cv) and 0.9270/0.9175 (MDS 5cv).  The final stack
+remains exactly query-hollow (`--check_inv 20`: max 2.4e-5, float32 noise level)
+and the last-epoch official numbers differ from test-best by at most 0.001.
+
+See [the report](improve/research/plmf_r12_20260927/REPORT_R12.md), runner
+(`improve/research/plmf_r12_20260927/run_r12.py`), summary workbook
+(`improve/research/plmf_r12_20260927/PLMF-MDA_r12_summary.xlsx`) and the degree-wise
+gain analysis (`improve/research/plmf_r12_20260927/analysis/gain_by_degree.py`).
+
 ## SubKNet / MPHGNN reproduction and transfer (2026-09-15)
 
 Question: can incrd-hg be lifted to the miRNA level of the two current strong

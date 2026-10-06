@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/8FjdRpmfFUl04N8TPTw2TD5EiWU</id>
+  <title>arXiv Query: search_query=(all:"positive unlabeled" OR all:"positive-unlabeled") AND (all:"selected not at random" OR all:"non-random" OR all:"graph") AND submittedDate:"202301010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-09-15T21:51:24Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22positive+unlabeled%22+OR+all:%22positive-unlabeled%22)+AND+((all:%22selected+not+at+random%22+OR+(all:%22non-random%22+OR+all:%22graph%22))+AND+submittedDate:%22202301010000+TO+202609162359%22)&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>22</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.12552v1</id>
+    <title>RelateAnything: Real-Time Open-Vocabulary Relation Prediction From Any Inputs</title>
+    <updated>2026-09-11T07:57:41Z</updated>
+    <link href="https://arxiv.org/abs/2609.12552v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.12552v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Open-vocabulary detection accepts any class list at inference, and promptable segmentation returns regions without class names: the taxonomy has left the model and become an input. Relation prediction has not. Scene-graph models are still trained and evaluated on the 50 or 56 predicates of one annotation style, their relation head conditioned on object labels and so tied to one detector. Three obstacles explain this, none primarily modelling: no relation corpus is both free-text and verified, a label-conditioned architecture cannot accept a vocabulary it was not trained on, and the standard metric rewards agreement with the training corpus, so a larger vocabulary scores as a regression. We present RelateAnything, a 53M-parameter model taking an image and regions from any source and returning scored relations over a predicate vocabulary supplied at inference as strings. Object labels are never an input, so the region source can change without retraining, and the vocabulary is a bank of text embeddings, not a learned classifier. It runs at 20 ms/frame. Training over 19,103 predicates requires positive-unlabeled supervision and a text encoder that separates antonyms, which contrastive encoders embed at cosine 0.95. To supply the supervision we build RA-4M, 474k images and 4.3M relations over 10,102 free-text predicates, generated against numbered box markers and geometrically verified. To measure it we build OV-SGG-Bench, six axes scored across datasets that the priors standard recall rewards cannot satisfy. On three cross-dataset benchmarks and a fourth zero-shot, RelateAnything has 2.3-3.5x the mean recall of the strongest open-vocabulary method of comparable scale, margins that survive a real detector, and leads a 3B-VLM scene-graph model on both metrics at under 2% of its parameters. In-domain measurement overstates transfer gains ~5x. Model, corpus and benchmark are public.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-11T07:57:41Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Maëlic Neau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.26859v1</id>
+    <title>No Data Is Not No Risk: Visibility Aware Graph-Based Inference of Business Conduct Risk</title>
+    <updated>2026-07-29T12:44:09Z</updated>
+    <link href="https://arxiv.org/abs/2607.26859v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.26859v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The monitoring of business conduct risk is hindered by sparse, uneven, and visibility-biased data. Prior studies show that business conduct risk information and media coverage propagate through supply chain, peer, and corporate structure networks, yet incident records remain incomplete for many firms. As a result, the absence of reported events could reflect limited coverage rather than the absence of underlying business conduct risk. This paper examines whether inter-firm relationships can improve the prediction of future recorded conduct related incidents, particularly among firms with limited prior visibility. We formulate the task as Positive--Unlabeled node classification on a corporate ownership graph, where firms with recorded incidents are treated as labeled positives and firms without recorded incidents remain unlabeled. We then propose a visibility- and relation-aware GCNII framework that combines relation specific message passing with non-negative Positive--Unlabeled learning to account for positive contamination in the unlabeled set. In a forward-looking evaluation, the proposed approach achieved the strongest observed ranking performance relative to non-graph- and simple graph-based benchmarks. The results further show that graph-based inference retains its predictive value among firms without prior recorded incidents. These findings demonstrate the value of inter-firm relational structure as a complementary source of information for extending risk prioritization</summary>
+    <category term="q-fin.RM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T12:44:09Z</published>
+    <arxiv:primary_category term="q-fin.RM"/>
+    <author>
+      <name>Tsuyoshi Iwata</name>
+    </author>
+    <author>
+      <name>Johannes Laurmaa</name>
+    </author>
+    <author>
+      <name>Ryohei Hisano</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.13428v1</id>
+    <title>PUe: Biased Positive-Unlabeled Learning Enhancement by Causal Inference</title>
+    <updated>2026-07-15T04:12:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.13428v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.13428v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Positive-Unlabeled (PU) learning aims to achieve high-accuracy binary classification with limited labeled positive examples and numerous unlabeled ones. Existing cost-sensitive-based methods often rely on strong assumptions that examples with an observed positive label were selected entirely at random. In fact, the uneven distribution of labels is prevalent in real-world PU problems, indicating that most actual positive and unlabeled data are subject to selection bias. Building on the SAR-PU propensity-weighted framework of Bekker et al., we study a PU learning enhancement (PUe) framework using normalized propensity scores and normalized inverse probability weighting (NIPW). PUe's main contributions are a normalized inverse-probability-weighted PU risk formulation; additional theoretical analyses of normalized sample-weight error and common PU estimators under biased labeling; regularized deep propensity-score estimation; integration with modern cost-sensitive PU methods; and support for selectively labeled negative classes. Experiments on MNIST, CIFAR-10, and ADNI demonstrate improvements over several PU baselines under non-uniform label distributions.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-15T04:12:30Z</published>
+    <arxiv:comment>Extended arXiv version of the NeurIPS 2023 paper; includes additional discussion of related SAR-PU work</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xutao Wang</name>
+    </author>
+    <author>
+      <name>Hanting Chen</name>
+    </author>
+    <author>
+      <name>Tianyu Guo</name>
+    </author>
+    <author>
+      <name>Yunhe Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.20823v3</id>
+    <title>RelWitness: Open-Vocabulary 3D Scene Graph Generation with Visual-Geometric Relation Witnesses</title>
+    <updated>2026-05-31T03:54:57Z</updated>
+    <link href="https://arxiv.org/abs/2605.20823v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.20823v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Open-vocabulary 3D scene graph generation seeks to describe object instances and their relations with flexible natural-language predicates. The central difficulty is not only vocabulary expansion, but supervision reliability: relation annotations in 3D scene graph datasets are selective, and many valid object-pair relations are unannotated. We propose RelWitness, a framework for open-vocabulary 3D scene graph generation from posed RGB-D sequences under incomplete relation supervision. The key concept is a relation witness: a concrete visual-geometric cue that makes a relation observable in the captured scene. Support relations require contact and vertical ordering; containment requires enclosure; proximity requires metric closeness; orientation requires facing direction; and stable relations should persist across views where both objects are visible. RelWitness constructs relation witness records from RGB views, depth maps, reconstructed 3D geometry, role-sensitive text, object-prior null views, and multi-view consistency. A visual-geometric witness verifier assigns unannotated relation candidates to verified missing positives, reliable negatives, or uncertain unlabeled cases. A witness-guided positive-unlabeled objective then learns from incomplete annotations without turning every missing label into a negative. We further introduce witness-consistent decoding and an RGB-D missing-relation audit protocol. Simulated manuscript-planning experiments on 3DSSG/3RScan and ScanNet-derived open-vocabulary splits show the intended behavior: improved unseen-relation recognition, higher witness precision, lower hallucination, and reduced redundant relation phrases. All numerical results are planning values and must be replaced by reproduced measurements before submission</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-20T07:18:56Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Minh Anh Nguyen</name>
+    </author>
+    <author>
+      <name>Quang Huy Tran</name>
+    </author>
+    <author>
+      <name>Bao Ngoc Le</name>
+    </author>
+    <author>
+      <name>Tuan Kiet Pham</name>
+    </author>
+    <author>
+      <name>Sui Yang Guang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.22546v6</id>
+    <title>ReLIC-SGG: Relation Lattice Completion for Open-Vocabulary Scene Graph Generation</title>
+    <updated>2026-05-26T01:38:17Z</updated>
+    <link href="https://arxiv.org/abs/2604.22546v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.22546v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Open-vocabulary scene graph generation (SGG) aims to describe visual scenes with flexible relation phrases beyond a fixed predicate set. Existing methods usually treat annotated triplets as positives and all unannotated object-pair relations as negatives. However, scene graph annotations are inherently incomplete: many valid relations are missing, and the same interaction can be described at different granularities, e.g., \textit{on}, \textit{standing on}, \textit{resting on}, and \textit{supported by}. This issue becomes more severe in open-vocabulary SGG due to the much larger relation space. We propose \textbf{ReLIC-SGG}, a relation-incompleteness-aware framework that treats unannotated relations as latent variables rather than definite negatives. ReLIC-SGG builds a semantic relation lattice to model similarity, entailment, and contradiction among open-vocabulary predicates, and uses it to infer missing positive relations from visual-language compatibility, graph context, and semantic consistency. A positive-unlabeled graph learning objective further reduces false-negative supervision, while lattice-guided decoding produces compact and semantically consistent scene graphs. Experiments on conventional, open-vocabulary, and panoptic SGG benchmarks show that ReLIC-SGG improves rare and unseen predicate recognition and better recovers missing relations.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-24T13:36:41Z</published>
+    <arxiv:comment>Some errors in the experimental sections</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Amir Hosseini</name>
+    </author>
+    <author>
+      <name>Sara Farahani</name>
+    </author>
+    <author>
+      <name>Xinyi Li</name>
+    </author>
+    <author>
+      <name>Suiyang Guang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.14528v1</id>
+    <title>Positive-Unlabeled Learning for Control Group Construction in Observational Causal Inference</title>
+    <updated>2025-07-19T08:06:08Z</updated>
+    <link href="https://arxiv.org/abs/2507.14528v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.14528v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In causal inference, whether through randomized controlled trials or observational studies, access to both treated and control units is essential for estimating the effect of a treatment on an outcome of interest. When treatment assignment is random, the average treatment effect (ATE) can be estimated directly by comparing outcomes between groups. In non-randomized settings, various techniques are employed to adjust for confounding and approximate the counterfactual scenario to recover an unbiased ATE. A common challenge, especially in observational studies, is the absence of units clearly labeled as controls-that is, units known not to have received the treatment. To address this, we propose positive-unlabeled (PU) learning as a framework for identifying, with high confidence, control units from a pool of unlabeled ones, using only the available treated (positive) units. We evaluate this approach using both simulated and real-world data. We construct a causal graph with diverse relationships and use it to generate synthetic data under various scenarios, assessing how reliably the method recovers control groups that allow estimates of true ATE. We also apply our approach to real-world data on optimal sowing and fertilizer treatments in sustainable agriculture. Our findings show that PU learning can successfully identify control (negative) units from unlabeled data based only on treated units and, through the resulting control group, estimate an ATE that closely approximates the true value. This work has important implications for observational causal inference, especially in fields where randomized experiments are difficult or costly. In domains such as earth, environmental, and agricultural sciences, it enables a plethora of quasi-experiments by leveraging available earth observation and climate data, particularly when treated units are available but control units are lacking.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-19T08:06:08Z</published>
+    <arxiv:comment>Accepted at KDD 2025 Workshop on Causal Inference and Machine Learning in Practice</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ilias Tsoumas</name>
+    </author>
+    <author>
+      <name>Dimitrios Bormpoudakis</name>
+    </author>
+    <author>
+      <name>Vasileios Sitokonstantinou</name>
+    </author>
+    <author>
+      <name>Athanasios Askitopoulos</name>
+    </author>
+    <author>
+      <name>Andreas Kalogeras</name>
+    </author>
+    <author>
+      <name>Charalampos Kontoes</name>
+    </author>
+    <author>
+      <name>Ioannis Athanasiadis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.14845v2</id>
+    <title>MOFClassifier: A Machine Learning Approach for Validating Computation-Ready Metal-Organic Frameworks</title>
+    <updated>2025-08-07T02:04:05Z</updated>
+    <link href="https://arxiv.org/abs/2506.14845v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.14845v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The computational discovery and design of new crystalline materials, particularly metal-organic frameworks (MOFs), heavily relies on high-quality, computation-ready structural data. However, recent studies have revealed significant error rates within existing MOF databases, posing a critical data problem that hinders efficient high-throughput computational screening. While rule-based algorithms like MOSAEC, MOFChecker, and the Chen and Manz method (Chen-Manz) have been developed to address this, they often suffer from inherent limitations and misclassification of structures. To overcome this challenge, we developed MOFClassifier, a novel machine learning approach built upon a positive-unlabeled crystal graph convolutional neural network (PU-CGCNN) model. MOFClassifier learns intricate patterns from perfect crystal structures to predict a crystal-likeness score (CLscore), effectively classifying MOFs as computation-ready. Our model achieves a ROC value of 0.979 (previous best 0.912) and, importantly, can identify subtle structural and chemical errors that are undetectable by current rule-based methods. By accurately recovering previously misclassified false-negative structures, MOFClassifier reduces the risk of overlooking promising material candidates in large-scale computational screening campaigns. This user-friendly tool is freely available and has been integrated into the prepara-tion workflow for the updated CoRE MOF DB 2025 v1.0, contributing to accelerated computational discovery of MOF materials.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-16T15:08:58Z</published>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Guobin Zhao</name>
+    </author>
+    <author>
+      <name>Pengyu Zhao</name>
+    </author>
+    <author>
+      <name>Yongchul G. Chung</name>
+    </author>
+    <arxiv:doi>10.1021/jacs.5c10126</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/jacs.5c10126" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.06282v1</id>
+    <title>InfoNCE is a Free Lunch for Semantically guided Graph Contrastive Learning</title>
+    <updated>2025-05-07T05:27:36Z</updated>
+    <link href="https://arxiv.org/abs/2505.06282v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.06282v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As an important graph pre-training method, Graph Contrastive Learning (GCL) continues to play a crucial role in the ongoing surge of research on graph foundation models or LLM as enhancer for graphs. Traditional GCL optimizes InfoNCE by using augmentations to define self-supervised tasks, treating augmented pairs as positive samples and others as negative. However, this leads to semantically similar pairs being classified as negative, causing significant sampling bias and limiting performance. In this paper, we argue that GCL is essentially a Positive-Unlabeled (PU) learning problem, where the definition of self-supervised tasks should be semantically guided, i.e., augmented samples with similar semantics are considered positive, while others, with unknown semantics, are treated as unlabeled. From this perspective, the key lies in how to extract semantic information. To achieve this, we propose IFL-GCL, using InfoNCE as a "free lunch" to extract semantic information. Specifically, We first prove that under InfoNCE, the representation similarity of node pairs aligns with the probability that the corresponding contrastive sample is positive. Then we redefine the maximum likelihood objective based on the corrected samples, leading to a new InfoNCE loss function. Extensive experiments on both the graph pretraining framework and LLM as an enhancer show significantly improvements of IFL-GCL in both IID and OOD scenarios, achieving up to a 9.05% improvement, validating the effectiveness of semantically guided. Code for IFL-GCL is publicly available at: https://github.com/Camel-Prince/IFL-GCL.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-07T05:27:36Z</published>
+    <arxiv:comment>10 pages, 5 figures, Accepted by SIGIR2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zixu Wang</name>
+    </author>
+    <author>
+      <name>Bingbing Xu</name>
+    </author>
+    <author>
+      <name>Yige Yuan</name>
+    </author>
+    <author>
+      <name>Huawei Shen</name>
+    </author>
+    <author>
+      <name>Xueqi Cheng</name>
+    </author>
+    <arxiv:doi>10.1145/3726302.3730007</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3726302.3730007" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.03600v1</id>
+    <title>Knowledge-Infused Legal Wisdom: Navigating LLM Consultation through the Lens of Diagnostics and Positive-Unlabeled Reinforcement Learning</title>
+    <updated>2024-06-05T19:47:35Z</updated>
+    <link href="https://arxiv.org/abs/2406.03600v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.03600v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The integration of generative Large Language Models (LLMs) into various applications, including the legal domain, has been accelerated by their expansive and versatile nature. However, when facing a legal case, users without a legal background often struggle to formulate professional queries and may inadvertently overlook critical legal factors when presenting their case narrative to LLMs. To address this issue, we propose the Diagnostic Legal Large Language Model (D3LM), which utilizes adaptive lawyer-like diagnostic questions to collect additional case information and then provides high-quality feedback. D3LM incorporates an innovative graph-based Positive-Unlabeled Reinforcement Learning (PURL) algorithm, enabling the generation of critical questions and enhancing user-LLM interactions. Moreover, an integrated LLM-based stopping criterion facilitates precise Court Views Generation (CVG). Our research also introduces a new English-language CVG dataset based on the US case law database, enriching the realm of LLM research and deployment with a vital dimension. D3LM surpasses classical LLMs by delivering outstanding performance and a remarkable user experience in the legal domain.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-05T19:47:35Z</published>
+    <arxiv:comment>Accepted by ACL Findings 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yang Wu</name>
+    </author>
+    <author>
+      <name>Chenghao Wang</name>
+    </author>
+    <author>
+      <name>Ece Gumusel</name>
+    </author>
+    <author>
+      <name>Xiaozhong Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.19919v2</id>
+    <title>Unraveling the Impact of Heterophilic Structures on Graph Positive-Unlabeled Learning</title>
+    <updated>2024-06-01T10:28:20Z</updated>
+    <link href="https://arxiv.org/abs/2405.19919v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.19919v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While Positive-Unlabeled (PU) learning is vital in many real-world scenarios, its application to graph data still remains under-explored. We unveil that a critical challenge for PU learning on graph lies on the edge heterophily, which directly violates the irreducibility assumption for Class-Prior Estimation (class prior is essential for building PU learning algorithms) and degenerates the latent label inference on unlabeled nodes during classifier training. In response to this challenge, we introduce a new method, named Graph PU Learning with Label Propagation Loss (GPL). Specifically, GPL considers learning from PU nodes along with an intermediate heterophily reduction, which helps mitigate the negative impact of the heterophilic structure. We formulate this procedure as a bilevel optimization that reduces heterophily in the inner loop and efficiently learns a classifier in the outer loop. Extensive experiments across a variety of datasets have shown that GPL significantly outperforms baseline methods, confirming its effectiveness and superiority.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-30T10:30:44Z</published>
+    <arxiv:comment>ICML 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yuhao Wu</name>
+    </author>
+    <author>
+      <name>Jiangchao Yao</name>
+    </author>
+    <author>
+      <name>Bo Han</name>
+    </author>
+    <author>
+      <name>Lina Yao</name>
+    </author>
+    <author>
+      <name>Tongliang Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.11911v2</id>
+    <title>Accurate Link Prediction for Edge-Incomplete Graphs via PU Learning</title>
+    <updated>2024-12-12T07:17:19Z</updated>
+    <link href="https://arxiv.org/abs/2405.11911v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.11911v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given an edge-incomplete graph, how can we accurately find the missing links? The link prediction in edge-incomplete graphs aims to discover the missing relations between entities when their relationships are represented as a graph. Edge-incomplete graphs are prevalent in real-world due to practical limitations, such as not checking all users when adding friends in a social network. Addressing the problem is crucial for various tasks, including recommending friends in social networks and finding references in citation networks. However, previous approaches rely heavily on the given edge-incomplete (observed) graph, making it challenging to consider the missing (unobserved) links during training. In this paper, we propose PULL (PU-Learning-based Link predictor), an accurate link prediction method based on the positive-unlabeled (PU) learning. PULL treats the observed edges in the training graph as positive examples, and the unconnected node pairs as unlabeled ones. PULL effectively prevents the link predictor from overfitting to the observed graph by proposing latent variables for every edge, and leveraging the expected graph structure with respect to the variables. Extensive experiments on five real-world datasets show that PULL consistently outperforms the baselines for predicting links in edge-incomplete graphs.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-20T09:47:22Z</published>
+    <arxiv:comment>AAAI'25</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Junghun Kim</name>
+    </author>
+    <author>
+      <name>Ka Hyun Park</name>
+    </author>
+    <author>
+      <name>Hoyoung Yoon</name>
+    </author>
+    <author>
+      <name>U Kang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.00145v1</id>
+    <title>Verifying the Selected Completely at Random Assumption in Positive-Unlabeled Learning</title>
+    <updated>2024-03-29T20:36:58Z</updated>
+    <link href="https://arxiv.org/abs/2404.00145v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.00145v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The goal of positive-unlabeled (PU) learning is to train a binary classifier on the basis of training data containing positive and unlabeled instances, where unlabeled observations can belong either to the positive class or to the negative class. Modeling PU data requires certain assumptions on the labeling mechanism that describes which positive observations are assigned a label. The simplest assumption, considered in early works, is SCAR (Selected Completely at Random Assumption), according to which the propensity score function, defined as the probability of assigning a label to a positive observation, is constant. On the other hand, a much more realistic assumption is SAR (Selected at Random), which states that the propensity function solely depends on the observed feature vector. SCAR-based algorithms are much simpler and computationally much faster compared to SAR-based algorithms, which usually require challenging estimation of the propensity score. In this work, we propose a relatively simple and computationally fast test that can be used to determine whether the observed data meet the SCAR assumption. Our test is based on generating artificial labels conforming to the SCAR case, which in turn allows to mimic the distribution of the test statistic under the null hypothesis of SCAR. We justify our method theoretically. In experiments, we demonstrate that the test successfully detects various deviations from SCAR scenario and at the same time it is possible to effectively control the type I error. The proposed test can be recommended as a pre-processing step to decide which final PU algorithm to choose in cases when nature of labeling mechanism is not known.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-29T20:36:58Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Paweł Teisseyre</name>
+    </author>
+    <author>
+      <name>Konrad Furmańczyk</name>
+    </author>
+    <author>
+      <name>Jan Mielniczuk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.10978v2</id>
+    <title>Lambda: Learning Matchable Prior For Entity Alignment with Unlabeled Dangling Cases</title>
+    <updated>2024-11-09T18:46:07Z</updated>
+    <link href="https://arxiv.org/abs/2403.10978v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.10978v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the entity alignment (EA) problem with unlabeled dangling cases, meaning that partial entities have no counterparts in the other knowledge graph (KG), and this type of entity remains unlabeled. To address this challenge, we propose the framework \textit{Lambda} for dangling detection and then entity alignment. Lambda features a GNN-based encoder called KEESA with spectral contrastive learning for EA and a positive-unlabeled learning algorithm for dangling detection called iPULE. iPULE offers theoretical guarantees of unbiasedness, uniform deviation bounds, and convergence. Experimental results demonstrate that each component contributes to overall performances that are superior to baselines, even when baselines additionally exploit 30\% of dangling entities labeled for training.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-16T17:21:58Z</published>
+    <arxiv:comment>Accepted in NeurIPS 2024 as a poster</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hang Yin</name>
+    </author>
+    <author>
+      <name>Liyao Xiang</name>
+    </author>
+    <author>
+      <name>Dong Ding</name>
+    </author>
+    <author>
+      <name>Yuheng He</name>
+    </author>
+    <author>
+      <name>Yihan Wu</name>
+    </author>
+    <author>
+      <name>Xinbing Wang</name>
+    </author>
+    <author>
+      <name>Chenghu Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.08690v1</id>
+    <title>Contrastive Learning with Negative Sampling Correction</title>
+    <updated>2024-01-13T11:18:18Z</updated>
+    <link href="https://arxiv.org/abs/2401.08690v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.08690v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As one of the most effective self-supervised representation learning methods, contrastive learning (CL) relies on multiple negative pairs to contrast against each positive pair. In the standard practice of contrastive learning, data augmentation methods are utilized to generate both positive and negative pairs. While existing works have been focusing on improving the positive sampling, the negative sampling process is often overlooked. In fact, the generated negative samples are often polluted by positive samples, which leads to a biased loss and performance degradation. To correct the negative sampling bias, we propose a novel contrastive learning method named Positive-Unlabeled Contrastive Learning (PUCL). PUCL treats the generated negative samples as unlabeled samples and uses information from positive samples to correct bias in contrastive loss. We prove that the corrected loss used in PUCL only incurs a negligible bias compared to the unbiased contrastive loss. PUCL can be applied to general contrastive learning problems and outperforms state-of-the-art methods on various image and graph classification tasks. The code of PUCL is in the supplementary file.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-13T11:18:18Z</published>
+    <arxiv:comment>9 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lu Wang</name>
+    </author>
+    <author>
+      <name>Chao Du</name>
+    </author>
+    <author>
+      <name>Pu Zhao</name>
+    </author>
+    <author>
+      <name>Chuan Luo</name>
+    </author>
+    <author>
+      <name>Zhangchi Zhu</name>
+    </author>
+    <author>
+      <name>Bo Qiao</name>
+    </author>
+    <author>
+      <name>Wei Zhang</name>
+    </author>
+    <author>
+      <name>Qingwei Lin</name>
+    </author>
+    <author>
+      <name>Saravan Rajmohan</name>
+    </author>
+    <author>
+      <name>Dongmei Zhang</name>
+    </author>
+    <author>
+      <name>Qi Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.05780v2</id>
+    <title>PULSAR: Graph based Positive Unlabeled Learning with Multi Stream Adaptive Convolutions for Parkinson's Disease Recognition</title>
+    <updated>2024-02-16T14:48:47Z</updated>
+    <link href="https://arxiv.org/abs/2312.05780v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.05780v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Parkinson's disease (PD) is a neuro-degenerative disorder that affects movement, speech, and coordination. Timely diagnosis and treatment can improve the quality of life for PD patients. However, access to clinical diagnosis is limited in low and middle income countries (LMICs). Therefore, development of automated screening tools for PD can have a huge social impact, particularly in the public health sector. In this paper, we present PULSAR, a novel method to screen for PD from webcam-recorded videos of the finger-tapping task from the Movement Disorder Society - Unified Parkinson's Disease Rating Scale (MDS-UPDRS). PULSAR is trained and evaluated on data collected from 382 participants (183 self-reported as PD patients). We used an adaptive graph convolutional neural network to dynamically learn the spatio temporal graph edges specific to the finger-tapping task. We enhanced this idea with a multi stream adaptive convolution model to learn features from different modalities of data critical to detect PD, such as relative location of the finger joints, velocity and acceleration of tapping. As the labels of the videos are self-reported, there could be cases of undiagnosed PD in the non-PD labeled samples. We leveraged the idea of Positive Unlabeled (PU) Learning that does not need labeled negative data. Our experiments show clear benefit of modeling the problem in this way. PULSAR achieved 80.95% accuracy in validation set and a mean accuracy of 71.29% (2.49% standard deviation) in independent test, despite being trained with limited amount of data. This is specially promising as labeled data is scarce in health care sector. We hope PULSAR will make PD screening more accessible to everyone. The proposed techniques could be extended for assessment of other movement disorders, such as ataxia, and Huntington's disease.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-10T05:56:20Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Md. Zarif Ul Alam</name>
+    </author>
+    <author>
+      <name>Md Saiful Islam</name>
+    </author>
+    <author>
+      <name>Ehsan Hoque</name>
+    </author>
+    <author>
+      <name>M Saifur Rahman</name>
+    </author>
+  </entry>
+</feed>

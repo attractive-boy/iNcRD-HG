@@ -1,0 +1,797 @@
+{
+  "config": "bpr005_mixed",
+  "seed": 43,
+  "signature": "40a51ea35b5423a229d598fe6de38e77f1a3247628c5f837e7d45231056f676a",
+  "recipe": {
+    "epochs": 300,
+    "lr": 0.0001,
+    "weight_decay": 0.0,
+    "optimizer": "RMSprop",
+    "alpha": 0.99,
+    "warmup_epochs": 30,
+    "ramp_epochs": 30,
+    "candidate_count": 8,
+    "negatives_per_positive": 2
+  },
+  "ranking": {
+    "rank_weight": 0.05,
+    "sampler": "mixed_middle"
+  },
+  "sampler_coverage": {
+    "positive_count": 3236,
+    "eligible_count": 3236,
+    "negative_count": 6476,
+    "mode": "mixed_middle"
+  },
+  "best_epoch": 297,
+  "epochs": 300,
+  "selection": "validation_auc",
+  "metrics": {
+    "auc": 0.9586441255537467,
+    "aupr": 0.9231984023649046,
+    "acc": 0.898886827458256,
+    "precision": 0.8168776371308016,
+    "recall": 0.8979591836734694,
+    "specificity": 0.8993506493506493,
+    "f1": 0.8555015466195316,
+    "mcc": 0.7800648780259309
+  },
+  "group_metrics": {
+    "eligible_drugs": 92,
+    "macro_drug_auc": 0.7882839987325059,
+    "macro_drug_ap": 0.716066437239703,
+    "within_drug_auc": 0.7809346787041954,
+    "per_drug": [
+      {
+        "drug": 0,
+        "n": 80,
+        "positive": 79,
+        "negative": 1,
+        "auc": 0.6582278481012658,
+        "ap": 0.9948282607124082
+      },
+      {
+        "drug": 1,
+        "n": 70,
+        "positive": 65,
+        "negative": 5,
+        "auc": 0.7476923076923077,
+        "ap": 0.9782281478479564
+      },
+      {
+        "drug": 2,
+        "n": 58,
+        "positive": 51,
+        "negative": 7,
+        "auc": 0.8151260504201681,
+        "ap": 0.9719712176696569
+      },
+      {
+        "drug": 3,
+        "n": 34,
+        "positive": 25,
+        "negative": 9,
+        "auc": 0.7022222222222223,
+        "ap": 0.8265056952221295
+      },
+      {
+        "drug": 4,
+        "n": 82,
+        "positive": 81,
+        "negative": 1,
+        "auc": 0.7530864197530864,
+        "ap": 0.9965725038015267
+      },
+      {
+        "drug": 5,
+        "n": 64,
+        "positive": 60,
+        "negative": 4,
+        "auc": 0.7583333333333334,
+        "ap": 0.9820948726459966
+      },
+      {
+        "drug": 6,
+        "n": 38,
+        "positive": 26,
+        "negative": 12,
+        "auc": 0.8814102564102564,
+        "ap": 0.9450307401482226
+      },
+      {
+        "drug": 7,
+        "n": 48,
+        "positive": 39,
+        "negative": 9,
+        "auc": 0.8660968660968661,
+        "ap": 0.9665166061423585
+      },
+      {
+        "drug": 8,
+        "n": 46,
+        "positive": 36,
+        "negative": 10,
+        "auc": 0.7361111111111112,
+        "ap": 0.9225471795423322
+      },
+      {
+        "drug": 10,
+        "n": 72,
+        "positive": 68,
+        "negative": 4,
+        "auc": 0.8455882352941176,
+        "ap": 0.9903003397747716
+      },
+      {
+        "drug": 13,
+        "n": 43,
+        "positive": 31,
+        "negative": 12,
+        "auc": 0.7580645161290323,
+        "ap": 0.908599020061587
+      },
+      {
+        "drug": 14,
+        "n": 12,
+        "positive": 2,
+        "negative": 10,
+        "auc": 0.8500000000000001,
+        "ap": 0.5
+      },
+      {
+        "drug": 15,
+        "n": 17,
+        "positive": 15,
+        "negative": 2,
+        "auc": 0.6333333333333333,
+        "ap": 0.9441161997044349
+      },
+      {
+        "drug": 18,
+        "n": 33,
+        "positive": 27,
+        "negative": 6,
+        "auc": 0.654320987654321,
+        "ap": 0.9085190181425677
+      },
+      {
+        "drug": 19,
+        "n": 13,
+        "positive": 1,
+        "negative": 12,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 21,
+        "n": 16,
+        "positive": 1,
+        "negative": 15,
+        "auc": 0.4,
+        "ap": 0.1
+      },
+      {
+        "drug": 23,
+        "n": 14,
+        "positive": 6,
+        "negative": 8,
+        "auc": 0.875,
+        "ap": 0.9166666666666666
+      },
+      {
+        "drug": 24,
+        "n": 31,
+        "positive": 22,
+        "negative": 9,
+        "auc": 0.7222222222222222,
+        "ap": 0.881515522845967
+      },
+      {
+        "drug": 25,
+        "n": 28,
+        "positive": 15,
+        "negative": 13,
+        "auc": 0.8,
+        "ap": 0.8162707422150146
+      },
+      {
+        "drug": 26,
+        "n": 34,
+        "positive": 26,
+        "negative": 8,
+        "auc": 0.9326923076923077,
+        "ap": 0.9806529787806084
+      },
+      {
+        "drug": 27,
+        "n": 21,
+        "positive": 8,
+        "negative": 13,
+        "auc": 0.8076923076923077,
+        "ap": 0.6959145021645021
+      },
+      {
+        "drug": 28,
+        "n": 11,
+        "positive": 4,
+        "negative": 7,
+        "auc": 0.8571428571428572,
+        "ap": 0.6791666666666667
+      },
+      {
+        "drug": 29,
+        "n": 42,
+        "positive": 31,
+        "negative": 11,
+        "auc": 0.7360703812316716,
+        "ap": 0.8864157042419702
+      },
+      {
+        "drug": 37,
+        "n": 37,
+        "positive": 32,
+        "negative": 5,
+        "auc": 0.8625,
+        "ap": 0.9757664734917927
+      },
+      {
+        "drug": 38,
+        "n": 11,
+        "positive": 1,
+        "negative": 10,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 39,
+        "n": 18,
+        "positive": 13,
+        "negative": 5,
+        "auc": 0.9076923076923078,
+        "ap": 0.9695730363151176
+      },
+      {
+        "drug": 40,
+        "n": 30,
+        "positive": 16,
+        "negative": 14,
+        "auc": 0.7857142857142857,
+        "ap": 0.76900068885363
+      },
+      {
+        "drug": 41,
+        "n": 26,
+        "positive": 14,
+        "negative": 12,
+        "auc": 0.755952380952381,
+        "ap": 0.8264173455943642
+      },
+      {
+        "drug": 43,
+        "n": 13,
+        "positive": 6,
+        "negative": 7,
+        "auc": 0.6904761904761905,
+        "ap": 0.6906084656084656
+      },
+      {
+        "drug": 45,
+        "n": 13,
+        "positive": 1,
+        "negative": 12,
+        "auc": 0.5833333333333333,
+        "ap": 0.16666666666666666
+      },
+      {
+        "drug": 46,
+        "n": 23,
+        "positive": 8,
+        "negative": 15,
+        "auc": 0.8833333333333334,
+        "ap": 0.7781114718614719
+      },
+      {
+        "drug": 47,
+        "n": 9,
+        "positive": 1,
+        "negative": 8,
+        "auc": 0.375,
+        "ap": 0.16666666666666666
+      },
+      {
+        "drug": 48,
+        "n": 14,
+        "positive": 5,
+        "negative": 9,
+        "auc": 0.9555555555555555,
+        "ap": 0.9266666666666665
+      },
+      {
+        "drug": 49,
+        "n": 23,
+        "positive": 16,
+        "negative": 7,
+        "auc": 0.6160714285714286,
+        "ap": 0.7620829336749422
+      },
+      {
+        "drug": 50,
+        "n": 15,
+        "positive": 2,
+        "negative": 13,
+        "auc": 0.5769230769230769,
+        "ap": 0.20833333333333331
+      },
+      {
+        "drug": 52,
+        "n": 7,
+        "positive": 1,
+        "negative": 6,
+        "auc": 0.8333333333333334,
+        "ap": 0.5
+      },
+      {
+        "drug": 54,
+        "n": 12,
+        "positive": 5,
+        "negative": 7,
+        "auc": 0.9714285714285715,
+        "ap": 0.9666666666666666
+      },
+      {
+        "drug": 55,
+        "n": 17,
+        "positive": 5,
+        "negative": 12,
+        "auc": 0.95,
+        "ap": 0.8766666666666667
+      },
+      {
+        "drug": 56,
+        "n": 26,
+        "positive": 19,
+        "negative": 7,
+        "auc": 0.631578947368421,
+        "ap": 0.8680209620026553
+      },
+      {
+        "drug": 57,
+        "n": 11,
+        "positive": 4,
+        "negative": 7,
+        "auc": 0.5,
+        "ap": 0.548051948051948
+      },
+      {
+        "drug": 61,
+        "n": 6,
+        "positive": 1,
+        "negative": 5,
+        "auc": 0.8,
+        "ap": 0.5
+      },
+      {
+        "drug": 64,
+        "n": 10,
+        "positive": 1,
+        "negative": 9,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 66,
+        "n": 58,
+        "positive": 49,
+        "negative": 9,
+        "auc": 0.7369614512471655,
+        "ap": 0.9431461279769473
+      },
+      {
+        "drug": 68,
+        "n": 22,
+        "positive": 10,
+        "negative": 12,
+        "auc": 0.8916666666666667,
+        "ap": 0.8878102453102453
+      },
+      {
+        "drug": 71,
+        "n": 10,
+        "positive": 3,
+        "negative": 7,
+        "auc": 0.9047619047619049,
+        "ap": 0.8055555555555556
+      },
+      {
+        "drug": 72,
+        "n": 20,
+        "positive": 14,
+        "negative": 6,
+        "auc": 0.8690476190476192,
+        "ap": 0.9469165754880039
+      },
+      {
+        "drug": 73,
+        "n": 35,
+        "positive": 22,
+        "negative": 13,
+        "auc": 0.7377622377622377,
+        "ap": 0.8491614722359024
+      },
+      {
+        "drug": 74,
+        "n": 37,
+        "positive": 32,
+        "negative": 5,
+        "auc": 0.7250000000000001,
+        "ap": 0.9401438592119992
+      },
+      {
+        "drug": 75,
+        "n": 12,
+        "positive": 1,
+        "negative": 11,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 76,
+        "n": 21,
+        "positive": 9,
+        "negative": 12,
+        "auc": 0.6944444444444444,
+        "ap": 0.5812060851276537
+      },
+      {
+        "drug": 77,
+        "n": 15,
+        "positive": 3,
+        "negative": 12,
+        "auc": 0.8333333333333334,
+        "ap": 0.5
+      },
+      {
+        "drug": 78,
+        "n": 12,
+        "positive": 2,
+        "negative": 10,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 80,
+        "n": 18,
+        "positive": 4,
+        "negative": 14,
+        "auc": 0.8928571428571428,
+        "ap": 0.775
+      },
+      {
+        "drug": 81,
+        "n": 10,
+        "positive": 3,
+        "negative": 7,
+        "auc": 0.2857142857142857,
+        "ap": 0.34074074074074073
+      },
+      {
+        "drug": 84,
+        "n": 14,
+        "positive": 1,
+        "negative": 13,
+        "auc": 0.7692307692307692,
+        "ap": 0.25
+      },
+      {
+        "drug": 88,
+        "n": 14,
+        "positive": 1,
+        "negative": 13,
+        "auc": 0.7692307692307692,
+        "ap": 0.25
+      },
+      {
+        "drug": 89,
+        "n": 12,
+        "positive": 2,
+        "negative": 10,
+        "auc": 0.9,
+        "ap": 0.5833333333333333
+      },
+      {
+        "drug": 91,
+        "n": 8,
+        "positive": 1,
+        "negative": 7,
+        "auc": 0.5714285714285714,
+        "ap": 0.25
+      },
+      {
+        "drug": 92,
+        "n": 13,
+        "positive": 3,
+        "negative": 10,
+        "auc": 0.4666666666666667,
+        "ap": 0.33882783882783885
+      },
+      {
+        "drug": 93,
+        "n": 15,
+        "positive": 1,
+        "negative": 14,
+        "auc": 0.8571428571428572,
+        "ap": 0.3333333333333333
+      },
+      {
+        "drug": 94,
+        "n": 15,
+        "positive": 1,
+        "negative": 14,
+        "auc": 0.9285714285714286,
+        "ap": 0.5
+      },
+      {
+        "drug": 97,
+        "n": 16,
+        "positive": 6,
+        "negative": 10,
+        "auc": 0.9500000000000001,
+        "ap": 0.915079365079365
+      },
+      {
+        "drug": 98,
+        "n": 14,
+        "positive": 1,
+        "negative": 13,
+        "auc": 0.7692307692307692,
+        "ap": 0.25
+      },
+      {
+        "drug": 103,
+        "n": 10,
+        "positive": 2,
+        "negative": 8,
+        "auc": 0.8125,
+        "ap": 0.7
+      },
+      {
+        "drug": 107,
+        "n": 16,
+        "positive": 3,
+        "negative": 13,
+        "auc": 0.7948717948717948,
+        "ap": 0.611111111111111
+      },
+      {
+        "drug": 108,
+        "n": 12,
+        "positive": 3,
+        "negative": 9,
+        "auc": 0.4444444444444444,
+        "ap": 0.29444444444444445
+      },
+      {
+        "drug": 112,
+        "n": 12,
+        "positive": 1,
+        "negative": 11,
+        "auc": 0.6363636363636364,
+        "ap": 0.2
+      },
+      {
+        "drug": 115,
+        "n": 11,
+        "positive": 1,
+        "negative": 10,
+        "auc": 0.8,
+        "ap": 0.3333333333333333
+      },
+      {
+        "drug": 116,
+        "n": 11,
+        "positive": 1,
+        "negative": 10,
+        "auc": 0.9,
+        "ap": 0.5
+      },
+      {
+        "drug": 117,
+        "n": 12,
+        "positive": 1,
+        "negative": 11,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 120,
+        "n": 15,
+        "positive": 2,
+        "negative": 13,
+        "auc": 0.8461538461538461,
+        "ap": 0.6666666666666666
+      },
+      {
+        "drug": 121,
+        "n": 13,
+        "positive": 1,
+        "negative": 12,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 122,
+        "n": 9,
+        "positive": 2,
+        "negative": 7,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 126,
+        "n": 10,
+        "positive": 1,
+        "negative": 9,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 127,
+        "n": 10,
+        "positive": 1,
+        "negative": 9,
+        "auc": 0.8888888888888888,
+        "ap": 0.5
+      },
+      {
+        "drug": 128,
+        "n": 9,
+        "positive": 1,
+        "negative": 8,
+        "auc": 0.75,
+        "ap": 0.3333333333333333
+      },
+      {
+        "drug": 130,
+        "n": 19,
+        "positive": 1,
+        "negative": 18,
+        "auc": 0.9444444444444444,
+        "ap": 0.5
+      },
+      {
+        "drug": 141,
+        "n": 9,
+        "positive": 1,
+        "negative": 8,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 143,
+        "n": 10,
+        "positive": 3,
+        "negative": 7,
+        "auc": 0.7142857142857143,
+        "ap": 0.5317460317460317
+      },
+      {
+        "drug": 148,
+        "n": 14,
+        "positive": 1,
+        "negative": 13,
+        "auc": 0.6923076923076923,
+        "ap": 0.2
+      },
+      {
+        "drug": 154,
+        "n": 10,
+        "positive": 1,
+        "negative": 9,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 156,
+        "n": 6,
+        "positive": 1,
+        "negative": 5,
+        "auc": 0.8,
+        "ap": 0.5
+      },
+      {
+        "drug": 164,
+        "n": 11,
+        "positive": 1,
+        "negative": 10,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 172,
+        "n": 12,
+        "positive": 1,
+        "negative": 11,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 176,
+        "n": 8,
+        "positive": 1,
+        "negative": 7,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 181,
+        "n": 10,
+        "positive": 2,
+        "negative": 8,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 187,
+        "n": 12,
+        "positive": 1,
+        "negative": 11,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 195,
+        "n": 14,
+        "positive": 1,
+        "negative": 13,
+        "auc": 1.0,
+        "ap": 1.0
+      },
+      {
+        "drug": 197,
+        "n": 5,
+        "positive": 1,
+        "negative": 4,
+        "auc": 0.25,
+        "ap": 0.25
+      },
+      {
+        "drug": 205,
+        "n": 7,
+        "positive": 1,
+        "negative": 6,
+        "auc": 0.16666666666666663,
+        "ap": 0.16666666666666666
+      },
+      {
+        "drug": 212,
+        "n": 18,
+        "positive": 1,
+        "negative": 17,
+        "auc": 0.05882352941176472,
+        "ap": 0.058823529411764705
+      },
+      {
+        "drug": 213,
+        "n": 11,
+        "positive": 1,
+        "negative": 10,
+        "auc": 1.0,
+        "ap": 1.0
+      }
+    ]
+  },
+  "graph_nodes": [
+    "miRNA",
+    "drug"
+  ],
+  "graph_edges": {
+    "miRNA|MiMi|miRNA": 16232,
+    "drug|DrugDrug|drug": 852,
+    "miRNA|MiDrug|drug": 3236,
+    "drug|rev_MiDrug|miRNA": 3236
+  },
+  "checkpoint_sha256": "f5ad20c2a6f16c38178901488c919e1c2d140f5c7c918ac111f39194b33d5440",
+  "predictions_sha256": "ff91a0c4cc36a6108d3966d90f3964d8efe9b35c00230faed548ec8ad8a884e7",
+  "elapsed_seconds": 15.371310472488403,
+  "test_evaluated": false
+}

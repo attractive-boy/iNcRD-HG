@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Hx2UV+nszdJbu3VnW41zZxjIb8E</id>
+  <title>arXiv Query: search_query=ti:"Kolmogorov-Arnold Attention"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-15T18:58:59Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22Kolmogorov-Arnold+Attention%22&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2503.10632v3</id>
+    <title>Kolmogorov-Arnold Attention: Is Learnable Attention Better For Vision Transformers?</title>
+    <updated>2025-10-21T21:01:00Z</updated>
+    <link href="https://arxiv.org/abs/2503.10632v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.10632v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Kolmogorov-Arnold networks (KANs) are a remarkable innovation that consists of learnable activation functions, with the potential to capture more complex relationships from data. Presently, KANs are deployed by replacing multilayer perceptrons (MLPs) in deep networks, including advanced architectures such as vision Transformers (ViTs). This work asks whether KAN could learn token interactions. In this paper, we design the first learnable attention called Kolmogorov-Arnold Attention (KArAt) for ViTs that can operate on any basis, ranging from Fourier, Wavelets, Splines, to Rational Functions. However, learnable activations in the attention cause a memory explosion. To remedy this, we propose a modular version of KArAt that uses a low-rank approximation. By adopting the Fourier basis, Fourier-KArAt and its variants, in some cases, outperform their traditional softmax counterparts, or show comparable performance on CIFAR-10, CIFAR-100, and ImageNet-1K. We also deploy Fourier KArAt to ConViT and Swin-Transformer, and use it in detection and segmentation with ViT-Det. We dissect the performance of these architectures by analyzing their loss landscapes, weight distributions, optimizer paths, attention visualizations, and transferability to other datasets. KArAt's learnable activation yields a better attention score across all ViTs, indicating improved token-to-token interactions and contributing to enhanced inference. Still, its generalizability does not scale with larger ViTs. However, many factors, including the present computing interface, affect the relative performance of parameter- and memory-heavy KArAts. We note that the goal of this paper is not to produce efficient attention or challenge the traditional activations; by designing KArAt, we are the first to show that attention can be learned and encourage researchers to explore KArAt in conjunction with more advanced architectures.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-13T17:59:52Z</published>
+    <arxiv:comment>Preprint, Appendix included</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Subhajit Maity</name>
+    </author>
+    <author>
+      <name>Killian Hitsman</name>
+    </author>
+    <author>
+      <name>Xin Li</name>
+    </author>
+    <author>
+      <name>Aritra Dutta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.13456v4</id>
+    <title>KAA: Kolmogorov-Arnold Attention for Enhancing Attentive Graph Neural Networks</title>
+    <updated>2025-03-11T08:59:12Z</updated>
+    <link href="https://arxiv.org/abs/2501.13456v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.13456v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks (GNNs) with attention mechanisms, often referred to as attentive GNNs, have emerged as a prominent paradigm in advanced GNN models in recent years. However, our understanding of the critical process of scoring neighbor nodes remains limited, leading to the underperformance of many existing attentive GNNs. In this paper, we unify the scoring functions of current attentive GNNs and propose Kolmogorov-Arnold Attention (KAA), which integrates the Kolmogorov-Arnold Network (KAN) architecture into the scoring process. KAA enhances the performance of scoring functions across the board and can be applied to nearly all existing attentive GNNs. To compare the expressive power of KAA with other scoring functions, we introduce Maximum Ranking Distance (MRD) to quantitatively estimate their upper bounds in ranking errors for node importance. Our analysis reveals that, under limited parameters and constraints on width and depth, both linear transformation-based and MLP-based scoring functions exhibit finite expressive power. In contrast, our proposed KAA, even with a single-layer KAN parameterized by zero-order B-spline functions, demonstrates nearly infinite expressive power. Extensive experiments on both node-level and graph-level tasks using various backbone models show that KAA-enhanced scoring functions consistently outperform their original counterparts, achieving performance improvements of over 20% in some cases.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-23T08:14:55Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Taoran Fang</name>
+    </author>
+    <author>
+      <name>Tianhong Gao</name>
+    </author>
+    <author>
+      <name>Chunping Wang</name>
+    </author>
+    <author>
+      <name>Yihao Shang</name>
+    </author>
+    <author>
+      <name>Wei Chow</name>
+    </author>
+    <author>
+      <name>Lei Chen</name>
+    </author>
+    <author>
+      <name>Yang Yang</name>
+    </author>
+  </entry>
+</feed>

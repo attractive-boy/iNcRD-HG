@@ -1,0 +1,47 @@
+{
+  "created_at_utc": "2026-09-17T13:55:00+00:00",
+  "previous_record": "CONTINUATION_PROGRESS_20260916_2155.json",
+  "objective_retained": "At least three distinct, sufficiently innovative, verified improvements to global MiDrug AUC and AP, preserving LncDrug within 0.001, in directions other than the project's already-adopted improvements.",
+  "objective_achieved": true,
+  "goal_status_to_retain": "complete",
+  "confirmed_new_techniques": 3,
+  "interval_new_neural_fits": 0,
+  "interval_new_identity_scoring_records": 0,
+  "interval_read_only_diagnostics": 1,
+  "records": {
+    "curation_provenance_co_membership": {
+      "note": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/provenance_next_20260917/PROVENANCE_FINDINGS_V1.md",
+      "artifact": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/provenance_next_20260917/gates_v1.csv",
+      "gate": "joint strict pass on 7 splits at w=0.1..0.4 (context76 and tiered62)",
+      "mi_inner_dAUC_dAP": [0.00088, 0.00237],
+      "ln_inner_dAUC_dAP": [0.00034, 0.00073],
+      "control": "prov_perm fails; exposure-only subset fails and hurts LncDrug, so the gain is pair co-membership",
+      "reproduced": "fresh rebuild of MiDrug inner cell matches cached hgb/et logits to 0 / 2.6e-13"
+    },
+    "cross_task_provenance_sharing": {
+      "note": "pan_real",
+      "artifact": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/provenance_next_20260917/pan_v1_gates.csv",
+      "gate": "joint strict pass at w=0.1",
+      "mi_inner_dAUC_dAP": [0.00095, 0.00278],
+      "ln_inner_dAUC_dAP": [0.00058, 0.00115],
+      "control": "pan_perm fails every weight"
+    },
+    "external_bibliometric_exposure": {
+      "note": "bib (corrected v3; v2 read standardised bank columns as raw degrees and produced NaN)",
+      "artifact": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/provenance_next_20260917/cells_bib3",
+      "gate": "joint tolerance pass at w=0.1; worst LncDrug AP cell -0.00088",
+      "mi_inner_dAUC_dAP": [0.00031, 0.00055],
+      "ln_inner_dAUC_dAP": [0.00049, 0.00095],
+      "control": "bib_perm fails tolerance; PubMed volumes completed for 605 miRNA / 1322 lncRNA / 216 drugs"
+    },
+    "negative_or_neutral": {
+      "lm_text_semantic_matching": "neutral: bank+text_* fails; bank+prov+text_all_perm passes as well as real, so the pass is provenance",
+      "evidence_polarity": "rejected: MiDrug inner dAUC negative, LncDrug extra negative",
+      "evidence_strength_weighting": "weaker than the plain bank, not a technique"
+    }
+  },
+  "blocker": null,
+  "old_results_preserved": true,
+  "default_model_replaced": false,
+  "original_retained_test_sources_accessed": false
+}

@@ -1,0 +1,210 @@
+{
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.7717%2Fpeerj-cs.2451%22&format=json&resultType=core&pageSize=5",
+  "as_of": "2026-09-13",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.7717/peerj-cs.2451\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 5,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "39650456",
+          "source": "MED",
+          "pmid": "39650456",
+          "pmcid": "PMC11622864",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC11622864"
+            ]
+          },
+          "doi": "10.7717/peerj-cs.2451",
+          "title": "Positive Unlabeled Learning Selected Not At Random (PULSNAR): class proportion estimation without the selected completely at random assumption.",
+          "authorString": "Kumar P, Lambert CG.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Kumar P",
+                "firstName": "Praveen",
+                "lastName": "Kumar",
+                "initials": "P",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-4981-9020"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Internal Medicine, Division of Translational Informatics, University of New Mexico, Albuquerque, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lambert CG",
+                "firstName": "Christophe G",
+                "lastName": "Lambert",
+                "initials": "CG",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-1994-2893"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Internal Medicine, Division of Translational Informatics, University of New Mexico, Albuquerque, United States."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-4981-9020"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-1994-2893"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "volume": "10",
+            "journalIssueId": 3694295,
+            "dateOfPublication": "2024 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2024,
+            "printPublicationDate": "2024-01-01",
+            "journal": {
+              "title": "PeerJ. Computer science",
+              "medlineAbbreviation": "PeerJ Comput Sci",
+              "essn": "2376-5992",
+              "issn": "2167-9843",
+              "isoabbreviation": "PeerJ Comput Sci",
+              "nlmid": "101660598"
+            }
+          },
+          "pubYear": "2024",
+          "pageInfo": "e2451",
+          "abstractText": "Positive and unlabeled (PU) learning is a type of semi-supervised binary classification where the machine learning algorithm differentiates between a set of positive instances (labeled) and a set of both positive and negative instances (unlabeled). PU learning has broad applications in settings where confirmed negatives are unavailable or difficult to obtain, and there is value in discovering positives among the unlabeled (<i>e.g</i>., viable drugs among untested compounds). Most PU learning algorithms make the selected completely at random (SCAR) assumption, namely that positives are selected independently of their features. However, in many real-world applications, such as healthcare, positives are not SCAR (<i>e.g</i>., severe cases are more likely to be diagnosed), leading to a poor estimate of the proportion, α, of positives among unlabeled examples and poor model calibration, resulting in an uncertain decision threshold for selecting positives. PU learning algorithms vary; some estimate only the proportion, α, of positives in the unlabeled set, while others calculate the probability that each specific unlabeled instance is positive, and some can do both. We propose two PU learning algorithms to estimate α, calculate calibrated probabilities for PU instances, and improve classification metrics: i) PULSCAR (positive unlabeled learning selected completely at random), and ii) PULSNAR (positive unlabeled learning selected not at random). PULSNAR employs a divide-and-conquer approach to cluster SNAR positives into subtypes and estimates α for each subtype by applying PULSCAR to positives from each cluster and all unlabeled. In our experiments, PULSNAR outperformed state-of-the-art approaches on both synthetic and real-world benchmark datasets.",
+          "affiliation": "Department of Internal Medicine, Division of Translational Informatics, University of New Mexico, Albuquerque, United States.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic-eCollection",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "R01 MH129764",
+                "agency": "NIMH NIH HHS",
+                "acronym": "MH",
+                "orderIn": 0
+              },
+              {
+                "grantId": "R01MH129764, R56MH120826",
+                "agency": "National Institute of Mental Health of the National Institutes of Health",
+                "orderIn": 0
+              },
+              {
+                "grantId": "R56 MH120826",
+                "agency": "NIMH NIH HHS",
+                "acronym": "MH",
+                "orderIn": 0
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "SCAR",
+              "Machine Learning",
+              "Semi-supervised Learning",
+              "Snar",
+              "Class Imbalance",
+              "Positive-unlabeled Learning",
+              "Probability Calibration",
+              "Noisy Label Learning",
+              "Class Prior",
+              "Mixture Proportion Estimation",
+              "Pulscar",
+              "Pulsnar"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.7717/peerj-cs.2451"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC11622864"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC11622864?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 7,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCreation": "2024-12-09",
+          "firstIndexDate": "2024-12-09",
+          "fullTextReceivedDate": "2025-02-05",
+          "dateOfRevision": "2025-01-04",
+          "electronicPublicationDate": "2024-11-05",
+          "firstPublicationDate": "2024-11-05"
+        }
+      ]
+    }
+  }
+}

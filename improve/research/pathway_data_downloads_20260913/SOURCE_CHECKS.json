@@ -1,0 +1,71 @@
+{
+  "checked_on": "2026-09-13",
+  "notes": "This records observed HTTP/TLS outcomes and verified metadata, not completed data downloads.",
+  "web_sources": [
+    {
+      "url": "https://sites.broadinstitute.org/ccle/datasets",
+      "status": 200,
+      "verified": "Official link to DepMap download portal",
+      "snapshot": "official_ccle_datasets.html"
+    },
+    {
+      "url": "https://depmap.org/portal/data_page/?tab=allData",
+      "status": 403,
+      "verified": false
+    },
+    {
+      "url": "https://forum.depmap.org/t/4257.json",
+      "status": 200,
+      "verified": "25Q2 filenames and ModelID/ProfileID/default-entry semantics",
+      "snapshot": "official_depmap_release_forum.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/broadinstitute/depmap_omics/master/depmapomics/constants.py",
+      "status": 200,
+      "verified": "Expression and OmicsProfiles export names",
+      "snapshot": "official_depmap_constants.py"
+    },
+    {
+      "url": "https://bio-bigdata.hrbmu.edu.cn/LncTarD/",
+      "status": 403,
+      "verified": false
+    },
+    {
+      "url": "https://lnctard.bio-database.com/",
+      "status": null,
+      "error": "TLS certificate hostname mismatch"
+    },
+    {
+      "url": "https://mirtarbase.cuhk.edu.cn/~miRTarBase/miRTarBase_2025/",
+      "status": null,
+      "error": "TLS handshake failure"
+    },
+    {
+      "url": "https://bio-annotation.cn/lncrna2target/",
+      "status": null,
+      "error": "Connection refused"
+    }
+  ],
+  "snapshot_sha256": {
+    "official_ccle_datasets.html": "084c9245e83969938e49743c64c277d126d3a8a41b1b7a3edc82b0dd67e5062d",
+    "official_depmap_constants.py": "55d372231b1af3056f9eaeab125555aa76b63c0dcbd83c5006cc8a09e049586b",
+    "official_depmap_expression.py": "0ee8123ef96fe1033fc557d85d80d3442a21185792fe484ccd6d9a6a5123465f",
+    "official_depmap_reference_checks.py": "7a7f3406afcbca9d7468ceabda7df29495d739c7928b5a654c7863fd5940c7fe",
+    "official_depmap_release_docs.md": "68d2946e8feb943a6467268c340c7e2970a143c5b8bbe9920c180cf01851510c",
+    "official_depmap_release_forum.json": "05a8ec483e04db316b7640e096296a5735b7291fedd650c735d532c285b95223"
+  },
+  "local_link_checks": [
+    {
+      "target": "research/pathway_data_downloads_20260913/LOCAL_COVERAGE_AUDIT.json",
+      "exists": true
+    },
+    {
+      "target": "research/pathway_data_downloads_20260913/ACH938.txt",
+      "exists": true
+    }
+  ],
+  "ACH_count": 938,
+  "model_run": false,
+  "complete_external_datasets_downloaded_this_turn": 0,
+  "written_at_utc": "2026-09-13T05:12:39.695901+00:00"
+}

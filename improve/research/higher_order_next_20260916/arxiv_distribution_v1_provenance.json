@@ -1,0 +1,358 @@
+{
+  "source": "arxiv",
+  "query": {
+    "search_query": "(all:\"sliced Wasserstein\" OR all:\"Fourier sliced\") AND (all:graph OR all:multiset OR all:embedding) AND submittedDate:[202401010000 TO 202609162359]",
+    "max_results": 30,
+    "sortBy": "relevance"
+  },
+  "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22sliced+Wasserstein%22+OR+all%3A%22Fourier+sliced%22%29+AND+%28all%3Agraph+OR+all%3Amultiset+OR+all%3Aembedding%29+AND+submittedDate%3A%5B202401010000+TO+202609162359%5D&max_results=30&sortBy=relevance",
+  "accessed_at_utc": "2026-09-16T06:59:37.253023+00:00",
+  "file": "improve/research/higher_order_next_20260916/arxiv_distribution_v1.xml",
+  "status": 200,
+  "sha256": "55a7f031e15ed3bda55d0c8e6fdd4569c4e0192c997ab609d5126d34c67bb1b3",
+  "records": [
+    {
+      "id": "http://arxiv.org/abs/2405.16519v3",
+      "title": "Fourier Sliced-Wasserstein Embedding for Multisets and Measures",
+      "date": "2024-05-26T11:04:41Z",
+      "updated": "2025-04-14T13:33:41Z",
+      "authors": [
+        "Tal Amir",
+        "Nadav Dym"
+      ],
+      "abstract": "We present the Fourier Sliced-Wasserstein (FSW) embedding - a novel method to embed multisets and measures over R^d into Euclidean space. Our proposed embedding approximately preserves the sliced Wasserstein distance on distributions, thereby yielding geometrically meaningful representations that better capture the structure of the input. Moreover, it is injective on measures and bi-Lipschitz on multisets - a significant advantage over prevalent methods based on sum- or max-pooling, which are provably not bi-Lipschitz, and, in many cases, not even injective. The required output dimension for these guarantees is near-optimal: roughly 2Nd, where N is the maximal input multiset size. Furthermore, we prove that it is impossible to embed distributions over R^d into Euclidean space in a bi-Lipschitz manner. Thus, the metric properties of our embedding are, in a sense, the best possible. Through numerical experiments, we demonstrate that our method yields superior multiset representations that improve performance in practical learning tasks. Specifically, we show that (a) a simple combination of the FSW embedding with an MLP achieves state-of-the-art performance in learning the (non-sliced) Wasserstein distance; and (b) replacing max-pooling with the FSW embedding makes PointNet significantly more robust to parameter reduction, with only minor performance degradation even after a 40-fold reduction.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2504.02544v2",
+      "title": "Fourier Sliced-Wasserstein Embedding for Multisets and Measures",
+      "date": "2025-04-03T12:51:40Z",
+      "updated": "2025-04-14T13:02:13Z",
+      "authors": [
+        "Tal Amir",
+        "Nadav Dym"
+      ],
+      "abstract": "We present the Fourier Sliced-Wasserstein (FSW) embedding - a novel method to embed multisets and measures over $\\mathbb{R}^d$ into Euclidean space. Our proposed embedding approximately preserves the sliced Wasserstein distance on distributions, thereby yielding geometrically meaningful representations that better capture the structure of the input. Moreover, it is injective on measures and bi-Lipschitz on multisets - a significant advantage over prevalent methods based on sum- or max-pooling, which are provably not bi-Lipschitz, and, in many cases, not even injective. The required output dimension for these guarantees is near-optimal: roughly $2 N d$, where $N$ is the maximal input multiset size. Furthermore, we prove that it is impossible to embed distributions over $\\mathbb{R}^d$ into Euclidean space in a bi-Lipschitz manner. Thus, the metric properties of our embedding are, in a sense, the best possible. Through numerical experiments, we demonstrate that our method yields superior multiset representations that improve performance in practical learning tasks. Specifically, we show that (a) a simple combination of the FSW embedding with an MLP achieves state-of-the-art performance in learning the (non-sliced) Wasserstein distance; and (b) replacing max-pooling with the FSW embedding makes PointNet significantly more robust to parameter reduction, with only minor performance degradation even after a 40-fold reduction.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2502.05435v2",
+      "title": "Unbiased Sliced Wasserstein Kernels for High-Quality Audio Captioning",
+      "date": "2025-02-08T03:47:06Z",
+      "updated": "2026-02-26T08:50:46Z",
+      "authors": [
+        "Manh Luong",
+        "Khai Nguyen",
+        "Dinh Phung",
+        "Gholamreza Haffari",
+        "Lizhen Qu"
+      ],
+      "abstract": "Audio captioning systems face a fundamental challenge: teacher-forcing training creates exposure bias that leads to caption degeneration during inference. While contrastive methods have been proposed as solutions, they typically fail to capture the crucial temporal relationships between acoustic and linguistic modalities. We address this limitation by introducing the unbiased sliced Wasserstein RBF (USW-RBF) kernel with rotary positional embedding, specifically designed to preserve temporal information across modalities. Our approach offers a practical advantage: the kernel enables efficient stochastic gradient optimization, making it computationally feasible for real-world applications. Building on this foundation, we develop a complete audio captioning framework that integrates stochastic decoding to further mitigate caption degeneration. Extensive experiments on AudioCaps and Clotho datasets demonstrate that our method significantly improves caption quality, lexical diversity, and text-to-audio retrieval accuracy. Furthermore, we demonstrate the generalizability of our USW-RBF kernel by applying it to audio reasoning tasks, where it enhances the reasoning capabilities of large audio language models on the CompA-R in terms of correctness and quality. Our kernel also improves the reasoning accuracy of the MMAU-test-mini benchmarks by $4\\%$. These results establish our approach as a powerful and generalizable solution for cross-modal alignment challenges in audio-language tasks.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2510.10233v2",
+      "title": "Rigid Invariant Sliced Wasserstein via Independent Embeddings",
+      "date": "2025-10-11T14:15:57Z",
+      "updated": "2026-04-10T14:09:52Z",
+      "authors": [
+        "Zakk Heile",
+        "Peilin He",
+        "Jayson Tran",
+        "Alice Wang",
+        "Shrikant Chand"
+      ],
+      "abstract": "Comparing probability measures modulo unknown rigid transformations is a central challenge in geometric data analysis. Classical optimal transport (OT) distances, including Wasserstein and sliced Wasserstein, are sensitive to rotations and reflections, whereas Gromov-Wasserstein (GW) and Procrustes-Wasserstein (PW) distances are invariant to isometries but computationally prohibitive for large datasets. We introduce Rigid-Invariant Sliced Wasserstein via Independent Embeddings (RISWIE), a scalable distance that combines the invariance of NP-hard approaches with the efficiency of projection-based OT. RISWIE utilizes data-adaptive bases and matches optimal signed permutations along axes according to distributional similarity to achieve rigid invariance with nearly linear complexity in the sample size. We prove bounds relating RISWIE to GW in special cases and demonstrate dimension-independent statistical stability. Our experiments on cellular imaging and 3D human meshes demonstrate that RISWIE outperforms GW and PW in clustering tasks and discriminative capability while significantly reducing runtime.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2506.02203v1",
+      "title": "Constrained Sliced Wasserstein Embedding",
+      "date": "2025-06-02T19:43:40Z",
+      "updated": "2025-06-02T19:43:40Z",
+      "authors": [
+        "Navid NaderiAlizadeh",
+        "Darian Salehi",
+        "Xinran Liu",
+        "Soheil Kolouri"
+      ],
+      "abstract": "Sliced Wasserstein (SW) distances offer an efficient method for comparing high-dimensional probability measures by projecting them onto multiple 1-dimensional probability distributions. However, identifying informative slicing directions has proven challenging, often necessitating a large number of slices to achieve desirable performance and thereby increasing computational complexity. We introduce a constrained learning approach to optimize the slicing directions for SW distances. Specifically, we constrain the 1D transport plans to approximate the optimal plan in the original space, ensuring meaningful slicing directions. By leveraging continuous relaxations of these transport plans, we enable a gradient-based primal-dual approach to train the slicer parameters, alongside the remaining model parameters. We demonstrate how this constrained slicing approach can be applied to pool high-dimensional embeddings into fixed-length permutation-invariant representations. Numerical results on foundation models trained on images, point clouds, and protein sequences showcase the efficacy of the proposed constrained learning approach in learning more informative slicing directions. Our implementation code can be found at https://github.com/Stranja572/constrainedswe.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2402.03838v2",
+      "title": "Gaussian process regression with Sliced Wasserstein Weisfeiler-Lehman graph kernels",
+      "date": "2024-02-06T09:35:40Z",
+      "updated": "2024-03-11T12:16:24Z",
+      "authors": [
+        "Raphaël Carpintero Perez",
+        "Sébastien da Veiga",
+        "Josselin Garnier",
+        "Brian Staber"
+      ],
+      "abstract": "Supervised learning has recently garnered significant attention in the field of computational physics due to its ability to effectively extract complex patterns for tasks like solving partial differential equations, or predicting material properties. Traditionally, such datasets consist of inputs given as meshes with a large number of nodes representing the problem geometry (seen as graphs), and corresponding outputs obtained with a numerical solver. This means the supervised learning model must be able to handle large and sparse graphs with continuous node attributes. In this work, we focus on Gaussian process regression, for which we introduce the Sliced Wasserstein Weisfeiler-Lehman (SWWL) graph kernel. In contrast to existing graph kernels, the proposed SWWL kernel enjoys positive definiteness and a drastic complexity reduction, which makes it possible to process datasets that were previously impossible to handle. The new kernel is first validated on graph classification for molecular datasets, where the input graphs have a few tens of nodes. The efficiency of the SWWL kernel is then illustrated on graph regression in computational fluid dynamics and solid mechanics, where the input graphs are made up of tens of thousands of nodes.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2602.06539v1",
+      "title": "Revisiting the Sliced Wasserstein Kernel for persistence diagrams: a Figalli-Gigli approach",
+      "date": "2026-02-06T09:43:35Z",
+      "updated": "2026-02-06T09:43:35Z",
+      "authors": [
+        "Marc Janthial",
+        "Théo Lacombe"
+      ],
+      "abstract": "The Sliced Wasserstein Kernel (SWK) for persistence diagrams was introduced in (Carri{è}re et al. 2017) as a powerful tool to implicitly embed persistence diagrams in a Hilbert space with reasonable distortion. This kernel is built on the intuition that the Figalli-Gigli distance-that is the partial matching distance routinely used to compare persistence diagrams-resembles the Wasserstein distance used in the optimal transport literature, and that the later could be sliced to define a positive definite kernel on the space of persistence diagrams. This efficient construction nonetheless relies on ad-hoc tweaks on the Wasserstein distance to account for the peculiar geometry of the space of persistence diagrams. In this work, we propose to revisit this idea by directly using the Figalli-Gigli distance instead of the Wasserstein one as the building block of our kernel. On the theoretical side, our sliced Figalli-Gigli kernel (SFGK) shares most of the important properties of the SWK of Carri{è}re et al., including distortion results on the induced embedding and its ease of computation, while being more faithful to the natural geometry of persistence diagrams. In particular, it can be directly used to handle infinite persistence diagrams and persistence measures. On the numerical side, we show that the SFGK performs as well as the SWK on benchmark applications.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2509.20508v2",
+      "title": "Fast Estimation of Wasserstein Distances via Regression on Sliced Wasserstein Distances",
+      "date": "2025-09-24T19:30:53Z",
+      "updated": "2026-03-03T03:58:31Z",
+      "authors": [
+        "Khai Nguyen",
+        "Hai Nguyen",
+        "Nhat Ho"
+      ],
+      "abstract": "We address the problem of efficiently computing Wasserstein distances for multiple pairs of distributions drawn from a meta-distribution. To this end, we propose a fast estimation method based on regressing Wasserstein distance on sliced Wasserstein (SW) distances. Specifically, we leverage both standard SW distances, which provide lower bounds, and lifted SW distances, which provide upper bounds, as predictors of the true Wasserstein distance. To ensure parsimony, we introduce two linear models: an unconstrained model with a closed-form least-squares solution, and a constrained model that uses only half as many parameters. We show that accurate models can be learned from a small number of distribution pairs. Once estimated, the model can predict the Wasserstein distance for any pair of distributions via a linear combination of SW distances, making it highly efficient. Empirically, we validate our approach on diverse tasks, including Gaussian mixtures, point-cloud classification, and Wasserstein-space visualizations for 3D point clouds. Across various datasets such as MNIST point clouds, ShapeNetV2, MERFISH Cell Niches, and scRNA-seq, our method consistently provides a better approximation of Wasserstein distance than the state-of-the-art Wasserstein embedding model, Wasserstein Wormhole, particularly in low-data regimes. Finally, we demonstrate that our estimator can also accelerate Wormhole training, yielding \\textit{RG-Wormhole}.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2505.20433v1",
+      "title": "Kernel Quantile Embeddings and Associated Probability Metrics",
+      "date": "2025-05-26T18:27:17Z",
+      "updated": "2025-05-26T18:27:17Z",
+      "authors": [
+        "Masha Naslidnyk",
+        "Siu Lun Chau",
+        "François-Xavier Briol",
+        "Krikamol Muandet"
+      ],
+      "abstract": "Embedding probability distributions into reproducing kernel Hilbert spaces (RKHS) has enabled powerful nonparametric methods such as the maximum mean discrepancy (MMD), a statistical distance with strong theoretical and computational properties. At its core, the MMD relies on kernel mean embeddings to represent distributions as mean functions in RKHS. However, it remains unclear if the mean function is the only meaningful RKHS representation. Inspired by generalised quantiles, we introduce the notion of kernel quantile embeddings (KQEs). We then use KQEs to construct a family of distances that: (i) are probability metrics under weaker kernel conditions than MMD; (ii) recover a kernelised form of the sliced Wasserstein distance; and (iii) can be efficiently estimated with near-linear cost. Through hypothesis testing, we show that these distances offer a competitive alternative to MMD and its fast approximations.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2605.07786v2",
+      "title": "APEX: Assumption-free Projection-based Embedding eXamination Metric for Image Quality Assessment",
+      "date": "2026-05-08T14:21:51Z",
+      "updated": "2026-05-11T08:25:22Z",
+      "authors": [
+        "Caterina Gallegati",
+        "Monica Bianchini",
+        "Franco Scarselli",
+        "Vittorio Murino",
+        "Barbara Toniella Corradini"
+      ],
+      "abstract": "As generative models achieve unprecedented visual quality, the gold standard for image evaluation remains traditional feature-distribution metrics (e.g., FID). However, these metrics are provably hindered by the closed-vocabulary bottleneck of outdated features and the assumptive bias of rigid parametric formulations. Recent alternatives exploit modern backbones to solve the feature bottleneck, yet continue to suffer from parametric limitations. To close this gap, we introduce APEX (Assumption-free Projection-based Embedding eXamination), a novel evaluation framework leveraging the Sliced Wasserstein Distance as a mathematically grounded, assumption-free similarity measure. APEX inherits effective scalability to high-dimensional spaces, as we prove with theoretical and empirical evidences. Moreover, APEX is embedding-agnostic and uses two open-vocabulary foundation models, CLIP and DINOv2, as feature extractors. Benchmarking APEX against established baselines reveals superior robustness to visual degradations. Additionally, we show that APEX metrics exhibit intra- and cross-dataset stability, ensuring highly stable evaluations on out-of-domain datasets.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2607.07773v1",
+      "title": "Graph-Regularized Deep Learning for EEG-Based Emotion Recognition with Psychologically-Grounded Label Structure",
+      "date": "2026-07-08T16:41:51Z",
+      "updated": "2026-07-08T16:41:51Z",
+      "authors": [
+        "Dongyang Kuang",
+        "Zizheng Ma",
+        "Yushan Zhang",
+        "Xiaocong Zeng"
+      ],
+      "abstract": "EEG-based emotion recognition is critical for mental health monitoring and affective brain-computer interfaces, yet existing deep learning approaches often treat emotion classes as isolated labels, ignoring their psychological interdependencies. We propose a graph-regularized learning framework that conceptualizes emotions as nodes in a graph where edges encode proximity based on dimensional emotion theories. We adapt three complementary regularization strategies--Graph Label Smoothing (intuitive soft labeling), Commuting distance on graph via Graph Laplacian (spectral graph theory), and Sliced Wasserstein Distance (optimal transport on graph)--ordered by increasing computational complexity. These strategies penalize model predictions that deviate from the established emotion topology. Our framework is evaluated across three representative backbone architectures: AudioTransformer (pure transformer), Conformer (CNN-transformer hybrid), and DCGNN (causal graph neural network), demonstrating architecture-agnostic benefits. Experiments on SEED-IV (4 classes) and SEED-V (5 classes) datasets show consistent improvements: best case up to +5.42% accuracy and 39% reduction in psychologically implausible misclassifications. Ultimately, our framework help raise the upper bound of performance achievable with standard approaches. Code will be released.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2404.06661v1",
+      "title": "Efficient Denoising using Score Embedding in Score-based Diffusion Models",
+      "date": "2024-04-10T00:05:55Z",
+      "updated": "2024-04-10T00:05:55Z",
+      "authors": [
+        "Andrew S. Na",
+        "William Gao",
+        "Justin W. L. Wan"
+      ],
+      "abstract": "It is well known that training a denoising score-based diffusion models requires tens of thousands of epochs and a substantial number of image data to train the model. In this paper, we propose to increase the efficiency in training score-based diffusion models. Our method allows us to decrease the number of epochs needed to train the diffusion model. We accomplish this by solving the log-density Fokker-Planck (FP) Equation numerically to compute the score \\textit{before} training. The pre-computed score is embedded into the image to encourage faster training under slice Wasserstein distance. Consequently, it also allows us to decrease the number of images we need to train the neural network to learn an accurate score. We demonstrate through our numerical experiments the improved performance of our proposed method compared to standard score-based diffusion models. Our proposed method achieves a similar quality to the standard method meaningfully faster.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2509.16999v1",
+      "title": "Persistence Spheres: Bi-continuous Representations of Persistence Diagrams",
+      "date": "2025-09-21T09:33:57Z",
+      "updated": "2025-09-21T09:33:57Z",
+      "authors": [
+        "Matteo Pegoraro"
+      ],
+      "abstract": "We introduce persistence spheres, a novel functional representation of persistence diagrams. Unlike existing embeddings (such as persistence images, landscapes, or kernel methods), persistence spheres provide a bi-continuous mapping: they are Lipschitz continuous with respect to the 1-Wasserstein distance and admit a continuous inverse on their image. This ensures, in a theoretically optimal way, both stability and geometric fidelity, making persistence spheres the representation that most closely mirrors the Wasserstein geometry of PDs in linear space. We derive explicit formulas for persistence spheres, showing that they can be computed efficiently and parallelized with minimal overhead. Empirically, we evaluate them on diverse regression and classification tasks involving functional data, time series, graphs, meshes, and point clouds. Across these benchmarks, persistence spheres consistently deliver state-of-the-art or competitive performance compared to persistence images, persistence landscapes, and the sliced Wasserstein kernel.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2506.09682v1",
+      "title": "Wasserstein Hypergraph Neural Network",
+      "date": "2025-06-11T12:59:21Z",
+      "updated": "2025-06-11T12:59:21Z",
+      "authors": [
+        "Iulia Duta",
+        "Pietro Liò"
+      ],
+      "abstract": "The ability to model relational information using machine learning has driven advancements across various domains, from medicine to social science. While graph representation learning has become mainstream over the past decade, representing higher-order relationships through hypergraphs is rapidly gaining momentum. In the last few years, numerous hypergraph neural networks have emerged, most of them falling under a two-stage, set-based framework. The messages are sent from nodes to edges and then from edges to nodes. However, most of the advancement still takes inspiration from the graph counterpart, often simplifying the aggregations to basic pooling operations. In this paper we are introducing Wasserstein Hypergraph Neural Network, a model that treats the nodes and hyperedge neighbourhood as distributions and aggregate the information using Sliced Wasserstein Pooling. Unlike conventional aggregators such as mean or sum, which only capture first-order statistics, our approach has the ability to preserve geometric properties like the shape and spread of distributions. This enables the learned embeddings to reflect how easily one hyperedge distribution can be transformed into another, following principles of optimal transport. Experimental results demonstrate that applying Wasserstein pooling in a hypergraph setting significantly benefits node classification tasks, achieving top performance on several real-world datasets.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.06055v1",
+      "title": "Linear Spherical Sliced Optimal Transport: A Fast Metric for Comparing Spherical Data",
+      "date": "2024-11-09T03:36:59Z",
+      "updated": "2024-11-09T03:36:59Z",
+      "authors": [
+        "Xinran Liu",
+        "Yikun Bai",
+        "Rocío Díaz Martín",
+        "Kaiwen Shi",
+        "Ashkan Shahbazi",
+        "Bennett A. Landman",
+        "Catie Chang",
+        "Soheil Kolouri"
+      ],
+      "abstract": "Efficient comparison of spherical probability distributions becomes important in fields such as computer vision, geosciences, and medicine. Sliced optimal transport distances, such as spherical and stereographic spherical sliced Wasserstein distances, have recently been developed to address this need. These methods reduce the computational burden of optimal transport by slicing hyperspheres into one-dimensional projections, i.e., lines or circles. Concurrently, linear optimal transport has been proposed to embed distributions into \\( L^2 \\) spaces, where the \\( L^2 \\) distance approximates the optimal transport distance, thereby simplifying comparisons across multiple distributions. In this work, we introduce the Linear Spherical Sliced Optimal Transport (LSSOT) framework, which utilizes slicing to embed spherical distributions into \\( L^2 \\) spaces while preserving their intrinsic geometry, offering a computationally efficient metric for spherical probability measures. We establish the metricity of LSSOT and demonstrate its superior computational efficiency in applications such as cortical surface registration, 3D point cloud interpolation via gradient flow, and shape embedding. Our results demonstrate the significant computational benefits and high accuracy of LSSOT in these applications.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2508.02364v2",
+      "title": "A Novel Sliced Fused Gromov-Wasserstein Distance",
+      "date": "2025-08-04T12:51:10Z",
+      "updated": "2025-11-13T15:51:35Z",
+      "authors": [
+        "Moritz Piening",
+        "Robert Beinert"
+      ],
+      "abstract": "The Gromov--Wasserstein (GW) distance and its fused extension (FGW) are powerful tools for comparing heterogeneous data. Their computation is, however, challenging since both distances are based on non-convex, quadratic optimal transport (OT) problems. Leveraging 1D OT, a sliced version of GW has been proposed to lower the computational burden. Unfortunately, this sliced version is restricted to Euclidean geometry and loses invariance to isometries, strongly limiting its application in practice. To overcome these issues, we propose a novel slicing technique for GW as well as for FGW that is based on an appropriate lower bound, hierarchical OT, and suitable quadrature rules for the underlying 1D OT problems. Our novel sliced FGW significantly reduces the numerical effort while remaining invariant to isometric transformations and allowing the comparison of arbitrary geometries. We show that our new distance actually defines a pseudo-metric for structured spaces that bounds FGW from below and study its interpolation properties between sliced Wasserstein and GW. Since we avoid the underlying quadratic program, our sliced distance is numerically more robust and reliable than the original GW and FGW distance; especially in the context of shape retrieval and graph isomorphism testing.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2604.26218v1",
+      "title": "ViBE: Visual-to-M/EEG Brain Encoding via Spatio-Temporal VAE and Distribution-Aligned Projection",
+      "date": "2026-04-29T01:53:46Z",
+      "updated": "2026-04-29T01:53:46Z",
+      "authors": [
+        "Ganxi Xu",
+        "Zhao-Rong Lai",
+        "Yuting Tang",
+        "Yonghao Song",
+        "Shuyan Zhou",
+        "Guoxu Zhou",
+        "Boyu Wang",
+        "Jian Zhu",
+        "Jinyi Long"
+      ],
+      "abstract": "Brain encoding models not only serve to decipher how visual stimuli are transformed into neural responses, but also represent a critical step toward visual prostheses that restore vision for patients with severe vision disorders. Brain encoding involves two fundamental steps: achieving faithful reconstruction of neural responses and establishing cross-modal alignment between visual stimuli and neural responses. To this end, we propose ViBE, a novel brain encoding framework for generating magnetoencephalography (MEG) and electroencephalography (EEG) signals from visual stimuli. Specifically, we first design a spatio-temporal convolutional variational autoencoder (TSC-VAE) that captures the spatio-temporal characteristics of M/EEG signals for effective neural response reconstruction. To bridge the modality gap between visual features and neural representations, we employ Q-Former to map CLIP image embeddings to the TSC-VAE latent space, producing neural proxy embeddings. For comprehensive cross-modal alignment, we combine mean squared error (MSE) loss for point-wise feature matching with sliced Wasserstein distance (SWD) for probability distribution alignment between the neural proxy embeddings and TSC-VAE latent embeddings. We conduct extensive experiments on the THINGS-EEG2 and THINGS-MEG datasets, demonstrating the effectiveness of our approach in generating high-quality M/EEG signals from visual stimuli.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.15384v2",
+      "title": "Persistence Spheres: a Bi-continuous Linear Representation of Measures for Partial Optimal Transport",
+      "date": "2026-03-16T14:58:32Z",
+      "updated": "2026-07-29T11:46:09Z",
+      "authors": [
+        "Matteo Pegoraro"
+      ],
+      "abstract": "We improve and extend persistence spheres, introduced in~\\cite{pegoraro2025persistence}. Persistence spheres map an integrable measure $μ$ on the upper half-plane, including persistence diagrams (PDs) as counting measures, to a function $S(μ)\\in C(\\mathbb{S}^2)$, and the map is stable with respect to 1-Wasserstein partial transport distance $\\mathrm{POT}_1$. Moreover, to the best of our knowledge, persistence spheres are the first explicit representation used in topological machine learning for which continuity of the inverse on the image is established at every compactly supported target. Recent bounded-cardinality bi-Lipschitz embedding results in partial transport spaces, despite being powerful, are not given by the kind of explicit summary map considered here. Our construction is rooted in convex geometry: for positive measures, the defining ReLU integral is the support function of the lift zonoid. Building on~\\cite{pegoraro2025persistence}, we refine the definition to better match the $\\mathrm{POT}_1$ deletion mechanism, encoding partial transport via a signed diagonal augmentation. In particular, for integrable $μ$, the uniform norm between $S(0)$ and $S(μ)$ depends only on the persistence of $μ$, without any need of ad-hoc re-weightings, reflecting optimal transport to the diagonal at persistence cost. This yields a parameter-free representation at the level of measures (up to numerical discretization), while accommodating future extensions where $μ$ is a smoothed measure derived from PDs (e.g., persistence intensity functions~\\citep{wu2024estimation}). Across clustering, regression, and classification tasks involving functional data, time series, graphs, meshes, and point clouds, the updated persistence spheres are competitive and often improve upon persistence images, persistence landscapes, persistence splines, and sliced Wasserstein kernel baselines.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.02098v2",
+      "title": "Efficient and High-Fidelity Omni Modality Retrieval",
+      "date": "2026-03-02T17:19:55Z",
+      "updated": "2026-03-24T02:56:17Z",
+      "authors": [
+        "Chuong Huynh",
+        "Manh Luong",
+        "Abhinav Shrivastava"
+      ],
+      "abstract": "Multimodal retrieval is the task of aggregating information from queries across heterogeneous modalities to retrieve desired targets. State-of-the-art multimodal retrieval models can understand complex queries, yet they are typically limited to two modalities: text and vision. This limitation impedes the development of universal retrieval systems capable of comprehending queries that combine more than two modalities. To advance toward this goal, we present OmniRet, the first retrieval model capable of handling complex, composed queries spanning three key modalities: text, vision, and audio. Our OmniRet model addresses two critical challenges for universal retrieval: computational efficiency and representation fidelity. First, feeding massive token sequences from modality-specific encoders to Large Language Models (LLMs) is computationally inefficient. We therefore introduce an attention-based resampling mechanism to generate compact, fixed-size representations from these sequences. Second, compressing rich omni-modal data into a single embedding vector inevitably causes information loss and discards fine-grained details. We propose Attention Sliced Wasserstein Pooling to preserve these fine-grained details, leading to improved omni-modal representations. OmniRet is trained on an aggregation of approximately 6 million query-target pairs spanning 30 datasets. We benchmark our model on 13 retrieval tasks and a MMEBv2 subset. Our model demonstrates significant improvements on composed query, audio and video retrieval tasks, while achieving on-par performance with state-of-the-art models on others. Furthermore, we curate a new Audio-Centric Multimodal Benchmark (ACM). This new benchmark introduces two critical, previously missing tasks-composed audio retrieval and audio-visual retrieval to more comprehensively evaluate a model's omni-modal embedding capacity.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2508.12519v2",
+      "title": "An Introduction to Sliced Optimal Transport",
+      "date": "2025-08-17T22:53:19Z",
+      "updated": "2025-10-14T06:29:47Z",
+      "authors": [
+        "Khai Nguyen"
+      ],
+      "abstract": "Sliced Optimal Transport (SOT) is a rapidly developing branch of optimal transport (OT) that exploits the tractability of one-dimensional OT problems. By combining tools from OT, integral geometry, and computational statistics, SOT enables fast and scalable computation of distances, barycenters, and kernels for probability measures, while retaining rich geometric structure. This paper provides a comprehensive review of SOT, covering its mathematical foundations, methodological advances, computational methods, and applications. We discuss key concepts of OT and one-dimensional OT, the role of tools from integral geometry such as Radon transform in projecting measures, and statistical techniques for estimating sliced distances. The paper further explores recent methodological advances, including non-linear projections, improved Monte Carlo approximations, statistical estimation techniques for one-dimensional optimal transport, weighted slicing techniques, and transportation plan estimation methods. Variational problems, such as minimum sliced Wasserstein estimation, barycenters, gradient flows, kernel constructions, and embeddings are examined alongside extensions to unbalanced, partial, multi-marginal, and Gromov-Wasserstein settings. Applications span machine learning, statistics, computer graphics and computer visions, highlighting SOT's versatility as a practical computational tool. This work will be of interest to researchers and practitioners in machine learning, data sciences, and computational disciplines seeking efficient alternatives to classical OT.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2505.01932v2",
+      "title": "OT-Talk: Animating 3D Talking Head with Optimal Transportation",
+      "date": "2025-05-03T21:49:23Z",
+      "updated": "2025-05-10T19:23:04Z",
+      "authors": [
+        "Xinmu Wang",
+        "Xiang Gao",
+        "Xiyun Song",
+        "Heather Yu",
+        "Zongfang Lin",
+        "Liang Peng",
+        "Xianfeng Gu"
+      ],
+      "abstract": "Animating 3D head meshes using audio inputs has significant applications in AR/VR, gaming, and entertainment through 3D avatars. However, bridging the modality gap between speech signals and facial dynamics remains a challenge, often resulting in incorrect lip syncing and unnatural facial movements. To address this, we propose OT-Talk, the first approach to leverage optimal transportation to optimize the learning model in talking head animation. Building on existing learning frameworks, we utilize a pre-trained Hubert model to extract audio features and a transformer model to process temporal sequences. Unlike previous methods that focus solely on vertex coordinates or displacements, we introduce Chebyshev Graph Convolution to extract geometric features from triangulated meshes. To measure mesh dissimilarities, we go beyond traditional mesh reconstruction errors and velocity differences between adjacent frames. Instead, we represent meshes as probability measures and approximate their surfaces. This allows us to leverage the sliced Wasserstein distance for modeling mesh variations. This approach facilitates the learning of smooth and accurate facial motions, resulting in coherent and natural facial animations. Our experiments on two public audio-mesh datasets demonstrate that our method outperforms state-of-the-art techniques both quantitatively and qualitatively in terms of mesh reconstruction accuracy and temporal alignment. In addition, we conducted a user perception study with 20 volunteers to further assess the effectiveness of our approach.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.02572v1",
+      "title": "VISReg: Variance-Invariance-Sketching Regularization for JEPA training",
+      "date": "2026-06-01T17:58:01Z",
+      "updated": "2026-06-01T17:58:01Z",
+      "authors": [
+        "Haiyu Wu",
+        "Randall Balestriero",
+        "Morgan Levine"
+      ],
+      "abstract": "Self-supervised learning methods prevent embedding collapse via modeling heuristics or explicit regularization of the embedding space. Among the latter, VICReg decomposes regularization into variance and covariance objectives, offering flexibility and interpretability. However, covariance captures only second-order statistics -- encouraging decorrelation but failing to enforce the full distributional shape needed for stable training. Sketching-based methods such as SIGReg address this by aligning embeddings to an isotropic Gaussian, but lack flexibility and suffer from vanishing gradients under collapse. We propose Variance-Invariance-Sketching Regularization (VISReg), which replaces covariance with a Sliced-Wasserstein-based sketching objective that enforces full distributional shape, while retaining a variance term for scale control. By decoupling scale and shape, VISReg combines VICReg's flexibility with the distributional rigor of sketching methods, providing robust gradients even under collapse. We show that VISReg scales linearly, outperforms existing regularization on low-quality datasets, and is resilient to long-tailed and low-rank regimes. Pre-trained on ImageNet-1K, VISReg achieves state-of-the-art performance on out-of-distribution datasets. Pre-trained on ImageNet-22K, it matches DINOv2's OOD performance despite the latter using 10x more data (LVD-142M). Project and code: https://haiyuwu.github.io/visreg.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2407.01879v3",
+      "title": "Disintegrated optimal transport for metric fiber bundles",
+      "date": "2024-07-02T01:39:09Z",
+      "updated": "2026-02-14T07:01:11Z",
+      "authors": [
+        "Jun Kitagawa",
+        "Asuka Takatsu"
+      ],
+      "abstract": "We define a new two-parameter family of metrics on subsets of Borel probability measures on general metric fiber bundles, called the $ \\textit{disintegrated Monge--Kantorovich metrics}$. This family contains the classical Monge-Kantorovich metrics, linearized optimal transport distance, and fibered Wasserstein distances, and certain cases admit isometric embeddings of the sliced and max-sliced Wasserstein spaces. We prove these metrics are complete, separable (except an endpoint case), and geodesic, with a dual representation. Our results cannot be obtained by applying the theory of $L^q$ maps valued in spaces of probability measures, in fact the $L^q$ map case can be recovered from our results by taking the underlying bundle as a trivial product bundle, and the geodesicness and duality results are new even in the fibered Wasserstein case.",
+      "doi": null
+    },
+    {
+      "id": "http://arxiv.org/abs/2403.12636v2",
+      "title": "A Practical Guide to Sample-based Statistical Distances for Evaluating Generative Models in Science",
+      "date": "2024-03-19T11:16:14Z",
+      "updated": "2024-10-10T09:51:27Z",
+      "authors": [
+        "Sebastian Bischoff",
+        "Alana Darcher",
+        "Michael Deistler",
+        "Richard Gao",
+        "Franziska Gerken",
+        "Manuel Gloeckler",
+        "Lisa Haxel",
+        "Jaivardhan Kapoor",
+        "Janne K Lappalainen",
+        "Jakob H Macke",
+        "Guy Moss",
+        "Matthijs Pals",
+        "Felix Pei",
+        "Rachel Rapp",
+        "A Erdem Sağtekin",
+        "Cornelius Schröder",
+        "Auguste Schulz",
+        "Zinovia Stefanidi",
+        "Shoji Toyota",
+        "Linda Ulmer",
+        "Julius Vetter"
+      ],
+      "abstract": "Generative models are invaluable in many fields of science because of their ability to capture high-dimensional and complicated distributions, such as photo-realistic images, protein structures, and connectomes. How do we evaluate the samples these models generate? This work aims to provide an accessible entry point to understanding popular sample-based statistical distances, requiring only foundational knowledge in mathematics and statistics. We focus on four commonly used notions of statistical distances representing different methodologies: Using low-dimensional projections (Sliced-Wasserstein; SW), obtaining a distance using classifiers (Classifier Two-Sample Tests; C2ST), using embeddings through kernels (Maximum Mean Discrepancy; MMD), or neural networks (Fréchet Inception Distance; FID). We highlight the intuition behind each distance and explain their merits, scalability, complexity, and pitfalls. To demonstrate how these distances are used in practice, we evaluate generative models from different scientific domains, namely a model of decision-making and a model generating medical images. We showcase that distinct distances can give different results on similar data. Through this guide, we aim to help researchers to use, interpret, and evaluate statistical distances for generative models in science.",
+      "doi": null
+    }
+  ]
+}

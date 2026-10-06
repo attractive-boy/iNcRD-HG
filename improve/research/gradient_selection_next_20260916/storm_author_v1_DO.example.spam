@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Parameters ------------------------------------------------------
+
+# --- SMS dataset
+#TASK="sms"
+#DATA_DIR="data/sms"
+# --- Youtube dataset
+TASK="youtube"
+DATA_DIR="data/youtube"
+
+# Project paths etc. ----------------------------------------------
+
+FEATS_DIR="${DATA_DIR}/tfidf_feats"
+OUT_DIR=results
+mkdir -p ${OUT_DIR}
+
+# Main ------------------------------------------------------------
+
+python3 storm.py \
+	--task_name=${TASK} \
+	--train_file=${DATA_DIR}/train_corrupt_30.tsv \
+	--validation_file=${DATA_DIR}/valid.tsv \
+	--test_file=${DATA_DIR}/test.tsv \
+	--model_type="roberta" \
+	--model_name_or_path="roberta-base" \
+	--train_batch_size=32 \
+	--eval_batch_size=32 \
+	--learning_rate=5e-2 \
+	--warmup_proportion=0.05 \
+	--num_train_epochs=10 \
+	--output_dir=${OUT_DIR} \
+	--local_files_only \
+	--use_tfidf \
+	--tfidf_path=${FEATS_DIR} \
+	--evaluate_rescaling \
+	--save_checkpoints \
+	--save_stats \
+	2>&1 | tee ${OUT_DIR}/train.log

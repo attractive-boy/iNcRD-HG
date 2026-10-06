@@ -1,0 +1,691 @@
+[
+  {
+    "name": "arxiv_dpp_learning_v2",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3Adeterminantal+AND+%28all%3A%22neural+network%22+OR+all%3Aattention%29+AND+%28cat%3Acs.LG+OR+cat%3Acs.AI+OR+cat%3Acs.CV+OR+cat%3Astat.ML%29&start=0&max_results=30&sortBy=relevance&sortOrder=descending",
+    "accessed_at_utc": "2026-09-16T05:13:13.039123+00:00",
+    "http_status": 200,
+    "status": "downloaded",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/diversity_next_20260916/arxiv_dpp_learning_v2.xml",
+    "sha256": "a6dc48ab5f369058de9212089e6a086dd3da65781dce06175a9f90863635ae1f",
+    "results": [
+      {
+        "title": "DNS: Determinantal Point Process Based Neural Network Sampler for Ensemble Reinforcement Learning",
+        "id": "http://arxiv.org/abs/2201.13357v3",
+        "published": "2022-01-31T17:08:39Z",
+        "summary": "Application of ensemble of neural networks is becoming an imminent tool for advancing the state-of-the-art in deep reinforcement learning algorithms. However, training these large numbers of neural networks in the ensemble has an exceedingly high computation cost which may become a hindrance in training large-scale systems. In this paper, we propose DNS: a Determinantal Point Process based Neural Network Sampler that specifically uses k-dpp to sample a subset of neural networks for backpropagation at every training step thus significantly reducing the training time and computation cost. We integrated DNS in REDQ for continuous control tasks and evaluated on MuJoCo environments. Our experiments show that DNS augmented REDQ outperforms baseline REDQ in terms of average cumulative reward and achieves this using less than 50% computation when measured in FLOPS."
+      },
+      {
+        "title": "Diversity Networks: Neural Network Compression Using Determinantal Point Processes",
+        "id": "http://arxiv.org/abs/1511.05077v6",
+        "published": "2015-11-16T18:28:10Z",
+        "summary": "We introduce Divnet, a flexible technique for learning networks with diverse neurons. Divnet models neuronal diversity by placing a Determinantal Point Process (DPP) over neurons in a given layer. It uses this DPP to select a subset of diverse neurons and subsequently fuses the redundant neurons into the selected ones. Compared with previous approaches, Divnet offers a more principled, flexible technique for capturing neuronal diversity and thus implicitly enforcing regularization. This enables effective auto-tuning of network architecture and leads to smaller network sizes without hurting performance. Moreover, through its focus on diversity and neuron fusing, Divnet remains compatible with other procedures that seek to reduce memory footprints of networks. We present experimental results to corroborate our claims: for pruning neural networks, Divnet is seen to be notably superior to competing approaches."
+      },
+      {
+        "title": "Towards Diverse and Accurate Image Captions via Reinforcing Determinantal Point Process",
+        "id": "http://arxiv.org/abs/1908.04919v1",
+        "published": "2019-08-14T01:51:49Z",
+        "summary": "Although significant progress has been made in the field of automatic image captioning, it is still a challenging task. Previous works normally pay much attention to improving the quality of the generated captions but ignore the diversity of captions. In this paper, we combine determinantal point process (DPP) and reinforcement learning (RL) and propose a novel reinforcing DPP (R-DPP) approach to generate a set of captions with high quality and diversity for an image. We show that R-DPP performs better on accuracy and diversity than using noise as a control signal (GANs, VAEs). Moreover, R-DPP is able to preserve the modes of the learned distribution. Hence, beam search algorithm can be applied to generate a single accurate caption, which performs better than other RL-based models."
+      },
+      {
+        "title": "Determinantal Point Process Attention Over Grid Cell Code Supports Out of Distribution Generalization",
+        "id": "http://arxiv.org/abs/2305.18417v3",
+        "published": "2023-05-28T19:07:55Z",
+        "summary": "Deep neural networks have made tremendous gains in emulating human-like intelligence, and have been used increasingly as ways of understanding how the brain may solve the complex computational problems on which this relies. However, these still fall short of, and therefore fail to provide insight into how the brain supports strong forms of generalization of which humans are capable. One such case is out-of-distribution (OOD) generalization-successful performance on test examples that lie outside the distribution of the training set. Here, we identify properties of processing in the brain that may contribute to this ability. We describe a two-part algorithm that draws on specific features of neural computation to achieve OOD generalization, and provide a proof of concept by evaluating performance on two challenging cognitive tasks. First we draw on the fact that the mammalian brain represents metric spaces using grid cell code (e.g., in the entorhinal cortex): abstract representations of relational structure, organized in recurring motifs that cover the representational space. Second, we propose an attentional mechanism that operates over the grid cell code using Determinantal Point Process (DPP), that we call DPP attention (DPP-A) -- a transformation that ensures maximum sparseness in the coverage of that space. We show that a loss function that combines standard task-optimized error with DPP-A can exploit the recurring motifs in the grid cell code, and can be integrated with common architectures to achieve strong OOD generalization performance on analogy and arithmetic tasks. This provides both an interpretation of how the grid cell code in the mammalian brain may contribute to generalization performance, and at the same time a potential means for improving such capabilities in artificial neural networks."
+      },
+      {
+        "title": "Deep Determinantal Point Processes",
+        "id": "http://arxiv.org/abs/1811.07245v3",
+        "published": "2018-11-17T23:22:51Z",
+        "summary": "Determinantal point processes (DPPs) have attracted significant attention as an elegant model that is able to capture the balance between quality and diversity within sets. DPPs are parameterized by a positive semi-definite kernel matrix. While DPPs have substantial expressive power, they are fundamentally limited by the parameterization of the kernel matrix and their inability to capture nonlinear interactions between items within sets. We present the deep DPP model as way to address these limitations, by using a deep feed-forward neural network to learn the kernel matrix. In addition to allowing us to capture nonlinear item interactions, the deep DPP also allows easy incorporation of item metadata into DPP learning. Since the learning target is the DPP kernel matrix, the deep DPP allows us to use existing DPP algorithms for efficient learning, sampling, and prediction. Through an evaluation on several real-world datasets, we show experimentally that the deep DPP can provide a considerable improvement in the predictive performance of DPPs, while also outperforming strong baseline models in many cases."
+      },
+      {
+        "title": "Wasserstein Learning of Determinantal Point Processes",
+        "id": "http://arxiv.org/abs/2011.09712v1",
+        "published": "2020-11-19T08:30:57Z",
+        "summary": "Determinantal point processes (DPPs) have received significant attention as an elegant probabilistic model for discrete subset selection. Most prior work on DPP learning focuses on maximum likelihood estimation (MLE). While efficient and scalable, MLE approaches do not leverage any subset similarity information and may fail to recover the true generative distribution of discrete data. In this work, by deriving a differentiable relaxation of a DPP sampling algorithm, we present a novel approach for learning DPPs that minimizes the Wasserstein distance between the model and data composed of observed subsets. Through an evaluation on a real-world dataset, we show that our Wasserstein learning approach provides significantly improved predictive performance on a generative task compared to DPPs trained using MLE."
+      },
+      {
+        "title": "Statistical Mechanical Analysis of Neural Network Pruning",
+        "id": "http://arxiv.org/abs/2006.16617v3",
+        "published": "2020-06-30T09:15:25Z",
+        "summary": "Deep learning architectures with a huge number of parameters are often compressed using pruning techniques to ensure computational efficiency of inference during deployment. Despite multitude of empirical advances, there is a lack of theoretical understanding of the effectiveness of different pruning methods. We inspect different pruning techniques under the statistical mechanics formulation of a teacher-student framework and derive their generalization error (GE) bounds. It has been shown that Determinantal Point Process (DPP) based node pruning method is notably superior to competing approaches when tested on real datasets. Using GE bounds in the aforementioned setup we provide theoretical guarantees for their empirical observations. Another consistent finding in literature is that sparse neural networks (edge pruned) generalize better than dense neural networks (node pruned) for a fixed number of parameters. We use our theoretical setup to prove this finding and show that even the baseline random edge pruning method performs better than the DPP node pruning method. We also validate this empirically on real datasets."
+      },
+      {
+        "title": "Multi-Task Determinantal Point Processes for Recommendation",
+        "id": "http://arxiv.org/abs/1805.09916v2",
+        "published": "2018-05-24T21:59:31Z",
+        "summary": "Determinantal point processes (DPPs) have received significant attention in the recent years as an elegant model for a variety of machine learning tasks, due to their ability to elegantly model set diversity and item quality or popularity. Recent work has shown that DPPs can be effective models for product recommendation and basket completion tasks. We present an enhanced DPP model that is specialized for the task of basket completion, the multi-task DPP. We view the basket completion problem as a multi-class classification problem, and leverage ideas from tensor factorization and multi-class classification to design the multi-task DPP model. We evaluate our model on several real-world datasets, and find that the multi-task DPP provides significantly better predictive quality than a number of state-of-the-art models."
+      },
+      {
+        "title": "Learning Nonsymmetric Determinantal Point Processes",
+        "id": "http://arxiv.org/abs/1905.12962v3",
+        "published": "2019-05-30T11:09:16Z",
+        "summary": "Determinantal point processes (DPPs) have attracted substantial attention as an elegant probabilistic model that captures the balance between quality and diversity within sets. DPPs are conventionally parameterized by a positive semi-definite kernel matrix, and this symmetric kernel encodes only repulsive interactions between items. These so-called symmetric DPPs have significant expressive power, and have been successfully applied to a variety of machine learning tasks, including recommendation systems, information retrieval, and automatic summarization, among many others. Efficient algorithms for learning symmetric DPPs and sampling from these models have been reasonably well studied. However, relatively little attention has been given to nonsymmetric DPPs, which relax the symmetric constraint on the kernel. Nonsymmetric DPPs allow for both repulsive and attractive item interactions, which can significantly improve modeling power, resulting in a model that may better fit for some applications. We present a method that enables a tractable algorithm, based on maximum likelihood estimation, for learning nonsymmetric DPPs from data composed of observed subsets. Our method imposes a particular decomposition of the nonsymmetric kernel that enables such tractable learning algorithms, which we analyze both theoretically and experimentally. We evaluate our model on synthetic and real-world datasets, demonstrating improved predictive performance compared to symmetric DPPs, which have previously shown strong performance on modeling tasks associated with these datasets."
+      },
+      {
+        "title": "Geometry of Linear Neural Networks: Equivariance and Invariance under Permutation Groups",
+        "id": "http://arxiv.org/abs/2309.13736v3",
+        "published": "2023-09-24T19:40:15Z",
+        "summary": "The set of functions parameterized by a linear fully-connected neural network is a determinantal variety. We investigate the subvariety of functions that are equivariant or invariant under the action of a permutation group. Examples of such group actions are translations or $90^\\circ$ rotations on images. We describe such equivariant or invariant subvarieties as direct products of determinantal varieties, from which we deduce their dimension, degree, Euclidean distance degree, and their singularities. We fully characterize invariance for arbitrary permutation groups, and equivariance for cyclic groups. We draw conclusions for the parameterization and the design of equivariant and invariant linear networks in terms of sparsity and weight-sharing properties. We prove that all invariant linear functions can be parameterized by a single linear autoencoder with a weight-sharing property imposed by the cycle decomposition of the considered permutation. The space of rank-bounded equivariant functions has several irreducible components, so it can not be parameterized by a single network-but each irreducible component can. Finally, we show that minimizing the squared-error loss on our invariant or equivariant networks reduces to minimizing the Euclidean distance from determinantal varieties via the Eckart-Young theorem."
+      },
+      {
+        "title": "DPPNet: Approximating Determinantal Point Processes with Deep Networks",
+        "id": "http://arxiv.org/abs/1901.02051v1",
+        "published": "2019-01-07T20:42:13Z",
+        "summary": "Determinantal Point Processes (DPPs) provide an elegant and versatile way to sample sets of items that balance the point-wise quality with the set-wise diversity of selected items. For this reason, they have gained prominence in many machine learning applications that rely on subset selection. However, sampling from a DPP over a ground set of size $N$ is a costly operation, requiring in general an $O(N^3)$ preprocessing cost and an $O(Nk^3)$ sampling cost for subsets of size $k$. We approach this problem by introducing DPPNets: generative deep models that produce DPP-like samples for arbitrary ground sets. We develop an inhibitive attention mechanism based on transformer networks that captures a notion of dissimilarity between feature vectors. We show theoretically that such an approximation is sensible as it maintains the guarantees of inhibition or dissimilarity that makes DPPs so powerful and unique. Empirically, we demonstrate that samples from our model receive high likelihood under the more expensive DPP alternative."
+      },
+      {
+        "title": "Scalable Learning and MAP Inference for Nonsymmetric Determinantal Point Processes",
+        "id": "http://arxiv.org/abs/2006.09862v2",
+        "published": "2020-06-17T13:42:09Z",
+        "summary": "Determinantal point processes (DPPs) have attracted significant attention in machine learning for their ability to model subsets drawn from a large item collection. Recent work shows that nonsymmetric DPP (NDPP) kernels have significant advantages over symmetric kernels in terms of modeling power and predictive performance. However, for an item collection of size $M$, existing NDPP learning and inference algorithms require memory quadratic in $M$ and runtime cubic (for learning) or quadratic (for inference) in $M$, making them impractical for many typical subset selection tasks. In this work, we develop a learning algorithm with space and time requirements linear in $M$ by introducing a new NDPP kernel decomposition. We also derive a linear-complexity NDPP maximum a posteriori (MAP) inference algorithm that applies not only to our new kernel but also to that of prior work. Through evaluation on real-world datasets, we show that our algorithms scale significantly better, and can match the predictive performance of prior work."
+      },
+      {
+        "title": "Low-Rank Factorization of Determinantal Point Processes for Recommendation",
+        "id": "http://arxiv.org/abs/1602.05436v1",
+        "published": "2016-02-17T14:40:52Z",
+        "summary": "Determinantal point processes (DPPs) have garnered attention as an elegant probabilistic model of set diversity. They are useful for a number of subset selection tasks, including product recommendation. DPPs are parametrized by a positive semi-definite kernel matrix. In this work we present a new method for learning the DPP kernel from observed data using a low-rank factorization of this kernel. We show that this low-rank factorization enables a learning algorithm that is nearly an order of magnitude faster than previous approaches, while also providing for a method for computing product recommendation predictions that is far faster (up to 20x faster or more for large item catalogs) than previous techniques that involve a full-rank DPP kernel. Furthermore, we show that our method provides equivalent or sometimes better predictive performance than prior full-rank DPP approaches, and better performance than several other competing recommendation methods in many cases. We conduct an extensive experimental evaluation using several real-world datasets in the domain of product recommendation to demonstrate the utility of our method, along with its limitations."
+      },
+      {
+        "title": "Determinantal Point Process Likelihoods for Sequential Recommendation",
+        "id": "http://arxiv.org/abs/2204.11562v1",
+        "published": "2022-04-25T11:20:10Z",
+        "summary": "Sequential recommendation is a popular task in academic research and close to real-world application scenarios, where the goal is to predict the next action(s) of the user based on his/her previous sequence of actions. In the training process of recommender systems, the loss function plays an essential role in guiding the optimization of recommendation models to generate accurate suggestions for users. However, most existing sequential recommendation techniques focus on designing algorithms or neural network architectures, and few efforts have been made to tailor loss functions that fit naturally into the practical application scenario of sequential recommender systems. Ranking-based losses, such as cross-entropy and Bayesian Personalized Ranking (BPR) are widely used in the sequential recommendation area. We argue that such objective functions suffer from two inherent drawbacks: i) the dependencies among elements of a sequence are overlooked in these loss formulations; ii) instead of balancing accuracy (quality) and diversity, only generating accurate results has been over emphasized. We therefore propose two new loss functions based on the Determinantal Point Process (DPP) likelihood, that can be adaptively applied to estimate the subsequent item or items. The DPP-distributed item set captures natural dependencies among temporal actions, and a quality vs. diversity decomposition of the DPP kernel pushes us to go beyond accuracy-oriented loss functions. Experimental results using the proposed loss functions on three real-world datasets show marked improvements over state-of-the-art sequential recommendation methods in both quality and diversity metrics."
+      },
+      {
+        "title": "A Bayesian Mixture Model of Temporal Point Processes with Determinantal Point Process Prior",
+        "id": "http://arxiv.org/abs/2411.04397v1",
+        "published": "2024-11-07T03:21:30Z",
+        "summary": "Asynchronous event sequence clustering aims to group similar event sequences in an unsupervised manner. Mixture models of temporal point processes have been proposed to solve this problem, but they often suffer from overfitting, leading to excessive cluster generation with a lack of diversity. To overcome these limitations, we propose a Bayesian mixture model of Temporal Point Processes with Determinantal Point Process prior (TP$^2$DP$^2$) and accordingly an efficient posterior inference algorithm based on conditional Gibbs sampling. Our work provides a flexible learning framework for event sequence clustering, enabling automatic identification of the potential number of clusters and accurate grouping of sequences with similar features. It is applicable to a wide range of parametric temporal point processes, including neural network-based models. Experimental results on both synthetic and real-world data suggest that our framework could produce moderately fewer yet more diverse mixture components, and achieve outstanding results across multiple evaluation metrics."
+      },
+      {
+        "title": "Layer-diverse Negative Sampling for Graph Neural Networks",
+        "id": "http://arxiv.org/abs/2403.11408v1",
+        "published": "2024-03-18T01:48:50Z",
+        "summary": "Graph neural networks (GNNs) are a powerful solution for various structure learning applications due to their strong representation capabilities for graph data. However, traditional GNNs, relying on message-passing mechanisms that gather information exclusively from first-order neighbours (known as positive samples), can lead to issues such as over-smoothing and over-squashing. To mitigate these issues, we propose a layer-diverse negative sampling method for message-passing propagation. This method employs a sampling matrix within a determinantal point process, which transforms the candidate set into a space and selectively samples from this space to generate negative samples. To further enhance the diversity of the negative samples during each forward pass, we develop a space-squeezing method to achieve layer-wise diversity in multi-layer GNNs. Experiments on various real-world graph datasets demonstrate the effectiveness of our approach in improving the diversity of negative samples and overall learning performance. Moreover, adding negative samples dynamically changes the graph's topology, thus with the strong potential to improve the expressiveness of GNNs and reduce the risk of over-squashing."
+      },
+      {
+        "title": "Algebraic Invariants of Lightning Self-Attention",
+        "id": "http://arxiv.org/abs/2604.15632v2",
+        "published": "2026-04-17T02:16:49Z",
+        "summary": "We study the polynomial coefficients of lightning self-attention as coordinates of an algebraic variety. In the single-token case, we characterize the coefficient variety as a rank-constrained Chow-type variety and derive algebraic equations from this description. For multiple tokens, linear relations reduce the nonlinear geometry to coefficients involving interactions between distinct tokens. We characterize the resulting variety by a common linear factor together with a low-rank condition on the remaining factors. This structure yields explicit families of determinantal, Veronese-type, and Sylvester resultant-based invariants. In the rank-one case, natural pencil and flattening equations define the variety set-theoretically. We complement these results with computations in small dimensions, where the theoretical constructions recover the generators of the defining ideals. Overall, the paper gives a structural description of the algebraic constraints imposed on polynomial coefficient arrays by lightning self-attention and provides explicit certificates of non-realizability."
+      },
+      {
+        "title": "Learning from the Dark: Boosting Graph Convolutional Neural Networks with Diverse Negative Samples",
+        "id": "http://arxiv.org/abs/2210.00728v1",
+        "published": "2022-10-03T06:14:21Z",
+        "summary": "Graph Convolutional Neural Networks (GCNs) has been generally accepted to be an effective tool for node representations learning. An interesting way to understand GCNs is to think of them as a message passing mechanism where each node updates its representation by accepting information from its neighbours (also known as positive samples). However, beyond these neighbouring nodes, graphs have a large, dark, all-but forgotten world in which we find the non-neighbouring nodes (negative samples). In this paper, we show that this great dark world holds a substantial amount of information that might be useful for representation learning. Most specifically, it can provide negative information about the node representations. Our overall idea is to select appropriate negative samples for each node and incorporate the negative information contained in these samples into the representation updates. Moreover, we show that the process of selecting the negative samples is not trivial. Our theme therefore begins by describing the criteria for a good negative sample, followed by a determinantal point process algorithm for efficiently obtaining such samples. A GCN, boosted by diverse negative samples, then jointly considers the positive and negative information when passing messages. Experimental evaluations show that this idea not only improves the overall performance of standard representation learning but also significantly alleviates over-smoothing problems."
+      },
+      {
+        "title": "Beyond Attention or Similarity: Maximizing Conditional Diversity for Token Pruning in MLLMs",
+        "id": "http://arxiv.org/abs/2506.10967v2",
+        "published": "2025-06-12T17:59:09Z",
+        "summary": "In multimodal large language models (MLLMs), the length of input visual tokens is often significantly greater than that of their textual counterparts, leading to a high inference cost. Many works aim to address this issue by removing redundant visual tokens. However, current approaches either rely on attention-based pruning, which retains numerous duplicate tokens, or use similarity-based pruning, overlooking the instruction relevance, consequently causing suboptimal performance. In this paper, we go beyond attention or similarity by proposing a novel visual token pruning method named CDPruner, which maximizes the conditional diversity of retained tokens. We first define the conditional similarity between visual tokens conditioned on the instruction, and then reformulate the token pruning problem with determinantal point process (DPP) to maximize the conditional diversity of the selected subset. The proposed CDPruner is training-free and model-agnostic, allowing easy application to various MLLMs. Extensive experiments across diverse MLLMs show that CDPruner establishes new state-of-the-art on various vision-language benchmarks. By maximizing conditional diversity through DPP, the selected subset better represents the input images while closely adhering to user instructions, thereby preserving strong performance even with high reduction ratios. When applied to LLaVA, CDPruner reduces FLOPs by 95\\% and CUDA latency by 78\\%, while maintaining 94\\% of the original accuracy. Our code is available at https://github.com/Theia-4869/CDPruner."
+      },
+      {
+        "title": "Towards Visually Grounded Multimodal Summarization via Cross-Modal Transformer and Gated Attention",
+        "id": "http://arxiv.org/abs/2605.11753v1",
+        "published": "2026-05-12T08:28:47Z",
+        "summary": "Multimodal summarization requires models to jointly understand textual and visual inputs to generate concise, semantically coherent summaries. Existing methods often inject shallow visual features into deep language models, leading to representational mismatches and weak cross-modal grounding. We propose a unified framework that jointly performs text summarization and representative image selection. Our system, SPeCTrA-Sum (Sampler Perceiver with Cross-modal Transformer and gated Attention for Summarization), introduces two key innovations. First, a Deep Visual Processor (DVP) aligns the visual encoder with the language model at corresponding depths, enabling hierarchical, layer-wise fusion that preserves semantic consistency. Second, a lightweight Visual Relevance Predictor (VRP) selects salient and diverse images by distilling soft labels from a Determinantal Point Processes (DPP) teacher. SPeCTrA-Sum is trained using a multi-objective loss that combines autoregressive summarization, cross-modal alignment, and DPP-based distillation. Experiments show that our system produces more accurate, visually grounded summaries and selects more representative images, demonstrating the benefits of depth-aware fusion and principled image selection for multimodal summarization."
+      },
+      {
+        "title": "Pure and Spurious Critical Points: a Geometric Study of Linear Networks",
+        "id": "http://arxiv.org/abs/1910.01671v2",
+        "published": "2019-10-03T18:22:30Z",
+        "summary": "The critical locus of the loss function of a neural network is determined by the geometry of the functional space and by the parameterization of this space by the network's weights. We introduce a natural distinction between pure critical points, which only depend on the functional space, and spurious critical points, which arise from the parameterization. We apply this perspective to revisit and extend the literature on the loss function of linear neural networks. For this type of network, the functional space is either the set of all linear maps from input to output space, or a determinantal variety, i.e., a set of linear maps with bounded rank. We use geometric properties of determinantal varieties to derive new results on the landscape of linear networks with different loss functions and different parameterizations. Our analysis clearly illustrates that the absence of \"bad\" local minima in the loss landscape of linear networks is due to two distinct phenomena that apply in different settings: it is true for arbitrary smooth convex losses in the case of architectures that can express all linear maps (\"filling architectures\") but it holds only for the quadratic loss when the functional space is a determinantal variety (\"non-filling architectures\"). Without any assumption on the architecture, smooth convex losses may lead to landscapes with many bad minima."
+      },
+      {
+        "title": "Improved Financial Forecasting via Quantum Machine Learning",
+        "id": "http://arxiv.org/abs/2306.12965v2",
+        "published": "2023-05-31T14:57:05Z",
+        "summary": "Quantum algorithms have the potential to enhance machine learning across a variety of domains and applications. In this work, we show how quantum machine learning can be used to improve financial forecasting. First, we use classical and quantum Determinantal Point Processes to enhance Random Forest models for churn prediction, improving precision by almost 6%. Second, we design quantum neural network architectures with orthogonal and compound layers for credit risk assessment, which match classical performance with significantly fewer parameters. Our results demonstrate that leveraging quantum ideas can effectively enhance the performance of machine learning, both today as quantum-inspired classical ML solutions, and even more in the future, with the advent of better quantum hardware."
+      },
+      {
+        "title": "Dead Directions: Geometric Singular Learning",
+        "id": "http://arxiv.org/abs/2606.05957v2",
+        "published": "2026-06-04T09:54:08Z",
+        "summary": "Singular learning theory and information geometry study the same spaces: the former in resolved coordinates, the latter in original coordinates under a non-degeneracy assumption that overparameterised models violate. This paper carries one direction of the bridge between them, from Watanabe's invariants to Fisher geometry, through one primitive, the dead direction: a unit vector along which the Fisher metric degenerates, equivalently a direction crossing the analytic singular set along which the KL divergence keeps a zero of high order, its KL order set by how fast that divergence vanishes. Our central result recovers the KL order as the decay rate of the directional Fisher quadratic form approaching the singularity, in original coordinates, without a Hironaka resolution. A selection rule on smooth fibres translates this rate into Watanabe's single-direction contribution to the real log canonical threshold, and the recovery extends to multi-component crossings, multiplicity $m$, the singular fluctuation $ν$, prior-RLCT shifts, and tempered posteriors. We then carry the rate into a deep network: a multi-layer K-FAC factorisation writes each Fisher block as a product of activation- and gradient-side rates with a duality between them, instantiated at residual streams, layer normalisation, and attention. A quotient theorem carries the rate to the gauge quotient for optimizers whose update commutes with the group action; Adam's per-coordinate preconditioner fails that condition, so we construct DDCAdam, an equivariant Adam-family preconditioner, and prove the quotient rate along its trajectory. The result is a trajectory-rate readout of Watanabe's triple $(λ, m, ν)$ from one checkpoint's forward and backward passes, without posterior sampling."
+      },
+      {
+        "title": "Rumor Detection with Diverse Counterfactual Evidence",
+        "id": "http://arxiv.org/abs/2307.09296v1",
+        "published": "2023-07-18T14:37:23Z",
+        "summary": "The growth in social media has exacerbated the threat of fake news to individuals and communities. This draws increasing attention to developing efficient and timely rumor detection methods. The prevailing approaches resort to graph neural networks (GNNs) to exploit the post-propagation patterns of the rumor-spreading process. However, these methods lack inherent interpretation of rumor detection due to the black-box nature of GNNs. Moreover, these methods suffer from less robust results as they employ all the propagation patterns for rumor detection. In this paper, we address the above issues with the proposed Diverse Counterfactual Evidence framework for Rumor Detection (DCE-RD). Our intuition is to exploit the diverse counterfactual evidence of an event graph to serve as multi-view interpretations, which are further aggregated for robust rumor detection results. Specifically, our method first designs a subgraph generation strategy to efficiently generate different subgraphs of the event graph. We constrain the removal of these subgraphs to cause the change in rumor detection results. Thus, these subgraphs naturally serve as counterfactual evidence for rumor detection. To achieve multi-view interpretation, we design a diversity loss inspired by Determinantal Point Processes (DPP) to encourage diversity among the counterfactual evidence. A GNN-based rumor detection model further aggregates the diverse counterfactual evidence discovered by the proposed DCE-RD to achieve interpretable and robust rumor detection results. Extensive experiments on two real-world datasets show the superior performance of our method. Our code is available at https://github.com/Vicinity111/DCE-RD."
+      },
+      {
+        "title": "Scalable Log Determinants for Gaussian Process Kernel Learning",
+        "id": "http://arxiv.org/abs/1711.03481v1",
+        "published": "2017-11-09T17:25:30Z",
+        "summary": "For applications as varied as Bayesian neural networks, determinantal point processes, elliptical graphical models, and kernel learning for Gaussian processes (GPs), one must compute a log determinant of an $n \\times n$ positive definite matrix, and its derivatives - leading to prohibitive $\\mathcal{O}(n^3)$ computations. We propose novel $\\mathcal{O}(n)$ approaches to estimating these quantities from only fast matrix vector multiplications (MVMs). These stochastic approximations are based on Chebyshev, Lanczos, and surrogate models, and converge quickly even for kernel matrices that have challenging spectra. We leverage these approximations to develop a scalable Gaussian process approach to kernel learning. We find that Lanczos is generally superior to Chebyshev for kernel learning, and that a surrogate approach can be highly efficient and accurate with popular kernels."
+      },
+      {
+        "title": "Dropout Strikes Back: Improved Uncertainty Estimation via Diversity Sampling",
+        "id": "http://arxiv.org/abs/2003.03274v3",
+        "published": "2020-03-06T15:20:04Z",
+        "summary": "Uncertainty estimation for machine learning models is of high importance in many scenarios such as constructing the confidence intervals for model predictions and detection of out-of-distribution or adversarially generated points. In this work, we show that modifying the sampling distributions for dropout layers in neural networks improves the quality of uncertainty estimation. Our main idea consists of two main steps: computing data-driven correlations between neurons and generating samples, which include maximally diverse neurons. In a series of experiments on simulated and real-world data, we demonstrate that the diversification via determinantal point processes-based sampling achieves state-of-the-art results in uncertainty estimation for regression and classification tasks. An important feature of our approach is that it does not require any modification to the models or training procedures, allowing straightforward application to any deep learning model with dropout layers."
+      },
+      {
+        "title": "Batch Bayesian Optimization on Permutations using the Acquisition Weighted Kernel",
+        "id": "http://arxiv.org/abs/2102.13382v2",
+        "published": "2021-02-26T10:15:57Z",
+        "summary": "In this work we propose a batch Bayesian optimization method for combinatorial problems on permutations, which is well suited for expensive-to-evaluate objectives. We first introduce LAW, an efficient batch acquisition method based on determinantal point processes using the acquisition weighted kernel. Relying on multiple parallel evaluations, LAW enables accelerated search on combinatorial spaces. We then apply the framework to permutation problems, which have so far received little attention in the Bayesian Optimization literature, despite their practical importance. We call this method LAW2ORDER. On the theoretical front, we prove that LAW2ORDER has vanishing simple regret by showing that the batch cumulative regret is sublinear. Empirically, we assess the method on several standard combinatorial problems involving permutations such as quadratic assignment, flowshop scheduling and the traveling salesman, as well as on a structure learning task."
+      },
+      {
+        "title": "Focus Matters: Phase-Aware Suppression for Hallucination in Vision-Language Models",
+        "id": "http://arxiv.org/abs/2604.03556v1",
+        "published": "2026-04-04T02:46:58Z",
+        "summary": "Large Vision-Language Models (LVLMs) have achieved impressive progress in multimodal reasoning, yet they remain prone to object hallucinations, generating descriptions of objects that are not present in the input image. Recent approaches attempt to mitigate hallucinations by suppressing unreliable visual signals in the vision encoder, but many rely on iterative optimization for each input, resulting in substantial inference latency. In this work, we investigate the internal attention dynamics of vision encoders in LVLMs and identify a consistent three-phase structure of visual information processing: diffusion, focus, and rediffusion. Our analysis reveals that hallucination behavior is particularly sensitive to tokens receiving low attention during the focus phase. Motivated by this observation, we propose a lightweight inference-time intervention that selectively suppresses such tokens during the focus phase. The method operates in a training-free manner using statistics from a single forward pass and employs a Determinantal Point Process (DPP) to preserve diverse visual cues while filtering redundant tokens. Extensive experiments across multiple LVLM backbones and decoding strategies demonstrate that the proposed approach consistently reduces hallucination metrics while maintaining competitive caption quality. Moreover, compared to adversarial uncertainty estimation methods, our approach achieves comparable hallucination mitigation with negligible additional inference latency."
+      },
+      {
+        "title": "Mixture of personality improved Spiking actor network for efficient multi-agent cooperation",
+        "id": "http://arxiv.org/abs/2305.05898v1",
+        "published": "2023-05-10T05:01:59Z",
+        "summary": "Adaptive human-agent and agent-agent cooperation are becoming more and more critical in the research area of multi-agent reinforcement learning (MARL), where remarked progress has been made with the help of deep neural networks. However, many established algorithms can only perform well during the learning paradigm but exhibit poor generalization during cooperation with other unseen partners. The personality theory in cognitive psychology describes that humans can well handle the above cooperation challenge by predicting others' personalities first and then their complex actions. Inspired by this two-step psychology theory, we propose a biologically plausible mixture of personality (MoP) improved spiking actor network (SAN), whereby a determinantal point process is used to simulate the complex formation and integration of different types of personality in MoP, and dynamic and spiking neurons are incorporated into the SAN for the efficient reinforcement learning. The benchmark Overcooked task, containing a strong requirement for cooperative cooking, is selected to test the proposed MoP-SAN. The experimental results show that the MoP-SAN can achieve both high performances during not only the learning paradigm but also the generalization test (i.e., cooperation with other unseen agents) paradigm where most counterpart deep actor networks failed. Necessary ablation experiments and visualization analyses were conducted to explain why MoP and SAN are effective in multi-agent reinforcement learning scenarios while DNN performs poorly in the generalization test."
+      },
+      {
+        "title": "Optimal Transport Kernels for Sequential and Parallel Neural Architecture Search",
+        "id": "http://arxiv.org/abs/2006.07593v3",
+        "published": "2020-06-13T08:44:41Z",
+        "summary": "Neural architecture search (NAS) automates the design of deep neural networks. One of the main challenges in searching complex and non-continuous architectures is to compare the similarity of networks that the conventional Euclidean metric may fail to capture. Optimal transport (OT) is resilient to such complex structure by considering the minimal cost for transporting a network into another. However, the OT is generally not negative definite which may limit its ability to build the positive-definite kernels required in many kernel-dependent frameworks. Building upon tree-Wasserstein (TW), which is a negative definite variant of OT, we develop a novel discrepancy for neural architectures, and demonstrate it within a Gaussian process surrogate model for the sequential NAS settings. Furthermore, we derive a novel parallel NAS, using quality k-determinantal point process on the GP posterior, to select diverse and high-performing architectures from a discrete set of candidates. Empirically, we demonstrate that our TW-based approaches outperform other baselines in both sequential and parallel NAS."
+      }
+    ]
+  },
+  {
+    "name": "openalex_determinantal_v2",
+    "url": "https://api.openalex.org/works?search=%22determinantal%22+%22graph%22&filter=from_publication_date%3A2024-01-01%2Cto_publication_date%3A2026-09-16&per_page=30",
+    "accessed_at_utc": "2026-09-16T05:13:13.041152+00:00",
+    "http_status": 200,
+    "status": "downloaded",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/diversity_next_20260916/openalex_determinantal_v2.json",
+    "sha256": "5fe231170c547864f7062c7be7165da9a247bd28ddd3da35ea64cad811820a4f",
+    "results": [
+      {
+        "title": "Safety, efficacy and determinants of response of allogeneic CD19-specific CAR-NK cells in CD19+ B cell tumors: a phase 1/2 trial",
+        "doi": "https://doi.org/10.1038/s41591-023-02785-8",
+        "year": 2024,
+        "id": "https://openalex.org/W4390975865",
+        "url": "https://doi.org/10.1038/s41591-023-02785-8"
+      },
+      {
+        "title": "Lattice Structure for Orientations of Graphs",
+        "doi": "https://doi.org/10.37236/9474",
+        "year": 2025,
+        "id": "https://openalex.org/W170254964",
+        "url": "https://doi.org/10.37236/9474"
+      },
+      {
+        "title": "Physicochemical graph neural network for learning protein–ligand interaction fingerprints from sequence data",
+        "doi": "https://doi.org/10.1038/s42256-024-00847-1",
+        "year": 2024,
+        "id": "https://openalex.org/W4399746375",
+        "url": "https://doi.org/10.1038/s42256-024-00847-1"
+      },
+      {
+        "title": "Determinants that enable disordered protein assembly into discrete condensed phases",
+        "doi": "https://doi.org/10.1038/s41557-023-01423-7",
+        "year": 2024,
+        "id": "https://openalex.org/W4391533283",
+        "url": "https://doi.org/10.1038/s41557-023-01423-7"
+      },
+      {
+        "title": "Genetic determinants of micronucleus formation in vivo",
+        "doi": "https://doi.org/10.1038/s41586-023-07009-0",
+        "year": 2024,
+        "id": "https://openalex.org/W4391809141",
+        "url": "https://doi.org/10.1038/s41586-023-07009-0"
+      },
+      {
+        "title": "The Promise of Inferring the Past Using the Ancestral Recombination Graph",
+        "doi": "https://doi.org/10.1093/gbe/evae005",
+        "year": 2024,
+        "id": "https://openalex.org/W4391042040",
+        "url": "https://doi.org/10.1093/gbe/evae005"
+      },
+      {
+        "title": "Spectral bandits for smooth graph functions",
+        "doi": "https://doi.org/10.48550/arxiv.2604.18420",
+        "year": 2026,
+        "id": "https://openalex.org/W2165856466",
+        "url": "https://arxiv.org/abs/2604.18420"
+      },
+      {
+        "title": "Principal Landau determinants",
+        "doi": "https://doi.org/10.1016/j.cpc.2024.109278",
+        "year": 2024,
+        "id": "https://openalex.org/W4399563727",
+        "url": "https://doi.org/10.1016/j.cpc.2024.109278"
+      },
+      {
+        "title": "Explainable train delay propagation: A graph attention network approach",
+        "doi": "https://doi.org/10.1016/j.tre.2024.103457",
+        "year": 2024,
+        "id": "https://openalex.org/W4392337929",
+        "url": "https://doi.org/10.1016/j.tre.2024.103457"
+      },
+      {
+        "title": "Diet and habitat as determinants of intestine length in fishes",
+        "doi": "https://doi.org/10.1007/s11160-024-09853-3",
+        "year": 2024,
+        "id": "https://openalex.org/W4394760509",
+        "url": "https://doi.org/10.1007/s11160-024-09853-3"
+      },
+      {
+        "title": "A Systematic Review of Graph Neural Network in Healthcare-Based Applications: Recent Advances, Trends, and Future Directions",
+        "doi": "https://doi.org/10.1109/access.2024.3354809",
+        "year": 2024,
+        "id": "https://openalex.org/W4390933379",
+        "url": "https://doi.org/10.1109/access.2024.3354809"
+      },
+      {
+        "title": "Dietary fiber is a critical determinant of pathologic ILC2 responses and intestinal inflammation",
+        "doi": "https://doi.org/10.1084/jem.20232148",
+        "year": 2024,
+        "id": "https://openalex.org/W4392994117",
+        "url": "https://doi.org/10.1084/jem.20232148"
+      },
+      {
+        "title": "The molecular determinants of pesticide sensitivity in bee pollinators",
+        "doi": "https://doi.org/10.1016/j.scitotenv.2024.170174",
+        "year": 2024,
+        "id": "https://openalex.org/W4391018230",
+        "url": "https://doi.org/10.1016/j.scitotenv.2024.170174"
+      },
+      {
+        "title": "Evolution of structural properties of the global strategic emerging industries' trade network and its determinants: An TERGM analysis",
+        "doi": "https://doi.org/10.1016/j.indmarman.2024.02.008",
+        "year": 2024,
+        "id": "https://openalex.org/W4392119249",
+        "url": "https://doi.org/10.1016/j.indmarman.2024.02.008"
+      },
+      {
+        "title": "Graph-pMHC: graph neural network approach to MHC class II peptide presentation and antibody immunogenicity",
+        "doi": "https://doi.org/10.1093/bib/bbae123",
+        "year": 2024,
+        "id": "https://openalex.org/W4394739304",
+        "url": "https://doi.org/10.1093/bib/bbae123"
+      },
+      {
+        "title": "Identification of structural and regulatory cell-shape determinants in Haloferax volcanii",
+        "doi": "https://doi.org/10.1038/s41467-024-45196-0",
+        "year": 2024,
+        "id": "https://openalex.org/W4391839422",
+        "url": "https://doi.org/10.1038/s41467-024-45196-0"
+      },
+      {
+        "title": "The determinants of trade survival",
+        "doi": "https://doi.org/10.71609/iheid-7xjd-2w51",
+        "year": 2025,
+        "id": "https://openalex.org/W2103067593",
+        "url": "http://hdl.handle.net/10419/77382"
+      },
+      {
+        "title": "Determinants of ChatGPT Adoption Intention in Higher Education: Expanding on TAM with the Mediating Roles of Trust and Risk",
+        "doi": "https://doi.org/10.3390/info16020082",
+        "year": 2025,
+        "id": "https://openalex.org/W4406693463",
+        "url": "https://doi.org/10.3390/info16020082"
+      },
+      {
+        "title": "Screening tools to address social determinants of health in the United States: A systematic review",
+        "doi": "https://doi.org/10.1017/cts.2024.506",
+        "year": 2024,
+        "id": "https://openalex.org/W4393987941",
+        "url": "https://doi.org/10.1017/cts.2024.506"
+      },
+      {
+        "title": "A survey of geometric graph neural networks: data structures, models and applications",
+        "doi": "https://doi.org/10.1007/s11704-025-41426-w",
+        "year": 2025,
+        "id": "https://openalex.org/W4410827740",
+        "url": "https://doi.org/10.1007/s11704-025-41426-w"
+      },
+      {
+        "title": "Determinants of Generative AI System Adoption and Usage Behavior in Korean Companies: Applying the UTAUT Model",
+        "doi": "https://doi.org/10.3390/bs14111035",
+        "year": 2024,
+        "id": "https://openalex.org/W4404040240",
+        "url": "https://doi.org/10.3390/bs14111035"
+      },
+      {
+        "title": "Gastric cancer immunosuppressive microenvironment heterogeneity: implications for therapy development",
+        "doi": "https://doi.org/10.1016/j.trecan.2024.03.008",
+        "year": 2024,
+        "id": "https://openalex.org/W4394621705",
+        "url": "https://doi.org/10.1016/j.trecan.2024.03.008"
+      },
+      {
+        "title": "Norepinephrine-mediated slow vasomotion drives glymphatic clearance during sleep",
+        "doi": "https://doi.org/10.1016/j.cell.2024.11.027",
+        "year": 2025,
+        "id": "https://openalex.org/W4406155654",
+        "url": "https://doi.org/10.1016/j.cell.2024.11.027"
+      },
+      {
+        "title": "Environmental and Genetic Determinants of Ankylosing Spondylitis",
+        "doi": "https://doi.org/10.3390/ijms25147814",
+        "year": 2024,
+        "id": "https://openalex.org/W4400723397",
+        "url": "https://doi.org/10.3390/ijms25147814"
+      },
+      {
+        "title": "The determinant of the Laplacian matrix of a quaternion unit gain graph",
+        "doi": "https://doi.org/10.1016/j.disc.2024.113955",
+        "year": 2024,
+        "id": "https://openalex.org/W4392728600",
+        "url": "https://doi.org/10.1016/j.disc.2024.113955"
+      },
+      {
+        "title": "In generative artificial intelligence we trust: unpacking determinants and outcomes for cognitive trust",
+        "doi": "https://doi.org/10.1007/s00146-025-02378-8",
+        "year": 2025,
+        "id": "https://openalex.org/W4410119717",
+        "url": "https://doi.org/10.1007/s00146-025-02378-8"
+      },
+      {
+        "title": "Disinformation detection using graph neural networks: a survey",
+        "doi": "https://doi.org/10.1007/s10462-024-10702-9",
+        "year": 2024,
+        "id": "https://openalex.org/W4391816773",
+        "url": "https://doi.org/10.1007/s10462-024-10702-9"
+      },
+      {
+        "title": "Graph attention networks unveil determinants of intra- and inter-city health disparity",
+        "doi": "https://doi.org/10.1007/s44212-024-00049-5",
+        "year": 2024,
+        "id": "https://openalex.org/W4398210923",
+        "url": "https://doi.org/10.1007/s44212-024-00049-5"
+      },
+      {
+        "title": "Exploring the determinants of methane emissions from a worldwide perspective using panel data and machine learning analyses",
+        "doi": "https://doi.org/10.1016/j.envpol.2024.123807",
+        "year": 2024,
+        "id": "https://openalex.org/W4393078203",
+        "url": "https://doi.org/10.1016/j.envpol.2024.123807"
+      },
+      {
+        "title": "Determinants of carbon emission disclosure and the moderating role of environmental performance",
+        "doi": "https://doi.org/10.1080/23311975.2023.2300518",
+        "year": 2024,
+        "id": "https://openalex.org/W4392194672",
+        "url": "https://doi.org/10.1080/23311975.2023.2300518"
+      }
+    ]
+  },
+  {
+    "name": "crossref_dpp_attention_v2",
+    "url": "https://api.crossref.org/works?query.title=determinantal+attention&filter=from-pub-date%3A2023-01-01%2Cuntil-pub-date%3A2026-09-16&rows=15",
+    "accessed_at_utc": "2026-09-16T05:13:13.042422+00:00",
+    "http_status": 200,
+    "status": "downloaded",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/diversity_next_20260916/crossref_dpp_attention_v2.json",
+    "sha256": "145e9ef61966d193b78e333ef6da7e6ecaed3afa659de1fadb7c3159e3e1f012",
+    "results": [
+      {
+        "title": [
+          "determinantal, adj."
+        ],
+        "doi": "10.1093/oed/3691129798",
+        "year": {
+          "date-parts": [
+            [
+              2023,
+              3,
+              2
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.1093/oed/3691129798"
+      },
+      {
+        "title": [
+          "Determinantal Point Process Attention Over Grid Codes Supports Out of Distribution Generalization"
+        ],
+        "doi": "10.7554/elife.89911.1",
+        "year": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              23
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.7554/elife.89911.1"
+      },
+      {
+        "title": [
+          "Determinantal point process attention over grid cell code supports out of distribution generalization"
+        ],
+        "doi": "10.7554/elife.89911.3",
+        "year": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              1
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.7554/elife.89911.3"
+      },
+      {
+        "title": [
+          "Determinantal Equations"
+        ],
+        "doi": "10.1017/9781009759700.006",
+        "year": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              20
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.1017/9781009759700.006"
+      },
+      {
+        "title": [
+          "Determinantal Singularities"
+        ],
+        "doi": "10.1007/978-3-031-31925-9_2",
+        "year": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.1007/978-3-031-31925-9_2"
+      },
+      {
+        "title": [
+          "Determinantal Point Process Attention Over Grid Cell Code Supports Out of Distribution Generalization"
+        ],
+        "doi": "10.7554/elife.89911.2",
+        "year": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              21
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.7554/elife.89911.2"
+      },
+      {
+        "title": [
+          "Determinantal Sieving"
+        ],
+        "doi": "10.46298/theoretics.25.21",
+        "year": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              2
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.46298/theoretics.25.21"
+      },
+      {
+        "title": [
+          "Determinantal point process attention over grid cell code supports out of distribution generalization"
+        ],
+        "doi": "10.7554/elife.89911",
+        "year": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              1
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.7554/elife.89911"
+      },
+      {
+        "title": [
+          "Determinantal Sieving"
+        ],
+        "doi": "10.1137/1.9781611977912.16",
+        "year": {
+          "date-parts": [
+            [
+              2024,
+              1
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.1137/1.9781611977912.16"
+      },
+      {
+        "title": [
+          "Determinantal random subgraphs"
+        ],
+        "doi": "10.5070/c6.68667",
+        "year": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              20
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.5070/c6.68667"
+      },
+      {
+        "title": [
+          "Author Response: Determinantal Point Process Attention Over Grid Codes Supports Out of Distribution Generalization"
+        ],
+        "doi": "10.7554/elife.89911.1.sa3",
+        "year": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              23
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.7554/elife.89911.1.sa3"
+      },
+      {
+        "title": [
+          "eLife Assessment: Determinantal Point Process Attention Over Grid Codes Supports Out of Distribution Generalization"
+        ],
+        "doi": "10.7554/elife.89911.1.sa2",
+        "year": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              23
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.7554/elife.89911.1.sa2"
+      },
+      {
+        "title": [
+          "Determinantal Ideals of Graphs"
+        ],
+        "doi": "10.1007/978-3-032-16368-4_75",
+        "year": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.1007/978-3-032-16368-4_75"
+      },
+      {
+        "title": [
+          "Author response: Determinantal point process attention over grid cell code supports out of distribution generalization"
+        ],
+        "doi": "10.7554/elife.89911.3.sa2",
+        "year": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              1
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.7554/elife.89911.3.sa2"
+      },
+      {
+        "title": [
+          "eLife assessment: Determinantal point process attention over grid cell code supports out of distribution generalization"
+        ],
+        "doi": "10.7554/elife.89911.3.sa0",
+        "year": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              1
+            ]
+          ]
+        },
+        "id": null,
+        "url": "https://doi.org/10.7554/elife.89911.3.sa0"
+      }
+    ]
+  },
+  {
+    "name": "github_dpp_graph_v2",
+    "url": "https://api.github.com/search/repositories?q=determinantal+graph+neural&per_page=8",
+    "accessed_at_utc": "2026-09-16T05:13:13.043556+00:00",
+    "http_status": 200,
+    "status": "downloaded",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/diversity_next_20260916/github_dpp_graph_v2.json",
+    "sha256": "048e11493f907c5605d2ab2ed0ce99c1c68821d8de9ba29487f79106deace89b",
+    "results": [
+      {
+        "name": "su-group/PFAS-Toxicity",
+        "description": "Unveiling the Structural Determinants of PFAS Toxicity: A Graph Neural Network and Interpretability Analysis",
+        "url": "https://github.com/su-group/PFAS-Toxicity"
+      }
+    ]
+  }
+]

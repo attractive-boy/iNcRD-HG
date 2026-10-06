@@ -1,0 +1,349 @@
+[
+  {
+    "url": "https://export.arxiv.org/api/query?search_query=%28ti%3A%22knowledge+graph%22+AND+%28abs%3A%22probabilistic+circuits%22+OR+ti%3Atractable%29%29&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+    "accessed_at_utc": "2026-09-16T10:12:17.332448+00:00",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/arxiv_circuits_v1.xml",
+    "status": 200,
+    "content_type": "application/atom+xml; charset=utf-8",
+    "bytes": 4738,
+    "sha256": "702b994bd35dc9de53c6505a8a72a12b19dfdbb2e74acfd49bd4c046543e6881",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2605.16568v1",
+        "title": "Scalable Uncertainty Reasoning in Knowledge Graphs",
+        "published": "2026-05-15T19:16:10Z",
+        "updated": "2026-05-15T19:16:10Z",
+        "abstract": "Knowledge Graphs are pivotal for semantic data integration. The real-world data they model is often inherently uncertain. Within knowledge graphs, uncertainty manifests in three distinct levels: imprecise attribute values, probabilistic triple existence, and incomplete schema knowledge. However, current Semantic Web standards lack native support for reasoning over such uncertainty, and na\u00efve extensions often incur computational intractability. In this thesis, I aim to develop a modular framework that addresses each level through tailored techniques: (1) defining probabilistic literals and a corresponding query algebra for continuous attributes; (2) a compilation-based framework transforming SPARQL provenance into tractable probabilistic circuits for uncertain triples; and (3) topology-aware geometric embeddings for statistical schema reasoning. The central hypothesis is that specialized reasoning mechanisms, namely algebraic, logical, and geometric approaches, can reconcile semantic precision with computational tractability.",
+        "authors": [
+          "Jingcheng Wu"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2508.06706v2",
+        "title": "Probabilistic Circuits for Knowledge Graph Completion with Reduced Rule Sets",
+        "published": "2025-08-08T21:17:03Z",
+        "updated": "2026-08-09T13:27:51Z",
+        "abstract": "Rule-based methods for knowledge graph completion provide explainable results, but often require tens of thousands of rules to achieve competitive performance. Although individual predictions may use only a few rules, reasoning over an entire dataset requires these massive rule sets, hampering system-level understanding. We address this by learning a probability distribution over sets of rules that work together using probabilistic circuits. Our approach achieves a 70-96% reduction in the number of rules needed to reach peak baseline performance. Using an equivalent minimal number of rules, we outperform the baseline by up to 31$\\times$. When comparing our minimal rule sets against baseline's full rule sets, we preserve 91% of peak baseline performance. Empirical validation on 8 benchmark datasets shows that our reduced rule sets exhibit higher utilization---fewer rules are wasted, and each prediction requires fewer rules. We show that our framework is grounded in well-known semantics of Nilsson's probabilistic logic and does not require independence assumptions. We provide exact probabilistic inference as well as an efficient lower bound and evaluate both.",
+        "authors": [
+          "Jaikrishna Manojkumar Patil",
+          "Nathaniel Lee",
+          "Al Mehdi Saadat Chowdhury",
+          "YooJung Choi",
+          "Paulo Shakarian"
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://export.arxiv.org/api/query?search_query=%28ti%3Amulticalibration+OR+ti%3Amultiaccuracy+OR+ti%3A%22multi-calibration%22%29+AND+%28abs%3Agraph+OR+abs%3Aranking+OR+abs%3Aclassification%29+AND+submittedDate%3A%5B202401010000+TO+202609162359%5D&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+    "accessed_at_utc": "2026-09-16T10:12:17.334378+00:00",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/arxiv_multicalibration_v1.xml",
+    "status": 200,
+    "content_type": "application/atom+xml; charset=utf-8",
+    "bytes": 8413,
+    "sha256": "776a4ee2cdc9b4d33a1ce545e2dde41e9a68a23c55c13fad76dd53fd5cb0a91e",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2604.21549v1",
+        "title": "Unbiased Prevalence Estimation with Multicalibrated LLMs",
+        "published": "2026-04-23T11:23:34Z",
+        "updated": "2026-04-23T11:23:34Z",
+        "abstract": "Estimating the prevalence of a category in a population using imperfect measurement devices (diagnostic tests, classifiers, or large language models) is fundamental to science, public health, and online trust and safety. Standard approaches correct for known device error rates but assume these rates remain stable across populations. We show this assumption fails under covariate shift and that multicalibration, which enforces calibration conditional on the input features rather than just on average, is sufficient for unbiased prevalence estimation under such shift. Standard calibration and quantification methods fail to provide this guarantee. Our work connects recent theoretical work on fairness to a longstanding measurement problem spanning nearly all academic disciplines. A simulation confirms that standard methods exhibit bias growing with shift magnitude, while a multicalibrated estimator maintains near-zero bias. While we focus the discussion mostly on LLMs, our theoretical results apply to any classification model. Two empirical applications -- estimating employment prevalence across U.S. states using the American Community Survey, and classifying political texts across four countries using an LLM -- demonstrate that multicalibration substantially reduces bias in practice, while highlighting that calibration data should cover the key feature dimensions along which target populations may differ.",
+        "authors": [
+          "Fridolin Linder",
+          "Thomas Leeper",
+          "Daniel Haimovich",
+          "Niek Tax",
+          "Lorenzo Perini",
+          "Milan Vojnovic"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2511.11413v2",
+        "title": "Multicalibration Yields Better Matchings",
+        "published": "2025-11-14T15:45:07Z",
+        "updated": "2026-08-05T14:14:18Z",
+        "abstract": "Consider the problem of finding the best matching in a weighted graph where we only have access to predictions of the actual stochastic weights, based on an underlying context. If the predictor is the Bayes optimal one, then computing the best matching based on the predicted weights is optimal. However, in practice, this perfect information scenario is not realistic. Given an imperfect predictor, a suboptimal decision rule may compensate for the induced error and thus outperform the standard optimal rule. In this paper, we propose multicalibration as a way to address this problem. This fairness notion requires a predictor to be unbiased on each element of a family of protected sets of contexts. Given a class of matching algorithms $\\mathcal C$ and any predictor $\u03b3$ of the edge-weights, we show how to construct a specific multicalibrated predictor $\\hat \u03b3$, with the following property. Picking the best matching based on the output of $\\hat \u03b3$ is competitive with the best decision rule in $\\mathcal C$ applied onto the original predictor $\u03b3$. We complement this result by providing sample complexity bounds, and by performing numerical experiments.",
+        "authors": [
+          "Riccardo Colini Baldeschi",
+          "Simone Di Gregorio",
+          "Simone Fioravanti",
+          "Federico Fusco",
+          "Ido Guy",
+          "Daniel Haimovich",
+          "Stefano Leonardi",
+          "Fridolin Linder",
+          "Lorenzo Perini",
+          "Matteo Russo",
+          "Cem Sirin",
+          "Niek Tax"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2412.10575v2",
+        "title": "Who's the (Multi-)Fairest of Them All: Rethinking Interpolation-Based Data Augmentation Through the Lens of Multicalibration",
+        "published": "2024-12-13T21:36:12Z",
+        "updated": "2025-04-14T19:40:08Z",
+        "abstract": "Data augmentation methods, especially SoTA interpolation-based methods such as Fair Mixup, have been widely shown to increase model fairness. However, this fairness is evaluated on metrics that do not capture model uncertainty and on datasets with only one, relatively large, minority group. As a remedy, multicalibration has been introduced to measure fairness while accommodating uncertainty and accounting for multiple minority groups. However, existing methods of improving multicalibration involve reducing initial training data to create a holdout set for post-processing, which is not ideal when minority training data is already sparse. This paper uses multicalibration to more rigorously examine data augmentation for classification fairness. We stress-test four versions of Fair Mixup on two structured data classification problems with up to 81 marginalized groups, evaluating multicalibration violations and balanced accuracy. We find that on nearly every experiment, Fair Mixup \\textit{worsens} baseline performance and fairness, but the simple vanilla Mixup \\textit{outperforms} both Fair Mixup and the baseline, especially when calibrating on small groups. \\textit{Combining} vanilla Mixup with multicalibration post-processing, which enforces multicalibration through post-processing on a holdout set, further increases fairness.",
+        "authors": [
+          "Karina Halevy",
+          "Karly Hou",
+          "Charumathi Badrinath"
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://api.crossref.org/works?query.title=Tractable+Probabilistic+Models+for+Knowledge+Graph+Completion&rows=3",
+    "accessed_at_utc": "2026-09-16T10:12:17.335566+00:00",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/crossref_circuit_v1.json",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 31676,
+    "sha256": "f1b02b117c3a46c954ad45234dea5208c9128aa5343a4d2a058ab938d37609c5",
+    "records": [
+      {
+        "title": [
+          "Differentiable Probabilistic Logic Reasoning For Knowledge Graph Completion"
+        ],
+        "doi": "10.1145/3746252.3761081",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              10
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0007-5446-8898",
+            "authenticated-orcid": false,
+            "given": "Zhongbin",
+            "family": "Li",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Information Science and Engineering, Yunnan University, Kunming, China and Yunnan Key Laboratory of Intelligent Systems and Computing, Yunnan University, Kunming, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0007-6070-5757",
+            "authenticated-orcid": false,
+            "given": "Lixing",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Information Science and Engineering, Yunnan University, Kunming, China and Yunnan Key Laboratory of Intelligent Systems and Computing, Yunnan University, Kunming, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3641-1461",
+            "authenticated-orcid": false,
+            "given": "Kun",
+            "family": "Yue",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Information Science and Engineering, Yunnan University, Kunming, China and Yunnan Key Laboratory of Intelligent Systems and Computing, Yunnan University, Kunming, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0007-9939-4503",
+            "authenticated-orcid": false,
+            "given": "Xinquan",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Information Science and Engineering, Yunnan University, Kunming, China and Yunnan Key Laboratory of Intelligent Systems and Computing, Yunnan University, Kunming, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": [
+          "Proceedings of the 34th ACM International Conference on Information and Knowledge Management"
+        ]
+      },
+      {
+        "title": [
+          "Deep Tractable Probabilistic Models"
+        ],
+        "doi": "10.1145/3632410.3633295",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              4
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-5899-6088",
+            "authenticated-orcid": false,
+            "given": "Sahil",
+            "family": "Sidheekh",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "The University of Texas at Dallas, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8604-3890",
+            "authenticated-orcid": false,
+            "given": "Saurabh",
+            "family": "Mathur",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "The University of Texas at Dallas, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0948-8108",
+            "authenticated-orcid": false,
+            "given": "Athresh",
+            "family": "Karanam",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "The University of Texas at Dallas, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9889-6260",
+            "authenticated-orcid": false,
+            "given": "Sriraam",
+            "family": "Natarajan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "The University of Texas at Dallas, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": [
+          "Proceedings of the 7th Joint International Conference on Data Science &amp; Management of Data (11th ACM IKDD CODS and 29th COMAD)"
+        ]
+      },
+      {
+        "title": [
+          "Tractable probabilistic models for intention recognition based on expert knowledge"
+        ],
+        "doi": "10.1109/iros.2007.4399226",
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              10
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Oliver C.",
+            "family": "Schrempf",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "David",
+            "family": "Albrecht",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Uwe D.",
+            "family": "Hanebeck",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": [
+          "2007 IEEE/RSJ International Conference on Intelligent Robots and Systems"
+        ]
+      }
+    ]
+  }
+]

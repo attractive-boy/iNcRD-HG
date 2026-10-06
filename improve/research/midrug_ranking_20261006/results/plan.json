@@ -1,0 +1,63 @@
+{
+  "signature": "40a51ea35b5423a229d598fe6de38e77f1a3247628c5f837e7d45231056f676a",
+  "configs": {
+    "bce": {
+      "rank_weight": 0.0,
+      "sampler": "uniform"
+    },
+    "bpr005_mixed": {
+      "rank_weight": 0.05,
+      "sampler": "mixed_middle"
+    },
+    "bpr010_mixed": {
+      "rank_weight": 0.1,
+      "sampler": "mixed_middle"
+    },
+    "bpr020_mixed": {
+      "rank_weight": 0.2,
+      "sampler": "mixed_middle"
+    },
+    "bpr010_uniform": {
+      "rank_weight": 0.1,
+      "sampler": "uniform"
+    }
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "recipe": {
+    "epochs": 300,
+    "lr": 0.0001,
+    "weight_decay": 0.0,
+    "optimizer": "RMSprop",
+    "alpha": 0.99,
+    "warmup_epochs": 30,
+    "ramp_epochs": 30,
+    "candidate_count": 8,
+    "negatives_per_positive": 2
+  },
+  "source_hashes": {
+    "improve/research/midrug_ranking_20261006/run_ranking.py": "b3ba67b3830c7728bb0207d428f6a0d5db9e64687ac81eecb64b61c4d496f63f",
+    "release/iNcRD-HG-M1M2M3/incrd_hg_m123/__init__.py": "1f258c2e4f152ad4c4f8159512f9bae29e2b98c232fe56c71ea90cea40bfb43c",
+    "release/iNcRD-HG-M1M2M3/incrd_hg_m123/adapter.py": "94bd2976dc121bd93991191e6f577d5b3af4832681db649a2916f1ada45a4e90",
+    "release/iNcRD-HG-M1M2M3/incrd_hg_m123/config.py": "805cca85435792f17c7e5e2b88903c71e656ea9f788f3a0f5c94e83953cba98e",
+    "release/iNcRD-HG-M1M2M3/incrd_hg_m123/data.py": "d4b1c2764b49d05f74233e49112a520c540b3276f894243d65d4e70778b13a29",
+    "release/iNcRD-HG-M1M2M3/incrd_hg_m123/encoder.py": "7e8efa3a928905ce38d8d8ffd530c23b309fd8d692f619f3836fdb9327eaf755",
+    "release/iNcRD-HG-M1M2M3/incrd_hg_m123/engine.py": "e40eec70c73cf1307cffac5411fcea5bc3f9b39890529a87b35545392136490c",
+    "release/iNcRD-HG-M1M2M3/incrd_hg_m123/model.py": "ccec94eb49c8ee848c2d39d913752dc6284140dde2c9362696944f9c2a458368",
+    "release/iNcRD-HG-M1M2M3/incrd_hg_m123/pair_channels.py": "d3d9ccd5a872a4aa64ade4ca454a8a86f5c1a9785cc63ecddbd9558ae91f480e"
+  },
+  "data": "frozen MiDrug fold0, unchanged pairs and labels",
+  "graph": "miRNA/drug only; original features and same-type edges; train-positive target edges",
+  "selection": "Best BPR by mean validation AUC across three seeds; tie: mean validation AP",
+  "test": "Evaluate baseline and best BPR only after selection is frozen; report failure too",
+  "adoption": "Require test mean AUC and AP to improve; test does not select another candidate",
+  "negative_pool": "Existing training negatives only; same drug as the positive anchor",
+  "constraints": [
+    "No lncRNA",
+    "No external data",
+    "No test metrics during search"
+  ]
+}

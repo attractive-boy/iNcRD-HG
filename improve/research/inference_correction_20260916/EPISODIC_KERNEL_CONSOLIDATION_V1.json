@@ -1,0 +1,131 @@
+{
+  "historical_gate": true,
+  "partition_gate": false,
+  "new_history_neural_fits": 8,
+  "new_partition_neural_fits": 6,
+  "identity_records_not_training": true,
+  "partition_metrics": [
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9600613944702044,
+      "ap": 0.9267620110711836,
+      "macro_drug_ap": 0.8133150324339025,
+      "macro_drug_count": 83
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9565909611311466,
+      "ap": 0.9166114317948711,
+      "macro_drug_ap": 0.8059950613927295,
+      "macro_drug_count": 90
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9530692464747076,
+      "ap": 0.91471494209784,
+      "macro_drug_ap": 0.7607458524117662,
+      "macro_drug_count": 84
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9902004350164886,
+      "ap": 0.9798782865466856,
+      "macro_drug_ap": 0.9685414157777856,
+      "macro_drug_count": 25
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9918297978498648,
+      "ap": 0.9831467965498568,
+      "macro_drug_ap": 0.9319583949060922,
+      "macro_drug_count": 23
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9897638593290768,
+      "ap": 0.980556713993804,
+      "macro_drug_ap": 0.9373743633927644,
+      "macro_drug_count": 20
+    }
+  ],
+  "partition_means": {
+    "LncDrug": {
+      "auc": 0.99059803073181,
+      "ap": 0.9811939323634489
+    },
+    "MiDrug": {
+      "auc": 0.9565738673586862,
+      "ap": 0.9193627949879649
+    }
+  },
+  "contrasts": [
+    {
+      "task": "LncDrug",
+      "control": "anchor",
+      "auc": 0.0,
+      "ap": 0.0,
+      "macro_drug_ap": 0.0
+    },
+    {
+      "task": "LncDrug",
+      "control": "offset_composed",
+      "auc": 0.0,
+      "ap": 0.0,
+      "macro_drug_ap": 0.0
+    },
+    {
+      "task": "LncDrug",
+      "control": "stop_support_gradient",
+      "auc": 0.0,
+      "ap": 0.0,
+      "macro_drug_ap": 0.0
+    },
+    {
+      "task": "MiDrug",
+      "control": "anchor",
+      "auc": 3.935542961819305e-05,
+      "ap": -0.0001957989146863,
+      "macro_drug_ap": -0.0009440520087172
+    },
+    {
+      "task": "MiDrug",
+      "control": "offset_composed",
+      "auc": 3.935542961819305e-05,
+      "ap": -0.0001957989146863,
+      "macro_drug_ap": -0.0009440520087172
+    },
+    {
+      "task": "MiDrug",
+      "control": "stop_support_gradient",
+      "auc": 9.34194541441687e-05,
+      "ap": -9.57364681561194e-05,
+      "macro_drug_ap": -0.0009511548626909
+    }
+  ],
+  "source_sha256": {
+    "improve/results/anchor_priority_episodic_kernel_v1_20260916/HISTORICAL_ASSESSMENT.json": "dbb0133c0f9e3ef7e4da94cd5cad8f95cc6d36ebb66a2f812d42fe983a0e9eb0",
+    "improve/results/mechanism_validation_20260915/reports/anchor_priority_episodic_kernel_v1/ASSESSMENT.json": "74446c6e75b7febb664b114dfac4c78bfad38d9aea00fd714841c3117d3dc6a6"
+  },
+  "decision": "Stop after failed fixed-partition AP and mechanism gates",
+  "new_outer_fits": 0,
+  "confirmed_final_innovations": 0,
+  "sha256": "c40bdbdf5f492fa4165159a1cfa94c31c53034b05708862603e1d6b1a070c6a5"
+}

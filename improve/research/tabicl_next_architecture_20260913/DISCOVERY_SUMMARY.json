@@ -1,0 +1,263 @@
+{
+  "cutoff_date": "2026-09-13",
+  "systematic_review": false,
+  "discovery_queries": [
+    {
+      "file": "arxiv_adaptation.json",
+      "source": "arxiv",
+      "query": "(all:TabPFN OR all:TabICL) AND (all:adaptation OR all:retrieval OR all:prompt)",
+      "ok": false,
+      "error": "HTTPError: HTTP Error 429: Unknown Error"
+    },
+    {
+      "file": "arxiv_constraints.json",
+      "source": "arxiv",
+      "query": "(all:\"multi-task\" OR all:\"continual learning\") AND (all:\"gradient projection\" OR all:\"non-degradation\" OR all:\"Pareto\")",
+      "ok": false,
+      "error": "HTTPError: HTTP Error 429: Unknown Error"
+    },
+    {
+      "file": "arxiv_context.json",
+      "source": "arxiv",
+      "query": "all:tabular AND (all:\"context optimization\" OR all:\"context distillation\" OR all:\"soft prompt\" OR all:\"learnable context\")",
+      "ok": false,
+      "error": "TimeoutError: The read operation timed out"
+    },
+    {
+      "file": "arxiv_robust.json",
+      "source": "arxiv",
+      "query": "(all:TabPFN OR all:TabICL OR all:\"tabular foundation\") AND (all:noise OR all:robust OR all:unlabeled)",
+      "ok": false,
+      "error": "HTTPError: HTTP Error 429: Unknown Error"
+    },
+    {
+      "file": "crossref_safety.json",
+      "source": "Crossref",
+      "query": "safe multi task learning gradient projection",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "crossref_tabular_context.json",
+      "source": "Crossref",
+      "query": "tabular foundation model context tuning",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "crossref_tabular_robust.json",
+      "source": "Crossref",
+      "query": "TabPFN noisy labels",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_context.json",
+      "source": "openalex",
+      "query": "tabular foundation model context optimization",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_convex_mtl.json",
+      "source": "openalex",
+      "query": "\"Conflict-Averse Gradient Descent\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_features.json",
+      "source": "openalex",
+      "query": "tabular foundation model feature adaptation",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_focused_adaptation.json",
+      "source": "openalex",
+      "query": "\"tabular foundation\" \"adaptation\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_focused_constraints.json",
+      "source": "openalex",
+      "query": "\"multi-task\" \"non-degradation\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_focused_context.json",
+      "source": "openalex",
+      "query": "\"TabPFN\" \"context\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_focused_prompt.json",
+      "source": "openalex",
+      "query": "\"TabPFN\" \"prompt\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_focused_pu.json",
+      "source": "openalex",
+      "query": "\"positive-unlabeled\" \"tabular\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_focused_tabicl.json",
+      "source": "openalex",
+      "query": "\"TabICL\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_gradient_episodic.json",
+      "source": "openalex",
+      "query": "\"Gradient Episodic Memory\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_kernel_icl.json",
+      "source": "openalex",
+      "query": "\"Interpretable Tabular Foundation Models\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_multiobjective.json",
+      "source": "openalex",
+      "query": "multi task learning gradient projection constrained optimization",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_prior_icl_pu.json",
+      "source": "openalex",
+      "query": "\"In-Context Positive-Unlabeled Learning\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_pu.json",
+      "source": "openalex",
+      "query": "tabular foundation model positive unlabeled",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_robust.json",
+      "source": "openalex",
+      "query": "tabular foundation model noisy labels",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_stablepfn.json",
+      "source": "openalex",
+      "query": "StablePFN",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_tabpfn_context_tuning.json",
+      "source": "openalex",
+      "query": "\"context tuning\" \"tabular\"",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "openalex_tunetables.json",
+      "source": "openalex",
+      "query": "TuneTables",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "pubmed_mirna.json",
+      "source": "pubmed",
+      "query": "(miRNA[Title/Abstract] OR microRNA[Title/Abstract]) AND (drug[Title/Abstract]) AND (association prediction[Title/Abstract] OR resistance prediction[Title/Abstract]) AND (2024:2026[dp])",
+      "ok": true,
+      "error": null
+    },
+    {
+      "file": "pubmed_pu.json",
+      "source": "pubmed",
+      "query": "(positive-unlabeled[Title/Abstract] OR positive unlabeled[Title/Abstract]) AND (drug[Title/Abstract] OR RNA[Title/Abstract]) AND (2024:2026[dp])",
+      "ok": true,
+      "error": null
+    }
+  ],
+  "successful_discovery_queries": 23,
+  "failed_discovery_queries": 4,
+  "retrieved_discovery_records_before_date_filter": 353,
+  "date_eligible_records_before_dedup": 353,
+  "deduplicated_discovery_records": 290,
+  "excluded_future_records": [],
+  "fulltext_papers_with_selected_sections_reviewed": 9,
+  "accepted_version_pdfs_downloaded": 1,
+  "additional_metadata_and_abstract_sources": [
+    {
+      "name": "StablePFN",
+      "doi": "10.1145/3770855.3818030",
+      "records": [
+        "exact_crossref.json",
+        "stablepfn_openalex_detail.json"
+      ]
+    },
+    {
+      "name": "MPHGNN",
+      "pmid": "41608986",
+      "doi": "10.1093/bib/bbag013",
+      "record": "pubmed_mirna.json"
+    },
+    {
+      "name": "RGDAGMAE",
+      "pmid": "42470826",
+      "doi": "10.1016/j.compbiolchem.2026.109236",
+      "record": "pubmed_mirna.json"
+    },
+    {
+      "name": "MVGSCA",
+      "pmid": "42678847",
+      "doi": "10.1109/TCBBIO.2026.3729865",
+      "record": "pubmed_mirna.json"
+    }
+  ],
+  "reference_resolution_corrections": [
+    {
+      "candidate_id": "2406.03441",
+      "status": "Excluded: title mismatch; it is Cycles of Thought, not TuneTables",
+      "correct_tunetables_id": "2402.11137",
+      "evidence_file": "primary_abs_fetch.json"
+    }
+  ],
+  "local_checks": {
+    "fitting_only_input_probes": 2,
+    "adapter_parameters": 496,
+    "identity_errors": {
+      "LncDrug": 0.0,
+      "MiDrug": 0.0
+    },
+    "backbone_unchanged": true,
+    "optimizer_steps": 0,
+    "new_validation_scores": false,
+    "test_arrays_used": false
+  },
+  "active_reference": "Existing graph-context TabICLv2",
+  "user_confirmed_lnc_hard_metrics": [
+    "auc",
+    "ap"
+  ],
+  "macro_drug_ap": "report separately",
+  "status": "Literature-backed proposals plus an interface feasibility probe; no newly accepted predictor.",
+  "limitations": [
+    "Broad discovery contains many irrelevant results; counts are not counts of relevant papers.",
+    "OpenAlex discovery abstracts are truncated by the skill script; recommendations use primary full texts.",
+    "Historical development splits are reused; no independent generalization evidence was generated."
+  ]
+}

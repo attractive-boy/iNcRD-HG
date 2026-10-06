@@ -1,0 +1,56 @@
+[
+  {
+    "name": "mirtarbase_http",
+    "url": "http://mirtarbase.cuhk.edu.cn/~miRTarBase/miRTarBase_2025/",
+    "params": null,
+    "error": "HTTPSConnectionPool(host='mirtarbase.cuhk.edu.cn', port=443): Max retries exceeded with url: /~miRTarBase/miRTarBase_2025/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)')))"
+  },
+  {
+    "name": "lnctard_primary",
+    "url": "http://bio-bigdata.hrbmu.edu.cn/LncTarD/",
+    "params": null,
+    "error": "403 Client Error: Forbidden for url: https://bio-bigdata.hrbmu.edu.cn/LncTarD/"
+  },
+  {
+    "name": "lnctard_primary_https",
+    "url": "https://bio-bigdata.hrbmu.edu.cn/LncTarD/",
+    "params": null,
+    "error": "403 Client Error: Forbidden for url: https://bio-bigdata.hrbmu.edu.cn/LncTarD/"
+  },
+  {
+    "name": "encori_mir21_probe",
+    "url": "https://rnasysu.com/encori/api/miRNATarget/?assembly=hg38&geneType=mRNA&miRNA=hsa-miR-21-5p&clipExpNum=1&degraExpNum=0&pancancerNum=0&programNum=0&target=all&cellType=all",
+    "status": 200,
+    "bytes": 288838,
+    "download_limit_reached": false,
+    "sha256": "86308f69b840b9cfcd8776df6aaa5e6c824c8025bffef91640d074490413912b",
+    "path": "improve/research/rna_gene_mapping_20260913/encori_mir21_probe.txt",
+    "first_lines": [
+      "#please cite:",
+      "#Keren Zhou, Junhong Huang, Shurong Liu, Wujian Zheng, Shun Liu, Yinghao Xing, Yinan Cao, Yibo Chen, Xinping Hu, Li Cai, Jie Zhou, Penghui Lin, Jiajia Xuan, Fangzhou Xie, Lahong Xu, Junhao Li, Lingling Zheng, Lianghu Qu, Jianjun Chen, Bin Li, and Jianhua Yang, An Encyclopedic Regulatory and Functional Atlas of RNA Interactomes, Nature Methods (2026).",
+      "miRNAid\tmiRNAname\tgeneID\tgeneName\tgeneType\tchromosome\tnarrowStart\tnarrowEnd\tbroadStart\tbroadEnd\tstrand\tclipExpNum\tdegraExpNum\tRBP\tPITA\tRNA22\tmiRmap\tmicroT\tmiRanda\tPicTar\tTargetScan\tTDMDScore\tphyloP\tpancancerNum\tcellline/tissue",
+      "MIMAT0000076\thsa-miR-21-5p\tENSG00000160075\tSSU72\tprotein_coding\tchr1\t1563231\t1563237\t1563230\t1563258\t-\t1\t0\tAGO2\t0\t0\t1\t1\t0\t0\t0\t0.6607\t0.503\t8\t22RV1",
+      "MIMAT0000076\thsa-miR-21-5p\tENSG00000116237\tICMT\tprotein_coding\tchr1\t6222706\t6222713\t6222706\t6222713\t-\t1\t0\tAGO2\t1\t0\t0\t0\t0\t0\t0\t1.1164\t-1.120\t3\t22RV1",
+      "MIMAT0000076\thsa-miR-21-5p\tENSG00000175206\tNPPA\tprotein_coding\tchr1\t11845880\t11845885\t11845880\t11845885\t-\t2\t0\tAGO2\t1\t0\t0\t0\t0\t0\t0\t-0.0405\t0.842\t3\tleft_ventricle",
+      "MIMAT0000076\thsa-miR-21-5p\tENSG00000169641\tLUZP1\tprotein_coding\tchr1\t23087534\t23087541\t23087534\t23087541\t-\t0\t0\tNA\t1\t0\t0\t0\t0\t0\t0\t1.6497\t0.298\t3\t"
+    ]
+  },
+  {
+    "name": "encori_neat1_probe",
+    "url": "https://rnasysu.com/encori/api/RNARNA/?assembly=hg38&geneType=lncRNA&RNA=NEAT1&interNum=1&expNum=1&cellType=all",
+    "status": 200,
+    "bytes": 2016092,
+    "download_limit_reached": true,
+    "sha256": "51fc71122dacd4a738cceac55ea4f091098bc3f8c043e497ce75f973cd432c71",
+    "path": "improve/research/rna_gene_mapping_20260913/encori_neat1_probe.txt",
+    "first_lines": [
+      "#please cite:",
+      "#Keren Zhou, Junhong Huang, Shurong Liu, Wujian Zheng, Shun Liu, Yinghao Xing, Yinan Cao, Yibo Chen, Xinping Hu, Li Cai, Jie Zhou, Penghui Lin, Jiajia Xuan, Fangzhou Xie, Lahong Xu, Junhao Li, Lingling Zheng, Lianghu Qu, Jianjun Chen, Bin Li, and Jianhua Yang, An Encyclopedic Regulatory and Functional Atlas of RNA Interactomes, Nature Methods (2026).",
+      "geneID\tgeneName\tgeneType\tpairGeneID\tpairGeneName\tpairGeneType\tinteractionNum\ttotalExpNum\ttotalSeqTypeNum\ttotalReadsNum\tinteractionLocus\talignment\texpNum\tseqTypeNum\treadsNum\tFreeEnergy\tAlignScore(Smith-Waterman)\tCellLine/Tissue",
+      "ENSG00000245532\tNEAT1\tlncRNA\tENSG00000000971\tCFH\tprotein_coding\t1\t1\t1\t1\tchr11:65444731:65444763:+|chr1:196695783:196695814:+\tUGGUGACUUGGACUCCAGGUUAGAGUCA--AGUGA,::||:|  |:|||   |:|::|:| |||  |||||,GUCAUU--AUCUGUCUUUCGGUUU-AGUACUCACU\t1\t1\t1\t-19.9\t13.0\tHeLa",
+      "ENSG00000245532\tNEAT1\tlncRNA\tENSG00000001036\tFUCA2\tprotein_coding\t1\t1\t1\t1\tchr11:65445155:65445181:+|chr6:143503933:143503960:-\tCACAGAAGCUUGUGC--CUCUGCUCGUGA,|| ||||||:|||||   ||:: |  |||,GU-UCUUCGGACACGACAAGGUCAUAACU\t1\t1\t1\t-23.3\t21.5\tHeLa",
+      "ENSG00000245532\tNEAT1\tlncRNA\tENSG00000001460\tSTPG1\tprotein_coding\t2\t2\t1\t3\tchr11:65439475:65439553:+|chr1:24371935:24371978:-\tUAGGAGUUCGAGGUCAGCCUGGCCAGCAUAGCG-AAAACUUGUCUCUACUAAAAAUACAAAAAUUAGUCAGGCAUGGUGG,| |||| :||||| |||             :|| |  |||||                        ||||||  |   :|,ACCCUCCGGCUCC-GUC-------------UGCCUAGUGAAC----------------------UCCAGUCCUCAAACUC\t1\t1\t1\t-31.2\t16.5\tHeLa",
+      "ENSG00000245532\tNEAT1\tlncRNA\tENSG00000001460\tSTPG1\tprotein_coding\t2\t2\t1\t3\tchr11:65429875:65429972:+|chr1:24394767:24394847:-\tAGAACCCACCUCCUGUGGCCAGAGAGCCCUGUCCUGUGAGG----GUG-GUUGUCACAGUGGCAGGGUUCAAUUCAGAAGACCUUGAGGGCAGGCUGAUGUUU,|:|||    |      :: ||||:|:         : :|||    ||| |:|||    ||||                |:|| ||||||  || ||:||:| |,UUUUGAUAUGUUUUAUUUUGUCUUUUUCCUGUUCUUUUUCCUAAUCACUCGACA----CACC----------------UUUGAAACUCC--UCGGAUUAUAUA\t1\t1\t2\t-37.2\t19.5\tHeLa"
+    ]
+  }
+]

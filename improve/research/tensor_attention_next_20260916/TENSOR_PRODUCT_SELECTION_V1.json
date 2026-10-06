@@ -1,0 +1,44 @@
+{
+  "created_at_utc": "2026-09-16T08:45:02.540615+00:00",
+  "family": "tensor_product_attention",
+  "primary_kind": "full",
+  "primary_controls": [
+    "noncontextual_a",
+    "dense_qkv"
+  ],
+  "core_parameters": {
+    "width": 64,
+    "heads": 4,
+    "depth": 2,
+    "dropout": 0.1,
+    "folds": 5,
+    "q_rank": 6,
+    "kv_rank": 2,
+    "factor_initialization": "pinned CPLinear three-dimensional Xavier views",
+    "static_a_initialization": "initial contextual A evaluated at an all-ones vector",
+    "dense_initialization": "exact effective linear maps of initial noncontextual-A arm",
+    "rank_normalization": "1/rank for each Q/K/V product",
+    "positional_encoding": "none; node IDs are not sequence positions",
+    "lnc_policy": "identity_strong_reference"
+  },
+  "lrs": [
+    0.001,
+    0.003
+  ],
+  "epochs": 400,
+  "check_interval": 20,
+  "screen_seed": 666,
+  "confirm_seeds": [
+    0,
+    1
+  ],
+  "strong_weight": 0.1,
+  "weight_decay": 0.001,
+  "lnc_policy": "identity_strong_reference",
+  "new_performance_observed": false,
+  "one_broader_feature_interaction_family_only": true,
+  "adaptation_sha256": "7eae67f85c83e228b7e66172c09080d164a0014ad2db70e7ab5ccf1090ba06d7",
+  "unit_sha256": "ff271acb027fc1c051cfba55cbc2df8bceb1d24f32ec0e13acd61638e0354551",
+  "smoke_sha256": "339869928df6bf0c3428479dfef7ee47b22905a8648bd33ca7a377af3ae797c8",
+  "sha256": "d1f598aa2613587fd7e4e69959ae57de16380bb3eb01402f0df386b87c4fec61"
+}

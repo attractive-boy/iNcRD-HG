@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/nWw1/sIOpHaUMfzI+ECowBKFTHQ</id>
+  <title>arXiv Query: search_query=all:"implicit graph" AND (all:"link prediction" OR all:"equilibrium") AND submittedDate:"202401010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-15T22:12:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22implicit+graph%22+AND+((all:%22link+prediction%22+OR+all:%22equilibrium%22)+AND+submittedDate:%22202401010000+TO+202609162359%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.06225v1</id>
+    <title>Bridging the Semantic-Collaborative Gap: An Asymmetric Graph Architecture for Cold-Start Item Recommendation</title>
+    <updated>2026-06-04T14:35:57Z</updated>
+    <link href="https://arxiv.org/abs/2606.06225v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.06225v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Collaborative filtering and graph-based recommendation models are highly effective because they leverage observed user interactions, but this dependence creates a fundamental cold-start challenge when newly added content has no interaction history. In Tubi's production retrieval system, this challenge is further constrained by the serving interface: new content must be assigned a standalone embedding immediately, and the model must also produce device embeddings suitable for approximate nearest-neighbor retrieval. We address this setting by formulating cold-start recommendation as an inductive graph-completion problem on a temporal bipartite device-content graph. We propose Shallow-RHS, an asymmetric link-prediction architecture in which the left-hand side (LHS) device tower leverages temporally valid watch-history message passing to capture collaborative signals, while the right-hand side (RHS) content tower is intentionally shallow with respect to the graph and encodes content solely from intrinsic features. The RHS tower does not use ID-based embeddings, content-side subgraphs, neighbor aggregation, or interaction-derived representations, forcing the content encoder to map intrinsic features into a collaborative-filtering-aware embedding space. After training, the learned content encoder generates embeddings for both warm and newly ingested content, enabling implicit graph completion through retrieval of warm surrogate neighbors. We further extend the same representation-completion principle to device cold-start by constructing cohort-based embeddings from demographic features. Large-scale online experiments demonstrate consistent relative improvements in content cold-start engagement, promotion speed, impression acquisition, and device cold-start engagement.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-04T14:35:57Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Anh Truong</name>
+    </author>
+    <author>
+      <name>John Trenkle</name>
+    </author>
+    <author>
+      <name>Yuanbo Chen</name>
+    </author>
+    <author>
+      <name>Honghong Zhao</name>
+    </author>
+    <author>
+      <name>Abdullah Alchihabi</name>
+    </author>
+    <author>
+      <name>Effy Fang</name>
+    </author>
+    <author>
+      <name>Michael Tamir</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.09226v1</id>
+    <title>Quantum Injection Pathways for Implicit Graph Neural Networks</title>
+    <updated>2026-05-09T23:51:46Z</updated>
+    <link href="https://arxiv.org/abs/2605.09226v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.09226v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep Equilibrium Models (DEQs) replace a stack of explicit layers with a single operator whose fixed point defines the output, giving the expressive power of an arbitrarily deep network at the memory cost of a single layer. Quantum Deep Equilibrium Models (QDEQs) bring this idea to quantum machine learning, offering an alternative to Parameterized Quantum Circuits (PQCs), whose depth is limited by hardware coherence and trainability. Here, we introduce, formulate, and compare three ways of coupling a quantum signal to graph DEQs, differing in where the signal enters the fixed-point operator. \textit{Independent} injection computes the quantum signal once per graph and forward fixed-point solve, and holds it fixed throughout the solve. \textit{State-dependent} injection instead recomputes the signal at every solver step and applies it to the current iterate. \textit{Backbone-dependent} injection likewise recomputes at every iteration but applies the signal to the classical backbone's output evaluated at the current iterate. We establish contraction guarantees for each variant under explicit assumptions on the Lipschitz constants of the classical backbone and the quantum signal. On the TU Dortmund graph-classification benchmarks NCI1, PROTEINS, and MUTAG, independent injection achieves the best test accuracy while using fewer forward-solver iterations than both the classical equilibrium baseline and the two dependent variants.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-09T23:51:46Z</published>
+    <arxiv:comment>12 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Pengyuan Xu</name>
+    </author>
+    <author>
+      <name>Tristan Zaborniak</name>
+    </author>
+    <author>
+      <name>Luis F. Rivera</name>
+    </author>
+    <author>
+      <name>Hausi A. Müller</name>
+    </author>
+  </entry>
+</feed>

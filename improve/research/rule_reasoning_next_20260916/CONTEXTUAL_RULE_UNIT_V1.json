@@ -1,0 +1,19 @@
+{
+  "created_at_utc": "2026-09-16T00:02:31.005567+00:00",
+  "tests_run": 4,
+  "passed": false,
+  "failures": [],
+  "errors": [
+    "(<improve.test_contextual_rule_v1.ContextualRuleTests testMethod=test_rule_triplets_and_actual_fit_budget>, 'Traceback (most recent call last):\\n  File \"/data1/licheng/incrd-hg/iNcRD-HG/improve/test_contextual_rule_v1.py\", line 93, in test_rule_triplets_and_actual_fit_budget\\n    model,value,trace,detail = experiment.fit(a,p,kind,.001,819,\\'cpu\\',fixed_epochs=5)\\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_contextual_rule_v1.py\", line 181, in fit\\n    pools = [library(p).rule_pool(training,graph,fold,device) for fold,graph in enumerate(graphs)]\\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/data1/licheng/incrd-hg/iNcRD-HG/improve/contextual_rule_graph_v1.py\", line 219, in rule_pool\\n    raise ValueError(\\'No training-positive query has both positive and hard-negative rules\\')\\nValueError: No training-positive query has both positive and hard-negative rules\\n')"
+  ],
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_contextual_rule_v1.py": "0a4ec249b98e3bd869346c4f7f2e1f9907880d8254b0437239a4fc8723272541",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_contextual_rule_v1.py": "cd31755826ca2f4b294891332168822b3c769efd1c3c08446a206ae35fdbedd8",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/contextual_rule_graph_v1.py": "cec44dea0b1ed3aef3615f5ab672e41b0c1f4128be6d776fe3f015a056ee6261",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/sharpness_graph_v1.py": "49f346bb2d84281082c9cd38f65254abacdfe6b0d78fa0dd238320451d347982",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/overlap_block_models.py": "8cd9369ecab95c93889ae2bfa2d1e9e0809f4bc260dd70d7bad74ac440182791"
+  },
+  "formal_fits": 0,
+  "device": "cpu",
+  "sha256": "82614b84d3ff13fa259a0204c5dd8e3ff1c9bb48705c27cd3a32cd44be1f3a09"
+}

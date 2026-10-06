@@ -1,0 +1,314 @@
+{
+  "created_at_utc": "2026-09-15T22:37:33.358736+00:00",
+  "consolidation_source_sha256": "1d28eab1dc48150f5d875270d139661392c26e9e6ae37d72346c8e24ca33f3d3",
+  "family": "kronecker_preconditioning",
+  "stage": "screen",
+  "protocol_sha256": "8c16b2d9f7cef0ddfbb48b0bec77f73a338433602473970dd2d419993fcc447e",
+  "assessment_sha256": "ac6c5147e14ccf582a57d8daabb37f54a3eedbb0896cdc78c2c303ead891aa82",
+  "all_stored_metrics_recomputed": true,
+  "source_assessment_unchanged": true,
+  "metrics": {
+    "MiDrug": {
+      "full": {
+        "mean": {
+          "auc": 0.0004901539870628691,
+          "ap": 0.0010417362564548727
+        },
+        "minimum": {
+          "auc": 0.0004901539870628691,
+          "ap": 0.0010417362564548727
+        },
+        "positive_count": {
+          "auc": 1,
+          "ap": 1
+        },
+        "metrics": {
+          "auc": 0.9632157917835404,
+          "ap": 0.9289009342014718
+        }
+      },
+      "scalar_coupling": {
+        "mean": {
+          "auc": 0.0005688648462991441,
+          "ap": 0.001179517814887454
+        },
+        "minimum": {
+          "auc": 0.0005688648462991441,
+          "ap": 0.001179517814887454
+        },
+        "positive_count": {
+          "auc": 1,
+          "ap": 1
+        },
+        "metrics": {
+          "auc": 0.9632945026427767,
+          "ap": 0.9290387157599044
+        }
+      },
+      "soap": {
+        "mean": {
+          "auc": 0.001644579922529421,
+          "ap": 0.0021037584700062117
+        },
+        "minimum": {
+          "auc": 0.001644579922529421,
+          "ap": 0.0021037584700062117
+        },
+        "positive_count": {
+          "auc": 1,
+          "ap": 1
+        },
+        "metrics": {
+          "auc": 0.964370217719007,
+          "ap": 0.9299629564150231
+        }
+      },
+      "adamw": {
+        "mean": {
+          "auc": 0.0011401148701509767,
+          "ap": 0.0014713609830941943
+        },
+        "minimum": {
+          "auc": 0.0011401148701509767,
+          "ap": 0.0014713609830941943
+        },
+        "positive_count": {
+          "auc": 1,
+          "ap": 1
+        },
+        "metrics": {
+          "auc": 0.9638657526666286,
+          "ap": 0.9293305589281111
+        }
+      }
+    },
+    "LncDrug": {
+      "full": {
+        "mean": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "minimum": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "positive_count": {
+          "auc": 0,
+          "ap": 0
+        },
+        "metrics": {
+          "auc": 0.9942543521138839,
+          "ap": 0.988187475938475
+        }
+      },
+      "scalar_coupling": {
+        "mean": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "minimum": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "positive_count": {
+          "auc": 0,
+          "ap": 0
+        },
+        "metrics": {
+          "auc": 0.9942543521138839,
+          "ap": 0.988187475938475
+        }
+      },
+      "soap": {
+        "mean": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "minimum": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "positive_count": {
+          "auc": 0,
+          "ap": 0
+        },
+        "metrics": {
+          "auc": 0.9942543521138839,
+          "ap": 0.988187475938475
+        }
+      },
+      "adamw": {
+        "mean": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "minimum": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "positive_count": {
+          "auc": 0,
+          "ap": 0
+        },
+        "metrics": {
+          "auc": 0.9942543521138839,
+          "ap": 0.988187475938475
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "MiDrug": {
+      "scalar_coupling": {
+        "auc": -7.871085923627508e-05,
+        "ap": -0.00013778155843258144
+      },
+      "soap": {
+        "auc": -0.001154425935466552,
+        "ap": -0.001062022213551339
+      },
+      "adamw": {
+        "auc": -0.0006499608830881076,
+        "ap": -0.0004296247266393216
+      },
+      "offset_composed": {
+        "auc": 0.0004901539870628691,
+        "ap": 0.0010417362564548727
+      }
+    },
+    "LncDrug": {
+      "scalar_coupling": {
+        "auc": 0.0,
+        "ap": 0.0
+      },
+      "soap": {
+        "auc": 0.0,
+        "ap": 0.0
+      },
+      "adamw": {
+        "auc": 0.0,
+        "ap": 0.0
+      },
+      "offset_composed": {
+        "auc": 0.0,
+        "ap": 0.0
+      }
+    }
+  },
+  "selected_learning_rates": {
+    "full": 0.001,
+    "scalar_coupling": 0.003,
+    "soap": 0.003,
+    "adamw": 0.003
+  },
+  "new_neural_fits": 8,
+  "adopted_neural_fits": 0,
+  "identity_scoring_records": 8,
+  "adopted_identity_records": 0,
+  "performance_gate": true,
+  "mechanism_gate": false,
+  "offset_gate": true,
+  "declared_gate": false,
+  "records": [
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/LncDrug/adamw/lr0.001/s666/result.json",
+      "sha256": "a0ad16ab24581230675c2004c07292db359938236e4072b1aa226e225a26f97b",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/LncDrug/adamw/lr0.003/s666/result.json",
+      "sha256": "b9f7ce6fddcd7e25ded39347c18f90bf2a823c937ef061072ddaef18d609014b",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/LncDrug/full/lr0.001/s666/result.json",
+      "sha256": "55fa7cfdce8c8936b07acab0f33e030de09469c399bb87929fe99a35040a6192",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/LncDrug/full/lr0.003/s666/result.json",
+      "sha256": "31317dedbd536d26024d2580da5f2fafb528932ef093afd96312ad31c4e53e6f",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/LncDrug/scalar_coupling/lr0.001/s666/result.json",
+      "sha256": "035cc0cd5342fba72775ae1699a2c5e067159a66624899ca114686a41b7ead27",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/LncDrug/scalar_coupling/lr0.003/s666/result.json",
+      "sha256": "b3db59e85d3c62a21f6af87095dcbf127c147003c09927c461b7cc0a6d20cf99",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/LncDrug/soap/lr0.001/s666/result.json",
+      "sha256": "15fda5cb24427a09a4ff5884bb0488571bf96cec5898284f3226a3b5ef34e54a",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/LncDrug/soap/lr0.003/s666/result.json",
+      "sha256": "ad76b5679412255b774e102904763a82b23e9654c3cb20b6bfa6f3debc1aafe2",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/MiDrug/adamw/lr0.001/s666/result.json",
+      "sha256": "e45d4b01708752035ba388e1dc808d8784a075045e5a98d781b97cd54c9df07b",
+      "trained_neural_model": true,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/MiDrug/adamw/lr0.003/s666/result.json",
+      "sha256": "7b6a3b2b4cb50a88610da7a3b77fd86f2736e934daeb78821eef6a6afa4ead20",
+      "trained_neural_model": true,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/MiDrug/full/lr0.001/s666/result.json",
+      "sha256": "1845d31c754059805c6c3319cf055c89071fb500e6702fa2850ab62e8fb673ac",
+      "trained_neural_model": true,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/MiDrug/full/lr0.003/s666/result.json",
+      "sha256": "d6a282ae01bcda25224551500e39bad4ce843aab66c6afd7fe66fd7831638871",
+      "trained_neural_model": true,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/MiDrug/scalar_coupling/lr0.001/s666/result.json",
+      "sha256": "368b9c11f616aec841218238c7b13d4eaad50354988717629a23493788b6cb85",
+      "trained_neural_model": true,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/MiDrug/scalar_coupling/lr0.003/s666/result.json",
+      "sha256": "cd4e84a96c51bfedf7a2258dd7502756e63b40ed9828f06dd469b22a28abd034",
+      "trained_neural_model": true,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/MiDrug/soap/lr0.001/s666/result.json",
+      "sha256": "6834aae4408d75df7f1b39993e802e7073253848eca63d92ba0bb9fd97dbc677",
+      "trained_neural_model": true,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_kronecker_preconditioning_v1_20260916/runs/MiDrug/soap/lr0.003/s666/result.json",
+      "sha256": "4b3c775a7700be076e59697031970dbdb7f2c0d80a9b62eb122c0ca44f8b3b79",
+      "trained_neural_model": true,
+      "adopted": false
+    }
+  ],
+  "next_stage_eligible": false,
+  "confirmed_final_innovations": 0,
+  "existing_default_replaced": false,
+  "sha256": "1548fde85a02a520bf541f092961409d4cbabf5a5532f9c80b82a6130878206e"
+}

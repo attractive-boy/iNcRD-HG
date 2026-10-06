@@ -1,0 +1,56 @@
+{
+  "created_at_utc": "2026-09-16T06:42:44.468365+00:00",
+  "success": true,
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "evidence": {
+    "independent_flow": {
+      "maximum_scipy_error": 2.042810365310288e-14,
+      "finite_positive_steps": true,
+      "full_differs_from_each_control": true,
+      "inverse_calls_equal": true
+    },
+    "matching": {
+      "initial_states_equal": true,
+      "null_residual_exact_zero": true,
+      "final_random_states_equal": true,
+      "synthetic_steps_per_arm": 3,
+      "every_parameter_gradient_finite": true,
+      "inverse_calls_per_arm": [
+        24,
+        24,
+        24
+      ],
+      "formal_fits": 0
+    },
+    "boundary": {
+      "node_permutation": true,
+      "training_only_entry": true,
+      "topology_uses_fixed_attributes_only": true,
+      "query_replay_max_abs": 3.725290298461914e-09
+    },
+    "author_forward": {
+      "commit": "30aad3daf194c26359146e25a5c193d1066f02c1",
+      "maximum_forward_error": 7.014389069581739e-12,
+      "local_gradient_finite": true,
+      "author_gradient_finite": null,
+      "author_backward_error": "one of the variables needed for gradient computation has been modified by an inplace operation: [torch.DoubleTensor [6, 6]], which is output 0 of SubBackward0, is at version 1; expected version 0 instead. Hint: enable anomaly detection to find the operation that failed to compute its gradient, with torch.autograd.set_detect_anomaly(True).",
+      "author_zero_coordinate_division_not_copied": true,
+      "author_float32_identity_ridge_rounding_not_copied": true
+    },
+    "derivatives": {
+      "gradcheck": true,
+      "zero_nonedge_division_avoided": true,
+      "symmetric_active_edge_parameterization": true
+    }
+  },
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_resistance_flow_graph_v1.py": "98329e76d696fb789f802277b9950e62fdd8056e2b8ed972bf5b44a2d63418c0",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/resistance_flow_graph_v1.py": "2e4b94227d7bd7ebcb66fc745525fefef109e4b9bcf3c46f3fcf0b6551fa357d"
+  },
+  "performance_metrics_computed": false,
+  "evaluation_labels_read": false,
+  "formal_fits": 0,
+  "sha256": "cf6ecdb2ea5fe5878eddf78f8d4cb0e37f80da964412021d7e1b7e9984356647"
+}

@@ -1,0 +1,57 @@
+#' achilles_22Q2
+#'
+#' The `achilles` dataset contains the metadata for DepMap’s cancer models/cell
+#' lines, specific to Project Achilles’ 22Q2 CRISPR screens. This dataset can be
+#' loaded into the R environment with the `depmap_achilles` function.
+#'
+#' @format A data frame with 1036 rows and 6 variables:
+#' \describe{
+#'     \item{depmap_id}{cancer cancer cell line foreign key (i.e. "ACH-00001")}
+#'     \item{cell_line}{CCLE name of cancer cell line (i.e. "184A1_BREAST")}
+#'     \item{achilles_n_replicates}{Number of replicates used in Achilles CRISPR
+#'      screen passing QC}
+#'     \item{cell_line_NNMD}{Difference in the means of positive and negative
+#'      controls normalized by the standard deviation of the negative control
+#'      distribution}
+#'     \item{culture_medium}{Medium used to grow cell line}
+#'     \item{cas9_activity}{Percentage of cells remaining GFP negative on days
+#'      12-14 of cas9 activity assay as measured by FACs}
+#' }
+#'
+#' @details This data represents the `Achilles_metadata.csv` file taken from the
+#' 22Q2 [Broad Institute](https://depmap.org/portal/download/) release.
+#'
+#' @section Change log:
+#'
+#' - 22Q1: Initial dataset
+#'
+#' - 22Q2: "culture_type" column was removed
+#'
+#' @docType data
+#'
+#' @import dplyr
+#'
+#' @keywords datasets
+#'
+#' @examples
+#' \dontrun{
+#' depmap_achilles()
+#' }
+#'
+#' @references Tsherniak, A., Vazquez, F., Montgomery, P. G., Weir, B. A.,
+#' Kryukov, G., Cowley, G. S., ... & Meyers, R. M. (2017). Defining a cancer
+#' dependency map. Cell, 170(3), 564-576.
+#'
+#' James M. McFarland, Zandra V. Ho, Guillaume Kugener, Joshua M. Dempster,
+#' Phillip G. Montgomery, Jordan G. Bryan, John M. Krill-Burger, Thomas M.
+#' Green, Francisca Vazquez, Jesse S. Boehm, Todd R. Golub, William C. Hahn,
+#' David E. Root, Aviad Tsherniak. (2018). Improved estimation of cancer
+#' dependencies from large-scale RNAi screens using model-based normalization
+#' and data integration. Nature Communications 9, 1.
+#'
+#' @source DepMap, Broad Institute: https://depmap.org/portal/download/
+#'
+#' @rdname achilles
+#'
+#' @aliases depmap_achilles achilles_22Q1 achilles_22Q2
+achilles <- NULL

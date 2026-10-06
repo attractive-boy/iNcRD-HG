@@ -1,0 +1,98 @@
+[
+  {
+    "name": "tabicl_repo",
+    "url": "https://api.github.com/repos/soda-inria/tabicl",
+    "file": "improve/research/frontier_options_20260912/tabicl_repo.json",
+    "metadata": {
+      "full_name": "soda-inria/tabicl",
+      "html_url": "https://github.com/soda-inria/tabicl",
+      "description": "TabICLv2: An open tabular foundation model",
+      "updated_at": "2026-09-11T21:08:29Z",
+      "pushed_at": "2026-09-02T15:16:57Z",
+      "default_branch": "main",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    }
+  },
+  {
+    "name": "tabicl_readme",
+    "url": "https://raw.githubusercontent.com/soda-inria/tabicl/main/README.md",
+    "file": "improve/research/frontier_options_20260912/tabicl_readme.txt",
+    "excerpts": [
+      "# TabICLv2: An open tabular foundation model",
+      "This repository is the official implementation of **TabICLv2** ([ICML 2026](https://arxiv.org/abs/2602.11139)) ",
+      "and **TabICL** ([ICML 2025](https://arxiv.org/abs/2502.05564)).",
+      "TabICLv2 is a competitive model for tabular classification and regression ",
+      "on the [TabArena](https://tabarena.ai) and [TALENT](https://arxiv.org/abs/2407.00956) benchmarks. ",
+      "with a permissive license.",
+      "On an H100 GPU, TabIClv2 can `fit` and `predict` a dataset ",
+      "which is 10x faster than TabPFN-2.5.",
+      "On Intel Macs, installing PyTorch via `pip` may fail. In that case, install it first with:",
+      "conda install pytorch -c pytorch",
+      "    checkpoint_version=\"tabicl-classifier-v2-20260212.ckpt\",  # pretrained checkpoint version",
+      "    n_jobs=None,  # number of PyTorch threads for CPU inference",
+      "`TabICLRegressor` accepts the same parameters except for the classification-specific ones:",
+      "| Model | Classification checkpoint | Regression checkpoint |",
+      "| **TabICLv2** ([arXiv](https://arxiv.org/abs/2602.11139)) | `tabicl-classifier-v2-20260212.ckpt` (default) | `tabicl-regressor-v2-20260212.ckpt` (default) |",
+      "| **TabICLv1.1** (May 2025, no paper) | `tabicl-classifier-v1.1-20250506.ckpt` | — |",
+      "| **TabICLv1** ([ICML 2025](https://arxiv.org/abs/2502.05564)) | `tabicl-classifier-v1-20250208.ckpt` | — |",
+      "- **TabICLv2**: Our latest model, supporting both classification and regression.",
+      "- **TabICLv1.1**: TabICLv1 post-trained on an early version of the v2 prior. Classification only.",
+      "- **TabICLv1**: Original model. Classification only.",
+      "  TabICLv1 and v1.1 originally used `n_estimators=32`; we reduced the default to 8 afterwards.",
+      "pretrained checkpoint with a full PyTorch training loop, including AdamW with a",
+      "Multi-GPU fine-tuning is auto-detected under `torchrun`:",
+      "torchrun --nproc-per-node=2 finetune_script.py",
+      "walks through the fine-tuning for a binary classification task.",
+      "<img src=\"./docs/figures/tabiclv2_time_series.png\" width=\"60%\" alt=\"Runtimes for different hardware and sample sizes\" style=\"display: block; margin: auto;\">",
+      "`TabICLForecaster` is heavily inspired by [TabPFN-TS](https://arxiv.org/abs/2501.02945v3). We may later improve it to enhance the ability of TabICL for time series forecasting.",
+      "Pre-training code (including synthetic data generation) is available for **both TabICLv1 and TabICLv2**.",
+      "the full recipes (they launch `python -m tabicl.train` under `torchrun` with all arguments set).",
+      "your hardware, then run the three stages in order, e.g. for the TabICLv2 classifier:",
+      "- **TabICLv2** ([arXiv](https://arxiv.org/abs/2602.11139), §4.1): classifier [stage 1](./scripts/train_v2_clf_stage1.sh), [stage 2](./scripts/train_v2_clf_stage2.sh),",
+      "- **TabICLv1**: [stage 1](./scripts/train_stage1.sh), [stage 2](./scripts/train_stage2.sh),"
+    ]
+  },
+  {
+    "name": "tabicl_pyproject",
+    "url": "https://raw.githubusercontent.com/soda-inria/tabicl/main/pyproject.toml",
+    "file": "improve/research/frontier_options_20260912/tabicl_pyproject.txt",
+    "excerpts": [
+      "license = { file = \"LICENSE\" }",
+      "requires-python = \">=3.10\"",
+      "    \"torch>=2.2\",  # to enjoy Flash Attention v2",
+      "    \"xgboost\",  # used in the TabICLv1 prior",
+      "only-include = [\"src/tabicl\", \"figures\", \"LICENSE\", \"README.md\"]"
+    ]
+  },
+  {
+    "name": "tabpfn_repo",
+    "url": "https://api.github.com/repos/PriorLabs/TabPFN",
+    "file": "improve/research/frontier_options_20260912/tabpfn_repo.json",
+    "metadata": {
+      "full_name": "PriorLabs/TabPFN",
+      "html_url": "https://github.com/PriorLabs/TabPFN",
+      "description": "⚡ TabPFN: Foundation Model for Tabular Data ⚡",
+      "updated_at": "2026-09-11T22:40:59Z",
+      "pushed_at": "2026-09-12T04:47:23Z",
+      "default_branch": "main",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    }
+  },
+  {
+    "name": "tabpfn_readme",
+    "url": "https://raw.githubusercontent.com/PriorLabs/TabPFN/main/README.md",
+    "error": "The read operation timed out"
+  }
+]

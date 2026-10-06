@@ -1,0 +1,50 @@
+{
+  "created_at_utc": "2026-09-16T09:06:08.226775+00:00",
+  "family": "kuramoto_phase",
+  "primary_kind": "full",
+  "primary_controls": [
+    "static_phase",
+    "no_phase_rotation"
+  ],
+  "core_parameters": {
+    "width": 64,
+    "heads": 4,
+    "depth": 4,
+    "dropout": 0.1,
+    "folds": 5,
+    "gamma": 0.05,
+    "phase_initialization": "learned bias-free projection of initial node state, shared across heads",
+    "phase_mixing": "per-layer per-head identity plus Xavier normal gain0.1",
+    "mixed_squared_norm_floor": 1e-05,
+    "phase_update_norm_floor": 1e-05,
+    "phase_norm_tolerance": 1e-05,
+    "coupling_qknorm": true,
+    "coupling_qk_scale": true,
+    "coupling_shared_across_layers": true,
+    "phase_update_order": "after feature attention and feedforward",
+    "value_and_output_rotations": true,
+    "typed_edge_rotation": "source phase, before key addition",
+    "phase_parameters": "learned attribute initializer, head mixing, shared coupling projections and scales",
+    "lnc_policy": "identity_strong_reference"
+  },
+  "lrs": [
+    0.001,
+    0.003
+  ],
+  "epochs": 400,
+  "check_interval": 20,
+  "screen_seed": 666,
+  "confirm_seeds": [
+    0,
+    1
+  ],
+  "strong_weight": 0.1,
+  "weight_decay": 0.001,
+  "lnc_policy": "identity_strong_reference",
+  "new_performance_observed": false,
+  "one_broader_oscillatory_family_only": true,
+  "adaptation_sha256": "c13a88359de1402659006603909261ca819624e8083012697f71338031d461c2",
+  "unit_sha256": "d8d387056c654afff5aa1a69627dd909cd1be16b73aa523b17df6692d0300a6b",
+  "smoke_sha256": "63a45c916763ba13e46b7c07982f412099acd1b7921170753ed4f0f9cb18ceb9",
+  "sha256": "750e8c1ce3f4ff4d369ce57cbade5a66ed248c5b2a8551c39712f1680f97d4b4"
+}

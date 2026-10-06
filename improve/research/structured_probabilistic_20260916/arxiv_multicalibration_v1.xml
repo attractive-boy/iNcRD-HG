@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ABh6jAUXq9qOmn7OWu9ypUG2/g0</id>
+  <title>arXiv Query: search_query=(ti:multicalibration OR ti:multiaccuracy OR ti:"multi-calibration") AND (abs:graph OR abs:ranking OR abs:classification) AND submittedDate:"202401010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-09-16T10:12:18Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(ti:multicalibration+OR+(ti:multiaccuracy+OR+ti:%22multi-calibration%22))+AND+((abs:graph+OR+(abs:ranking+OR+abs:classification))+AND+submittedDate:%22202401010000+TO+202609162359%22)&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.21549v1</id>
+    <title>Unbiased Prevalence Estimation with Multicalibrated LLMs</title>
+    <updated>2026-04-23T11:23:34Z</updated>
+    <link href="https://arxiv.org/abs/2604.21549v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.21549v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Estimating the prevalence of a category in a population using imperfect measurement devices (diagnostic tests, classifiers, or large language models) is fundamental to science, public health, and online trust and safety. Standard approaches correct for known device error rates but assume these rates remain stable across populations. We show this assumption fails under covariate shift and that multicalibration, which enforces calibration conditional on the input features rather than just on average, is sufficient for unbiased prevalence estimation under such shift. Standard calibration and quantification methods fail to provide this guarantee. Our work connects recent theoretical work on fairness to a longstanding measurement problem spanning nearly all academic disciplines. A simulation confirms that standard methods exhibit bias growing with shift magnitude, while a multicalibrated estimator maintains near-zero bias. While we focus the discussion mostly on LLMs, our theoretical results apply to any classification model. Two empirical applications -- estimating employment prevalence across U.S. states using the American Community Survey, and classifying political texts across four countries using an LLM -- demonstrate that multicalibration substantially reduces bias in practice, while highlighting that calibration data should cover the key feature dimensions along which target populations may differ.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-23T11:23:34Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Fridolin Linder</name>
+    </author>
+    <author>
+      <name>Thomas Leeper</name>
+    </author>
+    <author>
+      <name>Daniel Haimovich</name>
+    </author>
+    <author>
+      <name>Niek Tax</name>
+    </author>
+    <author>
+      <name>Lorenzo Perini</name>
+    </author>
+    <author>
+      <name>Milan Vojnovic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.11413v2</id>
+    <title>Multicalibration Yields Better Matchings</title>
+    <updated>2026-08-05T14:14:18Z</updated>
+    <link href="https://arxiv.org/abs/2511.11413v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11413v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider the problem of finding the best matching in a weighted graph where we only have access to predictions of the actual stochastic weights, based on an underlying context. If the predictor is the Bayes optimal one, then computing the best matching based on the predicted weights is optimal. However, in practice, this perfect information scenario is not realistic. Given an imperfect predictor, a suboptimal decision rule may compensate for the induced error and thus outperform the standard optimal rule.
+  In this paper, we propose multicalibration as a way to address this problem. This fairness notion requires a predictor to be unbiased on each element of a family of protected sets of contexts. Given a class of matching algorithms $\mathcal C$ and any predictor $γ$ of the edge-weights, we show how to construct a specific multicalibrated predictor $\hat γ$, with the following property. Picking the best matching based on the output of $\hat γ$ is competitive with the best decision rule in $\mathcal C$ applied onto the original predictor $γ$. We complement this result by providing sample complexity bounds, and by performing numerical experiments.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-14T15:45:07Z</published>
+    <arxiv:comment>Accepted at ICML 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Riccardo Colini Baldeschi</name>
+    </author>
+    <author>
+      <name>Simone Di Gregorio</name>
+    </author>
+    <author>
+      <name>Simone Fioravanti</name>
+    </author>
+    <author>
+      <name>Federico Fusco</name>
+    </author>
+    <author>
+      <name>Ido Guy</name>
+    </author>
+    <author>
+      <name>Daniel Haimovich</name>
+    </author>
+    <author>
+      <name>Stefano Leonardi</name>
+    </author>
+    <author>
+      <name>Fridolin Linder</name>
+    </author>
+    <author>
+      <name>Lorenzo Perini</name>
+    </author>
+    <author>
+      <name>Matteo Russo</name>
+    </author>
+    <author>
+      <name>Cem Sirin</name>
+    </author>
+    <author>
+      <name>Niek Tax</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.10575v2</id>
+    <title>Who's the (Multi-)Fairest of Them All: Rethinking Interpolation-Based Data Augmentation Through the Lens of Multicalibration</title>
+    <updated>2025-04-14T19:40:08Z</updated>
+    <link href="https://arxiv.org/abs/2412.10575v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.10575v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Data augmentation methods, especially SoTA interpolation-based methods such as Fair Mixup, have been widely shown to increase model fairness. However, this fairness is evaluated on metrics that do not capture model uncertainty and on datasets with only one, relatively large, minority group. As a remedy, multicalibration has been introduced to measure fairness while accommodating uncertainty and accounting for multiple minority groups. However, existing methods of improving multicalibration involve reducing initial training data to create a holdout set for post-processing, which is not ideal when minority training data is already sparse. This paper uses multicalibration to more rigorously examine data augmentation for classification fairness. We stress-test four versions of Fair Mixup on two structured data classification problems with up to 81 marginalized groups, evaluating multicalibration violations and balanced accuracy. We find that on nearly every experiment, Fair Mixup \textit{worsens} baseline performance and fairness, but the simple vanilla Mixup \textit{outperforms} both Fair Mixup and the baseline, especially when calibrating on small groups. \textit{Combining} vanilla Mixup with multicalibration post-processing, which enforces multicalibration through post-processing on a holdout set, further increases fairness.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-13T21:36:12Z</published>
+    <arxiv:comment>Expanded version of AAAI 2025 main track paper. 8 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Karina Halevy</name>
+    </author>
+    <author>
+      <name>Karly Hou</name>
+    </author>
+    <author>
+      <name>Charumathi Badrinath</name>
+    </author>
+  </entry>
+</feed>

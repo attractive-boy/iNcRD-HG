@@ -1,0 +1,4158 @@
+{
+  "as_of": "2026-09-13",
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%28TITLE_ABS%3A%22foundation+models%22+OR+TITLE_ABS%3A%22deep+learning%22%29+AND+TITLE_ABS%3Aperturbation+AND+%28TITLE_ABS%3Abenchmark+OR+TITLE_ABS%3Abenchmarking+OR+TITLE_ABS%3Aevaluation%29%29+AND+FIRST_PDATE%3A%5B2024-01-01+TO+2026-09-13%5D&format=json&resultType=core&pageSize=25",
+  "response": {
+    "version": "6.9",
+    "hitCount": 156,
+    "nextCursorMark": "AoIIQMZ8iSg1NTgyNDEzNQ==",
+    "nextPageUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=((TITLE_ABS:\"foundation models\" OR TITLE_ABS:\"deep learning\") AND TITLE_ABS:perturbation AND (TITLE_ABS:benchmark OR TITLE_ABS:benchmarking OR TITLE_ABS:evaluation)) AND FIRST_PDATE:[2024-01-01 TO 2026-09-13]&cursorMark=AoIIQMZ8iSg1NTgyNDEzNQ==&resultType=core&format=json",
+    "request": {
+      "queryString": "((TITLE_ABS:\"foundation models\" OR TITLE_ABS:\"deep learning\") AND TITLE_ABS:perturbation AND (TITLE_ABS:benchmark OR TITLE_ABS:benchmarking OR TITLE_ABS:evaluation)) AND FIRST_PDATE:[2024-01-01 TO 2026-09-13]",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 25,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "PPR1302456",
+          "source": "PPR",
+          "doi": "10.64898/2026.08.14.744937",
+          "title": "Signature Recontextualization: Mapping perturbational signatures across biological contexts",
+          "authorString": "Chen A, Girke T, Monti S.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Chen A",
+                "firstName": "Andrew",
+                "lastName": "Chen",
+                "initials": "A"
+              },
+              {
+                "fullName": "Girke T",
+                "firstName": "Thomas",
+                "lastName": "Girke",
+                "initials": "T"
+              },
+              {
+                "fullName": "Monti S",
+                "firstName": "Stefano",
+                "lastName": "Monti",
+                "initials": "S"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Perturbational transcriptomics is a powerful tool for understanding gene function and drug effects, yet predicting how perturbations manifest across different biological contexts remains a central challenge, limiting translation from model systems to clinically relevant tissues. Despite growing interest in this problem, benchmarking efforts have been hindered by inconsistent evaluation tasks, heterogeneous metrics, and limited assessment across perturbation types and biological systems. Here, we introduce a benchmarking framework for cross-context perturbation-signature prediction (a task we define as  signature recontextualization ), grounded in explicit definitions of the prediction task, target-data availability, and evaluation metrics centered on signature recovery. The framework evaluates prediction performance across three target-context data regimes: (1) control only, where only control profiles from the target context are measured; (2) low coverage, where a limited subset of perturbations in the target context are measured; and (3) high coverage, where most perturbations in the target context are measured. This design enables systematic assessment of how prediction performance depends on target-context sample size while providing a standardized basis for comparing methods. We evaluate newly developed projection-based (  projectCor ) and network-based (  netProp ) methods alongside deep learning-based foundation models (scGPT, STACK) and statistical baselines. The benchmark spans four diverse perturbational datasets: CRISPR knockdowns and drug perturbations in cell lines, plus  in vivo chemical perturbations in rat tissues from DrugMatrix, extending evaluation beyond isolated cell-line models to tissue-level responses. Across tasks, projection and network propagation approaches show strong flexibility across perturbation types and biological contexts, and in several cases match or exceed the performance of deep learning and foundation models, suggesting that model complexity does not inherently improve cross-context generalization. We further show that perturbation predictability varies substantially with pathway conservation, transcriptional response strength, and baseline similarity between source and target contexts. All datasets, methods, and evaluation utilities are released as an open-source R package (  sigRecon ), providing a foundation for reproducible benchmarking and future method development.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.08.14.744937"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-08-21",
+          "firstIndexDate": "2026-08-22",
+          "firstPublicationDate": "2026-08-19"
+        },
+        {
+          "id": "PPR1235511",
+          "source": "PPR",
+          "doi": "10.14293/pr2199.003579.v2",
+          "title": "Benchmarking Adversarial Robustness of Deep Learning Models for Perturbation Response Prediction (e.g., scGen, CellOT)",
+          "authorString": "Samanya R.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Samanya R",
+                "firstName": "Raj",
+                "lastName": "Samanya",
+                "initials": "R",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0001-8671-4703"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0009-0001-8671-4703"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "The ability to predict single-cell perturbation responses—how individual cells transcriptionally react to drugs, genetic edits, or environmental changes—is a critical frontier in computational biology. Deep learning models such as scGen and CellOT have emerged as promising frameworks for this task, leveraging latent space mappings and optimal transport to model counterfactual cellular states. However, the practical utility of these models in high-stakes applications (e.g., drug discovery or toxicology) depends not only on their predictive accuracy but critically on their adversarial robustness: their stability and reliability when confronted with small, worst-case input perturbations, noisy measurements, or out-of-distribution samples. Despite the proliferation of perturbation response models, no standardized benchmark exists to evaluate their vulnerability to adversarial attacks. This work presents the first systematic benchmarking framework for assessing the adversarial robustness of deep perturbation response predictors. Using scGen and CellOT as representative architectures, we evaluate model performance under various threat models, including gradient-based attacks on gene expression inputs and latent space interventions. We measure robustness via task-relevant metrics: preservation of biological state identities, fidelity of counterfactual generation, and collapse of out-of-distribution robustness. Our results reveal that both models exhibit significant vulnerability to imperceptible input perturbations, leading to biologically implausible or entirely inverted perturbation responses. Furthermore, we find that standard robustness techniques (adversarial training, input denoising) trade off between nominal accuracy and robust generalization. This benchmark establishes critical safety-aware evaluation protocols for perturbation response models and provides actionable insights for developing more reliable and trustworthy deep learning methods in single-cell genomics.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "ScienceOpen Preprints",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.14293/pr2199.003579.v2"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "versionList": {
+            "version": [
+              {
+                "id": "PPR1207428",
+                "source": "PPR",
+                "firstPublishDate": "2026-05-13",
+                "versionNumber": 1,
+                "pubTypeList": {
+                  "pubType": [
+                    "preprint"
+                  ]
+                },
+                "hasEvaluations": "N"
+              },
+              {
+                "id": "PPR1235511",
+                "source": "PPR",
+                "firstPublishDate": "2026-05-18",
+                "versionNumber": 2,
+                "pubTypeList": {
+                  "pubType": [
+                    "preprint"
+                  ]
+                },
+                "hasEvaluations": "N"
+              }
+            ]
+          },
+          "versionNumber": 2,
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-05-22",
+          "firstIndexDate": "2026-05-22",
+          "firstPublicationDate": "2026-05-18"
+        },
+        {
+          "id": "PPR1207428",
+          "source": "PPR",
+          "doi": "10.14293/pr2199.003579.v1",
+          "title": "Benchmarking Adversarial Robustness of Deep Learning Models for Perturbation Response Prediction (e.g., scGen, CellOT)",
+          "authorString": "Samanya R.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Samanya R",
+                "firstName": "Raj",
+                "lastName": "Samanya",
+                "initials": "R",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0001-8671-4703"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0009-0001-8671-4703"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "The ability to predict single-cell perturbation responses—how individual cells transcriptionally react to drugs, genetic edits, or environmental changes—is a critical frontier in computational biology. Deep learning models such as scGen and CellOT have emerged as promising frameworks for this task, leveraging latent space mappings and optimal transport to model counterfactual cellular states. However, the practical utility of these models in high-stakes applications (e.g., drug discovery or toxicology) depends not only on their predictive accuracy but critically on their adversarial robustness: their stability and reliability when confronted with small, worst-case input perturbations, noisy measurements, or out-of-distribution samples. Despite the proliferation of perturbation response models, no standardized benchmark exists to evaluate their vulnerability to adversarial attacks. This work presents the first systematic benchmarking framework for assessing the adversarial robustness of deep perturbation response predictors. Using scGen and CellOT as representative architectures, we evaluate model performance under various threat models, including gradient-based attacks on gene expression inputs and latent space interventions. We measure robustness via task-relevant metrics: preservation of biological state identities, fidelity of counterfactual generation, and collapse of out-of-distribution robustness. Our results reveal that both models exhibit significant vulnerability to imperceptible input perturbations, leading to biologically implausible or entirely inverted perturbation responses. Furthermore, we find that standard robustness techniques (adversarial training, input denoising) trade off between nominal accuracy and robust generalization. This benchmark establishes critical safety-aware evaluation protocols for perturbation response models and provides actionable insights for developing more reliable and trustworthy deep learning methods in single-cell genomics.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "ScienceOpen Preprints",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.14293/pr2199.003579.v1"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "versionList": {
+            "version": [
+              {
+                "id": "PPR1207428",
+                "source": "PPR",
+                "firstPublishDate": "2026-05-13",
+                "versionNumber": 1,
+                "pubTypeList": {
+                  "pubType": [
+                    "preprint"
+                  ]
+                },
+                "hasEvaluations": "N"
+              },
+              {
+                "id": "PPR1235511",
+                "source": "PPR",
+                "firstPublishDate": "2026-05-18",
+                "versionNumber": 2,
+                "pubTypeList": {
+                  "pubType": [
+                    "preprint"
+                  ]
+                },
+                "hasEvaluations": "N"
+              }
+            ]
+          },
+          "versionNumber": 1,
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-05-14",
+          "firstIndexDate": "2026-05-14",
+          "firstPublicationDate": "2026-05-13"
+        },
+        {
+          "id": "PPR1285697",
+          "source": "PPR",
+          "doi": "10.64898/2026.07.20.739620",
+          "title": "Beyond Expression Prediction: Benchmarking Differential Expression Classification in Single-Cell Perturbation Models",
+          "authorString": "Sun J, He Y, Zhu O, Chen YT.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Sun J",
+                "firstName": "Junwei",
+                "lastName": "Sun",
+                "initials": "J"
+              },
+              {
+                "fullName": "He Y",
+                "firstName": "Yuxun",
+                "lastName": "He",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Zhu O",
+                "firstName": "Ouyang",
+                "lastName": "Zhu",
+                "initials": "O"
+              },
+              {
+                "fullName": "Chen YT",
+                "firstName": "Yiqun",
+                "lastName": "Chen",
+                "initials": "YT"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Accurate predictions of transcriptomic responses to genetic perturbations could unlock our understanding of gene functions and regulatory networks. While a growing number of methods and benchmarks target this task, existing evaluations focus on mean expression accuracy alone. This overlooks differential expression (DE), which captures both mean and variance and forms the basis for biological interpretation and experimental follow-up. Here, we systematically evaluate a diverse set of deep learning and non-deep-learning methods for their ability to predict DE outcomes under two generalization regimes: unseen perturbations within the same cell line, and unseen cellular contexts across cell lines. We find that simple baselines, such as embedding-based nearest neighbors, are competitive and often outperform specialized deep learning models for DE classification across datasets and evaluation metrics. We further show that sparsity calibration, motivated by the structure of single-cell data, substantially improves DE classification for deep learning models that do not explicitly account for sparsity. Together, our findings establish practical baselines and evaluation principles for benchmarking perturbation models on DE prediction.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.07.20.739620"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-07-26",
+          "firstIndexDate": "2026-07-26",
+          "firstPublicationDate": "2026-07-24"
+        },
+        {
+          "id": "42225639",
+          "source": "MED",
+          "pmid": "42225639",
+          "pmcid": "PMC13226705",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13226705"
+            ]
+          },
+          "doi": "10.1038/s41377-026-02347-w",
+          "title": "Universal and transferable attacks on pathology foundation models using microscopic perturbations.",
+          "authorString": "Wang Y, Yang X, Shen CY, Dong S, Pillar N, Ozcan A.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Wang Y",
+                "firstName": "Yuntian",
+                "lastName": "Wang",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Electrical and Computer Engineering Department, University of California, Los Angeles, CA, USA."
+                    },
+                    {
+                      "affiliation": "Bioengineering Department, University of California, Los Angeles, CA, USA."
+                    },
+                    {
+                      "affiliation": "California NanoSystems Institute (CNSI), University of California, Los Angeles, CA, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Yang X",
+                "firstName": "Xilin",
+                "lastName": "Yang",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Electrical and Computer Engineering Department, University of California, Los Angeles, CA, USA."
+                    },
+                    {
+                      "affiliation": "Bioengineering Department, University of California, Los Angeles, CA, USA."
+                    },
+                    {
+                      "affiliation": "California NanoSystems Institute (CNSI), University of California, Los Angeles, CA, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Shen CY",
+                "firstName": "Che-Yung",
+                "lastName": "Shen",
+                "initials": "CY",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Electrical and Computer Engineering Department, University of California, Los Angeles, CA, USA."
+                    },
+                    {
+                      "affiliation": "Bioengineering Department, University of California, Los Angeles, CA, USA."
+                    },
+                    {
+                      "affiliation": "California NanoSystems Institute (CNSI), University of California, Los Angeles, CA, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Dong S",
+                "firstName": "Shuhang",
+                "lastName": "Dong",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Mathematics, University of California, Los Angeles, CA, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Pillar N",
+                "firstName": "Nir",
+                "lastName": "Pillar",
+                "initials": "N",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Pathology, Hadassah Hebrew University Medical Center, Jerusalem, Israel."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Ozcan A",
+                "firstName": "Aydogan",
+                "lastName": "Ozcan",
+                "initials": "A",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0717-683X"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Electrical and Computer Engineering Department, University of California, Los Angeles, CA, USA. ozcan@ucla.edu."
+                    },
+                    {
+                      "affiliation": "Bioengineering Department, University of California, Los Angeles, CA, USA. ozcan@ucla.edu."
+                    },
+                    {
+                      "affiliation": "California NanoSystems Institute (CNSI), University of California, Los Angeles, CA, USA. ozcan@ucla.edu."
+                    },
+                    {
+                      "affiliation": "Department of Surgery, University of California, Los Angeles, CA, USA. ozcan@ucla.edu."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0717-683X"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "15",
+            "journalIssueId": 4204869,
+            "dateOfPublication": "2026 Jun",
+            "monthOfPublication": 6,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-06-01",
+            "journal": {
+              "title": "Light, science & applications",
+              "medlineAbbreviation": "Light Sci Appl",
+              "essn": "2047-7538",
+              "issn": "2095-5545",
+              "isoabbreviation": "Light Sci Appl",
+              "nlmid": "101610753"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "258",
+          "abstractText": "The advent of foundation models initiated a paradigm shift in pathology and optical microscopy. However, these powerful systems also introduce vulnerabilities, making them susceptible to adversarial attacks. To shed light on these potential threats, here we introduce Universal and Transferable Adversarial Perturbations (UTAP) for pathology foundation models that reveal critical vulnerabilities. Optimized using deep learning, UTAP comprises a fixed and weak microscopic noise pattern that, when added to a pathology image, systematically disrupts the feature representation capabilities of foundation models. Therefore, UTAP induces performance drops in downstream tasks that utilize foundation models, including misclassification across a wide range of unseen data distributions. We demonstrate two key features of UTAP: (1) universality: its microscopic perturbation can be applied across diverse field-of-views independent of the dataset that UTAP was developed on, and (2) transferability: its perturbation can successfully degrade the performance of various external, black-box pathology foundation models-never seen before. These indicate that UTAP is not a dedicated attack associated with a specific foundation model or microscopy image dataset, but rather constitutes a broad threat to pathology foundation models and their applications. We evaluated UTAP across various state-of-the-art pathology foundation models on multiple datasets, causing significant drops in their performance with visually imperceptible microscopic modifications to the input images using a fixed noise pattern. The development of these potent attacks establishes a benchmark for model robustness evaluation, highlighting a need for advancing defense mechanisms to ensure the safe/reliable deployment of AI in pathology and optical microscopy.",
+          "affiliation": "Electrical and Computer Engineering Department, University of California, Los Angeles, CA, USA.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "National Center for Interventional Biophotonic Technology NIH P41",
+                "orderIn": 0
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/s41377-026-02347-w"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13226705"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13226705?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "citedByCount": 1,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-06-01",
+          "dateOfCreation": "2026-06-01",
+          "firstIndexDate": "2026-06-02",
+          "fullTextReceivedDate": "2026-06-04",
+          "dateOfRevision": "2026-08-13",
+          "electronicPublicationDate": "2026-06-01",
+          "firstPublicationDate": "2026-06-01"
+        },
+        {
+          "id": "PPR1255171",
+          "source": "PPR",
+          "doi": "10.14293/pr2199.003833.v1",
+          "title": "How Explainable Is Explainable AI? Benchmarking Interpretation Fidelity in Deep Learning Models",
+          "authorString": "Harrison E, James C.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Harrison E",
+                "firstName": "Elizabeth",
+                "lastName": "Harrison",
+                "initials": "E",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0009-1089-0880"
+                }
+              },
+              {
+                "fullName": "James C",
+                "firstName": "Carter",
+                "lastName": "James",
+                "initials": "C",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0008-8118-4230"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0009-0008-8118-4230"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0009-1089-0880"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "The rapid proliferation of Explainable AI (XAI) methods has promised to demystify deep learning black boxes, yet the fidelity of these explanations—how accurately they reflect a model’s true decision-making process—remains critically under-evaluated. This paper introduces a systematic benchmarking framework to quantify interpretation fidelity across six widely used XAI techniques (including LIME, SHAP, Grad-CAM, and Integrated Gradients) on three deep learning architectures (CNNs, ResNets, and Transformers) applied to image and text classification tasks. Using perturbation-based ground-truth simulation, insertion/deletion metrics, and a novel “explanation sensitivity” score, we find that many popular methods exhibit surprisingly low fidelity, frequently attributing importance to features that the model demonstrably ignores. Notably, no single XAI method consistently outperforms others across all architectures or data modalities, and some post-hoc explanations correlate no better than random baselines under adversarial input perturbations. Our results expose a fundamental reliability gap in current explainability techniques, raising concerns about their practical utility in high-stakes domains such as healthcare and autonomous systems. The benchmark and datasets are released as an open-source evaluation suite to foster more rigorous fidelity testing in future XAI research.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "ScienceOpen Preprints",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.14293/pr2199.003833.v1"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "versionList": {
+            "version": [
+              {
+                "id": "PPR1255171",
+                "source": "PPR",
+                "firstPublishDate": "2026-06-15",
+                "versionNumber": 1,
+                "pubTypeList": {
+                  "pubType": [
+                    "preprint"
+                  ]
+                },
+                "hasEvaluations": "N"
+              }
+            ]
+          },
+          "versionNumber": 1,
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-06-19",
+          "firstIndexDate": "2026-06-19",
+          "firstPublicationDate": "2026-06-15"
+        },
+        {
+          "id": "PPR1261830",
+          "source": "PPR",
+          "doi": "10.64898/2026.06.23.734131",
+          "title": "Learning Fragmentation Physics or Exploiting Sequence Priors? Benchmarking Bias in Deep Learning Models for De Novo Peptide Sequencing",
+          "authorString": "Li J, Röst H.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Li J",
+                "firstName": "Jiayi",
+                "lastName": "Li",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0009-4256-1483"
+                }
+              },
+              {
+                "fullName": "Röst H",
+                "firstName": "Hannes",
+                "lastName": "Röst",
+                "initials": "H",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0990-7488"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0990-7488"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0009-4256-1483"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Deep learning models have advanced de novo peptide sequencing, but their predictions may reflect both physics-based spectral evidence and learned peptide-sequence priors. Systematically measuring such prior-associated behavior is important for benchmarking model robustness beyond conventional proteomics data. Here, we introduce the Prior Bias Index (PBI), a general framework for measuring the extent to which model behavior shifts toward prior-associated reference patterns under controlled conditions, and implement it as DeNovo-PBI, a benchmark for quantifying prior bias in de novo peptide sequencing models. DeNovo-PBI combines benchmark dataset construction,  in silico sequence and spectral perturbation workflows, PBI-based metrics, and analysis algorithms to evaluate three forms of prior-associated behavior: sequence-distribution dependence, database amino-acid-pair order preference, and mutation-group prediction consistency under shared sequence context. In addition to experimentally acquired peptide spectra, we generated  in silico spectra from random, natural, and mutated peptide sequences and selectively removed fragment ions that distinguish N-terminal residue orders. Across these assays, deep learning models showed peptide-sequence-distribution-dependent performance and strong directional amino-acid-pair order preferences even when order-diagnostic spectral evidence was removed. DeNovo-PBI provides a quantitative benchmark for measuring, comparing, and interpreting learned bias in de novo peptide sequencing models.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.06.23.734131"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-06-30",
+          "firstIndexDate": "2026-07-02",
+          "firstPublicationDate": "2026-06-29"
+        },
+        {
+          "id": "PPR1303256",
+          "source": "PPR",
+          "doi": "10.64898/2026.08.21.746324",
+          "title": "On the robustness of scRNA-seq foundation models for plant perturbation response prediction under cross-experiment shift",
+          "authorString": "Burda MF, Bonazzola R, Valli A, Castrillo G, Stegmayer G, Ferrante E, Milone D.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Burda MF",
+                "firstName": "Fernandez",
+                "lastName": "Burda",
+                "initials": "MF"
+              },
+              {
+                "fullName": "Bonazzola R",
+                "lastName": "Bonazzola",
+                "initials": "R"
+              },
+              {
+                "fullName": "Valli A",
+                "firstName": "A.A.",
+                "lastName": "Valli",
+                "initials": "A"
+              },
+              {
+                "fullName": "Castrillo G",
+                "lastName": "Castrillo",
+                "initials": "G"
+              },
+              {
+                "fullName": "Stegmayer G",
+                "lastName": "Stegmayer",
+                "initials": "G"
+              },
+              {
+                "fullName": "Ferrante E",
+                "lastName": "Ferrante",
+                "initials": "E"
+              },
+              {
+                "fullName": "Milone D",
+                "firstName": "D.H.",
+                "lastName": "Milone",
+                "initials": "D"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Foundation models for single-cell transcriptomics promise to learn generalizable representations of cellular states. However, recent evidence suggests they often fail to outperform simple machine learning baselines. Furthermore, their ability to generalize across unseen experimental conditions remains poorly understood, particularly in plants, where rigorous evaluation beyond cell type annotation and batch integration is lacking. To address this, we introduce an  Arabidopsis thaliana foundation model, scAraFM, and benchmark it across several perturbation conditions under three increasingly challenging protocols: random splits from a single experiment, replicate-based splits, and cross-experiment transfer learning. We found that random splits overestimate performance by up to 30 points relative to cross-experiment evaluations. Across representation strategies, preserving gene identity consistently outperforms the standard pooled embeddings. Moreover, simple baselines using raw reads remain competitive in single-experiment settings, challenging current claims of universal advantage of foundation models. In contrast, under cross-experiment transfer, pretrained representations show added value, particularly with few labelled samples, suggesting that the benefits of foundation models emerge precisely in the regimes that matter for practical deployment. Overall, our results demonstrate that conclusions about foundation models depend critically on the evaluation design, and that preserving per-gene structure aids generalization in downstream tasks, supporting robust predictions across unseen experimental contexts.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.08.21.746324"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by-nc-nd",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-08-24",
+          "firstIndexDate": "2026-08-24",
+          "firstPublicationDate": "2026-08-22"
+        },
+        {
+          "id": "PPR1213794",
+          "source": "PPR",
+          "doi": "10.64898/2026.04.20.719650",
+          "title": "Signal, Bounds, and Baselines: Principles for Evaluating Virtual Cell Perturbation Models",
+          "authorString": "Vollenweider M, Bühlmann P.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Vollenweider M",
+                "firstName": "Michael",
+                "lastName": "Vollenweider",
+                "initials": "M",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-8193-7986"
+                }
+              },
+              {
+                "fullName": "Bühlmann P",
+                "firstName": "Peter",
+                "lastName": "Bühlmann",
+                "initials": "P"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-8193-7986"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Foundation models and deep learning systems are increasingly proposed as core components of “virtual cells” capable of forecasting transcriptomic responses to unseen perturbations. Yet rigorous evaluation of perturbation prediction in high-dimensional gene expression space remains challenging, raising concerns of reported performances. Here, we introduce the SBB principles (Signal, Bounds, and Baselines) for evaluating biological perturbation prediction. The Signal pillar introduces diagnostic meta-metrics and promotes differentially expressed gene (DEG)-based weighting or filtering to verify and recover metric sensitivity to biological signal masked by high-dimensional noise. The Bounds pillar provides perturbation-wise metric calibration against empirical reference points, transforming raw metric values into interpretable quantities that clarify the actual scale of model improvements. The Baselines pillar establishes a hierarchy of interpretable linear models that serve as rigorous performance floors. Applying these principles across seven transcriptomic perturbation datasets, including single and double perturbations, we demonstrate that complex deep learning methods, including foundation models, often still fail to meaningfully surpass simple linear baselines, and that substantial room for improvement remains even where they do. These principles provide a critical standard for distinguishing genuine biological signal from statistical artifacts and for guiding more robust model development.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "214865",
+                "agency": "Swiss National Science Foundation",
+                "acronym": "SNSF_",
+                "orderIn": 0
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.04.20.719650"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 5,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-05-19",
+          "firstIndexDate": "2026-05-19",
+          "firstPublicationDate": "2026-04-22"
+        },
+        {
+          "id": "40759747",
+          "source": "MED",
+          "pmid": "40759747",
+          "pmcid": "PMC12328236",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC12328236"
+            ]
+          },
+          "doi": "10.1038/s41592-025-02772-6",
+          "title": "Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines.",
+          "authorString": "Ahlmann-Eltze C, Huber W, Anders S.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Ahlmann-Eltze C",
+                "firstName": "Constantin",
+                "lastName": "Ahlmann-Eltze",
+                "initials": "C",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3762-068X"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "BioQuant, University of Heidelberg, Heidelberg, Germany. constantin.ahlmann@embl.de."
+                    },
+                    {
+                      "affiliation": "Genome Biology Unit, European Molecular Biology Laboratory (EMBL), Heidelberg, Germany. constantin.ahlmann@embl.de."
+                    },
+                    {
+                      "affiliation": "UCL Cancer Institute, London, UK. constantin.ahlmann@embl.de."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Huber W",
+                "firstName": "Wolfgang",
+                "lastName": "Huber",
+                "initials": "W",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0474-2218"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Genome Biology Unit, European Molecular Biology Laboratory (EMBL), Heidelberg, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Anders S",
+                "firstName": "Simon",
+                "lastName": "Anders",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4868-1805"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "BioQuant, University of Heidelberg, Heidelberg, Germany."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0474-2218"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3762-068X"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4868-1805"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "8",
+            "volume": "22",
+            "journalIssueId": 3991176,
+            "dateOfPublication": "2025 Aug",
+            "monthOfPublication": 8,
+            "yearOfPublication": 2025,
+            "printPublicationDate": "2025-08-01",
+            "journal": {
+              "title": "Nature methods",
+              "medlineAbbreviation": "Nat Methods",
+              "essn": "1548-7105",
+              "issn": "1548-7091",
+              "isoabbreviation": "Nat Methods",
+              "nlmid": "101215604"
+            }
+          },
+          "pubYear": "2025",
+          "pageInfo": "1657-1661",
+          "abstractText": "Recent research in deep-learning-based foundation models promises to learn representations of single-cell data that enable prediction of the effects of genetic perturbations. Here we compared five foundation models and two other deep learning models against deliberately simple baselines for predicting transcriptome changes after single or double perturbations. None outperformed the baselines, which highlights the importance of critical benchmarking in directing and evaluating method development.",
+          "affiliation": "BioQuant, University of Heidelberg, Heidelberg, Germany. constantin.ahlmann@embl.de.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "810296",
+                "agency": "European Research Council",
+                "orderIn": 0
+              },
+              {
+                "grantId": "00.022.2019",
+                "agency": "Klaus Tschira Stiftung (Klaus Tschira Foundation)",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Gene Expression Profiling",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computational Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Algorithms"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Single-Cell Analysis",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Transcriptome"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Deep Learning"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/s41592-025-02772-6"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12328236"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12328236?pdf=render"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "PPR913188",
+                "source": "PPR",
+                "type": "Preprint in",
+                "note": "CrossRef Pre-print loader",
+                "orderIn": 10002
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "citedByCount": 143,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2025-08-07",
+          "dateOfCreation": "2025-08-04",
+          "firstIndexDate": "2025-08-05",
+          "fullTextReceivedDate": "2025-11-29",
+          "dateOfRevision": "2025-08-09",
+          "electronicPublicationDate": "2025-08-04",
+          "firstPublicationDate": "2025-08-04"
+        },
+        {
+          "id": "PPR1090426",
+          "source": "PPR",
+          "doi": "10.1101/2025.09.22.677811",
+          "title": "Single Cell Foundation Models Evaluation (scFME) for In-Silico Perturbation",
+          "authorString": "Boylan J, Solovyeva E, Bouiller T, Liu X, Hoersch S, Ataman B, Jenkins J, Devarakonda M.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Boylan J",
+                "firstName": "James",
+                "lastName": "Boylan",
+                "initials": "J"
+              },
+              {
+                "fullName": "Solovyeva E",
+                "firstName": "Elizaveta",
+                "lastName": "Solovyeva",
+                "initials": "E",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3093-4774"
+                }
+              },
+              {
+                "fullName": "Bouiller T",
+                "firstName": "Theophile",
+                "lastName": "Bouiller",
+                "initials": "T"
+              },
+              {
+                "fullName": "Liu X",
+                "firstName": "Xiong",
+                "lastName": "Liu",
+                "initials": "X",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4522-7228"
+                }
+              },
+              {
+                "fullName": "Hoersch S",
+                "firstName": "Sebastian",
+                "lastName": "Hoersch",
+                "initials": "S"
+              },
+              {
+                "fullName": "Ataman B",
+                "firstName": "Bulent",
+                "lastName": "Ataman",
+                "initials": "B"
+              },
+              {
+                "fullName": "Jenkins J",
+                "firstName": "Jeremy",
+                "lastName": "Jenkins",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9795-0771"
+                }
+              },
+              {
+                "fullName": "Devarakonda M",
+                "firstName": "Murthy",
+                "lastName": "Devarakonda",
+                "initials": "M",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3418-8924"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9795-0771"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3093-4774"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3418-8924"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4522-7228"
+              }
+            ]
+          },
+          "pubYear": "2025",
+          "abstractText": "Foundation models pre-trained on large single-cell RNA atlases offer a compelling alternative to in-vitro experimentation for understanding gene regulatory networks and conducting gene perturbation analyses, with significant implications for target identification. Numerous foundation models have been developed, building upon early efforts such as Geneformer and scGPT. Hyperparameter optimization also results in multiple variants which require comparative analysis. Current benchmarking approaches focus on feature-based assessments or intuitive biological and statistical tasks, which may not align with the models’ training objectives. A recent study proposed a systematic benchmarking framework; however, its scope was limited to pre-trained (zero-shot) models. To address these limitations, we propose Single-Cell Foundation Model Evaluation (scFME)—a systematic method designed to benchmark fine-tuned foundation models for insilico perturbation (ISP). scFME ensures comprehensive and robust assessment by requiring sufficient separation between control and perturbed cells at the outset and by quantifying ISP accuracy against zero and random perturbation baselines. Furthermore, scFME enables exploration of model performance across distinct gene categories, facilitating biological interpretation and functional relevance. Using this framework, we evaluated several commonly used models (and some of their variants) and demonstrated that the methodology effectively characterizes their performance in ISP studies. Our results position scFME as a versatile and rigorous methodology for evaluating and comparing current and future foundation models.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2025
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1101/2025.09.22.677811"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 3,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2025-09-26",
+          "firstIndexDate": "2025-09-26",
+          "firstPublicationDate": "2025-09-24"
+        },
+        {
+          "id": "42121287",
+          "source": "MED",
+          "pmid": "42121287",
+          "pmcid": "PMC13162514",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13162514"
+            ]
+          },
+          "doi": "10.1186/s13059-026-04104-z",
+          "title": "scArchon: a scalable benchmarking framework for assessing single-cell perturbation models.",
+          "authorString": "Radig J, Droit R, Doncevic D, Li A, Bui DT, Herfurth L, Kühn T, Herrmann C.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Radig J",
+                "firstName": "Jean",
+                "lastName": "Radig",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Pharmacy and Molecular Biotechnology (IPMB), Heidelberg University, Heidelberg, Germany. jean.radig@bioquant.uni-heidelberg.de."
+                    },
+                    {
+                      "affiliation": "BioQuant, Heidelberg University, Heidelberg, Germany. jean.radig@bioquant.uni-heidelberg.de."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Droit R",
+                "firstName": "Robin",
+                "lastName": "Droit",
+                "initials": "R",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Pharmacy and Molecular Biotechnology (IPMB), Heidelberg University, Heidelberg, Germany."
+                    },
+                    {
+                      "affiliation": "BioQuant, Heidelberg University, Heidelberg, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Doncevic D",
+                "firstName": "Daria",
+                "lastName": "Doncevic",
+                "initials": "D",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Pharmacy and Molecular Biotechnology (IPMB), Heidelberg University, Heidelberg, Germany."
+                    },
+                    {
+                      "affiliation": "BioQuant, Heidelberg University, Heidelberg, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li A",
+                "firstName": "Albert",
+                "lastName": "Li",
+                "initials": "A",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Pharmacy and Molecular Biotechnology (IPMB), Heidelberg University, Heidelberg, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Bui DT",
+                "firstName": "Duc Thien",
+                "lastName": "Bui",
+                "initials": "DT",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Pharmacy and Molecular Biotechnology (IPMB), Heidelberg University, Heidelberg, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Herfurth L",
+                "firstName": "Luis",
+                "lastName": "Herfurth",
+                "initials": "L",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0000-9933-3056"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Pharmacy and Molecular Biotechnology (IPMB), Heidelberg University, Heidelberg, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Kühn T",
+                "firstName": "Thaddeus",
+                "lastName": "Kühn",
+                "initials": "T",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Pharmacy and Molecular Biotechnology (IPMB), Heidelberg University, Heidelberg, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Herrmann C",
+                "firstName": "Carl",
+                "lastName": "Herrmann",
+                "initials": "C",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Pharmacy and Molecular Biotechnology (IPMB), Heidelberg University, Heidelberg, Germany. carl.herrmann@uni-heidelberg.de."
+                    },
+                    {
+                      "affiliation": "BioQuant, Heidelberg University, Heidelberg, Germany. carl.herrmann@uni-heidelberg.de."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0009-0000-9933-3056"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "27",
+            "journalIssueId": 4193371,
+            "dateOfPublication": "2026 May",
+            "monthOfPublication": 5,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-05-01",
+            "journal": {
+              "title": "Genome biology",
+              "medlineAbbreviation": "Genome Biol",
+              "essn": "1474-760X",
+              "issn": "1474-7596",
+              "isoabbreviation": "Genome Biol",
+              "nlmid": "100960660"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "162",
+          "abstractText": "<h4>Background</h4>The accurate prediction of cellular responses to perturbations, such as drug treatments, remains a pivotal challenge in single-cell transcriptomics. While numerous deep learning tools have been developed for this task, their systematic benchmarking across diverse datasets and performance metrics has been limited.<h4>Results</h4>Here, we present scArchon, a reproducible, modular benchmarking platform built on Snakemake. It is designed to evaluate perturbation response prediction tools in an unbiased and extensible manner. Employing six representative single-cell RNA-seq datasets, we compare leading methods such as scGen, CPA, trVAE, scPRAM, scVIDR, scDisInFact, SCREEN, scPreGAN, and CellOT against baselines. We assess model performance using a composite of statistical and biological metrics. Our analysis reveals heterogeneous performance. While methods like trVAE, scGen, scPRAM, and scVIDR achieve robust results across multiple datasets, other tools occasionally underperform even compared to linear or control baselines. Notably, models with favorable quantitative scores may fail to retain key biological perturbation signatures, underscoring the need for gene-level evaluation.<h4>Conclusions</h4>scArchon provides a unified, extensible foundation for large-scale, standardized benchmarking of perturbation prediction tools, facilitating methodological transparency and accelerating development in this rapidly evolving field. We encourage adoption of scArchon and sharing of containerized tools to drive progress in single-cell perturbation modeling.",
+          "affiliation": "Institute of Pharmacy and Molecular Biotechnology (IPMB), Heidelberg University, Heidelberg, Germany. jean.radig@bioquant.uni-heidelberg.de.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Carl-Zeiss-Stiftung",
+                "orderIn": 0
+              },
+              {
+                "agency": "Medizinische Fakultät Heidelberg der Universität Heidelberg",
+                "orderIn": 0
+              },
+              {
+                "grantId": "HE 7201/4-1",
+                "agency": "Deutsche Forschungsgemeinschaft",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Software"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Benchmarking"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Single-Cell Analysis",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Single-Cell Gene Expression Analysis"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1186/s13059-026-04104-z"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13162514"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13162514?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "citedByCount": 5,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "geo",
+              "arrayexpress",
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-07-16",
+          "dateOfCreation": "2026-05-13",
+          "firstIndexDate": "2026-05-15",
+          "fullTextReceivedDate": "2026-05-20",
+          "dateOfRevision": "2026-08-13",
+          "electronicPublicationDate": "2026-05-12",
+          "firstPublicationDate": "2026-05-12"
+        },
+        {
+          "id": "PPR1303247",
+          "source": "PPR",
+          "doi": "10.64898/2026.08.21.746242",
+          "title": "A novel benchmark dataset for enzyme function prediction reveals the limitations of state-of-the-art models",
+          "authorString": "Sartori J, Guimarães ACR, de Almeida Machado L.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Sartori J",
+                "firstName": "João",
+                "lastName": "Sartori",
+                "initials": "J"
+              },
+              {
+                "fullName": "Guimarães ACR",
+                "firstName": "Ana Carolina Ramos",
+                "lastName": "Guimarães",
+                "initials": "ACR"
+              },
+              {
+                "fullName": "de Almeida Machado L",
+                "firstName": "Lucas",
+                "lastName": "de Almeida Machado",
+                "initials": "L"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Accurate computational prediction of enzyme function, standardized by Enzyme Commission (EC) numbers, is essential for large-scale genome annotation and generative enzyme design. However, it remains unclear whether state-of-the-art predictors learn the intrinsic structural determinants of catalytic activity or merely rely on global sequence similarity to annotated homologues. To address this gap, we introduce EnzymARC, a novel benchmark dataset of putative non-functional decoy sequences generated via structure-guided, systematic disruption of active sites (targeting catalytic residues and surrounding 5 Å, 10 Å, and 15 Å radii) from experimentally annotated enzymes. We evaluated three distinct prediction paradigms against this dataset: homology-based annotation (DIAMOND), contrastive learning with protein language models (CLEAN), and a deep learning model incorporating non-enzyme discrimination (DeepEC). Our findings reveal that current models are highly vulnerable to phylogenetic shortcuts. Both DIAMOND and CLEAN exhibited false positive rates exceeding 90% for low-perturbation decoys, confidently assigning the original EC numbers despite the destruction of the catalytic machinery. While DeepEC demonstrated improved sensitivity at higher perturbation levels—highlighting the benefit of negative training examples—all models struggled to identify targeted active-site disruptions. We demonstrate that modern EC predictors largely fail to distinguish catalytically incompetent variants from functional enzymes, and we propose that integrating structure-aware negative examples into both training and benchmarking is critical for developing functionally robust models in computational enzymology.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.08.21.746242"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-08-24",
+          "firstIndexDate": "2026-08-24",
+          "firstPublicationDate": "2026-08-22"
+        },
+        {
+          "id": "PPR1264648",
+          "source": "PPR",
+          "doi": "10.64898/2026.06.28.735106",
+          "title": "Tabular Foundation Models Are Competitive Cellular Perturbation Predictors Across Biological Scales",
+          "authorString": "Palla G, Hillsley A, Kim Y, Royer LA.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Palla G",
+                "firstName": "Giovanni",
+                "lastName": "Palla",
+                "initials": "G",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8004-4462"
+                }
+              },
+              {
+                "fullName": "Hillsley A",
+                "firstName": "Alexander",
+                "lastName": "Hillsley",
+                "initials": "A",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7920-2104"
+                }
+              },
+              {
+                "fullName": "Kim Y",
+                "firstName": "Yang-Joon",
+                "lastName": "Kim",
+                "initials": "Y",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-1742-5657"
+                }
+              },
+              {
+                "fullName": "Royer LA",
+                "firstName": "Loic",
+                "lastName": "Royer",
+                "initials": "LA",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-9991-9724"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7920-2104"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8004-4462"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-9991-9724"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-1742-5657"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Predicting how cells respond to genetic and chemical perturbations is a central challenge in drug discovery and functional genomics. A growing ecosystem of specialized single-cell foundation models has been developed to address this problem, yet their practical advantage over domain-agnostic approaches remains unclear. Here we evaluate the power of Tabular Foundation Models such as TabICL and TabPFN, general-purpose pre-trained regression models, against domain-specific architectures including PRESAGE, scGPT, scLAMBDA, STACK and Prophet across four complementary evaluation settings: cell-level in-context cross-cell-type prediction, pseudobulk perturbation prediction on five Perturb-seq datasets of cell-lines, a genome-wide CRISPR screen in primary human CD4  + T cells, and embryo-level cell-type composition prediction in a zebrafish developmental perturbation atlas. In the cell-level cross-cell type perturbation prediction, Tabular Foundation Models perform on par or better than specialized models. On pseudobulk perturbation prediction, Tabular Foundation Models consistently out-perform specialized baselines across multiple evaluation metrics and datasets. On whole-embryo cell-type composition prediction, Tabular Foundation Models are competitive with specialized baselines. These results demonstrate that general-purpose tabular in-context learning provides a strong and scalable alternative to bespoke biological architectures for perturbation response modeling across cell systems and scales.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.06.28.735106"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 1,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-07-03",
+          "firstIndexDate": "2026-07-03",
+          "firstPublicationDate": "2026-07-01"
+        },
+        {
+          "id": "42715312",
+          "source": "MED",
+          "pmid": "42715312",
+          "doi": "10.1126/sciadv.aed3414",
+          "title": "A systematic comparison of single-cell perturbation response prediction models.",
+          "authorString": "Li L, You Y, Fu Y, Liao W, Fan X, Lu S, Cao Y, Li B, Ren W, Kong J, Zheng S, Chen J, Liu X, Tian L.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Li L",
+                "firstName": "Lanxiang",
+                "lastName": "Li",
+                "initials": "L",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2921-9105"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "GMU-GIBH Joint School of Life Sciences, Guangzhou Medical University, Guangzhou, China."
+                    },
+                    {
+                      "affiliation": "Guangzhou National Laboratory, Guangzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "You Y",
+                "firstName": "Yue",
+                "lastName": "You",
+                "initials": "Y",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-3883-445X"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guangzhou National Laboratory, Guangzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Fu Y",
+                "firstName": "Yunlin",
+                "lastName": "Fu",
+                "initials": "Y",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0002-8292-3169"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guangzhou National Laboratory, Guangzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Liao W",
+                "firstName": "Wenyu",
+                "lastName": "Liao",
+                "initials": "W",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "The University of Hong Kong, Hong Kong, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Fan X",
+                "firstName": "Xueying",
+                "lastName": "Fan",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Life Sciences, Westlake University, Hangzhou, China."
+                    },
+                    {
+                      "affiliation": "Research Center for Industries of the Future, Westlake University, Hangzhou, China."
+                    },
+                    {
+                      "affiliation": "Westlake Laboratory of Life Sciences and Biomedicine, Hangzhou, China."
+                    },
+                    {
+                      "affiliation": "Westlake Institute for Advanced Study, Hangzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lu S",
+                "firstName": "Shihong",
+                "lastName": "Lu",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0005-3787-0063"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guangzhou National Laboratory, Guangzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Cao Y",
+                "firstName": "Ye",
+                "lastName": "Cao",
+                "initials": "Y",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0007-4999-2185"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guangzhou National Laboratory, Guangzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li B",
+                "firstName": "Bo",
+                "lastName": "Li",
+                "initials": "B",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guangzhou National Laboratory, Guangzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Ren W",
+                "firstName": "Wenle",
+                "lastName": "Ren",
+                "initials": "W",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0002-5376-2634"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guangzhou National Laboratory, Guangzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Kong J",
+                "firstName": "Jiaming",
+                "lastName": "Kong",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Renaissance Era Innovation Technology Co., Ltd., Beijing, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zheng S",
+                "firstName": "Shuangjia",
+                "lastName": "Zheng",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9747-4285"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Global Institute of Future Technology, Shanghai Jiao Tong University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Chen J",
+                "firstName": "Jizheng",
+                "lastName": "Chen",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guangzhou National Laboratory, Guangzhou, China."
+                    },
+                    {
+                      "affiliation": "State Key Laboratory of Respiratory Disease, National Clinical Research Center for Respiratory Disease, Guangzhou Institute of Respiratory Health, The First Affiliated Hospital of Guangzhou Medical University, Guangzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Liu X",
+                "firstName": "Xiaodong",
+                "lastName": "Liu",
+                "initials": "X",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-9315-3406"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Life Sciences, Westlake University, Hangzhou, China."
+                    },
+                    {
+                      "affiliation": "Research Center for Industries of the Future, Westlake University, Hangzhou, China."
+                    },
+                    {
+                      "affiliation": "Westlake Laboratory of Life Sciences and Biomedicine, Hangzhou, China."
+                    },
+                    {
+                      "affiliation": "Westlake Institute for Advanced Study, Hangzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Tian L",
+                "firstName": "Luyi",
+                "lastName": "Tian",
+                "initials": "L",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-3420-3685"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "GMU-GIBH Joint School of Life Sciences, Guangzhou Medical University, Guangzhou, China."
+                    },
+                    {
+                      "affiliation": "Guangzhou National Laboratory, Guangzhou, China."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9747-4285"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-9315-3406"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2921-9105"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3420-3685"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3883-445X"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0002-5376-2634"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0002-8292-3169"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0005-3787-0063"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0007-4999-2185"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "37",
+            "volume": "12",
+            "journalIssueId": 4260116,
+            "dateOfPublication": "2026 Sep",
+            "monthOfPublication": 9,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-09-01",
+            "journal": {
+              "title": "Science advances",
+              "medlineAbbreviation": "Sci Adv",
+              "essn": "2375-2548",
+              "issn": "2375-2548",
+              "isoabbreviation": "Sci Adv",
+              "nlmid": "101653440"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "eaed3414",
+          "abstractText": "Predicting single-cell transcriptional responses to perturbations is central to dissecting gene regulation and accelerating therapeutic design, yet the field lacks a rigorous, task-spanning assessment of model behavior. We present a large-scale benchmark of 13 representative methods and baselines across 25 datasets spanning diverse perturbation modalities and species, including two primary immune-cell drug-response resources. We evaluated three core tasks-generalization to unseen single-gene perturbations, prediction of combinatorial interactions, and transfer across cell types-using 24 metrics covering expression-level accuracy, relative changes, differential expression (DE) recovery, and distributional similarity. Across tasks, performance depended strongly on perturbation effect size and evaluation perspective: Expression-level agreement was the highest for small-effect perturbations resembling controls, whereas delta- and DE-based metrics improved with larger effects, providing clearer signals. Models shared a conservative bias, with fine-tuned foundation models compressing variance and underestimating synergistic effects in combinations. PerturbNet showed superior recovery of DE signatures in Tasks 1 and 2, while no method consistently generalized across cell types in Task 3, where biological consistency dominated outcomes. This benchmark establishes current methodological limits, clarifies that different metrics probe distinct biological signals rather than redundant summaries of the same prediction problem, and provides a foundation for developing virtual-cell models that more faithfully capture heterogeneous perturbation responses.",
+          "affiliation": "GMU-GIBH Joint School of Life Sciences, Guangzhou Medical University, Guangzhou, China.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Comparative Study",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gene Expression Profiling"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computational Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Gene Expression Regulation"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Single-Cell Analysis",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Single-Cell Gene Expression Analysis"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/sciadv.aed3414"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "PPR958622",
+                "source": "PPR",
+                "type": "Preprint in",
+                "note": "Link created based on a title-first author match",
+                "orderIn": 10002
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2026-09-09",
+          "dateOfCreation": "2026-09-09",
+          "firstIndexDate": "2026-09-10",
+          "dateOfRevision": "2026-09-09",
+          "electronicPublicationDate": "2026-09-09",
+          "firstPublicationDate": "2026-09-09"
+        },
+        {
+          "id": "PPR1285137",
+          "source": "PPR",
+          "doi": "10.21203/rs.3.rs-10461225/v1",
+          "title": "When Do Single-Cell Foundation Models Beat PCA? A Simulation-Based Empirical Analysis of Label Scarcity and Perturbation Generalization",
+          "authorString": "Chen L.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Chen L",
+                "firstName": "Liu",
+                "lastName": "Chen",
+                "initials": "L"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "<title>Abstract</title>  <p>Single-cell foundation models are often evaluated on broad benchmark suites, but the empirical question that matters for everyday use is narrower: when should a researcher expect a pretrained representation to beat a classical pipeline such as highly variable gene selection, PCA, and a simple readout? We study this question with a controlled, literature-calibrated simulation rather than a new large checkpoint benchmark. The simulation isolates two regimes where the current literature makes conflicting predictions: low-label cell type annotation, where foundation models may help by providing a reusable biological prior, and perturbation-response prediction, where recent benchmarks report that simple linear and PCA baselines remain very hard to beat. In 10 replicated annotation worlds and 28 replicated perturbation worlds, stylized foundation-model representations improved macro-F1 most strongly when only one to five labeled cells per class were available. At five labels per class, scGPT-like and scFoundation-like embeddings exceeded the HVG-PCA baseline by 0.11–0.19 macro-F1 across donor-holdout and rare-subtype regimes. With 50 labels per class, however, the advantage largely collapsed: HVG-PCA matched or nearly matched the best foundation-style representation in the matched-donor setting. In perturbation prediction, the PCA-ridge baseline tied the best foundation-style method on seen regulatory neighborhoods and outperformed it on novel neighborhoods (Pearson r = 0.700 versus 0.673 for the scFoundation-like readout). These results support a conservative interpretation of the field: pretraining is most useful as a label-efficiency prior for annotation, while perturbation generalization still requires stronger evidence than current foundation-model benchmarks usually provide.</p>",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "Research Square",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.21203/rs.3.rs-10461225/v1"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "versionList": {
+            "version": [
+              {
+                "id": "PPR1285137",
+                "source": "PPR",
+                "firstPublishDate": "2026-07-24",
+                "versionNumber": 1,
+                "pubTypeList": {
+                  "pubType": [
+                    "preprint"
+                  ]
+                },
+                "hasEvaluations": "N"
+              }
+            ]
+          },
+          "versionNumber": 1,
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-07-25",
+          "firstIndexDate": "2026-07-25",
+          "firstPublicationDate": "2026-07-24"
+        },
+        {
+          "id": "41381899",
+          "source": "MED",
+          "pmid": "41381899",
+          "doi": "10.1038/s41592-025-02980-0",
+          "title": "Benchmarking algorithms for generalizable single-cell perturbation response prediction.",
+          "authorString": "Wei Z, Wang Y, Gao Y, Wang S, Li P, Si D, Gao Y, Wu S, Li D, Dong K, Yang X, Tang C, Fu S, Chen X, Li W, You Y, Zhang C, Liang A, Chuai G, Liu Q.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Wei Z",
+                "firstName": "Zhiting",
+                "lastName": "Wei",
+                "initials": "Z",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0003-7382-6284"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "State Key Laboratory of Autonomous Intelligent Unmanned Systems, Frontiers Science Center for Intelligent Autonomous Systems, Ministry of Education, Shanghai Research Institute for Intelligent Autonomous Systems, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Institute for Data-Driven Tumor Immunology, Chongqing Medical University, Chongqing, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wang Y",
+                "firstName": "Yiheng",
+                "lastName": "Wang",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Institute of Biophysics, Chinese Academy of Sciences; College of Life Sciences, University of Chinese Academy of Sciences, Beijing, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Gao Y",
+                "firstName": "Yicheng",
+                "lastName": "Gao",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wang S",
+                "firstName": "Shuguang",
+                "lastName": "Wang",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-4425-3291"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li P",
+                "firstName": "Ping",
+                "lastName": "Li",
+                "initials": "P",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Si D",
+                "firstName": "Duanmiao",
+                "lastName": "Si",
+                "initials": "D",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Gao Y",
+                "firstName": "Yuli",
+                "lastName": "Gao",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wu S",
+                "firstName": "Siqi",
+                "lastName": "Wu",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li D",
+                "firstName": "Danlu",
+                "lastName": "Li",
+                "initials": "D",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Dong K",
+                "firstName": "Kejing",
+                "lastName": "Dong",
+                "initials": "K",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0004-2805-4438"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Yang X",
+                "firstName": "Xingbo",
+                "lastName": "Yang",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Tang C",
+                "firstName": "Chen",
+                "lastName": "Tang",
+                "initials": "C",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Fu S",
+                "firstName": "Shaliu",
+                "lastName": "Fu",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-1707-5474"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Chen X",
+                "firstName": "Xiaohan",
+                "lastName": "Chen",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li W",
+                "firstName": "Wannian",
+                "lastName": "Li",
+                "initials": "W",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "You Y",
+                "firstName": "Yuzhou",
+                "lastName": "You",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang C",
+                "firstName": "Chen",
+                "lastName": "Zhang",
+                "initials": "C",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Liang A",
+                "firstName": "Aibin",
+                "lastName": "Liang",
+                "initials": "A",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8978-1987"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China. lab7182@tongji.edu.cn."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Chuai G",
+                "firstName": "Guohui",
+                "lastName": "Chuai",
+                "initials": "G",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2423-8411"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China. 18alexanderm117@tongji.edu.cn."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China. 18alexanderm117@tongji.edu.cn."
+                    },
+                    {
+                      "affiliation": "State Key Laboratory of Autonomous Intelligent Unmanned Systems, Frontiers Science Center for Intelligent Autonomous Systems, Ministry of Education, Shanghai Research Institute for Intelligent Autonomous Systems, Shanghai, China. 18alexanderm117@tongji.edu.cn."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Liu Q",
+                "firstName": "Qi",
+                "lastName": "Liu",
+                "initials": "Q",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2578-1221"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China. qiliu@tongji.edu.cn."
+                    },
+                    {
+                      "affiliation": "Shanghai Key Laboratory of Anesthesiology and Brain Functional Modulation, Clinical Research Center for Anesthesiology and Perioperative Medicine, Translational Research Institute of Brain and Brain-Like Intelligence, Shanghai Fourth People's Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China. qiliu@tongji.edu.cn."
+                    },
+                    {
+                      "affiliation": "State Key Laboratory of Autonomous Intelligent Unmanned Systems, Frontiers Science Center for Intelligent Autonomous Systems, Ministry of Education, Shanghai Research Institute for Intelligent Autonomous Systems, Shanghai, China. qiliu@tongji.edu.cn."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-4425-3291"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8978-1987"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-1707-5474"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2423-8411"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2578-1221"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0003-7382-6284"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0004-2805-4438"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "2",
+            "volume": "23",
+            "journalIssueId": 4122805,
+            "dateOfPublication": "2026 Feb",
+            "monthOfPublication": 2,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-02-01",
+            "journal": {
+              "title": "Nature methods",
+              "medlineAbbreviation": "Nat Methods",
+              "essn": "1548-7105",
+              "issn": "1548-7091",
+              "isoabbreviation": "Nat Methods",
+              "nlmid": "101215604"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "451-464",
+          "abstractText": "Single-cell perturbation technologies enable systematic investigation of gene functions and regulatory networks with single-cell resolution. However, performing large-scale and combinatorial perturbation screens poses notable challenges due to their exponentially increased complexity. Computational methods, including foundation models, have been developed to predict perturbation effects. Yet despite claims of promising performance, concerns remain about their true efficacy, particularly when evaluated across diverse and previously unseen cellular contexts and perturbation scenarios. Here, we present a comprehensive benchmark of 27 methods for single-cell perturbation response prediction, evaluated across 29 datasets using 6 complementary performance metrics. By evaluating them under multiple scenarios, we systematically assess their generalizability, including that of emerging foundation models. Our results provide practical guidance for method selection and underscore the need for cellular context embedding approaches to enhance the generalizability of perturbation effect prediction in single-cell research.",
+          "affiliation": "Department of Hematology, Tongji Hospital, Frontier Science Center for Stem Cell Research, Bioinformatics Department, School of Life Sciences and Technology, Tongji University, Shanghai, China.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "T24250193, 32341008",
+                "agency": "National Natural Science Foundation of China (National Science Foundation of China)",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computational Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Algorithms"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Benchmarking",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gene Regulatory Networks"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Single-Cell Analysis",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/s41592-025-02980-0"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 19,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2026-02-13",
+          "dateOfCreation": "2025-12-11",
+          "firstIndexDate": "2025-12-12",
+          "dateOfRevision": "2026-02-14",
+          "electronicPublicationDate": "2025-12-11",
+          "firstPublicationDate": "2025-12-11"
+        },
+        {
+          "id": "PPR1255282",
+          "source": "PPR",
+          "doi": "10.64898/2026.06.15.731445",
+          "title": "Benchmarking gene expression reconstruction from single-cell latent representations",
+          "authorString": "Fu X, Klein D, Antipov E, Palma A, Tejada-Lapuerta A, Bahrami M, Kümmerle LB, Lubetzki M, Casale FP, Luecken MD, Theis FJ.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Fu X",
+                "firstName": "Xiaotong",
+                "lastName": "Fu",
+                "initials": "X"
+              },
+              {
+                "fullName": "Klein D",
+                "firstName": "Dominik",
+                "lastName": "Klein",
+                "initials": "D",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7334-3501"
+                }
+              },
+              {
+                "fullName": "Antipov E",
+                "firstName": "Egor",
+                "lastName": "Antipov",
+                "initials": "E"
+              },
+              {
+                "fullName": "Palma A",
+                "firstName": "Alessandro",
+                "lastName": "Palma",
+                "initials": "A",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5190-5278"
+                }
+              },
+              {
+                "fullName": "Tejada-Lapuerta A",
+                "firstName": "Alejandro",
+                "lastName": "Tejada-Lapuerta",
+                "initials": "A",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6213-8820"
+                }
+              },
+              {
+                "fullName": "Bahrami M",
+                "firstName": "Mojtaba",
+                "lastName": "Bahrami",
+                "initials": "M",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0003-0151-5196"
+                }
+              },
+              {
+                "fullName": "Kümmerle LB",
+                "firstName": "Louis",
+                "lastName": "Kümmerle",
+                "initials": "LB"
+              },
+              {
+                "fullName": "Lubetzki M",
+                "firstName": "Manuel",
+                "lastName": "Lubetzki",
+                "initials": "M"
+              },
+              {
+                "fullName": "Casale FP",
+                "firstName": "Francesco Paolo",
+                "lastName": "Casale",
+                "initials": "FP"
+              },
+              {
+                "fullName": "Luecken MD",
+                "firstName": "Malte",
+                "lastName": "Luecken",
+                "initials": "MD",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7464-7921"
+                }
+              },
+              {
+                "fullName": "Theis FJ",
+                "firstName": "Fabian",
+                "lastName": "Theis",
+                "initials": "FJ"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6213-8820"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7464-7921"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5190-5278"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7334-3501"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-9193-1243"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0003-0151-5196"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Single-cell transcriptomics is typically modeled in low-dimensional latent representations that improve the signal-to-noise ratio of the data. Such representations underpin data integration, cell state discovery, and perturbation prediction, with applications ranging from large-scale organ atlases to latent trajectory modeling. Recent virtual cell approaches further leverage these representations to predict cellular responses as distributional shifts in latent space. Each of these applications ultimately requires faithful gene expression reconstruction from latent spaces for biological interpretation, enabling gene-level analysis of predicted perturbed or batch-corrected cells. Yet representation choice is typically treated as an implementation detail rather than a primary modeling decision, with no systematic evaluation of how well latent representations support gene expression reconstruction. Here, we introduce ReconEval, a benchmark for evaluating gene expression reconstruction from single-cell latent spaces. We benchmark two classes of latent representations: end-to-end trained models such as PCA, autoencoders, and variational autoencoders, and pretrained single-cell foundation model embeddings coupled to newly trained decoders. Reconstruction is evaluated both directly and after latent-space perturbation prediction. Across perturbational and observational datasets totaling over 100 million cells, our metric suite quantifies statistical fidelity; biological signal preservation, including differential expression, coexpression, cell-cycle structure, cytokine response and pathway activity; and perturbation-specific effects. We find that autoencoders achieve the strongest stand-alone reconstruction at low dimensionality, while variational regularization does not improve generalization in reconstruction. Frozen foundation model embeddings retain recoverable gene-level information, with reconstruction quality depending strongly on decoder architecture and pretraining objective. In latent perturbation modeling, high-dimensional PCA matches foundation model embeddings, while low-dimensional AE embeddings are optimal for flow-based generative models. Overall, reconstruction depends critically on the interplay between representation and downstream model, and simpler representations can outperform complex alternatives given appropriate capacity. Our benchmark establishes reconstruction as a critical evaluation axis for single-cell foundation models. We envision it improving the biological interpretability of latent-space modeling, a prerequisite for future virtual cell models to be validated by domain experts and grounded in biology.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.06.15.731445"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by-nc-nd",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-06-19",
+          "firstIndexDate": "2026-06-19",
+          "firstPublicationDate": "2026-06-18"
+        },
+        {
+          "id": "PPR1305909",
+          "source": "PPR",
+          "doi": "10.64898/2026.08.22.746387",
+          "title": "AI-driven framework modeling perturbation in brain organoids reveals candidate genes for autism",
+          "authorString": "Koh IG, Chang E, Choi Y, Kim S, Kim Y, Lee H, Byeon G, Ryu Y, Kim S, Lee J, Park H, Sim H, Ryu Y, Shim W, Lee J, Salazar NB, de Aquino MM, Engchuan W, Zhou X, Son JH, Lee J, Bong G, Kim IB, Han JH, Werling DM, Kim SH, Oh M, Kim M, Lee D, Kim J, Lee Y, Sun W, Kim E, Scherer SW, Jeon M, Yoo HJ, An J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Koh IG",
+                "firstName": "In Gyeong",
+                "lastName": "Koh",
+                "initials": "IG"
+              },
+              {
+                "fullName": "Chang E",
+                "firstName": "Eunhyong",
+                "lastName": "Chang",
+                "initials": "E"
+              },
+              {
+                "fullName": "Choi Y",
+                "firstName": "Youngseok",
+                "lastName": "Choi",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Kim S",
+                "firstName": "Soo-Whee",
+                "lastName": "Kim",
+                "initials": "S"
+              },
+              {
+                "fullName": "Kim Y",
+                "firstName": "Yujin",
+                "lastName": "Kim",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Lee H",
+                "firstName": "Hyeji",
+                "lastName": "Lee",
+                "initials": "H"
+              },
+              {
+                "fullName": "Byeon G",
+                "firstName": "Gaeun",
+                "lastName": "Byeon",
+                "initials": "G"
+              },
+              {
+                "fullName": "Ryu Y",
+                "firstName": "Yebin",
+                "lastName": "Ryu",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Kim S",
+                "firstName": "Seoyeon",
+                "lastName": "Kim",
+                "initials": "S"
+              },
+              {
+                "fullName": "Lee J",
+                "firstName": "Jihae",
+                "lastName": "Lee",
+                "initials": "J"
+              },
+              {
+                "fullName": "Park H",
+                "firstName": "Hayoon",
+                "lastName": "Park",
+                "initials": "H"
+              },
+              {
+                "fullName": "Sim H",
+                "firstName": "Hwanseok",
+                "lastName": "Sim",
+                "initials": "H"
+              },
+              {
+                "fullName": "Ryu Y",
+                "firstName": "Yeojin",
+                "lastName": "Ryu",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Shim W",
+                "firstName": "Woojong",
+                "lastName": "Shim",
+                "initials": "W"
+              },
+              {
+                "fullName": "Lee J",
+                "firstName": "Jiho",
+                "lastName": "Lee",
+                "initials": "J"
+              },
+              {
+                "fullName": "Salazar NB",
+                "firstName": "Nelson",
+                "lastName": "Salazar",
+                "initials": "NB"
+              },
+              {
+                "fullName": "de Aquino MM",
+                "firstName": "Marla Mendes",
+                "lastName": "de Aquino",
+                "initials": "MM"
+              },
+              {
+                "fullName": "Engchuan W",
+                "firstName": "Worrawat",
+                "lastName": "Engchuan",
+                "initials": "W"
+              },
+              {
+                "fullName": "Zhou X",
+                "firstName": "Xiaopu",
+                "lastName": "Zhou",
+                "initials": "X"
+              },
+              {
+                "fullName": "Son JH",
+                "firstName": "Ji Hyun",
+                "lastName": "Son",
+                "initials": "JH"
+              },
+              {
+                "fullName": "Lee J",
+                "firstName": "Jeewon",
+                "lastName": "Lee",
+                "initials": "J"
+              },
+              {
+                "fullName": "Bong G",
+                "firstName": "Guiyoung",
+                "lastName": "Bong",
+                "initials": "G"
+              },
+              {
+                "fullName": "Kim IB",
+                "firstName": "Il Bin",
+                "lastName": "Kim",
+                "initials": "IB"
+              },
+              {
+                "fullName": "Han JH",
+                "firstName": "Jae Hyun",
+                "lastName": "Han",
+                "initials": "JH"
+              },
+              {
+                "fullName": "Werling DM",
+                "firstName": "Donna",
+                "lastName": "Werling",
+                "initials": "DM"
+              },
+              {
+                "fullName": "Kim SH",
+                "firstName": "So Hyun",
+                "lastName": "Kim",
+                "initials": "SH"
+              },
+              {
+                "fullName": "Oh M",
+                "firstName": "Miae",
+                "lastName": "Oh",
+                "initials": "M"
+              },
+              {
+                "fullName": "Kim M",
+                "firstName": "Min-Sik",
+                "lastName": "Kim",
+                "initials": "M"
+              },
+              {
+                "fullName": "Lee D",
+                "firstName": "Daekee",
+                "lastName": "Lee",
+                "initials": "D"
+              },
+              {
+                "fullName": "Kim J",
+                "firstName": "Jaesang",
+                "lastName": "Kim",
+                "initials": "J"
+              },
+              {
+                "fullName": "Lee Y",
+                "firstName": "Yong-Seok",
+                "lastName": "Lee",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Sun W",
+                "firstName": "Woong",
+                "lastName": "Sun",
+                "initials": "W"
+              },
+              {
+                "fullName": "Kim E",
+                "firstName": "Eunjoon",
+                "lastName": "Kim",
+                "initials": "E"
+              },
+              {
+                "fullName": "Scherer SW",
+                "firstName": "Stephen",
+                "lastName": "Scherer",
+                "initials": "SW"
+              },
+              {
+                "fullName": "Jeon M",
+                "firstName": "Minji",
+                "lastName": "Jeon",
+                "initials": "M"
+              },
+              {
+                "fullName": "Yoo HJ",
+                "firstName": "Hee Jeong",
+                "lastName": "Yoo",
+                "initials": "HJ"
+              },
+              {
+                "fullName": "An J",
+                "firstName": "Joon-Yong",
+                "lastName": "An",
+                "initials": "J"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Autism gene discovery is constrained by the rarity and heterogeneity of damaging variants, requiring large cohorts to identify susceptibility genes. Neural organoids and single-cell foundation models enable perturbation modeling in neurodevelopmental contexts. Here, we show that perturbation-informed foundation modeling of neural organoids can provide functional context for prioritizing candidate genes with genomic and clinical support. We constructed a 3.6-million-cell organoid atlas and trained models to predict genome-wide perturbation responses. Benchmarking 17 models identified a telencephalic neuron-specific model best preserving autism-relevant perturbation structure. Genome-wide profiling revealed two clusters associated with mid-fetal synaptic neuronal processes and early radial glia ubiquitin signaling. These clusters were supported by damaging-variant enrichment and clinical phenotypes across 89,916 family-based samples. Logistic-regression prioritization identified 343 candidates, including 167 in the key clusters, with convergence across TADA signals and recurrent evidence for  NBEA and  KLHDC10 . This framework integrates predicted perturbation effects with genomic evidence to support autism candidate prioritization.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "NRF-2021M3E5D9021878",
+                "agency": "National Research Foundation of Korea",
+                "orderIn": 0
+              },
+              {
+                "grantId": "RS-2025-16652968",
+                "agency": "National Research Foundation of Korea",
+                "orderIn": 0
+              },
+              {
+                "grantId": "RS-2024-00439474",
+                "agency": "National Research Foundation of Korea",
+                "orderIn": 0
+              },
+              {
+                "grantId": "K2420391",
+                "agency": "Korea University",
+                "orderIn": 0
+              },
+              {
+                "grantId": "RS-2024-00411597",
+                "agency": "National Research Foundation of Korea",
+                "orderIn": 0
+              },
+              {
+                "grantId": "SRFC-IT2402-12",
+                "agency": "Samsung Research Funding &amp; Incubation Center of Samsung Electronics",
+                "orderIn": 0
+              },
+              {
+                "grantId": "IBS-R002-D1",
+                "agency": "Institute for Basic Science",
+                "orderIn": 0
+              },
+              {
+                "grantId": "RS-2025-25438031",
+                "agency": "National Research Foundation of Korea",
+                "orderIn": 0
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.08.22.746387"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by-nc-nd",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-08-27",
+          "firstIndexDate": "2026-08-27",
+          "firstPublicationDate": "2026-08-26"
+        },
+        {
+          "id": "PPR1020899",
+          "source": "PPR",
+          "doi": "10.1101/2025.05.11.653338",
+          "title": "Evaluating Foundation Models for  <i>In-Silico</i>  Perturbation",
+          "authorString": "Liu X, Boylan J, Bouiller T, Solovyeva E, Ataman B, Hoersch S, Jenkins J, Devarakonda M.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Liu X",
+                "firstName": "Xiong",
+                "lastName": "Liu",
+                "initials": "X",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4522-7228"
+                }
+              },
+              {
+                "fullName": "Boylan J",
+                "firstName": "James",
+                "lastName": "Boylan",
+                "initials": "J"
+              },
+              {
+                "fullName": "Bouiller T",
+                "firstName": "Theophile",
+                "lastName": "Bouiller",
+                "initials": "T"
+              },
+              {
+                "fullName": "Solovyeva E",
+                "firstName": "Elizaveta",
+                "lastName": "Solovyeva",
+                "initials": "E"
+              },
+              {
+                "fullName": "Ataman B",
+                "firstName": "Bulent",
+                "lastName": "Ataman",
+                "initials": "B"
+              },
+              {
+                "fullName": "Hoersch S",
+                "firstName": "Sebastian",
+                "lastName": "Hoersch",
+                "initials": "S"
+              },
+              {
+                "fullName": "Jenkins J",
+                "firstName": "Jeremy",
+                "lastName": "Jenkins",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9795-0771"
+                }
+              },
+              {
+                "fullName": "Devarakonda M",
+                "firstName": "Murthy",
+                "lastName": "Devarakonda",
+                "initials": "M",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3418-8924"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9795-0771"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3418-8924"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4522-7228"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "pubYear": "2025",
+          "abstractText": "In-silico perturbation (ISP) offers a scalable alternative to traditional gene perturbation experiments, yet evaluation of foundation models for ISP remains underexplored. We introduce a novel evaluation framework, the single cell in-silico perturbation framework (scISP), to benchmark ISP models against in-vitro experimental data using biologically meaningful metrics, including cell state separation accuracy, ISP accuracy, and mean reciprocal rank (MRR) for predicting perturbed genes. Complementary functional analyses evaluate model performance across diverse gene categories. Using scISP, we assess two well-known pre-trained foundation models, Geneformer and scGPT, alongside the deep learning model, GEARS, highlighting their respective strengths and limitations in simulating cell state transitions and identifying perturbed genes. These analyses reveal intrinsic differences across models, offering opportunities to optimize foundation models for specific biological contexts or gene categories. Our extensible framework establishes a robust bridge between computational predictions and experimental validation, advancing gene perturbation research and biological discovery.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2025
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://www.biorxiv.org/content/biorxiv/early/2025/05/15/2025.05.11.653338.full.pdf"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1101/2025.05.11.653338"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 3,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by-nc-nd",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2025-05-17",
+          "firstIndexDate": "2025-05-21",
+          "firstPublicationDate": "2025-05-15"
+        },
+        {
+          "id": "PPR1248963",
+          "source": "PPR",
+          "doi": "10.14293/pr2199.003545.v2",
+          "title": "Counterfactual Consistency as a Metric for Biological Foundation Models",
+          "authorString": "Lei C.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Lei C",
+                "firstName": "Chang",
+                "lastName": "Lei",
+                "initials": "C",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0003-1468-3180"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0009-0003-1468-3180"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Biological foundation models (BFMs)—large-scale models pretrained on diverse biological data such as genomes, transcriptomes, or protein sequences—hold promise for predicting the effects of genetic perturbations, drug interventions, and disease mutations. However, evaluating their reliability beyond simple next-token prediction or task-specific accuracy remains challenging. In this study, we introduce counterfactual consistency as a novel, model-agnostic metric to assess the causal reasoning and biological plausibility of BFMs. Counterfactual consistency measures whether a model produces stable and interpretable predictions under minimal, realistic interventions to its input (e.g., a single nucleotide substitution, gene knockout, or chemical perturbation) that should lead to predictable downstream effects. Using three representative BFMs (DNA-, RNA-, and protein-based architectures) across multiple perturbation types and benchmark datasets, we demonstrate that high predictive accuracy on static tasks does not guarantee counterfactual consistency. Notably, models with comparable task performance exhibited wide variability in consistency scores, and consistency correlated more strongly with generalization to out-of-distribution biological scenarios. We further show that fine-tuning with counterfactual objectives improves both consistency and robustness without sacrificing task performance. Our findings establish counterfactual consistency as a critical, complementary metric for evaluating BFMs, revealing hidden failure modes and guiding the development of more biologically faithful models. We release an open-source benchmarking suite to facilitate routine adoption of this metric in BFM development.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "ScienceOpen Preprints",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.14293/pr2199.003545.v2"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "versionList": {
+            "version": [
+              {
+                "id": "PPR1207256",
+                "source": "PPR",
+                "firstPublishDate": "2026-05-10",
+                "versionNumber": 1,
+                "pubTypeList": {
+                  "pubType": [
+                    "preprint"
+                  ]
+                },
+                "hasEvaluations": "N"
+              },
+              {
+                "id": "PPR1248963",
+                "source": "PPR",
+                "firstPublishDate": "2026-05-18",
+                "versionNumber": 2,
+                "pubTypeList": {
+                  "pubType": [
+                    "preprint"
+                  ]
+                },
+                "hasEvaluations": "N"
+              }
+            ]
+          },
+          "versionNumber": 2,
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-06-10",
+          "firstIndexDate": "2026-06-10",
+          "firstPublicationDate": "2026-05-18"
+        },
+        {
+          "id": "40407144",
+          "source": "MED",
+          "pmid": "40407144",
+          "pmcid": "PMC12202205",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC12202205"
+            ]
+          },
+          "doi": "10.1093/bioinformatics/btaf317",
+          "title": "Simple controls exceed best deep learning algorithms and reveal foundation model effectiveness for predicting genetic perturbations.",
+          "authorString": "Wong DR, Hill AS, Moccia R.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Wong DR",
+                "firstName": "Daniel R",
+                "lastName": "Wong",
+                "initials": "DR",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-3642-7674"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Pfizer Worldwide Research Development and Medical, Machine Learning and Computational Sciences, Cambridge, MA 02139, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Hill AS",
+                "firstName": "Abby S",
+                "lastName": "Hill",
+                "initials": "AS",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Pfizer Worldwide Research Development and Medical, Machine Learning and Computational Sciences, Cambridge, MA 02139, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Moccia R",
+                "firstName": "Rob",
+                "lastName": "Moccia",
+                "initials": "R",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Pfizer Worldwide Research Development and Medical, Machine Learning and Computational Sciences, Cambridge, MA 02139, United States."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3642-7674"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6",
+            "volume": "41",
+            "journalIssueId": 3952316,
+            "dateOfPublication": "2025 Jun",
+            "monthOfPublication": 6,
+            "yearOfPublication": 2025,
+            "printPublicationDate": "2025-06-01",
+            "journal": {
+              "title": "Bioinformatics (Oxford, England)",
+              "medlineAbbreviation": "Bioinformatics",
+              "essn": "1367-4811",
+              "issn": "1367-4803",
+              "isoabbreviation": "Bioinformatics",
+              "nlmid": "9808944"
+            }
+          },
+          "pubYear": "2025",
+          "pageInfo": "btaf317",
+          "abstractText": "<h4>Motivation</h4>Modeling genetic perturbations and their effect on the transcriptome is a key area of pharmaceutical research. Due to the complexity of the transcriptome, there has been much excitement and development in deep learning (DL) because of its ability to model complex relationships. In particular, the transformer-based foundation model paradigm emerged as the gold-standard of predicting post-perturbation responses. However, understanding these increasingly complex models and evaluating their practical utility is lacking, along with simple but appropriate benchmarks to compare predictive methods.<h4>Results</h4>Here, we present a simple baseline method that outperforms both state of the art (SOTA) in DL and other proposed simpler neural architectures, setting a necessary benchmark to evaluate in the field of post-perturbation prediction. We also elucidate the utility of foundation models for the task of post-perturbation prediction via generalizable fine-tuning experiments that can be translated to different applications of transformer-based foundation models to tasks of interest. Furthermore, we provide a corrected version of a popular dataset used for benchmarking perturbation prediction models. Our hope is that this work will properly contextualize further development of DL models in the perturbation space with necessary control procedures.<h4>Availability and implementation</h4>All source code is available at: https://github.com/pfizer-opensource/perturb_seq. The DOI is 10.5281/zenodo.15352937.",
+          "affiliation": "Pfizer Worldwide Research Development and Medical, Machine Learning and Computational Sciences, Cambridge, MA 02139, United States.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Pfizer Inc",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computational Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Algorithms"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Genetic"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Transcriptome"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Deep Learning"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/bioinformatics/btaf317"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12202205"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12202205?pdf=render"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "PPR963456",
+                "source": "PPR",
+                "type": "Preprint in",
+                "note": "CrossRef Pre-print loader",
+                "orderIn": 10002
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "citedByCount": 24,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "geo",
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2025-06-19",
+          "dateOfCreation": "2025-05-23",
+          "firstIndexDate": "2025-05-24",
+          "fullTextReceivedDate": "2025-11-28",
+          "dateOfRevision": "2026-09-10",
+          "firstPublicationDate": "2025-06-01"
+        },
+        {
+          "id": "PPR1207256",
+          "source": "PPR",
+          "doi": "10.14293/pr2199.003545.v1",
+          "title": "Counterfactual Consistency as a Metric for Biological Foundation Models",
+          "authorString": "Lei C.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Lei C",
+                "firstName": "Chang",
+                "lastName": "Lei",
+                "initials": "C",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0003-1468-3180"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0009-0003-1468-3180"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Biological foundation models (BFMs)—large-scale models pretrained on diverse biological data such as genomes, transcriptomes, or protein sequences—hold promise for predicting the effects of genetic perturbations, drug interventions, and disease mutations. However, evaluating their reliability beyond simple next-token prediction or task-specific accuracy remains challenging. In this study, we introduce counterfactual consistency as a novel, model-agnostic metric to assess the causal reasoning and biological plausibility of BFMs. Counterfactual consistency measures whether a model produces stable and interpretable predictions under minimal, realistic interventions to its input (e.g., a single nucleotide substitution, gene knockout, or chemical perturbation) that should lead to predictable downstream effects. Using three representative BFMs (DNA-, RNA-, and protein-based architectures) across multiple perturbation types and benchmark datasets, we demonstrate that high predictive accuracy on static tasks does not guarantee counterfactual consistency. Notably, models with comparable task performance exhibited wide variability in consistency scores, and consistency correlated more strongly with generalization to out-of-distribution biological scenarios. We further show that fine-tuning with counterfactual objectives improves both consistency and robustness without sacrificing task performance. Our findings establish counterfactual consistency as a critical, complementary metric for evaluating BFMs, revealing hidden failure modes and guiding the development of more biologically faithful models. We release an open-source benchmarking suite to facilitate routine adoption of this metric in BFM development.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "ScienceOpen Preprints",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.14293/pr2199.003545.v1"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "versionList": {
+            "version": [
+              {
+                "id": "PPR1207256",
+                "source": "PPR",
+                "firstPublishDate": "2026-05-10",
+                "versionNumber": 1,
+                "pubTypeList": {
+                  "pubType": [
+                    "preprint"
+                  ]
+                },
+                "hasEvaluations": "N"
+              },
+              {
+                "id": "PPR1248963",
+                "source": "PPR",
+                "firstPublishDate": "2026-05-18",
+                "versionNumber": 2,
+                "pubTypeList": {
+                  "pubType": [
+                    "preprint"
+                  ]
+                },
+                "hasEvaluations": "N"
+              }
+            ]
+          },
+          "versionNumber": 1,
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-05-13",
+          "firstIndexDate": "2026-05-13",
+          "firstPublicationDate": "2026-05-10"
+        },
+        {
+          "id": "PPR1301409",
+          "source": "PPR",
+          "doi": "10.64898/2026.08.14.744845",
+          "title": "Single-cell foundation models benefit from cross-modal training: adding proteomics data beats parameter scaling",
+          "authorString": "Burq M, Cimermancic P, Kim C, Stepec D.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Burq M",
+                "firstName": "Maximilien",
+                "lastName": "Burq",
+                "initials": "M"
+              },
+              {
+                "fullName": "Cimermancic P",
+                "firstName": "Peter",
+                "lastName": "Cimermancic",
+                "initials": "P"
+              },
+              {
+                "fullName": "Kim C",
+                "firstName": "Charlie",
+                "lastName": "Kim",
+                "initials": "C"
+              },
+              {
+                "fullName": "Stepec D",
+                "firstName": "Dejan",
+                "lastName": "Stepec",
+                "initials": "D"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Leading cellular foundation models have been trained on hundreds of millions of single-cell transcriptomes, with progress increasingly driven by larger datasets and model scaling. Here, we asked whether adding a proteomics modality can improve gene-level and cell-level representations beyond scaling RNA-only models. We introduce cross-modal continued pretraining, fine-tuning a published single-cell model (Tahoe-x1) on a large corpus of proteomic profiles. Training a 70M-parameter Tahoe-x1 model for a single epoch on 48843 proteomic samples from 440 diverse mass-spectrometry studies matched or exceeded 1B- and 3B-parameter RNA-only models across most of the original Tahoe-x1 evaluation benchmarks. This shows that with the right training recipe, heterogeneous proteomics data can improve the learned representations of single-cell RNAseq samples, demonstrating strong out-of-distribution generalization. Cross-modal pretraining also improves transfer to a held-out protein perturbation benchmark, where scaling the RNA-only model does not provide comparable benefits. These results demonstrate that careful targeted curation of proteomics data can provide larger benefits than increasing the model size alone and suggest that multimodal pretraining is a promising path toward more informative biological foundation models.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.08.14.744845"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-08-20",
+          "firstIndexDate": "2026-08-22",
+          "firstPublicationDate": "2026-08-19"
+        },
+        {
+          "id": "PPR1258205",
+          "source": "PPR",
+          "doi": "10.64898/2026.06.18.733146",
+          "title": "VCBench: A Multi-Dimensional Benchmark for Single-Cell Foundation Models",
+          "authorString": "Weidener L, Brkić M, Jovanović M, Ulgac E, Meduri A.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Weidener L",
+                "lastName": "Weidener",
+                "initials": "L",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7132-8826"
+                }
+              },
+              {
+                "fullName": "Brkić M",
+                "lastName": "Brkić",
+                "initials": "M"
+              },
+              {
+                "fullName": "Jovanović M",
+                "lastName": "Jovanović",
+                "initials": "M"
+              },
+              {
+                "fullName": "Ulgac E",
+                "lastName": "Ulgac",
+                "initials": "E"
+              },
+              {
+                "fullName": "Meduri A",
+                "lastName": "Meduri",
+                "initials": "A"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7132-8826"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Single-cell foundation models are increasingly positioned as virtual cells, yet their capabilities are assessed by fragmented, largely single-task benchmarks that obscure where these models improve on simple baselines. VCBench addresses this by synthesizing four independent virtual-cell frameworks into seven capability dimensions: perturbation response prediction, cross-species universality, gene regulatory network (GRN) inference, modality integration, temporal dynamics, multi-scale integration, and in silico experimentation. Each dimension is assessed for operational testability under current architectures and datasets: five admit direct or proxy evaluation, while multi-scale integration and in silico experimentation are structurally untestable as end-to-end tasks. We evaluate five foundation models (Geneformer, scGPT, UCE, TranscriptFormer, Arc State) against pre-registered linear and nearest-neighbor baselines across the five testable dimensions, and report three findings. First, the baselines match or exceed every foundation model on four of the five scored dimensions, replicating the reported competitiveness of linear baselines on perturbation prediction and extending it to cross-species transfer, GRN inference, and temporal ordering. Second, TranscriptFormer alone exceeds the strongest baseline on cross-modal RNA-to-protein prediction (53% Pearson improvement, with a documented contamination caveat) and is the only model to reach Level 2 in the pre-registered Virtual Cell (VC) Level rubric; the architectural choice behind this advantage simultaneously causes a spectral collapse that destroys its temporal-ordering performance, a tradeoff invisible to single-task benchmarks. Third, no foundation model publishes a complete cell-level training manifest, leaving data contamination undetectable to users. Alongside the benchmark, VCBench releases a Contamination Reporting Schema and contributes two further methodological tools: a common-label-set protocol that controls for class-count confounds in cross-species transfer, and a spread-error correlation probe for epistemic calibration.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.06.18.733146"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 2,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-06-24",
+          "firstIndexDate": "2026-06-24",
+          "firstPublicationDate": "2026-06-23"
+        }
+      ]
+    }
+  }
+}

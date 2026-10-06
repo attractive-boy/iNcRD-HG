@@ -1,0 +1,319 @@
+[
+  {
+    "name": "soap_arxiv_v1",
+    "url": "https://export.arxiv.org/api/query",
+    "params": {
+      "search_query": "ti:SOAP AND (all:Shampoo OR all:optimizer)",
+      "max_results": 6
+    },
+    "utc": "2026-09-15T22:12:47.826885+00:00",
+    "status": 200,
+    "file": "improve/research/preconditioning_next_20260916/soap_arxiv_v1.xml",
+    "sha256": "636a6d8d48cdfca9538e31a421322be0ffe6be0bf47f711cda7faac17f4fd496",
+    "items": [
+      {
+        "title": "Understanding and Improving Shampoo and SOAP via Kullback-Leibler Minimization",
+        "id": "http://arxiv.org/abs/2509.03378v10",
+        "published": "2025-09-03T14:55:15Z",
+        "abstract": "Shampoo and its efficient variant, SOAP, employ structured second-moment estimations and have shown strong performance for training neural networks (NNs). In practice, however, Shampoo typically requires step-size grafting with Adam to be competitive, and SOAP mitigates this by applying Adam in Shampoo's eigenbasis -- at the cost of additional memory overhead from Adam in both methods. Prior analyses have largely relied on the Frobenius norm to motivate these estimation schemes. We instead recast their estimation procedures as covariance estimation under Kullback-Leibler (KL) divergence minimization, revealing a previously overlooked theoretical limitation and motivating principled redesigns. Building on this perspective, we develop $\\textbf{KL-Shampoo}$ and $\\textbf{KL-SOAP}$, practical schemes that match or exceed the performance of Shampoo and SOAP in NN pre-training while achieving SOAP-level per-iteration runtime. Notably, KL-Shampoo does not rely on Adam to attain competitive performance, eliminating the memory overhead introduced by Adam. Across our experiments, KL-Shampoo consistently outperforms SOAP, Shampoo, and even KL-SOAP, establishing the KL-based approach as a promising foundation for designing structured methods in NN optimization. An implementation of KL-Shampoo/KL-SOAP is available at https://github.com/yorkerlin/KL-Methods",
+        "authors": [
+          "Wu Lin",
+          "Scott C. Lowe",
+          "Felix Dangel",
+          "Runa Eschenhagen",
+          "Zikun Xu",
+          "Roger B. Grosse"
+        ]
+      },
+      {
+        "title": "SOAP: Improving and Stabilizing Shampoo using Adam",
+        "id": "http://arxiv.org/abs/2409.11321v2",
+        "published": "2024-09-17T16:18:05Z",
+        "abstract": "There is growing evidence of the effectiveness of Shampoo, a higher-order preconditioning method, over Adam in deep learning optimization tasks. However, Shampoo's drawbacks include additional hyperparameters and computational overhead when compared to Adam, which only updates running averages of first- and second-moment quantities. This work establishes a formal connection between Shampoo (implemented with the 1/2 power) and Adafactor -- a memory-efficient approximation of Adam -- showing that Shampoo is equivalent to running Adafactor in the eigenbasis of Shampoo's preconditioner. This insight leads to the design of a simpler and computationally efficient algorithm: $\\textbf{S}$hampo$\\textbf{O}$ with $\\textbf{A}$dam in the $\\textbf{P}$reconditioner's eigenbasis (SOAP). With regards to improving Shampoo's computational efficiency, the most straightforward approach would be to simply compute Shampoo's eigendecomposition less frequently. Unfortunately, as our empirical results show, this leads to performance degradation that worsens with this frequency. SOAP mitigates this degradation by continually updating the running average of the second moment, just as Adam does, but in the current (slowly changing) coordinate basis. Furthermore, since SOAP is equivalent to running Adam in a rotated space, it introduces only one additional hyperparameter (the preconditioning frequency) compared to Adam. We empirically evaluate SOAP on language model pre-training with 360m and 660m sized models. In the large batch regime, SOAP reduces the number of iterations by over 40% and wall clock time by over 35% compared to AdamW, with approximately 20% improvements in both metrics compared to Shampoo. An implementation of SOAP is available at https://github.com/nikhilvyas/SOAP.",
+        "authors": [
+          "Nikhil Vyas",
+          "Depen Morwani",
+          "Rosie Zhao",
+          "Mujin Kwun",
+          "Itai Shapira",
+          "David Brandfonbrener",
+          "Lucas Janson",
+          "Sham Kakade"
+        ]
+      },
+      {
+        "title": "Reparametrizing Shampoo and SOAP for Subspace Basis Updates and BFloat16 Storage",
+        "id": "http://arxiv.org/abs/2605.26327v1",
+        "published": "2026-05-25T21:03:03Z",
+        "abstract": "Shampoo-based methods, such as KL-Shampoo and SOAP, have demonstrated strong performance in training neural networks and rely on QR decomposition. Because existing QR implementations require single-precision (FP32) arithmetic and remain computationally expensive, these methods become time- and memory-intensive when their preconditioning matrices are large. Moreover, using BFloat16 (BFP16) storage to reduce memory usage can degrade the performance of Shampoo-based methods. We propose a reparametrization of the preconditioner that supports BFP16 storage and forms a complete basis by combining updated basis vectors with unchanged ones. By updating only part of the basis through QR decomposition in a subspace, our approach reduces computational overhead while mitigating the performance degradation caused by BFP16 storage. Our approach applies broadly to Shampoo-based methods that employ QR decomposition, including KL-Shampoo, SOAP, and KL-SOAP. In particular, it improves the performance of SOAP and KL-SOAP under BFP16 storage, enabling KL-SOAP to match or exceed KL-Shampoo. Overall, our approach makes Shampoo-based methods more memory- and time-efficient.",
+        "authors": [
+          "Alan Milligan",
+          "Zikun Xu",
+          "Simon Lacoste-Julien",
+          "Felix Dangel",
+          "Wu Lin"
+        ]
+      },
+      {
+        "title": "Understanding SOAP from the Perspective of Gradient Whitening",
+        "id": "http://arxiv.org/abs/2509.22938v1",
+        "published": "2025-09-26T21:13:02Z",
+        "abstract": "Shampoo with Adam in the Preconditioner's eigenbasis (SOAP) has recently emerged as a promising optimization algorithm for neural network training, achieving superior training efficiency over both Adam and Shampoo in language modeling tasks. In this work, we analyze Adam, Shampoo, and SOAP from the perspective of gradient whitening, interpreting their preconditioners as approximations to the whitening matrix, which captures second-order curvature information. We further establish a theoretical equivalence between idealized versions of SOAP and Shampoo under the Kronecker product assumption. To empirically evaluate these insights, we reproduce the language modeling experiments using nanoGPT and grayscale image colorization. Our results show that SOAP exhibits similar convergence rate as Shampoo, and no significant advantage over both Adam and Shampoo in the final loss achieved, which aligns with their equivalence in theory.",
+        "authors": [
+          "Yanqing Lu",
+          "Letao Wang",
+          "Jinbo Liu"
+        ]
+      },
+      {
+        "title": "Soap-bubble Optimization of Gaits",
+        "id": "http://arxiv.org/abs/1609.02620v2",
+        "published": "2016-09-08T23:42:54Z",
+        "abstract": "In this paper, we present a geometric variational algorithm for optimizing the gaits of kinematic locomoting systems. The dynamics of this algorithm are analogous to the physics of a soap bubble, with the system's Lie bracket supplying an \"inflation pressure\" that is balanced by a \"surface tension\" term derived from a Riemannian metric on the system's shape space. We demonstrate this optimizer on a variety of system geometries (including Purcell's swimmer) and for optimization criteria that include maximizing displacement and efficiency of motion for both translation and turning motions.",
+        "authors": [
+          "Suresh Ramasamy",
+          "Ross L. Hatton"
+        ]
+      },
+      {
+        "title": "Nearly optimal stability for Serrin's problem and the Soap Bubble theorem",
+        "id": "http://arxiv.org/abs/1903.04823v3",
+        "published": "2019-03-12T10:27:48Z",
+        "abstract": "We present new quantitative estimates for the radially symmetric configuration concerning Serrin's overdetermined problem for the torsional rigidity, Alexandrov's Soap Bubble Theorem, and other related problems. The new estimates improve on those obtained in two our previous articles, and are in some cases optimal.",
+        "authors": [
+          "Rolando Magnanini",
+          "Giorgio Poggesi"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "soap_crossref_v1",
+    "url": "https://api.crossref.org/works",
+    "params": {
+      "query": "SOAP Improving and Stabilizing Shampoo using Adam",
+      "rows": 4
+    },
+    "utc": "2026-09-15T22:12:47.827565+00:00",
+    "status": 200,
+    "file": "improve/research/preconditioning_next_20260916/soap_crossref_v1.json",
+    "sha256": "31567db6790700d48d5dc1b661c95fc46b1764f262056b85ab068026c22af0a0",
+    "items": [
+      {
+        "title": [
+          "Simultaneous determination of three surfactants and water in shampoo and liquid soap by ATR-FTIR"
+        ],
+        "doi": "10.1016/j.talanta.2004.10.005",
+        "date": {
+          "date-parts": [
+            [
+              2005,
+              3,
+              31
+            ]
+          ]
+        },
+        "venue": [
+          "Talanta"
+        ],
+        "authors": [
+          {
+            "given": "L",
+            "family": "CAROLEI",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "I",
+            "family": "GUTZ",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": [
+          "Recent Trend Development for Shampoo, Rinse and Soap"
+        ],
+        "doi": "10.5650/jos1956.41.950",
+        "date": {
+          "date-parts": [
+            [
+              1992
+            ]
+          ]
+        },
+        "venue": [
+          "Journal of Japan Oil Chemists' Society"
+        ],
+        "authors": [
+          {
+            "given": "Hiromi",
+            "family": "MINAMINO",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Hideaki",
+            "family": "NIWASE",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": [
+          "The role of various substances in stabilizing animal tissues"
+        ],
+        "doi": "10.1007/bf02543641",
+        "date": {
+          "date-parts": [
+            [
+              1946,
+              12
+            ]
+          ]
+        },
+        "venue": [
+          "Oil &amp; Soap"
+        ],
+        "authors": [
+          {
+            "given": "G. O.",
+            "family": "Burr",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "W. O.",
+            "family": "Lundberg",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "J. R.",
+            "family": "Chipault",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": [
+          "Liquid Shampoo or Toilet Soap"
+        ],
+        "doi": "10.1002/jps.3080021214",
+        "date": {
+          "date-parts": [
+            [
+              1913,
+              12
+            ]
+          ]
+        },
+        "venue": [
+          "The Journal of the American Pharmaceutical Association (1912)"
+        ],
+        "authors": [
+          {
+            "given": "Ernest R.",
+            "family": "Jones",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "implicit_arxiv_v1",
+    "url": "https://export.arxiv.org/api/query",
+    "params": {
+      "search_query": "all:\"implicit graph\" AND (all:\"link prediction\" OR all:\"equilibrium\") AND submittedDate:[202401010000 TO 202609162359]",
+      "max_results": 10,
+      "sortBy": "submittedDate",
+      "sortOrder": "descending"
+    },
+    "utc": "2026-09-15T22:12:47.828295+00:00",
+    "status": 200,
+    "file": "improve/research/preconditioning_next_20260916/implicit_arxiv_v1.xml",
+    "sha256": "cdbf743a290b8bdbf1363e87f72c8a13288182e0f257b1fdc08dc91a35bb5f85",
+    "items": [
+      {
+        "title": "Bridging the Semantic-Collaborative Gap: An Asymmetric Graph Architecture for Cold-Start Item Recommendation",
+        "id": "http://arxiv.org/abs/2606.06225v1",
+        "published": "2026-06-04T14:35:57Z",
+        "abstract": "Collaborative filtering and graph-based recommendation models are highly effective because they leverage observed user interactions, but this dependence creates a fundamental cold-start challenge when newly added content has no interaction history. In Tubi's production retrieval system, this challenge is further constrained by the serving interface: new content must be assigned a standalone embedding immediately, and the model must also produce device embeddings suitable for approximate nearest-neighbor retrieval. We address this setting by formulating cold-start recommendation as an inductive graph-completion problem on a temporal bipartite device-content graph. We propose Shallow-RHS, an asymmetric link-prediction architecture in which the left-hand side (LHS) device tower leverages temporally valid watch-history message passing to capture collaborative signals, while the right-hand side (RHS) content tower is intentionally shallow with respect to the graph and encodes content solely from intrinsic features. The RHS tower does not use ID-based embeddings, content-side subgraphs, neighbor aggregation, or interaction-derived representations, forcing the content encoder to map intrinsic features into a collaborative-filtering-aware embedding space. After training, the learned content encoder generates embeddings for both warm and newly ingested content, enabling implicit graph completion through retrieval of warm surrogate neighbors. We further extend the same representation-completion principle to device cold-start by constructing cohort-based embeddings from demographic features. Large-scale online experiments demonstrate consistent relative improvements in content cold-start engagement, promotion speed, impression acquisition, and device cold-start engagement.",
+        "authors": [
+          "Anh Truong",
+          "John Trenkle",
+          "Yuanbo Chen",
+          "Honghong Zhao",
+          "Abdullah Alchihabi",
+          "Effy Fang",
+          "Michael Tamir"
+        ]
+      },
+      {
+        "title": "Quantum Injection Pathways for Implicit Graph Neural Networks",
+        "id": "http://arxiv.org/abs/2605.09226v1",
+        "published": "2026-05-09T23:51:46Z",
+        "abstract": "Deep Equilibrium Models (DEQs) replace a stack of explicit layers with a single operator whose fixed point defines the output, giving the expressive power of an arbitrarily deep network at the memory cost of a single layer. Quantum Deep Equilibrium Models (QDEQs) bring this idea to quantum machine learning, offering an alternative to Parameterized Quantum Circuits (PQCs), whose depth is limited by hardware coherence and trainability. Here, we introduce, formulate, and compare three ways of coupling a quantum signal to graph DEQs, differing in where the signal enters the fixed-point operator. \\textit{Independent} injection computes the quantum signal once per graph and forward fixed-point solve, and holds it fixed throughout the solve. \\textit{State-dependent} injection instead recomputes the signal at every solver step and applies it to the current iterate. \\textit{Backbone-dependent} injection likewise recomputes at every iteration but applies the signal to the classical backbone's output evaluated at the current iterate. We establish contraction guarantees for each variant under explicit assumptions on the Lipschitz constants of the classical backbone and the quantum signal. On the TU Dortmund graph-classification benchmarks NCI1, PROTEINS, and MUTAG, independent injection achieves the best test accuracy while using fewer forward-solver iterations than both the classical equilibrium baseline and the two dependent variants.",
+        "authors": [
+          "Pengyuan Xu",
+          "Tristan Zaborniak",
+          "Luis F. Rivera",
+          "Hausi A. Müller"
+        ]
+      }
+    ]
+  }
+]

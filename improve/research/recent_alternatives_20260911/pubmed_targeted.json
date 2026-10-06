@@ -1,0 +1,329 @@
+{
+  "query": "(ncRNA[Title] OR lncRNA[Title] OR miRNA[Title]) AND (drug[Title]) AND (prediction[Title] OR predicting[Title] OR learning[Title]) AND (\"2025/01/01\"[Date - Publication] : \"2026/09/11\"[Date - Publication])",
+  "records": [
+    {
+      "title": "Multi-view Graph Learning Framework with Spectral Encoding and Sparse Cross-Attention for miRNA-Drug Association Prediction.",
+      "pmid": "42678847",
+      "doi": "10.1109/TCBBIO.2026.3729865",
+      "authors": [
+        "Ru Nie",
+        "Ying Fu",
+        "Zhengwei Li",
+        "Lei Wang",
+        "Zhanguo Xia",
+        "Yujun Zhao"
+      ],
+      "journal": "IEEE transactions on computational biology and bioinformatics",
+      "abstract": "Chemoresistance is a major contributor to cancer treatment failure, and microRNAs (miRNAs) play a critical role in mediating this resistance by regulating gene expression. Therefore, identifying miRNA-drug associations is of great significance for advancing cancer therapy. However, existing computational models face significant challenges, including heterogeneous feature integration and data sparsity. To overcome these limitations, we propose a novel Multi-view Graph Learning Framework with Spectral Encoding and Sparse Cross-Attention (MVGSCA) for predicting miRNA-drug associations. The model constructs node features based on miRNA sequence similarity and drug SMILES similarity. Then it builds two distinct graphs: a gene-mediated functional graph from miRNA-drug target interactions and an association-guided structural graph from known miRNA-drug associations. These two graphs are linearly combined to produce a collaborative feature representation. To capture both local and global topological features, the model applies local power filtering and global heat kernel diffusion, followed by spectral encoding via Poisson-Charlier polynomial approximation to enhance the feature representation. Furthermore, a sparse cross-attention mechanism is introduced to dynamically weight and integrate heterogeneous features from multiple sources. On a benchmark dataset with 8,720 associations, MVGSCA achieves an AUC of 96.32% and an AUPR of 95.69% under five-fold cross-validation, significantly outperforming six state-of-the-art methods. Experimental results show that MVGSCA effectively integrates heterogeneous biological information and achieves superior prediction performance, offering valuable insights into cancer resistance mechanisms and supporting drug discovery efforts."
+    },
+    {
+      "title": "TargetPrior: a miRNA-signature embedded evolutionary learning framework for prioritizing drug targets in acute myeloid leukemia.",
+      "pmid": "42658031",
+      "doi": "10.1093/bioinformatics/btag635",
+      "authors": [
+        "Ting-Yu Chen",
+        "Shinn-Ying Ho"
+      ],
+      "journal": "Bioinformatics (Oxford, England)",
+      "abstract": "Prioritizing therapeutic targets from high-dimensional transcriptomic profiles is hindered by the underdetermined nature of the p ≫  n setting. While miRNA signatures can inform target prioritization, conventional accuracy-driven methods may yield unstable predictive signatures, reducing downstream network reliability and topology-guided candidate ranking. We propose TargetPrior, a stability-aware evolutionary learning framework in which EL-CAML derives reproducible miRNA anchors from relapse-associated transcriptomic variation for candidate target prioritization. In childhood acute myeloid leukemia (CAML), EL-CAML identifies a parsimonious 18-miRNA continuous relapse-risk signature and 10 complementary stability-supported biomarkers, yielding 28 miRNAs for literature-curated miRNA-gene network construction. Repeated perturbation analysis supported the stability of high-frequency miRNAs, while analysis of the independent GSE196886 cell-sorted small RNA-seq dataset identified cell-population-specific expression differences. Benchmarking against an expanded set of clinically and biologically supported AML target references showed stronger early-rank retrieval than network-only and statistical approaches. TargetPrior is presented as a computational proof-of-concept for generating prioritized therapeutic hypotheses, rather than as a universal target-discovery solution. Code is available at: https://github.com/NYCU-ICLAB/TargetPrior and archived on Zenodo (DOI: 10.5281/zenodo.20394263)."
+    },
+    {
+      "title": "Dual-granularity feature learning reveals static and dynamic mechanisms of ncRNA-drug interactions.",
+      "pmid": "42519854",
+      "doi": "10.1109/JBHI.2026.3717803",
+      "authors": [
+        "Runzhou Tang",
+        "Xi Zhou",
+        "Yujie Qi",
+        "Xiaobo Zhu",
+        "Yuan Huang",
+        "Lun Hu",
+        "Zhuhong You",
+        "Pengwei Hu"
+      ],
+      "journal": "IEEE journal of biomedical and health informatics",
+      "abstract": "Accurately identifying interactions between non-coding RNAs (ncRNAs) and drugs is crucial for elucidating drug mechanisms and advancing drug repositioning. Existing deep learning-based methods for ncRNA-drug association prediction typically leverage multi-source biological information to learn informative representations, thereby alleviating the cold-start issue arising from the scarcity of experimentally validated associations. However, the direct fusion of multi-source features often introduces feature redundancy, semantic conflicts, and high-dimensional feature sparsity, thereby hindering model convergence and degrading predictive performance. To address these challenges, this study proposes DC-MetaMG, a deep learning framework based on a causal disentanglement strategy that models association responses as the synergistic interplay between two complementary mechanisms: static binding and dynamic regulation. By characterizing the principal patterns underlying differential responses between drugs and ncRNAs across multiple dimensions, the proposed framework effectively suppresses spurious associations arising from irrelevant feature interactions and mitigates the adverse effects introduced during model training with multi-source biomedical information, thereby improving the reliability of association prediction. Experiments conducted on lncRNA-drug and miRNA-drug datasets demonstrate the superior performance of the proposed model. Under five-fold cross-validation, the proposed model achieves an average AUC improvement of 0.41% over competing methods. Under the cold evaluation experiments, the AUC, ACC, and AUPR metrics show average increases of 1.22%, 0.51%, and 0.35%, respectively. Case studies further demonstrate the interpretability of the model. Furthermore, visualization analyses confirm the effective characterization of the two underlying association mechanisms, highlighting the model's ability to disentangle and integrate multi-source biological information, thereby demonstrating its suitability for training scenarios involving complex biological information."
+    },
+    {
+      "title": "Higher-Order Dynamic Disentangled Intent Sensing and Bidirectional Joint Updating Framework for NcRNA-Drug Resistance Association Prediction.",
+      "pmid": "42427293",
+      "doi": "10.1021/acs.jcim.6c01116",
+      "authors": [
+        "Tiyao Liu",
+        "Shudong Wang",
+        "Baoming Feng",
+        "Shaoqiang Wang",
+        "Shiyuan Huang",
+        "Ziyi Gao",
+        "Hengtao Ding",
+        "Shanchen Pang"
+      ],
+      "journal": "Journal of chemical information and modeling",
+      "abstract": "Noncoding RNAs (ncRNAs) are critical regulators of drug response and disease progression, making accurate prediction of ncRNA-drug resistance associations a key task in pharmacogenomics and precision medicine. However, current methods largely rely on global neighborhood aggregation, which treats node contexts as homogeneous and overlooks fine-grained structural and semantic heterogeneity. Moreover, they often model ncRNAs and drugs as interchangeable nodes, disregarding their biological distinctions and asymmetric interactions, and failing to effectively integrate modality-specific and cross-modal features. To overcome these limitations, we propose HDBI, a higher-order dynamic disentangled framework for predicting ncRNA-drug resistance associations. HDBI integrates multiview hypergraph learning, disentangled representation modeling, and bidirectional cross-modal updating to capture heterogeneous topological and semantic patterns within ncRNA and drug spaces while preserving modality-specific characteristics and enabling cross-modal information exchange. Extensive experiments on two benchmark data sets demonstrate that HDBI consistently outperforms state-of-the-art methods. Case studies on 5-FU and Docetaxel further support the biological relevance of the predictions, with 22/30 and 21/30 top-ranked ncRNAs supported by PubMed evidence, respectively. Functional enrichment and molecular docking analyses further linked these predictions to drug-relevant pathways and structurally plausible regulatory interactions. These findings suggest that HDBI provides an effective and interpretable framework for prioritizing ncRNA-mediated drug resistance associations and guiding downstream mechanistic investigation."
+    },
+    {
+      "title": "Leveraging a Disulfidptosis-related LncRNA Prognostic Signature to Indicate Immune Features and Drug Sensitivity of Gastric Cancer Based on Machine Learning.",
+      "pmid": "42227538",
+      "doi": "10.2174/0115680096427239260209013858",
+      "authors": [
+        "Xinyu Pan",
+        "Mei Yang",
+        "Lilan Fan",
+        "Guoqingyuan Li",
+        "Ranran Zhang",
+        "Jing Liu"
+      ],
+      "journal": "Current cancer drug targets",
+      "abstract": "Disulfidptosis is a newly identified, programmed cell death that could influence the progression, immune microenvironment, and therapeutic response of stomach adenocarcinoma (STAD). This mechanism is potentially regulated by long non-coding RNAs (lncRNAs). We analyzed TCGA datasets to identify 187 disulfidptosis-related lncRNAs (DRlncRNAs). Prognostic candidates were screened using univariate Cox, LASSO, and multivariate Cox analyses. Molecular subtypes were stratified via consensus clustering. Additionally, we construct a prognostic model based on key DRlncRNAs and evaluate its clinical relevance in terms of immune infiltration, functional pathways, drug responsiveness, and tumor mutation burden (TMB). Finally, expression validation of these DRlncRNAs was performed in STAD cell lines using qRT-PCR. We established a three-DRlncRNA prognostic model demonstrating robust predictive performance with high AUC values. Patients in the low-risk subgroup exhibited favorable survival outcomes and greater sensitivity to immunotherapy. Conversely, the high-risk subgroup showed reduced survival, increased tumor malignancy, and poorer response to immunotherapy. qRT-PCR validation revealed significant expression differences of these three DRlncRNAs between gastric cancer cell lines and normal gastric epithelial cell lines. DRlncRNAs were identified as potential biomarkers for prognostic and immune profiling in STAD. The identified signature may reflect biological activities associated with disulfidptosis and suggest potential therapeutic targets. Further mechanistic and translational studies are needed to determine whether these DRlncRNAs directly regulate disulfidptosis and to support clinical applications. This DRlncRNA-based prognostic model demonstrates strong predictive power for survival outcomes in STAD, offering guidance for personalized treatment strategies."
+    },
+    {
+      "title": "Predicting prognosis and drug sensitivity in patients with hepatocellular carcinoma using an lncRNA signature associated with cuproptosis.",
+      "pmid": "42071198",
+      "doi": "10.1186/s12885-026-16132-w",
+      "authors": [
+        "Yan Li",
+        "Shiyu Lv",
+        "Yunqiu Wang"
+      ],
+      "journal": "BMC cancer",
+      "abstract": "Hepatocellular carcinoma (HCC) is a prevalent type of malignant tumor known for its aggressive proliferation and invasive behavior. The exact molecular mechanisms underlying HCC development and progression remain unclear. Nevertheless, cuproptosis has been linked to a range of diseases, including cancers, resulting from imbalances in copper homeostasis. Here, a unique signature of long non-coding RNAs (lncRNAs) was developed, known as cuproptosis-related lncRNA (CRlncRNA). This signature has significant value in clinical practice for predicting prognosis and drug sensitivity in individuals with HCC. The transcriptome data and clinical information were retrieved from the Cancer Genome Atlas (TCGA) database. The independent prognostic signature of five CRlncRNAs was constructed by co-expression analysis, Lasso Cox regression analysis, and univariate and multivariate Cox regression analysis. K-M analysis and ROC curve were used to evaluate the effectiveness of the signature in predicting prognosis and IC50 was used to predict the sensitivity of drugs. Furthermore, the differential expression of five CRlncRNAs was validated in clinical HCC samples, and functional in vitro experiments were performed to investigate the biological role of LINC02505, which is one of the five CRlncRNAs. Based on 374 HCC samples, a prognostic risk signature of five lncRNAs was constructed. High-risk patients showed significantly decreased survival periods, indicating that the CRlncRNA signature has predictive value in HCC. Combined with clinical and pathological information, the signature was shown to be an independent prognostic factor. Besides, the CRlncRNA signature was found to be closely associated with the efficacy of many commonly used chemotherapy drugs and targeted drugs for HCC patients. Additionally, further investigations showed that the mutation rate of HCC was related to the CRlncRNA signature, and gene enrichment analysis focused on immune-related pathways. Finally, among the CRlncRNA signature, LINC02505 was tested as a risk factor in vitro. The CRlncRNA signature has significant clinical implications as it offers new biomarkers for evaluating HCC prognosis and guiding clinical medication."
+    },
+    {
+      "title": "mDADGAN: Predicting miRNA-Drug Response Associations Using lncRNAs and a Diffusion-Based Generative Adversarial Network.",
+      "pmid": "42009439",
+      "doi": "10.1021/acs.jcim.6c00254",
+      "authors": [
+        "Wenyin Lai",
+        "Li Wang",
+        "Chunyan Tang",
+        "Danyang Chen",
+        "Cheng Zhong"
+      ],
+      "journal": "Journal of chemical information and modeling",
+      "abstract": "MicroRNAs (miRNAs) are key regulators of anticancer drug response, including sensitivity and resistance. Accurate prediction of miRNA-drug response associations is important for understanding response mechanisms and guiding targeted therapy. Existing prediction methods are difficult to fully capture complex high-order biological interactions and are sensitive to data sparsity and class imbalance. In this paper, we present an miRNA-drug response association prediction method called mDADGAN by constructing a diffusion-based generative adversarial network. First, we curated a large-scale and biologically informative data set from four public data resources by aggregating functional associations to facilitate model training. Second, we built a miRNA-lncRNA-drug interaction network by integrating lncRNA into the miRNA-drug network to address data sparsity and employed heterogeneous graph convolution to extract latent features from the interactions among miRNAs, lncRNAs, and drugs. Third, we applied diffusion-based perturbation to denoise and enhance the robustness of feature representations. Finally, we performed cost-sensitive learning to optimize the objective function in an adversarial training process to address class imbalance. The experimental results on four data sets demonstrated that, compared with the existing six methods, mDADGAN achieved higher values for AUC, AUPR, ACC, Recall, and F1-score. The case study demonstrates that integrating lncRNA information effectively enhances miRNA-drug response association prediction. mDADGAN can not only accurately identify known associations in the data sets but also predict previously unreported candidate associations supported by published evidence. Overall, our method mDADGAN has the ability to identify potential miRNA-drug response associations and can provide guidance for future biological experiments to enhance experimental efficiency and reduce experimental costs."
+    },
+    {
+      "title": "NCRDLLM: Predicting ncRNA-Drug Response Associations via Multimodal Feature Fusion and Large Language Models.",
+      "pmid": "41817976",
+      "doi": "10.1021/acs.jcim.5c03011",
+      "authors": [
+        "Zihan Zhang",
+        "Yuchen Zhang"
+      ],
+      "journal": "Journal of chemical information and modeling",
+      "abstract": "Noncoding RNAs (ncRNAs) play critical regulatory roles in cancer drug response. However, most existing methods are limited to predicting a single type of ncRNA, failing to fully capture the complex semantic associations between multimodal biological features, and thus exhibit weak generalizability and robustness. To overcome these limitations, this study proposes NCRDLLM, a unified framework that leverages large language models (LLMs) to predict associations between three types of ncRNA (circular RNA, microRNA, and long noncoding RNA) and drugs. The method integrates 19,020 experimentally validated associations and 120,009 disease association records. Three types of multimodal features are constructed: sequence features extracted using pretrained foundation models RNA-FM and ChemBERTa, structural features generated through Graph2Vec for RNA secondary structures and AttentiveFP combined with ECFP for drug molecules, and association features obtained via disease-associated coding and semantic similarity. These features are subsequently mapped into the hidden space of LLaMA-3.2-3B through adapter modules, with LoRA employed for parameter-efficient fine-tuning. Experimental results demonstrate that NCRDLLM achieves AUC-ROC values of 0.9665, 0.9832, and 0.9676 on miRNA-drug, lncRNA-drug, and circRNA-drug data sets, respectively. Ablation studies confirm the contribution of each module, while literature evidence and tissue-specific expression profiling further support the biological relevance of the predictions. NCRDLLM provides an effective strategy for identifying potential ncRNA-drug response associations."
+    },
+    {
+      "title": "A pre-trained language model-based cross-modal fusion framework for predicting miRNA-drug resistance and sensitivity associations.",
+      "pmid": "41666238",
+      "doi": "10.1371/journal.pcbi.1013968",
+      "authors": [
+        "Nan Sheng",
+        "Yunzhi Liu",
+        "Ling Gao",
+        "Wenju Hou",
+        "Lan Huang",
+        "Yan Wang"
+      ],
+      "journal": "PLoS computational biology",
+      "abstract": "MicroRNAs (miRNAs) are pivotal regulators of drug resistance and sensitivity in cancer cells, functioning as tumor suppressors or oncogenes that modulate the cellular response to anticancer drugs. While experimental identification of miRNA-mediated drug resistance and sensitivity is both costly and laborious, computational methods present a promising alternative. Recent advances in pre-trained language models (PLMs) offer new opportunities to leverage large-scale unlabeled biomolecular data for enhanced relationship prediction. In this study, we introduce PLMF-MDA, a PLM-based cross-modal fusion model designed to predict miRNA-drug resistance (MDR) and miRNA-drug sensitivity (MDS) associations. PLMF-MDA integrates miRNA and drug multimodal embeddings derived from PLMs and intrinsic feature extractors, and employs a cross-modal attention fusion module to adaptively capture key interactions between modalities. To evaluate the performance of the approach, we manually constructed two benchmark datasets. Experimental results demonstrate that the PLMF-MDA achieves superior prediction performance. Furthermore, case studies on anticancer drug docetaxel and gefitinib demonstrate its potential in discovering novel MDR (MDS) associations. All data and source code are available on GitHub: https://github.com/sheng-n/PLMF-MDA."
+    },
+    {
+      "title": "MPHGNN: metapath-guided heterogeneous graph neural network for miRNA-drug resistance association prediction.",
+      "pmid": "41608986",
+      "doi": "10.1093/bib/bbag013",
+      "authors": [
+        "Guangsheng Huang",
+        "Yali Peng",
+        "Shuai Wu",
+        "Hang Wei",
+        "Shigang Liu"
+      ],
+      "journal": "Briefings in bioinformatics",
+      "abstract": "Aberrant expression of microRNAs (miRNAs) is closely associated with the pathogenesis and progression of various diseases, particularly cancer, as well as therapeutic responses. Identification of miRNA-drug resistance associations is critical for drug screening and precision medicine. However, conventional experimental approaches remain time-consuming and labor-intensive, while existing computational methods often face challenge in capturing higher-order semantic inference from sparse prior bipartite association network. To address this, we propose MPHGNN, a heterogeneous graph convolutional network (GCN) architecture for predicting miRNA-drug resistance associations. MPHGNN constructs a miRNA-gene-drug heterogeneous network with multimodal biological features, including miRNA expression profiles, drug structural descriptors, and gene functional similarities, and leverages dual learning modules at both metapath and global levels to capture localized patterns and global representations simultaneously. Experimental results demonstrate that MPHGNN outperforms state-of-the-art methods and enhances the discriminative ability of association representations. Interpretability analyses further reveal that metapaths effectively capture underlying biological mechanisms, while the constructed heterogeneous biological network makes important contributions to prediction."
+    },
+    {
+      "title": "Attention-Guided Multiview Deep Learning Framework Uncovers miRNA-Drug Associations for Therapeutic Discovery.",
+      "pmid": "41592800",
+      "doi": "10.1021/acs.jcim.5c02839",
+      "authors": [
+        "Yan Wang",
+        "Yunzhi Liu",
+        "Chenxu Si",
+        "Jie Hong",
+        "Lei Wang",
+        "Lan Huang",
+        "Nan Sheng"
+      ],
+      "journal": "Journal of chemical information and modeling",
+      "abstract": "MicroRNAs (miRNAs) play critical roles in regulating various biological processes and offer significant potential for treating human diseases. Aberrant expression of miRNAs is known to contribute to drug resistance/sensitivity, posing a significant challenge to miRNA-based therapeutic approaches. Currently, traditional biological experiments to detect miRNA-drug associations (MDAs) are costly and time-consuming, while sequence- or topology-based deep learning methods have gained recognition for their efficiency and accuracy. Nevertheless, existing computational methods tend to ignore multiple sources of information and are overly reliant on known MDAs. We introduce an attention-guided multiview deep learning framework (DLMVF) for predicting MDAs. Our innovative approach fully integrates multisource information about miRNAs and drugs rather than relying exclusively on interaction graph data. DLMVF contains miRNA attribute view encoder, drug attribute view encoder, and miRNA-drug interactions encoder modules, enabling the extraction of miRNA and drug features from multiple perspectives. Moreover, the DLMVF can enhance the learned latent representations for association prediction through view-level attention, which adaptively learns the importance of different features. To evaluate the effectiveness of DLMVF, we manually constructed an experimental benchmark data set based on the latest database. DLMVF achieves an AUROC of 0.9611 and an AUPRC of 0.9543 on the benchmark data set. Extensive benchmarking demonstrates that the DLMVF outperforms existing methods with good robustness and generalization. In addition, a case study of three common anticancer drugs demonstrates its effectiveness in discovering novel MDAs. Data and source code will be published at https://github.com/Lgubig/DLMVF_model."
+    },
+    {
+      "title": "A computational analysis of programmed cell death-associated LncRNA signatures in glioma and drug prediction.",
+      "pmid": "41413482",
+      "doi": "10.1186/s12883-025-04372-5",
+      "authors": [
+        "Xingyu Liu",
+        "Dongliang Luo",
+        "Peng Zhang",
+        "Di Tian",
+        "Wei Liu",
+        "Liyan Jia"
+      ],
+      "journal": "BMC neurology",
+      "abstract": "Despite advancements in multimodal therapy, glioma remains a lethal brain tumor with limited prognostic biomarkers. Programmed cell death (PCD) pathways and long non-coding RNAs (lncRNAs) are emerging as therapeutic targets, but their combined prognostic potential in glioma remains underexplored. RNA sequencing data from The Cancer Genome Atlas (TCGA) and Chinese Glioma Genome Atlas (CGGA) cohorts were analyzed to identify PCD-related lncRNAs. Least Absolute Shrinkage and Selection Operator (LASSO) Cox regression and multivariate Cox proportional hazards regression analyses were applied to construct a prognostic signature, with external validation performed in an independent cohort. Tumor immune microenvironment characterization was subsequently conducted through the Tumor IMmune Estimation Resource (TIMER) database using the inverse fold product algorithm, which quantified six tumor-infiltrating immune cells (TIIC) subtypes across 10,897 pan-cancer samples. Immune checkpoint differential expression between risk strata was assessed via single-sample gene set enrichment analysis (ssGSEA). Drug sensitivity prediction was performed using the Cancer Genome Project (GCP) databases. A 4-lncRNA signature effectively stratified patients into high-risk and low-risk groups. The prognosis of the high-risk group is worse. In multivariate analysis, a risk score can independently predict the prognosis and has a robust prediction efficiency in the CGGA external verification set. The infiltration of immunosuppressive cells, such as M2 macrophages, increased the expression of immune checkpoints, such as PD-L1, increased, and the infiltration of CD8 + T cells decreased in high-risk patients. Computational screening identified elesclomol as a potential therapeutic agent showing subtype-specific efficacy. This study highlights the prognostic significance of lncRNAs associated with PCD in glioma and provides computational evidence for their potential as therapeutic targets. While the results suggest novel avenues for treatment development, they must be interpreted cautiously due to the lack of experimental validation. Future studies should aim to validate these results through controlled clinical trials and explore underlying molecular mechanisms."
+    },
+    {
+      "title": "Serum-MiR-CanPred: deep learning framework for pan-cancer classification and miRNA-targeted drug discovery.",
+      "pmid": "41168129",
+      "doi": "10.1080/15476286.2025.2577433",
+      "authors": [
+        "Naisarg Patel",
+        "Ankita Lawarde",
+        "Suhas Manikant Surisetti",
+        "Premkumar Thiruselvam",
+        "Prakash Lingasamy",
+        "Vino Sundararajan",
+        "Sajitha Lulu S",
+        "Andres Salumets",
+        "Vijayachitra Modhukur"
+      ],
+      "journal": "RNA biology",
+      "abstract": "Cancer diagnosis at an early stage is crucial for improving overall health outcomes. However, existing cancer diagnostic techniques are mostly invasive and tend to identify the disease only in its advanced stages. MicroRNAs (miRNAs), which are small non-coding RNAs involved in gene expression regulation, are stable in serum as circulating miRNAs and have potential as non-invasive biomarkers. However, their application in pan-cancer diagnostics and therapeutics is still largely unexplored. We developed Serum-MiR-CanPred, a deep learning framework using a multi-layer perceptron (MLP) trained on serum miRNA expression data from 20,271 samples across 12 cancer types and healthy controls from GEO databases. The model achieves robust pan-cancer classification (AUC = 96.87%, accuracy = 96%) with a consensus set of 88 miRNAs. Validation using external datasets demonstrated its generalizability and clinical potential. SHapley Additive exPlanations (SHAP) identified hsa-miR-5100 as a key biomarker, dysregulated in cancers including lung, bladder, and gastric carcinomas. Pathway analysis linked these miRNAs to cancer-related processes like VEGFA-VEGFR2 signalling. Molecular docking of pre-mir-5100 with rDock, identified AC1MMYR2 as a potential high-affinity ligand, with binding stability confirmed by molecular dynamics simulations using GROMACS In conclusion, Serum-MiR-CanPred integrates explainable AI with molecular modelling, advancing miRNA-based diagnostics and drug discovery for precision oncology."
+    },
+    {
+      "title": "Predicting miRNA-Drug Interactions Based on Multi-source Feature Fusion of Heterogeneous Network.",
+      "pmid": "41083770",
+      "doi": "10.1007/s12539-025-00775-7",
+      "authors": [
+        "Chenyue Lei",
+        "Xiujuan Lei",
+        "Lian Liu",
+        "Jianrui Chen",
+        "Fang-Xiang Wu"
+      ],
+      "journal": "Interdisciplinary sciences, computational life sciences",
+      "abstract": "Resistance to treatment remains one of the greatest challenges in cancer therapy. Recent studies have shown that drug sensitivity is closely associated with miRNA expression, highlighting the importance of predicting miRNA-drug interactions (MDIs) in understanding drug resistance mechanisms. Within this study, we propose an innovative method named MSFFMDI, which employs a dual-channel multi-source feature fusion framework based on heterogeneous networks to predict potential MDIs. The first channel focuses on attribute feature extraction. For miRNAs, we integrate the k-mer algorithm with word2vec to transform sequences into low-dimensional embeddings that capture semantic and structural information. For drugs, we utilize the graph isomorphism network to learn molecular structure features, and apply mol2vec to capture chemical and functional sequence features. The second channel extracts topological features by constructing a heterogeneous network based on integrated similarities and known associations between miRNAs and drugs. A graph attention network is used to update node embeddings, and a multi-scale convolutional neural network is employed to further extract topological representations. The features from both channels are fused and reduced via principal component analysis before being used for final prediction. A large number of rich experimental results show that MSFFMDI demonstrates excellent predictive performance on two datasets. Case studies further validate its robust performance. Overall, MSFFMDI provides a powerful and interpretable framework for predicting MDIs and offers potential insights into the mechanisms of drug resistance."
+    },
+    {
+      "title": "Deep-Learning-Based Integration of Sequence and Structure Information for Efficiently Predicting miRNA-Drug Associations.",
+      "pmid": "40380921",
+      "doi": "10.1021/acs.jcim.5c00038",
+      "authors": [
+        "Nan Sheng",
+        "Yunzhi Liu",
+        "Ling Gao",
+        "Lei Wang",
+        "Chenxu Si",
+        "Lan Huang",
+        "Yan Wang"
+      ],
+      "journal": "Journal of chemical information and modeling",
+      "abstract": "Extensive research has shown that microRNAs (miRNAs) play a crucial role in cancer progression, treatment, and drug resistance. They have been recognized as promising potential therapeutic targets for overcoming drug resistance in cancer treatment. However, limited attention has been paid to predicting the association between miRNAs and drugs by computational methods. Existing approaches typically focus on constructing miRNA-drug interaction graphs, which may result in their performance being limited by interaction density. In this work, we propose a novel deep learning method that integrates sequence and structural information to infer miRNA-drug associations (MDAs), called DLST-MDA. This approach innovates by utilizing attribute information on miRNAs and drugs instead of relying on the commonly used interaction graph information. Specifically, considering the sequence lengths of miRNAs and drugs, DLST-MDA employs multiscale convolutional neural network (CNN) to learn sequence embeddings at different granularity levels from miRNA and drug sequences. Additionally, it leverages the power of graph neural networks to capture structural information from drug molecular graphs, providing a more representational analysis of the drug features. To evaluate DLST-MDA's effectiveness, we manually constructed a benchmark data set for various experiments based on the latest databases. Results indicate that DLST-MDA performs better than other state-of-the-art methods. Furthermore, case studies of three common anticancer drugs can evidence their usefulness in discovering novel MDAs. The data and source code are released at https://github.com/sheng-n/DLST-MDA."
+    },
+    {
+      "title": "A Pyroptosis-Related LncRNA Signature for Predicting Prognosis, Immune Features and Drug Sensitivity in Ovarian Cancer.",
+      "pmid": "40291608",
+      "doi": "10.2147/OTT.S491130",
+      "authors": [
+        "Po-Wu Liu",
+        "Zhao-Yi Liu",
+        "Shi-Jia Deng",
+        "Xiu Zhang",
+        "Zhi-Bin Wang",
+        "Na-Yiyuan Wu",
+        "Chao-Shui Liu",
+        "Ming-Hua Hu",
+        "Jing Wang",
+        "He Li"
+      ],
+      "journal": "OncoTargets and therapy",
+      "abstract": "Multiple studies have suggested that lncRNAs and pyroptosis play important roles in ovarian cancer (OC). However, the function of pyroptosis-related lncRNAs (PRLs) in OC is not fully understood. Clinical information and RNA-seq data of OC patients (n = 379) were collected from TCGA database. Pearson correlation analysis and univariate Cox analysis were performed to identify prognostic PRLs, respectively. LASSO-COX regression was utilized to construct a prognostic PRLs signature. Kaplan-Meier (K-M) curve analyses and receiver operating characteristics (ROC) were used to evaluate the prognostic prediction of the signature. The association between risk score and tumor microenvironment infiltration, immunotherapy response and chemotherapy sensitivity were also analyzed. In addition, the function of TYMSOS on OC and pyroptosis was experimentally confirmed in cell lines. Firstly, 32 prognostic PRLs were identified, and a novel prognostic PRLs signature was constructed and validated. Surprisingly, the prognostic PRLs signature could solidly predict the clinical outcome of patients with OC and patients with high-risk score shown a short overall survival. GSEA results suggested that the RPLs were mainly enriched in the inflammatory response pathway, p53 pathway, TGF-β signaling and TNFα signaling. Besides, our results demonstrated that the risk score was significantly associated with patients with immune infiltration, immunotherapy response and the sensitivity of veliparib and metformin. Furthermore, the oncogene effect of TYMSOS on OC by inhibiting pyroptosis was verified by experiments. This study found that the prognostic PRLs signature may serve as an efficient biomarker in predicting the prognosis, tumor microenvironment infiltration, and sensitivity of chemotherapeutic agents. TYMSOS is a potential biomarker in OC, and it might promote tumor progression by inhibiting pyroptosis."
+    },
+    {
+      "title": "DMGAT: predicting ncRNA-drug resistance associations based on diffusion map and heterogeneous graph attention network.",
+      "pmid": "40251829",
+      "doi": "10.1093/bib/bbaf179",
+      "authors": [
+        "Tingyu Liu",
+        "Qiuhao Chen",
+        "Renjie Liu",
+        "Yuzhi Sun",
+        "Yadong Wang",
+        "Yan Zhu",
+        "Tianyi Zhao"
+      ],
+      "journal": "Briefings in bioinformatics",
+      "abstract": "Non-coding RNAs (ncRNAs) play crucial roles in drug resistance and sensitivity, making them important biomarkers and therapeutic targets. However, predicting ncRNA-drug associations is challenging due to issues such as dataset imbalance and sparsity, limiting the identification of robust biomarkers. Existing models often fall short in capturing local and global sequence information, limiting the reliability of predictions. This study introduces DMGAT (diffusion map and heterogeneous graph attention network), a novel deep learning model designed to predict ncRNA-drug associations. DMGAT integrates diffusion maps for sequence embedding, graph convolutional networks for feature extraction, and GAT for heterogeneous information fusion. To address dataset imbalance, the model incorporates sensitivity associations and employs a random forest classifier to select reliable negative samples. DMGAT embeds ncRNA sequences and drug SMILES using the word2vec technique, capturing local and global sequence information. The model constructs a heterogeneous network by combining sequence similarity and Gaussian Interaction Profile kernel similarity, providing a comprehensive representation of ncRNA-drug interactions. Evaluated through five-fold cross-validation on a curated dataset from NoncoRNA and ncDR, DMGAT outperforms seven state-of-the-art methods, achieving the highest area under the receiver operating characteristic curve (0.8964), area under the precision-recall curve (0.8984), recall (0.9576), and F1-score (0.8285). The raw data are released to Zenodo with identifier 13929676. The source code of DMGAT is available at https://github.com/liutingyu0616/DMGAT/tree/main."
+    },
+    {
+      "title": "Graph-Based Prediction of miRNA-Drug Associations With Multisource Information and Metapath Enhancement Matrices.",
+      "pmid": "40184304",
+      "doi": "10.1109/JBHI.2025.3558303",
+      "authors": [
+        "Ming-Yang Wu",
+        "Peng-Wei Hu",
+        "Zhu-Hong You",
+        "Jun Zhang",
+        "Lun Hu",
+        "Xin Luo"
+      ],
+      "journal": "IEEE journal of biomedical and health informatics",
+      "abstract": "Recent studies have demonstrated that miRNA expression dysregulation is closely related to the occurrence of various diseases; thus, miRNA-based drug development strategies have received increasing research interest. Most existing computational methods focus on the attribute information of individual nodes and are limited to the direct associations between nodes, thereby ignoring the complex associations inherent in the network. This limitation may lead to the loss of key potential information, which impacts the prediction accuracy. To address these issues, we propose a multisource information fusion and metapath enhancement matrix based graph autoencoder (MSMP-GAE) to predict the potential associations between miRNAs and drugs. The proposed MSMP-GAE model comprises a metapath instance extraction module, a metapath feature enhanced encoder module, a weighted feature fusion module, and a graph autoencoder. First, we construct an miRNA-drug heterogeneous network using experimentally validated miRNA-drug interactions and integrate various miRNA and drug features into an initial feature matrix to comprehensively represent their intrinsic property information. Then, we extract metapath instances from the interaction network, generate multiple metapath enhancement matrices, and fuse them with the initial feature matrix to generate high-quality node feature embeddings. Finally, we employ the graph autoencoder for fivefold cross-validation on a public dataset and test it on an independent test set. Experimental results demonstrate that the proposed MSMP-GAE model obtained an area under the curve (AUC) and AUPR values of 98.61% and 98.23%, respectively, which is considerably better than the several state-of-the-art methods. This highlights the importance of the higher-order complex associations between nodes in the miRNA-drug association (MDA) prediction task and provides a new method and approach to advance MDA prediction."
+    },
+    {
+      "title": "AGCLNDA: Enhancing the Prediction of ncRNA-Drug Resistance Association Using Adaptive Graph Contrastive Learning.",
+      "pmid": "40031186",
+      "doi": "10.1109/JBHI.2025.3531112",
+      "authors": [
+        "Yanhao Fan",
+        "Che Zhang",
+        "Xiaowen Hu",
+        "Zhijian Huang",
+        "Lei Deng"
+      ],
+      "journal": "IEEE journal of biomedical and health informatics",
+      "abstract": "Non-coding RNAs (ncRNAs), which do not encode proteins, have been implicated in chemotherapy resistance in cancer treatment. Given the high costs and time requirements of traditional biological experiments, there is an increasing need for computational models to predict ncRNA-drug resistance associations. In this study, we introduce AGCLNDA, an adaptive contrastive learning method designed to uncover these associations. AGCLNDA begins by constructing a bipartite graph from existing ncRNA-drug resistance data. It then utilizes a light graph convolutional network (LightGCN) to learn vector representations for both ncRNAs and drugs. The method assesses resistance association scores through the inner product of these vectors. To tackle data sparsity and noise, AGCLNDA incorporates learnable augmented view generators and denoised view generators, which provide contrastive views for enhanced data augmentation. Comparative experiments demonstrate that AGCLNDA outperforms five other advanced methods. Case studies further validate AGCLNDA as an effective tool for predicting ncRNA-drug resistance associations."
+    },
+    {
+      "title": "Predicting Drug-miRNA Associations Combining SDNE with BiGRU.",
+      "pmid": "40030943",
+      "doi": "10.1109/JBHI.2024.3525266",
+      "authors": [
+        "Chenyue Lei",
+        "Xiujuan Lei"
+      ],
+      "journal": "IEEE journal of biomedical and health informatics",
+      "abstract": "It is well recognized that abnormal miRNA expression can result in drug resistance and pose a challenge to miRNA-based treatments. However, the drug-miRNA associations (DMA) are still incompletely understood. Conventional biological experiments have a high failure rate, lengthy cycle times, and expensive expenditures. Consequently, deep learning-based techniques for predicting DMA have been developed. In this work, we propose a novel method named SDNEDMA for DMA prediction that combines SDNE with BiGRU. The two-channel approach is used to combine the attribute and topological features of miRNAs and drugs. To be more precise, we first model the associations between drugs and miRNAs through the known bipartite network, and then utilize SDNE to obtain the topological features. Meanwhile, BiGRU is employed to acquire miRNA k-mer sequence features and drug ECFP fingerprints. Subsequently, both the topological and attribute features are fused jointly to form final features which is aimed to predict the association score for both them. Multiple features drugs and miRNAs are used at the same time, more information is fused, and the features are more accurate, so the prediction performance is better. The experiments show that SDNEDMA outperforms other state-of-the-art methods, yielding AUC of 0.9641 when we use 5-fold cross-validation on the ncDR dataset. SDNEDMA is additionally employed in a case study, showing how accurate and dependable it is. To sum up, the SDNEDMA has the ability to predict DMA with high accuracy and effectiveness, which is really important for drug development."
+    },
+    {
+      "title": "MMLmiRLocNet: miRNA Subcellular Localization Prediction Based on Multi-View Multi-Label Learning for Drug Design.",
+      "pmid": "39446533",
+      "doi": "10.1109/JBHI.2024.3483997",
+      "authors": [
+        "Tao Bai",
+        "Junxi Xie",
+        "Yumeng Liu",
+        "Bin Liu"
+      ],
+      "journal": "IEEE journal of biomedical and health informatics",
+      "abstract": "Identifying subcellular localization of microRNAs (miRNAs) is essential for comprehensive understanding of cellular function and has significant implications for drug design. In the past, several computational methods for miRNA subcellular localization is being used for uncovering multiple facets of RNA function to facilitate the biological applications. Unfortunately, most existing classification methods rely on a single sequence-based view, making the effective fusion of data from multiple heterogeneous networks a primary challenge. Inspired by multi-view multi-label learning strategy, we propose a computational method, named MMLmiRLocNet, for predicting the subcellular localizations of miRNAs. The MMLmiRLocNet predictor extracts multi-perspective sequence representations by analyzing lexical, syntactic, and semantic aspects of biological sequences. Specifically, it integrates lexical attributes derived from k-mer physicochemical profiles, syntactic characteristics obtained via word2vec embeddings, and semantic representations generated by pre-trained feature embeddings. Finally, module for extracting multi-view consensus-level features and specific-level features was constructed to capture consensus and specific features from various perspectives. The full connection networks are utilized as the output module to predict the miRNA subcellular localization. Experimental results suggest that MMLmiRLocNet outperforms existing methods in terms of F1, subACC, and Accuracy, and achieves best performance with the help of multi-view consensus features and specific features extract network."
+    },
+    {
+      "title": "DLP: Duplex Link Prediction via Subspace Segmentation for Predicting Drug-MiRNA Associations.",
+      "pmid": "38767995",
+      "doi": "10.1109/TCBB.2024.3402215",
+      "authors": [
+        "Kai Zheng",
+        "Guihua Duan",
+        "Qichang Zhao",
+        "Mengyun Yang",
+        "Xiao Liang",
+        "Yiwei Liu",
+        "Jianxin Wang"
+      ],
+      "journal": "IEEE transactions on computational biology and bioinformatics",
+      "abstract": "The arduous and costly journey of drug discovery is increasingly intersecting with computational approaches, which promise to accelerate the analysis of bioassays and biomedical literature. The critical role of microRNAs (miRNAs) in disease progression has been underscored in recent studies, elevating them as potential therapeutic targets. This emphasizes the need for the development of sophisticated computational models that can effectively identify promising drug targets such as miRNAs. Herein, we present a novel method, termed Duplex Link Prediction (DLP), rooted in subspace segmentation, to pinpoint potential miRNA targets. Our approach initiates with the application of the Network Enhancement (NE) algorithm to refine the similarity metric between miRNAs. Thereafter, we construct two matrices by pre-loading the association matrix from both the drug and miRNA perspectives, employing the K Nearest Neighbors (KNN) technique. The DLSR algorithm is then applied to predict potential associations. The final predicted association scores are ascertained through the weighted mean of the two matrices. Our empirical findings suggest that the DLP algorithm outperforms current methodologies in the realm of identifying potential miRNA drug targets. Case study validations further reinforce the real-world applicability and effectiveness of our proposed method."
+    }
+  ]
+}

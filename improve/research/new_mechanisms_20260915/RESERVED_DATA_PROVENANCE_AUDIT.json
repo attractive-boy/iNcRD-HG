@@ -1,0 +1,98 @@
+{
+  "created_at_utc": "2026-09-15T12:18:56.827826+00:00",
+  "current_wave_original_test_labels_loaded": false,
+  "current_wave_historical_outer_query_labels_loaded": false,
+  "globally_untouched_test_claim_supported": false,
+  "evidence_files": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/RESULTS.md": "7045221477e0f3b4b96f09a0ed35f5f2236c22806f0d97a9097b5092b6d85580",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/backbone_replacement.py": "c3e215a577ad82ea596728597574697af9d9b1d6e1ad8ba169341bb0029313c1",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/backbone_replacement_20260910/protocol.json": "aa26156834c717502136afe18cbe0738cf1f9aa60bdf210ce85c4f2af3ae173a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/additive_search_20260910/protocol.json": "94d89831851f25f4abfcfc8db45d72acdcbad15069239dd3a1b0e7e7d30108ec"
+  },
+  "documented_exposure": [
+    {
+      "file": "RESULTS.md",
+      "lines": [
+        15,
+        23,
+        287,
+        303
+      ],
+      "evidence": "Historical best-epoch-on-test and test-label oracle analyses are explicitly recorded."
+    },
+    {
+      "file": "results/backbone_replacement_20260910/protocol.json",
+      "lines": [
+        165
+      ],
+      "evidence": "The inner and outer validation partitions were already used in historical development."
+    },
+    {
+      "file": "results/additive_search_20260910/protocol.json",
+      "evidence": "Outer validation was also used by earlier experiments; this is not a new independent test set."
+    }
+  ],
+  "archive_metadata": {
+    "MiDrug": {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/backbone_replacement_20260910/inputs/MiDrug/outer.npz",
+      "members": [
+        "x_lncRNA.npy",
+        "x_miRNA.npy",
+        "x_drug.npy",
+        "x_circRNA.npy",
+        "pairs_train.npy",
+        "pairs_val.npy",
+        "y_train.npy",
+        "y_val.npy",
+        "weight_0.npy",
+        "weight_1.npy",
+        "weight_2.npy",
+        "weight_3.npy",
+        "weight_4.npy",
+        "weight_5.npy",
+        "weight_6.npy",
+        "weight_7.npy",
+        "weight_8.npy",
+        "weight_9.npy",
+        "weight_10.npy",
+        "weight_11.npy",
+        "weight_12.npy",
+        "pca_x_lncRNA.npy",
+        "pca_x_miRNA.npy"
+      ]
+    },
+    "LncDrug": {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/backbone_replacement_20260910/inputs/LncDrug/outer.npz",
+      "members": [
+        "x_lncRNA.npy",
+        "x_miRNA.npy",
+        "x_drug.npy",
+        "x_circRNA.npy",
+        "pairs_train.npy",
+        "pairs_val.npy",
+        "y_train.npy",
+        "y_val.npy",
+        "weight_0.npy",
+        "weight_1.npy",
+        "weight_2.npy",
+        "weight_3.npy",
+        "weight_4.npy",
+        "weight_5.npy",
+        "weight_6.npy",
+        "weight_7.npy",
+        "weight_8.npy",
+        "weight_9.npy",
+        "weight_10.npy",
+        "weight_11.npy",
+        "weight_12.npy",
+        "pca_x_lncRNA.npy",
+        "pca_x_miRNA.npy"
+      ]
+    }
+  },
+  "limitations": [
+    "Exact pair-identity reconciliation of every historical original-test experiment has not been performed.",
+    "Inspecting archive member names below does not load any query outcome array.",
+    "A later frozen heldout recheck must be labeled as historically exposed if it uses these archived surfaces."
+  ]
+}

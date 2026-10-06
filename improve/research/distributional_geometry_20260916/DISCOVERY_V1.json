@@ -1,0 +1,1532 @@
+[
+  {
+    "url": "https://export.arxiv.org/api/query?search_query=%28ti%3Agraph+AND+%28ti%3AGaussian+OR+ti%3AWasserstein+OR+ti%3Acovariance+OR+ti%3Adistributional%29%29+AND+submittedDate%3A%5B202401010000+TO+202609162359%5D&start=0&max_results=40&sortBy=submittedDate&sortOrder=descending",
+    "accessed_at_utc": "2026-09-16T09:54:57.664841+00:00",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/distributional_geometry_20260916/arxiv_distributional_v1.xml",
+    "status": 200,
+    "content_type": "application/atom+xml; charset=utf-8",
+    "bytes": 93329,
+    "sha256": "91aa3ac60f4a2c38e27ce9405fc13c7e598339444672ddd95bb0e04cbab7d33a",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2609.15753v1",
+        "title": "Covariance and Principal Component Analysis on Riemannian Manifolds and Graphs",
+        "published": "2026-09-14T15:40:09Z",
+        "updated": "2026-09-14T15:40:09Z",
+        "abstract": "We develop notions of covariance and principal component analysis (PCA) for probability measures on Riemannian manifolds of bounded geometry and a discrete counterpart for distributions on the vertex sets of weighted simple graphs. Rather than anchoring variation at the Fréchet mean, whose uniqueness and usefulness can fail in this context, we consider variation about every point. This leads to a representation of each point on the manifold by a vector field derived from the heat kernel and thus to a map of the underlying manifold into a Hilbert space of vector fields, in which covariance and PCA carry over from the Euclidean setting. A distinguishing feature of this formulation is that one typically obtains infinitely many principal components, capable of capturing highly nonlinear geometric features and patterns of variation. We prove an embedding theorem for the mapping into the space of vector fields and develop two computational reductions of the theory: RiePCA, a finite-dimensional reduction based on vector fields supported on finitely many points, and GraphPCA, a discrete formulation for measures on weighted graphs in which vector fields assign orientations and magnitudes to edges. Numerical examples and experiments illustrate the behavior of the proposed methods on both synthetic and real data.",
+        "authors": [
+          "Luiz Hartmann",
+          "Wenwen Li",
+          "Washington Mio"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.14737v1",
+        "title": "Trinqet: Private Triangle and Quadrangle Counting over Distributed Graphs",
+        "published": "2026-09-13T18:59:03Z",
+        "updated": "2026-09-13T18:59:03Z",
+        "abstract": "Triangle and quadrangle counts are core statistics in graph analysis. Yet many real-world graphs are distributed across multiple parties and encode highly sensitive relationships, precluding direct data sharing. Secure multi-party computation (MPC) provides a principled alternative, but introduces a fundamental tension: the protocol must hide the graph's topology, forcing fully data-oblivious operations over all potential edges--while real-world graphs are extremely sparse, making most of this work wasted. We propose Trinqet, a system that resolves this tension through new MPC-friendly algorithms for private triangle and quadrangle detection. Trinqet safely exploits sparsity using a suite of novel techniques that eliminate vast numbers of unnecessary operations while preserving strong security in the malicious threat model. Trinqet supports both counting and enumeration and, in our evaluation, outperforms all five baselines by up to 10^5 in runtime.",
+        "authors": [
+          "Mushtari Sadia",
+          "Amrita Roy Chowdhury"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.13920v1",
+        "title": "Finite-Time Node Separation in Recurrent Graph Neural Networks with Persistent Gaussian Perturbations",
+        "published": "2026-09-12T13:06:41Z",
+        "updated": "2026-09-12T13:06:41Z",
+        "abstract": "Persistent Gaussian perturbations have been shown to prevent asymptotic oversmoothing in recurrent Graph Neural Networks (GNNs) by ensuring a positive stationary Dirichlet energy. However, this global energy bound does not guarantee that individual node representations remain distinct at finite depths. In this paper, we provide a complementary finite-time analysis of the same persistent-noise architecture. Let \\(d\\) denote the representation dimension and \\(σ\\) the noise standard deviation. We first prove an exact second-moment decomposition for the expected squared distance between any two node representations, yielding the universal lower bound \\(2σ^2 d\\) at every positive time step without contraction or stationarity assumptions. More precisely, conditional pairwise distances have a noncentral chi-square characterization: the noncentrality parameter is the deterministic message-passing separation normalized by \\(2σ^2\\). This yields dynamics-aware fixed-time and finite-horizon near-collision bounds that retain information discarded by the central worst-case analysis. The earlier central Gaussian bound is recovered as the worst-case zero-separation case. We additionally prove almost-sure pairwise noncollision, derive a uniform finite-horizon guarantee, and establish permutation equivariance in distribution for the stochastic dynamics and permutation-invariant graph outputs. Our results complement the asymptotic energy analysis of prior work and provide rigorous finite-time guarantees on node-level representation separation.",
+        "authors": [
+          "Mostafa Haghir Chehreghani"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.13655v1",
+        "title": "Online Bayesian Node Classification on Inductive Graphs under Distribution Shift",
+        "published": "2026-09-12T02:23:30Z",
+        "updated": "2026-09-12T02:23:30Z",
+        "abstract": "On evolving graphs, node classifiers must satisfy two key requirements: inductive generalization to newly arriving nodes under distribution shift and calibrated uncertainty for safety-sensitive applications. Standard graph neural networks (GNNs) are typically trained once and address neither requirement. We adapt the Bayesian last-layer (BLL) model by placing random last-layer parameters on top of a deterministic GNN encoder for uncertainty quantification. The categorical softmax likelihood required for classification breaks Gaussian conjugacy, so neither the training posterior nor the test-time streaming update has a closed-form solution. To address both challenges, we introduce a variational Bayesian last-layer (VBLL) objective that jointly trains the encoder and an approximate last-layer posterior by maximizing an evidence lower bound with a Monte Carlo expected log-likelihood. At test time, we freeze the encoder and apply an online Laplace update to the last-layer posterior. This update corresponds to a power-prior Bayesian model with exponential forgetting and a Kullback-Leibler anchor to the training posterior. Across five node-classification benchmarks under distribution shift, online GVBLL is the only method to achieve the best accuracy and negative log-likelihood on every dataset. It improves accuracy by up to 17 percentage points on Cora and 14 percentage points on ogbn-arxiv over the strongest non-GVBLL baseline, while remaining competitive in calibration with MC Dropout, Deep Ensembles, Temperature Scaling, and Gaussian-process classifiers.",
+        "authors": [
+          "Jinwen Xu",
+          "Gonzalo Mateos Buckstein",
+          "Qin Lu"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.13452v1",
+        "title": "COMPASS: Steering Distributed Vector Search with Scientific Knowledge Graphs",
+        "published": "2026-09-11T19:13:09Z",
+        "updated": "2026-09-11T19:13:09Z",
+        "abstract": "Vector databases use hashing to partition data across \"shards,\" logical units for distributed execution. This placement, however, destroys semantic locality, forcing each query into scatter-gather limited by the slowest shard. Vector-space clustering can help, but scientific evidence is often connected by factual relations that do not align with embedding distance. We present COMPASS, a framework that uses a knowledge graph (KG) to determine data placement and query-time shard selection. COMPASS detects communities, splits oversized communities, inserts embeddings by subject entity, and routes queries to a small set of shards. Across four biomedical KGs, our method searches only 13-18% of the corpus while preserving broadcast recall and recovering up to 2.6x more multi-hop evidence than an embedding-based baseline. On 15 HPC nodes, COMPASS sustains 7.9x higher throughput with lower tail latency than hash-based broadcast. These results show that KG structure provides a compact complement to embedding geometry for scalable vector search.",
+        "authors": [
+          "Song Young Oh",
+          "Amal Gueroudji",
+          "Seth Ockerman",
+          "Rob Latham",
+          "Orcun Yildiz",
+          "Ian Foster",
+          "Kyle Chard",
+          "Robert Ross"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.10490v2",
+        "title": "Learning with Covariance Matrices: Principal Component Analysis Meets Learning with Graphs",
+        "published": "2026-09-09T17:28:46Z",
+        "updated": "2026-09-14T17:56:00Z",
+        "abstract": "This feature article provides an overview of the theoretical foundations for coVariance neural networks (VNNs), i.e., graph neural networks (GNNs) operating on covariance matrices as graphs. Covariance matrices are ubiquitous across domains, and hence, the deployment of GNNs often leverages graphs of pairwise statistical dependencies. Existing theoretical contributions on GNNs consider abstract graph representations and cannot accommodate the data-driven nuances associated with covariance matrices. This tutorial brings into focus various novel theoretical insights via mathematical analyses of VNNs that have broad signal processing implications, including: (i) a conceptual equivalence between VNNs and principal component analysis (PCA)-based information processing; (ii) refined stability bounds on predictive outcomes in the presence of finite sample-induced covariance matrix perturbations; and (iii) refined characterization of transferability of VNNs across multiscale datasets. The theoretical insights discussed herein provide the underlying principles and justification towards adopting VNNs over workhorse PCA-based learning pipelines, in applications where covariance matrices are useful descriptors of data structure. We also convey how impact of these foundational advances permeates to \\textit{principled} designs and applications of learning methods across broad domains where covariance matrices emerge. Notably, we elucidate the conceptual insights facilitated by VNNs to the specific task of characterizing brain age gap for neurodegenerative conditions using neuroimaging datasets, a timely problem in computational neuroscience. Broader impacts to other application domains are discussed as well.",
+        "authors": [
+          "Saurabh Sihag",
+          "Andrea Cavallo",
+          "Elvin Isufi",
+          "Gonzalo Mateos",
+          "Alejandro Ribeiro"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.10044v1",
+        "title": "Introvert Clustering for Distributed Graph Algorithms",
+        "published": "2026-09-09T11:18:00Z",
+        "updated": "2026-09-09T11:18:00Z",
+        "abstract": "We introduce a graph decomposition primitive called introvert clustering, which strengthens standard low-diameter clustering by guaranteeing that every clustered vertex keeps at least a $\\left(\\frac12-\\varepsilon\\right)$-fraction of its relevant neighbors in its own cluster. Repeatedly applying this primitive yields a layered introvert network decomposition with $O(\\log n)$ layers and weak diameter $O(\\log n)$. We give two applications in the $\\mathsf{LOCAL}$ model. For every constant $\\varepsilon>0$, we obtain a $\\widetilde O(\\log^2 n)$-round deterministic algorithm for list $\\left(\\frac32+\\varepsilon\\right)Δ$-edge coloring on graphs of maximum degree $Δ\\geqΔ_0(\\varepsilon)$; for bipartite graphs, the result holds for all $Δ$. For every constant $0<\\varepsilon<1/4$, we also obtain a $\\widetilde O(\\log^2 n)$-round deterministic algorithm for a $\\left(\\frac14-\\varepsilon\\right)$-locally balanced cut, where every vertex has at least a $\\left(\\frac14-\\varepsilon\\right)$-fraction of its neighbors on the opposite side. The resulting algorithms are remarkably simple: edge coloring processes the layers in reverse order and colors each cluster, while locally balanced cut processes them forward and computes a locally maximum cut within each cluster. The introvert guarantee enables these procedures beyond the usual greedy regime of network decomposition. We construct the decomposition in $O(\\log^2 n)$ randomized rounds using Miller--Peng--Xu low-diameter clustering and a simple trimming procedure, and deterministically in $\\widetilde O(\\log^2 n)$ rounds via a white-box adaptation of the recursive network decomposition algorithm of Ghaffari and Grunau [FOCS 2024].",
+        "authors": [
+          "Yi-Jun Chang",
+          "Nima Dolatabadi"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.09475v1",
+        "title": "Distributed Physical Layer Authentication and Collaborative RSMA in Non-Terrestrial Networks via Graph Reinforcement Learning",
+        "published": "2026-09-08T21:46:12Z",
+        "updated": "2026-09-08T21:46:12Z",
+        "abstract": "Existing physical-layer authentication (PLA) schemes for non-terrestrial networks (NTNs) often rely on single-anchor verification, lack joint authentication-transmission design, and ignore tag privacy leakage under eavesdropping. In this paper, we consider passive, location-aware, static eavesdroppers without access to legitimate channel state information (CSI). Under this threat model, we propose secure adaptive federated authentication for multi-zone NTN systems (SAFA-MZ) that maximizes secrecy spectral efficiency (SSE) while ensuring authentication reliability, power limits, and coverage constraints. The main idea is to embed group-level authentication tags into a collaborative multi-layer rate-splitting multiple access (RSMA) transmission structure. Private and common signals are jointly beamformed, artificial noise (AN) is used to reduce information leakage, and group differential privacy (GDP) protects tag information against inference attacks. In addition, users are grouped by semantic priority to allocate SSE based on information importance. We formulate a joint SSE maximization problem under authentication reliability and probabilistic secrecy constraints, optimizing high-altitude platform station (HAPS) placement, user association, and RSMA power allocation. The resulting problem is solved using a repair-based cross-entropy method (RCEM) and a graph-aware advantage actor-critic algorithm (GA2C). RCEM scales quadratically with the number of users, while GA2C scales linearly and achieves scalable, low-latency inference. Simulation results under both colluding and non-colluding eavesdroppers show that the proposed method improves average SSE by up to 135% over single-connect transmission and 21% over the scheme without AN. These results confirm SAFA-MZ offers a scalable and secure solution for dynamic NTN environments.",
+        "authors": [
+          "Parsa Rajabi",
+          "Mohammad Mirzaee",
+          "Mohammad Reza Abedi",
+          "Nader Mokari",
+          "Paeiz Azmi"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.08970v1",
+        "title": "GraphFAS: A Distributed System for Automated Graph Feature Generation and Selection in Industrial Transaction Networks",
+        "published": "2026-09-08T16:20:43Z",
+        "updated": "2026-09-08T16:20:43Z",
+        "abstract": "Industrial fraud detection often relies on costly expert-crafted features that overlook graph-structured relational signals, while GNNs often do not meet the interpretability and deployment requirements of financial risk control. We propose GraphFAS (Graph Feature Automated Selection), a distributed feature selection procedure based on Boruta that bridges this gap through: (1) a non-parametric graph feature generation module that constructs explicit, interpretable structural features via multi-hop subgraph extraction and multi-scale aggregation without learned parameters; and (2) an automated distributed feature selection algorithm extending Boruta with median-based aggregation across partitions to robustly identify informative features at scale with minimal domain expertise. Compared with end-to-end GNN pipelines, GraphFAS decouples feature aggregation from model training, enabling direct integration with tabular models and direct compatibility with TreeSHAPbased explanations. Deployed in Alipay, GraphFAS delivers orderof-magnitude improvements in engineering efficiency while showing strong performance against expert-driven and graph-learning baselines on large-scale graphs.",
+        "authors": [
+          "Yice Luo",
+          "Yun Zhu",
+          "Xi Chen",
+          "Yongchao Liu",
+          "Xintan Zeng",
+          "Chengying Huan",
+          "Kai Zhang",
+          "Jinrui Zhang",
+          "Juelu Zhang",
+          "Jiajun Zheng"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.09258v1",
+        "title": "Tensor Network Moral Graph Recovery of Discrete Probability Distributions",
+        "published": "2026-09-08T16:04:06Z",
+        "updated": "2026-09-08T16:04:06Z",
+        "abstract": "We present a method for recovering the moral graph of a causal DAG from a probability distribution over discrete variables, using fully connected tensor networks (FCTNs) with nuclear-norm-regularized bond corrections. Each bond matrix is parameterized as a baseline all-ones matrix plus a low-rank correction $C_{ij} = U_{ij}V_{ij}^\\top$, and the nuclear norm of the correction implemented via the variational Frobenius norm penalty on the factors drives unnecessary bonds to zero. We prove that under faithfulness, positivity, and a no-implicit-rerouting assumption on the local tensor architecture, \\textbf{every} optimal FCTN with zero reconstruction error $\\varepsilon = 0$ has effective graph exactly equal to the moral graph. For the approximate regime ($\\varepsilon > 0$), we provide explicit recovery bounds using the Fannes-Audenaert continuity of conditional mutual information, and derive a sufficient condition on the regularization parameter $β$. The effective graph is read directly from the optimized bond matrices.",
+        "authors": [
+          "Á. Troyano Olivas",
+          "Chi-Hang Fred Fung",
+          "Hans H. Brunner",
+          "Momtchil Peev",
+          "Vicente Martin"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.06655v1",
+        "title": "Out-of-Distribution Inverse Design of Elastic Networks with Differentiable Graph Neural Network Molecular Dynamics",
+        "published": "2026-09-06T15:09:05Z",
+        "updated": "2026-09-06T15:09:05Z",
+        "abstract": "Machine-learning-based inverse design can accelerate the discovery of materials with targeted properties, but conventional structure--property models often require large training datasets and generalize poorly beyond their training distribution. Here, we present a differentiable inverse design framework based on a graph neural network molecular dynamics simulator. By combining a short dynamical initialization with physics-based refinement during simulation, the framework enables optimization well beyond the conditions represented in the training data. Using disordered elastic networks, we show that a simulator trained only on non-auxetic systems with Poisson's ratios between 0.1 and 0.4 can design strongly auxetic networks with values as low as -0.3. The framework also produces stress--strain responses outside the range observed during training, creates localized mechanical defects absent from the training data, and generalizes across system size, enabling optimization of networks tested up to 5000 nodes despite being trained only on networks with fewer than 200 nodes.",
+        "authors": [
+          "Sergey A. Shteingolts",
+          "Salman N. Salman",
+          "Ron Levie",
+          "Dan Mendels"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.05795v1",
+        "title": "Polynomial Lower Bounds for Distributed Graph Sketching with Tiny Error: Connectivity and Spanning Tree Construction",
+        "published": "2026-09-05T01:14:08Z",
+        "updated": "2026-09-05T01:14:08Z",
+        "abstract": "We present the first polynomial lower bounds for several fundamental problems in the distributed graph sketching model in the tiny-error regime, which includes deterministic algorithms as a special case. In the graph sketching model, every node sends a single message to the referee who does not have any prior knowledge of the graph and must output the answer. While the work of Nelson and Yu (SODA 2019) and Yu (SODA 2021) showed that $Θ( \\log^3n )$ is optimal for constructing a spanning forest or deciding whether the graph is connected with error at most $\\frac{1}{\\text{poly}(n)}$ , their approach does not yield any stronger bounds for significantly smaller error probabilities. Our main result is to show that solving either connectivity or spanning tree construction with error at most $δ$ requires messages of length $Ω( \\min\\{n, \\log_2 \\frac{1}δ\\}^{1/3} )$, which implies that algorithms with exponentially small error must send messages of $Ω( n^{1/3} )$ bits in the worst case. Our results significantly narrows the current gap between the Jelani-Yu threshold of $Θ( \\log^3n )$ and the trivial upper bound of sending $O(n)$ bits per node for deterministic graph sketching. We also extend our results to $k$-edge connectivity. For any $k=O(n^{1/7})$, we recover the same bound of $Ω( k )$ on the message length for algorithms with exponentially small error that was shown by Robinson and Tan (PODS 2026) only for deterministic algorithms. Finally, for $k=n^{o(1)}$, our result implies a stronger lower bound of $Ω_ε( n^ε )$ bits, for any constant $ε<\\tfrac{1}{3}$.",
+        "authors": [
+          "Peter Robinson",
+          "Ming Ming Tan"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.01435v1",
+        "title": "Gaussian Processes on Directed Metric Graphs",
+        "published": "2026-09-01T15:45:21Z",
+        "updated": "2026-09-01T15:45:21Z",
+        "abstract": "We introduce a statistical framework for Gaussian fields indexed at arbitrary edge locations on general compact directed metric graphs. The construction is based on a stochastic differential equation with a first-order operator and conditions at the vertices. We characterise well-posedness and identify the covariance reproducing kernel Hilbert space. We also connect the proposed framework to earlier stream-network models, showing that these arise from the same system under particular boundary conditions, and introduce new boundary conditions that yield more physically realistic processes. The differential-equation representation enables computationally efficient inference and prediction. This makes the method applicable to large data sets without approximation. Applications to temperature modelling on river networks and traffic speeds on road networks illustrate the framework, including the computational efficiency and improved performance under physically informed vertex conditions.",
+        "authors": [
+          "David Bolin",
+          "Alexandre de Bustamante Simas",
+          "Erik Karlsson Strandh",
+          "Jonas Wallin"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.01098v1",
+        "title": "Gaussian upper bounds for averaged heat semigroups on graphs",
+        "published": "2026-09-01T11:43:04Z",
+        "updated": "2026-09-01T11:43:04Z",
+        "abstract": "Characterizations of pointwise Gaussian upper bounds on graphs with possibly unbounded geometry in terms of localized functional inequalities contain errors depending on the vertex degree. We introduce a new space-time averaged form of the heat semigroup in terms of time-averaged $\\ell^{q/(q-1)}-\\ell^q$-estimates and obtain Gaussian upper bounds from large-scale Faber-Krahn inequalities which avoid such errors. A main analytic ingredient is an integrated version of Davies' method which yields off-diagonal estimates for this averaged quantity, and which tends to pointwise Gaussian bounds as time tends to infinity. Conversely, on large scales volume doubling and Gaussian bounds on this averaged heat semigroup norms imply relative Faber-Krahn inequalities for subsets of prescribed relative measure. Our proof is based on a lower bound for Dirichlet eigenvalues in terms of these averages. The Faber-Krahn dimension is scale-dependent, but converges to the doubling dimension for increasing radii. This gives a characterization of asymptotic Gaussian heat kernel behavior in terms of Faber-Krahn inequalities.",
+        "authors": [
+          "Christian Rose"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.31023v1",
+        "title": "SMG: Semantic Motion Graph for Monocular Dynamic Gaussian Splatting",
+        "published": "2026-08-31T16:06:18Z",
+        "updated": "2026-08-31T16:06:18Z",
+        "abstract": "We study dynamic Gaussian Splatting from monocular videos. While recent advancements in dynamic Gaussian splatting offer a promising foundation for modeling dynamic scenes, they often overfit to the training views and fail under occlusion or complex scene motion due to the lack of reliable regularization signals in under-constrained regions. We propose Semantic Motion Graph (SMG), a novel approach models the Gaussian motion as the low-rank semantic motion. Our key insight is that the real-world scene motion is often structured by semantic coherence: regions that are spatially close and semantically related tend to exhibit consistent dynamics. To leverage this prior, we construct SMG to model structured motion of the scene. The Gaussian motion is driven by the motion of SMG nodes. We further observe that the uncertainty of Gaussian motion arises from both unreliable off-the-shelf priors and weakly constrained regions during optimization. SMG addresses this by using reliable graph nodes to guide the motion of nearby unreliable nodes. To evaluate dynamic Gaussian splatting under challenging real-world scenarios, we introduce a new multiview dataset collected under an ego-exo setup. Extensive experiments demonstrate that SMG achieves state-of-the-art performance on monocular dynamic Gaussian splatting across challenging real-world benchmarks. Project page: https://smg-gaussian.github.io/.",
+        "authors": [
+          "Haozheng Yu",
+          "Xinyu Yang",
+          "Rundong Luo",
+          "Jennifer J. Sun",
+          "Bharath Hariharan"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.27117v1",
+        "title": "Modeling Spatially Obfuscated Street-Crime Data using Log-Gaussian Cox Processes on Metric Graphs",
+        "published": "2026-08-27T13:28:32Z",
+        "updated": "2026-08-27T13:28:32Z",
+        "abstract": "We develop a log-Gaussian Cox process framework for modelling street-level crime data observed on a road network when the released event locations are spatially obfuscated. Motivated by UK Police street-level crime data, where published coordinates are anonymised proxy locations rather than exact event locations, we address the resulting support mismatch by representing each observation through an aggregated support on the street network. The latent log-intensity is modelled as a Whittle--Matérn Gaussian field defined on a metric graph through an SPDE representation, allowing the crime intensity to vary continuously along streets while respecting the geometry of the road network. We compare the proposed metric-graph aggregated model with two alternatives: a planar point model that treats the released locations as exact points, and a planar aggregated model that accounts for spatial aggregation but ignores the network support. In a simulation study where data are generated on a street network, the metric-graph model provides more accurate parameter recovery and better overall fit than the planar alternative. In the City of London application, the metric-graph model also achieves the best fit across several crime types, including theft from the person, robbery, drugs, and bicycle theft. The results further suggest that the relationship between environmental amenities and crime risk varies by crime type, with supermarkets showing the most consistent positive associations. The proposed framework provides a principled approach for analysing network-constrained spatial event data with privacy-protected and imprecise locations.",
+        "authors": [
+          "Lulu Jiang",
+          "David Bolin"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.21166v2",
+        "title": "Distributed synthesis of arbitrary graph states in quantum networks via rank-two GF(2) reduction",
+        "published": "2026-08-21T14:37:08Z",
+        "updated": "2026-08-24T14:08:56Z",
+        "abstract": "Existing schemes for synthesizing graph states in quantum networks are essentially edge-by-edge constructions, so quantities such as the time-slot depth and the resource overhead grow significantly with the edge density of the target graph. This paper proposes a new method. Exploiting the mathematical equivalence between joint Pauli-X measurements and graph pivot operations, we formulate graph state synthesis as a rank-2 reduction process of a difference matrix over GF(2), and give an upper bound floor(N/2) on the number of steps for synthesizing an arbitrary N-node graph state, independent of the edge density of the target graph state. At the physical level, the joint Pauli-X measurement of each step is mapped to a dual-star concurrent distribution. We model the protocol on Waxman physical topologies with fiber attenuation and give a heuristic algorithm, and evaluate it against a strengthened Steiner baseline through Monte Carlo experiments. The experimental results show that our protocol is superior in time-slot depth almost everywhere. The entanglement resource overhead, the total number of CZ gates, and the number of Pauli measurements drop below the baseline near edge density p approximately 0.3, and are superior across the board thereafter. The denser the target graph state, the more significant the advantage.",
+        "authors": [
+          "Xiaoyi Zheng",
+          "Lin Chen",
+          "Chan-Tong Lam"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.19914v4",
+        "title": "Multi-Source Wasserstein Distributionally Robust Graph Learning",
+        "published": "2026-08-20T11:30:59Z",
+        "updated": "2026-09-11T03:10:02Z",
+        "abstract": "Reconstructing complex network topologies from data is a fundamental challenge in cybernetics and graph signal processing, with applications in neuroscience, sensor, and social networks. In practice, target-domain samples are scarce while heterogeneous source-domain data are abundant. Fusing these sources is challenging: Euclidean averaging works for homogeneous sources but degrades sharply as inter-source divergence grows, collapsing distinct geometries into an inflated, biased consensus. We exploit the Wasserstein metric's distribution-preserving properties to counter heterogeneity while preserving each source's intrinsic geometry. We propose MS-WDRO, a multi-source Wasserstein distributionally robust graph learning framework that fuses heterogeneous sources via their weighted Wasserstein barycenter, a geometrically principled nominal distribution, then builds an ambiguity ball around it to hedge residual uncertainty. Minimizing worst-case risk yields a tractable regularized Laplacian estimator solved efficiently via a provably convergent ADMM scheme. We establish non-asymptotic guarantees: a finite-sample concentration bound for the empirical barycenter, a pooling bias lower bound proving naive aggregation is suboptimal, and an out-of-sample excess risk bound decaying at a parametric rate with only logarithmic dependence on source count. To calibrate hyperparameters governing robustness, sparsity, and source fusion, we unroll the solver into a differentiable architecture trained end-to-end, achieving data-adaptive calibration beyond cross-validation while retaining interpretability. Experiments on synthetic benchmarks and the multi-site ABIDE~I neuroimaging dataset show MS-WDRO consistently outperforms seven baselines in graph recovery, sample efficiency, and downstream diagnostic utility, with the largest gains in the sample-scarce regime.",
+        "authors": [
+          "Chuansen Peng",
+          "Yifan Xia",
+          "Jinshan Zhong",
+          "Xiaojing Shen"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.18992v1",
+        "title": "Tight Energy Lower Bounds for Distributed Graph Algorithms",
+        "published": "2026-08-19T14:58:48Z",
+        "updated": "2026-08-19T14:58:48Z",
+        "abstract": "There has been a significant recent interest in designing distributed algorithms in the SLEEPING model that minimize the {energy (a.k.a awake) complexity, which measures the number of rounds a node is awake during the algorithm. A node spends non-trivial resources (messages, energy, etc.) only when it is awake and not while sleeping. Energy complexity has been studied for various fundamental problems with respect to minimizing the maximum (worst-case) or the average number of rounds a node is awake. It has been shown that the energy complexities of several fundamental problems such as leader election (LE), broadcast, Minimum Spanning Tree (MST), Maximal Independent Set (MIS) is exponentially smaller compared to their respective best-possible round complexities in the standard CONGEST model (where nodes can only send messages of small size). This raises a fundamental question of whether such significant energy gains are possible for many other fundamental problems. Our main contribution is a general and powerful technique for showing energy lower bounds using information theory. It gives almost a \"plug-in\" way to show energy lower bounds for various problems in the standard CONGEST model. Our information-theoretic technique allows us to leverage known lower bounds on communication complexity to obtain new, almost optimal (up to logarithmic factors) polynomial (in $n$) lower bounds on energy complexity --- for both worst-case and average-case --- for fundamental graph problems such as triangle enumeration, All-Pairs Shortest Paths (APSP), diameter computation, minimum weight cycle, Maximum Independent Set (MaxIS), Minimum Dominating Set (MinDS), Minimum Vertex Cover (MinVC). The energy lower bounds of these problems match their respective round lower bounds, implying that one cannot obtain any significant gains in energy complexity.",
+        "authors": [
+          "Fabien Dufoulon",
+          "Gopal Pandurangan",
+          "Peter Robinson"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.18498v1",
+        "title": "DyG$^2$T: Modeling Object Dynamics with 3D Gaussian Temporal-Spatial Particle Graph Transformer",
+        "published": "2026-08-19T03:44:28Z",
+        "updated": "2026-08-19T03:44:28Z",
+        "abstract": "Modeling object dynamics from limited visual observations is a fundamental problem for enabling accurate motion trajectory prediction in embodied interaction scenarios. Existing dynamics modeling methods first compress reconstructed particle representations into sparse Key Points and model their evolution using locally constrained interactions, thereby discarding fine-grained local details and obscuring discriminative interaction modeling across spatial and temporal scales, leading to drifting trajectories and inaccurate appearance prediction. To tackle these issues, we propose DyG$^2$T, a dynamics modeling framework that infers object motion trajectories by spatially completing and temporally discriminating Key Point representations and modeling multi-scale interaction over particle graphs. Spatially, DyG$^2$T enriches each Key Point by aggregating neighboring raw particle positions to recover fine-grained local details, while explicitly encoding relative offsets among Key Points to enhance geometric structure perception. Temporally, we introduce a Temporal Disentangling Network (TDN) to identify dominant cross-frame variations in latent space and amplify inter-frame differences, yielding temporally discriminative representations that are subsequently aggregated via Temporal Attention to capture frame-wise temporal evolution cues. For comprehensive interaction modeling, a Particle Graph Transformer leverages global attention to preserve discriminative long-range dependencies among Key Points, mitigating representation homogenization induced by locality-constrained modeling and providing a robust basis for accurate trajectory prediction. Experiments on both synthetic and real-world datasets demonstrate that DyG$^2$T achieves accurate dynamics modeling and reasoning, and exhibits strong cross-object and real-world generalization.",
+        "authors": [
+          "Yansong Wang",
+          "Zhaobo Qi",
+          "Xinyan Liu",
+          "Beichen Zhang",
+          "Shuhui Wang",
+          "Weigang Zhang",
+          "Qingming Huang"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.16018v1",
+        "title": "RagGAD: Rationale-Aware Conditional Gaussian Mixture Normalizing Flow for Unsupervised Graph Anomaly Detection",
+        "published": "2026-08-17T02:20:25Z",
+        "updated": "2026-08-17T02:20:25Z",
+        "abstract": "Graph anomaly detection aims to identify nodes that deviate from normal behavioral patterns within graphs. However, existing methods largely rely on the homophily assumption, which makes it difficult to distinguish spurious affinities and to capture the diverse behaviors of normal nodes,limiting their robustness in complex real-world scenarios. To address this problem, we propose RagGAD, an unsupervised graph anomaly detection framework based on rationale-aware conditional Gaussian mixture normalizing flow. RagGAD introduces an adaptive rationale disentangler to disentangle stable rationales from spurious correlations within node interrelationships, and further decomposes stable rationales into robust and fragile components. The learned rationales capture underlying interaction patterns that characterize normal behaviors under varying conditions, while anomalies emerge as deviations associated with unstable or spurious correlations. To model the intricate distributions of normal and abnormal nodes, RagGAD integrates rationale-non-rationale Gaussian mixture modeling with a robust-fragile rationale mixture learning strategy. By mitigating spurious homophilic correlations and embracing the heterogeneity of normal patterns, RagGAD identifies anomalies as low-density regions within a structure-aware distribution space. Extensive experiments on multiple benchmark datasets demonstrate that RagGAD outperforms state-of-the-art methods.",
+        "authors": [
+          "Junxin Lu",
+          "Jing Zhao",
+          "Shiliang Sun"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.14404v1",
+        "title": "Flexible covariance structures on metric graphs",
+        "published": "2026-08-14T15:44:30Z",
+        "updated": "2026-08-14T15:44:30Z",
+        "abstract": "Whittle-Matérn (WM) Gaussian random fields (GRFs) are defined as solutions of stochastic partial differential equations (SPDEs) and provide a natural analog of Matérn GRFs on non-Euclidean geometry where the Matérn covariance function is not valid. In particular, WM GRFs on metric graphs have been an active area of research motivated by road and river networks where spatial dependence is more naturally described by intrinsic distances in the network than by Euclidean distances. This family of GRFs is controlled by three parameters relating to marginal variance, spatial range, and smoothness, but can be extended to so-called generalized WM GRFs through spatially varying coefficients in the SPDE. Recent work has considered the use of spatially varying covariates, but the full possibilities of flexibility have not been considered. In this work, we introduce latent GRFs that describe the spatially varying coefficients of the SPDE. This flexible model is compared to less flexible models in a simulation study evaluating both the ability to estimate the covariance structure and predictive ability. An important focus is the number of observations and replications necessary to reliably recover the covariance structure. We find that the flexible model improves over less flexible models in the presence of sufficient data. We also demonstrate practical applicability on traffic counts in a part of Madrid, and observe major differences between in-sample and out-of-sample predictive abilities of the models compared.",
+        "authors": [
+          "Karina Lilleborge",
+          "Sara Martino",
+          "Geir-Arne Fuglstad"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.13716v1",
+        "title": "Graph Causal Optimal Transport and Wasserstein Distances",
+        "published": "2026-08-13T19:22:16Z",
+        "updated": "2026-08-13T19:22:16Z",
+        "abstract": "We study the graph causal optimal transport problem, a generalisation of the classical optimal transport problem in which the allowed couplings satisfy causal restrictions prescribed by a directed graph. We characterise fully the directed acyclic graphs for which the associated graph causal Wasserstein discrepancy is a metric and show that the induced topology agrees with other natural adapted topologies. We characterise the gluing properties of graph causal couplings, prove denseness of Monge couplings, and obtain a dynamic programming principle which allows us to deduce when the graph causal Wasserstein and the adapted Wasserstein distances are equal. Our results link fundamental properties of graph causal optimal transport to structural properties of its underlying graph. Complementing Cheridito and Eckstein (2025), who first introduced such distances and established Lipschitz continuity for the average treatment effect in structural causal models, we obtain Lipschitz continuity of the value function in stochastic team problems.",
+        "authors": [
+          "Jan Obłój",
+          "Vlad Tuchilus"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.11917v2",
+        "title": "A Factor Graph Approach to Scalable Multi-Output Gaussian Process Regression",
+        "published": "2026-08-12T10:52:13Z",
+        "updated": "2026-08-19T07:26:51Z",
+        "abstract": "Multi-output Gaussian process regression scales cubically in the number of observations times outputs, and dense kernel-matrix methods need bespoke handling whenever different outputs are observed at different inputs. We express multi-output Gaussian process regression as a Forney-style factor graph in which a nearest-neighbor chain orders a fixed candidate set of $C$ inputs into a one-dimensional sequence. Along this chain, latent Matérn processes evolve through linear-Gaussian transition factors, while the linear model of coregionalization mixes $L$ latent processes into $D$ outputs through a deterministic mixing factor and per-output scalar observation factors. Posterior computation reduces to exact Gaussian message passing on the chain at cost $\\mathcal{O}(C(DL^2 + L^3))$ after chain construction, and missing observations omit their local factor without any covariance-matrix restructuring. The formulation therefore scales in the number of data samples and in the rate of missing observations, while remaining best suited to candidate sets in low input dimension. We compare the factor-graph formulation against an exact kernel-matrix baseline, a sparse-variational inducing-point baseline, and a nearest-neighbor baseline on a synthetic input-dimension sweep and on electricity time series forecasting. At low input dimension the factor-graph posterior tracks the exact kernel-matrix posterior closely, and the gap grows gradually as input dimension increases while staying competitive with both approximate baselines. On the electricity time series our factor-graph formulation matches all three baselines in forecast accuracy while scaling linearly in the number of data points, where the exact kernel-matrix method becomes infeasible and the inducing-point baseline remains substantially slower.",
+        "authors": [
+          "Wouter W. L. Nuijten",
+          "Esther G. van Pelt",
+          "Albert Podusenko",
+          "İsmail Şenöz",
+          "Wouter M. Kouw"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.20408v1",
+        "title": "Columnar-Embedder: A Biologically Inspired Cortical Architecture for Binary Sparse Distributed Graph Representations",
+        "published": "2026-08-12T03:31:39Z",
+        "updated": "2026-08-12T03:31:39Z",
+        "abstract": "Finding a representative description of graph entities that captures their structural roles and homophily is a challenging goal for graph embedding techniques due to the non-Euclidean nature of graphs. Traditionally, Graph embeddings achieve top performance via random-walk methods and graph neural networks. However, these methods are transductive and utilize an expensive global optimization via softmax or a dense representation trained in an end-to-end pipeline with gradient descent. Nonetheless, other variants of GNNs can map to unseen nodes; they still rely on iterative message passing and backpropagation, incurring high computational and memory costs. Conversely, the mammalian cortex solves structurally similar problems by learning to map its input stream of patterns into a compact representation for downstream regions. We present the biologically inspired Columnar-Embedder architecture for learning binary Sparse Distributed Representations (SDRs) of graph nodes. The learning is driven by a local Bienenstock-Cooper-Munro (BCM) Hebbian rule modulated by positive pointwise mutual information (PPMI) computed from online streams of random walks. Continuous learning from streaming random-walk pairs without labels, backpropagation, or supervision enables the architecture to exhibit natural resistance to catastrophic forgetting. Across five graph benchmarks, the performance of SDRs is competitive with that of real-valued dense embeddings on node classification and link prediction, while the architecture exhibits portability, resilience to noise, and robustness to data corruption.",
+        "authors": [
+          "Mohamed Abidalrekab",
+          "Dan Hammerstrom"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.09500v1",
+        "title": "$\\tilde{\\text{O}}$ptimal Distributed Maximum Flow Approximation in Undirected Planar Graphs",
+        "published": "2026-08-10T12:04:40Z",
+        "updated": "2026-08-10T12:04:40Z",
+        "abstract": "Persistent efforts in recent years have been devoted to devising distributed algorithms for fundamental optimization problems in planar graphs. In particular, for Single-Source Shortest-Paths, there is an $\\tilde O(D^2)$-rounds exact algorithm [Li, Parter STOC'19] for directed planar graphs, and an $\\tilde {O}(D)$-rounds $(1+o(1))$-approximation algorithm [Rozhon, Grunau, Haeupler, Zuzic, Li STOC'22] for undirected planar graphs (where $D$ is the graph's hop-diameter). Recently [Abd-Elhaleem, Dory, Parter, Weimann PODC'25], a matching bound for the exact case was obtained for the Maximum $st$-Flow problem. Namely, an $\\tilde O(D^2)$-rounds exact algorithm for directed planar graphs. However, for the approximate case, they give a $D\\cdot n^{o(1)}$-rounds $(1-o(1))$-approximation algorithm for undirected planar graphs that works only for the special case where both $s$ and $t$ lie on the same face. In this paper, we remove the restriction that both $s$ and $t$ must lie on the same face (we also eliminate the $n^{o(1)}$ factor). Namely, we present the first distributed near-optimal $\\tilde{O}(D)$-rounds $(1-o(1))$-approximation algorithm for Maximum $st$-Flow in general undirected planar graphs. Our main technical contribution is a distributed implementation of the classical Reif's [SICOMP'83] centralized algorithm. This is achieved by a careful recursive incision procedure on the planar dual $G^*$ of the graph $G$. It is challenging, because we need to simulate dynamic changes (incisions) over the dual graph $G^*$, while we can only communicate over the input graph $G$.",
+        "authors": [
+          "Yaseen Abd-Elhaleem",
+          "Michal Dory",
+          "Oren Weimann"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.06159v1",
+        "title": "Majority Dynamics on Resampled Sparse Erdős--Rényi Graphs: Gaussian Winner Selection and Pace to Unanimity",
+        "published": "2026-08-06T15:28:59Z",
+        "updated": "2026-08-06T15:28:59Z",
+        "abstract": "We study the two-opinion majority dynamics process: at each time step, every vertex adopts the majority opinion among its neighbors, retaining its current opinion if there is a tie. Independently at each step, the interaction graph is resampled from the sparse Erdős--Rényi model $\\mathbb G(N,p)$ with $p=b\\log N/N$ and fixed $b>1$. Our results identify three regimes governed by the initial advantage $Δ_0=|B_0|-|R_0|$, where $|B_0|$ and $|R_0|$ denote the initial blue and red camps, respectively. First, an initial blue advantage above an explicit constant multiple of $N/\\sqrt{\\log N}$ leads to blue unanimity within two updates with high probability. Second, throughout the intermediate regime $\\sqrt{N/\\log N}\\llΔ_0\\lesssim N/\\sqrt{\\log N}$, we obtain explicit high-probability upper and lower bounds on the blue-unanimity time. Finally, uniformly in the critical window $Δ_0\\sqrt p=O(1)$, the blue- and red-unanimity probabilities equal $Φ(\\sqrt{2/π}\\,Δ_0\\sqrt p)+o(1)$ and $Φ(-\\sqrt{2/π}\\,Δ_0\\sqrt p)+o(1)$, respectively, and unanimity is reached within $(1+o(1))\\log N/\\log\\log N$ many updates with high probability. This resolves the resampled version of the \\emph{optimal power-of-few} conjecture raised by Tran and Vu (2025).",
+        "authors": [
+          "Ioana Dumitriu",
+          "Muchen Ju",
+          "Hai-Xiao Wang"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.02920v1",
+        "title": "Diameter-Free Distributed Frequency Control for Graph Coloring in the CONGEST Model",
+        "published": "2026-08-03T22:13:14Z",
+        "updated": "2026-08-03T22:13:14Z",
+        "abstract": "This paper presents two randomized proper-coloring algorithms that control color frequencies in the synchronous CONGEST model without paying a diameter-dependent coordination cost. Let $λ\\geq 1$ denote the desired failure exponent. For every fixed $δ> 0$, the first algorithm uses $χ= \\lceil (2+δ)Δ\\rceil$ colors and, with probability at least $1 - n^{-λ}$, outputs a proper coloring that bounds the deviation of every color frequency from $n/χ$ by $O_δ(\\sqrt{(λ+1)(n/χ)\\lg n} + (λ+1)\\lg n)$. Under an explicit load condition, this additive guarantee yields two-sided relative balance. The second algorithm works with every $χ> Δ$ and gives a one-sided frequency cap controlled by the palette slack $χ- Δ$. In particular, it uses $Δ+ \\lceil (Δ+1)/\\lceil \\ln n \\rceil \\rceil$ colors and caps every used color class by $O((λ+1)(σ\\lg^2 n + \\lg n))$, where $σ= n/(Δ+1)$. Both algorithms run in $O((λ+1)\\lg n)$ rounds, with no dependence on the network diameter; for the first algorithm, the multiplicative constant in the time bound depends on $δ$.",
+        "authors": [
+          "Amit Nir",
+          "David Peleg"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.01766v1",
+        "title": "Graph Signal Surrogate Generation for Statistical Testing of Covariance Structure on Directed Graphs",
+        "published": "2026-08-03T06:40:46Z",
+        "updated": "2026-08-03T06:40:46Z",
+        "abstract": "Non-parametric statistical testing is based on surrogate data generation that randomizes chosen features in the empirical data. In the graph setting, graph signal processing (GSP) brings forward versatile schemes; e.g., to preserve smoothness of graph signals as measured by the Dirichlet energy. However, how to deal with directed graphs remains an active area of research. We begin by revisiting the definition of directed graph wide-sense stationarity. The surrogate signals preserve covariance under the stationary assumption. We demonstrate the feasibility of the scheme to detect irregular node covariance and benchmark our method against conventional schemes using the symmetrized graph. We also investigate how the level of asymmetry affects the detection performance, thus assessing the advantages of the presented approach. Finally, we show results for a real-world graph extracted from the Freeman EIES social network dataset.",
+        "authors": [
+          "Chun Hei Michael Chan",
+          "Alexandre Cionca",
+          "Dimitri Van De Ville"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.01492v1",
+        "title": "GaussianSelector: Lightweight Human-Guided Object Selection in 3D Gaussian Splatting with Graph Optimization",
+        "published": "2026-08-02T20:51:09Z",
+        "updated": "2026-08-02T20:51:09Z",
+        "abstract": "Selecting a complete 3D object from a reconstructed scene with minimal user effort is essential for practical scene editing and embodied interaction. Existing 3DGS-based methods either retrain the Gaussian representation to embed per-object labels, or build dense multi-view SAM observations, both requiring heavy computation and dense viewpoint coverage that is rarely available in practice. We present GaussianSelector, a training-free framework for interactive 3D object selection from sparse views and sparse scribble guidance. Operating directly on native Gaussian primitives, we coarsen dense Gaussians into geometrically coherent superpoints and construct a continuity-weighted graph using appearance and spatial cues. Sparse user scribbles are lifted into 3D via visibility-aware transmittance coverage, and selection is solved as a global graph-cut energy minimization that propagates sparse evidence to a complete 3D object. This design naturally supports multi-round refinement, where users iteratively correct the selection from additional viewpoints to progressively improve the result. Experiments demonstrate that GaussianSelector achieves competitive selection quality against state-of-the-art multi-view SAM-based methods, while requiring significantly fewer interaction views and substantially lower computational overhead. These properties make it well suited for human-in-the-loop 3D scene editing and 3D asset extraction in real-world deployment scenarios.",
+        "authors": [
+          "Baihan Yang",
+          "Tiexin Li",
+          "Yuheng Liu",
+          "Xin Lin",
+          "Xinke Li",
+          "Xiaohui Xie",
+          "Truong Nguyen"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.29459v1",
+        "title": "TFGformer: Multivariate Time Series Forecasting via Time-Frequency Graph Learning and Covariate Fusion",
+        "published": "2026-07-31T14:24:26Z",
+        "updated": "2026-07-31T14:24:26Z",
+        "abstract": "Large-scale multivariate time series from heterogeneous IoT sensors demand accurate long-term forecasting for resource scheduling and predictive maintenance. While recent time series foundation models exhibit strong generalization, they rely on static parametric knowledge and lack dynamic access to external historical patterns during inference. Retrieval-Augmented Generation (RAG) offers a potential remedy, yet its application to time series forecasting is challenged by magnitude variations across heterogeneous sources and the mismatch between historical similarity and future consistency. We propose CrossRAG, a retrieval-augmented forecasting framework that integrates Shape-Aware Memory (SAM) with RevIN normalization for magnitude-robust shape-level retrieval, Future-Consistent Contrastive (FCC) learning to distinguish informative references from hard negatives with similar history but divergent futures, and Cross-Attention Temporal Fusion (CATF) to fuse retrieved historical--future reference pairs into the backbone's representations at the representation level. Experiments on seven public benchmarks show that CrossRAG consistently outperforms both parametric-only baselines and existing retrieval-augmented forecasting methods.",
+        "authors": [
+          "Yu Sun",
+          "Yuan Chang",
+          "Xiaohou Shi",
+          "Yan Sun"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.29293v1",
+        "title": "Assessing the Generalization of Graph Neural Networks for Fault Location Across Increasing Distributed Energy Resource Penetration Levels",
+        "published": "2026-07-31T11:11:15Z",
+        "updated": "2026-07-31T11:11:15Z",
+        "abstract": "Accurate fault location is critical for distribution network reliability. However, increasing distributed energy resource (DER) penetration complicates fault location due to intermittent generation and bidirectional power flows that reshape fault signatures. Spatio-Temporal Graph Neural Networks (STGNNs) have shown promise by jointly modeling spatial and temporal dependencies, but their behavior under increasing DER penetration has not been studied rigorously. In this paper, we (i) systematically benchmark spatio-temporal graph attention network (STGATv2) against purely temporal (gated recurrent unit, GRU), purely spatial (GATv2) and traditional machine learning baselines, and (ii) evaluate how well models generalize across increasing DER penetration levels (10%, 25%, 50%) on a reconfigured IEEE 123-bus feeder with multiple DER injection points and moderate-to-high impedance faults. Results show that STGATv2 consistently outperforms neural baselines, achieving 92-94% macro F1 in-distribution. Notably, generalization across penetration levels is asymmetric: training at 50% penetration retains near in-distribution F1 score at lower levels, whereas training at 10% degrades considerably at 50% - with STGATv2 retaining 81-84% F1 under these drastic shifts, substantially higher than GATv2 and GRU which drop to 69-74% F1 and 73-75% F1 respectively. Under realistic measurement noise, STGATv2 maintains > 85% F1, while GRU drops as low as 33.5% F1, highlighting the critical role of topological awareness for robust fault location in active distribution networks.",
+        "authors": [
+          "Burak Karabulut",
+          "Olayiwola Arowolo",
+          "Carlo Manna",
+          "Chris Develder",
+          "Jochen L. Cremer"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.28817v1",
+        "title": "Limiting spectral distribution for the adjacency matrix of the Watts-Strogatz random graph",
+        "published": "2026-07-30T20:18:16Z",
+        "updated": "2026-07-30T20:18:16Z",
+        "abstract": "The Watts-Strogatz random graph model on $n$ vertices with parameters $K$ (a positive even integer) and $p \\in [0, 1]$ is constructed in two steps. First, one starts with a ring lattice on $n$ vertices, where each vertex is connected to its $K/2$ nearest neighbors on each side. Each edge in turn is then independently rewired with probability $p$ by replacing one endpoint with a uniformly chosen vertex not already adjacent to it. We study the empirical eigenvalue distribution of the adjacency matrix for this model, whose entries are highly dependent due to the rewiring construction. In the regime where both $K$ and $pK$ grow to infinity with the vertex size $n$, we show that, after appropriate scaling, the empirical eigenvalue distribution converges to the semicircle law. The proof is based on a novel coupling argument that approximates the adjacency matrix by a sum of two independent random matrices, one a sparse Wigner matrix and the other a random band matrix. In the case where $K$ and $p$ remain fixed, we propose conjectural formulas for the first five moments of the limiting eigenvalue distribution. These conjectures are supported by a convergence result relating the Watts-Strogatz model to another random graph model, together with numerical simulations.",
+        "authors": [
+          "Grégoire Meunier",
+          "Sean O'Rourke"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.28706v1",
+        "title": "Accelerated Random-Sweep Gibbs Sampling for Gaussian Graphical Models via Dual Normal Factor Graphs",
+        "published": "2026-07-30T15:37:10Z",
+        "updated": "2026-07-30T15:37:10Z",
+        "abstract": "We study the convergence properties of the random-sweep Gibbs sampler for Gaussian graphical models with a thin-membrane prior. We demonstrate that the convergence rate of the Gibbs sampler is significantly accelerated in the dual model, which is obtained by applying the Fourier transform to the local factors of the normal factor graph representing the original model. In both domains, we derive the exact convergence rates for homogeneous $k$-regular graphs. We prove that, for all homogeneous models whose graphical representations contain cycles, the convergence rate in the dual domain is universal and independent of the underlying graph topology. Moreover, we show that the effective convergence rate in the dual domain is governed by the algebraic connectivity of the graph, providing an additional acceleration without increasing the computational complexity per sweep. We further establish an explicit algebraic relation between the covariance structures of the primal and dual models, enabling marginal statistics of the primal model to be recovered directly from those of the dual model. Finally, numerical experiments on several graph families confirm our theoretical results and demonstrate substantial improvements in the convergence rates in various settings.",
+        "authors": [
+          "Borna Khodabandeh",
+          "Mehdi Molkaraie"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.28185v1",
+        "title": "Persistent Gaussian Perturbations Prevent Oversmoothing in Recurrent Graph Neural Networks",
+        "published": "2026-07-30T13:21:18Z",
+        "updated": "2026-07-30T13:21:18Z",
+        "abstract": "Oversmoothing is a fundamental limitation of deep graph neural networks (GNNs), where repeated message passing causes node representations to become increasingly similar, eventually collapsing toward a low-dimensional subspace. This phenomenon limits the effective depth of message-passing architectures and motivates the search for mechanisms that preserve representation diversity. In this paper, we study a recurrent graph neural network in which independent Gaussian noise is injected after every propagation step and analyze the resulting architecture as a stochastic dynamical system. Under a standard global contraction assumption on the deterministic update, we prove that the hidden representations form a geometrically ergodic Markov chain admitting a unique invariant probability measure. Our main theoretical result establishes an explicit positive lower bound on the expected stationary Dirichlet energy, proportional to both the noise variance and the spectral gap of the underlying graph. Consequently, the stationary representations cannot collapse onto the constant manifold, providing a rigorous guarantee that asymptotic oversmoothing is prevented in the sense of non-vanishing Dirichlet energy. Our analysis reveals persistent stochastic perturbations as a fundamentally different mechanism for combating oversmoothing, complementing existing deterministic approaches based on residual connections, normalization, and graph rewiring. Finally, numerical experiments on both linear and nonlinear recurrent graph neural networks closely match the theoretical predictions, illustrating the emergence of a stationary distribution and the predicted dependence of the limiting Dirichlet energy on the noise intensity.",
+        "authors": [
+          "Mostafa Haghir Chehreghani"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.28153v1",
+        "title": "On the weight distribution bound for the negative eigenvalue of polar collinearity graphs",
+        "published": "2026-07-30T12:57:20Z",
+        "updated": "2026-07-30T12:57:20Z",
+        "abstract": "The weight distribution bound gives a lower bound on the weight of eigenvectors for eigenvalues of distance-regular graphs. In this note, we study when the weight distribution bound is tight for the negative eigenvalue of collinearity graphs of finite embedded polar spaces, and elliptic and hyperbolic affine polar graphs. We give a complete classification of eigenvectors meeting the weight distribution bound.",
+        "authors": [
+          "Sam Adriaensen",
+          "Jim Wittebol"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.24662v1",
+        "title": "When Can You Correct Distribution Drift in Temporal Graph Generation? A Sharpening--Drift Tension and an Impossibility for Observation-Based Correction",
+        "published": "2026-07-27T16:59:57Z",
+        "updated": "2026-07-27T16:59:57Z",
+        "abstract": "Generative models of temporal graphs are trained on one stretch of an evolving network and deployed on the next, and they degrade badly in the gap. We show this degradation is derivable, general, and not fixable from observations. The masked flow-matching loss decomposes exactly, with no independence assumption, into an irreducible entropy plus a divergence whose derivative along the training path is positive precisely for structures rare during training and common at deployment, diverging as their training probability goes to zero. Empirically the trade-off is a power law with exponent $-0.605$ ($R^2=0.9977$), and drift raises the sampler's error floor without changing how many steps reach it: across seven well-powered conditions the drift-period marginal error varies by at most $6\\%$ over a $50\\times$ range of sampling budgets, while the floor sits $2.2\\times$ to $34.3\\times$ above the in-period floor. Because the deployment period is observed, correction looks like a matter of measurement. It is not. We prove that any corrector measurable with respect to past observations leaves at least the conditional variance of the statistic it tracks, and that trend extrapolation beats trusting the last observation only when $μ^2>v(1-2ρ)$. Both premises are measurable and both go the wrong way: the drift is trendless and mean-reverting, with a one-step innovation as large as the drift itself. An oracle removes $60\\%$ of the error, the best observation-based corrector recovers $5.7\\%$ of that, and extrapolation is strictly worse than doing nothing clever.",
+        "authors": [
+          "Tianpeng Li",
+          "Xuan Guo",
+          "Wenjun Wang",
+          "Wang Zhang",
+          "Pengfei Jiao"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.23723v1",
+        "title": "Recovery of latent inner products from an anisotropic Gaussian random geometric graph",
+        "published": "2026-07-26T15:39:14Z",
+        "updated": "2026-07-26T15:39:14Z",
+        "abstract": "We study the problem of recovering latent inner products from a random geometric graph with anisotropic Gaussian latent points. More precisely, for an i.i.d. sample $x_1, \\dots, x_n \\sim N(0,Σ)$ where $Σ\\in \\mathbb{R}^{d \\times d}$, an edge $(i,j)$ is present in the graph if and only if $\\langle x_i, x_j \\rangle \\ge ζ$ for a threshold $ζ$. We assume the threshold $ζ$ to be chosen such that the average edge density of the graph is of constant order. To address the undesired degree fluctuations amplified by the anisotropy of the latent points, we consider the doubly centered adjacency matrix of the graph, and estimate the latent inner products using a rank-$d$ spectral approximation of the doubly centered matrix. The estimator obtains a mean squared error with a rate involving the stable rank of the covariance matrix $Σ$. Notably, the rate of estimation matches the state of the art for the isotropic case $Σ= I_d$, and permits an ill-conditioned covariance matrix with a diverging condition number. The analysis of the spectral method proceeds via the entrywise Hermite expansion of the doubly centered adjacency matrix with respect to the latent inner products. Instead of the standard trace method, it uses a decoupling argument recently introduced by Kaushik, Romberg, and Muthukumar (2025) to control nonlinear error terms.",
+        "authors": [
+          "Cheng Mao",
+          "Vidya Muthukumar"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.23211v1",
+        "title": "Backend-Aware Graph Learning for Denoising Outcome Distributions in Quantum Program Testing",
+        "published": "2026-07-25T14:02:15Z",
+        "updated": "2026-07-25T14:02:15Z",
+        "abstract": "Testing quantum programs on NISQ (Noisy Intermediate-Scale Quantum) backends is challenging because the noise disturbs outcome distributions and can affect pass/fail decisions. We present Q-BRIDGE, a graph learning-based approach that converts noisy observations into denoised distributions suitable for oracle-based verification. Q-BRIDGE uses a graph transformer architecture to encode a transpiled quantum circuit, capturing the characteristics of its gates and their connectivity; the physical backend information is encoded together with the logical structure of the circuit. An additional conditioning layer, based on FiLM (Feature-Wise Linear Modulation), takes the encoding as input and integrates noisy observations to produce denoised outcomes. We evaluate Q-BRIDGE on 23 IBM noise backends and 6 circuit families representative of practical workloads. In the first setting, we train a separate Q-BRIDGE model for each backend; in the second setting, we train a single general model shared across all backends. Across both settings, Q-BRIDGE outperforms the state-of-the-art baseline in noise mitigation by a large margin. In testing scenarios with noisy executions, Q-BRIDGE achieves 93.97%-94.90% precision and 82.50%-83.51% recall in detecting bug-induced test failures, significantly outperforming the state-of-the-art baseline. These results indicate that considering the graph structure of the transpiled circuits and the physical characteristics of specific quantum backends is a practical route to more reliable noise-aware quantum program testing.",
+        "authors": [
+          "Ning Ma",
+          "Jun Dai",
+          "Heng Li"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.21779v1",
+        "title": "Graph-Theoretic Neural Network Fragmentation with Covariant Direct Molecular Force Learning: Enabling Coupled-Cluster Accuracy AIMD for Fluxional Systems",
+        "published": "2026-07-23T19:49:22Z",
+        "updated": "2026-07-23T19:49:22Z",
+        "abstract": "Accurate ab initio molecular dynamics (AIMD) simulations of complex, fluxional chemical systems are severely limited by the high computational scaling of correlated electronic structure methods. To overcome this bottleneck, we present a robust, graph-theoretic molecular fragmentation framework integrated with machine learning to directly model post-Hartree-Fock nuclear forces at coupled cluster accuracy. Bypassing the limitations of automatic differentiation on learned energy surfaces that may struggle with link-atom Jacobians, our approach directly predicts nuclear force vectors. By projecting these vectors onto fragment-fixed principal axes of inertia, we establish co-variant descriptors that naturally preserve rotational, translational, and permutational invariance. The methodology achieves exceptional high parameter efficiency through a vector-valued training protocol that reduces trainable parameters by over an order of magnitude, while an unsupervised mini-batch k-means space tessellation algorithm constructs highly representative training databases using only 10% to 20% of reference configurations. We rigorously validated this framework on the highly fluxional solvated Zundel cation H_{13}O_6^+ ). Our fully machine-learning-predicted AIMD trajectories successfully reproduced complex dynamical signatures and key structural characteristics, including radial distribution functions and the velocity autocorrelation power spectrum. Ultimately, this scalable, systematically improvable framework bridges the gap between high-level correlated wavefunction theories and long-timescale reactive sampling, laying the foundation for advanced, LLM-inspired transfer learning in modern chemical dynamics simulations.",
+        "authors": [
+          "Xiao Zhu",
+          "Srinivasan S. Iyengar"
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://api.crossref.org/works?query=graph+neural+network+covariance+pooling&rows=15&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-09-16",
+    "accessed_at_utc": "2026-09-16T09:54:57.666761+00:00",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/distributional_geometry_20260916/crossref_covariance_v1.json",
+    "error": "<HTTPError 429: 'Too Many Requests'>"
+  },
+  {
+    "url": "https://api.crossref.org/works?query=Wasserstein+Gaussian+graph+link+prediction&rows=15&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-09-16",
+    "accessed_at_utc": "2026-09-16T09:54:57.667934+00:00",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/distributional_geometry_20260916/crossref_wasserstein_v1.json",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 90956,
+    "sha256": "70d4ee78cb511f6c223ae3113bd1cee071d0fefb89e3222cf3d745b99591c6de",
+    "records": [
+      {
+        "title": [
+          "Wasserstein2vec: Hypergraph Embedding for Link Prediction Based on Wasserstein Distance"
+        ],
+        "doi": "10.2139/ssrn.5230387",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Hang",
+            "family": "He",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Qing",
+            "family": "Guan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wei",
+            "family": "Guan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Huanlei",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Taolue",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": []
+      },
+      {
+        "title": [
+          "CGLE: Class-Label Graph Link Estimator for Link Prediction"
+        ],
+        "doi": "10.1109/icdm65498.2025.00067",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              12
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Ankit",
+            "family": "Mazumder",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Yardi School of Artificial Intelligence, Indian Institute of Technology,Delhi,India"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Srikanta",
+            "family": "Bedathur",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Yardi School of Artificial Intelligence, Indian Institute of Technology,Department of Computer Science and Engineering,Delhi,India"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": [
+          "2025 IEEE International Conference on Data Mining (ICDM)"
+        ]
+      },
+      {
+        "title": [
+          "Link prediction heuristics for temporal graph benchmark"
+        ],
+        "doi": "10.14428/esann/2024.es2024-141",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Manuel",
+            "family": "Dileo",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Matteo",
+            "family": "Zignani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": [
+          "ESANN 2024 proceesdings"
+        ]
+      },
+      {
+        "title": [
+          "Cone: A Common Neighbor-Aware Link Weight Prediction Method with Simplified Graph Transformer"
+        ],
+        "doi": "10.2139/ssrn.4826325",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Lizhi",
+            "family": "Liu",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": []
+      },
+      {
+        "title": [
+          "Higher-Order Structure-Based Variational Graph Auto-Encoder for Link Prediction"
+        ],
+        "doi": "10.2139/ssrn.4965423",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Ying",
+            "family": "Xu",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Haibin",
+            "family": "Xie",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": []
+      },
+      {
+        "title": [
+          "Enhancing Molecular Property Prediction with Gaussian-Enhanced Graph Matching"
+        ],
+        "doi": "10.21203/rs.3.rs-4137400/v1",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              25
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Li",
+            "family": "xiaonan",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Dalian Maritime University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Li",
+            "family": "Guanyu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Dalian Maritime University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Ning",
+            "family": "Bo",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Dalian Maritime University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "zhou",
+            "family": "Xin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Dalian Maritime University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": "<title>Abstract</title>\n        <p>In recent years, graph neural network technology has revolutionized molecular graph matching methods, offering new opportunities for drug discovery. Central to this research are two key steps: latent representation learning of molecules and molecular graph matching. However, the challenge lies in effectively capturing and expressing the intricate features of molecular graphs, given their strict chemical rules and high structural complexity. To address this, we propose a gaussian-enhanced graph matching method. This approach combines a dual-channel message-passing neural network, based in the GIN algorithm, to encode both nodes and edges of molecules, enabling precise representations of molecular graphs. Additionally, an end-to-end graph similarity calculation model is introduced, assessing similarity at both the node and global levels. By integrating these evaluations, we obtain a comprehensive similarity score for molecular graph pairs. This method enhances the accuracy and interpretability of molecular structural similarity. Experimental results demonstrate the superior performance of our model compared to state-of-the-art baseline methods, marking a significant step forward in molecular property prediction.</p>",
+        "venue": []
+      },
+      {
+        "title": [
+          "Balance-Aware Prototypical Graph Transformer for Signed Bipartite Link Prediction"
+        ],
+        "doi": "10.2139/ssrn.7355395",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0002-0055-4655",
+            "authenticated-orcid": true,
+            "given": "Xiaosong",
+            "family": "Wang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Qingyong",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3768-8203",
+            "authenticated-orcid": true,
+            "given": "Lichuan",
+            "family": "Gu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "abstract": "<jats:p>Signed bipartite link-sign prediction aims to infer the polarity of candidate interactions between two disjoint node sets from observed positive and negative relations. Existing methods face three key challenges in this setting: conventional triangle-based structural balance is incompatible with bipartite topology, node-centric aggregation may obscure interaction-specific structural evidence, and severe sign imbalance is often accompanied by substantial intra-class heterogeneity. To address these challenges, we propose a Balance-Aware Prototypical Graph Transformer (BAPGT), which formulates signed bipartite link-sign prediction as query-conditioned interaction-level reasoning. BAPGT represents observed interactions as signed edge tokens and introduces each candidate interaction as an unknown-sign query token. It then retrieves a bounded query-relevant context without explicitly constructing a complete line graph. To adapt structural balance to bipartite topology, BAPGT extracts query-specific polarity evidence from odd-length signed paths and local compatibility evidence from signed butterflies, i.e., four-node bipartite motifs, and incorporates both signals into sparse Transformer attention. Furthermore, a multi-prototype sign decoder captures heterogeneous patterns within positive and negative interactions, while a confidence-weighted balanced-path consistency objective reduces the influence of weak or contradictory structural evidence. Extensive experiments on five benchmark signed bipartite datasets demonstrate that BAPGT consistently outperforms representative unsigned graph, signed graph, signed bipartite graph, and Transformer-based baselines. Ablation, structural, sparsity, and scalability analyses further verify the effectiveness and efficiency of the proposed components.</jats:p>",
+        "venue": []
+      },
+      {
+        "title": [
+          "Community Knowledge Graph Abstraction for Enhanced Link Prediction: A Study on Pubmed Knowledge Graph"
+        ],
+        "doi": "10.2139/ssrn.4795319",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Yang",
+            "family": "Zhao",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Danushka",
+            "family": "Bollegala",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Shunsuke",
+            "family": "Hirose",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yingzi",
+            "family": "Jin",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Tomotake",
+            "family": "Kozu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": []
+      },
+      {
+        "title": [
+          "Helpormer: Heterogeneous Graph Transformer for Link Prediction"
+        ],
+        "doi": "10.2139/ssrn.5297031",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Haoyang",
+            "family": "Fan",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Ziyang",
+            "family": "Fan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yifan",
+            "family": "Lu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Pengfei",
+            "family": "Jiao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Ning",
+            "family": "Ruan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": []
+      },
+      {
+        "title": [
+          "Knowledge Graph Link Prediction via Hyperbolic Attenuated Attention Networks"
+        ],
+        "doi": "10.21203/rs.3.rs-4187318/v1",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              3
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Xuanyu",
+            "family": "Zhang",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Zhejiang Normal University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jianbin",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Normal University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Hao",
+            "family": "Peng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Normal University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Junkai",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Normal University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": "<title>Abstract</title>\n        <p>Graph Attention Networks serve as prevalent models for knowledge graph link prediction, enabling the completion of link prediction tasks on general knowledge graphs. However, most current models embed nodes in Euclidean space, leading to distortion in node embedding features. Additionally, existing methods overlook the issue of assigning weights to n-hop neighbors during node embedding aggregation and fail to investigate the prediction of different relation patterns in hyperbolic space. In this paper, we propose a Hyperbolic Graph Attenuated Attenuation Network (HGAAT) model for link prediction, utilizing hyperbolic graph attention networks to handle relations and entity representations in knowledge graphs. By introducing a attenuated attention mechanism, HGAAT effectively integrates information from n-top neighboring nodes, thereby generating more accurate entity and relation embeddings in complex relational graphs. Extensive experiments demonstrate the effectiveness and superiority of the HGAAT model in knowledge graph link prediction tasks.</p>",
+        "venue": []
+      },
+      {
+        "title": [
+          "DyG-STEF: A Structural–Temporal Enhanced Transformer for Dynamic Graph Link Prediction"
+        ],
+        "doi": "10.2139/ssrn.6695189",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Xiaoyu",
+            "family": "Wei",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Bihui",
+            "family": "Cong",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Shuang",
+            "family": "Xu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": "<jats:p>Continuous-time dynamic graph (CTDG) link prediction remains challenging because link formation is jointly affected by evolving topology, heterogeneous temporal dependencies, and noisy interactions. Existing methods mainly learn node-level temporal representations, which may encode candidate-edge structural evidence only implicitly and weaken discrimination under inductive or hard-negative settings. This paper proposes DyG-STEF, a structural–temporal enhanced Transformer for CTDG link prediction. DyG-STEF explicitly injects topological priors, including local similarity and global centrality, into candidate-edge representations to strengthen edge-level discrimination. It further introduces a cross-scale temporal encoding module that combines logarithmic, reciprocal, periodic, and learnable temporal channels to capture long-range attenuation, short-term bursts, recurring patterns, and nonlinear temporal relations. To improve training stability, edge-feature reconstruction, adversarial alignment, and contrastive learning are used as training-stage regularizers without adding auxiliary inference branches. Experiments on six real-world datasets under transductive and inductive settings demonstrate that DyG-STEF achieves competitive and often superior performance, especially on frequent-interaction datasets and random negative sampling. Ablation, sensitivity, and perturbation analyses further verify the effectiveness and robustness of the proposed components.</jats:p>",
+        "venue": []
+      },
+      {
+        "title": [
+          "LinkDTI: Drug-Target Interactions prediction through a Link Prediction framework on Biomedical Knowledge Graph"
+        ],
+        "doi": "10.64898/2026.02.21.707210",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              23
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0007-0255-7020",
+            "authenticated-orcid": false,
+            "given": "Madhurima",
+            "family": "Mondal",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Electrical and Computer Engineering, Texas A&M University, College Station, 77840, Texas, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Subrahmanyam",
+            "family": "Arunachalam",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Electrical and Computer Engineering, Texas A&M University, College Station, 77840, Texas, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shili",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Electrical and Computer Engineering, Texas A&M University, College Station, 77840, Texas, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Aniruddha",
+            "family": "Datta",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Electrical and Computer Engineering, Texas A&M University, College Station, 77840, Texas, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "abstract": "<jats:title>ABSTRACT</jats:title>\n                <jats:p>\n                  Computational drug-target interactions (DTI) prediction serves as a valuable tool for drug discovery and repurposing by cost-effectively narrowing down the potential drug-target space. This paper presents LinkDTI, a computational framework that predicts DTIs by identifying connections within a heterogeneous knowledge graph of drugs, proteins, diseases, and side effects. Unlike methods that rely on mathematical techniques like matrix completion or similarity-based scoring, LinkDTI uses an advanced graph-based approach to capture relationships between biomedical entities. Specifically, LinkDTI applies a modified version of the multilayer GraphSAGE model that learns from the heterogeneous knowledge graph and predicts potential drug-target interactions. Our model incorporates negative sampling that balances the data to address the issue of having more negative than positive interactions. Our results show that LinkDTI consistently performs better in AUROC and AUPRC than baseline methods by at least 2.5% across different sampling ratios and conditions. Subsequently, it identifies approximately 945 new potential DTIs, marking a 49.14% increase over known DTIs. Overall, LinkDTI offers a simple yet effective method for integrating diverse biomedical data to identify potential drug-target interactions. The code and data can be found at\n                  <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"uri\" xlink:href=\"https://github.com/hub2nature/LinkDTI_heterogenous_KG.git\">https://github.com/hub2nature/LinkDTI_heterogenous_KG.git</jats:ext-link>\n                  .\n                </jats:p>",
+        "venue": []
+      },
+      {
+        "title": [
+          "Research on Link Prediction Method Based on Information Fusion Graph Embedding"
+        ],
+        "doi": "10.53106/199115992024083504005",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              8
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Yuhong Zhao",
+            "family": "Yuhong Zhao",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Xiangming Ni",
+            "family": "Yuhong Zhao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yue Yao",
+            "family": "Xiangming Ni",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Peng Mei",
+            "family": "Yue Yao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": "<jats:p>\n                        &lt;p&gt;To accurately and efficiently capture the topological and attribute information of nodes and apply them to the link prediction task, this paper proposes a Dual Channel Graph Convolution Link Prediction (DC-GCN). DC-GCN constructs a dual channel through the graph convolution network. DC-GCN can learn both topological embeddings and attribute embeddings of nodes; it introduces an attention mechanism to learn the weights of each embedding adaptively and then performs weighted fusion to obtain the final embedding representation of nodes. Finally, the Hadamard distance of nodes is used to construct the link representation between nodes, and the probability of linking between nodes is obtained by training a logistic regression function. By comparing and analyzing many different types of link prediction algorithms, the results show that this algorithm has greater advantages in both AUC and Precision evaluation metrics, so DC-GCN can effectively combine node attributes and structural information of the network to improve the accuracy of the link prediction algorithm.&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n                    </jats:p>",
+        "venue": [
+          "電腦學刊"
+        ]
+      },
+      {
+        "title": [
+          "Temporal Multi-Modal Knowledge Graph Generation for Link Prediction"
+        ],
+        "doi": "10.2139/ssrn.4877232",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Yuandi",
+            "family": "Li",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Hui",
+            "family": "Ji",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "fei",
+            "family": "yu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Lechao",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Nan",
+            "family": "Che",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": []
+      },
+      {
+        "title": [
+          "Graph-Based Link Prediction for Epilepsy Drug Discovery"
+        ],
+        "doi": "10.21203/rs.3.rs-6653352/v1",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              29
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Xiaolong",
+            "family": "Shi",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Guangzhou University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Sundareswaran",
+            "family": "Raman",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sri Sivasubramaniya Nadar College of Engineering"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Shanmugapriya",
+            "family": "M.",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sri Sivasubramaniya Nadar College of Engineering"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Nikilesh",
+            "family": "Jayaguptha",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sri Sivasubramaniya Nadar College of Engineering"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Aysha",
+            "family": "Khan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Technology and Applied Sciences, Musanna"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": "<title>Abstract</title>\n        <p>Epilepsy is one of the most prevalent neurological disorders, affecting approximately 23 million people in Asia alone. It isa disorder with severe social impacts and is going to progressively damage the brain. It encompasses a wide range ofsyndromes and each one of them differs significantly in treatment options. seizures is the common symptom in all of them.Despite being one of the most researched clinical conditions, the exact mechanism is still unknown, and this poses challengesfor coming up with an effective treatment mechanism. Conventional treatment which includes Anti-Epileptic Drugs (AEDs)come with a lot of limitations. Inspired by Ayurveda, we propose a computational framework to predict phytochemical-proteininteractions for potential epilepsy treatment. We propose that the interaction can be modelled as a bipartite graph, wherenodes represent phytochemicals and proteins and edges are represented by interactions. We employ Graph neural networksto capture both local and global information about the graph. Initially, the entire graph was trained using Graph ConvolutionalNetwork (GCN), Graph Attention Network (GAT), and GraphSAGE. To enhance predictive performance, we then constructedone-hop enclosing subgraphs for both positive and negative samples and trained the same three models on this refined dataset.Our best-performing model achieved an accuracy of 0.9778, precision of 0.9574, F1-score of 0.9782, and ROC-AUC score of0.9994.</p>",
+        "venue": []
+      }
+    ]
+  }
+]

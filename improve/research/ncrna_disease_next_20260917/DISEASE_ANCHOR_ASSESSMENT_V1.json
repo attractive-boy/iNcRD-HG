@@ -1,0 +1,80 @@
+{
+  "created_at_utc": "2026-09-17T04:48:25.299497+00:00",
+  "channel": "ncRNA-disease x drug-disease bridge (RNADisease v4 + HMDD v4 + CTD)",
+  "composition": "sigmoid((1-w)*logit(reference) + w*mean_m logit(member_m on [bank|disease]))",
+  "gates": "accepted shared-anchor inner + resplit gates; permutation control must fail",
+  "joint_recipes": 16,
+  "total_recipes": 30,
+  "best": [
+    {
+      "bank": "context76",
+      "recipe": "bank+control",
+      "w": 0.4,
+      "inner_Mi_dAUC": 0.0001816710235909754,
+      "inner_Mi_dAP": 0.0015088991497188193,
+      "inner_Ln_dAUC": 0.0003612144080371212,
+      "inner_Ln_dAP": 0.0004614390760775781,
+      "resplit_Mi_dAUC": 0.000416611012523808,
+      "resplit_Mi_dAP": 0.0012573860203816123,
+      "resplit_Ln_dAUC": 0.000592495575773159,
+      "resplit_Ln_dAP": 0.0018324446795727756,
+      "joint": true
+    },
+    {
+      "bank": "context76",
+      "recipe": "bank+control",
+      "w": 0.3,
+      "inner_Mi_dAUC": 0.00022460421953807153,
+      "inner_Mi_dAP": 0.0012623873271381258,
+      "inner_Ln_dAUC": 0.00039759571532146004,
+      "inner_Ln_dAP": 0.000572329187198887,
+      "resplit_Mi_dAUC": 0.0004233690155895549,
+      "resplit_Mi_dAP": 0.0011779732192923238,
+      "resplit_Ln_dAUC": 0.0005691075925189359,
+      "resplit_Ln_dAP": 0.0017040369591280562,
+      "joint": true
+    },
+    {
+      "bank": "tiered62",
+      "recipe": "bank",
+      "w": 0.2,
+      "inner_Mi_dAUC": 2.2261657157833053e-05,
+      "inner_Mi_dAP": 0.0002724722548986443,
+      "inner_Ln_dAUC": 0.0003482210840070425,
+      "inner_Ln_dAP": 0.0006574106180614233,
+      "resplit_Mi_dAUC": 0.00038918147066872394,
+      "resplit_Mi_dAP": 0.0011657870598625515,
+      "resplit_Ln_dAUC": 0.00045216767624796833,
+      "resplit_Ln_dAP": 0.001361606181697043,
+      "joint": true
+    },
+    {
+      "bank": "context76",
+      "recipe": "bank+control",
+      "w": 0.25,
+      "inner_Mi_dAUC": 0.0002265918674986267,
+      "inner_Mi_dAP": 0.0011287092697416605,
+      "inner_Ln_dAUC": 0.0004183850337696378,
+      "inner_Ln_dAP": 0.000644235937417692,
+      "resplit_Mi_dAUC": 0.00039951724006344797,
+      "resplit_Mi_dAP": 0.001036403706245285,
+      "resplit_Ln_dAUC": 0.0005743049221309896,
+      "resplit_Ln_dAP": 0.001660110476141119,
+      "joint": true
+    },
+    {
+      "bank": "tiered62",
+      "recipe": "bank+control",
+      "w": 0.3,
+      "inner_Mi_dAUC": 0.00013714770927553133,
+      "inner_Mi_dAP": 0.0011342302375815978,
+      "inner_Ln_dAUC": 0.00041318770415754713,
+      "inner_Ln_dAP": 0.0005157567848335098,
+      "resplit_Mi_dAUC": 0.00037089510943203824,
+      "resplit_Mi_dAP": 0.0010249569342063076,
+      "resplit_Ln_dAUC": 0.0006626595255357545,
+      "resplit_Ln_dAP": 0.0016942546741535909,
+      "joint": true
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "graph_nodes": [
+    "miRNA",
+    "drug"
+  ],
+  "graph_edges": {
+    "miRNA|MiMi|miRNA": 16232,
+    "drug|DrugDrug|drug": 852,
+    "miRNA|MiDrug|drug": 3236,
+    "drug|rev_MiDrug|miRNA": 3236
+  },
+  "sampling": {
+    "uniform": {
+      "positive_count": 3236,
+      "eligible_count": 3236,
+      "negative_count": 6476,
+      "mode": "uniform"
+    },
+    "mixed_middle": {
+      "positive_count": 3236,
+      "eligible_count": 3236,
+      "negative_count": 6476,
+      "mode": "mixed_middle"
+    }
+  },
+  "explicit_query_deletion": [
+    {
+      "m": 260,
+      "d": 191,
+      "logit_abs_error": 2.384185791015625e-07,
+      "encoder_abs_error": 3.0517578125e-05
+    },
+    {
+      "m": 157,
+      "d": 13,
+      "logit_abs_error": 7.152557373046875e-07,
+      "encoder_abs_error": 4.57763671875e-05
+    },
+    {
+      "m": 372,
+      "d": 7,
+      "logit_abs_error": 1.430511474609375e-06,
+      "encoder_abs_error": 7.62939453125e-05
+    },
+    {
+      "m": 176,
+      "d": 26,
+      "logit_abs_error": 0.0,
+      "encoder_abs_error": 3.0517578125e-05
+    },
+    {
+      "m": 279,
+      "d": 76,
+      "logit_abs_error": 7.152557373046875e-07,
+      "encoder_abs_error": 4.57763671875e-05
+    },
+    {
+      "m": 231,
+      "d": 4,
+      "logit_abs_error": 1.9073486328125e-06,
+      "encoder_abs_error": 0.000274658203125
+    },
+    {
+      "m": 59,
+      "d": 10,
+      "logit_abs_error": 0.0,
+      "encoder_abs_error": 0.00018310546875
+    },
+    {
+      "m": 252,
+      "d": 66,
+      "logit_abs_error": 1.430511474609375e-06,
+      "encoder_abs_error": 7.62939453125e-05
+    },
+    {
+      "m": 571,
+      "d": 54,
+      "logit_abs_error": 9.5367431640625e-07,
+      "encoder_abs_error": 3.0517578125e-05
+    },
+    {
+      "m": 8,
+      "d": 39,
+      "logit_abs_error": 9.5367431640625e-07,
+      "encoder_abs_error": 1.9073486328125e-05
+    },
+    {
+      "m": 257,
+      "d": 4,
+      "logit_abs_error": 1.430511474609375e-06,
+      "encoder_abs_error": 0.000213623046875
+    },
+    {
+      "m": 200,
+      "d": 10,
+      "logit_abs_error": 0.0,
+      "encoder_abs_error": 0.0001220703125
+    }
+  ],
+  "test_features_empty": true,
+  "heldout_invariance": true,
+  "finite_bpr_gradients": true,
+  "monotonic_bpr": true,
+  "initial_loss": 1.8706450462341309
+}

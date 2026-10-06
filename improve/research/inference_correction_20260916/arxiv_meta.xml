@@ -1,0 +1,671 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/syvCZYEHfq97dj1itU1Xsm2fgnw</id>
+  <title>arXiv Query: search_query=(ti:meta OR ti:"test-time") AND all:"link prediction"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T01:17:15Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(ti:meta+OR+ti:%22test-time%22)+AND+all:%22link+prediction%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>24</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.22031v2</id>
+    <title>Mochi: Aligning Pre-training and Inference for Efficient Graph Foundation Models via Meta-Learning</title>
+    <updated>2026-05-07T16:47:12Z</updated>
+    <link href="https://arxiv.org/abs/2604.22031v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.22031v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose Mochi, a Graph Foundation Model that addresses task unification and training efficiency by adopting a meta-learning based training framework. Prior models pre-train with reconstruction-based objectives such as link prediction, and assume that the resulting representations can be aligned with downstream tasks through a separate unification step such as class prototypes. We demonstrate through synthetic and real-world experiments that this procedure, while simple and intuitive, has limitations that directly affect downstream task performance. To address these limitations, Mochi pre-trains on few-shot episodes that mirror the downstream evaluation protocol, aligning the training objective with inference rather than relying on a post-hoc unification step. We show that Mochi, along with its more powerful variant Mochi++, achieves competitive or superior performance compared to existing Graph Foundation Models across 25 real-world graph datasets spanning node classification, link prediction, and graph classification, while requiring 8$\sim$27 times less training time than the strongest baseline.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-23T19:46:45Z</published>
+    <arxiv:comment>23 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>João Mattos</name>
+    </author>
+    <author>
+      <name>Arlei Silva</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.09069v1</id>
+    <title>Meta-learning optimizes predictions of missing links in real-world networks</title>
+    <updated>2025-08-12T16:41:16Z</updated>
+    <link href="https://arxiv.org/abs/2508.09069v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.09069v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Relational data are ubiquitous in real-world data applications, e.g., in social network analysis or biological modeling, but networks are nearly always incompletely observed. The state-of-the-art for predicting missing links in the hard case of a network without node attributes uses model stacking or neural network techniques. It remains unknown which approach is best, and whether or how the best choice of algorithm depends on the input network's characteristics. We answer these questions systematically using a large, structurally diverse benchmark of 550 real-world networks under two standard accuracy measures (AUC and Top-k), comparing four stacking algorithms with 42 topological link predictors, two of which we introduce here, and two graph neural network algorithms. We show that no algorithm is best across all input networks, all algorithms perform well on most social networks, and few perform well on economic and biological networks. Overall, model stacking with a random forest is both highly scalable and surpasses on AUC or is competitive with graph neural networks on Top-k accuracy. But, algorithm performance depends strongly on network characteristics like the degree distribution, triangle density, and degree assortativity. We introduce a meta-learning algorithm that exploits this variability to optimize link predictions for individual networks by selecting the best algorithm to apply, which we show outperforms all state-of-the-art algorithms and scales to large networks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-12T16:41:16Z</published>
+    <arxiv:comment>10 pages, 5 figures, 5 tables, 7 appendices</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Bisman Singh</name>
+    </author>
+    <author>
+      <name>Lucy Van Kleunen</name>
+    </author>
+    <author>
+      <name>Aaron Clauset</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.00453v1</id>
+    <title>TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction</title>
+    <updated>2025-05-31T08:15:23Z</updated>
+    <link href="https://arxiv.org/abs/2506.00453v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.00453v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dynamic graphs evolve continuously, presenting challenges for traditional graph learning due to their changing structures and temporal dependencies. Recent advancements have shown potential in addressing these challenges by developing suitable meta-learning-based dynamic graph neural network models. However, most meta-learning approaches for dynamic graphs rely on fixed weight update parameters, neglecting the essential intrinsic complex high-order topological information of dynamically evolving graphs. We have designed Dowker Zigzag Persistence (DZP), an efficient and stable dynamic graph persistent homology representation method based on Dowker complex and zigzag persistence, to capture the high-order features of dynamic graphs. Armed with the DZP ideas, we propose TMetaNet, a new meta-learning parameter update model based on dynamic topological features. By utilizing the distances between high-order topological features, TMetaNet enables more effective adaptation across snapshots. Experiments on real-world datasets demonstrate TMetaNet's state-of-the-art performance and resilience to graph noise, illustrating its high potential for meta-learning and dynamic graph analysis. Our code is available at https://github.com/Lihaogx/TMetaNet.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-31T08:15:23Z</published>
+    <arxiv:comment>ICML2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hao Li</name>
+    </author>
+    <author>
+      <name>Hao Wan</name>
+    </author>
+    <author>
+      <name>Yuzhou Chen</name>
+    </author>
+    <author>
+      <name>Dongsheng Ye</name>
+    </author>
+    <author>
+      <name>Yulia Gel</name>
+    </author>
+    <author>
+      <name>Hao Jiang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.06492v2</id>
+    <title>Exploiting Meta-Learning-based Poisoning Attacks for Graph Link Prediction</title>
+    <updated>2025-10-19T04:52:20Z</updated>
+    <link href="https://arxiv.org/abs/2504.06492v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.06492v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction in graph data uses various algorithms and Graph Nerual Network (GNN) models to predict potential relationships between graph nodes. These techniques have found widespread use in numerous real-world applications, including recommendation systems, community/social networks, and biological structures. However, recent research has highlighted the vulnerability of GNN models to adversarial attacks, such as poisoning and evasion attacks. Addressing the vulnerability of GNN models is crucial to ensure stable and robust performance in GNN applications. Although many works have focused on enhancing the robustness of node classification on GNN models, the robustness of link prediction has received less attention. To bridge this gap, this article introduces an unweighted graph poisoning attack that leverages meta-learning with weighted scheme strategies to degrade the link prediction performance of GNNs. We conducted comprehensive experiments on diverse datasets across multiple link prediction applications to evaluate the proposed method and its parameters, comparing it with existing approaches under similar conditions. Our results demonstrate that our approach significantly reduces link prediction performance and consistently outperforms other state-of-the-art baselines.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-08T23:36:29Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mingchen Li</name>
+    </author>
+    <author>
+      <name>Di Zhuang</name>
+    </author>
+    <author>
+      <name>Keyu Chen</name>
+    </author>
+    <author>
+      <name>Dumindu Samaraweera</name>
+    </author>
+    <author>
+      <name>Morris Chang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.16288v1</id>
+    <title>HetFS: A Method for Fast Similarity Search with Ad-hoc Meta-paths on Heterogeneous Information Networks</title>
+    <updated>2025-02-22T16:36:41Z</updated>
+    <link href="https://arxiv.org/abs/2502.16288v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.16288v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Numerous real-world information networks form Heterogeneous Information Networks (HINs) with diverse objects and relations represented as nodes and edges in heterogeneous graphs. Similarity between nodes quantifies how closely two nodes resemble each other, mainly depending on the similarity of the nodes they are connected to, recursively. Users may be interested in only specific types of connections in the similarity definition, represented as meta-paths, i.e., a sequence of node and edge types. Existing Heterogeneous Graph Neural Network (HGNN)-based similarity search methods may accommodate meta-paths, but require retraining for different meta-paths. Conversely, existing path-based similarity search methods may switch flexibly between meta-paths but often suffer from lower accuracy, as they rely solely on path information. This paper proposes HetFS, a Fast Similarity method for ad-hoc queries with user-given meta-paths on Heterogeneous information networks. HetFS provides similarity results based on path information that satisfies the meta-path restriction, as well as node content. Extensive experiments demonstrate the effectiveness and efficiency of HetFS in addressing ad-hoc queries, outperforming state-of-the-art HGNNs and path-based approaches, and showing strong performance in downstream applications, including link prediction, node classification, and clustering.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-22T16:36:41Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>World Wide Web Volume 27, article number 66, (2024)</arxiv:journal_ref>
+    <author>
+      <name>Xuqi Mao</name>
+    </author>
+    <author>
+      <name>Zhenyi Chen</name>
+    </author>
+    <author>
+      <name>Zhenying He</name>
+    </author>
+    <author>
+      <name>Yinan Jing</name>
+    </author>
+    <author>
+      <name>Kai Zhang</name>
+    </author>
+    <author>
+      <name>X. Sean Wang</name>
+    </author>
+    <arxiv:doi>10.1007/s11280-024-01303-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11280-024-01303-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.16281v1</id>
+    <title>FHGE: A Fast Heterogeneous Graph Embedding with Ad-hoc Meta-paths</title>
+    <updated>2025-02-22T16:26:18Z</updated>
+    <link href="https://arxiv.org/abs/2502.16281v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.16281v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks (GNNs) have emerged as the state of the art for a variety of graph-related tasks and have been widely used in Heterogeneous Graphs (HetGs), where meta-paths help encode specific semantics between various node types. Despite the revolutionary representation capabilities of existing heterogeneous GNNs (HGNNs) due to their focus on improving the effectiveness of heterogeneity capturing, the huge training costs hinder their practical deployment in real-world scenarios that frequently require handling ad-hoc queries with user-defined meta-paths. To address this, we propose FHGE, a Fast Heterogeneous Graph Embedding designed for efficient, retraining-free generation of meta-path-guided graph embeddings. The key design of the proposed framework is two-fold: segmentation and reconstruction modules. It employs Meta-Path Units (MPUs) to segment the graph into local and global components, enabling swift integration of node embeddings from relevant MPUs during reconstruction and allowing quick adaptation to specific meta-paths. In addition, a dual attention mechanism is applied to enhance semantics capturing. Extensive experiments across diverse datasets demonstrate the effectiveness and efficiency of FHGE in generating meta-path-guided graph embeddings and downstream tasks, such as link prediction and node classification, highlighting its significant advantages for real-time graph analysis in ad-hoc queries.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-22T16:26:18Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xuqi Mao</name>
+    </author>
+    <author>
+      <name>Zhenying He</name>
+    </author>
+    <author>
+      <name>X. Sean Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.00881v1</id>
+    <title>Learn to Unlearn: Meta-Learning-Based Knowledge Graph Embedding Unlearning</title>
+    <updated>2024-12-01T16:43:04Z</updated>
+    <link href="https://arxiv.org/abs/2412.00881v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.00881v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graph (KG) embedding methods map entities and relations into continuous vector spaces, improving performance in tasks like link prediction and question answering. With rising privacy concerns, machine unlearning (MU) has emerged as a critical AI technology, enabling models to eliminate the influence of specific data. Existing MU approaches often rely on data obfuscation and adjustments to training loss but lack generalization across unlearning tasks. This paper introduces MetaEU, a Meta-Learning-Based Knowledge Graph Embedding Unlearning framework. MetaEU leverages meta-learning to unlearn specific embeddings, mitigating their impact while preserving model performance on remaining data. Experiments on benchmark datasets demonstrate its effectiveness in KG embedding unlearning.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-01T16:43:04Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Naixing Xu</name>
+    </author>
+    <author>
+      <name>Qian Li</name>
+    </author>
+    <author>
+      <name>Xu Wang</name>
+    </author>
+    <author>
+      <name>Bingchen Liu</name>
+    </author>
+    <author>
+      <name>Xin Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.07022v2</id>
+    <title>HeteroSample: Meta-path Guided Sampling for Heterogeneous Graph Representation Learning</title>
+    <updated>2024-12-18T17:46:57Z</updated>
+    <link href="https://arxiv.org/abs/2411.07022v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.07022v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid expansion of Internet of Things (IoT) has resulted in vast, heterogeneous graphs that capture complex interactions among devices, sensors, and systems. Efficient analysis of these graphs is critical for deriving insights in IoT scenarios such as smart cities, industrial IoT, and intelligent transportation systems. However, the scale and diversity of IoT-generated data present significant challenges, and existing methods often struggle with preserving the structural integrity and semantic richness of these complex graphs. Many current approaches fail to maintain the balance between computational efficiency and the quality of the insights generated, leading to potential loss of critical information necessary for accurate decision-making in IoT applications. We introduce HeteroSample, a novel sampling method designed to address these challenges by preserving the structural integrity, node and edge type distributions, and semantic patterns of IoT-related graphs. HeteroSample works by incorporating the novel top-leader selection, balanced neighborhood expansion, and meta-path guided sampling strategies. The key idea is to leverage the inherent heterogeneous structure and semantic relationships encoded by meta-paths to guide the sampling process. This approach ensures that the resulting subgraphs are representative of the original data while significantly reducing computational overhead. Extensive experiments demonstrate that HeteroSample outperforms state-of-the-art methods, achieving up to 15% higher F1 scores in tasks such as link prediction and node classification, while reducing runtime by 20%.These advantages make HeteroSample a transformative tool for scalable and accurate IoT applications, enabling more effective and efficient analysis of complex IoT systems, ultimately driving advancements in smart cities, industrial IoT, and beyond.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-11T14:27:30Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ao Liu</name>
+    </author>
+    <author>
+      <name>Jing Chen</name>
+    </author>
+    <author>
+      <name>Ruiying Du</name>
+    </author>
+    <author>
+      <name>Cong Wu</name>
+    </author>
+    <author>
+      <name>Yebo Feng</name>
+    </author>
+    <author>
+      <name>Teng Li</name>
+    </author>
+    <author>
+      <name>Jianfeng Ma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.04815v2</id>
+    <title>Not All Negatives Are Worth Attending to: Meta-Bootstrapping Negative Sampling Framework for Link Prediction</title>
+    <updated>2023-12-12T03:16:33Z</updated>
+    <link href="https://arxiv.org/abs/2312.04815v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.04815v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid development of graph neural networks (GNNs) encourages the rising of link prediction, achieving promising performance with various applications. Unfortunately, through a comprehensive analysis, we surprisingly find that current link predictors with dynamic negative samplers (DNSs) suffer from the migration phenomenon between "easy" and "hard" samples, which goes against the preference of DNS of choosing "hard" negatives, thus severely hindering capability. Towards this end, we propose the MeBNS framework, serving as a general plugin that can potentially improve current negative sampling based link predictors. In particular, we elaborately devise a Meta-learning Supported Teacher-student GNN (MST-GNN) that is not only built upon teacher-student architecture for alleviating the migration between "easy" and "hard" samples but also equipped with a meta learning based sample re-weighting module for helping the student GNN distinguish "hard" samples in a fine-grained manner. To effectively guide the learning of MST-GNN, we prepare a Structure enhanced Training Data Generator (STD-Generator) and an Uncertainty based Meta Data Collector (UMD-Collector) for supporting the teacher and student GNN, respectively. Extensive experiments show that the MeBNS achieves remarkable performance across six link prediction benchmark datasets.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-08T03:05:42Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yakun Wang</name>
+    </author>
+    <author>
+      <name>Binbin Hu</name>
+    </author>
+    <author>
+      <name>Shuo Yang</name>
+    </author>
+    <author>
+      <name>Meiqi Zhu</name>
+    </author>
+    <author>
+      <name>Zhiqiang Zhang</name>
+    </author>
+    <author>
+      <name>Qiyang Zhang</name>
+    </author>
+    <author>
+      <name>Jun Zhou</name>
+    </author>
+    <author>
+      <name>Guo Ye</name>
+    </author>
+    <author>
+      <name>Huimei He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.18918v1</id>
+    <title>Hyperbolic Graph Neural Networks at Scale: A Meta Learning Approach</title>
+    <updated>2023-10-29T06:11:49Z</updated>
+    <link href="https://arxiv.org/abs/2310.18918v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.18918v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The progress in hyperbolic neural networks (HNNs) research is hindered by their absence of inductive bias mechanisms, which are essential for generalizing to new tasks and facilitating scalable learning over large datasets. In this paper, we aim to alleviate these issues by learning generalizable inductive biases from the nodes' local subgraph and transfer them for faster learning over new subgraphs with a disjoint set of nodes, edges, and labels in a few-shot setting. We introduce a novel method, Hyperbolic GRAph Meta Learner (H-GRAM), that, for the tasks of node classification and link prediction, learns transferable information from a set of support local subgraphs in the form of hyperbolic meta gradients and label hyperbolic protonets to enable faster learning over a query set of new tasks dealing with disjoint subgraphs. Furthermore, we show that an extension of our meta-learning framework also mitigates the scalability challenges seen in HNNs faced by existing approaches. Our comparative analysis shows that H-GRAM effectively learns and transfers information in multiple challenging few-shot settings compared to other state-of-the-art baselines. Additionally, we demonstrate that, unlike standard HNNs, our approach is able to scale over large graph datasets and improve performance over its Euclidean counterparts.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-29T06:11:49Z</published>
+    <arxiv:comment>Accepted to NeurIPS 2023. 14 pages of main paper, 5 pages of supplementary</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nurendra Choudhary</name>
+    </author>
+    <author>
+      <name>Nikhil Rao</name>
+    </author>
+    <author>
+      <name>Chandan K. Reddy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.05640v1</id>
+    <title>Meta-Learning Based Knowledge Extrapolation for Temporal Knowledge Graph</title>
+    <updated>2023-02-11T09:52:26Z</updated>
+    <link href="https://arxiv.org/abs/2302.05640v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.05640v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the last few years, the solution to Knowledge Graph (KG) completion via learning embeddings of entities and relations has attracted a surge of interest. Temporal KGs(TKGs) extend traditional Knowledge Graphs (KGs) by associating static triples with timestamps forming quadruples. Different from KGs and TKGs in the transductive setting, constantly emerging entities and relations in incomplete TKGs create demand to predict missing facts with unseen components, which is the extrapolation setting. Traditional temporal knowledge graph embedding (TKGE) methods are limited in the extrapolation setting since they are trained within a fixed set of components. In this paper, we propose a Meta-Learning based Temporal Knowledge Graph Extrapolation (MTKGE) model, which is trained on link prediction tasks sampled from the existing TKGs and tested in the emerging TKGs with unseen entities and relations. Specifically, we meta-train a GNN framework that captures relative position patterns and temporal sequence patterns between relations. The learned embeddings of patterns can be transferred to embed unseen components. Experimental results on two different TKG extrapolation datasets show that MTKGE consistently outperforms both the existing state-of-the-art models for knowledge graph extrapolation and specifically adapted KGE and TKGE baselines.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-11T09:52:26Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Zhongwu Chen</name>
+    </author>
+    <author>
+      <name>Chengjin Xu</name>
+    </author>
+    <author>
+      <name>Fenglong Su</name>
+    </author>
+    <author>
+      <name>Zhen Huang</name>
+    </author>
+    <author>
+      <name>You Dou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.07488v1</id>
+    <title>MetaFill: Text Infilling for Meta-Path Generation on Heterogeneous Information Networks</title>
+    <updated>2022-10-14T03:34:09Z</updated>
+    <link href="https://arxiv.org/abs/2210.07488v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.07488v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Heterogeneous Information Network (HIN) is essential to study complicated networks containing multiple edge types and node types. Meta-path, a sequence of node types and edge types, is the core technique to embed HINs. Since manually curating meta-paths is time-consuming, there is a pressing need to develop automated meta-path generation approaches. Existing meta-path generation approaches cannot fully exploit the rich textual information in HINs, such as node names and edge type names. To address this problem, we propose MetaFill, a text-infilling-based approach for meta-path generation. The key idea of MetaFill is to formulate meta-path identification problem as a word sequence infilling problem, which can be advanced by Pretrained Language Models (PLMs). We observed the superior performance of MetaFill against existing meta-path generation methods and graph embedding methods that do not leverage meta-paths in both link prediction and node classification on two real-world HIN datasets. We further demonstrated how MetaFill can accurately classify edges in the zero-shot setting, where existing approaches cannot generate any meta-paths. MetaFill exploits PLMs to generate meta-paths for graph embedding, opening up new avenues for language model applications in graph analysis.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-14T03:34:09Z</published>
+    <arxiv:comment>Accepted by the main conference of EMNLP 2022</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Zequn Liu</name>
+    </author>
+    <author>
+      <name>Kefei Duan</name>
+    </author>
+    <author>
+      <name>Junwei Yang</name>
+    </author>
+    <author>
+      <name>Hanwen Xu</name>
+    </author>
+    <author>
+      <name>Ming Zhang</name>
+    </author>
+    <author>
+      <name>Sheng Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.09280v3</id>
+    <title>MetaGL: Evaluation-Free Selection of Graph Learning Models via Meta-Learning</title>
+    <updated>2023-06-08T23:11:48Z</updated>
+    <link href="https://arxiv.org/abs/2206.09280v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.09280v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a graph learning task, such as link prediction, on a new graph, how can we select the best method as well as its hyperparameters (collectively called a model) without having to train or evaluate any model on the new graph? Model selection for graph learning has been largely ad hoc. A typical approach has been to apply popular methods to new datasets, but this is often suboptimal. On the other hand, systematically comparing models on the new graph quickly becomes too costly, or even impractical. In this work, we develop the first meta-learning approach for evaluation-free graph learning model selection, called MetaGL, which utilizes the prior performances of existing methods on various benchmark graph datasets to automatically select an effective model for the new graph, without any model training or evaluations. To quantify similarities across a wide variety of graphs, we introduce specialized meta-graph features that capture the structural characteristics of a graph. Then we design G-M network, which represents the relations among graphs and models, and develop a graph-based meta-learner operating on this G-M network, which estimates the relevance of each model to different graphs. Extensive experiments show that using MetaGL to select a model for the new graph greatly outperforms several existing meta-learning techniques tailored for graph learning model selection (up to 47% better), while being extremely fast at test time (~1 sec).</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-18T20:43:38Z</published>
+    <arxiv:comment>ICLR 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Namyong Park</name>
+    </author>
+    <author>
+      <name>Ryan Rossi</name>
+    </author>
+    <author>
+      <name>Nesreen Ahmed</name>
+    </author>
+    <author>
+      <name>Christos Faloutsos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.10621v2</id>
+    <title>Learning Meta Representations of One-shot Relations for Temporal Knowledge Graph Link Prediction</title>
+    <updated>2023-05-24T17:01:36Z</updated>
+    <link href="https://arxiv.org/abs/2205.10621v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.10621v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Few-shot relational learning for static knowledge graphs (KGs) has drawn greater interest in recent years, while few-shot learning for temporal knowledge graphs (TKGs) has hardly been studied. Compared to KGs, TKGs contain rich temporal information, thus requiring temporal reasoning techniques for modeling. This poses a greater challenge in learning few-shot relations in the temporal context. In this paper, we follow the previous work that focuses on few-shot relational learning on static KGs and extend two fundamental TKG reasoning tasks, i.e., interpolated and extrapolated link prediction, to the one-shot setting. We propose four new large-scale benchmark datasets and develop a TKG reasoning model for learning one-shot relations in TKGs. Experimental results show that our model can achieve superior performance on all datasets in both TKG link prediction tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-21T15:17:52Z</published>
+    <arxiv:comment>IJCNN 2023 oral</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zifeng Ding</name>
+    </author>
+    <author>
+      <name>Bailan He</name>
+    </author>
+    <author>
+      <name>Yunpu Ma</name>
+    </author>
+    <author>
+      <name>Zhen Han</name>
+    </author>
+    <author>
+      <name>Volker Tresp</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.04692v1</id>
+    <title>Meta-Learning Based Knowledge Extrapolation for Knowledge Graphs in the Federated Setting</title>
+    <updated>2022-05-10T06:27:32Z</updated>
+    <link href="https://arxiv.org/abs/2205.04692v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.04692v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the knowledge extrapolation problem to embed new components (i.e., entities and relations) that come with emerging knowledge graphs (KGs) in the federated setting. In this problem, a model trained on an existing KG needs to embed an emerging KG with unseen entities and relations. To solve this problem, we introduce the meta-learning setting, where a set of tasks are sampled on the existing KG to mimic the link prediction task on the emerging KG. Based on sampled tasks, we meta-train a graph neural network framework that can construct features for unseen components based on structural information and output embeddings for them. Experimental results show that our proposed method can effectively embed unseen components and outperforms models that consider inductive settings for KGs and baselines that directly use conventional KG embedding methods.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-10T06:27:32Z</published>
+    <arxiv:comment>IJCAI 2022</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Mingyang Chen</name>
+    </author>
+    <author>
+      <name>Wen Zhang</name>
+    </author>
+    <author>
+      <name>Zhen Yao</name>
+    </author>
+    <author>
+      <name>Xiangnan Chen</name>
+    </author>
+    <author>
+      <name>Mengxiao Ding</name>
+    </author>
+    <author>
+      <name>Fei Huang</name>
+    </author>
+    <author>
+      <name>Huajun Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2110.14170v3</id>
+    <title>Meta-Knowledge Transfer for Inductive Knowledge Graph Embedding</title>
+    <updated>2022-05-06T03:46:48Z</updated>
+    <link href="https://arxiv.org/abs/2110.14170v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.14170v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs (KGs) consisting of a large number of triples have become widespread recently, and many knowledge graph embedding (KGE) methods are proposed to embed entities and relations of a KG into continuous vector spaces. Such embedding methods simplify the operations of conducting various in-KG tasks (e.g., link prediction) and out-of-KG tasks (e.g., question answering). They can be viewed as general solutions for representing KGs. However, existing KGE methods are not applicable to inductive settings, where a model trained on source KGs will be tested on target KGs with entities unseen during model training. Existing works focusing on KGs in inductive settings can only solve the inductive relation prediction task. They can not handle other out-of-KG tasks as general as KGE methods since they don't produce embeddings for entities. In this paper, to achieve inductive knowledge graph embedding, we propose a model MorsE, which does not learn embeddings for entities but learns transferable meta-knowledge that can be used to produce entity embeddings. Such meta-knowledge is modeled by entity-independent modules and learned by meta-learning. Experimental results show that our model significantly outperforms corresponding baselines for in-KG and out-of-KG tasks in inductive settings.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-27T04:57:16Z</published>
+    <arxiv:comment>SIGIR 2022</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mingyang Chen</name>
+    </author>
+    <author>
+      <name>Wen Zhang</name>
+    </author>
+    <author>
+      <name>Yushan Zhu</name>
+    </author>
+    <author>
+      <name>Hongting Zhou</name>
+    </author>
+    <author>
+      <name>Zonggang Yuan</name>
+    </author>
+    <author>
+      <name>Changliang Xu</name>
+    </author>
+    <author>
+      <name>Huajun Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2108.00954v1</id>
+    <title>Subgraph-aware Few-Shot Inductive Link Prediction via Meta-Learning</title>
+    <updated>2021-07-26T11:56:18Z</updated>
+    <link href="https://arxiv.org/abs/2108.00954v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2108.00954v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction for knowledge graphs aims to predict missing connections between entities. Prevailing methods are limited to a transductive setting and hard to process unseen entities. The recent proposed subgraph-based models provided alternatives to predict links from the subgraph structure surrounding a candidate triplet. However, these methods require abundant known facts of training triplets and perform poorly on relationships that only have a few triplets. In this paper, we propose Meta-iKG, a novel subgraph-based meta-learner for few-shot inductive relation reasoning. Meta-iKG utilizes local subgraphs to transfer subgraph-specific information and learn transferable patterns faster via meta gradients. In this way, we find the model can quickly adapt to few-shot relationships using only a handful of known facts with inductive settings. Moreover, we introduce a large-shot relation update procedure to traditional meta-learning to ensure that our model can generalize well both on few-shot and large-shot relations. We evaluate Meta-iKG on inductive benchmarks sampled from NELL and Freebase, and the results show that Meta-iKG outperforms the current state-of-the-art methods both in few-shot scenarios and standard inductive settings.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-07-26T11:56:18Z</published>
+    <arxiv:comment>under review</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Shuangjia Zheng</name>
+    </author>
+    <author>
+      <name>Sijie Mai</name>
+    </author>
+    <author>
+      <name>Ya Sun</name>
+    </author>
+    <author>
+      <name>Haifeng Hu</name>
+    </author>
+    <author>
+      <name>Yuedong Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.09923v1</id>
+    <title>Embedding Heterogeneous Networks into Hyperbolic Space Without Meta-path</title>
+    <updated>2021-06-18T05:24:13Z</updated>
+    <link href="https://arxiv.org/abs/2106.09923v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.09923v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Networks found in the real-world are numerous and varied. A common type of network is the heterogeneous network, where the nodes (and edges) can be of different types. Accordingly, there have been efforts at learning representations of these heterogeneous networks in low-dimensional space. However, most of the existing heterogeneous network embedding methods suffer from the following two drawbacks: (1) The target space is usually Euclidean. Conversely, many recent works have shown that complex networks may have hyperbolic latent anatomy, which is non-Euclidean. (2) These methods usually rely on meta-paths, which require domain-specific prior knowledge for meta-path selection. Additionally, different down-streaming tasks on the same network might require different meta-paths in order to generate task-specific embeddings. In this paper, we propose a novel self-guided random walk method that does not require meta-path for embedding heterogeneous networks into hyperbolic space. We conduct thorough experiments for the tasks of network reconstruction and link prediction on two public datasets, showing that our model outperforms a variety of well-known baselines across all tasks.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-18T05:24:13Z</published>
+    <arxiv:comment>In proceedings of the 35th AAAI Conference on Artificial Intelligence</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Lili Wang</name>
+    </author>
+    <author>
+      <name>Chongyang Gao</name>
+    </author>
+    <author>
+      <name>Chenghan Huang</name>
+    </author>
+    <author>
+      <name>Ruibo Liu</name>
+    </author>
+    <author>
+      <name>Weicheng Ma</name>
+    </author>
+    <author>
+      <name>Soroush Vosoughi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2104.02433v2</id>
+    <title>mSHINE: A Multiple-meta-paths Simultaneous Learning Framework for Heterogeneous Information Network Embedding</title>
+    <updated>2021-04-09T06:40:05Z</updated>
+    <link href="https://arxiv.org/abs/2104.02433v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2104.02433v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Heterogeneous information networks(HINs) become popular in recent years for its strong capability of modelling objects with abundant information using explicit network structure. Network embedding has been proved as an effective method to convert information networks into lower-dimensional space, whereas the core information can be well preserved. However, traditional network embedding algorithms are sub-optimal in capturing rich while potentially incompatible semantics provided by HINs. To address this issue, a novel meta-path-based HIN representation learning framework named mSHINE is designed to simultaneously learn multiple node representations for different meta-paths. More specifically, one representation learning module inspired by the RNN structure is developed and multiple node representations can be learned simultaneously, where each representation is associated with one respective meta-path. By measuring the relevance between nodes with the designed objective function, the learned module can be applied in downstream link prediction tasks. A set of criteria for selecting initial meta-paths is proposed as the other module in mSHINE which is important to reduce the optimal meta-path selection cost when no prior knowledge of suitable meta-paths is available. To corroborate the effectiveness of mSHINE, extensive experimental studies including node classification and link prediction are conducted on five real-world datasets. The results demonstrate that mSHINE outperforms other state-of-the-art HIN embedding methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-04-06T11:35:56Z</published>
+    <arxiv:comment>Accpeted by TKDE, code is available at https://github.com/XinyiZ001</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xinyi Zhang</name>
+    </author>
+    <author>
+      <name>Lihui Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.00771v2</id>
+    <title>Self-supervised Auxiliary Learning for Graph Neural Networks via Meta-Learning</title>
+    <updated>2021-04-13T00:31:47Z</updated>
+    <link href="https://arxiv.org/abs/2103.00771v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.00771v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In recent years, graph neural networks (GNNs) have been widely adopted in the representation learning of graph-structured data and provided state-of-the-art performance in various applications such as link prediction, node classification, and recommendation. Motivated by recent advances of self-supervision for representation learning in natural language processing and computer vision, self-supervised learning has been recently studied to leverage unlabeled graph-structured data. However, employing self-supervision tasks as auxiliary tasks to assist a primary task has been less explored in the literature on graphs. In this paper, we propose a novel self-supervised auxiliary learning framework to effectively learn graph neural networks. Moreover, this work is the first study showing that a meta-path prediction is beneficial as a self-supervised auxiliary task for heterogeneous graphs. Our method is learning to learn a primary task with various auxiliary tasks to improve generalization performance. The proposed method identifies an effective combination of auxiliary tasks and automatically balances them to improve the primary task. Our methods can be applied to any graph neural network in a plug-in manner without manual labeling or additional data. Also, it can be extended to any other auxiliary tasks. Our experiments demonstrate that the proposed method consistently improves the performance of node classification and link prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-01T05:52:57Z</published>
+    <arxiv:comment>Submitted to TPAMI, 14pages. arXiv admin note: substantial text overlap with arXiv:2007.08294</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Dasol Hwang</name>
+    </author>
+    <author>
+      <name>Jinyoung Park</name>
+    </author>
+    <author>
+      <name>Sunyoung Kwon</name>
+    </author>
+    <author>
+      <name>Kyung-Min Kim</name>
+    </author>
+    <author>
+      <name>Jung-Woo Ha</name>
+    </author>
+    <author>
+      <name>Hyunwoo J. Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2007.08294v5</id>
+    <title>Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs</title>
+    <updated>2021-02-08T04:19:05Z</updated>
+    <link href="https://arxiv.org/abs/2007.08294v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.08294v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks have shown superior performance in a wide range of applications providing a powerful representation of graph-structured data. Recent works show that the representation can be further improved by auxiliary tasks. However, the auxiliary tasks for heterogeneous graphs, which contain rich semantic information with various types of nodes and edges, have less explored in the literature. In this paper, to learn graph neural networks on heterogeneous graphs we propose a novel self-supervised auxiliary learning method using meta-paths, which are composite relations of multiple edge types. Our proposed method is learning to learn a primary task by predicting meta-paths as auxiliary tasks. This can be viewed as a type of meta-learning. The proposed method can identify an effective combination of auxiliary tasks and automatically balance them to improve the primary task. Our methods can be applied to any graph neural networks in a plug-in manner without manual labeling or additional data. The experiments demonstrate that the proposed method consistently improves the performance of link prediction and node classification on heterogeneous graphs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-16T12:32:11Z</published>
+    <arxiv:comment>Neural Information Processing Systems (NeurIPS), 2020</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Dasol Hwang</name>
+    </author>
+    <author>
+      <name>Jinyoung Park</name>
+    </author>
+    <author>
+      <name>Sunyoung Kwon</name>
+    </author>
+    <author>
+      <name>Kyung-Min Kim</name>
+    </author>
+    <author>
+      <name>Jung-Woo Ha</name>
+    </author>
+    <author>
+      <name>Hyunwoo J. Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.09867v2</id>
+    <title>Meta-Graph: Few Shot Link Prediction via Meta Learning</title>
+    <updated>2020-03-01T21:03:29Z</updated>
+    <link href="https://arxiv.org/abs/1912.09867v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.09867v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the task of few shot link prediction on graphs. The goal is to learn from a distribution over graphs so that a model is able to quickly infer missing edges in a new graph after a small amount of training. We show that current link prediction methods are generally ill-equipped to handle this task. They cannot effectively transfer learned knowledge from one graph to another and are unable to effectively learn from sparse samples of edges. To address this challenge, we introduce a new gradient-based meta learning framework, Meta-Graph. Our framework leverages higher-order gradients along with a learned graph signature function that conditionally generates a graph neural network initialization. Using a novel set of few shot link prediction benchmarks, we show that Meta-Graph can learn to quickly adapt to a new graph using only a small sample of true edges, enabling not only fast adaptation but also improved results at convergence.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-20T15:09:50Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Avishek Joey Bose</name>
+    </author>
+    <author>
+      <name>Ankit Jain</name>
+    </author>
+    <author>
+      <name>Piero Molino</name>
+    </author>
+    <author>
+      <name>William L. Hamilton</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1909.01515v1</id>
+    <title>Meta Relational Learning for Few-Shot Link Prediction in Knowledge Graphs</title>
+    <updated>2019-09-04T01:35:47Z</updated>
+    <link href="https://arxiv.org/abs/1909.01515v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1909.01515v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction is an important way to complete knowledge graphs (KGs), while embedding-based methods, effective for link prediction in KGs, perform poorly on relations that only have a few associative triples. In this work, we propose a Meta Relational Learning (MetaR) framework to do the common but challenging few-shot link prediction in KGs, namely predicting new triples about a relation by only observing a few associative triples. We solve few-shot link prediction by focusing on transferring relation-specific meta information to make model learn the most important knowledge and learn faster, corresponding to relation meta and gradient meta respectively in MetaR. Empirically, our model achieves state-of-the-art results on few-shot link prediction KG benchmarks.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-09-04T01:35:47Z</published>
+    <arxiv:comment>Accepted by EMNLP 2019</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Mingyang Chen</name>
+    </author>
+    <author>
+      <name>Wen Zhang</name>
+    </author>
+    <author>
+      <name>Wei Zhang</name>
+    </author>
+    <author>
+      <name>Qiang Chen</name>
+    </author>
+    <author>
+      <name>Huajun Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1809.03267v1</id>
+    <title>Feature Learning for Meta-Paths in Knowledge Graphs</title>
+    <updated>2018-09-07T09:31:52Z</updated>
+    <link href="https://arxiv.org/abs/1809.03267v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1809.03267v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this thesis, we study the problem of feature learning on heterogeneous knowledge graphs. These features can be used to perform tasks such as link prediction, classification and clustering on graphs. Knowledge graphs provide rich semantics encoded in the edge and node types. Meta-paths consist of these types and abstract paths in the graph. Until now, meta-paths can only be used as categorical features with high redundancy and are therefore unsuitable for machine learning models. We propose meta-path embeddings to solve this problem by learning semantical and compact vector representations of them. Current graph embedding methods only embed nodes and edge types and therefore miss semantics encoded in the combination of them. Our method embeds meta-paths using the skipgram model with an extension to deal with the redundancy and high amount of meta-paths in big knowledge graphs. We critically evaluate our embedding approach by predicting links on Wikidata. The experiments indicate that we learn a sensible embedding of the meta-paths but can improve it further.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-09-07T09:31:52Z</published>
+    <arxiv:comment>Bachelor's Thesis</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sebastian Bischoff</name>
+    </author>
+  </entry>
+</feed>

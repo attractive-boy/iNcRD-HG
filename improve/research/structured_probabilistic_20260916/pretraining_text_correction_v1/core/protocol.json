@@ -1,0 +1,94 @@
+{
+  "created_at_utc": "2026-09-16T10:31:21.484989+00:00",
+  "family": "sos_circuit",
+  "implementation_module": "sos_circuit_graph_v1",
+  "tasks": [
+    "MiDrug",
+    "LncDrug"
+  ],
+  "kinds": [
+    "full",
+    "single_square",
+    "monotone",
+    "no_joint"
+  ],
+  "primary_kind": "full",
+  "primary_controls": [
+    "single_square",
+    "monotone",
+    "no_joint"
+  ],
+  "core_parameters": {
+    "components": 4,
+    "component_rank": 16,
+    "initialization_std": 0.1,
+    "uniform_mixture": 0.01,
+    "generative_weight": 0.1,
+    "folds": 5,
+    "density_dtype": "float64",
+    "entity_parameterization": "separate subject/object ID tables",
+    "auxiliary_likelihood": "equal average of exact typed conditional log densities for support relations",
+    "target_zero_relation": "sampled unobserved MiDrug association label, support folds only",
+    "lnc_policy": "identity_strong_reference"
+  },
+  "lnc_policy": "identity_strong_reference",
+  "identity_records_are_not_neural_fits": true,
+  "selection": "Full sum-of-squares circuit primary, diagonal and root-Euclidean mandatory controls; two fixed learning rates 0.001/0.003, 400 steps, 20-step checkpoints. No ridge, width, depth, covariance dimension or fusion sweep.",
+  "required_executor": "improve.anchor_sos_circuit_experiment_v1",
+  "source_sha256": {
+    "sos_circuit_graph_v1.py": "fb9f727b57579ceb33fd73083f4e6f749cbc7c62ea7f0b623f82c6c8fe9fe861",
+    "anchor_sos_circuit_experiment_v1.py": "3c6c4d5d644c3e26afa3128ae9a17663524bbf005c02de253994031f174f2da2",
+    "test_sos_circuit_graph_v1.py": "9c4929904431aba62f7926e9eb8e1fe1fde705b0e0be6288d4e7d9481e7b9890",
+    "test_nested_anchor_v2.py": "31b81bb2a0cfd1978b9fdf467b2dd5354b1fc748081b7b9522c6603e9d9015f0",
+    "sharpness_graph_v1.py": "49f346bb2d84281082c9cd38f65254abacdfe6b0d78fa0dd238320451d347982",
+    "overlap_block_models.py": "8cd9369ecab95c93889ae2bfa2d1e9e0809f4bc260dd70d7bad74ac440182791",
+    "overlap_block_experiment.py": "3ada92aca1cefcc0077cdaf490d4a296fcbc8fa00ba9a56adc42a1766c7bb6ca",
+    "non_tabular_experiment.py": "8db380a6d45a3f5bdaef3802615bb1f24291192e6473f51e0c85ee7c0c5128a9",
+    "tabular_foundation.py": "9b5ef09642101e447c0e31b4b895367c83c5bb59f2106d833dd31e35c514f6ef",
+    "graph_prediction_precision.py": "9e49767f3029e542e431f40e7ae045a5f65fe6eb2a604c0da566bbb152303b35",
+    "nested_anchor_inputs_v2.py": "4ed90b3a531e51da23e461e6e0ee94ba7caf5e06a63c0132b2adc909c6895c0a",
+    "residual_graph_experiment.py": "8655f06164a6f2213a746f965c8a5340a9dd397813234d7bf39f43175c1516ce",
+    "anchor_priority_graph_v1.py": "da54465b728c8b8ac704e0808f251d0c23c2f3f56054d8c4c8e7b2f9c7193801",
+    "assess_declared_graph.py": "cc4b6091c7804ff1fc075f1d94c0a6adb0225f565cb51670bcfc7b2047311405"
+  },
+  "inputs": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/SOS_CIRCUIT_SMOKE_V1.json": "8c63336d29b2154b248abe84af29aef988f2bde5f40092c881d7552fd9d136ab",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/SOS_CIRCUIT_UNIT_V1.json": "aa77951a162a0faaa7f0e627b1a61d831225f8e3597950141208f381504c2a64",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/sos_circuit_study_v1.py": "0309624312a38113e90d02c0e2eec2ca1c8bc378a72c51f472792e9f6e62c83b",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/sos_circuit_smoke_v1.py": "8eaa522d66bea7f7c577796c0c89b06ca5068c0579f1f3303f8dab32434e4e6b",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/SOS_CIRCUIT_ADAPTATION_V1.md": "b8743993375e49688a6d1814b88e542889e44a040f0d1db10ad5e8b090e6ec13",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/DISCOVERY_V1.json": "b34f4f6acbf97532eec3fc6ce0d5bd3bb857c255ace6c846f6ec10865d58afa9",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/DISCOVERY_V2.json": "6f995868feef01fef5172765524feb4089598597cfd1add9fd5b91a74a2a6f92",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/CIRCUIT_PRIMARY_RETRIEVAL_V1.json": "86ab850257499e7ad860176060ef1b1c0b243e509e59fe291d011af2e08a73eb",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/SQUARED_CIRCUIT_RETRIEVAL_V1.json": "83b3f7172fc8a051b2c2268a815db4837e13fd042e8fa3ccd2de51638bd95b77",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/CIRCUIT_AUTHOR_RETRIEVAL_V1.json": "15cde72de1d72732991ad123ff50605939bb543a52c46743360a8c685ee41bcd",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/sos_crossref_v1.json": "e43b2274d35e53476b348f538f2fbc8d07365db02b770a9b1ebf26569ff4d984",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/gekc_exact_crossref_v1.json": "57dcf42516ad4ee11667528fdc835f4ba37156a729912136d4811cf327eb1e51",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/sos_circuits_v3.pdf": "411cda12beadb0559657007559d2b7a8c8a21faa1769ccb6ca1ffb544bc52933",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/sos_circuits_v3.txt": "d827b2851384ba3497dc5be856814b9c9da352338fa524689cd56448398c95a8",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/gekc_v3.pdf": "76eb49aa65600173080cdf81f698bbf71cc7041906ec78e6ad54b9f3402c492a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/gekc_v3.txt": "5cc1e6d9dacaaa63a3f5e92e64f4628615f15a1c151989eb6811a9b5ec1787cc"
+  },
+  "literature": {
+    "sum_of_squares_doi": "10.1609/aaai.v39i18.34100",
+    "relational_circuit_doi": "10.52202/075280-3395",
+    "primary_fulltexts": [
+      "2408.11778v3",
+      "2305.15944v3"
+    ],
+    "adaptation_is_independent": true,
+    "author_algorithms_or_benchmarks_reproduced": false
+  },
+  "mechanism": "Typed sum of compatible squared CP components, exact Gram normalizers, and joint auxiliary relational likelihood",
+  "distinctness": "Must beat single-square, monotone and no-joint controls on both global MiDrug metrics; one tractable relational-circuit family only.",
+  "numerical_gate": "Exact finite positive float64 normalizers; analytic Gram sums and derivatives checked against enumeration; normalized smoothed densities; finite loss, gradients, weights and optimizer; replay 3e-5.",
+  "training_budget": "400 AdamW updates per formal fit; parameter tensors and initial/final random streams match; no stochastic sampling or dropout; exact marginal operations and active supervision differ.",
+  "evaluation": "Historical screen, eligible three-initialization confirmation, then fixed development partitions and frozen old-outer recheck; stop at any failed gate.",
+  "previous_failures_preserved": true,
+  "previous_outer_exposure_known": true,
+  "no_new_performance_observed": true,
+  "original_test_source_access": false,
+  "confirmed_innovations": 0,
+  "existing_default_replaced": false,
+  "smoke": false
+}

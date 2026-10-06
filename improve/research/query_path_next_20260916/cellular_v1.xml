@@ -1,0 +1,770 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/IeBjKZ5W+Q6a6fhLuODrXKx2ORo</id>
+  <title>arXiv Query: search_query=(ti:Hodge OR ti:Simplicial OR ti:Cellular) AND (all:"neural" OR all:"learning") AND submittedDate:"202401010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T11:59:35Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(ti:Hodge+OR+(ti:Simplicial+OR+ti:Cellular))+AND+((all:%22neural%22+OR+all:%22learning%22)+AND+submittedDate:%22202401010000+TO+202609162359%22)&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>299</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.12866v1</id>
+    <title>Learning the Topology of a Simplicial Complex Using Noisy Simplicial Signals</title>
+    <updated>2026-09-11T13:51:27Z</updated>
+    <link href="https://arxiv.org/abs/2609.12866v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.12866v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graphs are a fundamental tool for modeling the irregular (non-Euclidean) structure of complex data. However, they are inherently limited to representing pairwise relationships, making them inadequate for datasets exhibiting higher-order interactions. Simplicial complexes (SCs) have emerged as a promising framework for capturing such higher-order dependencies. This paper focuses on the problem of identifying the topology of an SC from signals, which serves as the foundation for SC-based processing and learning schemes. We consider a setting where we observe noisy signals (features) associated with the nodes of the SC (0-simplices) and a subset of the edges (1-simplices). We assume the observed signals are smooth over the unknown SC topology, and that the higher-order interactions are sparse. Building on these assumptions, we formulate topology learning as a nonconvex optimization problem and propose an efficient block-coordinate descent (BCD) algorithm to solve it. A key step in our formulation is the modeling of the topology of the SC using binary edge and triangle selection vectors, combined with efficient greedy algorithms for optimizing such vectors. We establish theoretical convergence guarantees to a stationary point of a relaxed (penalized) version of the problem and discuss computational complexity. Multiple numerical experiments with both synthetic and real-world datasets validate the effectiveness of our approach, highlighting the capability of SC-learning methods to uncover and model higher-order relationships in complex datasets.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-11T13:51:27Z</published>
+    <arxiv:primary_category term="eess.SP"/>
+    <author>
+      <name>Andrei Buciulea</name>
+    </author>
+    <author>
+      <name>Elvin Isufi</name>
+    </author>
+    <author>
+      <name>Geert Leus</name>
+    </author>
+    <author>
+      <name>Antonio G. Marques</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.06102v2</id>
+    <title>Programmable Cellular Automata</title>
+    <updated>2026-09-09T13:38:32Z</updated>
+    <link href="https://arxiv.org/abs/2609.06102v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.06102v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cellular automata is a local computation paradigm where complex behavior can arise from local interactions between simple functions. This paradigm has been used to explain many systems such as biological processes, traffic simulation, computer networks, etc. In games, cellular automata have been used in games such as SimCity and for the generation of spatial content such as caves or dungeons. However, creating effective local rules is hard and unintuitive. Cellular automata can be effectively evolved, but may still be hard to interpret. In this work, we introduce the concept of programmable cellular automata, where we represent the system as Python code. We also modularize the cellular automata into local functions and a decision function. Local functions take a local neighborhood and return a value, while the decision function takes the output of the local functions and decides the value of the next state. Separating the cellular automata into modules written in Python helps with understanding how these systems are working. We also explore adding global functions where they take the whole state and compute a function from it. We tested generating levels for three different games from the PCG Benchmark. The results showed that global functions decrease the number of iterations that cellular automata need to solve a problem, and that we cannot find solutions for some problems with purely local functions. Looking into the generated functions, we can see common functions that have been used in different experiments, which not only helps us understand the generator but also helps us understand these games better and what is important for them.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-05T13:54:18Z</published>
+    <arxiv:comment>Submitted to EXAG 2026, 15 pages, 6 figures, 5 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Ahmed Khalifa</name>
+    </author>
+    <author>
+      <name>Muhammad Umair Nasir</name>
+    </author>
+    <author>
+      <name>Matthew Siper</name>
+    </author>
+    <author>
+      <name>Steve James</name>
+    </author>
+    <author>
+      <name>Julian Togelius</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.05696v1</id>
+    <title>Bridging simulation length scales with cellular automata</title>
+    <updated>2026-09-04T20:05:58Z</updated>
+    <link href="https://arxiv.org/abs/2609.05696v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.05696v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multiscale simulation requires coupling physics models that operate at different characteristic length and time scales, because no single method spans the range needed for most problems of interest. Moving to a coarser-grained representation unlocks longer length and time scales, but it discards the microscopic interactions that build morphology. A fine-grained model can be initialized from an arbitrary packing and left to self-assemble into a physically meaningful structure; a lower-resolution model cannot, and must inherit its starting configuration from a higher-fidelity simulation. The length scales accessible to the coarse-grained model are therefore set not by the coarse-grained method itself, but by the largest fine-grained configuration that can be affordably equilibrated. A representative example is the scale-up from particle-based molecular dynamics (MD) to a lattice-based representation such as kinetic Monte Carlo (kMC). In this work, we present a cellular automata (CA) approach for generating arbitrarily large lattice starting configurations. CA is a natural fit for this task: short-ranged local rules drive the evolution of a lattice, and their repeated application gives rise to emergent long-range order, thematically mirroring how short-ranged interactions in MD produce self-assembled morphology. We use a configuration from a higher-fidelity simulation as a training set and learn the CA rules from it via logistic regression. As a proof of principle, we develop these rules for a hydrated anion exchange membrane (AEM), generate new starting configurations, and benchmark their performance in mesoscale kMC simulations against an MD-derived "ground truth." We then demonstrate the ability to generate substantially larger lattices and show that their behavior in kMC is consistent with that of the smaller CA benchmark configurations.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-04T20:05:58Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>John J. Karnes</name>
+    </author>
+    <author>
+      <name>Esteban D. Gadea</name>
+    </author>
+    <author>
+      <name>Shakkira Erimban</name>
+    </author>
+    <author>
+      <name>Ignacio J. Bombau</name>
+    </author>
+    <author>
+      <name>Valeria Molinero</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.01675v1</id>
+    <title>Random Forest-Informed Cellular Automaton for Large-Scale Wildfire Spread Modelling</title>
+    <updated>2026-09-01T08:06:53Z</updated>
+    <link href="https://arxiv.org/abs/2609.01675v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.01675v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate large-scale wildfire spread modelling requires models that capture both the environmental conditions associated with fire occurrence and the local dynamics of fire propagation. We propose a three-stage framework that combines a Random Forest (RF) model with a cellular automaton (CA). First, an RF model trained on the 2021 Canadian fire season estimates daily pixel-level fire-occurrence probabilities. Second, quantile gradient boosting models provide optional spread-rate priors for sensitivity analysis. Third, an RF-informed CA combines the RF probability layer with neighbourhood-driven spread on a 5 km grid. The RF model achieved AUC values of 0.725--0.795 on the 2022--2024 datasets, while the RF-informed CA achieved substantially higher spatial overlap than the evaluated CA-only baselines in the 2023 simulation. A higher-resolution simulation provides an additional qualitative assessment of local spatial errors. These results suggest that combining RF-derived probabilities with local CA spread can improve large-scale wildfire simulations under the tested conditions.</summary>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T08:06:53Z</published>
+    <arxiv:comment>31 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.AP"/>
+    <author>
+      <name>Siyu Chen</name>
+    </author>
+    <author>
+      <name>Esha Saha</name>
+    </author>
+    <author>
+      <name>Hao Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.30328v1</id>
+    <title>Learning PDE Time-Stepping with Neural Cellular Automata</title>
+    <updated>2026-08-31T06:46:24Z</updated>
+    <link href="https://arxiv.org/abs/2608.30328v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.30328v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Classical numerical solvers for partial differential equations (PDEs) are computationally expensive to solve repeatedly across varying initial conditions, motivating the need for learned surrogates. In this paper, we propose a trainable Neural Cellular Automata (NCA) based surrogate model for learning long time PDE dynamics. Rather than mapping an entire initial field to a full trajectory in one shot, our proposed model learns a small, local, homogeneous update rule that is applied identically and repeatedly at every grid cell, mirroring the locality of differential operators. We benchmark this framework against three baselines: PDE - Net, a modified physics-informed neural network (PINN), and a Fourier Neural Operator (FNO), on five canonical PDEs (heat, advection, Burgers, Allen - Cahn, and Fisher - KPP), evaluated at temporal domain two times beyond the training temporal domain. The proposed model achieves the lowest long-horizon relative errors on the majority of the experiments.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-31T06:46:24Z</published>
+    <arxiv:comment>4 figures, 7 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Esha Saha</name>
+    </author>
+    <author>
+      <name>Hao Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.28909v1</id>
+    <title>Coarse to Fine: Iterative Adversarial Neural Cellular Automata for Medical Image Synthesis</title>
+    <updated>2026-08-28T22:16:35Z</updated>
+    <link href="https://arxiv.org/abs/2608.28909v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.28909v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large-scale, publicly available datasets have driven advances in deep learning, but privacy and legal restrictions often limit data sharing in medical imaging. Synthetic data generation offers a privacy-friendly alternative to enable the training of high-performance models on health data. While most state-of-the-art generative models produce high-quality images, they remain computationally expensive, which limits their applicability on resource-constrained hardware. We propose StyleGANCA, the first lightweight general-purpose NCA-based generative adversarial network. The architecture integrates a StyleGAN-inspired mapping network and adaptive style modulation into a multi-scale NCA synthesis process, enabling latent-controlled image generation through iterative local interactions. We evaluate StyleGANCA on BloodMNIST and PathMNIST against adversarial, variational, diffusion, and NCA-based baselines. Experimental results demonstrate that StyleGANCA achieves competitive image quality with substantially fewer parameters than baseline architectures, achieving the best FID and KID scores on PathMNIST with only 617k parameters. Furthermore, downstream experiments show that the generated images preserve class-specific information and effectively support the training of multi-class classifiers. Our code is publicly available at: https://github.com/MECLabTUDA/StyleGANCA</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T22:16:35Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Anh Thi Luu</name>
+    </author>
+    <author>
+      <name>Nick Lemke</name>
+    </author>
+    <author>
+      <name>Anirban Mukhopadhyay</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.26547v1</id>
+    <title>Random Recursive Simplicial Complexes</title>
+    <updated>2026-08-27T02:36:40Z</updated>
+    <link href="https://arxiv.org/abs/2608.26547v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26547v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate random recursive simplicial complexes growing by adding, at each step, a vertex together with a simplex formed by joining the new vertex with a randomly chosen existing simplex. We also add all faces of the new simplex to ensure that the resulting object remains a simplicial complex. If the choice of an existing simplex is uniform among simplices of dimension $&lt;m$, the number $S_d$ of simplices of any admissible dimension $d\leq m$ is an asymptotically self-averaging random variable. This feature allows us to determine the asymptotic growth law of the average of $S_d$ when the number of vertices diverges. We also probe the degree distribution, examine the probabilities of various extreme outcomes, and analyze the characteristics of the first vertex.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-27T02:36:40Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>P. L. Krapivsky</name>
+    </author>
+    <author>
+      <name>M. Lucas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.17968v1</id>
+    <title>Simplicial closure fragments the explosive cooperation transitions in higher-order public goods games</title>
+    <updated>2026-08-18T16:21:02Z</updated>
+    <link href="https://arxiv.org/abs/2608.17968v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.17968v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hypergraph (HG) and simplicial complex (SC) are two common representations of higher-order networks, and are often expected to differ mainly quantitatively when they encode comparable group interactions. Here we show that this expectation fails in evolutionary cooperation dynamics. Using a controlled higher-order public goods game (PGG) with minimal ad hoc parameters, we compare cooperation transitions on randomized HG and SC constructed from the same triangular backbone. We find that the impact of simplicial closure is selective: when the cooperation transition is continuous-like on HG, imposing simplicial closure mainly broadens the transition without changing its qualitative nature; however, when the transition is explosive and first-order-like on HG, simplicial closure will fragment the compact low/high bistability into a broad ensemble of metastable final states. Detailed analysis reveals that this selective effect arises from the dual role of simplicial closure in cooperative-nucleus dynamics: it promotes the survival of local cooperative nuclei while suppressing their conversion into system-wide cascades. Further experiments confirm that this fragmentation is not tied to a specific payoff form, but is a generic feature of explosive cooperation transitions in higher-order PGGs.</summary>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T16:21:02Z</published>
+    <arxiv:comment>12 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.soc-ph"/>
+    <author>
+      <name>Wenjia Rao</name>
+    </author>
+    <author>
+      <name>Jianneng Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.16419v2</id>
+    <title>PertMind: Eliciting Emergent Biological Reasoning in LLM via Reinforcement Learning on Cellular Perturbation Data</title>
+    <updated>2026-08-22T05:21:26Z</updated>
+    <link href="https://arxiv.org/abs/2608.16419v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.16419v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models can describe mechanisms, yet scalable post-training still depends on costly, manually curated biological reasoning traces. Here we show that cellular perturbation atlases can instead become reinforcement-learning environments, where measured gene responses provide computable rewards for biological reasoning. We introduce PertMind, which combines trusted-trajectory supervised initialization with gene-, pathway-, and format-level reinforcement signals. Trained only on forward perturbation-response prediction, PertMind improved response inference in unseen cellular contexts while retaining general language capabilities. It also transferred without task-specific post-training to reverse perturbation identification, double-perturbation reasoning, phenotypic-screen prioritization, and biological-process interpretation. PertMind further generated biological profiles that supported competitive gene, cell, and donor representations across multiscale downstream tasks. These results support the hypothesis that reinforcement on experimental endpoints can concentrate reusable biological strategies already accessible to pretrained models. More broadly, perturbation-derived reinforcement learning offers a scalable route for transforming expanding experimental atlases into training environments for general-purpose biological reasoning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-17T11:17:26Z</published>
+    <arxiv:comment>Withdrawn because one or more co-authors do not consent to the public posting of this work on arXiv. No replacement version will be submitted</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zhenchao Tang</name>
+    </author>
+    <author>
+      <name>Xiaogang Xu</name>
+    </author>
+    <author>
+      <name>Tianxu Lv</name>
+    </author>
+    <author>
+      <name>Jiahui Guan</name>
+    </author>
+    <author>
+      <name>Jiale Zhou</name>
+    </author>
+    <author>
+      <name>Haohuai He</name>
+    </author>
+    <author>
+      <name>Zhi Song</name>
+    </author>
+    <author>
+      <name>Hanbo Huang</name>
+    </author>
+    <author>
+      <name>Jiehui Huang</name>
+    </author>
+    <author>
+      <name>Jiafei Wu</name>
+    </author>
+    <author>
+      <name>Zhe Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.14293v1</id>
+    <title>Conditional Neural Optimal Transport for Predicting Cellular Phenotypes from Molecular Structure</title>
+    <updated>2026-08-14T13:25:04Z</updated>
+    <link href="https://arxiv.org/abs/2608.14293v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.14293v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-content microscopy enables systematic profiling of cellular responses to chemical perturbations, but the scale of the chemical space makes exhaustive phenotypic characterization experimentally infeasible. This motivates computational models that can predict image-derived phenotypes without acquiring the corresponding treated cells. We formulate molecule-induced phenotype prediction as an inductive conditional transport problem in image representation space. Given a negative-control phenotype and the structure of a molecule, we aim to predict the phenotype induced by the corresponding molecule. We first evaluate classical optimal transport baselines and show that static couplings do not yield useful predictions on large-scale phenotypic image datasets. We then introduce a molecule-conditioned Neural Optimal Transport (NOT) model with a Monge-Gap regularization training objective that learns to transport negative-control unperturbed phenotypes toward perturbed phenotypes using molecular structure as conditioning information. NOT recovers molecule-specific phenotypic effects while reducing microscopy-associated technical variation, thereby facilitating comparisons across experimental batches. On unseen active molecules, the model outperforms baseline approaches, demonstrating that chemically conditioned transport can generalize beyond the molecules observed during training. We identified the molecular encoder as the main limitation to this generalization, while transport in a compressed representation space improves performance and scalability. These results establish NOT as a promising framework for predicting cellular phenotypes from molecular structure and negative-control phenotypes, while highlighting the development of more informative molecular representations as a key direction for improving out-of-distribution performance.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-14T13:25:04Z</published>
+    <arxiv:comment>Accepted at the BioImage Computing (BIC) Workshop, ECCV 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Gauthier Avité</name>
+    </author>
+    <author>
+      <name>Maxime Sanchez-Renauld</name>
+    </author>
+    <author>
+      <name>Nicolas Bourriez</name>
+    </author>
+    <author>
+      <name>Auguste Genovesio</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.12431v1</id>
+    <title>The energetic cost of mitigating AI attacks in cellular networks</title>
+    <updated>2026-08-12T12:42:46Z</updated>
+    <link href="https://arxiv.org/abs/2608.12431v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.12431v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The integration of Artificial Intelligence (AI), generally as Machine Learning (ML) algorithms, in all levels and aspects of cellular networks demonstrates the success of data-driven algorithms; for example, the Radio Intelligence Controller (RIC) of the O-RAN paradigm bestows the network with optimised radio resource allocation, load balancing or energy efficiency functions, among others. Nevertheless, this dependency on data opens new security vulnerabilities, as attackers can alter data properties and steer ML models to underperform or degrade. Conversely, the developed mitigation strategies are effective, but they generate a computational load which, in consequence, results in an energy cost generally overlooked, even in the current energy-awareness context. In this work, consumption of a defence technique is characterised, and the challenges raised by the triad of ML accuracy, robustness and energy efficiency are outlined.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T12:42:46Z</published>
+    <arxiv:comment>7 pages, 6 figures, submitted to IEEE Communications Magazine</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Adrián Losada</name>
+      <arxiv:affiliation>The Laude Technology Company S.L. Madrid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hao Qiang Luo-Chen</name>
+      <arxiv:affiliation>Telecommunication Research Institute</arxiv:affiliation>
+    </author>
+    <author>
+      <name>David Segura</name>
+      <arxiv:affiliation>Telecommunication Research Institute</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Carlos S. Alvarez-Merino</name>
+      <arxiv:affiliation>Telecommunication Research Institute</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Milan Groshev</name>
+      <arxiv:affiliation>The Laude Technology Company S.L. Madrid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Emil J. Khatib</name>
+      <arxiv:affiliation>Telecommunication Research Institute</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Raquel Barco</name>
+      <arxiv:affiliation>Telecommunication Research Institute</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.02576v1</id>
+    <title>Smooth Reparameterizations of Functions on Simplicial Product Spaces: Applications to Probabilistic Tensor Decomposition and Functional Data Registration</title>
+    <updated>2026-08-03T17:51:40Z</updated>
+    <link href="https://arxiv.org/abs/2608.02576v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.02576v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider optimization problems defined on product spaces of simplices. Examples of this class of problems include learning low-rank discrete multivariate probability distributions via simplex constrained tensor decomposition and performing functional data registration under the Square Root Velocity Function (SRVF) representation. In this work, we demonstrate the feasibility of replacing the product simplex with a smooth, elementwise strictly convex reparameterization, resulting in an unconstrained optimization problem on a manifold. We show that performing such a reparameterization results in the second order Karush-Kuhn-Tucker (KKT) points on the smooth manifold being mapped to the weak second order KKT points on the product simplex. This leads to a Riemannian Gradient Descent (RGD) algorithm for solving the reparameterized problem, which outperforms Projected Gradient Descent (PGD), and provides a more faithful representation of the original function shapes while performing curve registration.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T17:51:40Z</published>
+    <arxiv:comment>submitted to Journal of Optimization Theory and Applications (JOTA)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Shashwat Kumar</name>
+    </author>
+    <author>
+      <name>Arafat Rahman</name>
+    </author>
+    <author>
+      <name>Anuj Srivastava</name>
+    </author>
+    <author>
+      <name>P. -A. Absil</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.02050v1</id>
+    <title>TextNCA: Neural Cellular Automata for Language Modeling via Hierarchical Local Attention</title>
+    <updated>2026-08-03T10:47:05Z</updated>
+    <link href="https://arxiv.org/abs/2608.02050v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.02050v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Can a strictly local, iterated, weight-shared computation primitive support language modelling, and which of those three properties actually drives the model's behaviour? We define \textsc{TextNCA}, a 1D causal windowed-attention realisation of the Neural Cellular Automaton primitive, and study a hierarchical variant that cascades three stages with windows $w \in \{8, 32, 128\}$ and $T_s$ shared-weight iterations per stage, all on WikiText-103 at roughly 30M parameters and 60k training steps. The model does not match a parameter-matched Transformer at this scale (Hier-TextNCA $60.3$ vs.\ Transformer-6L $52.8$ and Transformer-12L $44.7$ PPL), so we treat it as an analytical probe rather than a proposed alternative. The behaviour we observe is largely explained by the staged narrow-to-wide schedule: a non-iterating sliding-window Transformer that reuses the same schedule comes within $+4.1$ PPL of the iterated model, while reversing, flattening, or breaking the monotonic ordering of the schedule costs between $+16.7$ and $+70.8$ PPL. Iteration adds a smaller bounded benefit on top of the schedule, with a clear optimum at $T_s{=}4$ and a U-shaped degradation beyond it. The GRU gate and learned per-step embeddings are required for that benefit to appear, and training with random $T_s$ yields an inference-time iteration-count knob at the cost of substantially higher absolute PPL. We position the work as a controlled reading of which parts of NCA-style computation carry the weight in language modelling.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T10:47:05Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Avni Mittal</name>
+    </author>
+    <author>
+      <name>Avinash Anand</name>
+    </author>
+    <author>
+      <name>Ashutosh Kumar</name>
+    </author>
+    <author>
+      <name>Dikshant Kukreja</name>
+    </author>
+    <author>
+      <name>Kritarth Prasad</name>
+    </author>
+    <author>
+      <name>Sushane Dulloo</name>
+    </author>
+    <author>
+      <name>Erik Cambria</name>
+    </author>
+    <author>
+      <name>Timothy Liu</name>
+    </author>
+    <author>
+      <name>Zhengkui Wang</name>
+    </author>
+    <author>
+      <name>Rajiv Ratn Shah</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.02688v1</id>
+    <title>Learning Molecular Representations from Cellular Phenotypes with Structure Preservation</title>
+    <updated>2026-08-03T08:33:54Z</updated>
+    <link href="https://arxiv.org/abs/2608.02688v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.02688v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Phenotypic drug discovery enables the discovery of functional relationships between molecular structures and cellular responses. However, existing multimodal representation learning methods often optimize cross-modal alignment without considering the intrinsic organization of chemical space, resulting in distorted molecular representations and loss of structural information. We propose \textbf{PhenMol}, a structure-preserving framework for phenotype-aware molecular representation learning. PhenMol disentangles molecular and cellular representations into shared and private components, enabling phenotype-guided alignment while preserving chemical structures through a dedicated molecular branch. This design integrates cellular phenotype information without disrupting molecular neighborhood organization. Experiments on approximately $3.04 \times 10^{4}$ molecule--cell morphology pairs demonstrate that PhenMol improves molecular property prediction across 270 bioactivity tasks, molecule--phenotype retrieval, and clinical trial outcome prediction. Moreover, ECFP4-based structural analysis shows that PhenMol better preserves molecular neighborhoods and reduces embedding distortion compared with existing multimodal alignment methods. These results highlight the importance of structure-aware constraints in multimodal molecular representation learning and provide an effective approach for integrating cellular phenotypes with chemical knowledge for drug discovery.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T08:33:54Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xuan Lin</name>
+    </author>
+    <author>
+      <name>Jingyu Sheng</name>
+    </author>
+    <author>
+      <name>Tengfei Ma</name>
+    </author>
+    <author>
+      <name>Li Sun</name>
+    </author>
+    <author>
+      <name>Dapeng Xiong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.28030v1</id>
+    <title>MUL-T: Decoding Spatial Cellular Architecture in Multiplexed Tissue Images</title>
+    <updated>2026-07-30T11:15:12Z</updated>
+    <link href="https://arxiv.org/abs/2607.28030v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.28030v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Understanding tissue organisation in multiplexed imaging requires modelling both cellular phenotypes and their spatial context. Existing approaches typically rely on handcrafted features, such as marker intensity statistics or cell-type proportions, which often fail to scale or generalise across cohorts with heterogeneous marker panels. We introduce MUL-T, a lightweight transformer framework that reframes tissue architecture as a masked contextual prediction task over discrete cell tokens. By learning contextualised [CLS] embeddings without task-specific supervision, the model captures higher-order cellular interactions while remaining computationally efficient. We evaluate MUL-T on several clinically relevant downstream tasks, including core-level tumour pattern classification, patient-level grading, PD-L1 positivity prediction, and cross-dataset treatment response prediction. Across tasks, MUL-T consistently outperforms classical feature-based baselines and achieves performance comparable to a foundation ViT model, despite substantially fewer parameters and lower training cost.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-30T11:15:12Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Farzaneh Seyedshahi</name>
+    </author>
+    <author>
+      <name>Kai Rakovic</name>
+    </author>
+    <author>
+      <name>Adalberto Claudio Quiros</name>
+    </author>
+    <author>
+      <name>John LeQuesne</name>
+    </author>
+    <author>
+      <name>Ke Yuan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.27320v1</id>
+    <title>Emulating Cosmic Structure Formation with a Lagrangian Neural Cellular Automaton</title>
+    <updated>2026-07-29T18:00:01Z</updated>
+    <link href="https://arxiv.org/abs/2607.27320v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.27320v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Field-level inference of cosmological initial conditions from galaxy surveys requires a forward model that is simultaneously accurate in the non-linear regime, computationally efficient, and fully differentiable. Traditional N-body simulations are accurate but computationally prohibitive for iterative inference, while approximate solvers like Lagrangian Perturbation Theory (LPT) fail to capture the knotty halo-forming dynamics of the cosmic web at late times. We introduce the \textit{Lagrangian Neural Cellular Automaton} (LNCA), a hybrid deep learning framework that can be applied to emulate structure formation as a local, iterative dynamical process on a comoving lattice. Unlike standard Eulerian Convolutional Neural Networks (CNNs) which map fixed density fields, the LNCA operates in the Lagrangian frame, advecting the computational graph itself to follow the flow of mass. By training the network to learn only the \textit{residual} displacement corrections to the Zeldovich approximation, we achieve high-fidelity emulation of the non-linear physics while guaranteeing accuracy at large scales. We further constrain our model to produce complete trajectories, not just final states, by adopting an equivariant cellular automaton architecture, which recurrently iterates on its internal states to yield a dynamic history. The resulting model is strictly local, translationally and rotationally equivariant, and naturally supports continuous time integration, making it a reliable differentiable forward model for reconstructing the initial conditions of the universe from lightcone data. Our trained model supports percent-level precision in the power and cross spectra well into the non-linear regime ($k \lesssim 0.5 \, h \text{Mpc}^{-1}$), while requiring $\sim10^4$ times fewer learned parameters than comparable models which take the form of an interpretable internal dynamic rule set.</summary>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T18:00:01Z</published>
+    <arxiv:primary_category term="astro-ph.IM"/>
+    <author>
+      <name>Cooper Jacobus</name>
+    </author>
+    <author>
+      <name>Beatriz Tucci</name>
+    </author>
+    <author>
+      <name>Oliver Philcox</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.25322v1</id>
+    <title>From Cellular Responses to Pharmacological Domains: Multimodal Zero-Shot Drug Representation Learning</title>
+    <updated>2026-07-28T06:13:25Z</updated>
+    <link href="https://arxiv.org/abs/2607.25322v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.25322v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal drug discovery enables drug representation learning beyond chemical structure by incorporating cellular responses such as gene expression and cell morphology. However, direct fusion and instance-level contrastive alignment may mix mechanism-related signals with modality-specific noise and incorrectly separate structurally dissimilar but biologically related compounds. This limitation can obscure transferable mechanism patterns required for predicting the properties of unseen compounds. We introduce PMRD, a pharmacological response domain-guided framework for multimodal zero-shot drug property prediction. PMRD separates mechanism-consistent factors from modality-specific information and constructs a consensus response domain across three modalities. Mechanism candidate augmentation identifies locally stable factors, while retrieval-geometry attribution dynamically reweights the alignment and augmentation objectives according to whether their updates preserve inter-drug discriminability.This feedback suppresses training signals that conflict with mechanism-discriminative retrieval. PMRD further combines complementary representations through reliability-aware multiview retrieval. Experiments on public datasets show improved zero-shot property prediction and more biologically coherent drug neighborhoods. Hard-negative analysis further indicates fewer conflicts between structurally dissimilar but response-related compounds. These results support PMRD as an effective framework for mechanism-aware multimodal drug representation learning.\footnote{The code will be released upon publication.}</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T06:13:25Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Jintao Huang</name>
+    </author>
+    <author>
+      <name>Lu Leng</name>
+    </author>
+    <author>
+      <name>Ziyuan Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24529v1</id>
+    <title>Efficient Ultrasound Image Segmentation with Token-Conditioned Neural Cellular Automata</title>
+    <updated>2026-07-27T15:08:26Z</updated>
+    <link href="https://arxiv.org/abs/2607.24529v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24529v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Point-of-Care Ultrasound (POCUS) plays an important role in bedside diagnosis and clinical decision-making, particularly in resource-constrained settings. Recent deep learning methods have substantially improved ultrasound image segmentation, enabling accurate diagnosis and biometric estimation. However, their computational cost limits deployment on portable and low-resource devices. To address this challenge, we propose LiteAdaNCA-Net (LANCANet), a lightweight ultrasound segmentation framework that incorporates token-conditioned Neural Cellular Automata (NCA) adapters for iterative feature refinement. Specifically, structure-aware tokens guide local NCA refinement via Token FiLM, enabling boundary-aware feature refinement with minimal computational cost. We evaluate LANCANet on HC18, CCA, and PSFHS, and assess robustness on two independent African fetal head datasets collected from multiple clinical centers. Experimental results demonstrate that LANCANet achieves competitive or superior performance to recent lightweight CNN- and transformer-based methods. On HC18 and CCA, LANCANet achieves the highest Dice Similarity Coefficient (DSC) of 96.62\% and 92.86\%, respectively. On PSFHS, it achieves the best performance on the challenging pubic symphysis structure while maintaining competitive fetal head segmentation accuracy. Furthermore, despite being trained from scratch, LANCANet maintains competitive performance on the external KEN-FH and AFR-FH datasets under substantial domain shifts. These results show that token-conditioned NCA refinement improves segmentation accuracy and boundary localization while maintaining computational efficiency for resource-constrained clinical deployment. Our code is on \href{https://anonymous.4open.science/r/LANCAN-21A0/README.md}{GitHub}.</summary>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-27T15:08:26Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="eess.IV"/>
+    <author>
+      <name>Fangyijie Wang</name>
+    </author>
+    <author>
+      <name>Tanya Akumu</name>
+    </author>
+    <author>
+      <name>Zi Ye</name>
+    </author>
+    <author>
+      <name>Guénolé Silvestre</name>
+    </author>
+    <author>
+      <name>Karim Lekadir</name>
+    </author>
+    <author>
+      <name>Kathleen M. Curran</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15726v2</id>
+    <title>Transient State Reorganization and Cell Differentiation in the Developmental Dynamics of Growing Neural Cellular Automata</title>
+    <updated>2026-07-22T10:24:15Z</updated>
+    <link href="https://arxiv.org/abs/2607.15726v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15726v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Growing Neural Cellular Automata (GNCA) develop complex morphologies from a single seed cell through shared local rules, yet the internal dynamics of this process remain poorly understood. To investigate how GNCA grows, the full developmental trajectory of trained GNCA models was traced. The trajectory of cell state development revealed that morphological convergence often proceeds non-monotonically through transient intermediate configurations. In addition, channel-wise analysis showed that the hidden channels self-organize into modular groups in parallel with the visible form. Furthermore, geometric analysis of the cell state space indicated that cell states diversify within a low-dimensional, smooth manifold. To examine cell development in more detail, community detection on an $ε$-neighbour network of cells was conducted. This analysis successfully extracted discrete cell types from this continuous space, and identified transient cell-type communities during early development and stable, finer-grained types corresponding to spatially coherent regions of the mature morphology. The temporal coordination of these phenomena across multiple independent measures indicates that the developmental process of GNCA is a reorganization of transient states rather than incremental refinement.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-17T08:04:11Z</published>
+    <arxiv:comment>9 pages, 7 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Hiroki Sato</name>
+    </author>
+    <author>
+      <name>Atsushi Masumori</name>
+    </author>
+    <author>
+      <name>Takashi Ikegami</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.14475v1</id>
+    <title>One-Shot Generative Design for Disordered Metamaterials via Self-Organizing Neural Cellular Automata</title>
+    <updated>2026-07-16T01:43:03Z</updated>
+    <link href="https://arxiv.org/abs/2607.14475v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.14475v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Disordered metamaterials feature microstructures with inherent randomness and irregularity, enabling them to achieve broader property coverage and superior performance unavailable in their regular counterparts. Despite their promise, designing disordered microstructures is substantially harder than designing regular ones. Their design remains trapped between manual parameterizations with limited expressiveness, and generative AI that is data-hungry and struggles to generalize. To address these limitations, we propose a generative design framework based on Neural Cellular Automata that dynamically grows complex microstructures through learned local interaction rules, inspired by the self-organizing processes in natural materials. This framework requires only a single training template, yet accommodates diverse disordered microstructures and adapts to irregular domains and arbitrary discretizations. By manipulating the learned local rules, we can steer the growth process to generate microstructures unseen during training, providing control over orientation, anisotropy, and directional thickness without retraining. As a dynamic, local growth process, it naturally produces spatially varying microstructures that transition smoothly to enable location-specific mechanical properties. We demonstrate this in a multiscale mechanical cloaking design, where microstructures vary across the space to meet an optimized heterogeneous property distribution. Our design enables excellent cloaking performance without complicated post-processing and incompatible assembly common in existing methods. This data-efficient, generalizable approach opens access to previously intractable disordered materials for biomedical implants and soft robotics.</summary>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T01:43:03Z</published>
+    <arxiv:primary_category term="cs.CE"/>
+    <author>
+      <name>Yujie Xiang</name>
+    </author>
+    <author>
+      <name>Liwei Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.12518v1</id>
+    <title>Cellular Signal Constructed Convolutional Vision Transformer for High Accuracy Positioning</title>
+    <updated>2026-07-14T08:52:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.12518v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.12518v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern cellular systems employ wide bandwidths and large antenna arrays to meet high data rate requirements. The high spatial and temporal resolution for communication also enables high-accuracy positioning as an ancillary benefit. Standard convolutional neural networks (CNNs) and vision Transformers have demonstrated excellent performance in positioning by leveraging delay-angle domain channel representations. However, they still face practical challenges in complicated cellular environments with low signal-to-noise ratios and severe inter-cell interference. This paper proposes a hybrid convolutional vision Transformer (ConViT) architecture that integrates the local receptive fields of CNNs to suppress local noise and employs Transformers to capture global attention among different multipath components. Various fusion strategies for combining signals from multiple distributed base stations are also evaluated. An extended Kalman filter with sensor fusion is applied to further mitigate long tail fluctuations of model estimates. Comprehensive validation is conducted with commercial long-term-evolution signals received by a large antenna array in urban environments with non line-of-sight signals and strong inter-cell interference. ConViT achieves a distance root mean square error (RMSE) of 3.46 meters and a yaw RMSE of 2.54 degrees, significantly outperforming benchmark models, while maintaining a lower parameter count and reduced computational complexity. Finally, a correspondence analysis between delay-angle power distributions and Transformer attention weights demonstrates the interpretability of the model.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-14T08:52:30Z</published>
+    <arxiv:primary_category term="eess.SP"/>
+    <author>
+      <name>Junshi Chen</name>
+    </author>
+    <author>
+      <name>Xuhong Li</name>
+    </author>
+    <author>
+      <name>Russ Whiton</name>
+    </author>
+    <author>
+      <name>Fredrik Tufvesson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.12403v1</id>
+    <title>Structured Fluctuations and the Information Dynamics of Self-Maintenance in Growing Neural Cellular Automata</title>
+    <updated>2026-07-14T06:23:20Z</updated>
+    <link href="https://arxiv.org/abs/2607.12403v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.12403v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Growing Neural Cellular Automata (GNCA) are capable of robust self-maintenance and self-repair, yet the internal dynamical mechanisms that support these capabilities remain poorly understood. Here, we investigate the role of internal fluctuations--temporal micro-variability of hidden channel states--in a trained GNCA model, challenging the assumption that such variability is merely residual stochastic noise. Through systematic analysis spanning update-rate sweeps, spatial correlation measurements, dimensionality reduction of collective state trajectories, localized damage experiments, transfer entropy vector field estimation, and partial information decomposition, we show that internal fluctuations are spatially structured, dynamically coupled to an attracting collective state, and associated with distributed small-magnitude updates that contribute to damage recovery. Damage induces a global deviation in latent state space followed by gradual re-convergence, and suppressing distributed small-magnitude updates associated with baseline fluctuation dynamics outside a permissive radius that encompasses the majority of the cells significantly impairs recovery. Transfer entropy analysis characterizes a spatially differentiated repair response: corrective inward flow near the damage site coexists with outward perturbation propagation at greater distances. Partial information decomposition further suggests a regime shift from synergy-dominant resting computation to redundancy-increased coordination during recovery. These findings indicate that GNCA self-repair emerges from high-dimensional nonlinear collective dynamics in which internal fluctuations serve as a functional component supporting information flow, coordination, and return toward an attracting recurrent state.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.AO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-14T06:23:20Z</published>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Atsushi Masumori</name>
+    </author>
+    <author>
+      <name>Hiroki Sato</name>
+    </author>
+    <author>
+      <name>Takashi Ikegami</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07016v1</id>
+    <title>Multimodal Spatiotemporal-Frequency Fusion with Peak Enhancement for Cellular Traffic Forecasting</title>
+    <updated>2026-07-08T05:17:48Z</updated>
+    <link href="https://arxiv.org/abs/2607.07016v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07016v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate forecasting of cellular network traffic is essential for network planning, resource allocation, and quality-of-service assurance in modern mobile communication systems. Real-world traffic often exhibits bursty endogenous dynamics and disturbances triggered by external urban events, which makes reliable prediction highly challenging. Most existing spatiotemporal traffic forecasting methods primarily focus on intrinsic traffic patterns or structural relationships within a single modality, and rarely model burst behavior together with exogenous contextual signals. To address this issue, we propose \textbf{MSPF-Net}, a multimodal cellular traffic forecasting framework that integrates external contextual information. Specifically, MSPF-Net consists of a Spatiotemporal-Frequency Traffic Encoder for capturing temporal, spatial, and spectral traffic patterns, a Peak Enhancement Module for extracting burst-aware representations of sudden spikes, a News Context Representation Module for encoding urban news streams into exogenous contextual embeddings, and a Dynamic Fusion Prediction Module for adaptively integrating these heterogeneous signals to generate forecasts. Experiments on the Milano, Trento, and LTE traffic datasets demonstrate that jointly modeling traffic dynamics, burst patterns, and news contextual signals can effectively improve forecasting performance.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T05:17:48Z</published>
+    <arxiv:comment>Accepted in the 2026 IEEE International Conference on Systems, Man, and Cybernetics (SMC)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Qingzhong Li</name>
+    </author>
+    <author>
+      <name>Yue Hu</name>
+    </author>
+    <author>
+      <name>Hui Ma</name>
+    </author>
+    <author>
+      <name>Yajun Zhang</name>
+    </author>
+    <author>
+      <name>Xinjun Pei</name>
+    </author>
+    <author>
+      <name>Ming Yan</name>
+    </author>
+    <author>
+      <name>Fei Xing</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.03545v1</id>
+    <title>Cellular Adaptation to Signal Fluctuations as Learning</title>
+    <updated>2026-07-03T18:07:26Z</updated>
+    <link href="https://arxiv.org/abs/2607.03545v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.03545v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cells represent one of the most fundamental units of life. Underlying their robust performance against environmental variability, such as temporal fluctuations of chemical signals, between different cell types, is a dynamical interrelation between the two components of an intracellular pathway: a gene-regulatory network and its upstream signal transducers. To understand how a single cell utilizes this feedback to self-regulate its gene-expressions, we develop a multiscale model of the pathway's components, in which the adaptive variables responsible for signal interpretation follow a feedback-induced learning process. We then derive a macroscopic theory capturing the covariations between these components - so-called collective modes. Our theory shows how cells can achieve robust output against signal fluctuations via self-regulation rather than simple noise suppression. Such robustness corresponds to a transition from random- to structured collective modes beyond a critical adaptation rate.</summary>
+    <category term="q-bio.MN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.AO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-03T18:07:26Z</published>
+    <arxiv:comment>12 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="q-bio.MN"/>
+    <author>
+      <name>Tuan Minh Pham</name>
+    </author>
+    <author>
+      <name>David Saad</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.03286v2</id>
+    <title>Contextual Cellular Growth (ConCeG) of neural cells for realistic grey matter tissue generation for diffusion MRI simulations</title>
+    <updated>2026-08-14T15:52:17Z</updated>
+    <link href="https://arxiv.org/abs/2607.03286v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.03286v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate interpretation of diffusion magnetic resonance imaging (dMRI) signals in grey matter (GM) remains challenging due to the complex, heterogeneous, and densely packed cellular environment. Numerical phantoms provide a controlled framework for investigating the relationship between microstructure and diffusion signals, yet existing approaches often lack the morphological realism and multi-cellular organisation required to faithfully represent GM tissue.
+  In this work, we introduce Contextual Cellular Growth (ConCeG), a generative framework for creating individual cells or constructing dense, three-dimensional, multi-cellular GM substrates informed by real neuronal and glial morphologies. The method combines topological neuron synthesis with a spatially constrained growth network, allowing for the controlled generation of heterogeneous cellular environments with realistic intra- and extracellular compartments. Synthetic cells are generated using morphological and topological characteristics derived from biological reconstructions.
+  We validate the framework through comparisons of structural features with real cellular data, demonstrating strong agreement in branch order, length, angle, and tortuosity distributions. Power spectrum analysis further shows that both intracellular compartments reproduce the spatial correlations observed in biological tissue. Together, these results show ConCeG provides a biologically grounded framework for generating grey matter substrates suitable for large scale diffusion MRI simulation.</summary>
+    <category term="physics.med-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.bio-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-03T12:53:44Z</published>
+    <arxiv:primary_category term="physics.med-ph"/>
+    <author>
+      <name>Charlie Aird-Rossiter</name>
+    </author>
+    <author>
+      <name>Kadir Şimşek</name>
+    </author>
+    <author>
+      <name>Maëliss Jallais</name>
+    </author>
+    <author>
+      <name>Derek K. Jones</name>
+    </author>
+    <author>
+      <name>Lida Kanari</name>
+    </author>
+    <author>
+      <name>Marco Palombo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.01508v1</id>
+    <title>scMTNI: Leveraging cellular trajectory and context to infer dynamic GRNs from single-cell multi-omics data</title>
+    <updated>2026-07-01T22:16:11Z</updated>
+    <link href="https://arxiv.org/abs/2607.01508v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.01508v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Transcriptional gene regulatory networks (GRNs) depict the directed relationships between regulators and target genes, determining gene expression patterns in a cell-type-specific manner. Single-cell multi-omics technologies, such as single-cell RNA sequencing (scRNA-seq) and single-cell Assay for Transposase-Accessible Chromatin using sequencing (scATAC-seq), enable high-resolution measurement of cell-type-specific gene expression and regulation in an unprecedented way. However, tools for inferring cell-type-specific GRNs and modeling their dynamics remain scarce. To facilitate the inference and analysis of cell-type-specific GRNs in contexts such as cellular development or disease progression, where cell lineage structure and dynamics are important, we developed a multi-task learning framework, single-cell Multi-Task Network Inference (scMTNI). scMTNI and its associated network analyses tools offer a comprehensive package to define cell-type-specific GRNs and examine their dynamics. This book chapter describes the scMTNI tool and demonstrates its application to an existing cellular reprogramming single cell multi-modal dataset to infer cell-type-specific GRNs and identify key regulators of cellular fate transitions during cellular reprogramming.</summary>
+    <category term="q-bio.MN" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-01T22:16:11Z</published>
+    <arxiv:comment>24 pages, 5 figures, This book chapter is scheduled to appear in the lab protocol series Methods in Molecular Biology</arxiv:comment>
+    <arxiv:primary_category term="q-bio.MN"/>
+    <author>
+      <name>Suvojit Hazra</name>
+      <arxiv:affiliation>Wisconsin Institute for Discovery, University of Wisconsin-Madison, Madison, WI, USA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Chandrani Kumari</name>
+      <arxiv:affiliation>Wisconsin Institute for Discovery, University of Wisconsin-Madison, Madison, WI, USA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sushmita Roy</name>
+      <arxiv:affiliation>Wisconsin Institute for Discovery, University of Wisconsin-Madison, Madison, WI, USA</arxiv:affiliation>
+      <arxiv:affiliation>Department of Biostatistics and Medical Informatics, University of Wisconsin-Madison, Madison, WI, USA</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.25709v1</id>
+    <title>Cellular Predictions on the Move: What about Data?</title>
+    <updated>2026-06-24T11:21:17Z</updated>
+    <link href="https://arxiv.org/abs/2606.25709v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.25709v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Mobile cellular load forecasting is native to network resource optimization and delivery of services with reliability, latency and quality guarantees. The mainstream of machine learning research in the area is focused primarily on developing powerful learning structures for improved prediction accuracy. The data used for forecasting traditionally belong to the cellular domain and at most contain exogenous information about the surroundings of the base stations. We approach the prediction task from the perspective of data as a vital component of any data learning process. We hypothesize that substantial improvements could be achieved when the data inform on the processes that create the cellular load. Specifically, we propose to characterize the population dynamics -- the potential number of cellular traffic sources and their mobility -- in addition to employing historical time series of mobile data traffic. We validate our hypothesis for the rarely examined highway scenario. Comprehensive experiments show forecasting improvements on the order of $60\%$ due to the use of these data alone.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-24T11:21:17Z</published>
+    <arxiv:comment>12 pages, 9 figures, 9 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Natalia Vesselinova</name>
+    </author>
+    <author>
+      <name>Pauliina Ilmonen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.23964v2</id>
+    <title>3D Masked Autoencoders are Robust Learners of Volumetric and Multimodal Cellular Representations for Microscopy</title>
+    <updated>2026-07-09T22:19:27Z</updated>
+    <link href="https://arxiv.org/abs/2606.23964v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.23964v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Self-supervised learning in fluorescence microscopy often relies on 2D projections, despite the inherently three-dimensional nature of cells. We present a systematic comparison of 2D and 3D masked autoencoders (MAE-2D vs. MAE-3D) on volumetric microscopy data. Under matched architectures and training protocols, MAE-3D consistently outperforms 2D max-projection and slice-based variants on downstream single-cell tasks. We further align visual representations with a pretrained protein language model (ESM2) and show that cross-modal supervision yields larger gains for volumetric models. Channel cross-attention and frequency-domain regularization are critical for leveraging 3D spatial context. On protein--protein interaction prediction, our best model achieves a ROC--AUC of 0.86, while on protein localization it reaches an AUC$_{\text{micro}}$ of 0.95 and an F1$_{\text{micro}}$ of 0.74, demonstrating competitive performance on both tasks. Overall, our findings highlight the potential of volumetric modeling and multimodal alignment for representation learning in single-cell microscopy.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-22T21:45:15Z</published>
+    <arxiv:comment>Code is available at: https://github.com/marrlab/mae3d-opencell</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Amirhossein Kardoost</name>
+    </author>
+    <author>
+      <name>Lion Gleiter</name>
+    </author>
+    <author>
+      <name>Tingying Peng</name>
+    </author>
+    <author>
+      <name>Carsten Marr</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.21202v2</id>
+    <title>Communication Heterogeneity and Collective Consensus in Neural Cellular Automata</title>
+    <updated>2026-08-13T09:46:56Z</updated>
+    <link href="https://arxiv.org/abs/2606.21202v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.21202v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reaching global agreement from purely local interactions is a defining problem of collective intelligence, and most models of it assume that all agents share a single communication protocol. We ask what happens when they do not. Using a Neural Cellular Automaton in which a population of cells must solve the density classification task, agreeing on a global majority that no individual can observe, we introduce ``languages'' as sub-populations that read one another's messages through a translation with a tunable ``linguistic distance''. We find that linguistic distance slows consensus, that it produces mild divergence between groups rather than full fragmentation, and that a collective whose shared rule was trained under diverse protocols is robust to mismatch; a homogeneously trained one is not. The findings hold on both a ring and a two-dimensional grid, and admit a natural reading as Ising relaxation, in which a foreign-language region acts as a boundary defect that leaves the system in a higher-energy, partially ordered state. These patterns are qualitatively consistent with effects reported in human group studies, suggesting that distance between communication protocols is a minimal mechanism sufficient to produce them, without anything language-specific.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-19T08:15:29Z</published>
+    <arxiv:comment>8 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Nishit Singh</name>
+    </author>
+    <arxiv:doi>10.1145/3834581.3838628</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3834581.3838628" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.23571v1</id>
+    <title>Equivariant Cellular Sheaves for Molecular Electronic Structure: Bridging Sheaf Cohomology and E(3)-Equivariant Hamiltonian Learning</title>
+    <updated>2026-06-14T18:50:59Z</updated>
+    <link href="https://arxiv.org/abs/2608.23571v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.23571v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Equivariant message-passing networks are the standard model for molecular property and interatomic-potential prediction, and recent work predicts the electronic Hamiltonian itself in an E(3)-equivariant way. Separately, topological deep learning has extended graph networks to cellular sheaves. Our central observation is structural: in a localized atomic-orbital basis, the molecular single-particle Hamiltonian, after a constant shift that makes it positive semidefinite, is the Laplacian of a cellular sheaf on a regular cell complex built from the molecule. Making the restriction maps O(3)-steerable two-center kernels from bond geometry recovers the Slater-Koster form as a special case and yields an E(3)- and permutation-equivariant operator. Three consequences follow. First, the zeroth sheaf cohomology H^0 = ker L is a topological invariant equal to the non-bonding (zero-mode) orbitals, recovering the classical alternant non-bonding-orbital count as a lower bound. Second, the Hodge 1-Laplacian lets higher cells (rings) carry cycle and delocalization information through H^1. Third, the model strictly generalizes E(3)-equivariant message-passing networks and CW networks, and inherits the anti-oversmoothing of non-trivial sheaf diffusion. We prove equivariance, expressivity, and cohomological-correspondence results for the Equivariant Cellular Sheaf Networks, and validate them numerically: the Hamiltonian-to-sheaf embedding is exact to machine precision, the cohomology dimension reproduces non-bonding-orbital counts across eleven conjugated molecules, the sheaf Laplacian is O(3)-equivariant to machine precision, and the equivariant model attains lower error and rotation generalization on a directional electronic target. Our contribution is this sheaf-theoretic formalization and its invariants, not equivariant Hamiltonian prediction itself.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-14T18:50:59Z</published>
+    <arxiv:comment>12 pages, 3 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Krishna Harish</name>
+    </author>
+  </entry>
+</feed>

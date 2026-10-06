@@ -1,0 +1,166 @@
+--- a/training.py
++++ b/training.py
+@@ -1,4 +1,6 @@
+ 
++import os
++
+ import torch.nn as nn
+ from numpy import interp
+ 
+@@ -83,15 +85,16 @@
+ if __name__ == '__main__':
+     modeling = DLMVF
+ 
+-    cuda_name = "cuda:7"
++    cuda_name = os.environ.get("DLMVF_CUDA", "cuda:0")
+     device = torch.device(cuda_name)
++    print('Device: ', cuda_name)
+ 
+     TRAIN_BATCH_SIZE = 64
+     TEST_BATCH_SIZE = 64
+     LR = 0.0005
+     LOG_INTERVAL = 40
+     NUM_EPOCHS = 15
+-    NUM_RUNS = 1
++    NUM_RUNS = 5
+     print('Learning rate: ', LR)
+     print('Epochs: ', NUM_EPOCHS)
+ 
+--- a/model.py
++++ b/model.py
+@@ -120,7 +120,7 @@
+ 
+ class DLMVF(nn.Module):
+     def __init__(self, n_output=1, n_filters=32, embed_dim=128, num_smiles_chars=66,
+-                 num_drug_node_feats=78, num_mirna_chars=25, proj_dim=256, dropout=0.2, drug_offset=1563):
++                 num_drug_node_feats=78, num_mirna_chars=25, proj_dim=256, dropout=0.2, drug_offset=1578):
+         super().__init__()
+         self.proj_dim = proj_dim
+         self.drug_offset = drug_offset
+--- a/dataprocess.py
++++ b/dataprocess.py
+@@ -4,7 +4,10 @@
+ import json, pickle
+ from collections import OrderedDict
+ 
+-from fontTools.ttx import process
++try:
++    from fontTools.ttx import process  # noqa: F401  (unused; optional dependency)
++except ImportError:  # fontTools is not required by this pipeline
++    process = None
+ from rdkit import Chem
+ from torch_geometric.data import Data
+ from rdkit.Chem import MolFromSmiles
+@@ -109,23 +112,22 @@
+             Netrain_fold[i] += Ne_subset[j]
+         Povalid_fold[i] = Po_subset[i]
+         Nevalid_fold[i] = Ne_subset[i]
+-    opts = ['train', 'test']
+-    train_indices = {'rows': [], 'cols': []}
+-    test_indices = {'rows': [], 'cols': []}
+     all_train_indices = []
+-    all_test_indices =[]
++    all_test_indices = []
+ 
+-    for opt in opts:
+-        for i in range(5):
+-            if opt == 'train':
+-                train_indices['rows'] = np.concatenate((po_rows[Potrain_fold[i]], ne_rows[Netrain_fold[i]]))
+-                train_indices['cols'] = np.concatenate((po_cols[Potrain_fold[i]], ne_cols[Netrain_fold[i]]))
+-                all_train_indices.append(train_indices)
+-            elif opt == 'test':
+-                test_indices['rows'] = np.concatenate((po_rows[Povalid_fold[i]], ne_rows[Nevalid_fold[i]]))
+-                test_indices['cols'] = np.concatenate((po_cols[Povalid_fold[i]], ne_cols[Nevalid_fold[i]]))
+-                all_test_indices.append(test_indices)
+-    return all_train_indices,all_test_indices
++    # NOTE: the original code reused a single mutable dict for every fold, so
++    # all_train_indices[0..4] (and all_test_indices[0..4]) aliased the *last*
++    # fold.  Fresh dicts per fold are required for genuine 5-fold CV.
++    for i in range(5):
++        all_train_indices.append({
++            'rows': np.concatenate((po_rows[Potrain_fold[i]], ne_rows[Netrain_fold[i]])),
++            'cols': np.concatenate((po_cols[Potrain_fold[i]], ne_cols[Netrain_fold[i]])),
++        })
++        all_test_indices.append({
++            'rows': np.concatenate((po_rows[Povalid_fold[i]], ne_rows[Nevalid_fold[i]])),
++            'cols': np.concatenate((po_cols[Povalid_fold[i]], ne_cols[Nevalid_fold[i]])),
++        })
++    return all_train_indices, all_test_indices
+ 
+ 
+ 
+--- a/Predataprocess/generate_MD_adjacency.py
++++ b/Predataprocess/generate_MD_adjacency.py
+@@ -0,0 +1,72 @@
++"""Reconstruct the missing data/MD_adjaceny.txt.
++
++The official repo references `data/MD_adjaceny.txt` (integrated heterogeneous
++adjacency) but does not ship it, and `Predataprocess/miRTarbase.py::MD_Matrix`
++expects missing `data/m-m.txt` (miRNA similarity) and `data/d-d.txt`
++(drug similarity).  This script substitutes those two similarity matrices with
++Gaussian-kernel similarities of the miRNA-drug association matrix, exactly as
++formulated in `Predataprocess/calculating_similarity.py`:
++
++    lambda = 1 / ((1/n) * sum_i ||A_i||^2)
++    sim_ij = exp(-lambda * ||A_i - A_j||^2)
++
++M_MM = Gaussian(A)   with A    = M_MD (n=1578)
++M_DD = Gaussian(A.T) with A.T  = (n=156)
++
++The heterogeneous matrix is laid out exactly as miRTarbase.py::MD_Matrix:
++    [[M_MM, M_MD],
++     [M_MD.T, M_DD]]
++and written space-delimited with np.savetxt, matching the reader in
++dataprocess.py (`pd.read_csv(..., delimiter=' ')`).
++"""
++import os
++import numpy as np
++import pandas as pd
++
++
++def calculate_kernel_bandwidth(A):
++    IP_0 = 0.0
++    for i in range(A.shape[0]):
++        IP_0 += np.square(np.linalg.norm(A[i]))
++    lambd = 1.0 / ((1.0 / A.shape[0]) * IP_0)
++    return lambd
++
++
++def calculate_GaussianKernel_sim(A):
++    kernel_bandwidth = calculate_kernel_bandwidth(A)
++    n = A.shape[0]
++    gauss_kernel_sim = np.zeros((n, n))
++    for i in range(n):
++        for j in range(n):
++            gauss_kernel_sim[i][j] = np.exp(
++                -kernel_bandwidth * np.square(np.linalg.norm(A[i] - A[j]))
++            )
++    return gauss_kernel_sim
++
++
++def main():
++    here = os.path.dirname(os.path.abspath(__file__))
++    root = os.path.dirname(here)
++
++    df = pd.read_excel(os.path.join(root, 'data', 'miRNA_drug_matrix.xlsx'),
++                       index_col=0)
++    M_MD = df.values.astype(float)
++    M_MM = calculate_GaussianKernel_sim(M_MD)
++    M_DD = calculate_GaussianKernel_sim(M_MD.T)
++    print('M_MM', M_MM.shape, 'M_MD', M_MD.shape, 'M_DD', M_DD.shape)
++
++    new_matrix = np.zeros((M_MM.shape[0] + M_DD.shape[0],
++                           M_MM.shape[1] + M_MD.shape[1]))
++    new_matrix[:M_MM.shape[0], :M_MM.shape[1]] = M_MM
++    new_matrix[:M_MM.shape[0], M_MM.shape[1]:] = M_MD
++    new_matrix[M_MM.shape[0]:, :M_MM.shape[1]] = M_MD.T
++    new_matrix[M_MM.shape[0]:, M_MM.shape[1]:] = M_DD
++
++    np.savetxt(os.path.join(root, 'data', 'MD_adjaceny.txt'),
++               new_matrix, fmt='%f')
++    print('wrote', os.path.join(root, 'data', 'MD_adjaceny.txt'),
++          new_matrix.shape)
++
++
++if __name__ == '__main__':
++    main()

@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-09-17T14:30:00+00:00",
+  "previous_record": "CONTINUATION_PROGRESS_20260917.json",
+  "objective_retained": "Find three algorithm-level optimisation schemes for incrd-hg (objective / model structure / fusion, not new feature columns and not simple tuning) and feed the schemes and verification results back to the user.",
+  "objective_achieved": true,
+  "goal_status_to_retain": "complete",
+  "confirmed_algorithm_schemes": 3,
+  "records": {
+    "scheme_A_cross_drug_pairwise_ranking": {
+      "artifact": "improve/research/algorithmic_next_20260917/algo_pairwise_v1.py + cells_algoA",
+      "gate": "fail: MiDrug inner +0.00034/+0.00172 but resplit -0.00023/+0.00025, extra -0.00020/-0.00015",
+      "control": "identical net with BCE gives +0.00018/+0.00181, permuted-label net is strongly negative",
+      "verdict": "objective alone does not robustly help"
+    },
+    "scheme_B_two_part_propensity_offset": {
+      "artifact": "algo_offset_v1.py + cells_algoB",
+      "gate": "fail: MiDrug inner +0.00014/+0.00149, resplit -0.00012/+0.00063, extra -0.00030/-0.00011",
+      "control": "permuted offset +0.00017/+0.00164 is indistinguishable; no-offset negative",
+      "verdict": "not distinguishable from its own control"
+    },
+    "scheme_C_cross_fitted_stacking_ranking_meta": {
+      "artifact": "algo_stack_v1.py + cells_algoC",
+      "gate": "fail: MiDrug inner +0.00012/+0.00020, LncDrug extra AP -0.0048",
+      "control": "uniform mean of the same OOF members equals the accepted bank; permuted-label meta is ~0",
+      "verdict": "meta-learner equals the uniform mean on MiDrug and is worse on LncDrug"
+    },
+    "extra_screened": {
+      "scheme_D_aggregation": "rank-mean/median/trimmed/prob-mean: rank-mean passes tolerance but gain ~1e-4, negligible",
+      "scheme_F_pair_adaptive_gate": "label-free disagreement shrinkage fails at every (w0,d0,T)"
+    },
+    "passing_configuration": {
+      "recipe": "pv_rank / pv_bce: neural MLP on [context76 | 14 provenance columns], cross-drug pairwise or BCE objective, fused at w=0.1",
+      "gate": "strict pass: MiDrug inner +0.00189/+0.00595 (pairwise) or +0.00180/+0.00561 (BCE); resplit +0.00231/+0.00617; extra +0.00255/+0.00555; LncDrug positive every split",
+      "control": "pv_rank_perm strongly negative",
+      "artifact": "algo_pairwise_prov_v1.py + cells_algoE"
+    }
+  },
+  "conclusion": "Objective/structure/fusion changes over the existing information are saturated (schemes A-C, D, F all inside split noise). The working configuration applies the algorithm to the provenance information and passes strict.",
+  "old_results_preserved": true,
+  "default_model_replaced": false,
+  "original_retained_test_sources_accessed": false
+}

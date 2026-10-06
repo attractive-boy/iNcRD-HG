@@ -1,0 +1,216 @@
+[
+  {
+    "name": "incrd_original",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12866671/fullTextXML",
+    "status": 200,
+    "path": "improve/research/incrd_remaining_space_20260913/incrd_original.xml",
+    "bytes": 162202,
+    "sha256": "0cfd756489af66b2333c0fc3bab7d38046cdd86a3ea698f46548cca366db0be7",
+    "sections": [
+      [
+        "1. Introduction",
+        "sec4"
+      ],
+      [
+        "2. Materials and methods",
+        "sec5"
+      ],
+      [
+        "2.1 Datasets",
+        "sec6"
+      ],
+      [
+        "2.2 The iNcRD-HG model architecture",
+        "sec7"
+      ],
+      [
+        "2.3 Heterogeneous network construction",
+        "sec8"
+      ],
+      [
+        "2.4 Context-enriched heterogeneous graph learning",
+        "sec9"
+      ],
+      [
+        "2.4.1 Heterogeneous graph encoder",
+        "sec10"
+      ],
+      [
+        "2.4.2 NcRNA-drug resistance association prediction",
+        "sec11"
+      ],
+      [
+        "2.5 Performance evaluation",
+        "sec12"
+      ],
+      [
+        "3. Results and discussion",
+        "sec13"
+      ],
+      [
+        "3.1 Parameter sensitivity analysis for robustness evaluation",
+        "sec14"
+      ],
+      [
+        "3.2 Semantic enrichment boosts predictive capability",
+        "sec15"
+      ],
+      [
+        "3.3 Feature analysis of heterogeneous graph representations",
+        "sec16"
+      ],
+      [
+        "3.4 Interpretable predictions of ncRNA–drug resistance associations",
+        "sec17"
+      ],
+      [
+        "3.5 Performance comparison with related methods",
+        "sec18"
+      ],
+      [
+        "3.6 Performance under unseen ncRNA or drug conditions",
+        "sec19"
+      ],
+      [
+        "3.7 Case study",
+        "sec20"
+      ],
+      [
+        "4. Conclusion",
+        "sec21"
+      ],
+      [
+        "Supplementary Material",
+        "sec22"
+      ],
+      [
+        "Acknowledgements",
+        "ack1"
+      ],
+      [
+        "Contributor Information",
+        "_ci93_"
+      ],
+      [
+        "Author contributions",
+        "sec23"
+      ],
+      [
+        "Supplementary data",
+        "sec24"
+      ],
+      [
+        "Conflict of interests",
+        "sec25"
+      ],
+      [
+        "Funding",
+        "sec26"
+      ],
+      [
+        "Data availability",
+        "sec27"
+      ],
+      [
+        "References",
+        "ref1"
+      ],
+      [
+        "",
+        "ref1_sec2"
+      ],
+      [
+        "Associated Data",
+        "_ad93_"
+      ],
+      [
+        "Supplementary Materials",
+        "_adsm93_"
+      ],
+      [
+        "Data Availability Statement",
+        "_adda93_"
+      ]
+    ],
+    "discussion": [
+      "3. Results and discussion3.1 Parameter sensitivity analysis for robustness evaluationTo evaluate the robustness of iNcRD-HG, parameter sensitivity analysis was performed focusing on four critical hyperparameters: the learning rate, the number of training epochs, the hidden channel dimension in heterogeneous graph learning, and the aggregation strategy for message passing across different edge types. This analysis was conducted using the validation dataset SLDval, with the lncRNA–drug resistance association prediction task as an example. The results are presented in Fig. 2, revealing the following observations: (1) The learning rate is found to exert relatively pronounced effect on training iNcRD-HG. A low learning rate results in slow convergence and susceptibility to local optima, whereas an excessively high rate causes unstable training and impedes convergence to a satisfactory global optimum. Thus, selecting an appropriate learning rate is essential for effective and stable training; (2) Regarding the number of epochs and hidden channel dimension, iNcRD-HG performs relatively stable within suitable ranges, underscoring its resilience to such variations; (3) For the aggregation strategies employed in message passing across multiple edge types, we observe that the max pooling strategy consistently yields inferior performance. This can likely be attributed to its tendency to diminish the contribution of relation-type-aware semantic information. By contrast, the mean, sum, and min aggregation strategies produce comparable results, indicating that their influence on the overall predictive performance is largely interchangeable. Collectively, these findings indicate that iNcRD-HG exhibits strong robustness to variations in its key hyperparameters. Based on a grid search, we subsequently determined the optimal configuration for the lncRNA–drug resistance association prediction task as follows: {learning rate = 0.0005, epochs = 100, hidden channel dimension = 64, aggregation strategy=’min’}. In addition, the same parameter search space was applied to miRNA–drug resistance association prediction task, with the corresponding results are presented in Supplementary Fig. S1, available as supplementary data at Bioinformatics online.Figure 2Parameter analysis of iNcRD-HG. AUC and AUPR obtained with different learning rates, training epochs, hidden dimensions, and aggregation strategies on SLDval.3.2 Semantic enrichment boosts predictive capabilityTo evaluate the effectiveness of the semantic enrichment strategy, which combines attribute feature encoding for ncRNAs and drugs with the construction of multi-relational subnetworks to enhance the initially sparse prior association network, we conducted ablation experiments to compare iNcRD-HG with three baseline variants: w/o_LncMi, w/o_attribute and HG_SeqSim.The w/o_LncMi baseline trains the heterogeneous graph predictor on a reduced network that excludes ncRNA nodes and edges unrelated to the target task. For instance, in the case of lncRNA–drug resistance association prediction task, the network includes only three subnetwroks: lncRNA similarity, drug similarity, and lncRNA–drug resistance association subnetworks. Similarly, for the miRNA–drug resistance association prediction task, only miRNA similarity, drug similarity, and miRNA–drug resistance association subnetworks are retained. The w/o_attribute baseline removes all task-specific attribute features from the nodes and instead uses one-hot encoded vectors as initial node representations, thereby omitting the semantic information introduced through attribute feature encoding. HG_SeqSim replaces the original expression-based ncRNA similarity networks in the heterogeneous graph with sequence-based similarity networks. Specially, lncRNA and miRNA sequences were obtained from RNAcentral (Consortium 2021). These sequences were embedded using Word2Vec (Church 2017), and ncRNA similarity was also computed via Kendall’s tau coefficient.The comparative results are presented in Table 2, from which we can see the followings: (1) Across both datasets, iNcRD-HG consistently outperforms the three baseline models, achieving the highest AUC and AUPR scores. These results highlight the importance of incorporating semantic information derived from related ncRNA subnetworks and attribute features in enhancing predictive performance; (2) Integrating cross-ncRNA interactions leads to a more pronounced performance improvement in lncRNA–drug resistance prediction than in miRNA–drug resistance prediction. Unlike miRNAs, which act primarily via direct post-transcriptional regulation, lncRNAs often function by competitively binding to miRNAs. Incorporating miRNA–lncRNA regulatory relationships therefore provides additional context that helps iNcRD-HG capture the indirect but important roles of lncRNAs in drug resistance; (3) Using sequence-based ncRNA similarity networks (HG_SeqSim) leads to slightly lower performance than iNcRD-HG, suggesting that expression profiles across cancer cell lines provide additional pathological context beyond sequence information for predicting ncRNA–drug resistance associations.Table 2Performance comparison of iNcRD-HG with baseline methods on SLDval and SMDval.DatasetMethodAUCAUPR SLDval iNcRD-HG 0.9834 0.9545 w/o_LncMi0.97290.9242w/o_attribute0.96990.9282HG_SeqSim0.97180.9403 SMDval iNcRD-HG 0.9555 0.9183 w/o_ LncMi0.95180.9098w/o_attribute0.94920.9062HG_SeqSim0.94800.9084Bold values indicate the best performance.3.3 Feature analysis of heterogeneous graph representationsTo further investigate the discriminative capability of ncRNA–drug resistance pair representations learned by iNcRD-HG, we performed visualization analyses using t-SNE. Three different pair representation strategies were compared. The first strategy, attribute concatenation, involves directly concatenating the attribute features of ncRNA and drug nodes. The second strategy, structural concatenation, integrates similarity vectors derived from ncRNA and drug similarity networks as the pair representation. The third strategy employs the pair representations extracted by iNcRD-HG through its heterogeneous graph learning framework, which jointly encodes node attribute features and topological dependencies across multi-relational molecular networks. As shown in Fig. 3, we visualized the pair representations produced by these three strategies on the testing datasets SLDtest and SMDtest. The results clearly demonstrate that attribute concatenation and structural concatenation show less separable clusters, whereas the representations learned by iNcRD-HG exhibit superior label separability. This improvement can be attributed to iNcRD-HG ability to integrate intrinsic semantic information from ncRNA and drug attributes with the complex topological semantics of molecular interactions, further enhanced by the supervision provided by association signals during representation learning.Figure 3T-SNE visualization of different pair representations. (a, d) Features derived from attribute concatenation. (b, e) Features obtained through structural concatenation. (c, f) Features learned by iNcRD-HG.3.4 Interpretable predictions of ncRNA–drug resistance associationsTo elucidate the inference pathways of iNcRD-HG in predicting ncRNA–drug resistance associations and enhance its biological interpretability for guiding experimental validation, we introduced Captum Explainer (Kokhlikyan et al. 2020) to compute attribution scores by back-propagating through iNcRD-HG model. We applied CaptumExplainer to the testing datasets SLDtest and SMDtest, and evaluated the importance scores of different nodes and edges within the constructed heterogeneous network. Figure 4a summarizes the results and reveals several key findings: (1) Among node types, miRNAs exhibit the highest contribution in both tasks, particularly in miRNA–drug resistance association prediction (64.6%), while lncRNAs contribute more prominently in lncRNA–drug resistance association prediction (36.4%), reflecting the task-specific relevance of different ncRNA types; (2) All edge types contribute to the final prediction, with lncRNA–drug and miRNA–drug edges showing the greatest impact, underscoring the importance of direct ncRNA–drug resistance associations; (3) Notably, lncRNA–miRNA interactions also play a significant role in both tasks (24.3% and 25.7%, respectively), aligning with the known bio logical mechanism of ncRNA cross-talk.Figure 4Interpretability analysis of iNcRD-HG predictions. (a) Contribution of different node and edge types in heterogeneous network to iNcRD-HG prediction. (b) Edge-contribution subnetwork for experimentally validated AFAP1-AS1 associated with CISPLATIN resistance. (c) Edge-contribution subnetwork for experimentally validated HSA-MIR-372-3P associated with TAXANE resistance.Two experimentally validated associations <AFAP1-AS1, CISPLATIN> and <HSA-MIR-372-3P, TAXANE>, were analysed using CaptumExplainer to identify key molecular components and interactions driving inference, with Fig. 4b and c showing their top-300 edge-contribution subnetworks. For <AFAP1-AS1, CISPLATIN>, iNcRD-HG highlights meta-paths such as <AFAP1-AS1, FLUOROURACIL, HSA-LET-7A-5P, CISPLATIN>, implying that AFAP1-AS1 may exert cisplatin resistance through interactions with shared chemoresistance-associated regulators like let-7a or chemotherapeutic cross-talk pathways. While AFAP1-AS1 has been experimentally shown to promote cisplatin resistance via sponging miR-139-5p and upregulating RRM2 (Huang et al. 2019), the inference of let-7a suggests additional or parallel regulatory axes, as let-7a is known to modulate apoptosis-related genes such as BCL2 and HMGA2, potentially converging on similar resistance mechanisms. For <HSA-MIR-372-3P, TAXANE>, several high-impact meta-paths are identified, such as <HSA-MIR-372-3P, SNHG16, HSA-LET-7C-5P, TAXANE> and <HSA-MIR-372-3P, NORAD, HSA-MIR-20A-5P, TAXANE>, suggesting that miR-372-3p may influence taxane resistance through regulatory cascades involving lncRNAs and shared miRNA hubs such as let-7 and miR-20a families. These findings are biologically plausible, as miR-372-3p was found dysregulated in taxane-resistant tumors (Chen et al. 2020), SNHG16 has been linked to chemoresistance through modulation of cell cycle regulators, and NORAD contributes to genomic stability by sequestering PUMILIO proteins (Dong et al. 2019, Elguindy and Mendell 2021), which may indirectly affect drug response pathways. Two additional validated associations <XIST, OXALIPLATIN> and <HSA-MIR-199B-5P, SORAFENIB> were analysed, and their edge-contribution subnetworks are shown in Supplementary Fig. S2, available as supplementary data at Bioinformatics online.Overall, these results highlight that iNcRD-HG effectively integrates node-level semantic attributes with molecular interaction edges to capture biologically meaningful pathways, while meta-path interpretation elucidates plausible mechanisms of ncRNA–drug resistance and uncovers novel intermediate nodes that may constitute unexplored regulatory axes warranting experimental validation.3.5 Performance comparison with related methodsTo evaluate the predictive performance of iNcRD-HG for ncRNA–drug resistance associations, we compared it against nine competing methods. Among these, five are GNN baselines, including GAT (Veličković et al. 2018), GraphSAGE (Hamilton et al. 2017), ASAP (Ranjan et al. 2020), GeneralGNN (You et al. 2020), and GraphConv (Morris et al. 2019). These GNN-based models utilized the node attribute features extracted in this study and were trained on a biological network comprising ncRNA–drug resistance associations, ncRNA similarity and drug similarity associations, derived by removing non-target ncRNA nodes and their associated edges from our heterogeneous network. The other four competing methods are existing ncRNA–drug association prediction approaches: GCMDR (Huang et al. 2020), DeepLDA (Gao and Shang 2023), AGCLNDA (Fan et al. 2025), and NDSGCL (Hu et al. 2024). GCMDR and DeepLDA leverage ncRNA and drug node attribute features and employ GCN and DNN architectures to extract high-level representations, whereas AGCLNDA and NDSGCL rely on graph contrastive learning to capture topological representations without explicit node attributes. Table 3 summarizes the performance comparison on two testing datasets SLDtest and SMDtest. The results reveal the key observations: iNcRD-HG consistently outperforms all baselines across both datasets, achieving the highest AUC and AUPR scores, underscoring its ability to integrate attribute information with heterogeneous topological semantics for robust ncRNA–drug resistance association prediction. In contrast, graph contrastive learning methods exhibit unstable performance, particularly in SLDtest, potentially linked to their reliance on topology, making them more vulnerable to noise and reducing generalization. Attribute-based methods and standard GNN models perform competitively but still lag behind.Table 3Performance comparison of different methods on SLDtest and SMDtest.Method SLDtest SMDtest AUCAUPRAUCAUPRGAT0.96520.92730.89170.7219GraphSAGE0.97130.92020.93830.8718ASAP0.95250.89390.91600.8787GeneralGNN0.96150.91270.92260.8644GraphConv0.94690.91480.89890.8293GCMDR0.96340.94300.91230.8554DeepLDA0.97290.93350.93930.8850AGCLNDA0.66460.76430.92440.8871NDSGCL0.77230.76790.80080.6732iNcRD-HG 0.9857 0.9585 0.9564 0.9165 Bold values indicate the best performance.3.6 Performance under unseen ncRNA or drug conditionsTo assess model generalization, we conducted leave-one-ncRNA-out and leave-one-drug-out experiments, and compared iNcRD-HG with six GNN-based baseline methods, including GCN, GAT, GraphSAGE, ASAP, GeneralGNN, and GraphConv, under unseen ncRNA or drug conditions.For the unseen ncRNA condition, both leave-one-lncRNA-out and leave-one-miRNA-out experiments were performed. LncRNAs and miRNAs with more than 10 known drug resistance associations in the datasets SLD+ and SMD+ were selected for evaluation. The performance distributions across four evaluation metrics obtained by different methods are shown in Fig. 5a and b, respectively. Under the unseen lncRNA setting, iNcRD-HG consistently outperforms all six baseline models across all evaluation metrics. Under the unseen miRNA setting, iNcRD-HG achieves higher AUPR values and exhibits ranking performance comparable to GraphConv, underscoring its ability to prioritize true associations and comprehensively identify potential ncRNA–drug resistance relationships.Figure 5Performance of different methods under unseen ncRNA conditions. (a) Performance distributions for the leave-one-lncRNA-out experiment. (b) Performance distributions for the leave-one-miRNA-out experiment.For leave-one-drug-out experiment, nine chemotherapeutic drugs were selected for evaluation, as each exhibits more than 30 known ncRNA resistance associations in the datasets SLD+ and SMD+. The drug-specific results are analyzed and illustrated in Fig. 6, from which we can see that iNcRD-HG achieves the best performance across all four metrics compared to six GNN-based baseline methods, with particularly notable improvements in Precision@30 and NDCG@30. This demonstrates iNcRD-HG can accurately prioritize true ncRNA-drug resistance associations and achieve higher ranking quality. From an overall perspective, all methods show generally higher Precision@30 and NDCG@30 compared to Recall@30. This phenomenon can be attributed to the limited number of known ncRNA-drugs associations: with relatively few true positives per drug and a fixed k value of 30, ranking precision and quality are more readily reflected, whereas recall are inherently constrained by the small pool of true associations. Comparative results of miRNA-drug prediction performance across the nine unseen drugs are provided in Supplementary Fig. S3, available as supplementary data at Bioinformatics online. The performance distributions of lncRNA-drug and miRNA-drug resistance association prediction are shown in Fig. 7a and b, with detailed mean metrics provided in Supplementary Tables S2 and S3, available as supplementary data at Bioinformatics online. iNcRD-HG outperforms all baselines in both tasks, achieving superior Precision@30 and NDCG@30, underscoring its ability to rank true associations at the top positions. These results demonstrate that iNcRD-HG excels not only in standard prediction scenarios but also maintains robustness under different cold-start conditions.Figure 6Performance of different methods in leave-one-drug-out experiments on SLD. (a–i) Evaluation metrics under unseen drug scenarios, with Doxorubicin, Oxaliplatin, Fluorouracil, Temozolomide, Cisplatin, Gemcitabine, Gefitinib, Paclitaxel, and Sorafenib each sequentially treated as the simulated novel drug.Figure 7Case study analysis of iNcRD-HG under simulated novel drug scenarios. (a and b) Leave-one-drug-out performance metrics for lncRNA- (a) and miRNA- (b) drug resistance association prediction tasks across different methods. (c) Expression levels of three predicted ncRNAs in drug-sensitive and drug-resistant cells for Gemcitabine (Gem), Paclitaxel (Pac), and Doxorubicin (Dox), where ‘_Sen’ and ‘_Res’ indicate drug-sensitive and drug-resistant cells, respectively. (d) GO Biological Process (BP) enrichments of ncRNAs associated with Gemcitabine and Paclitaxel resistance identified by iNcRD-HG. (e) GO Molecular Function (MF) enrichments of ncRNAs associated with Gemcitabine and Paclitaxel resistance identified by iNcRD-HG. (f and g) KEGG pathway enrichments of ncRNAs associated with Gemcitabine and Paclitaxel resistance identified by iNcRD-HG.3.7 Case studyTo further illustrate the predictive capability of iNcRD-HG under unseen drug conditions, we conducted case studies on three representative drugs including Gemcitabine, Paclitaxel, and Doxorubicin. Table 4 lists the top 10 lncRNAs and miRNAs predicted by iNcRD-HG as resistance-associated candidates for each drug. Of the top-ranked candidates, 26 lncRNAs and 30 miRNAs are supported by experimental evidence reported in the literature. For example, knockdown of NEAT1 reverses paclitaxel resistance in non-small cell lung cancer (NSCLC) cell lines (Li et al. 2019), inhibition of miR-21 increases sensitivity to gemcitabine (Meng et al. 2006), and NORAD promotes proliferation and metastasis while conferring doxorubicin resistance and inhibiting apoptosis and autophagy in neuroblastoma cells (Wang et al. 2020). Certain ncRNAs, including MALAT1, XIST, and HSA-MIR-34A-5P, appear recurrently across different drugs, suggesting their potential roles as shared regulators of multidrug resistance. Although several predicted ncRNAs lack direct experimental validation, NORAD and SNHG14 showed significant differential expression in paclitaxel- and doxorubicin-resistant versus sensitive cells, respectively (Fig. 7c). Together, these findings highlight that iNcRD-HG can not only recover known drug resistance-associated ncRNAs but also identify promising candidates with potential clinical relevance.Table 4The top ten ncRNAs associated with different drug resistance predicted by iNcRD-HG.DruglncRNAEvidencemiRNAEvidenceGemcitabineAP001043.133436545HSA-MIR-21-5P16762633HAO2-IT133436545HSA-MIR-34A-5P21347785LINC0109333436545HSA-MIR-200C-3P19654291LINC0183133436545HSA-MIR-181A-5P28560603CPS1-IT133436545HSA-MIR-126-3P31514732AL031722.133436545HSA-MIR-375-3P31514732AC022784.333436545HSA-MIR-203A-3P24040438LINC0159533436545HSA-MIR-210-3P25117811AC008549.133436545HSA-MIR-145-5P27765914AL355997.133436545HSA-MIR-100-5P23946872PaclitaxelNEAT130782035HSA-MIR-93-5P30244336XIST12492109HSA-MIR-16-5P20460378MALAT131837057HSA-MIR-15A-5P23826416KCNQ1OT128600629HSA-MIR-26B-5P29125598H1929968942HSA-MIR-103A-3P30774764OIP5-AS129219179HSA-MIR-101-3P24755562SNHG1631287002HSA-MIR-32-5P24220856HOTAIR29680837HSA-MIR-301A-3P26323677UCA129777711HSA-MIR-25-3P26323677NORADunconfirmedHSA-MIR-106B-5P20460378DoxorubicinNEAT130349370HSA-MIR-21-5P19412672XIST30907503HSA-MIR-34A-5P18645025MALAT127524242HSA-MIR-200C-3P19412672KCNQ1OT131837329HSA-MIR-181A-5P19412672SNHG16unconfirmedHSA-MIR-126-3P19237188NORAD32563146HSA-MIR-146A-5P19412672SNHG14unconfirmedHSA-MIR-155-5P18971180OIP5-AS130204936HSA-MIR-29A-3P18645025FGD5-AS1unconfirmedHSA-MIR-29B-3P18645025H198674037HSA-MIR-451A19412672Potential biological mechanisms by which ncRNAs contribute to drug resistance were investigated through functional enrichment analysis of the top 100 candidates predicted by iNcRD-HG. As shown in Fig. 7d, ncRNAs associated with gemcitabine resistance are significantly enriched in GO Biological Process (BP) terms such as focal adhesion disassembly, apoptosis regulation, receptor-mediated endocytosis, and translational control, indicating that alterations in adhesion dynamics, intracellular transport, and gene expression regulation are central to gemcitabine response. In contrast, paclitaxel-related ncRNAs are enriched in processes involving focal adhesion assembly/disassembly, protein localization, intracellular signalling, and biosynthetic regulation, highlighting a stronger involvement of signalling modulation and membrane protein trafficking in paclitaxel resistance. Molecular function analysis (Fig. 7e) indicates common enrichment in cadherin binding, protein kinase binding, and mRNA binding, but gemcitabine resistance uniquely involved GTP and double-stranded RNA binding, while paclitaxel resistance is characterized by microtubule, tubulin, and actin binding, reflecting its mechanism as a microtubule-stabilizing drug. KEGG pathway analysis (Fig. 7f–g) indicates overlapping involvement of focal adhesion, endocytosis, autophagy, and actin cytoskeleton regulation, alongside drug-specific pathways such as Rap1 and Fc epsilon RI signalling for gemcitabine, and adherens junction and leukocyte transendothelial migration for paclitaxel. These results suggest that ncRNAs contribute to chemoresistance via shared pathways regulating adhesion, endocytosis, and cytoskeletal remodelling, while also engaging distinct biological processes aligned with each drug pharmacological action."
+    ]
+  },
+  {
+    "name": "incrd_correction",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13503001/fullTextXML",
+    "status": 200,
+    "path": "improve/research/incrd_remaining_space_20260913/incrd_correction.xml",
+    "bytes": 7066,
+    "sha256": "314ad11b5e53dec4b7a2b071020c8e259067101a0c3a2491fbc73ae27503cc24",
+    "body": "This is a correction to: Hang Wei, Yuran Xie, Wenxiang Zhang, Linyang Li, Shuai Wu, Lin Gao, Semantic-enhanced heterogeneous graph learning for identifying ncRNAs associated with drug resistance, Bioinformatics, Volume 42, Issue 2, February 2026, btag029, https://doi.org/10.1093/bioinformatics/btag029In the originally published version of this manuscript, the corresponding authorship designation was omitted for Shuai Wu and Lin Gao.This has been corrected so that Hang Wei, Shuai Wu, and Lin Gao are listed as co-corresponding authors."
+  },
+  {
+    "name": "incrd_crossref",
+    "url": "https://api.crossref.org/works/10.1093/bioinformatics/btag029",
+    "status": 200,
+    "path": "improve/research/incrd_remaining_space_20260913/incrd_crossref.json",
+    "bytes": 26875,
+    "sha256": "c7851b8ca788444fdd595f23cb5c905d9569ddd8b3b24884636b3e7e4c42bf96",
+    "metadata": {
+      "title": [
+        "Semantic-enhanced heterogeneous graph learning for identifying ncRNAs associated with drug resistance"
+      ],
+      "DOI": "10.1093/bioinformatics/btag029",
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            1,
+            14
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            1,
+            3
+          ]
+        ]
+      },
+      "relation": {},
+      "update-to": null
+    }
+  },
+  {
+    "name": "correction_crossref",
+    "url": "https://api.crossref.org/works/10.1093/bioinformatics/btag497",
+    "status": 200,
+    "path": "improve/research/incrd_remaining_space_20260913/correction_crossref.json",
+    "bytes": 2281,
+    "sha256": "7bbaec546f5914e42877451858bd576c7d93440da395defb677a9cf0af741525",
+    "metadata": {
+      "title": [
+        "Correction to: Semantic-enhanced heterogeneous graph learning for identifying ncRNAs associated with drug resistance"
+      ],
+      "DOI": "10.1093/bioinformatics/btag497",
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            24
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            3
+          ]
+        ]
+      },
+      "relation": {},
+      "update-to": null
+    }
+  }
+]

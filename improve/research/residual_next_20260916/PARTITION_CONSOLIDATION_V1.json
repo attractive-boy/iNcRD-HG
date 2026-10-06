@@ -1,0 +1,495 @@
+{
+  "created_at_utc": "2026-09-15T16:46:08.756395+00:00",
+  "source_sha256": "f5acbffdb63924fb1fe4329130055d74f06576f2ae34e6fe47a2dc4004b61719",
+  "old_csv_sha256": "6698fe3221643d3e00819861b9fa424ac8afda9c1647cd87ea2c7716754e4157",
+  "new_csv_sha256": "4772de357d54e5f2e74a3c61f63e056656b89006bcb457ba4443a09be64476b0",
+  "old_rows": 18,
+  "new_rows": [
+    {
+      "label": "anchor_residual_geometry_v1_cachev3",
+      "name": "强参考残差＋双曲注意力",
+      "task": "MiDrug",
+      "auc": 0.9563166657125955,
+      "ap": 0.919083089437707,
+      "delta_auc": -0.00021784621647237033,
+      "delta_ap": -0.00047550446494416674,
+      "auc_wins": 1,
+      "ap_wins": 0,
+      "min_delta_auc": -0.0007167458545613,
+      "min_delta_ap": -0.0010804606304801,
+      "macro_drug_ap": 0.7929750126180496,
+      "fresh_gate": false,
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "offset_null_gate": false
+    },
+    {
+      "label": "anchor_residual_geometry_v1_cachev3",
+      "name": "强参考残差＋双曲注意力",
+      "task": "LncDrug",
+      "auc": 0.990613622720646,
+      "ap": 0.9812482756003688,
+      "delta_auc": 1.5591988836124077e-05,
+      "delta_ap": 5.434323691996826e-05,
+      "auc_wins": 2,
+      "ap_wins": 3,
+      "min_delta_auc": 0.0,
+      "min_delta_ap": 1.8631077415731667e-05,
+      "macro_drug_ap": 0.9459580580255474,
+      "fresh_gate": false,
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "offset_null_gate": false
+    },
+    {
+      "label": "anchor_residual_block_v1_cachev3",
+      "name": "强参考残差＋变分群组",
+      "task": "MiDrug",
+      "auc": 0.9565639291188835,
+      "ap": 0.9196299741769569,
+      "delta_auc": 2.9417189815557e-05,
+      "delta_ap": 7.138027430562536e-05,
+      "auc_wins": 2,
+      "ap_wins": 2,
+      "min_delta_auc": -9.063674699949507e-05,
+      "min_delta_ap": -0.0001965706038669,
+      "macro_drug_ap": 0.7945190900415774,
+      "fresh_gate": false,
+      "performance_gate": true,
+      "mechanism_gate": false,
+      "offset_null_gate": true
+    },
+    {
+      "label": "anchor_residual_block_v1_cachev3",
+      "name": "强参考残差＋变分群组",
+      "task": "LncDrug",
+      "auc": 0.9904447095082546,
+      "ap": 0.9807225102425917,
+      "delta_auc": -0.00015332122355530187,
+      "delta_ap": -0.0004714221208571333,
+      "auc_wins": 1,
+      "ap_wins": 1,
+      "min_delta_auc": -0.0003664117376492,
+      "min_delta_ap": -0.0008801012075337,
+      "macro_drug_ap": 0.9453728220486671,
+      "fresh_gate": false,
+      "performance_gate": true,
+      "mechanism_gate": false,
+      "offset_null_gate": true
+    },
+    {
+      "label": "anchor_residual_bicentric_v1_cachev3",
+      "name": "强参考残差＋双中心子图",
+      "task": "MiDrug",
+      "auc": 0.9565547859382653,
+      "ap": 0.919537377776555,
+      "delta_auc": 2.027400919727788e-05,
+      "delta_ap": -2.1216126096206845e-05,
+      "auc_wins": 3,
+      "ap_wins": 1,
+      "min_delta_auc": 4.770355105154778e-06,
+      "min_delta_ap": -0.0002237017774788,
+      "macro_drug_ap": 0.7947996117313032,
+      "fresh_gate": false,
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "offset_null_gate": false
+    },
+    {
+      "label": "anchor_residual_bicentric_v1_cachev3",
+      "name": "强参考残差＋双中心子图",
+      "task": "LncDrug",
+      "auc": 0.990608425391034,
+      "ap": 0.9812453052546349,
+      "delta_auc": 1.0394659224070381e-05,
+      "delta_ap": 5.137289118602636e-05,
+      "auc_wins": 2,
+      "ap_wins": 2,
+      "min_delta_auc": -1.5591988836161086e-05,
+      "min_delta_ap": -1.0462525169674386e-05,
+      "macro_drug_ap": 0.9459580580255474,
+      "fresh_gate": false,
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "offset_null_gate": false
+    }
+  ],
+  "reports": {
+    "geometry": {
+      "assessment": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/reports/anchor_residual_geometry_v1_cachev3/ASSESSMENT.json",
+      "sha256": "aeb7e847f4d3ceefd0290ff9a228364f83a3a0bb14affe39918df9a86b661a88",
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "overall_gate": false,
+      "formal_partition_fits": 12,
+      "uncertainty": {
+        "MiDrug": {
+          "method": "Paired two-way endpoint pigeonhole bootstrap; same endpoint draws across all overlapping splits; mean per-split metric difference.",
+          "requested_resamples": 1000,
+          "valid_resamples": 1000,
+          "unique_rnas": 605,
+          "unique_drugs": 216,
+          "selection_bias_corrected": false,
+          "new_biological_validation": false,
+          "intervals": {
+            "anchor": {
+              "auc": {
+                "low": -0.0007120776276132315,
+                "high": 0.00022028117758357365,
+                "positive_fraction": 0.167
+              },
+              "ap": {
+                "low": -0.0012852807945573437,
+                "high": 0.00020893455260667196,
+                "positive_fraction": 0.079
+              }
+            },
+            "offset_composed": {
+              "auc": {
+                "low": -0.0007120776276132315,
+                "high": 0.00022028117758357365,
+                "positive_fraction": 0.167
+              },
+              "ap": {
+                "low": -0.0012852807945573437,
+                "high": 0.00020893455260667196,
+                "positive_fraction": 0.079
+              }
+            },
+            "euclidean": {
+              "auc": {
+                "low": -0.0008758797766318234,
+                "high": 0.00041242783257147014,
+                "positive_fraction": 0.224
+              },
+              "ap": {
+                "low": -0.0016049972864307926,
+                "high": 0.0008786006582009375,
+                "positive_fraction": 0.281
+              }
+            }
+          }
+        },
+        "LncDrug": {
+          "method": "Paired two-way endpoint pigeonhole bootstrap; same endpoint draws across all overlapping splits; mean per-split metric difference.",
+          "requested_resamples": 1000,
+          "valid_resamples": 1000,
+          "unique_rnas": 1012,
+          "unique_drugs": 215,
+          "selection_bias_corrected": false,
+          "new_biological_validation": false,
+          "intervals": {
+            "anchor": {
+              "auc": {
+                "low": -6.730564475564324e-05,
+                "high": 0.000101799328203143,
+                "positive_fraction": 0.671
+              },
+              "ap": {
+                "low": -0.0001933099246058482,
+                "high": 0.00038762808206466517,
+                "positive_fraction": 0.706
+              }
+            },
+            "offset_composed": {
+              "auc": {
+                "low": -6.730564475564324e-05,
+                "high": 0.000101799328203143,
+                "positive_fraction": 0.671
+              },
+              "ap": {
+                "low": -0.0001933099246058482,
+                "high": 0.00038762808206466517,
+                "positive_fraction": 0.706
+              }
+            },
+            "euclidean": {
+              "auc": {
+                "low": -0.0004483623338096089,
+                "high": 0.0002508205672909823,
+                "positive_fraction": 0.331
+              },
+              "ap": {
+                "low": -0.0016546961138624444,
+                "high": 0.0007832186829102669,
+                "positive_fraction": 0.403
+              }
+            }
+          }
+        }
+      }
+    },
+    "block": {
+      "assessment": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/reports/anchor_residual_block_v1_cachev3/ASSESSMENT.json",
+      "sha256": "8b033c32a279e2b293e81190cc8ee3ff884eb2bb87f3078781d80579001f0bf6",
+      "performance_gate": true,
+      "mechanism_gate": false,
+      "overall_gate": false,
+      "formal_partition_fits": 12,
+      "uncertainty": {
+        "MiDrug": {
+          "method": "Paired two-way endpoint pigeonhole bootstrap; same endpoint draws across all overlapping splits; mean per-split metric difference.",
+          "requested_resamples": 1000,
+          "valid_resamples": 1000,
+          "unique_rnas": 605,
+          "unique_drugs": 216,
+          "selection_bias_corrected": false,
+          "new_biological_validation": false,
+          "intervals": {
+            "anchor": {
+              "auc": {
+                "low": -0.00035126234990627374,
+                "high": 0.0004164386868998058,
+                "positive_fraction": 0.526
+              },
+              "ap": {
+                "low": -0.0009639637525865782,
+                "high": 0.0010547192735912531,
+                "positive_fraction": 0.527
+              }
+            },
+            "offset_composed": {
+              "auc": {
+                "low": -0.00035126234990627374,
+                "high": 0.0004164386868998058,
+                "positive_fraction": 0.526
+              },
+              "ap": {
+                "low": -0.0009639637525865782,
+                "high": 0.0010547192735912531,
+                "positive_fraction": 0.527
+              }
+            },
+            "deterministic": {
+              "auc": {
+                "low": -0.0005095135452259508,
+                "high": 0.00042184905576112165,
+                "positive_fraction": 0.418
+              },
+              "ap": {
+                "low": -0.000948950650006003,
+                "high": 0.0012681020167094573,
+                "positive_fraction": 0.537
+              }
+            }
+          }
+        },
+        "LncDrug": {
+          "method": "Paired two-way endpoint pigeonhole bootstrap; same endpoint draws across all overlapping splits; mean per-split metric difference.",
+          "requested_resamples": 1000,
+          "valid_resamples": 1000,
+          "unique_rnas": 1012,
+          "unique_drugs": 215,
+          "selection_bias_corrected": false,
+          "new_biological_validation": false,
+          "intervals": {
+            "anchor": {
+              "auc": {
+                "low": -0.000940747633863225,
+                "high": 0.0004713137378368848,
+                "positive_fraction": 0.277
+              },
+              "ap": {
+                "low": -0.004617038751146075,
+                "high": 0.0014453223248661077,
+                "positive_fraction": 0.26
+              }
+            },
+            "offset_composed": {
+              "auc": {
+                "low": -0.000940747633863225,
+                "high": 0.0004713137378368848,
+                "positive_fraction": 0.277
+              },
+              "ap": {
+                "low": -0.004617038751146075,
+                "high": 0.0014453223248661077,
+                "positive_fraction": 0.26
+              }
+            },
+            "deterministic": {
+              "auc": {
+                "low": -0.000698775285637048,
+                "high": 0.0003881307246961525,
+                "positive_fraction": 0.273
+              },
+              "ap": {
+                "low": -0.003739334074888741,
+                "high": 0.0011245775030517603,
+                "positive_fraction": 0.198
+              }
+            }
+          }
+        }
+      }
+    },
+    "bicentric": {
+      "assessment": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/reports/anchor_residual_bicentric_v1_cachev3/ASSESSMENT.json",
+      "sha256": "7577d62d16416a56e5bdad6ae779874021e9f0b1576666a716f274026ac492df",
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "overall_gate": false,
+      "formal_partition_fits": 24,
+      "uncertainty": {
+        "MiDrug": {
+          "method": "Paired two-way endpoint pigeonhole bootstrap; same endpoint draws across all overlapping splits; mean per-split metric difference.",
+          "requested_resamples": 1000,
+          "valid_resamples": 1000,
+          "unique_rnas": 605,
+          "unique_drugs": 216,
+          "selection_bias_corrected": false,
+          "new_biological_validation": false,
+          "intervals": {
+            "anchor": {
+              "auc": {
+                "low": -0.0003322408229415689,
+                "high": 0.00038283368253593046,
+                "positive_fraction": 0.552
+              },
+              "ap": {
+                "low": -0.0012026746519563842,
+                "high": 0.0010333830968340728,
+                "positive_fraction": 0.523
+              }
+            },
+            "offset_composed": {
+              "auc": {
+                "low": -0.0003322408229415689,
+                "high": 0.00038283368253593046,
+                "positive_fraction": 0.552
+              },
+              "ap": {
+                "low": -0.0012026746519563842,
+                "high": 0.0010333830968340728,
+                "positive_fraction": 0.523
+              }
+            },
+            "no_mark": {
+              "auc": {
+                "low": -0.0002841504295659917,
+                "high": 0.0002747215156851871,
+                "positive_fraction": 0.519
+              },
+              "ap": {
+                "low": -0.0010397245265644413,
+                "high": 0.0007072956908445449,
+                "positive_fraction": 0.439
+              }
+            },
+            "flat_pool": {
+              "auc": {
+                "low": -0.00045191080661560745,
+                "high": 0.00034406540684730184,
+                "positive_fraction": 0.449
+              },
+              "ap": {
+                "low": -0.0013562293773295968,
+                "high": 0.0008859681025563289,
+                "positive_fraction": 0.418
+              }
+            },
+            "no_message": {
+              "auc": {
+                "low": -0.0005379664930359342,
+                "high": 0.0004259805004000396,
+                "positive_fraction": 0.377
+              },
+              "ap": {
+                "low": -0.0017498901462613754,
+                "high": 0.0005209080540436929,
+                "positive_fraction": 0.181
+              }
+            }
+          }
+        },
+        "LncDrug": {
+          "method": "Paired two-way endpoint pigeonhole bootstrap; same endpoint draws across all overlapping splits; mean per-split metric difference.",
+          "requested_resamples": 1000,
+          "valid_resamples": 1000,
+          "unique_rnas": 1012,
+          "unique_drugs": 215,
+          "selection_bias_corrected": false,
+          "new_biological_validation": false,
+          "intervals": {
+            "anchor": {
+              "auc": {
+                "low": -0.00027504283554946146,
+                "high": 0.00023727944502945338,
+                "positive_fraction": 0.597
+              },
+              "ap": {
+                "low": -0.0010349184084418122,
+                "high": 0.000989089393249937,
+                "positive_fraction": 0.646
+              }
+            },
+            "offset_composed": {
+              "auc": {
+                "low": -0.00027504283554946146,
+                "high": 0.00023727944502945338,
+                "positive_fraction": 0.597
+              },
+              "ap": {
+                "low": -0.0010349184084418122,
+                "high": 0.000989089393249937,
+                "positive_fraction": 0.646
+              }
+            },
+            "no_mark": {
+              "auc": {
+                "low": -0.00022040752782794177,
+                "high": 0.0001769832443722437,
+                "positive_fraction": 0.417
+              },
+              "ap": {
+                "low": -0.0009156192255930405,
+                "high": 0.0008493999531112727,
+                "positive_fraction": 0.482
+              }
+            },
+            "flat_pool": {
+              "auc": {
+                "low": -0.0002928630112660313,
+                "high": 0.0003730835099216706,
+                "positive_fraction": 0.639
+              },
+              "ap": {
+                "low": -0.001027052816846046,
+                "high": 0.0012871736558606004,
+                "positive_fraction": 0.68
+              }
+            },
+            "no_message": {
+              "auc": {
+                "low": -0.0002718131434945185,
+                "high": 0.0011264775379507001,
+                "positive_fraction": 0.802
+              },
+              "ap": {
+                "low": -0.0016737904907808796,
+                "high": 0.003749313625050507,
+                "positive_fraction": 0.726
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "new_partition_fits": 48,
+  "cumulative_partition_fits": 264,
+  "new_historical_neural_fits": 76,
+  "new_outer_neural_fits": 0,
+  "historical_reference_contexts_excluded_from_fit_counts": true,
+  "outer_skipped_because_all_partition_gates_failed": true,
+  "full_scores_recomputed": true,
+  "old_csv_preserved": true,
+  "confirmed_final_innovations": 0,
+  "existing_default_replaced": false,
+  "limitations": [
+    "All partitions are overlapping, previously exposed development data.",
+    "Engineering LncDrug tolerance is 0.001, not a statistical noninferiority claim.",
+    "Bootstrap intervals condition on selected predictors and exclude selection uncertainty."
+  ],
+  "sha256": "0bcd466dbcd52eea89ba4f5b343beb01a613e9a2c71ab7efc8b2c3ebdf530425"
+}

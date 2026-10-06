@@ -1,0 +1,2794 @@
+{
+  "raw_records": 84,
+  "unique_records": 82,
+  "groups": [
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2405.16519v3",
+        "title": "Fourier Sliced-Wasserstein Embedding for Multisets and Measures",
+        "date": "2024-05-26T11:04:41Z",
+        "updated": "2025-04-14T13:33:41Z",
+        "authors": [
+          "Tal Amir",
+          "Nadav Dym"
+        ],
+        "abstract": "We present the Fourier Sliced-Wasserstein (FSW) embedding - a novel method to embed multisets and measures over R^d into Euclidean space. Our proposed embedding approximately preserves the sliced Wasserstein distance on distributions, thereby yielding geometrically meaningful representations that better capture the structure of the input. Moreover, it is injective on measures and bi-Lipschitz on multisets - a significant advantage over prevalent methods based on sum- or max-pooling, which are provably not bi-Lipschitz, and, in many cases, not even injective. The required output dimension for these guarantees is near-optimal: roughly 2Nd, where N is the maximal input multiset size. Furthermore, we prove that it is impossible to embed distributions over R^d into Euclidean space in a bi-Lipschitz manner. Thus, the metric properties of our embedding are, in a sense, the best possible. Through numerical experiments, we demonstrate that our method yields superior multiset representations that improve performance in practical learning tasks. Specifically, we show that (a) a simple combination of the FSW embedding with an MLP achieves state-of-the-art performance in learning the (non-sliced) Wasserstein distance; and (b) replacing max-pooling with the FSW embedding makes PointNet significantly more robust to parameter reduction, with only minor performance degradation even after a 40-fold reduction.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2405.16519v3",
+        "http://arxiv.org/abs/2504.02544v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2502.05435v2",
+        "title": "Unbiased Sliced Wasserstein Kernels for High-Quality Audio Captioning",
+        "date": "2025-02-08T03:47:06Z",
+        "updated": "2026-02-26T08:50:46Z",
+        "authors": [
+          "Manh Luong",
+          "Khai Nguyen",
+          "Dinh Phung",
+          "Gholamreza Haffari",
+          "Lizhen Qu"
+        ],
+        "abstract": "Audio captioning systems face a fundamental challenge: teacher-forcing training creates exposure bias that leads to caption degeneration during inference. While contrastive methods have been proposed as solutions, they typically fail to capture the crucial temporal relationships between acoustic and linguistic modalities. We address this limitation by introducing the unbiased sliced Wasserstein RBF (USW-RBF) kernel with rotary positional embedding, specifically designed to preserve temporal information across modalities. Our approach offers a practical advantage: the kernel enables efficient stochastic gradient optimization, making it computationally feasible for real-world applications. Building on this foundation, we develop a complete audio captioning framework that integrates stochastic decoding to further mitigate caption degeneration. Extensive experiments on AudioCaps and Clotho datasets demonstrate that our method significantly improves caption quality, lexical diversity, and text-to-audio retrieval accuracy. Furthermore, we demonstrate the generalizability of our USW-RBF kernel by applying it to audio reasoning tasks, where it enhances the reasoning capabilities of large audio language models on the CompA-R in terms of correctness and quality. Our kernel also improves the reasoning accuracy of the MMAU-test-mini benchmarks by $4\\%$. These results establish our approach as a powerful and generalizable solution for cross-modal alignment challenges in audio-language tasks.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2502.05435v2",
+        "10.52202/085713-3166"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2510.10233v2",
+        "title": "Rigid Invariant Sliced Wasserstein via Independent Embeddings",
+        "date": "2025-10-11T14:15:57Z",
+        "updated": "2026-04-10T14:09:52Z",
+        "authors": [
+          "Zakk Heile",
+          "Peilin He",
+          "Jayson Tran",
+          "Alice Wang",
+          "Shrikant Chand"
+        ],
+        "abstract": "Comparing probability measures modulo unknown rigid transformations is a central challenge in geometric data analysis. Classical optimal transport (OT) distances, including Wasserstein and sliced Wasserstein, are sensitive to rotations and reflections, whereas Gromov-Wasserstein (GW) and Procrustes-Wasserstein (PW) distances are invariant to isometries but computationally prohibitive for large datasets. We introduce Rigid-Invariant Sliced Wasserstein via Independent Embeddings (RISWIE), a scalable distance that combines the invariance of NP-hard approaches with the efficiency of projection-based OT. RISWIE utilizes data-adaptive bases and matches optimal signed permutations along axes according to distributional similarity to achieve rigid invariance with nearly linear complexity in the sample size. We prove bounds relating RISWIE to GW in special cases and demonstrate dimension-independent statistical stability. Our experiments on cellular imaging and 3D human meshes demonstrate that RISWIE outperforms GW and PW in clustering tasks and discriminative capability while significantly reducing runtime.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2510.10233v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2506.02203v1",
+        "title": "Constrained Sliced Wasserstein Embedding",
+        "date": "2025-06-02T19:43:40Z",
+        "updated": "2025-06-02T19:43:40Z",
+        "authors": [
+          "Navid NaderiAlizadeh",
+          "Darian Salehi",
+          "Xinran Liu",
+          "Soheil Kolouri"
+        ],
+        "abstract": "Sliced Wasserstein (SW) distances offer an efficient method for comparing high-dimensional probability measures by projecting them onto multiple 1-dimensional probability distributions. However, identifying informative slicing directions has proven challenging, often necessitating a large number of slices to achieve desirable performance and thereby increasing computational complexity. We introduce a constrained learning approach to optimize the slicing directions for SW distances. Specifically, we constrain the 1D transport plans to approximate the optimal plan in the original space, ensuring meaningful slicing directions. By leveraging continuous relaxations of these transport plans, we enable a gradient-based primal-dual approach to train the slicer parameters, alongside the remaining model parameters. We demonstrate how this constrained slicing approach can be applied to pool high-dimensional embeddings into fixed-length permutation-invariant representations. Numerical results on foundation models trained on images, point clouds, and protein sequences showcase the efficacy of the proposed constrained learning approach in learning more informative slicing directions. Our implementation code can be found at https://github.com/Stranja572/constrainedswe.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2506.02203v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2402.03838v2",
+        "title": "Gaussian process regression with Sliced Wasserstein Weisfeiler-Lehman graph kernels",
+        "date": "2024-02-06T09:35:40Z",
+        "updated": "2024-03-11T12:16:24Z",
+        "authors": [
+          "Raphaël Carpintero Perez",
+          "Sébastien da Veiga",
+          "Josselin Garnier",
+          "Brian Staber"
+        ],
+        "abstract": "Supervised learning has recently garnered significant attention in the field of computational physics due to its ability to effectively extract complex patterns for tasks like solving partial differential equations, or predicting material properties. Traditionally, such datasets consist of inputs given as meshes with a large number of nodes representing the problem geometry (seen as graphs), and corresponding outputs obtained with a numerical solver. This means the supervised learning model must be able to handle large and sparse graphs with continuous node attributes. In this work, we focus on Gaussian process regression, for which we introduce the Sliced Wasserstein Weisfeiler-Lehman (SWWL) graph kernel. In contrast to existing graph kernels, the proposed SWWL kernel enjoys positive definiteness and a drastic complexity reduction, which makes it possible to process datasets that were previously impossible to handle. The new kernel is first validated on graph classification for molecular datasets, where the input graphs have a few tens of nodes. The efficiency of the SWWL kernel is then illustrated on graph regression in computational fluid dynamics and solid mechanics, where the input graphs are made up of tens of thousands of nodes.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2402.03838v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2602.06539v1",
+        "title": "Revisiting the Sliced Wasserstein Kernel for persistence diagrams: a Figalli-Gigli approach",
+        "date": "2026-02-06T09:43:35Z",
+        "updated": "2026-02-06T09:43:35Z",
+        "authors": [
+          "Marc Janthial",
+          "Théo Lacombe"
+        ],
+        "abstract": "The Sliced Wasserstein Kernel (SWK) for persistence diagrams was introduced in (Carri{è}re et al. 2017) as a powerful tool to implicitly embed persistence diagrams in a Hilbert space with reasonable distortion. This kernel is built on the intuition that the Figalli-Gigli distance-that is the partial matching distance routinely used to compare persistence diagrams-resembles the Wasserstein distance used in the optimal transport literature, and that the later could be sliced to define a positive definite kernel on the space of persistence diagrams. This efficient construction nonetheless relies on ad-hoc tweaks on the Wasserstein distance to account for the peculiar geometry of the space of persistence diagrams. In this work, we propose to revisit this idea by directly using the Figalli-Gigli distance instead of the Wasserstein one as the building block of our kernel. On the theoretical side, our sliced Figalli-Gigli kernel (SFGK) shares most of the important properties of the SWK of Carri{è}re et al., including distortion results on the induced embedding and its ease of computation, while being more faithful to the natural geometry of persistence diagrams. In particular, it can be directly used to handle infinite persistence diagrams and persistence measures. On the numerical side, we show that the SFGK performs as well as the SWK on benchmark applications.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2602.06539v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2509.20508v2",
+        "title": "Fast Estimation of Wasserstein Distances via Regression on Sliced Wasserstein Distances",
+        "date": "2025-09-24T19:30:53Z",
+        "updated": "2026-03-03T03:58:31Z",
+        "authors": [
+          "Khai Nguyen",
+          "Hai Nguyen",
+          "Nhat Ho"
+        ],
+        "abstract": "We address the problem of efficiently computing Wasserstein distances for multiple pairs of distributions drawn from a meta-distribution. To this end, we propose a fast estimation method based on regressing Wasserstein distance on sliced Wasserstein (SW) distances. Specifically, we leverage both standard SW distances, which provide lower bounds, and lifted SW distances, which provide upper bounds, as predictors of the true Wasserstein distance. To ensure parsimony, we introduce two linear models: an unconstrained model with a closed-form least-squares solution, and a constrained model that uses only half as many parameters. We show that accurate models can be learned from a small number of distribution pairs. Once estimated, the model can predict the Wasserstein distance for any pair of distributions via a linear combination of SW distances, making it highly efficient. Empirically, we validate our approach on diverse tasks, including Gaussian mixtures, point-cloud classification, and Wasserstein-space visualizations for 3D point clouds. Across various datasets such as MNIST point clouds, ShapeNetV2, MERFISH Cell Niches, and scRNA-seq, our method consistently provides a better approximation of Wasserstein distance than the state-of-the-art Wasserstein embedding model, Wasserstein Wormhole, particularly in low-data regimes. Finally, we demonstrate that our estimator can also accelerate Wormhole training, yielding \\textit{RG-Wormhole}.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2509.20508v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2505.20433v1",
+        "title": "Kernel Quantile Embeddings and Associated Probability Metrics",
+        "date": "2025-05-26T18:27:17Z",
+        "updated": "2025-05-26T18:27:17Z",
+        "authors": [
+          "Masha Naslidnyk",
+          "Siu Lun Chau",
+          "François-Xavier Briol",
+          "Krikamol Muandet"
+        ],
+        "abstract": "Embedding probability distributions into reproducing kernel Hilbert spaces (RKHS) has enabled powerful nonparametric methods such as the maximum mean discrepancy (MMD), a statistical distance with strong theoretical and computational properties. At its core, the MMD relies on kernel mean embeddings to represent distributions as mean functions in RKHS. However, it remains unclear if the mean function is the only meaningful RKHS representation. Inspired by generalised quantiles, we introduce the notion of kernel quantile embeddings (KQEs). We then use KQEs to construct a family of distances that: (i) are probability metrics under weaker kernel conditions than MMD; (ii) recover a kernelised form of the sliced Wasserstein distance; and (iii) can be efficiently estimated with near-linear cost. Through hypothesis testing, we show that these distances offer a competitive alternative to MMD and its fast approximations.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2505.20433v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2605.07786v2",
+        "title": "APEX: Assumption-free Projection-based Embedding eXamination Metric for Image Quality Assessment",
+        "date": "2026-05-08T14:21:51Z",
+        "updated": "2026-05-11T08:25:22Z",
+        "authors": [
+          "Caterina Gallegati",
+          "Monica Bianchini",
+          "Franco Scarselli",
+          "Vittorio Murino",
+          "Barbara Toniella Corradini"
+        ],
+        "abstract": "As generative models achieve unprecedented visual quality, the gold standard for image evaluation remains traditional feature-distribution metrics (e.g., FID). However, these metrics are provably hindered by the closed-vocabulary bottleneck of outdated features and the assumptive bias of rigid parametric formulations. Recent alternatives exploit modern backbones to solve the feature bottleneck, yet continue to suffer from parametric limitations. To close this gap, we introduce APEX (Assumption-free Projection-based Embedding eXamination), a novel evaluation framework leveraging the Sliced Wasserstein Distance as a mathematically grounded, assumption-free similarity measure. APEX inherits effective scalability to high-dimensional spaces, as we prove with theoretical and empirical evidences. Moreover, APEX is embedding-agnostic and uses two open-vocabulary foundation models, CLIP and DINOv2, as feature extractors. Benchmarking APEX against established baselines reveals superior robustness to visual degradations. Additionally, we show that APEX metrics exhibit intra- and cross-dataset stability, ensuring highly stable evaluations on out-of-domain datasets.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2605.07786v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2607.07773v1",
+        "title": "Graph-Regularized Deep Learning for EEG-Based Emotion Recognition with Psychologically-Grounded Label Structure",
+        "date": "2026-07-08T16:41:51Z",
+        "updated": "2026-07-08T16:41:51Z",
+        "authors": [
+          "Dongyang Kuang",
+          "Zizheng Ma",
+          "Yushan Zhang",
+          "Xiaocong Zeng"
+        ],
+        "abstract": "EEG-based emotion recognition is critical for mental health monitoring and affective brain-computer interfaces, yet existing deep learning approaches often treat emotion classes as isolated labels, ignoring their psychological interdependencies. We propose a graph-regularized learning framework that conceptualizes emotions as nodes in a graph where edges encode proximity based on dimensional emotion theories. We adapt three complementary regularization strategies--Graph Label Smoothing (intuitive soft labeling), Commuting distance on graph via Graph Laplacian (spectral graph theory), and Sliced Wasserstein Distance (optimal transport on graph)--ordered by increasing computational complexity. These strategies penalize model predictions that deviate from the established emotion topology. Our framework is evaluated across three representative backbone architectures: AudioTransformer (pure transformer), Conformer (CNN-transformer hybrid), and DCGNN (causal graph neural network), demonstrating architecture-agnostic benefits. Experiments on SEED-IV (4 classes) and SEED-V (5 classes) datasets show consistent improvements: best case up to +5.42% accuracy and 39% reduction in psychologically implausible misclassifications. Ultimately, our framework help raise the upper bound of performance achievable with standard approaches. Code will be released.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2607.07773v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2404.06661v1",
+        "title": "Efficient Denoising using Score Embedding in Score-based Diffusion Models",
+        "date": "2024-04-10T00:05:55Z",
+        "updated": "2024-04-10T00:05:55Z",
+        "authors": [
+          "Andrew S. Na",
+          "William Gao",
+          "Justin W. L. Wan"
+        ],
+        "abstract": "It is well known that training a denoising score-based diffusion models requires tens of thousands of epochs and a substantial number of image data to train the model. In this paper, we propose to increase the efficiency in training score-based diffusion models. Our method allows us to decrease the number of epochs needed to train the diffusion model. We accomplish this by solving the log-density Fokker-Planck (FP) Equation numerically to compute the score \\textit{before} training. The pre-computed score is embedded into the image to encourage faster training under slice Wasserstein distance. Consequently, it also allows us to decrease the number of images we need to train the neural network to learn an accurate score. We demonstrate through our numerical experiments the improved performance of our proposed method compared to standard score-based diffusion models. Our proposed method achieves a similar quality to the standard method meaningfully faster.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2404.06661v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2509.16999v1",
+        "title": "Persistence Spheres: Bi-continuous Representations of Persistence Diagrams",
+        "date": "2025-09-21T09:33:57Z",
+        "updated": "2025-09-21T09:33:57Z",
+        "authors": [
+          "Matteo Pegoraro"
+        ],
+        "abstract": "We introduce persistence spheres, a novel functional representation of persistence diagrams. Unlike existing embeddings (such as persistence images, landscapes, or kernel methods), persistence spheres provide a bi-continuous mapping: they are Lipschitz continuous with respect to the 1-Wasserstein distance and admit a continuous inverse on their image. This ensures, in a theoretically optimal way, both stability and geometric fidelity, making persistence spheres the representation that most closely mirrors the Wasserstein geometry of PDs in linear space. We derive explicit formulas for persistence spheres, showing that they can be computed efficiently and parallelized with minimal overhead. Empirically, we evaluate them on diverse regression and classification tasks involving functional data, time series, graphs, meshes, and point clouds. Across these benchmarks, persistence spheres consistently deliver state-of-the-art or competitive performance compared to persistence images, persistence landscapes, and the sliced Wasserstein kernel.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2509.16999v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2506.09682v1",
+        "title": "Wasserstein Hypergraph Neural Network",
+        "date": "2025-06-11T12:59:21Z",
+        "updated": "2025-06-11T12:59:21Z",
+        "authors": [
+          "Iulia Duta",
+          "Pietro Liò"
+        ],
+        "abstract": "The ability to model relational information using machine learning has driven advancements across various domains, from medicine to social science. While graph representation learning has become mainstream over the past decade, representing higher-order relationships through hypergraphs is rapidly gaining momentum. In the last few years, numerous hypergraph neural networks have emerged, most of them falling under a two-stage, set-based framework. The messages are sent from nodes to edges and then from edges to nodes. However, most of the advancement still takes inspiration from the graph counterpart, often simplifying the aggregations to basic pooling operations. In this paper we are introducing Wasserstein Hypergraph Neural Network, a model that treats the nodes and hyperedge neighbourhood as distributions and aggregate the information using Sliced Wasserstein Pooling. Unlike conventional aggregators such as mean or sum, which only capture first-order statistics, our approach has the ability to preserve geometric properties like the shape and spread of distributions. This enables the learned embeddings to reflect how easily one hyperedge distribution can be transformed into another, following principles of optimal transport. Experimental results demonstrate that applying Wasserstein pooling in a hypergraph setting significantly benefits node classification tasks, achieving top performance on several real-world datasets.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2506.09682v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2411.06055v1",
+        "title": "Linear Spherical Sliced Optimal Transport: A Fast Metric for Comparing Spherical Data",
+        "date": "2024-11-09T03:36:59Z",
+        "updated": "2024-11-09T03:36:59Z",
+        "authors": [
+          "Xinran Liu",
+          "Yikun Bai",
+          "Rocío Díaz Martín",
+          "Kaiwen Shi",
+          "Ashkan Shahbazi",
+          "Bennett A. Landman",
+          "Catie Chang",
+          "Soheil Kolouri"
+        ],
+        "abstract": "Efficient comparison of spherical probability distributions becomes important in fields such as computer vision, geosciences, and medicine. Sliced optimal transport distances, such as spherical and stereographic spherical sliced Wasserstein distances, have recently been developed to address this need. These methods reduce the computational burden of optimal transport by slicing hyperspheres into one-dimensional projections, i.e., lines or circles. Concurrently, linear optimal transport has been proposed to embed distributions into \\( L^2 \\) spaces, where the \\( L^2 \\) distance approximates the optimal transport distance, thereby simplifying comparisons across multiple distributions. In this work, we introduce the Linear Spherical Sliced Optimal Transport (LSSOT) framework, which utilizes slicing to embed spherical distributions into \\( L^2 \\) spaces while preserving their intrinsic geometry, offering a computationally efficient metric for spherical probability measures. We establish the metricity of LSSOT and demonstrate its superior computational efficiency in applications such as cortical surface registration, 3D point cloud interpolation via gradient flow, and shape embedding. Our results demonstrate the significant computational benefits and high accuracy of LSSOT in these applications.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2411.06055v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2508.02364v2",
+        "title": "A Novel Sliced Fused Gromov-Wasserstein Distance",
+        "date": "2025-08-04T12:51:10Z",
+        "updated": "2025-11-13T15:51:35Z",
+        "authors": [
+          "Moritz Piening",
+          "Robert Beinert"
+        ],
+        "abstract": "The Gromov--Wasserstein (GW) distance and its fused extension (FGW) are powerful tools for comparing heterogeneous data. Their computation is, however, challenging since both distances are based on non-convex, quadratic optimal transport (OT) problems. Leveraging 1D OT, a sliced version of GW has been proposed to lower the computational burden. Unfortunately, this sliced version is restricted to Euclidean geometry and loses invariance to isometries, strongly limiting its application in practice. To overcome these issues, we propose a novel slicing technique for GW as well as for FGW that is based on an appropriate lower bound, hierarchical OT, and suitable quadrature rules for the underlying 1D OT problems. Our novel sliced FGW significantly reduces the numerical effort while remaining invariant to isometric transformations and allowing the comparison of arbitrary geometries. We show that our new distance actually defines a pseudo-metric for structured spaces that bounds FGW from below and study its interpolation properties between sliced Wasserstein and GW. Since we avoid the underlying quadratic program, our sliced distance is numerically more robust and reliable than the original GW and FGW distance; especially in the context of shape retrieval and graph isomorphism testing.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2508.02364v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2604.26218v1",
+        "title": "ViBE: Visual-to-M/EEG Brain Encoding via Spatio-Temporal VAE and Distribution-Aligned Projection",
+        "date": "2026-04-29T01:53:46Z",
+        "updated": "2026-04-29T01:53:46Z",
+        "authors": [
+          "Ganxi Xu",
+          "Zhao-Rong Lai",
+          "Yuting Tang",
+          "Yonghao Song",
+          "Shuyan Zhou",
+          "Guoxu Zhou",
+          "Boyu Wang",
+          "Jian Zhu",
+          "Jinyi Long"
+        ],
+        "abstract": "Brain encoding models not only serve to decipher how visual stimuli are transformed into neural responses, but also represent a critical step toward visual prostheses that restore vision for patients with severe vision disorders. Brain encoding involves two fundamental steps: achieving faithful reconstruction of neural responses and establishing cross-modal alignment between visual stimuli and neural responses. To this end, we propose ViBE, a novel brain encoding framework for generating magnetoencephalography (MEG) and electroencephalography (EEG) signals from visual stimuli. Specifically, we first design a spatio-temporal convolutional variational autoencoder (TSC-VAE) that captures the spatio-temporal characteristics of M/EEG signals for effective neural response reconstruction. To bridge the modality gap between visual features and neural representations, we employ Q-Former to map CLIP image embeddings to the TSC-VAE latent space, producing neural proxy embeddings. For comprehensive cross-modal alignment, we combine mean squared error (MSE) loss for point-wise feature matching with sliced Wasserstein distance (SWD) for probability distribution alignment between the neural proxy embeddings and TSC-VAE latent embeddings. We conduct extensive experiments on the THINGS-EEG2 and THINGS-MEG datasets, demonstrating the effectiveness of our approach in generating high-quality M/EEG signals from visual stimuli.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2604.26218v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2603.15384v2",
+        "title": "Persistence Spheres: a Bi-continuous Linear Representation of Measures for Partial Optimal Transport",
+        "date": "2026-03-16T14:58:32Z",
+        "updated": "2026-07-29T11:46:09Z",
+        "authors": [
+          "Matteo Pegoraro"
+        ],
+        "abstract": "We improve and extend persistence spheres, introduced in~\\cite{pegoraro2025persistence}. Persistence spheres map an integrable measure $μ$ on the upper half-plane, including persistence diagrams (PDs) as counting measures, to a function $S(μ)\\in C(\\mathbb{S}^2)$, and the map is stable with respect to 1-Wasserstein partial transport distance $\\mathrm{POT}_1$. Moreover, to the best of our knowledge, persistence spheres are the first explicit representation used in topological machine learning for which continuity of the inverse on the image is established at every compactly supported target. Recent bounded-cardinality bi-Lipschitz embedding results in partial transport spaces, despite being powerful, are not given by the kind of explicit summary map considered here. Our construction is rooted in convex geometry: for positive measures, the defining ReLU integral is the support function of the lift zonoid. Building on~\\cite{pegoraro2025persistence}, we refine the definition to better match the $\\mathrm{POT}_1$ deletion mechanism, encoding partial transport via a signed diagonal augmentation. In particular, for integrable $μ$, the uniform norm between $S(0)$ and $S(μ)$ depends only on the persistence of $μ$, without any need of ad-hoc re-weightings, reflecting optimal transport to the diagonal at persistence cost. This yields a parameter-free representation at the level of measures (up to numerical discretization), while accommodating future extensions where $μ$ is a smoothed measure derived from PDs (e.g., persistence intensity functions~\\citep{wu2024estimation}). Across clustering, regression, and classification tasks involving functional data, time series, graphs, meshes, and point clouds, the updated persistence spheres are competitive and often improve upon persistence images, persistence landscapes, persistence splines, and sliced Wasserstein kernel baselines.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2603.15384v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2603.02098v2",
+        "title": "Efficient and High-Fidelity Omni Modality Retrieval",
+        "date": "2026-03-02T17:19:55Z",
+        "updated": "2026-03-24T02:56:17Z",
+        "authors": [
+          "Chuong Huynh",
+          "Manh Luong",
+          "Abhinav Shrivastava"
+        ],
+        "abstract": "Multimodal retrieval is the task of aggregating information from queries across heterogeneous modalities to retrieve desired targets. State-of-the-art multimodal retrieval models can understand complex queries, yet they are typically limited to two modalities: text and vision. This limitation impedes the development of universal retrieval systems capable of comprehending queries that combine more than two modalities. To advance toward this goal, we present OmniRet, the first retrieval model capable of handling complex, composed queries spanning three key modalities: text, vision, and audio. Our OmniRet model addresses two critical challenges for universal retrieval: computational efficiency and representation fidelity. First, feeding massive token sequences from modality-specific encoders to Large Language Models (LLMs) is computationally inefficient. We therefore introduce an attention-based resampling mechanism to generate compact, fixed-size representations from these sequences. Second, compressing rich omni-modal data into a single embedding vector inevitably causes information loss and discards fine-grained details. We propose Attention Sliced Wasserstein Pooling to preserve these fine-grained details, leading to improved omni-modal representations. OmniRet is trained on an aggregation of approximately 6 million query-target pairs spanning 30 datasets. We benchmark our model on 13 retrieval tasks and a MMEBv2 subset. Our model demonstrates significant improvements on composed query, audio and video retrieval tasks, while achieving on-par performance with state-of-the-art models on others. Furthermore, we curate a new Audio-Centric Multimodal Benchmark (ACM). This new benchmark introduces two critical, previously missing tasks-composed audio retrieval and audio-visual retrieval to more comprehensively evaluate a model's omni-modal embedding capacity.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2603.02098v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2508.12519v2",
+        "title": "An Introduction to Sliced Optimal Transport",
+        "date": "2025-08-17T22:53:19Z",
+        "updated": "2025-10-14T06:29:47Z",
+        "authors": [
+          "Khai Nguyen"
+        ],
+        "abstract": "Sliced Optimal Transport (SOT) is a rapidly developing branch of optimal transport (OT) that exploits the tractability of one-dimensional OT problems. By combining tools from OT, integral geometry, and computational statistics, SOT enables fast and scalable computation of distances, barycenters, and kernels for probability measures, while retaining rich geometric structure. This paper provides a comprehensive review of SOT, covering its mathematical foundations, methodological advances, computational methods, and applications. We discuss key concepts of OT and one-dimensional OT, the role of tools from integral geometry such as Radon transform in projecting measures, and statistical techniques for estimating sliced distances. The paper further explores recent methodological advances, including non-linear projections, improved Monte Carlo approximations, statistical estimation techniques for one-dimensional optimal transport, weighted slicing techniques, and transportation plan estimation methods. Variational problems, such as minimum sliced Wasserstein estimation, barycenters, gradient flows, kernel constructions, and embeddings are examined alongside extensions to unbalanced, partial, multi-marginal, and Gromov-Wasserstein settings. Applications span machine learning, statistics, computer graphics and computer visions, highlighting SOT's versatility as a practical computational tool. This work will be of interest to researchers and practitioners in machine learning, data sciences, and computational disciplines seeking efficient alternatives to classical OT.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2508.12519v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2505.01932v2",
+        "title": "OT-Talk: Animating 3D Talking Head with Optimal Transportation",
+        "date": "2025-05-03T21:49:23Z",
+        "updated": "2025-05-10T19:23:04Z",
+        "authors": [
+          "Xinmu Wang",
+          "Xiang Gao",
+          "Xiyun Song",
+          "Heather Yu",
+          "Zongfang Lin",
+          "Liang Peng",
+          "Xianfeng Gu"
+        ],
+        "abstract": "Animating 3D head meshes using audio inputs has significant applications in AR/VR, gaming, and entertainment through 3D avatars. However, bridging the modality gap between speech signals and facial dynamics remains a challenge, often resulting in incorrect lip syncing and unnatural facial movements. To address this, we propose OT-Talk, the first approach to leverage optimal transportation to optimize the learning model in talking head animation. Building on existing learning frameworks, we utilize a pre-trained Hubert model to extract audio features and a transformer model to process temporal sequences. Unlike previous methods that focus solely on vertex coordinates or displacements, we introduce Chebyshev Graph Convolution to extract geometric features from triangulated meshes. To measure mesh dissimilarities, we go beyond traditional mesh reconstruction errors and velocity differences between adjacent frames. Instead, we represent meshes as probability measures and approximate their surfaces. This allows us to leverage the sliced Wasserstein distance for modeling mesh variations. This approach facilitates the learning of smooth and accurate facial motions, resulting in coherent and natural facial animations. Our experiments on two public audio-mesh datasets demonstrate that our method outperforms state-of-the-art techniques both quantitatively and qualitatively in terms of mesh reconstruction accuracy and temporal alignment. In addition, we conducted a user perception study with 20 volunteers to further assess the effectiveness of our approach.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2505.01932v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2606.02572v1",
+        "title": "VISReg: Variance-Invariance-Sketching Regularization for JEPA training",
+        "date": "2026-06-01T17:58:01Z",
+        "updated": "2026-06-01T17:58:01Z",
+        "authors": [
+          "Haiyu Wu",
+          "Randall Balestriero",
+          "Morgan Levine"
+        ],
+        "abstract": "Self-supervised learning methods prevent embedding collapse via modeling heuristics or explicit regularization of the embedding space. Among the latter, VICReg decomposes regularization into variance and covariance objectives, offering flexibility and interpretability. However, covariance captures only second-order statistics -- encouraging decorrelation but failing to enforce the full distributional shape needed for stable training. Sketching-based methods such as SIGReg address this by aligning embeddings to an isotropic Gaussian, but lack flexibility and suffer from vanishing gradients under collapse. We propose Variance-Invariance-Sketching Regularization (VISReg), which replaces covariance with a Sliced-Wasserstein-based sketching objective that enforces full distributional shape, while retaining a variance term for scale control. By decoupling scale and shape, VISReg combines VICReg's flexibility with the distributional rigor of sketching methods, providing robust gradients even under collapse. We show that VISReg scales linearly, outperforms existing regularization on low-quality datasets, and is resilient to long-tailed and low-rank regimes. Pre-trained on ImageNet-1K, VISReg achieves state-of-the-art performance on out-of-distribution datasets. Pre-trained on ImageNet-22K, it matches DINOv2's OOD performance despite the latter using 10x more data (LVD-142M). Project and code: https://haiyuwu.github.io/visreg.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2606.02572v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2407.01879v3",
+        "title": "Disintegrated optimal transport for metric fiber bundles",
+        "date": "2024-07-02T01:39:09Z",
+        "updated": "2026-02-14T07:01:11Z",
+        "authors": [
+          "Jun Kitagawa",
+          "Asuka Takatsu"
+        ],
+        "abstract": "We define a new two-parameter family of metrics on subsets of Borel probability measures on general metric fiber bundles, called the $ \\textit{disintegrated Monge--Kantorovich metrics}$. This family contains the classical Monge-Kantorovich metrics, linearized optimal transport distance, and fibered Wasserstein distances, and certain cases admit isometric embeddings of the sliced and max-sliced Wasserstein spaces. We prove these metrics are complete, separable (except an endpoint case), and geodesic, with a dual representation. Our results cannot be obtained by applying the theory of $L^q$ maps valued in spaces of probability measures, in fact the $L^q$ map case can be recovered from our results by taking the underlying bundle as a trivial product bundle, and the geodesicness and duality results are new even in the fibered Wasserstein case.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2407.01879v3"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2403.12636v2",
+        "title": "A Practical Guide to Sample-based Statistical Distances for Evaluating Generative Models in Science",
+        "date": "2024-03-19T11:16:14Z",
+        "updated": "2024-10-10T09:51:27Z",
+        "authors": [
+          "Sebastian Bischoff",
+          "Alana Darcher",
+          "Michael Deistler",
+          "Richard Gao",
+          "Franziska Gerken",
+          "Manuel Gloeckler",
+          "Lisa Haxel",
+          "Jaivardhan Kapoor",
+          "Janne K Lappalainen",
+          "Jakob H Macke",
+          "Guy Moss",
+          "Matthijs Pals",
+          "Felix Pei",
+          "Rachel Rapp",
+          "A Erdem Sağtekin",
+          "Cornelius Schröder",
+          "Auguste Schulz",
+          "Zinovia Stefanidi",
+          "Shoji Toyota",
+          "Linda Ulmer",
+          "Julius Vetter"
+        ],
+        "abstract": "Generative models are invaluable in many fields of science because of their ability to capture high-dimensional and complicated distributions, such as photo-realistic images, protein structures, and connectomes. How do we evaluate the samples these models generate? This work aims to provide an accessible entry point to understanding popular sample-based statistical distances, requiring only foundational knowledge in mathematics and statistics. We focus on four commonly used notions of statistical distances representing different methodologies: Using low-dimensional projections (Sliced-Wasserstein; SW), obtaining a distance using classifiers (Classifier Two-Sample Tests; C2ST), using embeddings through kernels (Maximum Mean Discrepancy; MMD), or neural networks (Fréchet Inception Distance; FID). We highlight the intuition behind each distance and explain their merits, scalability, complexity, and pitfalls. To demonstrate how these distances are used in practice, we evaluate generative models from different scientific domains, namely a model of decision-making and a model generating medical images. We showcase that distinct distances can give different results on similar data. Through this guide, we aim to help researchers to use, interpret, and evaluate statistical distances for generative models in science.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2403.12636v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.52202/085713-5439",
+        "doi": "10.52202/085713-5439",
+        "title": "Differentiable Generalized Sliced Wasserstein Plans",
+        "authors": [
+          {
+            "given": "Laetitia",
+            "family": "Chapel",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "IRISA - UBS"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Romain",
+            "family": "Tavenard",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Univ. Rennes 2 / IRISA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Samuel",
+            "family": "Vaiter",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "CNRS"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025
+          ]
+        ],
+        "venue": [
+          "Advances in Neural Information Processing Systems 38"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.52202/085713-5439",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.52202/085713-5439"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.52202/085713-5489",
+        "doi": "10.52202/085713-5489",
+        "title": "Color Conditional Generation with Sliced Wasserstein Guidance",
+        "authors": [
+          {
+            "given": "Alexander",
+            "family": "Lobashev",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Skoltech"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Maria",
+            "family": "Larchenko",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Magicly AI"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Dmitry",
+            "family": "Guskov",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025
+          ]
+        ],
+        "venue": [
+          "Advances in Neural Information Processing Systems 38"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.52202/085713-5489",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.52202/085713-5489"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.52202/079017-3434",
+        "doi": "10.52202/079017-3434",
+        "title": "Hierarchical Hybrid Sliced Wasserstein: A Scalable Metric for Heterogeneous Joint Distributions",
+        "authors": [
+          {
+            "given": "Khai",
+            "family": "Nguyen",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nhat",
+            "family": "Ho",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2024
+          ]
+        ],
+        "venue": [
+          "Advances in Neural Information Processing Systems 37"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.52202/079017-3434",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.52202/079017-3434"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1016/j.cad.2026.104100",
+        "doi": "10.1016/j.cad.2026.104100",
+        "title": "A sliced-Wasserstein and neural network framework for statistically controllable 3D microstructure reconstruction",
+        "authors": [
+          {
+            "given": "Zhenchuan",
+            "family": "Ma",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Qizhi",
+            "family": "Teng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Pengcheng",
+            "family": "Yan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lindong",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kirill M.",
+            "family": "Gerke",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Marina V.",
+            "family": "Karsanina",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8399-3172",
+            "authenticated-orcid": false,
+            "given": "Xiaohai",
+            "family": "He",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2026,
+            9
+          ]
+        ],
+        "venue": [
+          "Computer-Aided Design"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1016/j.cad.2026.104100",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1016/j.cad.2026.104100"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1016/j.neunet.2025.108086",
+        "doi": "10.1016/j.neunet.2025.108086",
+        "title": "Graph convolutional network with adaptive grouping aggregation strategy",
+        "authors": [
+          {
+            "given": "Ruixiang",
+            "family": "Wang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Chunxia",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Chunhong",
+            "family": "Pan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2026,
+            2
+          ]
+        ],
+        "venue": [
+          "Neural Networks"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1016/j.neunet.2025.108086",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1016/j.neunet.2025.108086"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1109/ijcnn60899.2024.10650951",
+        "doi": "10.1109/ijcnn60899.2024.10650951",
+        "title": "PNAHN: Parallel Neighbor Aggregation for Heterogeneous Graph Neural Network",
+        "authors": [
+          {
+            "given": "Fan",
+            "family": "Li",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Chinese Academy of Sciences,School of Engineering Science,Beijing,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Kaihang",
+            "family": "Dou",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Chinese Academy of Sciences,School of Mathematical Sciences,Beijing,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Suixiang",
+            "family": "Gao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Chinese Academy of Sciences,Zhongguancun Laboratory,Beijing,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2024,
+            6,
+            30
+          ]
+        ],
+        "venue": [
+          "2024 International Joint Conference on Neural Networks (IJCNN)"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1109/ijcnn60899.2024.10650951",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1109/ijcnn60899.2024.10650951"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.2139/ssrn.5007895",
+        "doi": "10.2139/ssrn.5007895",
+        "title": "Rsea-Mvgnn: Multi-View Graph Neural Network with Reliable Structural Enhancement and Aggregation",
+        "authors": [
+          {
+            "given": "Junyu",
+            "family": "Chen",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Long",
+            "family": "Shi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Badong",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2024
+          ]
+        ],
+        "venue": null,
+        "abstract": null,
+        "url": "https://doi.org/10.2139/ssrn.5007895",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.2139/ssrn.5007895"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.2118/223907-ms",
+        "doi": "10.2118/223907-ms",
+        "title": "Coupled Graph Neural Network and Fourier Neural Operator Architecture for Ensemble Workflows in 3d Reservoir Simulation",
+        "authors": [
+          {
+            "given": "Surya Teja",
+            "family": "Sathujoda",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "SLB"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Soham",
+            "family": "Sheth",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "SLB"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025,
+            3,
+            18
+          ]
+        ],
+        "venue": [
+          "SPE Reservoir Simulation Conference"
+        ],
+        "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>Current reservoir simulators solve Advection-Diffusion-Reaction equations on unstructured grids to a high degree of accuracy but are computationally expensive to use in history matching, optimization and uncertainty quantification workflows. We propose a novel machine learning architecture to auto-regressively predict state variables and well outputs of a reservoir for an ensemble of cases with varying well configurations. This new approach constructs a Graph Neural Network (GNN) model to predict hyperbolic variables (i.e. saturations and compositions), a Fourier Neural Operator (FNO) model to predict elliptic variables (i.e. pressure), and a feed forward layer for well outputs. Predictions from the FNO model are fed into the GNN and are coupled in an auto-regressive manner to predict an arbitrary future state of the system given just the initial state of the reservoir. The outputs of the model at each timestep are then fed into the well output layer to predict outputs for each injector and producer well in the reservoir. Results are compared with solutions from a high-fidelity reservoir simulator applied to an ensemble workflow.</jats:p>",
+        "url": "https://doi.org/10.2118/223907-ms",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.2118/223907-ms"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1109/access.2025.3554970",
+        "doi": "10.1109/access.2025.3554970",
+        "title": "Graph-CAM: Explainable Image Features via Graph Neural Network in Fourier Domain",
+        "authors": [
+          {
+            "given": "Vladimir",
+            "family": "Shaposhnikov",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Skolkovo Institute of Science and Technology, Moscow, Russia"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Iaroslav",
+            "family": "Bespalov",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Artificial Intelligence Research Institute, Moscow, Russia"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2251-3221",
+            "authenticated-orcid": false,
+            "given": "Dmitry V.",
+            "family": "Dylov",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Skolkovo Institute of Science and Technology, Moscow, Russia"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025
+          ]
+        ],
+        "venue": [
+          "IEEE Access"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1109/access.2025.3554970",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1109/access.2025.3554970"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1016/j.patcog.2025.112208",
+        "doi": "10.1016/j.patcog.2025.112208",
+        "title": "Sliced Wasserstein graph kernel for measuring global topological similarity of brain functional networks",
+        "authors": [
+          {
+            "given": "Kai",
+            "family": "Ma",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Qi",
+            "family": "Zhu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xuyun",
+            "family": "Wen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xibei",
+            "family": "Yang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Daoqiang",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2026,
+            3
+          ]
+        ],
+        "venue": [
+          "Pattern Recognition"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1016/j.patcog.2025.112208",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1016/j.patcog.2025.112208"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1007/s00521-026-12151-7",
+        "doi": "10.1007/s00521-026-12151-7",
+        "title": "Rapid disaster damage assessment using deep adversarial sliced Wasserstein domain adaptation",
+        "authors": [
+          {
+            "given": "Fatma",
+            "family": "AlNaimi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Abdulaziz",
+            "family": "Al-Homaid",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ferda",
+            "family": "Ofli",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8742-5519",
+            "authenticated-orcid": false,
+            "given": "Abdelkader",
+            "family": "Baggag",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2026,
+            6
+          ]
+        ],
+        "venue": [
+          "Neural Computing and Applications"
+        ],
+        "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Disasters vary greatly in their nature, severity and underlying distribution. A streamlined model is crucial for assessing the impact of unexpected disasters. Previous methods rely on training with historical disaster data to evaluate the damage caused. However, in practice, this approach rarely achieves acceptable performance due to domain shift. Therefore, existing models need to be adapted to the emergent disaster quickly. A promising way to achieve this goal is through unsupervised domain adaptation (UDA). To this end, many advancements have been made toward better transferability of the model, including the Domain Adversarial Neural Network (DANN), which utilizes adversarial training to attain a domain-invariant feature extractor. The Adversarial sliced Wasserstein Domain Adaptation Network (AWDAN) further improves on DANN by using sliced Wasserstein distance as a measure between the features extracted from the source and target domains. Inspired by these advancements, we explore the utility of UDA approaches in the disaster response domain. Specifically, we perform extensive experiments on real-world images collected from Twitter during four major disasters. We train a total of 216 models to benchmark six methods across all possible source–target domain combinations. We improve the performance of the previous state-of-the-art DANN-based method for rapid damage assessment by enhancing it with a deeper backbone architecture to learn better feature representations. Furthermore, we adopt AWDAN to more effectively mitigate the distribution shift in data obtained from different disaster events. Experimental results demonstrate that the proposed approach achieves statistically significant performance gains, with up to 11.4% improvement in F1-score and 8.9% improvement in accuracy over the source-only model, consistently outperforming several state-of-the-art domain adaptation frameworks, including DANN, CORAL, MMD, and CDAN.</jats:p>",
+        "url": "https://doi.org/10.1007/s00521-026-12151-7",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1007/s00521-026-12151-7"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1109/mlsp62443.2025.11204346",
+        "doi": "10.1109/mlsp62443.2025.11204346",
+        "title": "Long Range Constraints for Neural Texture Synthesis Using Sliced Wasserstein Loss",
+        "authors": [
+          {
+            "given": "Liping",
+            "family": "Yin",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Michigan State University,CMSE Department"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Albert",
+            "family": "Chua",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Michigan State University,Department of Mathematics"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025,
+            8,
+            31
+          ]
+        ],
+        "venue": [
+          "2025 IEEE 35th International Workshop on Machine Learning for Signal Processing (MLSP)"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1109/mlsp62443.2025.11204346",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1109/mlsp62443.2025.11204346"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.2139/ssrn.5412905",
+        "doi": "10.2139/ssrn.5412905",
+        "title": "SWD-DA: Sliced Wasserstein Distance for Manifold-Aware Domain Adaptation",
+        "authors": [
+          {
+            "given": "Khushboo",
+            "family": "Mishra",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Tanima",
+            "family": "Dutta",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025
+          ]
+        ],
+        "venue": null,
+        "abstract": null,
+        "url": "https://doi.org/10.2139/ssrn.5412905",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.2139/ssrn.5412905"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1109/ijcnn64981.2025.11228191",
+        "doi": "10.1109/ijcnn64981.2025.11228191",
+        "title": "Intention Aggregation and Category Enhancement Graph Neural Network for Session-based Recommendation",
+        "authors": [
+          {
+            "given": "Xiangqian",
+            "family": "Geng",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Hebei University,School of Cyber Security and Computer,Hebei,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Deshen",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Hebei University,School of Cyber Security and Computer,Hebei,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Miaomiao",
+            "family": "He",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Hebei University,School of Cyber Security and Computer,Hebei,China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025,
+            6,
+            30
+          ]
+        ],
+        "venue": [
+          "2025 International Joint Conference on Neural Networks (IJCNN)"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1109/ijcnn64981.2025.11228191",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1109/ijcnn64981.2025.11228191"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.2139/ssrn.5639375",
+        "doi": "10.2139/ssrn.5639375",
+        "title": "SWD-DA: Sliced Wasserstein Distance for Manifold-Aware Domain Adaptation",
+        "authors": [
+          {
+            "given": "Khushboo",
+            "family": "Mishra",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Tanima",
+            "family": "Dutta",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025
+          ]
+        ],
+        "venue": null,
+        "abstract": null,
+        "url": "https://doi.org/10.2139/ssrn.5639375",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.2139/ssrn.5639375"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1007/s10489-024-05907-y",
+        "doi": "10.1007/s10489-024-05907-y",
+        "title": "Entity-relation aggregation mechanism graph neural network for knowledge graph embedding",
+        "authors": [
+          {
+            "given": "Guoshun",
+            "family": "Xu",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6261-576X",
+            "authenticated-orcid": false,
+            "given": "Guozheng",
+            "family": "Rao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3039-6160",
+            "authenticated-orcid": false,
+            "given": "Li",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-4492-9052",
+            "authenticated-orcid": false,
+            "given": "Qing",
+            "family": "Cong",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2024,
+            11,
+            28
+          ]
+        ],
+        "venue": [
+          "Applied Intelligence"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1007/s10489-024-05907-y",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1007/s10489-024-05907-y"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1109/icccnt61001.2024.10724763",
+        "doi": "10.1109/icccnt61001.2024.10724763",
+        "title": "The Graph Neural Network with Wasserstein Generative Adversarial Network for botnet detection in smart city IoT",
+        "authors": [
+          {
+            "given": "Mahesh Kumar",
+            "family": "Thota",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "UVCE Bangalore University,Department of CSE,Bangalore,India"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "P M",
+            "family": "Prathibhavani",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UVCE Bangalore University,Department of CSE,Bangalore,India"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "K R",
+            "family": "Venugopal",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Bangalore University,UVCE,Bangalore,India"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2024,
+            6,
+            24
+          ]
+        ],
+        "venue": [
+          "2024 15th International Conference on Computing Communication and Networking Technologies (ICCCNT)"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1109/icccnt61001.2024.10724763",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1109/icccnt61001.2024.10724763"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.21203/rs.3.rs-8867083/v1",
+        "doi": "10.21203/rs.3.rs-8867083/v1",
+        "title": "EFB-GNN: Energy-Centric Spectral Fourier–Bayesian Control and Community Dynamics Detection in Graph Neural Network System",
+        "authors": [
+          {
+            "given": "Yanfei",
+            "family": "Ma",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Fairleigh Dickinson University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Daozheng",
+            "family": "Qu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Fairleigh Dickinson University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yibo",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of California, San Diego"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2026,
+            2,
+            20
+          ]
+        ],
+        "venue": null,
+        "abstract": "<title>Abstract</title>\n                <p>Community detection in attributed graphs is extremely sensitive to minor structural and feature perturbations, frequently resulting in sudden assignment alterations despite competitive clustering accuracy in pristine conditions. This illusory instability undermines the trustworthiness of graph learning models in real-world contexts where noise, dynamic evolution, and structural uncertainty are inevitable. In this study, we introduce EFB-GNN, an Energy-centric Fourier–Bayesian Graph Neural Network that explicitly incorporates spectral stability regulation, Bayesian uncertainty modeling, and community-aware message control into a cohesive framework. The model restricts the spectrum response of graph propagation operators by polynomial Fourier filtering, while variational Bayesian inference assesses epistemic uncertainty. Comprehensive experiments on various real-world graphs, ranging from weak to strong homophily, sparse to dense connectivity, and small to large scales, reveal that EFB-GNN consistently mitigates assignment drift amid both structural and feature perturbations while preserving competitive clustering accuracy. The sensitivity analysis within regulated spectral gap conditions verifies that the proposed framework attains significant stability improvements without causing representation collapse or undue smoothing. These findings confirm stability-aware community discovery as a systematic enhancement of graph representation learning, integrating spectral graph theory, probabilistic inference, and resilient graph modeling.</p>",
+        "url": "https://doi.org/10.21203/rs.3.rs-8867083/v1",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.21203/rs.3.rs-8867083/v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1002/9781394422791.ch6",
+        "doi": "10.1002/9781394422791.ch6",
+        "title": "Graph Neural Network",
+        "authors": [
+          {
+            "given": "Abubakar",
+            "family": "Nadaf",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shivagonda",
+            "family": "Patil",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2026,
+            9,
+            4
+          ]
+        ],
+        "venue": [
+          "Graph Neural Networks"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1002/9781394422791.ch6",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1002/9781394422791.ch6"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.3390/math13091458",
+        "doi": "10.3390/math13091458",
+        "title": "A Dynamic Regional-Aggregation-Based Heterogeneous Graph Neural Network for Traffic Prediction",
+        "authors": [
+          {
+            "given": "Xiangting",
+            "family": "Liu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of International Education, Guangdong University of Technology, Guangzhou 511495, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Chengyuan",
+            "family": "Qian",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Mechanical and Energy Engineering, Tongji University, Shanghai 201804, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Xueyang",
+            "family": "Zhao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics and Physics, Harbin Institute of Petroleum, Harbin 150028, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025,
+            4,
+            29
+          ]
+        ],
+        "venue": [
+          "Mathematics"
+        ],
+        "abstract": "<jats:p>Traffic flow prediction, crucial for intelligent transportation systems, has seen advancements with graph neural networks (GNNs), yet existing methods often fail to distinguish between the importance of different intersections. These methods usually model all intersections uniformly, overlooking significant differences in traffic flow characteristics and influence ranges between ordinary and important nodes. To tackle this, this study introduces a dynamic regional-aggregation-based heterogeneous graph neural network (DR-HGNN). This model categorizes intersections into two types—ordinary and important—to apply tailored feature aggregation strategies. Ordinary intersections aggregate features based on local neighborhood information, whereas important intersections utilize deeper neighborhood diffusion and multi-hop dependencies to capture broader traffic influences. The DR-HGNN model also employs a dynamic graph structure to reflect temporal changes in traffic flows, alongside an attention mechanism for adaptive regional feature aggregation, enhancing the identification of critical traffic nodes. Demonstrating its efficacy, the DR-HGNN achieved 19.2% and 15.4% improvements in the RMSE over 50 min predictions in the METR-LA and PEMS-BAY datasets, respectively, offering a more precise prediction method for traffic management.</jats:p>",
+        "url": "https://doi.org/10.3390/math13091458",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.3390/math13091458"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.2139/ssrn.5348721",
+        "doi": "10.2139/ssrn.5348721",
+        "title": "Swd-Hash:Manifold-Aware Semantic Hashing Via Sliced Wasserstein Distance for Visual Retrieval",
+        "authors": [
+          {
+            "given": "Khushboo",
+            "family": "Mishra",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Tanima",
+            "family": "Dutta",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025
+          ]
+        ],
+        "venue": null,
+        "abstract": null,
+        "url": "https://doi.org/10.2139/ssrn.5348721",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.2139/ssrn.5348721"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.1145/3727648.3727763",
+        "doi": "10.1145/3727648.3727763",
+        "title": "Multi-Semantic Aggregation Graph Neural Network",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0000-7489-7920",
+            "authenticated-orcid": false,
+            "given": "Ludan",
+            "family": "He",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Guangxi Normal University, Guilin, Guangxi, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0004-4466-6661",
+            "authenticated-orcid": false,
+            "given": "Pingfan",
+            "family": "Su",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Guangxi Normal University, Guilin, Guangxi, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2025,
+            1,
+            10
+          ]
+        ],
+        "venue": [
+          "Proceedings of the 4th International Conference on Computer, Artificial Intelligence and Control Engineering"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.1145/3727648.3727763",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.1145/3727648.3727763"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.3390/electronics13244988",
+        "doi": "10.3390/electronics13244988",
+        "title": "Spatio-Temporal Photovoltaic Power Prediction with Fourier Graph Neural Network",
+        "authors": [
+          {
+            "given": "Shi",
+            "family": "Jing",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Mechanical and Electrical Engineering, University of Electronic Science and Technology of China, Chengdu 611731, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xianpeng",
+            "family": "Xi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "State Grid Nanchong Power Supply Company, Nanchong 637000, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Dongdong",
+            "family": "Su",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "State Grid Xinjiang Bazhou Power Supply Company, Kuerle 841000, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhiwei",
+            "family": "Han",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Chang’an Communication Technology Co., Ltd., Beijing 102218, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Daxing",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "State Grid Sichuan Electric Power Company Electric Power Scientific Research Institute, Chengdu 610095, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2024,
+            12,
+            18
+          ]
+        ],
+        "venue": [
+          "Electronics"
+        ],
+        "abstract": "<jats:p>The strong development of distributed energy sources has become one of the most important measures for low-carbon development worldwide. With a significant quantity of photovoltaic (PV) power generation being integrated to the grid, accurate and efficient prediction of PV power generation is an essential guarantee for the security and stability of the electricity grid. Due to the shortage of data from PV stations and the influence of weather, it is difficult to obtain satisfactory performance for accurate PV power prediction. In this regard, we present a PV power forecasting model based on a Fourier graph neural network (FourierGNN). Firstly, the hypervariable graph is constructed by considering the electricity and weather data of neighbouring PV plants as nodes, respectively. The hypervariance graph is then transformed in Fourier space to capture the spatio-temporal dependence among the nodes via the discrete Fourier transform. The multilayer Fourier graph operator (FGO) can be further exploited for spatio-temporal dependence information. Experiments carried out at six photovoltaic plants show that the presented approach enables the optimal performance to be obtained by adequately exploiting the spatio-temporal information.</jats:p>",
+        "url": "https://doi.org/10.3390/electronics13244988",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.3390/electronics13244988"
+      ]
+    },
+    {
+      "primary": {
+        "id": "10.5220/0014431500004052",
+        "doi": "10.5220/0014431500004052",
+        "title": "Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models",
+        "authors": [
+          {
+            "given": "Deyu",
+            "family": "Cao",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Information and Communication Engineering, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo, Japan"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yixin",
+            "family": "Yin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Computer and Mathematical Sciences, University of Toronto Scarborough, 1265 Military Trail, Toronto, Canada"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Samin",
+            "family": "Aref",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mechanical and Industrial Engineering, University of Toronto, 5 King’s College Rd, Toronto, Canada"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "date": [
+          [
+            2026
+          ]
+        ],
+        "venue": [
+          "Proceedings of the 18th International Conference on Agents and Artificial Intelligence"
+        ],
+        "abstract": null,
+        "url": "https://doi.org/10.5220/0014431500004052",
+        "source": "crossref"
+      },
+      "aliases": [
+        "10.5220/0014431500004052"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2506.19661v1",
+        "title": "Higher-Order Graph Databases",
+        "date": "2025-06-24T14:24:20Z",
+        "updated": "2025-06-24T14:24:20Z",
+        "authors": [
+          "Maciej Besta",
+          "Shriram Chandran",
+          "Jakub Cudak",
+          "Patrick Iff",
+          "Marcin Copik",
+          "Robert Gerstenberger",
+          "Tomasz Szydlo",
+          "Jürgen Müller",
+          "Torsten Hoefler"
+        ],
+        "abstract": "Recent advances in graph databases (GDBs) have been driving interest in large-scale analytics, yet current systems fail to support higher-order (HO) interactions beyond first-order (one-hop) relations, which are crucial for tasks such as subgraph counting, polyadic modeling, and HO graph learning. We address this by introducing a new class of systems, higher-order graph databases (HO-GDBs) that use lifting and lowering paradigms to seamlessly extend traditional GDBs with HO. We provide a theoretical analysis of OLTP and OLAP queries, ensuring correctness, scalability, and ACID compliance. We implement a lightweight, modular, and parallelizable HO-GDB prototype that offers native support for hypergraphs, node-tuples, subgraphs, and other HO structures under a unified API. The prototype scales to large HO OLTP & OLAP workloads and shows how HO improves analytical tasks, for example enhancing accuracy of graph neural networks within a GDB by 44%. Our work ensures low latency and high query throughput, and generalizes both ACID-compliant and eventually consistent systems.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2506.19661v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2605.12509v3",
+        "title": "Representing Higher-Order Networks: A Survey of Graph-Based Frameworks",
+        "date": "2026-03-24T03:28:40Z",
+        "updated": "2026-08-01T13:19:30Z",
+        "authors": [
+          "Takaaki Fujita",
+          "Florentin Smarandache"
+        ],
+        "abstract": "Many real-world phenomena can be naturally represented using graphs and networks. Classical graph models, however, are generally restricted to pairwise interactions and may therefore be insufficient for capturing the richer structural relationships encountered in practical systems. Higher-order graph formalisms extend the classical framework by incorporating multiway, hierarchical, temporal, multilayer, recursive, and tensor-based interactions, thereby enabling more expressive representations of complex systems. This book provides a comprehensive overview of mathematical concepts and frameworks for modeling higher-order networks. It surveys foundational notions, extended frameworks, and newly introduced formalisms, with particular emphasis on their underlying structural principles, interrelationships, and respective modeling roles. Its primary objective is to offer a unified perspective that enables readers to compare diverse higher-order network models and to identify suitable mathematical tools for both theoretical investigation and practical application. Now in its fourth edition, this volume presents an expanded, revised, and corrected treatment of foundational concepts, established extensions, and recently introduced structures, while maintaining a unifying focus on the relationships among these models. It is intended to serve as a reference for researchers and students studying and comparing higher-order network models in combinatorics, topology, applied mathematics, and related fields.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2605.12509v3"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2606.07475v1",
+        "title": "Graph Neural Network leveraging Higher-order Class Label Connectivity for Heterophilous Graphs",
+        "date": "2026-06-05T17:28:19Z",
+        "updated": "2026-06-05T17:28:19Z",
+        "authors": [
+          "Takuto Takahashi",
+          "Itsuki Nakayama",
+          "Takahiro Mitani",
+          "Ryosuke Kikuchi",
+          "Yuya Sasaki",
+          "Makoto Onizuka"
+        ],
+        "abstract": "Node classification in graph neural networks (GNNs) has been widely applied in various fields of graph analysis. GNNs achieve high-accuracy node classification in homophilous graphs, where nodes with the same class label tend to be connected. However, their performance remains limited in heterophilous graphs, where nodes with different class labels are more likely to be connected. In particular, current GNNs derived from graph convolutional networks cannot capture higher-order class label connectivity, which is frequently observed in real-world heterophilous graphs. To address this issue, we propose a novel classifier, Label Context Classifier (LCC), designed to capture higher-order class label connectivity in directed graphs. LCC estimates the class label of a target node by leveraging label context embeddings that are generated through four distinct types of walks. In addition, our approach allows the integration of LCC and any GNN by adaptively learning their importance. Experimental results demonstrate that GNNs integrated with LCC outperform SOTA methods and the label context embeddings improve the node classification performance in heterophilous directed graphs.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2606.07475v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2605.31209v1",
+        "title": "q-Exponential Random Graphs: higher-order networks from simple constraints",
+        "date": "2026-05-29T12:14:57Z",
+        "updated": "2026-05-29T12:14:57Z",
+        "authors": [
+          "David Dobáš",
+          "Diego Garlaschelli",
+          "Petr Jizba"
+        ],
+        "abstract": "Exponential Random Graphs (ERGs) are among the most widely used network models, derived as principled least-bias graph ensembles that maximize Shannon entropy under constraints on the expected values of given structural properties. However, it has been recently (re)discovered that, in the absence of additional information privileging Shannon entropy, the most agnostic inferential construction should maximize the broader class of Uffink entropies. The resulting entropy-maximizing distribution changes from the exponential (Boltzmann-Gibbs) to the so-called q-exponential one. Since maximizing Shannon entropy may produce an unjustified independence between degrees of freedom, here we investigate how the most popular ERGs with independent edges (namely, the Erdos-Renyi and configuration models) generalize to higher-order q-Exponential Random Graphs with dependent edges in the non-Shannon case, while keeping their defining constraints (number of links and degree sequence, respectively) unchanged. We find features, such as a phase transition between sparse and dense regimes, that are absent in the original ERGs but typical of higher-order networks, plus novel phenomena such as richer assortativity and clustering profiles, which allow for the coexistence of link sparsity and triadic closure. These results show that higher-order networks do not necessarily require higher-order constraints, as they naturally arise from simpler ones in a framework that is even more agnostic than Shannon's.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2605.31209v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2603.28420v1",
+        "title": "Spectral Higher-Order Neural Networks",
+        "date": "2026-03-30T13:29:34Z",
+        "updated": "2026-03-30T13:29:34Z",
+        "authors": [
+          "Gianluca Peri",
+          "Timoteo Carletti",
+          "Duccio Fanelli",
+          "Diego Febbe"
+        ],
+        "abstract": "Neural networks are fundamental tools of modern machine learning. The standard paradigm assumes binary interactions (across feedforward linear passes) between inter-tangled units, organized in sequential layers. Generalized architectures have been also designed that move beyond pairwise interactions, so as to account for higher-order couplings among computing neurons. Higher-order networks are however usually deployed as augmented graph neural networks (GNNs), and, as such, prove solely advantageous in contexts where the input exhibits an explicit hypergraph structure. Here, we present Spectral Higher-Order Neural Networks (SHONNs), a new algorithmic strategy to incorporate higher-order interactions in general-purpose, feedforward, network structures. SHONNs leverages a reformulation of the model in terms of spectral attributes. This allows to mitigate the common stability and parameter scaling problems that come along weighted, higher-order, forward propagations.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2603.28420v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2605.18420v1",
+        "title": "The nestedness of higher-order networks",
+        "date": "2026-05-18T13:54:37Z",
+        "updated": "2026-05-18T13:54:37Z",
+        "authors": [
+          "Timothy LaRock",
+          "Yanting Zhang",
+          "Jean-Gabriel Young",
+          "Nicole Eikmeier",
+          "Renaud Lambiotte",
+          "Nicholas W. Landry"
+        ],
+        "abstract": "In contrast to dyadic interactions, higher-order interactions may contain one another, with subgroups naturally embedded within larger groups. These containment patterns arise empirically in ecology, sociology, computer science and the science of science, and have been studied under the names nestedness, simpliciality, encapsulation, and inclusion. In this chapter, we review each of these measures and unify them through a mathematical object known as the encapsulation directed acyclic graph, formulating each measure as a function of its properties. We demonstrate that nested structure is prevalent in social systems across several domains, show that different measures capture complementary aspects of this structure, and find that the absence of nestedness can itself be a powerful indicator of the mesoscale organization of a system.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2605.18420v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2501.03464v2",
+        "title": "LHGNN: Local-Higher Order Graph Neural Networks For Audio Classification and Tagging",
+        "date": "2025-01-07T01:45:39Z",
+        "updated": "2025-01-29T12:22:49Z",
+        "authors": [
+          "Shubhr Singh",
+          "Emmanouil Benetos",
+          "Huy Phan",
+          "Dan Stowell"
+        ],
+        "abstract": "Transformers have set new benchmarks in audio processing tasks, leveraging self-attention mechanisms to capture complex patterns and dependencies within audio data. However, their focus on pairwise interactions limits their ability to process the higher-order relations essential for identifying distinct audio objects. To address this limitation, this work introduces the Local- Higher Order Graph Neural Network (LHGNN), a graph based model that enhances feature understanding by integrating local neighbourhood information with higher-order data from Fuzzy C-Means clusters, thereby capturing a broader spectrum of audio relationships. Evaluation of the model on three publicly available audio datasets shows that it outperforms Transformer-based models across all benchmarks while operating with substantially fewer parameters. Moreover, LHGNN demonstrates a distinct advantage in scenarios lacking ImageNet pretraining, establishing its effectiveness and efficiency in environments where extensive pretraining data is unavailable.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2501.03464v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2503.00485v1",
+        "title": "Homomorphism Expressivity of Spectral Invariant Graph Neural Networks",
+        "date": "2025-03-01T13:23:49Z",
+        "updated": "2025-03-01T13:23:49Z",
+        "authors": [
+          "Jingchu Gai",
+          "Yiheng Du",
+          "Bohang Zhang",
+          "Haggai Maron",
+          "Liwei Wang"
+        ],
+        "abstract": "Graph spectra are an important class of structural features on graphs that have shown promising results in enhancing Graph Neural Networks (GNNs). Despite their widespread practical use, the theoretical understanding of the power of spectral invariants -- particularly their contribution to GNNs -- remains incomplete. In this paper, we address this fundamental question through the lens of homomorphism expressivity, providing a comprehensive and quantitative analysis of the expressive power of spectral invariants. Specifically, we prove that spectral invariant GNNs can homomorphism-count exactly a class of specific tree-like graphs which we refer to as parallel trees. We highlight the significance of this result in various contexts, including establishing a quantitative expressiveness hierarchy across different architectural variants, offering insights into the impact of GNN depth, and understanding the subgraph counting capabilities of spectral invariant GNNs. In particular, our results significantly extend Arvind et al. (2024) and settle their open questions. Finally, we generalize our analysis to higher-order GNNs and answer an open question raised by Zhang et al. (2024).",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2503.00485v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2607.10171v1",
+        "title": "Immunization on Temporal Higher-Order Networks",
+        "date": "2026-07-11T07:23:10Z",
+        "updated": "2026-07-11T07:23:10Z",
+        "authors": [
+          "Zhihao Han",
+          "Longzhao Liu",
+          "Xin Wang",
+          "Yajing Hao",
+          "Hongwei Zheng",
+          "Shaoting Tang"
+        ],
+        "abstract": "Network immunization is a powerful tool for controlling contagion processes ranging from infectious diseases to misinformation diffusion. While prior works have focused on pairwise or static networks, immunization dynamics in temporal higher-order networks remain poorly understood. Here, we introduce immunization strategies and develop a theoretical framework tailored for such temporal systems. Firstly, we reveal bistability and discontinuous transitions in prevalence as the immunization fraction varies. This implies that immunization effectiveness depends on the initial prevalence, marking a fundamental departure from pairwise networks. Building on this prevalence-dependent behavior, we propose the High Infection Contribution (HIC) strategy, demonstrating its superior performance over all evaluated heuristic strategies. Furthermore, we introduce egocentric strategies by leveraging solely local observations. Notably, the optimal egocentric strategy shifts with the contagion prevalence. Our work advances the understanding of network immunization, paving the way for effective contagion control in temporal higher-order networks.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2607.10171v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2510.05253v2",
+        "title": "Collective dynamics on higher-order networks",
+        "date": "2025-10-06T18:17:04Z",
+        "updated": "2026-03-19T20:03:55Z",
+        "authors": [
+          "Federico Battiston",
+          "Christian Bick",
+          "Maxime Lucas",
+          "Ana P. Millán",
+          "Per Sebastian Skardal",
+          "Yuanzhao Zhang"
+        ],
+        "abstract": "Higher-order interactions that nonlinearly couple more than two nodes are important in many networked systems, and their effects on collective dynamics are increasingly being studied. Here we provide an overview of this rapidly growing field, and of the techniques that can be used to describe and analyze them. We focus in particular on new phenomena and challenges that emerge when nonpairwise interactions are considered. We conclude by discussing open questions and promising future directions on the collective dynamics of higher-order networks.",
+        "doi": "10.1038/s42254-025-00916-3",
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2510.05253v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2511.07837v1",
+        "title": "The Homomorphism Submodule Graph",
+        "date": "2025-11-11T05:12:08Z",
+        "updated": "2025-11-11T05:12:08Z",
+        "authors": [
+          "Shahram Mehry",
+          "Mansour Molaeinejad"
+        ],
+        "abstract": "Let $M$ be a left $R$-module. We define the \\emph{homomorphism submodule graph} $Γ_{\\mathrm{Hom}}(M)$ as the simple graph whose vertices are the proper submodules of $M$, with an edge between distinct vertices $N_1$ and $N_2$ if and only if $\\mathrm{Hom}_R(N_1, M/N_2) \\ne 0$ or $\\mathrm{Hom}_R(N_2, M/N_1) \\ne 0$. This graph encodes homological information about $M$ and reflects its internal structure. We compute $Γ_{\\mathrm{Hom}}(M)$ for semisimple and uniserial modules, establish precise correspondences between graph-theoretic and algebraic properties, and prove that for modules over Artinian local rings, the isomorphism type of $M$ is determined by $Γ_{\\mathrm{Hom}}(M)$. We also show that over commutative rings with identity, the graph is always chordal, and we relate its spectral radius to composition length in natural families.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2511.07837v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2601.09685v3",
+        "title": "Quantum graphs of homomorphisms",
+        "date": "2026-01-14T18:36:43Z",
+        "updated": "2026-04-29T01:19:10Z",
+        "authors": [
+          "Andre Kornell",
+          "Bert Lindenhovius"
+        ],
+        "abstract": "We introduce a category $\\mathsf{qGph}$ of quantum graphs, whose definition is motivated entirely from noncommutative geometry. For all quantum graphs $G$ and $H$ in $\\mathsf{qGph}$, we then construct a quantum graph $[G,H]$ of homomorphisms from $G$ to $H$, making $\\mathsf{qGph}$ a closed symmetric monoidal category. We prove that for all finite graphs $G$ and $H$, the quantum graph $[G,H]$ is nonempty iff the $(G,H)$-homomorphism game has a winning quantum strategy, directly generalizing the classical case. The finite quantum graphs in $\\mathsf{qGph}$ are tracial, real, and self-adjoint, and the morphisms between them are CP morphisms that are adjoint to a unital $*$-homomorphism. We prove that Weaver's two notions of a CP morphism coincide in this context. We also include a short proof that every finite reflexive quantum graph is the confusability quantum graph of a quantum channel.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2601.09685v3"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2508.15445v1",
+        "title": "Higher-order network adaptivity: co-evolution of higher-order structure and spreading dynamics",
+        "date": "2025-08-21T11:08:19Z",
+        "updated": "2025-08-21T11:08:19Z",
+        "authors": [
+          "Longzhao Liu",
+          "Hongwei Zheng",
+          "Zhihao Han",
+          "Xin Wang",
+          "Shaoting Tang"
+        ],
+        "abstract": "The co-evolution of structure and dynamics, known as adaptivity, is a fundamental property in various systems and drives diverse emergent behaviors. However, the adaptivity in previous works is primarily stemmed from pairwise situations, while is insufficient to capture ubiquitous higher-order characteristics of real systems. Here, we introduce higher-order network adaptivity to model the co-evolution of higher-order structure and spreading dynamics, and theoretically analyze the thresholds and spreading sizes. Results demonstrate that both pairwise-like and higher-order adaptivity consistently increase spreading thresholds, but surprisingly produce completely opposing qualitative effects. Specifically, contrary to pairwise-like adaptivity, higher-order adaptivity not only reduces or even eliminates the bistable region, but also leads to shifts of phase transitions from discontinuous to continuous. These findings are validated on both synthetic and real hypergraphs. Our work introduces an idea of higher-order adaptivity and highlights its fundamental differences from pairwise-like adaptivity, advancing further researches of adaptive higher-order systems.",
+        "doi": "10.1103/5vff-syxb",
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2508.15445v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2602.16937v2",
+        "title": "Graphs are maximally expressive for higher-order interactions",
+        "date": "2026-02-18T23:00:04Z",
+        "updated": "2026-08-18T16:07:09Z",
+        "authors": [
+          "Tiago P. Peixoto",
+          "Leto Peel",
+          "Thilo Gross",
+          "Manlio De Domenico"
+        ],
+        "abstract": "We demonstrate that graph-based models are fully capable of representing higher-order interactions, and have a long history of being used for precisely this purpose. This stands in contrast to a common claim in the recent literature on \"higher-order networks\" that graph-based representations are fundamentally limited to \"pairwise\" interactions, requiring hypergraph formulations to capture richer dependencies. We clarify this issue by emphasizing two frequently overlooked facts. First, graph-based models are not restricted to pairwise interactions, as they easily accommodate interactions that depend simultaneously on multiple adjacent nodes. Second, hypergraph formulations are strict special cases of more general graph-based representations, as they impose additional constraints on the allowable interactions between adjacent elements rather than expanding the space of possibilities. We show that key phenomenology commonly attributed to hypergraphs -- such as abrupt transitions -- can, in general, be recovered exactly using graph models, even locally tree-like ones, and thus do not constitute a class of phenomena that is inherently contingent on hypergraphs models. Finally, we argue that the broad relevance of hypergraphs for applications that is sometimes claimed in the literature is not supported by evidence. Instead it is likely grounded in misconceptions that network models cannot accommodate multibody interactions or that certain phenomena can only be captured with hypergraphs. We argue that clearly distinguishing between multivariate interactions, parametrized by graphs, and the functions that define them enables a more unified and flexible foundation for modeling interacting systems.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2602.16937v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2501.06108v5",
+        "title": "Inferring Higher-Order Couplings with Neural Networks",
+        "date": "2025-01-10T17:01:09Z",
+        "updated": "2025-11-12T19:12:30Z",
+        "authors": [
+          "Aurélien Decelle",
+          "Alfonso de Jesús Navas Gómez",
+          "Beatriz Seoane"
+        ],
+        "abstract": "Maximum entropy methods, rooted in the inverse Ising/Potts problem from statistical physics, are widely used to model pairwise interactions in complex systems across disciplines such as bioinformatics and neuroscience. While successful, these approaches often fail to capture higher-order interactions that are critical for understanding collective behavior. In contrast, modern machine learning methods can model such interactions, but their interpretability often comes at a prohibitive computational cost. Restricted Boltzmann Machines (RBMs) provide a computationally efficient alternative by encoding statistical correlations through hidden units in a bipartite architecture. In this work, we introduce a method that maps RBMs onto generalized Potts models, enabling the systematic extraction of interactions up to arbitrary order. Leveraging large-$N$ approximations, made tractable by the RBM's structure, we extract effective many-body couplings with minimal computational effort. We further propose a robust framework for recovering higher-order interactions in more complex generative models, and introduce a simple gauge-fixing scheme for the effective Potts representation. Validation on synthetic data demonstrates accurate recovery of two- and three-body interactions. Applied to protein sequence data, our method reconstructs contact maps with high fidelity and outperforms state-of-the-art inverse Potts models. These results establish RBMs as a powerful and efficient tool for modeling higher-order structure in high-dimensional categorical data.",
+        "doi": "10.1103/lyny-6r9y",
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2501.06108v5"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2608.12676v1",
+        "title": "Dimension Reduction of Higher-Order Dynamical Networks",
+        "date": "2026-08-13T00:26:30Z",
+        "updated": "2026-08-13T00:26:30Z",
+        "authors": [
+          "Amitosh Tiwari",
+          "Chittaranjan Hens",
+          "Prosenjit Kundu"
+        ],
+        "abstract": "Low-dimensional reductions provide a useful framework for studying high-dimensional dynamics on complex networks, but most existing approaches are restricted to pairwise interactions. Here, we develop a one-dimensional reduction for dynamical systems on networks with purely higher-order interactions. The reduction is formulated through an effective higher-order interaction strength ($β_Δ$), associated with the triangular interactions of the underlying network and the dynamical system's effective state. We present a theoretical framework for the dimension-reduction approach and validate it across three dynamical models with exclusively higher-order interactions. We find that the reduction accuracy is mainly determined by the homogeneity of node states, i.e., the deviations in state values become very small. Numerical results on synthetic and real networks show that the reduced model captures the effective steady states and transitions of the full system with good accuracy.",
+        "doi": "10.1098/rspa.2026.0299",
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2608.12676v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2505.23691v1",
+        "title": "Representing Higher-Order Networks with Spectral Moments",
+        "date": "2025-05-29T17:27:46Z",
+        "updated": "2025-05-29T17:27:46Z",
+        "authors": [
+          "Hao Tian",
+          "Shengmin Jin",
+          "Reza Zafarani"
+        ],
+        "abstract": "The spectral properties of traditional (dyadic) graphs, where an edge connects exactly two vertices, are widely studied in different applications. These spectral properties are closely connected to the structural properties of dyadic graphs. We generalize such connections and characterize higher-order networks by their spectral information. We first split the higher-order graphs by their ``edge orders\" into several uniform hypergraphs. For each uniform hypergraph, we extract the corresponding spectral information from the transition matrices of carefully designed random walks. From each spectrum, we compute the first few spectral moments and use all such spectral moments across different ``edge orders\" as the higher-order graph representation. We show that these moments not only clearly indicate the return probabilities of random walks but are also closely related to various higher-order network properties such as degree distribution and clustering coefficient. Extensive experiments show the utility of this new representation in various settings. For instance, graph classification on higher-order graphs shows that this representation significantly outperforms other techniques.",
+        "doi": "10.1007/978-981-96-8173-0_17",
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2505.23691v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2509.14796v1",
+        "title": "Network stochastic resonance under higher-order interactions",
+        "date": "2025-09-18T09:49:13Z",
+        "updated": "2025-09-18T09:49:13Z",
+        "authors": [
+          "Zheng Wang",
+          "Jinjie Zhu",
+          "Xianbin Liu"
+        ],
+        "abstract": "Although stochastic resonance phenomena are ubiquitous across various complex systems, the influence mechanisms of higher-order interactions remain elusive. Here, we address this gap by investigating stochastic resonance in coupled phase oscillators with triadic interactions on ring networks that feature periodic modulation of the triadic coupling strength and additive noise. Our analysis reveals that higher-order interactions create fundamentally different resonance landscapes through time-varying potential wells generated by periodic modulation of triadic coupling, enabling novel noise-enhanced processing mechanisms. Additionally, weaker pairwise coupling amplifies resonance effects, while moderate network connectivity appears optimal compared to extensive connections. Our findings establish fundamental principles for network stochastic resonance and provide insights for enhanced signal processing in complex networks.",
+        "doi": "10.1098/rspa.2025.0945",
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2509.14796v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2608.12782v1",
+        "title": "Full homomorphisms to graph classes",
+        "date": "2026-08-13T03:45:15Z",
+        "updated": "2026-08-13T03:45:15Z",
+        "authors": [
+          "Pavol Hell",
+          "César Hernández-Cruz"
+        ],
+        "abstract": "Given a family of graphs $\\mathcal{F}$, we define a graph $G$ to be fully $\\mathcal{F}$-colourable if $G$ admits a full homomorphism to some $F$ in $\\mathcal{F}$. We approach the problem of determining when a graph is fully $\\mathcal{F}$-colourable in terms of minimal forbidden induced subgraphs. We provide general results which allow to obtain the exact families of forbidden induced subgraphs for full $\\mathcal{F}$-colouring when $\\mathcal{F}$ is among some well-known families, such as threshold, trivially perfect, split, chordal, interval and strongly chordal graphs, as well as forests. Traditionally, these questions have been studied for a single graph $H$, not a family. Motivated by our results on the family of forests, we contribute to this research by focusing on the case of a single centipede.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2608.12782v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2602.21727v2",
+        "title": "On the equivalence between nonlinear graph-based dynamics and linear dynamics on higher-order networks",
+        "date": "2026-02-25T09:35:04Z",
+        "updated": "2026-03-02T14:48:04Z",
+        "authors": [
+          "Lucas Lacasa"
+        ],
+        "abstract": "In network science, collective dynamics of complex systems are typically modelled as (nonlinear, often including many-body) vertex-level update rules evolving over a graph interaction structure. In recent years, frameworks that explicitly model such higher-order interactions in the interaction backbone (i.e. hypergraphs) have been advanced, somehow shifting the imputation of the effective nonlinearity from the dynamics to the interaction structure. In this work we discuss such structural--dynamical representation duality, and investigate how and when a nonlinear dynamics defined on the vertex set of a graph allows an equivalent representation in terms of a linear dynamics defined on the state space of a sufficiently richer, higher-order interaction structure. Using Carleman linearisation arguments, we show that finite polynomial dynamics defined in the $|V|$ vertices of a graph admit an exact representation as linear dynamics on the state space of an hb-graph of order $|V|$, a combinatorial structure that extends hypergraphs by allowing vertex multiplicity, where the specific shape of the nonlinearity indicates whether the hb-graph is either finite or infinite (in terms of the number of hb-edges). For more general analytic nonlinearities, exact linear representation always require an hb-graph of infinite size, and its finite-size truncation provides an approximate representation of the original nonlinear graph-based dynamics.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2602.21727v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2512.05357v1",
+        "title": "Universality of asymptotic graph homomorphism",
+        "date": "2025-12-05T01:51:44Z",
+        "updated": "2025-12-05T01:51:44Z",
+        "authors": [
+          "Anna Luchnikov",
+          "Jim Wittebol",
+          "Jeroen Zuiddam"
+        ],
+        "abstract": "The Shannon capacity of graphs, introduced by Shannon in 1956 to model zero-error communication, asks for determining the rate of growth of independent sets in strong powers of graphs. Much is still unknown about this parameter, for instance whether it is computable. Recent work has established a dual characterization of the Shannon capacity in terms of the asymptotic spectrum of graphs. A core step in this duality theory is to shift focus from Shannon capacity itself to studying the asymptotic relations between graphs, that is, the asymptotic cohomomorphisms. Towards understanding the structure of Shannon capacity, we study the \"combinatorial complexity\" of asymptotic cohomomorphism. As our main result, we prove that the asymptotic cohomomorphism order is universal for all countable preorders. That is, we prove that any countable preorder can be order-embedded into the asymptotic cohomomorphism order (i.e. appears as a suborder). Previously this was only known for (non-asymptotic) cohomomorphism. Our proof is based on techniques from asymptotic spectrum duality and convex structure of the asymptotic spectrum of graphs. Our approach in fact leads to a new proof of the universality of (non-asymptotic) cohomomorphism.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2512.05357v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2602.14243v3",
+        "title": "Graph Homomorphisms and Universal Algebra",
+        "date": "2026-02-15T17:35:37Z",
+        "updated": "2026-09-14T14:18:48Z",
+        "authors": [
+          "Manuel Bodirsky"
+        ],
+        "abstract": "Constraint satisfaction problems are computational problems that naturally appear in many areas of theoretical computer science. One of the central themes is their computational complexity, and in particular the border between polynomial-time tractability and NP-hardness. In this course we introduce the universal-algebraic approach to study the computational complexity of finite-domain CSPs. The course covers in particular the cyclic terms and bounded width theorems. To keep the presentation accessible, we start the course in the tangible setting of directed graphs and graph homomorphism problems.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2602.14243v3"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2504.03060v3",
+        "title": "Connected components in networks with higher-order interactions",
+        "date": "2025-04-03T22:21:22Z",
+        "updated": "2025-10-20T15:50:56Z",
+        "authors": [
+          "Gyeong-Gyun Ha",
+          "Izaak Neri",
+          "Alessia Annibale"
+        ],
+        "abstract": "We address the problem of defining connected components in hypergraphs, which are models for systems with higher-order interactions. For graphs with dyadic interactions, connected components are defined in terms of paths connecting nodes along the graph. However, defining connected components in hypergraphs is a more involved problem, as one needs to consider the higher-order nature of the interactions associated with the hyperedge. Higher-order interactions can be taken into consideration through a logic associated with the hyperedges, two examples being OR-logic and AND-logic; these logical operations can be considered two limiting cases corresponding to non-cooperative and fully cooperative interactions, respectively. In this paper we show how connected components can be defined in hypergraphs with OR or AND logic. While OR-logic and AND-logic provide the same connected components for nondirected hypergraphs, for directed hypergraphs the strongly connected component of AND-logic is a subset of the OR-logic strongly connected component. Interestingly, higher-order interactions change the general topological properties of connected components in directed hypergraphs. Notably, while for directed graphs the strongly connected component is the intersection of its in- and out-component, in hypergraphs with AND-logic the intersection of in- and out-component does not equal the strongly connected component. We develop a theory for the fraction of nodes that are part of the largest connected component and through comparison with real-world data we show that degree-cardinality correlations play a significant role.",
+        "doi": "10.1088/2632-072X/ae1431",
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2504.03060v3"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2507.16347v2",
+        "title": "Leveraging Personalized PageRank and Higher-Order Topological Structures for Heterophily Mitigation in Graph Neural Networks",
+        "date": "2025-07-22T08:28:18Z",
+        "updated": "2025-10-09T06:45:15Z",
+        "authors": [
+          "Yumeng Wang",
+          "Zengyi Wo",
+          "Wenjun Wang",
+          "Xingcheng Fu",
+          "Minglai Shao"
+        ],
+        "abstract": "Graph Neural Networks (GNNs) excel in node classification tasks but often assume homophily, where connected nodes share similar labels. This assumption does not hold in many real-world heterophilic graphs. Existing models for heterophilic graphs primarily rely on pairwise relationships, overlooking multi-scale information from higher-order structures. This leads to suboptimal performance, particularly under noise from conflicting class information across nodes. To address these challenges, we propose HPGNN, a novel model integrating Higher-order Personalized PageRank with Graph Neural Networks. HPGNN introduces an efficient high-order approximation of Personalized PageRank (PPR) to capture long-range and multi-scale node interactions. This approach reduces computational complexity and mitigates noise from surrounding information. By embedding higher-order structural information into convolutional networks, HPGNN effectively models key interactions across diverse graph dimensions. Extensive experiments on benchmark datasets demonstrate HPGNN's effectiveness. The model achieves better performance than five out of seven state-of-the-art methods on heterophilic graphs in downstream tasks while maintaining competitive performance on homophilic graphs. HPGNN's ability to balance multi-scale information and robustness to noise makes it a versatile solution for real-world graph learning challenges. Codes are available at https://github.com/streetcorner/HPGNN.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2507.16347v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2505.15746v1",
+        "title": "Higher-order Structure Boosts Link Prediction on Temporal Graphs",
+        "date": "2025-05-21T16:51:44Z",
+        "updated": "2025-05-21T16:51:44Z",
+        "authors": [
+          "Jingzhe Liu",
+          "Zhigang Hua",
+          "Yan Xie",
+          "Bingheng Li",
+          "Harry Shomer",
+          "Yu Song",
+          "Kaveh Hassani",
+          "Jiliang Tang"
+        ],
+        "abstract": "Temporal Graph Neural Networks (TGNNs) have gained growing attention for modeling and predicting structures in temporal graphs. However, existing TGNNs primarily focus on pairwise interactions while overlooking higher-order structures that are integral to link formation and evolution in real-world temporal graphs. Meanwhile, these models often suffer from efficiency bottlenecks, further limiting their expressive power. To tackle these challenges, we propose a Higher-order structure Temporal Graph Neural Network, which incorporates hypergraph representations into temporal graph learning. In particular, we develop an algorithm to identify the underlying higher-order structures, enhancing the model's ability to capture the group interactions. Furthermore, by aggregating multiple edge features into hyperedge representations, HTGN effectively reduces memory cost during training. We theoretically demonstrate the enhanced expressiveness of our approach and validate its effectiveness and efficiency through extensive experiments on various real-world temporal graphs. Experimental results show that HTGN achieves superior performance on dynamic link prediction while reducing memory costs by up to 50\\% compared to existing methods.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2505.15746v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2502.04308v3",
+        "title": "HOG-Diff: Higher-Order Guided Diffusion for Graph Generation",
+        "date": "2025-02-06T18:51:14Z",
+        "updated": "2026-03-12T17:45:20Z",
+        "authors": [
+          "Yiming Huang",
+          "Tolga Birdal"
+        ],
+        "abstract": "Graph generation is a critical yet challenging task, as empirical analyses require a deep understanding of complex, non-Euclidean structures. Diffusion models have recently made significant advances in graph generation, but these models are typically adapted from image generation frameworks and overlook inherent higher-order topology, limiting their ability to capture graph topology. In this work, we propose Higher-order Guided Diffusion (HOG-Diff), a principled framework that progressively generates plausible graphs with inherent topological structures. HOG-Diff follows a coarse-to-fine generation curriculum, guided by higher-order topology and implemented via diffusion bridges. We further prove that our model admits stronger theoretical guarantees than classical diffusion frameworks. Extensive experiments across eight graph generation benchmarks, spanning diverse domains and including large-scale settings, demonstrate the scalability of our method and its superior performance on both pairwise and higher-order topological metrics. Our project page is available \\href{https://circle-group.github.io/research/hog-diff/}{here}.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2502.04308v3"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2605.31373v1",
+        "title": "Scaling Higher-Order Graph Learning with Maximal Clique Complexes",
+        "date": "2026-05-29T14:42:40Z",
+        "updated": "2026-05-29T14:42:40Z",
+        "authors": [
+          "Antoine Vialle",
+          "Aref Einizade",
+          "Fragkiskos D. Malliaros",
+          "Jhony H. Giraldo"
+        ],
+        "abstract": "Graph neural networks (GNNs) are limited to modeling pairwise interactions, while higher-order models based on cell complexes achieve greater expressivity but often suffer from poor scalability. We introduce simplified and factored cellular Weisfeiler Leman tests (sCWL and fCWL), which preserve the expressivity of the CWL test while improving computational efficiency. We further introduce the maximal clique complex, enabling scalable CWNs with reduced time and memory complexity while retaining strong empirical performance. To avoid explicit clique enumeration, we propose CliqueWalk, a biased random walk that samples maximal cliques and scales linearly with graph size. These contributions yield a scalable topological learning framework for higher-order graph representation.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2605.31373v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2605.07397v1",
+        "title": "Have Graph -- Will Lift? The Case for Higher-Order Benchmarks",
+        "date": "2026-05-08T07:53:42Z",
+        "updated": "2026-05-08T07:53:42Z",
+        "authors": [
+          "Bastian Rieck"
+        ],
+        "abstract": "After a somewhat rocky start, geometry and topology have established a foothold in machine learning. Message passing, either on graphs or higher-order complexes, is one of the main drivers of geometric deep learning, and paradigms that were once considered to be firmly in the realm of the abstract-like sheaves-have been \"tamed\" to serve as novel inductive biases for model architectures in topological deep learning. The veritable diversity of models, however, is in stark contrast to the scarcity of suitable benchmark datasets. As a result, researchers often resort to lifting existing graph datasets to include higher-order information. In this opinion paper, I want to encourage the community to also source new datasets, which may be used to prop up the foundations of our research field.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2605.07397v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2601.20518v2",
+        "title": "CCMamba: Topologically-Informed Selective State-Space Networks on Combinatorial Complexes for Higher-Order Graph Learning",
+        "date": "2026-01-28T11:52:13Z",
+        "updated": "2026-03-13T15:43:11Z",
+        "authors": [
+          "Jiawen Chen",
+          "Qi Shao",
+          "Mingtong Zhou",
+          "Duxin Chen",
+          "Wenwu Yu"
+        ],
+        "abstract": "Topological deep learning has emerged as a powerful paradigm for modeling higher-order relational structures beyond pairwise interactions that standard graph neural networks fail to capture. While combinatorial complexes (CCs) offer a unified topological foundation for the higher-order graph learning, existing topological deep learning methods rely heavily on local message passing and attention mechanisms. These suffer from quadratic complexity and local neighborhood constraints, limiting their scalability and capacity for rank-aware, long-range dependency modeling. To overcome these challenges, we propose Combinatorial Complex Mamba (CCMamba), the first unified Mamba-based neural framework for learning on combinatorial complexes. CCMamba reformulates higher-order message passing as a selective state-space modeling problem by linearizing multi-rank incidence relations into structured, rank-aware sequences. This architecture enables adaptive, directional, and long-range information propagation in linear time bypassing the scalability bottlenecks of self-attention. Theoretically, we further establish that the expressive power of CCMamba is upper-bounded by the 1-dimensional combinatorial complex Weisfeiler-Lehman (1-CCWL) test. Extensive experiments across graph, hypergraph, and simplicial benchmarks demonstrate that CCMamba consistently outperforms existing methods while exhibiting superior scalability and remarkable robustness against over-smoothing in deep architectures.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2601.20518v2"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2511.11593v1",
+        "title": "Sound Logical Explanations for Mean Aggregation Graph Neural Networks",
+        "date": "2025-10-27T13:23:21Z",
+        "updated": "2025-10-27T13:23:21Z",
+        "authors": [
+          "Matthew Morris",
+          "Ian Horrocks"
+        ],
+        "abstract": "Graph neural networks (GNNs) are frequently used for knowledge graph completion. Their black-box nature has motivated work that uses sound logical rules to explain predictions and characterise their expressivity. However, despite the prevalence of GNNs that use mean as an aggregation function, explainability and expressivity results are lacking for them. We consider GNNs with mean aggregation and non-negative weights (MAGNNs), proving the precise class of monotonic rules that can be sound for them, as well as providing a restricted fragment of first-order logic to explain any MAGNN prediction. Our experiments show that restricting mean-aggregation GNNs to have non-negative weights yields comparable or improved performance on standard inductive benchmarks, that sound rules are obtained in practice, that insightful explanations can be generated in practice, and that the sound rules can expose issues in the trained models.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2511.11593v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2603.19382v1",
+        "title": "Emergent Higher-Order Structure from Fast Adaptive Networks",
+        "date": "2026-03-19T18:18:54Z",
+        "updated": "2026-03-19T18:18:54Z",
+        "authors": [
+          "Christian Kuehn",
+          "Fergal Murphy"
+        ],
+        "abstract": "We study adaptive network models in which coupling weights evolve on a fast time scale relative to the phase dynamics of the nodes. Using Geometric Singular Perturbation Theory (GSPT), we prove that, although the microscopic system is strictly pairwise, the effective slow dynamics on the invariant slow manifold can exhibit genuinely higher-order structure. More precisely, Fenichel reduction produces explicit $O(\\varepsilon)$ triplet terms in the reduced phase dynamics. In addition, we give a rigorous criterion ensuring that these terms are irreducible, in the sense that the reduced vector field does not admit a pairwise decomposition in node coordinates. We derive the first-order slow-manifold correction explicitly, formulate the irreducibility criterion via mixed second derivatives, and verify it for the adaptive Kuramoto phase oscillator model. The results show that the class of pairwise-coupled fast--slow adaptive network systems is not closed under slow-manifold reduction.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2603.19382v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2510.04884v1",
+        "title": "Higher-Order Network Structure Inference: A Topological Approach to Network Selection",
+        "date": "2025-10-06T15:05:35Z",
+        "updated": "2025-10-06T15:05:35Z",
+        "authors": [
+          "Adam Schroeder",
+          "Russell Funk",
+          "Jingyi Guan",
+          "Taylor Okonek",
+          "Lori Ziegelmeier"
+        ],
+        "abstract": "Thresholding--the pruning of nodes or edges based on their properties or weights--is an essential preprocessing tool for extracting interpretable structure from complex network data, yet existing methods face several key limitations. Threshold selection often relies on heuristic methods or trial and error due to large parameter spaces and unclear optimization criteria, leading to sensitivity where small parameter variations produce significant changes in network structure. Moreover, most approaches focus on pairwise relationships between nodes, overlooking critical higher-order interactions involving three or more nodes. We introduce a systematic thresholding algorithm that leverages topological data analysis to identify optimal network parameters by accounting for higher-order structural relationships. Our method uses persistent homology to compute the stability of homological features across the parameter space, identifying parameter choices that are robust to small variations while preserving meaningful topological structure. Hyperparameters allow users to specify minimum requirements for topological features, effectively constraining the parameter search to avoid spurious solutions. We demonstrate the approach with an application in the Science of Science, where networks of scientific concepts are extracted from research paper abstracts, and concepts are connected when they co-appear in the same abstract. The flexibility of our approach allows researchers to incorporate domain-specific constraints and extends beyond network thresholding to general parameterization problems in data analysis.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2510.04884v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2602.15510v3",
+        "title": "On the Geometric Coherence of Global Aggregation in Federated Graph Neural Networks",
+        "date": "2026-02-17T11:34:04Z",
+        "updated": "2026-03-23T08:53:04Z",
+        "authors": [
+          "Chethana Prasad Kabgere",
+          "Shylaja SS"
+        ],
+        "abstract": "Federated learning over graph-structured data exposes a fundamental mismatch between standard aggregation mechanisms and the operator nature of graph neural networks (GNNs). While federated optimization treats model parameters as elements of a shared Euclidean space, GNN parameters induce graph-dependent message-passing operators whose semantics depend on underlying topology. Under structurally and distributionally heterogeneous client graph distributions, local updates correspond to perturbations of distinct operator manifolds. Linear aggregation of such updates mixes geometrically incompatible directions, producing global models that converge numerically yet exhibit degraded relational behavior. We formalize this phenomenon as a geometric failure of global aggregation in cross-domain federated GNNs, characterized by destructive interference between operator perturbations and loss of coherence in message-passing dynamics. This degradation is not captured by conventional metrics such as loss or accuracy, as models may retain predictive performance while losing structural sensitivity. To address this, we propose GGRS (Global Geometric Reference Structure), a server-side aggregation framework operating on a data-free proxy of operator perturbations. GGRS enforces geometric admissibility via directional alignment, subspace compatibility, and sensitivity control, preserving the structure of the induced message-passing operator.",
+        "doi": null,
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2602.15510v3"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2605.18166v1",
+        "title": "Hypergraphx-data: a repository for higher-order network data",
+        "date": "2026-05-18T10:09:31Z",
+        "updated": "2026-05-18T10:09:31Z",
+        "authors": [
+          "Quintino Francesco Lotito",
+          "Lorenzo Betti",
+          "Berné Nortier",
+          "Alberto Montresor",
+          "Federico Battiston"
+        ],
+        "abstract": "The availability of network datasets advances research in network science, machine learning and related fields by enabling empirical analyses and their reproducibility, algorithm development, model validation and benchmarking. Existing repositories, such as SNAP and Netzschleuder, have made traditional network datasets widely accessible with metadata, metrics, and basic visualizations. However, they primarily focus on pairwise interactions, limiting data access to systems with many-body interactions. To address this gap, we created hypergraphx-data, a repository of real-world hypergraph datasets for higher-order network analysis, spanning different domains from social networks to biology and finance, and supporting configurations such as weighted, directed, temporal, and multiplex hypergraphs. Each dataset includes relational information and metadata, provided in an open JSON format and a binarized format for Hypergraphx. We provide a user-friendly interface to facilitate browsing, filtering, and accessing the datasets, while also ensuring integrity and reproducibility through hash-based verification and data versioning. The repository is available at https://hgx-team.github.io/hypergraphx-data",
+        "doi": "10.1093/comnet/cnag014",
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2605.18166v1"
+      ]
+    },
+    {
+      "primary": {
+        "id": "http://arxiv.org/abs/2507.11520v2",
+        "title": "HIF: The hypergraph interchange format for higher-order networks",
+        "date": "2025-07-15T17:45:09Z",
+        "updated": "2026-01-30T21:03:55Z",
+        "authors": [
+          "Martín Coll",
+          "Cliff A. Joslyn",
+          "Nicholas W. Landry",
+          "Quintino Francesco Lotito",
+          "Audun Myers",
+          "Joshua Pickard",
+          "Brenda Praggastis",
+          "Przemysław Szufel"
+        ],
+        "abstract": "Many empirical systems contain complex interactions of arbitrary size, representing, for example, chemical reactions, social groups, co-authorship relationships, and ecological dependencies. These interactions are known as higher-order interactions and the collection of these interactions comprise a higher-order network, or hypergraph. Hypergraphs have established themselves as a popular and versatile mathematical representation of such systems and a number of software packages written in various programming languages have been designed to analyze these networks. However, the ecosystem of higher-order network analysis software is fragmented due to specialization of each software's programming interface and compatible data representations. To enable seamless data exchange between higher-order network analysis software packages, we introduce the Hypergraph Interchange Format (HIF), a standardized format for storing higher-order network data. HIF supports multiple types of higher-order networks, including undirected hypergraphs, directed hypergraphs, and abstract simplicial complexes, while actively exploring extensions to represent multiplex hypergraphs, temporal hypergraphs, and ordered hypergraphs. To accommodate the wide variety of metadata used in different contexts, HIF also includes support for attributes associated with nodes, edges, and incidences. This initiative is a collaborative effort involving authors, maintainers, and contributors from prominent hypergraph software packages. This project introduces a JSON schema with corresponding documentation and unit tests, example HIF-compliant datasets, and tutorials demonstrating the use of HIF with several popular higher-order network analysis software packages.",
+        "doi": "10.1017/nws.2025.10018",
+        "source": "arxiv"
+      },
+      "aliases": [
+        "http://arxiv.org/abs/2507.11520v2"
+      ]
+    }
+  ],
+  "rule": "normalized DOI, else title token Jaccard >=0.90 plus first-author surname",
+  "sha256": "1d9374cb7a844113bc585eb05ea0c7627ce5275aa95298d4bebbba8b1f44f3b3"
+}

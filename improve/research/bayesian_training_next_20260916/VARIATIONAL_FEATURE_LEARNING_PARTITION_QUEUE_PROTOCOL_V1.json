@@ -1,0 +1,63 @@
+{
+  "created_at_utc": "2026-09-15T23:24:46.152714+00:00",
+  "family": "variational_feature_learning",
+  "source_sha256": "b0e0d9460ac4ae8d9bcd82ebcb78183fd84017f07f4b87be6ab8b248fe396d02",
+  "input_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/bayesian_training_next_20260916/prepare_variational_partitions_v1.py": "cd98e5aea90f15b81cf3e8e0bdd9cf35f77d0b7d0c974e2ed144e228a6a1efac",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/bayesian_training_next_20260916/VARIATIONAL_PARTITION_UNIT_V1.json": "d78d0514344e0f494faf03cc554a54a77eaa641a0c501948ff29456e3ca55017",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/bayesian_training_next_20260916/VARIATIONAL_FEATURE_QUEUE_RESULT_V1.json": "20967aed3005627e0f306b015b03d4b95cc5c262ce88633465664a5646520c7c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/bayesian_training_next_20260916/VARIATIONAL_FEATURE_SMOKE_V1.json": "2f987c4843682ad43e3c80569f6519279d724a339fee6936786939e2c07a7b6e",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/bayesian_training_next_20260916/VARIATIONAL_PARTITION_EXECUTOR_DERIVATION_V1.json": "8c0d2a6e2751cb86664e6e417c8fe336d2ffb5104a0a1c4c498c0ceff422d80a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/candidates/anchor_priority_variational_feature_learning_v1.json": "19116132f92f331b45db8fb8c29bc4735de72573df9a8733a2d1dbb44770ae89"
+  },
+  "device": "cuda:1",
+  "candidate_sha256": "f7c94afef82ccf8ea9ab1ac474e40725d2057dad1849e7c2ce8d0ef09c1c0aca",
+  "recipes": {
+    "MiDrug": {
+      "full": {
+        "lr": 0.003,
+        "epochs": 120
+      },
+      "no_feature_variance": {
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "map": {
+        "lr": 0.001,
+        "epochs": 100
+      }
+    },
+    "LncDrug": {
+      "full": {
+        "lr": 0.003,
+        "epochs": 0
+      },
+      "no_feature_variance": {
+        "lr": 0.001,
+        "epochs": 0
+      },
+      "map": {
+        "lr": 0.001,
+        "epochs": 0
+      }
+    }
+  },
+  "split_seeds": [
+    61453,
+    7919,
+    104729
+  ],
+  "expected_new_neural_fits": 9,
+  "expected_identity_records": 9,
+  "partition_adoption": false,
+  "training_inputs_only": true,
+  "prediction_uses_aligned_evaluation_anchor": true,
+  "all_query_quadrature_reference_order": 128,
+  "quadrature_tolerance": 3e-05,
+  "this_candidate_partition_outcomes_seen": false,
+  "previous_candidates_on_same_partitions": true,
+  "outer_requires_all_partition_gates": true,
+  "confirmed_final_innovations": 0,
+  "existing_default_replaced": false,
+  "sha256": "21227d1318ab3d665bbb6af1247c38b5609b3367ba3f80a206dc98915afe1f25"
+}

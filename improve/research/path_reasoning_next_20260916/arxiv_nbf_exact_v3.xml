@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/0pnQ4YOHekYxTVYn2qeGsvqDYC8</id>
+  <title>arXiv Query: search_query=all:NBFNet&amp;id_list=&amp;start=0&amp;max_results=16</title>
+  <updated>2026-09-16T02:36:47Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:NBFNet&amp;start=0&amp;max_results=16&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>16</opensearch:itemsPerPage>
+  <opensearch:totalResults>7</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.10197v1</id>
+    <title>GRATE: Temporal Extensions for Inductive KG Foundation Models via Gated Rotary Attention</title>
+    <updated>2026-07-11T08:22:17Z</updated>
+    <link href="https://arxiv.org/abs/2607.10197v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.10197v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graph foundation models such as Ultra and Trix achieve strong inductive transfer by learning relation-graph representations that generalise to unseen entities and relations. Extending this transferability to temporal knowledge graphs (TKGs) remains challenging: existing temporal models tie their parameters to dataset-specific entities, relations, or timestamps and are not designed to transfer to TKGs with disjoint vocabularies. We propose GRATE (Gated Rotary Attention for Temporal Encoding), an entity-side message function that adds no learnable parameters and encodes time through relative time differences by rotating each edge message according to its time gap to the query and applying a query-conditioned gate to select temporally relevant signals. GRATE integrates into NBFNet-style KG foundation models while preserving structural transferability. Existing TKG benchmarks evaluate within shared train/test vocabularies and cannot directly test cross-dataset temporal transfer; we therefore construct GDELTIndT and WIKIIndT, inductive transfer benchmark suites with disjoint entities, relations, and timestamps spanning both interpolation and extrapolation. Across these benchmarks and held-out forecasting datasets, a single jointly pretrained GRATE checkpoint improves over the static base model in most settings.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-11T08:22:17Z</published>
+    <arxiv:comment>Accepted at the ICML 2026 Workshop on Graph Foundation Models: A New Era for Graph Machine Learning. 17 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Jiaxin Pan</name>
+    </author>
+    <author>
+      <name>Osama Mohammed</name>
+    </author>
+    <author>
+      <name>Daniel Hernández</name>
+    </author>
+    <author>
+      <name>Steffen Staab</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.14907v1</id>
+    <title>KGPFN: Unlocking the Potential of Knowledge Graph Foundation Model via In-Context Learning</title>
+    <updated>2026-05-14T14:41:19Z</updated>
+    <link href="https://arxiv.org/abs/2605.14907v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.14907v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graph (KG) foundation models aim to generalize across graphs with unseen entities and relations by learning transferable relational structure. However, most existing methods primarily emphasize relation-level universality, while in-context learning, the other pillar of foundation models remains under-explored for KG reasoning. In KGs, context is inherently structured and heterogeneous: effective prediction requires conditioning on the local context around the query entities as well as the global context that summarizes how a relation behaves across many instances. We propose KGPFN, a KG foundation model using Prior-data Fitted Network that unifies transferable relational regularities with inference-time in-context learning from structured context. KGPFN first learns relation representations via message passing on relation graphs to capture cross-graph relational invariances. For query-specific reasoning, it encodes local neighborhoods using a multi-layer NBFNet as local context. To enable ICL at global scale, it constructs relation-specific global context by retrieving a large set of instances of the query relation together with their local neighborhoods, and aggregates them within a Prior-Data Fitted Network framework that combines feature-level and sample-level attention. Through multi-graph pretraining on diverse KGs, KGPFN learns when to instantiate reusable patterns and when to override them using contextual evidence. Experiments on 57 KG benchmarks demonstrate that KGPFN achieves strong adaptation to previously unseen graphs through in-context learning alone, consistently outperforming competitive fine-tuned KG foundation models. Our code is available at https://github.com/HKUST-KnowComp/KGPFN.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-14T14:41:19Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yisen Gao</name>
+    </author>
+    <author>
+      <name>Jiaxin Bai</name>
+    </author>
+    <author>
+      <name>Haoyu Huang</name>
+    </author>
+    <author>
+      <name>Zhongwei Xie</name>
+    </author>
+    <author>
+      <name>Yufei Li</name>
+    </author>
+    <author>
+      <name>Hong Ting Tsang</name>
+    </author>
+    <author>
+      <name>Sirui Han</name>
+    </author>
+    <author>
+      <name>Yangqiu Song</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.03104v1</id>
+    <title>AlertStar: Path-Aware Alert Prediction on Hyper-Relational Knowledge Graphs</title>
+    <updated>2026-04-03T15:26:51Z</updated>
+    <link href="https://arxiv.org/abs/2604.03104v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.03104v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cyber-attacks continue to grow in scale and sophistication, yet existing network intrusion detection approaches lack the semantic depth required for path reasoning over attacker-victim interactions. We address this by first modelling network alerts as a knowledge graph, then formulating hyper-relational alert prediction as a hyper-relational knowledge graph completion (HR-KGC) problem, representing each network alert as a qualified statement (h, r, t, Q), where h and t are source and destination IPs, r denotes the attack type, and Q encodes flow-level metadata such as timestamps, ports, protocols, and attack intensity, going beyond standard KGC binary triples (h, r, t) that would discard this contextual richness. We introduce five models across three contributions: first, Hyper-relational Neural Bellman-Ford (HR-NBFNet) extends Neural Bellman-Ford Networks to the hyper-relational setting with qualifier-aware multi-hop path reasoning, while its multi-task variant MT-HR-NBFNet jointly predicts tail, relation, and qualifier-value within a single traversal pass; second, AlertStar fuses qualifier context and structural path information entirely in embedding space via cross-attention and learned path composition, and its multi-task extension MT-AlertStar eliminates the overhead of full knowledge graph propagation; third, HR-NBFNet-CQ extends qualifier-aware representations to answer complex first-order logic queries, including one-hop, two-hop chain, two-anchor intersection, and union, enabling multi-condition threat reasoning over the alert knowledge graph. Evaluated inductively on the Warden and UNSW-NB15 benchmarks across three qualifier-density regimes, AlertStar and MT-AlertStar achieve superior MR, MRR, and Hits@k, demonstrating that local qualifier fusion is both sufficient and more efficient than global path propagation for hyper-relational alert prediction.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-03T15:26:51Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Zahra Makki Nayeri</name>
+    </author>
+    <author>
+      <name>Mohsen Rezvani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.05270v1</id>
+    <title>Visual-Informed Speech Enhancement Using Attention-Based Beamforming</title>
+    <updated>2026-03-05T15:19:41Z</updated>
+    <link href="https://arxiv.org/abs/2603.05270v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.05270v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent studies have demonstrated that incorporating auxiliary information, such as speaker voiceprint or visual cues, can substantially improve Speech Enhancement (SE) performance. However, single-channel methods often yield suboptimal results in low signal-to-noise ratio (SNR) conditions, when there is high reverberation, or in complex scenarios involving dynamic speakers, overlapping speech, or non-stationary noise. To address these issues, we propose a novel Visual-Informed Neural Beamforming Network (VI-NBFNet), which integrates microphone array signal processing and deep neural networks (DNNs) using multimodal input features. The proposed network leverages a pretrained visual speech recognition model to extract lip movements as input features, which serve for voice activity detection (VAD) and target speaker identification. The system is intended to handle both static and moving speakers by introducing a supervised end-to-end beamforming framework equipped with an attention mechanism. The experimental results demonstrated that the proposed audiovisual system has achieved better SE performance and robustness for both stationary and dynamic speaker scenarios, compared to several baseline methods.</summary>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-05T15:19:41Z</published>
+    <arxiv:comment>15 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="eess.AS"/>
+    <arxiv:journal_ref>IEEE Transactions on Audio, Speech and Language Processing, vol. 33, Volume: 33, pp. 4941-4955, 2025</arxiv:journal_ref>
+    <author>
+      <name>Chihyun Liu</name>
+    </author>
+    <author>
+      <name>Jiaxuan Fan</name>
+    </author>
+    <author>
+      <name>Mingtung Sun</name>
+    </author>
+    <author>
+      <name>Michael Anthony</name>
+    </author>
+    <author>
+      <name>Mingsian R. Bai</name>
+    </author>
+    <author>
+      <name>Yu Tsao</name>
+    </author>
+    <arxiv:doi>10.1109/TASLPRO.2025.3636603</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TASLPRO.2025.3636603" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.05114v1</id>
+    <title>A*Net and NBFNet Learn Negative Patterns on Knowledge Graphs</title>
+    <updated>2024-12-06T15:15:18Z</updated>
+    <link href="https://arxiv.org/abs/2412.05114v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.05114v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this technical report, we investigate the predictive performance differences of a rule-based approach and the GNN architectures NBFNet and A*Net with respect to knowledge graph completion. For the two most common benchmarks, we find that a substantial fraction of the performance difference can be explained by one unique negative pattern on each dataset that is hidden from the rule-based approach. Our findings add a unique perspective on the performance difference of different model classes for knowledge graph completion: Models can achieve a predictive performance advantage by penalizing scores of incorrect facts opposed to providing high scores for correct facts.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-06T15:15:18Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Patrick Betz</name>
+    </author>
+    <author>
+      <name>Nathanael Stelzner</name>
+    </author>
+    <author>
+      <name>Christian Meilicke</name>
+    </author>
+    <author>
+      <name>Heiner Stuckenschmidt</name>
+    </author>
+    <author>
+      <name>Christian Bartelt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.07942v2</id>
+    <title>Inductive Knowledge Graph Completion with GNNs and Rules: An Analysis</title>
+    <updated>2024-03-24T12:00:31Z</updated>
+    <link href="https://arxiv.org/abs/2308.07942v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.07942v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The task of inductive knowledge graph completion requires models to learn inference patterns from a training graph, which can then be used to make predictions on a disjoint test graph. Rule-based methods seem like a natural fit for this task, but in practice they significantly underperform state-of-the-art methods based on Graph Neural Networks (GNNs), such as NBFNet. We hypothesise that the underperformance of rule-based methods is due to two factors: (i) implausible entities are not ranked at all and (ii) only the most informative path is taken into account when determining the confidence in a given link prediction answer. To analyse the impact of these factors, we study a number of variants of a rule-based approach, which are specifically aimed at addressing the aforementioned issues. We find that the resulting models can achieve a performance which is close to that of NBFNet. Crucially, the considered variants only use a small fraction of the evidence that NBFNet relies on, which means that they largely keep the interpretability advantage of rule-based methods. Moreover, we show that a further variant, which does look at the full KG, consistently outperforms NBFNet.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-14T21:01:29Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Akash Anil</name>
+    </author>
+    <author>
+      <name>Víctor Gutiérrez-Basulto</name>
+    </author>
+    <author>
+      <name>Yazmín Ibañéz-García</name>
+    </author>
+    <author>
+      <name>Steven Schockaert</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.06935v4</id>
+    <title>Neural Bellman-Ford Networks: A General Graph Neural Network Framework for Link Prediction</title>
+    <updated>2022-01-21T22:05:56Z</updated>
+    <link href="https://arxiv.org/abs/2106.06935v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.06935v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction is a very fundamental task on graphs. Inspired by traditional path-based methods, in this paper we propose a general and flexible representation learning framework based on paths for link prediction. Specifically, we define the representation of a pair of nodes as the generalized sum of all path representations, with each path representation as the generalized product of the edge representations in the path. Motivated by the Bellman-Ford algorithm for solving the shortest path problem, we show that the proposed path formulation can be efficiently solved by the generalized Bellman-Ford algorithm. To further improve the capacity of the path formulation, we propose the Neural Bellman-Ford Network (NBFNet), a general graph neural network framework that solves the path formulation with learned operators in the generalized Bellman-Ford algorithm. The NBFNet parameterizes the generalized Bellman-Ford algorithm with 3 neural components, namely INDICATOR, MESSAGE and AGGREGATE functions, which corresponds to the boundary condition, multiplication operator, and summation operator respectively. The NBFNet is very general, covers many traditional path-based methods, and can be applied to both homogeneous graphs and multi-relational graphs (e.g., knowledge graphs) in both transductive and inductive settings. Experiments on both homogeneous graphs and knowledge graphs show that the proposed NBFNet outperforms existing methods by a large margin in both transductive and inductive settings, achieving new state-of-the-art results.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-13T07:03:34Z</published>
+    <arxiv:comment>NeurIPS 2021</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zhaocheng Zhu</name>
+    </author>
+    <author>
+      <name>Zuobai Zhang</name>
+    </author>
+    <author>
+      <name>Louis-Pascal Xhonneux</name>
+    </author>
+    <author>
+      <name>Jian Tang</name>
+    </author>
+  </entry>
+</feed>

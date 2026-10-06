@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Za4E6nBqOkJJXEv/oiTg09dc14Q</id>
+  <title>arXiv Query: search_query=ti:"Variational Bayesian Last Layers"&amp;id_list=&amp;start=0&amp;max_results=5</title>
+  <updated>2026-09-15T22:33:31Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22Variational+Bayesian+Last+Layers%22&amp;start=0&amp;max_results=5&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>5</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2404.11599v1</id>
+    <title>Variational Bayesian Last Layers</title>
+    <updated>2024-04-17T17:50:24Z</updated>
+    <link href="https://arxiv.org/abs/2404.11599v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.11599v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a deterministic variational formulation for training Bayesian last layer neural networks. This yields a sampling-free, single-pass model and loss that effectively improves uncertainty estimation. Our variational Bayesian last layer (VBLL) can be trained and evaluated with only quadratic complexity in last layer width, and is thus (nearly) computationally free to add to standard architectures. We experimentally investigate VBLLs, and show that they improve predictive accuracy, calibration, and out of distribution detection over baselines across both regression and classification. Finally, we investigate combining VBLL layers with variational Bayesian feature learning, yielding a lower variance collapsed variational inference method for Bayesian neural networks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-17T17:50:24Z</published>
+    <arxiv:comment>International Conference on Learning Representations (ICLR) 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>James Harrison</name>
+    </author>
+    <author>
+      <name>John Willes</name>
+    </author>
+    <author>
+      <name>Jasper Snoek</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.09178v2</id>
+    <title>Vision-Conditioned Variational Bayesian Last Layer Dynamics Models</title>
+    <updated>2026-01-16T16:32:59Z</updated>
+    <link href="https://arxiv.org/abs/2601.09178v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09178v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agile control of robotic systems often requires anticipating how the environment affects system behavior. For example, a driver must perceive the road ahead to anticipate available friction and plan actions accordingly. Achieving such proactive adaptation within autonomous frameworks remains a challenge, particularly under rapidly changing conditions. Traditional modeling approaches often struggle to capture abrupt variations in system behavior, while adaptive methods are inherently reactive and may adapt too late to ensure safety. We propose a vision-conditioned variational Bayesian last-layer dynamics model that leverages visual context to anticipate changes in the environment. The model first learns nominal vehicle dynamics and is then fine-tuned with feature-wise affine transformations of latent features, enabling context-aware dynamics prediction. The resulting model is integrated into an optimal controller for vehicle racing. We validate our method on a Lexus LC500 racing through water puddles. With vision-conditioning, the system completed all 12 attempted laps under varying conditions. In contrast, all baselines without visual context consistently lost control, demonstrating the importance of proactive dynamics adaptation in high-performance applications.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-14T05:25:18Z</published>
+    <arxiv:comment>9 pages, 7 figures, currently under review</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Paul Brunzema</name>
+    </author>
+    <author>
+      <name>Thomas Lew</name>
+    </author>
+    <author>
+      <name>Ray Zhang</name>
+    </author>
+    <author>
+      <name>Takeru Shirasawa</name>
+    </author>
+    <author>
+      <name>John Subosits</name>
+    </author>
+    <author>
+      <name>Marcus Greiff</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.01471v2</id>
+    <title>Fine-tuning LLMs with variational Bayesian last layer for high-dimensional Bayesian optimization</title>
+    <updated>2025-10-03T00:33:54Z</updated>
+    <link href="https://arxiv.org/abs/2510.01471v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.01471v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A plethora of applications entail solving black-box optimization problems with high evaluation costs, including drug discovery, material design, as well as hyperparameter tuning. Toward finding the global optimum of such black-box optimization problems with sample efficiency, Bayesian optimization (BO) is a theoretically elegant framework that relies on a probabilistic surrogate model so as to iteratively select the query point with well-balanced exploration-exploitation tradeoffs. The Gaussian process (GP), as the de-facto choice for surrogate modeling, has achieved compelling performances for vanilla BO with low-dimensional continuous variables. However, GPs fall short in coping with high-dimensional counterparts with {\it irregular} variables (e.g., categorical, ordinal, etc.). To alleviate this, neural network-based surrogates have been explored. Inspired by the powerful capabilities of LLMs, we adopt the LLM as the surrogate to model the mapping from the high-dimensional input variables to the objective function. To adapt to the current problem, we leverage the low-rank adaptation (LoRA) to fine-tune the LLM parameters together with the posterior of a linear regression head via the variational Bayesian last layer (VBLL) framework. The resulting LoRA-VBLL is not only computationally light compared to existing alternatives, but also admits recursive updates. To automate the critical selection of the LoRA rank as well as other hyperparameters, a weighted ensemble (ENS) of LoRA-VBLL surrogates has been devised, which further accommodates continual update of the per-model weight and individual LoRA-VBLL parameters via recursive Bayes. Extensive experimental results demonstrate the compelling performance of the proposed (ENS-)LoRA-VBLL approaches on various high-dimensional benchmarks and the real-world molecular optimization tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-01T21:28:50Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Haotian Xiang</name>
+    </author>
+    <author>
+      <name>Jinwen Xu</name>
+    </author>
+    <author>
+      <name>Qin Lu</name>
+    </author>
+  </entry>
+</feed>

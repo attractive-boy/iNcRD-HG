@@ -1,0 +1,1575 @@
+{
+  "query": "GraphDTA",
+  "url": "https://api.openalex.org/works?search=GraphDTA&per-page=5",
+  "records": [
+    {
+      "title": "GraphDTA: predicting drug–target binding affinity with graph neural networks",
+      "doi": "https://doi.org/10.1093/bioinformatics/btaa921",
+      "year": 2020,
+      "journal": "Bioinformatics",
+      "id": "https://openalex.org/W3096561213",
+      "authors": [
+        "Thin Nguyen",
+        "Thin Nguyen",
+        "Hang Le",
+        "Thomas P. Quinn",
+        "Tri Nguyen",
+        "Tri Nguyen",
+        "Thuc Duy Le",
+        "Svetha Venkatesh"
+      ],
+      "abstract_inverted_index": {
+        "SUMMARY:": [
+          0
+        ],
+        "The": [
+          1,
+          169
+        ],
+        "development": [
+          2,
+          27
+        ],
+        "of": [
+          3,
+          25,
+          61
+        ],
+        "new": [
+          4,
+          30,
+          62,
+          100
+        ],
+        "drugs": [
+          5,
+          40,
+          85,
+          106,
+          158
+        ],
+        "is": [
+          6,
+          43,
+          89
+        ],
+        "costly,": [
+          7
+        ],
+        "time": [
+          8
+        ],
+        "consuming": [
+          9
+        ],
+        "and": [
+          10,
+          22,
+          109,
+          155,
+          180,
+          190
+        ],
+        "often": [
+          11
+        ],
+        "accompanied": [
+          12
+        ],
+        "with": [
+          13
+        ],
+        "safety": [
+          14
+        ],
+        "issues.": [
+          15
+        ],
+        "Drug": [
+          16
+        ],
+        "repurposing": [
+          17
+        ],
+        "can": [
+          18,
+          161
+        ],
+        "avoid": [
+          19
+        ],
+        "the": [
+          20,
+          58,
+          66,
+          84,
+          195
+        ],
+        "expensive": [
+          21
+        ],
+        "lengthy": [
+          23
+        ],
+        "process": [
+          24
+        ],
+        "drug": [
+          26,
+          70
+        ],
+        "by": [
+          28,
+          51
+        ],
+        "finding": [
+          29
+        ],
+        "uses": [
+          31,
+          110
+        ],
+        "for": [
+          32,
+          77,
+          150
+        ],
+        "already": [
+          33
+        ],
+        "approved": [
+          34
+        ],
+        "drugs.": [
+          35,
+          53
+        ],
+        "In": [
+          36
+        ],
+        "order": [
+          37
+        ],
+        "to": [
+          38,
+          45,
+          68,
+          94,
+          114,
+          163,
+          193
+        ],
+        "repurpose": [
+          39
+        ],
+        "effectively,": [
+          41
+        ],
+        "it": [
+          42
+        ],
+        "useful": [
+          44
+        ],
+        "know": [
+          46
+        ],
+        "which": [
+          47,
+          52,
+          88
+        ],
+        "proteins": [
+          48
+        ],
+        "are": [
+          49,
+          148,
+          172,
+          183,
+          200,
+          208
+        ],
+        "targeted": [
+          50
+        ],
+        "Computational": [
+          54
+        ],
+        "models": [
+          55,
+          73,
+          82,
+          147,
+          171,
+          179
+        ],
+        "that": [
+          56,
+          104,
+          120,
+          144,
+          156
+        ],
+        "estimate": [
+          57
+        ],
+        "interaction": [
+          59
+        ],
+        "strength": [
+          60
+        ],
+        "drug-target": [
+          63,
+          116,
+          127,
+          151
+        ],
+        "pairs": [
+          64
+        ],
+        "have": [
+          65,
+          74
+        ],
+        "potential": [
+          67
+        ],
+        "expedite": [
+          69
+        ],
+        "repurposing.": [
+          71
+        ],
+        "Several": [
+          72
+        ],
+        "been": [
+          75
+        ],
+        "proposed": [
+          76,
+          170
+        ],
+        "this": [
+          78
+        ],
+        "task.": [
+          79
+        ],
+        "However,": [
+          80
+        ],
+        "these": [
+          81
+        ],
+        "represent": [
+          83,
+          95
+        ],
+        "as": [
+          86,
+          107,
+          159
+        ],
+        "strings,": [
+          87
+        ],
+        "not": [
+          90,
+          124
+        ],
+        "a": [
+          91,
+          99
+        ],
+        "natural": [
+          92
+        ],
+        "way": [
+          93
+        ],
+        "molecules.": [
+          96
+        ],
+        "We": [
+          97,
+          118
+        ],
+        "propose": [
+          98
+        ],
+        "model": [
+          101
+        ],
+        "called": [
+          102
+        ],
+        "GraphDTA": [
+          103
+        ],
+        "represents": [
+          105
+        ],
+        "graphs": [
+          108,
+          160
+        ],
+        "graph": [
+          111,
+          121
+        ],
+        "neural": [
+          112,
+          122
+        ],
+        "networks": [
+          113,
+          123
+        ],
+        "predict": [
+          115,
+          126
+        ],
+        "affinity.": [
+          117
+        ],
+        "show": [
+          119
+        ],
+        "only": [
+          125
+        ],
+        "affinity": [
+          128,
+          153
+        ],
+        "better": [
+          129
+        ],
+        "than": [
+          130
+        ],
+        "non-deep": [
+          131
+        ],
+        "learning": [
+          132,
+          139,
+          146
+        ],
+        "models,": [
+          133
+        ],
+        "but": [
+          134
+        ],
+        "also": [
+          135
+        ],
+        "outperform": [
+          136
+        ],
+        "competing": [
+          137
+        ],
+        "deep": [
+          138,
+          145
+        ],
+        "methods.": [
+          140
+        ],
+        "Our": [
+          141
+        ],
+        "results": [
+          142
+        ],
+        "confirm": [
+          143
+        ],
+        "appropriate": [
+          149
+        ],
+        "binding": [
+          152
+        ],
+        "prediction,": [
+          154
+        ],
+        "representing": [
+          157
+        ],
+        "lead": [
+          162
+        ],
+        "further": [
+          164
+        ],
+        "improvements.": [
+          165
+        ],
+        "AVAILABILITY": [
+          166
+        ],
+        "OF": [
+          167
+        ],
+        "IMPLEMENTATION:": [
+          168
+        ],
+        "implemented": [
+          173
+        ],
+        "in": [
+          174
+        ],
+        "Python.": [
+          175
+        ],
+        "Related": [
+          176
+        ],
+        "data,": [
+          177
+        ],
+        "pre-trained": [
+          178
+        ],
+        "source": [
+          181
+        ],
+        "code": [
+          182
+        ],
+        "publicly": [
+          184
+        ],
+        "available": [
+          185,
+          201,
+          209
+        ],
+        "at": [
+          186,
+          210
+        ],
+        "https://github.com/thinng/GraphDTA.": [
+          187
+        ],
+        "All": [
+          188
+        ],
+        "scripts": [
+          189
+        ],
+        "data": [
+          191,
+          207
+        ],
+        "needed": [
+          192
+        ],
+        "reproduce": [
+          194
+        ],
+        "post": [
+          196
+        ],
+        "hoc": [
+          197
+        ],
+        "statistical": [
+          198
+        ],
+        "analysis": [
+          199
+        ],
+        "from": [
+          202
+        ],
+        "https://doi.org/10.5281/zenodo.3603523.": [
+          203
+        ],
+        "SUPPLEMENTARY": [
+          204
+        ],
+        "INFORMATION:": [
+          205
+        ],
+        "Supplementary": [
+          206
+        ],
+        "Bioinformatics": [
+          211
+        ],
+        "online.": [
+          212
+        ]
+      },
+      "cited_by_count": 1275
+    },
+    {
+      "title": "GraphDTA: Predicting drug–target binding affinity with graph neural networks",
+      "doi": "https://doi.org/10.1101/684662",
+      "year": 2019,
+      "journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "id": "https://openalex.org/W2955251621",
+      "authors": [
+        "Thin Nguyen",
+        "Thin Nguyen",
+        "Hang Le",
+        "Thomas P. Quinn",
+        "Tri Nguyen",
+        "Tri Nguyen",
+        "Thuc Duy Le",
+        "Svetha Venkatesh"
+      ],
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "The": [
+          1,
+          171
+        ],
+        "development": [
+          2,
+          27
+        ],
+        "of": [
+          3,
+          25,
+          61,
+          167
+        ],
+        "new": [
+          4,
+          30,
+          62,
+          100
+        ],
+        "drugs": [
+          5,
+          40,
+          85,
+          106,
+          158
+        ],
+        "is": [
+          6,
+          43,
+          89
+        ],
+        "costly,": [
+          7
+        ],
+        "time": [
+          8
+        ],
+        "consuming,": [
+          9
+        ],
+        "and": [
+          10,
+          22,
+          109,
+          155,
+          169,
+          182,
+          193
+        ],
+        "often": [
+          11
+        ],
+        "accompanied": [
+          12
+        ],
+        "with": [
+          13
+        ],
+        "safety": [
+          14
+        ],
+        "issues.": [
+          15
+        ],
+        "Drug": [
+          16
+        ],
+        "repurposing": [
+          17
+        ],
+        "can": [
+          18,
+          161
+        ],
+        "avoid": [
+          19
+        ],
+        "the": [
+          20,
+          58,
+          66,
+          84,
+          198
+        ],
+        "expensive": [
+          21
+        ],
+        "lengthy": [
+          23
+        ],
+        "process": [
+          24
+        ],
+        "drug": [
+          26,
+          70
+        ],
+        "by": [
+          28,
+          51
+        ],
+        "finding": [
+          29
+        ],
+        "uses": [
+          31,
+          110
+        ],
+        "for": [
+          32,
+          77,
+          150
+        ],
+        "already": [
+          33
+        ],
+        "approved": [
+          34
+        ],
+        "drugs.": [
+          35,
+          53
+        ],
+        "In": [
+          36
+        ],
+        "order": [
+          37
+        ],
+        "to": [
+          38,
+          45,
+          68,
+          94,
+          114,
+          163,
+          196
+        ],
+        "repurpose": [
+          39
+        ],
+        "effectively,": [
+          41
+        ],
+        "it": [
+          42
+        ],
+        "useful": [
+          44
+        ],
+        "know": [
+          46
+        ],
+        "which": [
+          47,
+          52,
+          88
+        ],
+        "proteins": [
+          48
+        ],
+        "are": [
+          49,
+          148,
+          174,
+          185,
+          202
+        ],
+        "targeted": [
+          50
+        ],
+        "Computational": [
+          54
+        ],
+        "models": [
+          55,
+          73,
+          82,
+          147,
+          173
+        ],
+        "that": [
+          56,
+          104,
+          120,
+          144,
+          156
+        ],
+        "estimate": [
+          57
+        ],
+        "interaction": [
+          59
+        ],
+        "strength": [
+          60
+        ],
+        "drug--target": [
+          63,
+          116,
+          127,
+          151
+        ],
+        "pairs": [
+          64
+        ],
+        "have": [
+          65,
+          74
+        ],
+        "potential": [
+          67
+        ],
+        "expedite": [
+          69
+        ],
+        "repurposing.": [
+          71
+        ],
+        "Several": [
+          72
+        ],
+        "been": [
+          75
+        ],
+        "proposed": [
+          76,
+          172
+        ],
+        "this": [
+          78
+        ],
+        "task.": [
+          79
+        ],
+        "However,": [
+          80
+        ],
+        "these": [
+          81
+        ],
+        "represent": [
+          83,
+          95
+        ],
+        "as": [
+          86,
+          107,
+          159
+        ],
+        "strings,": [
+          87
+        ],
+        "not": [
+          90,
+          124
+        ],
+        "a": [
+          91,
+          99
+        ],
+        "natural": [
+          92
+        ],
+        "way": [
+          93
+        ],
+        "molecules.": [
+          96
+        ],
+        "We": [
+          97,
+          118
+        ],
+        "propose": [
+          98
+        ],
+        "model": [
+          101
+        ],
+        "called": [
+          102
+        ],
+        "GraphDTA": [
+          103
+        ],
+        "represents": [
+          105
+        ],
+        "graphs": [
+          108,
+          160
+        ],
+        "graph": [
+          111,
+          121
+        ],
+        "neural": [
+          112,
+          122
+        ],
+        "networks": [
+          113,
+          123
+        ],
+        "predict": [
+          115,
+          126
+        ],
+        "affinity.": [
+          117
+        ],
+        "show": [
+          119
+        ],
+        "only": [
+          125
+        ],
+        "affinity": [
+          128,
+          153
+        ],
+        "better": [
+          129
+        ],
+        "than": [
+          130
+        ],
+        "non-deep": [
+          131
+        ],
+        "learning": [
+          132,
+          139,
+          146
+        ],
+        "models,": [
+          133,
+          181
+        ],
+        "but": [
+          134
+        ],
+        "also": [
+          135
+        ],
+        "outperform": [
+          136
+        ],
+        "competing": [
+          137
+        ],
+        "deep": [
+          138,
+          145
+        ],
+        "methods.": [
+          140
+        ],
+        "Our": [
+          141
+        ],
+        "results": [
+          142
+        ],
+        "confirm": [
+          143
+        ],
+        "appropriate": [
+          149
+        ],
+        "binding": [
+          152
+        ],
+        "prediction,": [
+          154
+        ],
+        "representing": [
+          157
+        ],
+        "lead": [
+          162
+        ],
+        "further": [
+          164
+        ],
+        "improvements.": [
+          165
+        ],
+        "Availability": [
+          166
+        ],
+        "data": [
+          168,
+          194
+        ],
+        "materials": [
+          170
+        ],
+        "implemented": [
+          175
+        ],
+        "in": [
+          176
+        ],
+        "Python.": [
+          177
+        ],
+        "Related": [
+          178
+        ],
+        "data,": [
+          179
+        ],
+        "pre-trained": [
+          180
+        ],
+        "source": [
+          183
+        ],
+        "code": [
+          184
+        ],
+        "publicly": [
+          186
+        ],
+        "available": [
+          187,
+          203
+        ],
+        "at": [
+          188
+        ],
+        "https://github.com/thinng/GraphDTA": [
+          189
+        ],
+        ".": [
+          190,
+          206
+        ],
+        "All": [
+          191
+        ],
+        "scripts": [
+          192
+        ],
+        "needed": [
+          195
+        ],
+        "reproduce": [
+          197
+        ],
+        "post-hoc": [
+          199
+        ],
+        "statistical": [
+          200
+        ],
+        "analysis": [
+          201
+        ],
+        "from": [
+          204
+        ],
+        "https://doi.org/10.5281/zenodo.3603523": [
+          205
+        ],
+        "Contact": [
+          207
+        ],
+        "Thin.Nguyen@deakin.edu.au": [
+          208
+        ]
+      },
+      "cited_by_count": 108
+    },
+    {
+      "title": "GraphDTA: Predicting drug target binding affinity with graph neural networks",
+      "doi": null,
+      "year": 2024,
+      "journal": "Figshare",
+      "id": "https://openalex.org/W3015490653",
+      "authors": [
+        "Thin Nguyen",
+        "H Le (13305396)",
+        "Thomas P. Quinn",
+        "Tri Minh Nguyen",
+        "TD Le (14461665)",
+        "Svetha Venkatesh"
+      ],
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "Summary": [
+          1
+        ],
+        "The": [
+          2,
+          170
+        ],
+        "development": [
+          3,
+          28
+        ],
+        "of": [
+          4,
+          26,
+          62,
+          168
+        ],
+        "new": [
+          5,
+          31,
+          63,
+          101
+        ],
+        "drugs": [
+          6,
+          41,
+          86,
+          107,
+          159
+        ],
+        "is": [
+          7,
+          44,
+          90
+        ],
+        "costly,": [
+          8
+        ],
+        "time": [
+          9
+        ],
+        "consuming": [
+          10
+        ],
+        "and": [
+          11,
+          23,
+          110,
+          156,
+          181,
+          191
+        ],
+        "often": [
+          12
+        ],
+        "accompanied": [
+          13
+        ],
+        "with": [
+          14
+        ],
+        "safety": [
+          15
+        ],
+        "issues.": [
+          16
+        ],
+        "Drug": [
+          17
+        ],
+        "repurposing": [
+          18
+        ],
+        "can": [
+          19,
+          162
+        ],
+        "avoid": [
+          20
+        ],
+        "the": [
+          21,
+          59,
+          67,
+          85,
+          196
+        ],
+        "expensive": [
+          22
+        ],
+        "lengthy": [
+          24
+        ],
+        "process": [
+          25
+        ],
+        "drug": [
+          27,
+          71
+        ],
+        "by": [
+          29,
+          52
+        ],
+        "finding": [
+          30
+        ],
+        "uses": [
+          32,
+          111
+        ],
+        "for": [
+          33,
+          78,
+          151
+        ],
+        "already": [
+          34
+        ],
+        "approved": [
+          35
+        ],
+        "drugs.": [
+          36,
+          54
+        ],
+        "In": [
+          37
+        ],
+        "order": [
+          38
+        ],
+        "to": [
+          39,
+          46,
+          69,
+          95,
+          115,
+          164,
+          194
+        ],
+        "repurpose": [
+          40
+        ],
+        "effectively,": [
+          42
+        ],
+        "it": [
+          43
+        ],
+        "useful": [
+          45
+        ],
+        "know": [
+          47
+        ],
+        "which": [
+          48,
+          53,
+          89
+        ],
+        "proteins": [
+          49
+        ],
+        "are": [
+          50,
+          149,
+          173,
+          184,
+          201,
+          209
+        ],
+        "targeted": [
+          51
+        ],
+        "Computational": [
+          55
+        ],
+        "models": [
+          56,
+          74,
+          83,
+          148,
+          172,
+          180
+        ],
+        "that": [
+          57,
+          105,
+          121,
+          145,
+          157
+        ],
+        "estimate": [
+          58
+        ],
+        "interaction": [
+          60
+        ],
+        "strength": [
+          61
+        ],
+        "drug–target": [
+          64,
+          117,
+          128,
+          152
+        ],
+        "pairs": [
+          65
+        ],
+        "have": [
+          66,
+          75
+        ],
+        "potential": [
+          68
+        ],
+        "expedite": [
+          70
+        ],
+        "repurposing.": [
+          72
+        ],
+        "Several": [
+          73
+        ],
+        "been": [
+          76
+        ],
+        "proposed": [
+          77,
+          171
+        ],
+        "this": [
+          79
+        ],
+        "task.": [
+          80
+        ],
+        "However,": [
+          81
+        ],
+        "these": [
+          82
+        ],
+        "represent": [
+          84,
+          96
+        ],
+        "as": [
+          87,
+          108,
+          160
+        ],
+        "strings,": [
+          88
+        ],
+        "not": [
+          91,
+          125
+        ],
+        "a": [
+          92,
+          100
+        ],
+        "natural": [
+          93
+        ],
+        "way": [
+          94
+        ],
+        "molecules.": [
+          97
+        ],
+        "We": [
+          98,
+          119
+        ],
+        "propose": [
+          99
+        ],
+        "model": [
+          102
+        ],
+        "called": [
+          103
+        ],
+        "GraphDTA": [
+          104
+        ],
+        "represents": [
+          106
+        ],
+        "graphs": [
+          109,
+          161
+        ],
+        "graph": [
+          112,
+          122
+        ],
+        "neural": [
+          113,
+          123
+        ],
+        "networks": [
+          114,
+          124
+        ],
+        "predict": [
+          116,
+          127
+        ],
+        "affinity.": [
+          118
+        ],
+        "show": [
+          120
+        ],
+        "only": [
+          126
+        ],
+        "affinity": [
+          129,
+          154
+        ],
+        "better": [
+          130
+        ],
+        "than": [
+          131
+        ],
+        "non-deep": [
+          132
+        ],
+        "learning": [
+          133,
+          140,
+          147
+        ],
+        "models,": [
+          134
+        ],
+        "but": [
+          135
+        ],
+        "also": [
+          136
+        ],
+        "outperform": [
+          137
+        ],
+        "competing": [
+          138
+        ],
+        "deep": [
+          139,
+          146
+        ],
+        "methods.": [
+          141
+        ],
+        "Our": [
+          142
+        ],
+        "results": [
+          143
+        ],
+        "confirm": [
+          144
+        ],
+        "appropriate": [
+          150
+        ],
+        "binding": [
+          153
+        ],
+        "prediction,": [
+          155
+        ],
+        "representing": [
+          158
+        ],
+        "lead": [
+          163
+        ],
+        "further": [
+          165
+        ],
+        "improvements.": [
+          166
+        ],
+        "Availability": [
+          167
+        ],
+        "implementation": [
+          169
+        ],
+        "implemented": [
+          174
+        ],
+        "in": [
+          175
+        ],
+        "Python.": [
+          176
+        ],
+        "Related": [
+          177
+        ],
+        "data,": [
+          178
+        ],
+        "pre-trained": [
+          179
+        ],
+        "source": [
+          182
+        ],
+        "code": [
+          183
+        ],
+        "publicly": [
+          185
+        ],
+        "available": [
+          186,
+          202,
+          210
+        ],
+        "at": [
+          187,
+          211
+        ],
+        "https://github.com/thinng/GraphDTA.": [
+          188
+        ],
+        "All": [
+          189
+        ],
+        "scripts": [
+          190
+        ],
+        "data": [
+          192,
+          208
+        ],
+        "needed": [
+          193
+        ],
+        "reproduce": [
+          195
+        ],
+        "post": [
+          197
+        ],
+        "hoc": [
+          198
+        ],
+        "statistical": [
+          199
+        ],
+        "analysis": [
+          200
+        ],
+        "from": [
+          203
+        ],
+        "https://doi.org/10.5281/zenodo.3603523.": [
+          204
+        ],
+        "Supplementary": [
+          205,
+          207
+        ],
+        "information": [
+          206
+        ],
+        "Bioinformatics": [
+          212
+        ],
+        "online.": [
+          213
+        ]
+      },
+      "cited_by_count": 71
+    },
+    {
+      "title": "GraphDTA post-hoc analysis scripts",
+      "doi": "https://doi.org/10.5281/zenodo.3603523",
+      "year": 2020,
+      "journal": "Figshare",
+      "id": "https://openalex.org/W3208254245",
+      "authors": [
+        "Thomas P. Quinn"
+      ],
+      "abstract_inverted_index": {
+        "These": [
+          0
+        ],
+        "scripts": [
+          1
+        ],
+        "reproduce": [
+          2
+        ],
+        "the": [
+          3,
+          7
+        ],
+        "post-hoc": [
+          4
+        ],
+        "analysis": [
+          5
+        ],
+        "for": [
+          6
+        ],
+        "GraphDTA": [
+          8
+        ],
+        "paper.": [
+          9
+        ]
+      },
+      "cited_by_count": 3
+    },
+    {
+      "title": "T-GraphDTA: A Drug-Target Binding Affinity Prediction Framework Based on Protein Pre-training Model and Hybrid Graph Neural Network",
+      "doi": "https://doi.org/10.1007/978-981-97-0903-8_12",
+      "year": 2024,
+      "journal": "Communications in computer and information science",
+      "id": "https://openalex.org/W4392307131",
+      "authors": [
+        "Yijia Wu",
+        "Yanmei Lin",
+        "Yuzhong Peng",
+        "Ru Zhang",
+        "Li Cai"
+      ],
+      "abstract_inverted_index": null,
+      "cited_by_count": 1
+    }
+  ]
+}

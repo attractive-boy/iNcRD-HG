@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ByzN4GF6zTqMEn/ZvvhXxhCr3yA</id>
+  <title>arXiv Query: search_query=(au:Loconte AND (ti:knowledge OR abs:"knowledge graph") ) OR (ti:tractable AND abs:"knowledge graph")&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-09-16T10:13:39Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(au:Loconte+AND+(ti:knowledge+OR+abs:%22knowledge+graph%22))+OR+(ti:tractable+AND+abs:%22knowledge+graph%22)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.24892v1</id>
+    <title>Natural Language Input, Semantic Track Representation, and LLM Inference: Making the Maritime Information Exchange Model Tractable</title>
+    <updated>2026-06-03T15:12:43Z</updated>
+    <link href="https://arxiv.org/abs/2608.24892v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.24892v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a practical architecture for making the Maritime Information Exchange Model (MIEM) and the broader Rich Semantic Track model tractable using current large language model (LLM) technology. The barrier to adoption of semantic track models in defense and law enforcement has been the requirement that operators learn formal ontology languages and manually encode observations as typed logical assertions. We propose eliminating this barrier entirely: operators contribute observations in natural language; an LLM translates these into typed Semantic Assertion Records (SARs), which are named case frames that capture n-ary relations in a single compact structure; a knowledge graph accumulates the SARs; and a second LLM pass performs inference, anomaly detection, and hypothesis ranking over the graph. We work through two detailed examples (a 9/11-era pre-attack indicator scenario and a maritime cargo inspection scenario) showing the full pipeline from natural language input to SAR representation to inference output. We argue that this architecture makes the Track Model and MIEM immediately deployable with current technology, establishes prior art against proprietary enclosure of the approach, and grounds the method in a theoretical framework connecting semantic track representations to neural manifold geometry.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-03T15:12:43Z</published>
+    <arxiv:comment>11 pages, under review</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Frederick Roth</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.29168v2</id>
+    <title>Better Later Than Sooner: Neuro-Symbolic Knowledge Graph Construction via Ontology-grounded Post-extraction Correction</title>
+    <updated>2026-09-06T07:37:22Z</updated>
+    <link href="https://arxiv.org/abs/2605.29168v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.29168v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Question answering (QA) is a core challenge in AI, particularly for complex queries requiring multi-hop reasoning across documents, or symbolic operations like aggregation or exhaustive listing. Retrieval-augmented generation has become the dominant approach to QA, with recent graph-based variants addressing part of these issues by organizing knowledge to better support compositional questions. However, most textual graph-based RAG methods still lack the structure needed for symbolic operations useful to answer complex questions reliably. This motivates symbolic graph-based approaches, which extract knowledge graphs (KGs) whose relations are logic predicates that enable SQL-like querying. Yet these pipelines typically use LLMs for KG extraction, which can introduce consistency issues, where extracted facts may violate commonsense ontology constraints. We propose a neuro-symbolic framework for ontology-grounded KG construction combining open-domain extraction, embedding-based canonicalization of types and predicates, and targeted LLM-based correction of ontology violations. By deferring corrections to a post-extraction stage, our method avoids repeated LLM calls, substantially reducing token usage while improving KG consistency and preserving downstream QA quality. Finally, we show that the extracted KGs are well suited for symbolic querying by measuring the occurrence of SPARQL graph patterns.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-27T23:09:10Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Lorenzo Loconte</name>
+    </author>
+    <author>
+      <name>Timothy Hospedales</name>
+    </author>
+    <author>
+      <name>Cristina Cornelio</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.12537v3</id>
+    <title>Is Complex Query Answering Really Complex?</title>
+    <updated>2025-07-03T08:36:22Z</updated>
+    <link href="https://arxiv.org/abs/2410.12537v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.12537v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Complex query answering (CQA) on knowledge graphs (KGs) is gaining momentum as a challenging reasoning task. In this paper, we show that the current benchmarks for CQA might not be as complex as we think, as the way they are built distorts our perception of progress in this field. For example, we find that in these benchmarks, most queries (up to 98% for some query types) can be reduced to simpler problems, e.g., link prediction, where only one link needs to be predicted. The performance of state-of-the-art CQA models decreases significantly when such models are evaluated on queries that cannot be reduced to easier types. Thus, we propose a set of more challenging benchmarks composed of queries that require models to reason over multiple hops and better reflect the construction of real-world KGs. In a systematic empirical investigation, the new benchmarks show that current methods leave much to be desired from current CQA methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-16T13:19:03Z</published>
+    <arxiv:comment>ICML 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Cosimo Gregucci</name>
+    </author>
+    <author>
+      <name>Bo Xiong</name>
+    </author>
+    <author>
+      <name>Daniel Hernandez</name>
+    </author>
+    <author>
+      <name>Lorenzo Loconte</name>
+    </author>
+    <author>
+      <name>Pasquale Minervini</name>
+    </author>
+    <author>
+      <name>Steffen Staab</name>
+    </author>
+    <author>
+      <name>Antonio Vergari</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.15944v3</id>
+    <title>How to Turn Your Knowledge Graph Embeddings into Generative Models</title>
+    <updated>2024-01-16T10:53:05Z</updated>
+    <link href="https://arxiv.org/abs/2305.15944v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.15944v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Some of the most successful knowledge graph embedding (KGE) models for link prediction -- CP, RESCAL, TuckER, ComplEx -- can be interpreted as energy-based models. Under this perspective they are not amenable for exact maximum-likelihood estimation (MLE), sampling and struggle to integrate logical constraints. This work re-interprets the score functions of these KGEs as circuits -- constrained computational graphs allowing efficient marginalisation. Then, we design two recipes to obtain efficient generative circuit models by either restricting their activations to be non-negative or squaring their outputs. Our interpretation comes with little or no loss of performance for link prediction, while the circuits framework unlocks exact learning by MLE, efficient sampling of new triples, and guarantee that logical constraints are satisfied by design. Furthermore, our models scale more gracefully than the original KGEs on graphs with millions of entities.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-25T11:30:27Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lorenzo Loconte</name>
+    </author>
+    <author>
+      <name>Nicola Di Mauro</name>
+    </author>
+    <author>
+      <name>Robert Peharz</name>
+    </author>
+    <author>
+      <name>Antonio Vergari</name>
+    </author>
+  </entry>
+</feed>

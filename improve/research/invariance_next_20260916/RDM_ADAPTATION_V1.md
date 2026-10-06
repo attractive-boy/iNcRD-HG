@@ -1,0 +1,35 @@
+# Risk distribution matching: prospective graph adaptation
+
+This version was specified before seeing any RDM model's validation metrics. Prior failed candidates and previously accessed development/outer results are known. No method in this family is counted as a completed success.
+
+## Verified literature and actual reading
+
+Toan Nguyen, Kien Do, Bao Duong and Thin Nguyen, *Domain Generalisation via Risk Distribution Matching*, WACV 2024, DOI `10.1109/WACV57701.2024.00277`. The exact Crossref record and official CVF landing page agree on the title and conference. The main arXiv PDF is `2310.18598v1`, 17 pages, SHA256 `6d040fe0239331ef8b070ca04f47947c6a905a6a7d66c7c7afb5c9b33cd664c6`. One PDF request reset before receiving bytes; the single retry succeeded. The initial local fetch script failed to import an unavailable PDF package before making any network requests; both the failure source and its repair record are preserved.
+
+Read: introduction and related work, sections 3–4, equations (1)–(16), section 5 implementation/selection details, and the embedded appendix's implementation table and bandwidth description. Read the paper-linked author README and the RDM/ERM methods in `DomainBed/domainbed/algorithms.py` and `CMNIST/algorithms.py`, plus relevant hyperparameter registration. The pinned author commit is `1b8830e1b373ccacc7b50a2089ebfc2c188bb6b2`; all four downloaded text/code files have verified Git blob identities. Author code was not executed or imported.
+
+RDM selects the domain with the largest mean loss and matches its scalar loss distribution to the aggregate using MMD. The paper's appendix describes averaging eight bandwidth kernels, whereas the DomainBed code **sums** eight terms `exp(-gamma * squared_distance)` for gamma `[0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000]`. This implementation follows the code's sum convention. CMNIST instead defaults to a mean/covariance penalty; this distinction is not hidden. A domain with the largest mean loss need not have the largest MMD. The paper's conditional upper-bound discussion is not a universal guarantee, and no causal or OOD guarantee is claimed here.
+
+## Registered local hypothesis
+
+Full scalar loss distributions across drug-attribute groups may regularize the learned graph residual more effectively than matching only their first two moments. This is a training regularizer, not a new feature column, prediction fusion rule, pretrained tabular replacement, or frozen representation kernel. It shares a domain-generalization motivation with the failed GraphMETRO expert experiment but has no experts, perturbation classifier, graph corruption, or feature-space alignment. Its empirical mechanism claim requires beating both declared controls on both MiDrug metrics through every validation stage.
+
+The unchanged two-layer typed graph encoder uses width 64, four heads, dropout 0.1, and the established support-fold masks. Its raw residual is trained on the nested out-of-fold reference logit and all actual training examples in the current omitted fold. Predict with the established reference plus 0.1 times the mean residual over five supports. LncDrug is the prospectively fixed identity branch and involves no new neural fit. These common components do not count as innovations.
+
+Domains are four KMeans clusters of L2-normalized, frozen drug attributes `x_2`, fit only on drug identities occurring in training pairs; `random_state=20260916`, `n_init=10`, Lloyd algorithm. Unseen drug identities retain group -1 and never enter the objective. Domain assignments are stored in the model as nontrainable buffers and are not used by forward prediction. Historical training-only inspection, without computing model performance, found group sizes 110/60/38/8 and at least 14 positive and 27 negative examples per class-domain in each omitted fold. These are attribute groups, not observed experimental sites or proven biological environments.
+
+Unlike the original unconditional image-domain objective, matching is performed separately for each **actual training label**. This avoids a penalty caused solely by unequal positive fractions. For each class, select the group with the largest mean BCE (detached argmax, lowest cluster number breaks exact ties), form a uniform mixture over the available groups with uniform sample weights within each, and compute the exact weighted empirical MMD squared including diagonal terms. Average the two class penalties. This is an empirical V-statistic, not an unbiased estimate of a population squared MMD. Gradients flow through every risk in the selected group and mixture. Neither labels nor logits of validation queries enter domain construction or fixed-step fitting.
+
+Three arms, fixed before fitting:
+
+- `full`: global BCE plus weight 1 times the class-conditional, eight-RBF MMD penalty.
+- `moment_matching`: same selected domains and equal-domain mixtures; replace MMD with squared differences of the mean and population variance of each empirical risk distribution, then average over labels. This is a moment-matching control; the original CMNIST sample-variance convention is not claimed to be identical.
+- `erm`: same global BCE and graph model; zero matching penalty.
+
+Every arm runs 400 AdamW updates and 400 backwards, learning rate selected from 0.001/0.003, decay 0.001, clipping norm 5. The first 100 updates are BCE warmup. Learning rate and optimizer state are not reset at the boundary (explicit difference from author code). Both penalty diagnostics are computed in all arms without extra randomness. Only post-warmup checkpoints at steps 120, 140, …, 400 are eligible, for every arm. No extra variance-shrinkage penalty is added. All settings above are frozen; a failed version is retained and stopped, not repaired in place from its metrics.
+
+## Required evidence and limitations
+
+Before screening: independent weighted-kernel value and gradient checks; equal-mean/equal-variance distribution contrast; training-entity/attribute-only domain checks; actual warmup, backward and optimizer counts; exact zero-fit LncDrug identity; real-data short fits crossing step 100; saved-state/order/chunk replay; every historical and fixed-development support-fold boundary audit. The short fits compute no validation metrics. The fixed partition stage, if reached, must use a dedicated validator that retains the 100-step warmup, selected post-warmup epoch count and class-domain construction; it cannot use a generic ordinary-BCE fitter.
+
+Screening, three initialization confirmation, fixed development partitions and the frozen outer recheck are all required. Global ROC AUC and sklearn AP are the primary metrics; LncDrug loss above 0.001 in any paired seed/split/metric is disallowed. Development partitions overlap and have already been used in earlier work. Their intervals do not correct adaptive method selection, and the historical outer inputs are not established to be globally untouched test data. Successful numerical checks or one-stage improvements are not final technical successes.

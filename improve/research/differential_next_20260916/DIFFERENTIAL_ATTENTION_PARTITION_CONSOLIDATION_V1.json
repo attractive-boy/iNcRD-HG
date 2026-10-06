@@ -1,0 +1,205 @@
+{
+  "created_at_utc": "2026-09-15T19:47:24.116379+00:00",
+  "consolidation_source_sha256": "3e3960f8fd71c78ce63b8cdd5f783b677c669f6f555c8feaa9d8639829e1303c",
+  "family": "differential_attention",
+  "candidate_sha256": "3563154bc6ae50933994d3d246ad9745ebabfd7224ca699d5422fc9431480209",
+  "assessment_sha256": "5beefc53d4d6820e62f50f918d5b35c9f69bc1188c1cbb50f1798ac9f56b32c1",
+  "table_sha256": "a52dc230437c73c2a6bd0b3dd56825c676658da61b4c012cb28b53e620a4ccb0",
+  "previous_table_sha256": "a8c15756064e69f21f4bb6c4c48f20e39084b5ab524384a6aa60299b2a07b344",
+  "rows": [
+    {
+      "label": "anchor_priority_differential_attention_v1",
+      "name": "差分注意力（作者 V2 运算适配）",
+      "task": "MiDrug",
+      "auc": 0.956299174410543,
+      "ap": 0.9190135968511856,
+      "delta_auc": -0.00023533751852485298,
+      "delta_ap": -0.0005449970514657001,
+      "auc_wins": 0,
+      "ap_wins": 0,
+      "min_delta_auc": -0.0005986795657068,
+      "min_delta_ap": -0.0006972266975937,
+      "macro_drug_ap": 0.7946052160981113,
+      "fresh_gate": false,
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "offset_null_gate": false
+    },
+    {
+      "label": "anchor_priority_differential_attention_v1",
+      "name": "差分注意力（作者 V2 运算适配）",
+      "task": "LncDrug",
+      "auc": 0.99059803073181,
+      "ap": 0.9811939323634489,
+      "delta_auc": 0.0,
+      "delta_ap": 0.0,
+      "auc_wins": 0,
+      "ap_wins": 0,
+      "min_delta_auc": 0.0,
+      "min_delta_ap": 0.0,
+      "macro_drug_ap": 0.9459580580255474,
+      "fresh_gate": false,
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "offset_null_gate": false
+    }
+  ],
+  "all_stored_metrics_recomputed": true,
+  "source_assessment_unchanged": true,
+  "mean_contrasts": [
+    {
+      "task": "LncDrug",
+      "control": "additive_attention",
+      "auc": 0.0,
+      "ap": 0.0,
+      "macro_drug_ap": 0.0
+    },
+    {
+      "task": "LncDrug",
+      "control": "anchor",
+      "auc": 0.0,
+      "ap": 0.0,
+      "macro_drug_ap": 0.0
+    },
+    {
+      "task": "LncDrug",
+      "control": "offset_composed",
+      "auc": 0.0,
+      "ap": 0.0,
+      "macro_drug_ap": 0.0
+    },
+    {
+      "task": "MiDrug",
+      "control": "additive_attention",
+      "auc": -0.0002416979919984,
+      "ap": -0.0005810896170886,
+      "macro_drug_ap": 0.0039381613510658
+    },
+    {
+      "task": "MiDrug",
+      "control": "anchor",
+      "auc": -0.0002353375185248,
+      "ap": -0.0005449970514657,
+      "macro_drug_ap": 0.000309182009928
+    },
+    {
+      "task": "MiDrug",
+      "control": "offset_composed",
+      "auc": -0.0002353375185248,
+      "ap": -0.0005449970514657,
+      "macro_drug_ap": 0.000309182009928
+    }
+  ],
+  "uncertainty": {
+    "MiDrug": {
+      "method": "Paired two-way endpoint pigeonhole bootstrap; same endpoint draws across all overlapping splits; mean per-split metric difference.",
+      "requested_resamples": 1000,
+      "valid_resamples": 1000,
+      "unique_rnas": 605,
+      "unique_drugs": 216,
+      "selection_bias_corrected": false,
+      "new_biological_validation": false,
+      "intervals": {
+        "anchor": {
+          "auc": {
+            "low": -0.0011442810223795407,
+            "high": 0.0007181047936128338,
+            "positive_fraction": 0.297
+          },
+          "ap": {
+            "low": -0.0035343074132330806,
+            "high": 0.0014753464055990314,
+            "positive_fraction": 0.307
+          }
+        },
+        "offset_composed": {
+          "auc": {
+            "low": -0.0011442810223795407,
+            "high": 0.0007181047936128338,
+            "positive_fraction": 0.297
+          },
+          "ap": {
+            "low": -0.0035343074132330806,
+            "high": 0.0014753464055990314,
+            "positive_fraction": 0.307
+          }
+        },
+        "additive_attention": {
+          "auc": {
+            "low": -0.0009209561432886112,
+            "high": 0.00046047672838314864,
+            "positive_fraction": 0.257
+          },
+          "ap": {
+            "low": -0.002581545568351751,
+            "high": 0.001022855586711773,
+            "positive_fraction": 0.261
+          }
+        }
+      }
+    },
+    "LncDrug": {
+      "method": "Paired two-way endpoint pigeonhole bootstrap; same endpoint draws across all overlapping splits; mean per-split metric difference.",
+      "requested_resamples": 1000,
+      "valid_resamples": 1000,
+      "unique_rnas": 1012,
+      "unique_drugs": 215,
+      "selection_bias_corrected": false,
+      "new_biological_validation": false,
+      "intervals": {
+        "anchor": {
+          "auc": {
+            "low": 0.0,
+            "high": 0.0,
+            "positive_fraction": 0.0
+          },
+          "ap": {
+            "low": 0.0,
+            "high": 0.0,
+            "positive_fraction": 0.0
+          }
+        },
+        "offset_composed": {
+          "auc": {
+            "low": 0.0,
+            "high": 0.0,
+            "positive_fraction": 0.0
+          },
+          "ap": {
+            "low": 0.0,
+            "high": 0.0,
+            "positive_fraction": 0.0
+          }
+        },
+        "additive_attention": {
+          "auc": {
+            "low": 0.0,
+            "high": 0.0,
+            "positive_fraction": 0.0
+          },
+          "ap": {
+            "low": 0.0,
+            "high": 0.0,
+            "positive_fraction": 0.0
+          }
+        }
+      }
+    }
+  },
+  "new_partition_neural_fits": 6,
+  "new_partition_identity_records": 6,
+  "cumulative_fixed_partition_neural_fits": 303,
+  "historical_accounting": {
+    "new_neural_fits": 8,
+    "adopted_neural_fits": 0,
+    "new_identity_records": 8,
+    "adopted_identity_records": 0
+  },
+  "new_reference_fits": 0,
+  "new_outer_fits": 0,
+  "confirmed_final_innovations": 0,
+  "existing_default_replaced": false,
+  "decision": "Stop this frozen candidate before outer recheck",
+  "all_reports_preserved": true,
+  "sha256": "c76cf6d59ddb129e4d02a4cfa13e4cd47cade874664d47ce0c9c12a3aa652eb0"
+}

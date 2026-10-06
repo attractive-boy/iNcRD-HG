@@ -1,0 +1,126 @@
+{
+  "created_at_utc": "2026-09-15T19:22:25.496310+00:00",
+  "records": [
+    {
+      "source": "arxiv_flow",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22flow+matching%22+AND+%28all%3A%22link+prediction%22+OR+all%3A%22graph+learning%22%29&start=0&max_results=6&sortBy=submittedDate&sortOrder=descending",
+      "file": "improve/research/discrete_flow_next_20260916/arxiv_flow_v1.xml",
+      "results": []
+    },
+    {
+      "source": "arxiv_diffusion",
+      "url": "https://export.arxiv.org/api/query?search_query=ti%3A%22diffusion%22+AND+%28all%3A%22link+prediction%22%29&start=0&max_results=6&sortBy=submittedDate&sortOrder=descending",
+      "file": "improve/research/discrete_flow_next_20260916/arxiv_diffusion_v1.xml",
+      "results": [
+        {
+          "title": "TAG-DLM: Diffusion Language Models for Text-Attributed Graph Learning",
+          "id": "http://arxiv.org/abs/2606.31166v1",
+          "published": "2026-06-30T05:56:18Z",
+          "summary": "Text-attributed graphs (TAGs), where each node carries a natural language description, require models to jointly reason over text and graph topology. Existing approaches often handle the two modalities separately: graph neural networks operate on shallow text features, while hybrids of LLMs and graphs use the language model mainly as a text encoder and delegate structure learning to a separate graph module. We propose method that unifies textual reasoning and graph message passing within a masked diffusion language model, a language model with bidirectional attention and generative decoding. For each graph instance, method linearises a sampled local neighbourhood into a token sequence and injects graph structure through a topology attention mask, which realises message passing over the graph. Because the diffusion language model can both interpret and generate text, the method adapts to different tasks simply by changing the prompt, supporting node classification, link prediction, and cross-dataset transfer with no target-specific fine-tuning.\n  Experiments show that method outperforms graph neural networks, graph transformers, and LLM-based baselines on all three TAG benchmarks across two tasks, improving over the strongest baseline by up to 3.9 points."
+        },
+        {
+          "title": "Generative Representation Learning on Hyper-relational Knowledge Graphs via Masked Discrete Diffusion",
+          "id": "http://arxiv.org/abs/2605.24064v1",
+          "published": "2026-05-22T04:18:30Z",
+          "summary": "Hyper-relational knowledge graphs (HKGs) effectively represent complex facts. While inferring new knowledge in HKGs is a critical problem, current methods cast it as a simple link prediction, assuming that nearly all entities and relations within a fact are known, leaving only a single blank to be filled. However, this restricted assumption may not hold in real-world scenarios in which multiple, or even all, constituent components of a fact may be missing simultaneously. To bridge this gap, we introduce a task called fact generation: generating a valid hyper-relational fact from an arbitrarily masked query, i.e., completing a partially observed fact or generating a fact from scratch. We propose KREPE, the first generative representation learning method for HKGs that learns to model the probability distributions of missing components conditioned on the local fact components and global structure of HKGs via a masked discrete diffusion. KREPE models both the intra-fact dependencies by contextual message passing and inter-fact correlations by aggregating stochastically sampled contexts. KREPE seamlessly unifies link prediction and fact generation within a single training framework, achieving state-of-the-art performance on standard HKG link prediction benchmarks and outperforming LLM-based baselines in generating novel and correct facts."
+        },
+        {
+          "title": "RADD: Retrieval-Augmented Discrete Diffusion for Multi-Modal Knowledge Graph Completion",
+          "id": "http://arxiv.org/abs/2604.25693v2",
+          "published": "2026-04-28T14:21:03Z",
+          "summary": "Most multi-modal knowledge graph completion (MMKGC) models use one embedding scorer to conduct both retrieval over the full entity set and final link prediction. We argue that this coupling is a core bottleneck: global high-recall search and local fine-grained disambiguation require different inductive biases. Therefore, we propose a Retrieval-Augmented Discrete Diffusion (RADD) framework to decouple retrieval and reranking for MMKGC. A relation-aware multimodal knowledge graph embedding (KGE) retriever serves as both global retriever and distillation teacher, while a conditional discrete denoiser performs shortlist-level entity-identity generation for reranking. Training combines KGE supervision, denoising cross-entropy, and temperature-scaled distillation from the retriever to the denoiser. At inference, the designed Diff-Rerank first forms a top-K shortlist with the retriever and then reranks it with the denoiser, ensuring that recall is a strict requirement for precision. Experiments on three MMKGC benchmarks show that RADD achieves the best performance and consistent gains over strong unimodal, multimodal, and LLM-based baselines, while ablations further verify each component's contribution."
+        },
+        {
+          "title": "Sequence Diffusion Model for Temporal Link Prediction in Continuous-Time Dynamic Graph",
+          "id": "http://arxiv.org/abs/2601.23233v1",
+          "published": "2026-01-30T18:02:12Z",
+          "summary": "Temporal link prediction in dynamic graphs is a fundamental problem in many real-world systems. Existing temporal graph neural networks mainly focus on learning representations of historical interactions. Despite their strong performance, these models are still purely discriminative, producing point estimates for future links and lacking an explicit mechanism to capture the uncertainty and sequential structure of future temporal interactions. In this paper, we propose SDG, a novel sequence-level diffusion framework that unifies dynamic graph learning with generative denoising. Specifically, SDG injects noise into the entire historical interaction sequence and jointly reconstructs all interaction embeddings through a conditional denoising process, thereby enabling the model to capture more comprehensive interaction distributions. To align the generative process with temporal link prediction, we employ a cross-attention denoising decoder to guide the reconstruction of the destination sequence and optimize the model in an end-to-end manner. Extensive experiments on various temporal graph benchmarks show that SDG consistently achieves state-of-the-art performance in the temporal link prediction task."
+        },
+        {
+          "title": "FSD-CAP: Fractional Subgraph Diffusion with Class-Aware Propagation for Graph Feature Imputation",
+          "id": "http://arxiv.org/abs/2601.18938v1",
+          "published": "2026-01-26T20:19:31Z",
+          "summary": "Imputing missing node features in graphs is challenging, particularly under high missing rates. Existing methods based on latent representations or global diffusion often fail to produce reliable estimates, and may propagate errors across the graph. We propose FSD-CAP, a two-stage framework designed to improve imputation quality under extreme sparsity. In the first stage, a graph-distance-guided subgraph expansion localizes the diffusion process. A fractional diffusion operator adjusts propagation sharpness based on local structure. In the second stage, imputed features are refined using class-aware propagation, which incorporates pseudo-labels and neighborhood entropy to promote consistency. We evaluated FSD-CAP on multiple datasets. With $99.5\\%$ of features missing across five benchmark datasets, FSD-CAP achieves average accuracies of $80.06\\%$ (structural) and $81.01\\%$ (uniform) in node classification, close to the $81.31\\%$ achieved by a standard GCN with full features. For link prediction under the same setting, it reaches AUC scores of $91.65\\%$ (structural) and $92.41\\%$ (uniform), compared to $95.06\\%$ for the fully observed case. Furthermore, FSD-CAP demonstrates superior performance on both large-scale and heterophily datasets when compared to other models."
+        },
+        {
+          "title": "Diffusion Signals Reveal Hidden Connections: A Physics-Inspired Framework for Link Prediction via Personalized PageRank Signals",
+          "id": "http://arxiv.org/abs/2511.17569v1",
+          "published": "2025-11-14T09:06:47Z",
+          "summary": "Link prediction in complex networks--identifying the missing or future connections--remains a cornerstone problem for understanding network evolution and function, yet existing methods struggle to balance computational efficiency with theoretical rigor across heterogeneous topologies. This work introduces a physically principled framework, Diffusion Distance with Personalized PageRank (D-PPR), which unifies static topology with dynamic information flow by modeling nodes as signal sources propagating through the network via Personalized PageRank (PPR) vectors. The method quantifies node-pair similarity through the graph Laplacian-governed diffusion distance between their topology-aware signal distributions, thereby bridging microscopic interactions with macroscopic network dynamics. Systematic benchmarking on synthetic (Barabási-Albert, LFR) and seven large-scale real-world networks spanning technology, biology, and social domains demonstrates that D-PPR achieves highly competitive performance, yielding favorable results when compared to representative local and global heuristics, particularly in sparse and modular networks. These findings establish a rigorous foundation for physics-inspired link prediction by revealing that incorporating dynamical processes into structural similarity metrics enables deeper insights into network connectivity patterns, offering both methodological advances and new theoretical perspectives on the interplay between topology and dynamics."
+        }
+      ]
+    },
+    {
+      "source": "crossref_flow",
+      "url": "https://api.crossref.org/works?query=discrete+flow+matching+graph+link+prediction&rows=6",
+      "file": "improve/research/discrete_flow_next_20260916/crossref_flow_v1.json",
+      "results": [
+        {
+          "title": [
+            "VFMol: A Discrete Flow Matching Variational Autoencoder for Molecular Graph Generation"
+          ],
+          "doi": "10.1021/acs.jcim.5c03005.s001",
+          "published": null,
+          "venue": null
+        },
+        {
+          "title": [
+            "ChemMambaFlow: Graph-Enhanced Mamba with Latent Flow Matching for Molecular Property Prediction and Conformation Generation"
+          ],
+          "doi": "10.26434/chemrxiv.15002769/v1",
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                5
+              ]
+            ]
+          },
+          "venue": null
+        },
+        {
+          "title": [
+            "GCN-ALP: Addressing Matching Collisions in Anchor Link Prediction"
+          ],
+          "doi": "10.1109/icbk50248.2020.00065",
+          "published": {
+            "date-parts": [
+              [
+                2020,
+                8
+              ]
+            ]
+          },
+          "venue": [
+            "2020 IEEE International Conference on Knowledge Graph (ICKG)"
+          ]
+        },
+        {
+          "title": [
+            "Higher-order Link Prediction Using Graph Embeddings"
+          ],
+          "doi": "10.31979/etd.dw9r-5f63",
+          "published": null,
+          "venue": null
+        },
+        {
+          "title": [
+            "Figure 2: (A–B) Inductive link prediction in knowledge graph."
+          ],
+          "doi": "10.7717/peerjcs.2324/fig-2",
+          "published": null,
+          "venue": null
+        },
+        {
+          "title": [
+            "Figure 1: (A–B) Transductive link prediction in knowledge graph."
+          ],
+          "doi": "10.7717/peerjcs.2324/fig-1",
+          "published": null,
+          "venue": null
+        }
+      ]
+    }
+  ]
+}

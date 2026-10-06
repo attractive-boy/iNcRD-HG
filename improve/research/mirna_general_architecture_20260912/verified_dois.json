@@ -1,0 +1,1233 @@
+[
+  {
+    "doi": "10.1093/bioinformatics/btag410",
+    "url": "https://api.crossref.org/works/10.1093%2Fbioinformatics%2Fbtag410",
+    "title": [
+      "miRBind2 enables sequence-only prediction of miRNA binding and transcript repression"
+    ],
+    "venue": [
+      "Bioinformatics"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          1
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          21
+        ]
+      ]
+    },
+    "type": "journal-article",
+    "author": [
+      {
+        "given": "David",
+        "family": "Čechák",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Central European Institute of Technology, Masaryk University , Brno 625 00,",
+            "place": [
+              "Czech Republic"
+            ]
+          },
+          {
+            "name": "National Centre for Biomolecular Research, Faculty of Science, Masaryk University , Brno 625 00,",
+            "place": [
+              "Czech Republic"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Dimosthenis",
+        "family": "Tzimotoudis",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Applied Biomedical Science, Faculty of Health Sciences, University of Malta , Msida,",
+            "place": [
+              "Malta"
+            ]
+          },
+          {
+            "name": "Centre for Molecular Medicine and Biobanking, University of Malta , Msida,",
+            "place": [
+              "Malta"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Stephanie",
+        "family": "Sammut",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Applied Biomedical Science, Faculty of Health Sciences, University of Malta , Msida,",
+            "place": [
+              "Malta"
+            ]
+          },
+          {
+            "name": "Centre for Molecular Medicine and Biobanking, University of Malta , Msida,",
+            "place": [
+              "Malta"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Katarina",
+        "family": "Gresova",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Applied Biomedical Science, Faculty of Health Sciences, University of Malta , Msida,",
+            "place": [
+              "Malta"
+            ]
+          },
+          {
+            "name": "Centre for Molecular Medicine and Biobanking, University of Malta , Msida,",
+            "place": [
+              "Malta"
+            ]
+          },
+          {
+            "name": "Max-Delbrück-Center for Molecular Medicine in the Helmholtz Association (MDC), Berlin Institute for Medical Systems Biology (BIMSB) , Berlin,",
+            "place": [
+              "Germany"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Eva",
+        "family": "Marsalkova",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Central European Institute of Technology, Masaryk University , Brno 625 00,",
+            "place": [
+              "Czech Republic"
+            ]
+          },
+          {
+            "name": "National Centre for Biomolecular Research, Faculty of Science, Masaryk University , Brno 625 00,",
+            "place": [
+              "Czech Republic"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "David",
+        "family": "Farrugia",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Faculty of ICT, University of Malta , Msida, MSD 2080,",
+            "place": [
+              "Malta"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-3437-7482",
+        "authenticated-orcid": false,
+        "given": "Panagiotis",
+        "family": "Alexiou",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Applied Biomedical Science, Faculty of Health Sciences, University of Malta , Msida,",
+            "place": [
+              "Malta"
+            ]
+          },
+          {
+            "name": "Centre for Molecular Medicine and Biobanking, University of Malta , Msida,",
+            "place": [
+              "Malta"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "abstract": "Abstract\n                  \n                    Motivation\n                    MicroRNAs (miRNAs) regulate gene expression by guiding Argonaute proteins to partially complementary sites on target RNAs. While classical prediction methods rely on engineered features such as seed match categories, evolutionary conservation, and site context, recent advances in deep learning offer the potential to learn targeting rules directly from sequence. We developed a sequence-based deep learning model that improves miRNA target site prediction, and further validated the learned target site representations by extending the model to gene-level functional repression prediction.\n                  \n                  \n                    Results\n                    We introduce miRBind2, a deep learning method for miRNA target site prediction that incorporates a novel pairwise nucleotide representation capturing all possible miRNA-target nucleotide interactions, with a CNN-based architecture. miRBind2 outperforms previous SotA models across four independent datasets from the debiased miRBench benchmark, while using 92% fewer parameters. We show that the convolutional features and weights learned by miRBind2 can be transferred to transcript-level prediction by extending the miRBind2 architecture and fine-tuning it on miRNA perturbation experiments. This miRBind2-3UTR model predicts gene repression from sequence alone. On a dataset of 50 549 miRNA-gene pairs, miRBind2-3UTR significantly outperforms TargetScan. These results show that deep models pretrained on target site data can capture regulatory signals and predict functional repression without requiring conventional engineered biological features.\n                  \n                  \n                    Availability\n                    Models and source code are freely available via GitHub (https://github.com/BioGeMT/miRBind_2.0). A publicly available web-tool for novel predictions and visualization is available at: (https://huggingface.co/spaces/dimostzim/BioGeMT-miRBind2).\n                  ",
+    "link": [
+      {
+        "URL": "https://academic.oup.com/bioinformatics/article-pdf/42/Supplement_2/btag410/70726079/btag410.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://academic.oup.com/bioinformatics/article-pdf/42/Supplement_2/btag410/70726079/btag410.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              24
+            ]
+          ],
+          "date-time": "2026-08-24T00:00:00Z",
+          "timestamp": 1787529600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 23,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ]
+  },
+  {
+    "doi": "10.1093/bioinformatics/btag222",
+    "url": "https://api.crossref.org/works/10.1093%2Fbioinformatics%2Fbtag222",
+    "title": [
+      "MiRformer: a dual-transformer-encoder framework for predicting microRNA-mRNA interactions from paired sequences"
+    ],
+    "venue": [
+      "Bioinformatics"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          1
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          7
+        ]
+      ]
+    },
+    "type": "journal-article",
+    "author": [
+      {
+        "given": "Jiayao",
+        "family": "Gu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Computer Science, McGill University , Montréal, QC, H3A 0G4,",
+            "place": [
+              "Canada"
+            ]
+          },
+          {
+            "name": "Mila—Quebéc AI Institute , Montréal, QC, H2S 3H1,",
+            "place": [
+              "Canada"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Can",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Mila—Quebéc AI Institute , Montréal, QC, H2S 3H1,",
+            "place": [
+              "Canada"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-3844-4865",
+        "authenticated-orcid": false,
+        "given": "Yue",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science, McGill University , Montréal, QC, H3A 0G4,",
+            "place": [
+              "Canada"
+            ]
+          },
+          {
+            "name": "Mila—Quebéc AI Institute , Montréal, QC, H2S 3H1,",
+            "place": [
+              "Canada"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "abstract": "Abstract\n                  \n                    Motivation\n                    MicroRNAs (miRNAs) regulate gene expression by binding to target messenger RNAs (mRNAs), inducing translational repression or mRNA degradation. Accurate prediction of miRNA–mRNA interactions and precise localization of binding and cleavage sites are critical for understanding post-transcriptional regulation and for enabling RNA therapeutics. Existing computational methods often rely on handcrafted or indirect features, scale poorly to kilobase-long mRNA sequences, or provide limited interpretability.\n                  \n                  \n                    Results\n                    We present MiRformer, a transformer-based framework that jointly predicts miRNA–mRNA interactions and localizes miRNA binding and cleavage sites directly from raw sequence pairs. MiRformer employs a dual-transformer encoder architecture for miRNA and mRNA sequences and incorporates a sliding-window attention mechanism to efficiently model kilobase-long mRNA contexts while preserving nucleotide-level resolution. Across multiple benchmrks, MiRformer achieves state-of-the-art performance on interaction prediction, binding-site localization, and cleavage-site identification from experimental Human Degradome-seq data. Beyond accuracy, MiRformer provides strong interpretability: attention patterns consistently highlight miRNA seed regions within 500-nt mRNA windows, revealing clear and biologically meaningful interaction signals. When applied to jointly infer binding and cleavage sites across 13k miRNA–mRNA pairs, predicted sites frequently co-localize, supporting a miRNA-mediated degradation mechanism.\n                  \n                  \n                    Availability and implementation\n                    Python code and datasets are publicly available at https://github.com/li-lab-mcgill/miRformer.\n                  ",
+    "link": [
+      {
+        "URL": "https://academic.oup.com/bioinformatics/article-pdf/42/Supplement_1/btag222/68709449/btag222.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://academic.oup.com/bioinformatics/article-pdf/42/Supplement_1/btag222/68709449/btag222.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              7
+            ]
+          ],
+          "date-time": "2026-07-07T00:00:00Z",
+          "timestamp": 1783382400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 6,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ]
+  },
+  {
+    "doi": "10.1038/s41598-026-61460-3",
+    "url": "https://api.crossref.org/works/10.1038%2Fs41598-026-61460-3",
+    "title": [
+      "misoTar: a novel approach for predicting miRNA and isomiR targets"
+    ],
+    "venue": [
+      "Scientific Reports"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          16
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          16
+        ]
+      ]
+    },
+    "type": "journal-article",
+    "author": [
+      {
+        "given": "Rony Chowdhury",
+        "family": "Ripan",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiaoman",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Haiyan",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "abstract": "",
+    "link": [
+      {
+        "URL": "https://www.nature.com/articles/s41598-026-61460-3",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              16
+            ]
+          ],
+          "date-time": "2026-07-16T00:00:00Z",
+          "timestamp": 1784160000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              16
+            ]
+          ],
+          "date-time": "2026-07-16T00:00:00Z",
+          "timestamp": 1784160000000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+      }
+    ]
+  },
+  {
+    "doi": "10.1109/JBHI.2026.3717803",
+    "url": "https://api.crossref.org/works/10.1109%2FJBHI.2026.3717803",
+    "title": [
+      "Dual-granularity feature learning reveals static and dynamic mechanisms of ncRNA-drug interactions"
+    ],
+    "venue": [
+      "IEEE Journal of Biomedical and Health Informatics"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "online": null,
+    "type": "journal-article",
+    "author": [
+      {
+        "given": "Runzhou",
+        "family": "Tang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Chinese Academy of Sciences",
+            "place": [
+              "Urumqi, China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xi",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Chinese Academy of Sciences",
+            "place": [
+              "Urumqi, China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yujie",
+        "family": "Qi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Chinese Academy of Sciences",
+            "place": [
+              "Urumqi, China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiaobo",
+        "family": "Zhu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Chinese Academy of Sciences",
+            "place": [
+              "Urumqi, China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yuan",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Northwestern Polytechnical University",
+            "place": [
+              "Xi'an, China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lun",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Chinese Academy of Sciences",
+            "place": [
+              "Urumqi, China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhuhong",
+        "family": "You",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Northwestern Polytechnical University",
+            "place": [
+              "Xi'an, China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Pengwei",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Chinese Academy of Sciences",
+            "place": [
+              "Urumqi, China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "abstract": "",
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/6221020/6363502/11626496.pdf?arnumber=11626496",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2026-01-01T00:00:00Z",
+          "timestamp": 1767225600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2026-01-01T00:00:00Z",
+          "timestamp": 1767225600000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2026-01-01T00:00:00Z",
+          "timestamp": 1767225600000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ]
+  },
+  {
+    "doi": "10.1016/j.compbiolchem.2026.109236",
+    "url": "https://api.crossref.org/works/10.1016%2Fj.compbiolchem.2026.109236",
+    "title": [
+      "Router-guided dual attention with graph masked autoencoder for microRNA–drug association prediction"
+    ],
+    "venue": [
+      "Computational Biology and Chemistry"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          10
+        ]
+      ]
+    },
+    "online": null,
+    "type": "journal-article",
+    "author": [
+      {
+        "given": "Yunyin",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chuanru",
+        "family": "Ren",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yuanyuan",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yingye",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shudong",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shanchen",
+        "family": "Pang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "abstract": "",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S1476927126003634?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S1476927126003634?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2026-10-01T00:00:00Z",
+          "timestamp": 1790812800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2026-10-01T00:00:00Z",
+          "timestamp": 1790812800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2026-10-01T00:00:00Z",
+          "timestamp": 1790812800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2026-10-01T00:00:00Z",
+          "timestamp": 1790812800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2026-10-01T00:00:00Z",
+          "timestamp": 1790812800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2026-10-01T00:00:00Z",
+          "timestamp": 1790812800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2026-10-01T00:00:00Z",
+          "timestamp": 1790812800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ]
+  },
+  {
+    "doi": "10.1093/bib/bbag322",
+    "url": "https://api.crossref.org/works/10.1093%2Fbib%2Fbbag322",
+    "title": [
+      "MIFNDRA: an innovative knowledge-enhanced multimodal fusion and graph learning framework for predicting drug resistance-related ncRNAs"
+    ],
+    "venue": [
+      "Briefings in Bioinformatics"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          5
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          17
+        ]
+      ]
+    },
+    "type": "journal-article",
+    "author": [
+      {
+        "given": "Jianan",
+        "family": "Sui",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Centre for Artificial Intelligence Driven Drug Discovery, Faculty of Applied Sciences, Macao Polytechnic University , Rua de Luís Gonzaga Gomes, Macao 999078 ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Weirong",
+        "family": "Cui",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Centre for Artificial Intelligence Driven Drug Discovery, Faculty of Applied Sciences, Macao Polytechnic University , Rua de Luís Gonzaga Gomes, Macao 999078 ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiaojie",
+        "family": "Jin",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Pharmacy, Gansu University of Chinese Medicine , No. 35 Dingxi East Road, Chengguan District, Lanzhou, Gansu Province 730000 ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hongliang",
+        "family": "Duan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Centre for Artificial Intelligence Driven Drug Discovery, Faculty of Applied Sciences, Macao Polytechnic University , Rua de Luís Gonzaga Gomes, Macao 999078 ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4632-4364",
+        "authenticated-orcid": false,
+        "given": "Jingjing",
+        "family": "Guo",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Centre for Artificial Intelligence Driven Drug Discovery, Faculty of Applied Sciences, Macao Polytechnic University , Rua de Luís Gonzaga Gomes, Macao 999078 ,",
+            "place": [
+              "China"
+            ]
+          },
+          {
+            "name": "Engineering Research Centre of Applied Technology on Machine Translation and Artificial Intelligence , Macao Polytechnic University, Rua de Luís Gonzaga Gomes, Macao 999078 ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "abstract": "Abstract\n                  Drug resistance is a significant challenge in cancer treatment, greatly impacting treatment efficacy. Non-coding RNAs (ncRNAs) play crucial roles in mediating drug resistance, yet few computational models effectively predict drug resistance-associated ncRNAs. Existing methods often overlook the complex sequence patterns of ncRNA and their intricate interrelationships, resulting in suboptimal performance. To address these challenges, we propose MIFNDRA, a multimodal integrative framework that jointly models ncRNA and drug features to identify drug resistance-related ncRNAs. MIFNDRA employs a pre-trained Graph Isomorphism Network to extract drug structural features and a pre-trained SpliceBERT model to encode ncRNA sequences. It also incorporates various similarity features for both drugs and ncRNAs, while improving representation through a novel ncRNA interaction network that includes interactions between different ncRNA types as a strategy for knowledge enhancement. By leveraging advanced graph learning techniques, including residual GraphSAGE and contrastive learning, the model improves the identification of drug resistance-associated ncRNAs. Additionally, we curated a new benchmark dataset pairing ncRNA sequences with drug SMILES and resistance annotations. Comprehensive experiments demonstrate that MIFNDRA achieved state-of-the-art performance. Case studies on cisplatin and gemcitabine further validate the model's robustness and potential in advancing drug resistance research and drug development. The data and code required for this work are available at https://github.com/SJNNNN/MIFNDRA.",
+    "link": [
+      {
+        "URL": "https://academic.oup.com/bib/article-pdf/27/3/bbag322/68542141/bbag322.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://academic.oup.com/bib/article-pdf/27/3/bbag322/68542141/bbag322.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              17
+            ]
+          ],
+          "date-time": "2026-06-17T00:00:00Z",
+          "timestamp": 1781654400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 47,
+        "URL": "https://creativecommons.org/licenses/by-nc/4.0/"
+      }
+    ]
+  },
+  {
+    "doi": "10.3390/ijms27146184",
+    "url": "https://api.crossref.org/works/10.3390%2Fijms27146184",
+    "title": [
+      "DeepExoMir: A Reproducible RNA Language Model Framework for CLIP-Seq-Supported MicroRNA Target-Site Prioritization"
+    ],
+    "venue": [
+      "International Journal of Molecular Sciences"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          10
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          10
+        ]
+      ]
+    },
+    "type": "journal-article",
+    "author": [
+      {
+        "given": "Wen-Hsien",
+        "family": "Lin",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "AI and Data Applications Division, GGA Corp., Taipei 114065, Taiwan"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chia-Ni",
+        "family": "Hsiung",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "AI and Data Applications Division, GGA Corp., Taipei 114065, Taiwan"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wen-Yu",
+        "family": "Lien",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "BIONET Therapeutics Corp., Taipei 114065, Taiwan"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0009-3268-5052",
+        "authenticated-orcid": false,
+        "given": "Martin",
+        "family": "Sieber",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "BIONET Corp., Taipei 114065, Taiwan"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "abstract": "MicroRNAs regulate gene expression post-transcriptionally, yet target prediction faces a credibility gap: published methods drop sharply against CLIP-seq-validated negatives. We present DeepExoMir, a deep learning framework integrating frozen RiNALMo RNA language model embeddings with biologically informed features. Under a dual-probe ablation protocol on three miRBench test sets, DeepExoMir reaches mean AU-PRC 0.855, surpassing eight retrained baselines (paired bootstrap p&lt;0.001). Evolutionary conservation and duplex structure prove largely redundant with language-model priors, motivating a structure-free Lite variant (0.863). On nine exosomal miRNAs from a companion melanogenesis study, DeepExoMir recovers literature-validated targets and ranks canonical pigmentation regulators (KITLG, MITF, TYRP1) in the top 5%.",
+    "link": [
+      {
+        "URL": "https://www.mdpi.com/1422-0067/27/14/6184/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              10
+            ]
+          ],
+          "date-time": "2026-07-10T00:00:00Z",
+          "timestamp": 1783641600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ]
+  }
+]

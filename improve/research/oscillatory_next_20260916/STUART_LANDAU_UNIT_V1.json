@@ -1,0 +1,87 @@
+{
+  "created_at_utc": "2026-09-16T08:10:19.378570+00:00",
+  "tests": 6,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "evidence": {
+    "author": {
+      "commit": "40944b1e0d2b954de6b46f31b6a9a6f3dc04f095",
+      "source_sha256": "4253fb3fafac09f11b541e55a012075c07ddeb24b9b08e2870d01d1505e4904b",
+      "selected_methods": [
+        "SLGCN.solve_implicit_r",
+        "SLGCN.ode_step"
+      ],
+      "selected_method_bodies_modified": false,
+      "full_author_graph_model_executed": false,
+      "maximum_forward_error": 4.440892098500626e-16,
+      "maximum_nonzero_gradient_error": 6.661338147750939e-16,
+      "author_zero_radius_autograd_error": 1.105560183642251,
+      "author_zero_radius_gradient_claimed_passing": false,
+      "local_zero_jacobian_error": 0.0,
+      "local_matches_author_central_difference_at_zero": true,
+      "cartesian_gradcheck_includes_zero": true
+    },
+    "coupling": {
+      "independent_numpy_max_error": 4.440892098500626e-16,
+      "all_active_complex_map_and_gate_gradients_checked": true,
+      "full_author_order_step_error": 4.440892098500626e-16,
+      "author_pseudocode_order_not_substituted": true
+    },
+    "limits": {
+      "uncoupled_exact_solution_errors": [
+        0.005081200765610916,
+        0.002516839668158799
+      ],
+      "first_order_time_convergence": true,
+      "no_feedback_equals_full_at_gamma_zero": true,
+      "linear_zero_growth_zero_rotation_identity": true,
+      "local_global_phase_rotation_equivariance": true,
+      "full_GCN_phase_equivariance_claimed": false
+    },
+    "executor": {
+      "initial_weights_and_random_streams_exactly_equal": true,
+      "zero_initial_residual": true,
+      "final_rng_equal": true,
+      "all_parameter_gradients_finite": true,
+      "computational_counts_equal": true,
+      "counts": {
+        "calls": 5,
+        "local_steps": 15,
+        "radial_solves": 15,
+        "solver_entries": 1380,
+        "coupling_messages": 2001
+      },
+      "identity_without_training": true,
+      "exact_partial_failure_state_verified": true,
+      "formal_fits": 0,
+      "evaluation_labels_read": false
+    },
+    "graph": {
+      "training_only_setup": true,
+      "query_edges_and_reverse_absent": true,
+      "omitted_labels_cannot_change_normalized_support": true,
+      "node_permutation_max_error": 0.0,
+      "query_order_max_error": 5.960464477539063e-08
+    },
+    "root": {
+      "independent_scipy_cases": 63,
+      "maximum_scaled_root_error": 1.1974741496308472e-15,
+      "all_positive_or_zero": true,
+      "implicit_derivatives_for_squared_input_and_both_coefficients": true
+    }
+  },
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_stuart_landau_graph_v1.py": "eb6f21b7a2eb5b966762e39cf7dad595637be4040d0b9a95c327ec6542ac8487",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/stuart_landau_graph_v1.py": "addfda39489f440b41d746d1cc8bc5907a72a6b8fab44ae00fff41ae6c7730df",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_stuart_landau_experiment_v1.py": "78c150febe8c5337ef14b18abe3727629acf9a1d46d598c852168f196ac71cd3",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_nested_anchor_v2.py": "31b81bb2a0cfd1978b9fdf467b2dd5354b1fc748081b7b9522c6603e9d9015f0",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/overlap_block_models.py": "8cd9369ecab95c93889ae2bfa2d1e9e0809f4bc260dd70d7bad74ac440182791",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/sharpness_graph_v1.py": "49f346bb2d84281082c9cd38f65254abacdfe6b0d78fa0dd238320451d347982",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/oscillatory_next_20260916/SLGNN_AUTHOR_SOURCE_V1.json": "3650f84d5aa83eb57f497440706db8dadb2de1f4ef3ebd51d17a2b3f4bb67c33",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/oscillatory_next_20260916/slgnn_author_v1_src__slmodel.py": "4253fb3fafac09f11b541e55a012075c07ddeb24b9b08e2870d01d1505e4904b"
+  },
+  "formal_neural_fits": 0,
+  "evaluation_labels_read": false,
+  "sha256": "202a180cbcb8511d94a45ab1d71221bc8a21904e75e12e7274581a42ed986e82"
+}

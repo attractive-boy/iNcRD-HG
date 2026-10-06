@@ -1,0 +1,1433 @@
+{
+  "version": "6.9",
+  "hitCount": 17,
+  "nextCursorMark": "AoIIP62tBig0NjUwMzEyNg==",
+  "nextPageUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=GCMDR&cursorMark=AoIIP62tBig0NjUwMzEyNg%3D%3D&resultType=core&pageSize=6&format=json",
+  "request": {
+    "queryString": "GCMDR",
+    "resultType": "core",
+    "cursorMark": "*",
+    "pageSize": 6,
+    "sort": "",
+    "synonym": false
+  },
+  "resultList": {
+    "result": [
+      {
+        "id": "41533702",
+        "source": "MED",
+        "pmid": "41533702",
+        "pmcid": "PMC12866671",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC12866671"
+          ]
+        },
+        "doi": "10.1093/bioinformatics/btag029",
+        "title": "Semantic-enhanced heterogeneous graph learning for identifying ncRNAs associated with drug resistance.",
+        "authorString": "Wei H, Xie Y, Zhang W, Li L, Wu S, Gao L.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Wei H",
+              "lastName": "Wei",
+              "firstName": "Hang",
+              "initials": "H",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-0579-1716"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Xie Y",
+              "lastName": "Xie",
+              "firstName": "Yuran",
+              "initials": "Y",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zhang W",
+              "lastName": "Zhang",
+              "firstName": "Wenxiang",
+              "initials": "W",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-8926-1615"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Biomedical Engineering, Shenzhen University Medical School, Shenzhen 518060, China."
+                  },
+                  {
+                    "affiliation": "Central Laboratory, Shenzhen University General Hospital, Shenzhen University, Shenzhen 518060, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Li L",
+              "lastName": "Li",
+              "firstName": "Linyang",
+              "initials": "L",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Wu S",
+              "lastName": "Wu",
+              "firstName": "Shuai",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Gao L",
+              "lastName": "Gao",
+              "firstName": "Lin",
+              "initials": "L",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0001-6396-0787"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0001-6396-0787"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-0579-1716"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-8926-1615"
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "supporting_data"
+          ]
+        },
+        "journalInfo": {
+          "issue": "2",
+          "volume": "42",
+          "journalIssueId": 4112026,
+          "dateOfPublication": "2026 Jan",
+          "monthOfPublication": 1,
+          "yearOfPublication": 2026,
+          "journal": {
+            "medlineAbbreviation": "Bioinformatics",
+            "title": "Bioinformatics (Oxford, England)",
+            "essn": "1367-4811",
+            "issn": "1367-4803",
+            "isoabbreviation": "Bioinformatics",
+            "nlmid": "9808944"
+          },
+          "printPublicationDate": "2026-01-01"
+        },
+        "pubYear": "2026",
+        "pageInfo": "btag029",
+        "abstractText": "<h4>Motivation</h4>Identifying non-coding RNAs (ncRNAs) associated with drug resistance is critical for elucidating molecular mechanisms underlying drug response, facilitating drug screening, and discovering novel therapeutic targets. While several graph neural network-based methods have been proposed to infer ncRNA-drug resistance associations, they remain fundamentally constrained by semantic distortion induced by a sparse bipartite network and neglect of relational semantics among molecular entities, ultimately compromising both predictive reliability and biological interpretability.<h4>Results</h4>In this study, we propose iNcRD-HG, a novel framework for identifying ncRNA-drug resistance associations. The framework addresses three critical aspects: constructing a context-enriched heterogeneous network that integrates six distinct molecular interaction types with bio-entity-specific attributes, developing a semantic-enhanced graph learning architecture that implements relation-type-aware message passing to capture complex contextual dependencies, and introducing an interpretability mechanism to reveal potential synergistic pathways underlying drug response. Experimental results demonstrate that iNcRD-HG achieves superior predictive performance across diverse benchmark datasets while deriving association features with strong discriminative capability. By identifying molecular synergistic contexts, iNcRD-HG provides mechanistically interpretable insights into ncRNA-mediated drug resistance.<h4>Availability and implementation</h4>Datasets and source codes are available at https://github.com/Biohang/iNcRD-HG.",
+        "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China.",
+        "publicationStatus": "ppublish",
+        "language": "eng",
+        "pubModel": "Print",
+        "pubTypeList": {
+          "pubType": [
+            "Research Support, Non-U.S. Gov't",
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "agency": "National Natural Science Foundation of China",
+              "grantId": "62302378",
+              "orderIn": 0
+            },
+            {
+              "agency": "National Natural Science Foundation of China",
+              "grantId": "62573335",
+              "orderIn": 0
+            },
+            {
+              "agency": "Entrepreneurship Talent Project of Qin Chuang Yuan",
+              "grantId": "QCYRCXM2023-115",
+              "orderIn": 0
+            },
+            {
+              "agency": "Fundamental Research Funds for the Central Universities",
+              "grantId": "ZYTS25083",
+              "orderIn": 0
+            },
+            {
+              "agency": "National Natural Science Foundation of China",
+              "grantId": "62302359",
+              "orderIn": 0
+            },
+            {
+              "agency": "National Natural Science Foundation of China",
+              "grantId": "62572374",
+              "orderIn": 0
+            },
+            {
+              "agency": "Fundamental Research Funds for the Central Universities",
+              "grantId": "ZYTS25080",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "RNA, Untranslated",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "MT",
+                    "qualifierName": "methods"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Drug Resistance",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Drug Resistance, Neoplasm",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Semantics"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Graph Neural Networks"
+            }
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "RNA, Untranslated",
+              "registryNumber": "0"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1093/bioinformatics/btag029"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC12866671"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC12866671?pdf=render"
+            }
+          ]
+        },
+        "commentCorrectionList": {
+          "commentCorrection": [
+            {
+              "source": "MED",
+              "id": "42637252",
+              "reference": "Bioinformatics. 2026 Aug 3;42(8):btag497. doi: 10.1093/bioinformatics/btag497.",
+              "type": "Erratum in",
+              "orderIn": 1
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "citedByCount": 0,
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "hasLabsLinks": "Y",
+        "hasData": "Y",
+        "license": "cc by",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "Y",
+        "tmAccessionTypeList": {
+          "accessionType": [
+            "gen"
+          ]
+        },
+        "dateOfCompletion": "2026-06-26",
+        "dateOfCreation": "2026-01-14",
+        "dateOfRevision": "2026-09-20",
+        "firstPublicationDate": "2026-01-01",
+        "firstIndexDate": "2026-01-15",
+        "fullTextReceivedDate": "2026-02-14",
+        "hasEvaluations": "N"
+      },
+      {
+        "id": "37180267",
+        "source": "MED",
+        "pmid": "37180267",
+        "pmcid": "PMC10169643",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC10169643"
+          ]
+        },
+        "doi": "10.3389/fmicb.2023.1147778",
+        "title": "Identification of associations between lncRNA and drug resistance based on deep learning and attention mechanism.",
+        "authorString": "Gao M, Shang X.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Gao M",
+              "lastName": "Gao",
+              "firstName": "Meihong",
+              "initials": "M",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Northwestern Polytechnical University, Xi'an, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Shang X",
+              "lastName": "Shang",
+              "firstName": "Xuequn",
+              "initials": "X",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Northwestern Polytechnical University, Xi'an, China."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "supporting_data"
+          ]
+        },
+        "journalInfo": {
+          "volume": "14",
+          "journalIssueId": 3496024,
+          "dateOfPublication": "2023 ",
+          "monthOfPublication": 0,
+          "yearOfPublication": 2023,
+          "journal": {
+            "medlineAbbreviation": "Front Microbiol",
+            "title": "Frontiers in microbiology",
+            "essn": "1664-302X",
+            "issn": "1664-302X",
+            "isoabbreviation": "Front Microbiol",
+            "nlmid": "101548977"
+          },
+          "printPublicationDate": "2023-01-01"
+        },
+        "pubYear": "2023",
+        "pageInfo": "1147778",
+        "abstractText": "<h4>Introduction</h4>Abnormal lncRNA expression can lead to the resistance of tumor cells to anticancer drugs, which is a crucial factor leading to high cancer mortality. Studying the relationship between lncRNA and drug resistance becomes necessary. Recently, deep learning has achieved promising results in predicting biomolecular associations. However, to our knowledge, deep learning-based lncRNA-drug resistance associations prediction has yet to be studied.<h4>Methods</h4>Here, we proposed a new computational model, DeepLDA, which used deep neural networks and graph attention mechanisms to learn lncRNA and drug embeddings for predicting potential relationships between lncRNAs and drug resistance. DeepLDA first constructed similarity networks for lncRNAs and drugs using known association information. Subsequently, deep graph neural networks were utilized to automatically extract features from multiple attributes of lncRNAs and drugs. These features were fed into graph attention networks to learn lncRNA and drug embeddings. Finally, the embeddings were used to predict potential associations between lncRNAs and drug resistance.<h4>Results</h4>Experimental results on the given datasets show that DeepLDA outperforms other machine learning-related prediction methods, and the deep neural network and attention mechanism can improve model performance.<h4>Dicsussion</h4>In summary, this study proposes a powerful deep-learning model that can effectively predict lncRNA-drug resistance associations and facilitate the development of lncRNA-targeted drugs. DeepLDA is available at https://github.com/meihonggao/DeepLDA.",
+        "affiliation": "School of Computer Science, Northwestern Polytechnical University, Xi'an, China.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic-eCollection",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "agency": "National Natural Science Foundation of China",
+              "grantId": "U1811262",
+              "orderIn": 0
+            },
+            {
+              "agency": "National Natural Science Foundation of China",
+              "grantId": "61772426",
+              "orderIn": 0
+            }
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Deep Neural Networks",
+            "Embeddings",
+            "Similarity Networks",
+            "Graph Attention Mechanisms",
+            "Lncrna-drug Resistance Associations"
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Unpaywall",
+              "url": "https://www.frontiersin.org/articles/10.3389/fmicb.2023.1147778/pdf"
+            },
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.3389/fmicb.2023.1147778"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC10169643"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC10169643?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "citedByCount": 10,
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "hasLabsLinks": "N",
+        "hasData": "Y",
+        "license": "cc by",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "Y",
+        "tmAccessionTypeList": {
+          "accessionType": [
+            "doi"
+          ]
+        },
+        "dateOfCreation": "2023-05-14",
+        "dateOfRevision": "2023-09-20",
+        "electronicPublicationDate": "2023-04-26",
+        "firstPublicationDate": "2023-04-26",
+        "firstIndexDate": "2023-05-14",
+        "fullTextReceivedDate": "2025-02-04",
+        "hasEvaluations": "N"
+      },
+      {
+        "id": "35095506",
+        "source": "MED",
+        "pmid": "35095506",
+        "pmcid": "PMC8790023",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC8790023"
+          ]
+        },
+        "doi": "10.3389/fphar.2021.799108",
+        "title": "MiRNA-Drug Resistance Association Prediction Through the Attentive Multimodal Graph Convolutional Network.",
+        "authorString": "Niu Y, Song C, Gong Y, Zhang W.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Niu Y",
+              "lastName": "Niu",
+              "firstName": "Yanqing",
+              "initials": "Y",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Mathematics and Statistics, South-Central University for Nationalities, Wuhan, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Song C",
+              "lastName": "Song",
+              "firstName": "Congzhi",
+              "initials": "C",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Informatics, Huazhong Agricultural University, Wuhan, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Gong Y",
+              "lastName": "Gong",
+              "firstName": "Yuchong",
+              "initials": "Y",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Wuhan University, Wuhan, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zhang W",
+              "lastName": "Zhang",
+              "firstName": "Wen",
+              "initials": "W",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Informatics, Huazhong Agricultural University, Wuhan, China."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "altmetrics"
+          ]
+        },
+        "journalInfo": {
+          "volume": "12",
+          "journalIssueId": 3113578,
+          "dateOfPublication": "2021 ",
+          "monthOfPublication": 0,
+          "yearOfPublication": 2021,
+          "journal": {
+            "medlineAbbreviation": "Front Pharmacol",
+            "title": "Frontiers in pharmacology",
+            "essn": "1663-9812",
+            "issn": "1663-9812",
+            "isoabbreviation": "Front Pharmacol",
+            "nlmid": "101548923"
+          },
+          "printPublicationDate": "2021-01-01"
+        },
+        "pubYear": "2021",
+        "pageInfo": "799108",
+        "abstractText": "MiRNAs can regulate genes encoding specific proteins which are related to the efficacy of drugs, and predicting miRNA-drug resistance associations is of great importance. In this work, we propose an attentive multimodal graph convolution network method (AMMGC) to predict miRNA-drug resistance associations. AMMGC learns the latent representations of drugs and miRNAs from four graph convolution sub-networks with distinctive combinations of features. Then, an attention neural network is employed to obtain attentive representations of drugs and miRNAs, and miRNA-drug resistance associations are predicted by the inner product of learned attentive representations. The computational experiments show that AMMGC outperforms other state-of-the-art methods and baseline methods, achieving the AUPR score of 0.2399 and the AUC score of 0.9467. The analysis demonstrates that leveraging multiple features of drugs and miRNAs can make a contribution to the miRNA-drug resistance association prediction. The usefulness of AMMGC is further validated by case studies.",
+        "affiliation": "School of Mathematics and Statistics, South-Central University for Nationalities, Wuhan, China.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic-eCollection",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Multimodal",
+            "Deep Learning",
+            "Graph Convolutional Network",
+            "Attention Neural Network",
+            "Mirna-Drug Resistance Association"
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Unpaywall",
+              "url": "https://www.frontiersin.org/articles/10.3389/fphar.2021.799108/pdf"
+            },
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.3389/fphar.2021.799108"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC8790023"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC8790023?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "citedByCount": 14,
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "hasLabsLinks": "Y",
+        "hasData": "N",
+        "license": "cc by",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2022-01-31",
+        "dateOfRevision": "2024-08-22",
+        "electronicPublicationDate": "2022-01-12",
+        "firstPublicationDate": "2022-01-12",
+        "firstIndexDate": "2022-02-03",
+        "fullTextReceivedDate": "2025-02-04",
+        "hasEvaluations": "N"
+      },
+      {
+        "id": "31397851",
+        "source": "MED",
+        "pmid": "31397851",
+        "doi": "10.1093/bioinformatics/btz621",
+        "title": "Graph convolution for predicting associations between miRNA and drug resistance.",
+        "authorString": "Huang YA, Hu P, Chan KCC, You ZH.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Huang YA",
+              "lastName": "Huang",
+              "firstName": "Yu-An",
+              "initials": "YA",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-5346-2394"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Computing, Hong Kong Polytechnic University, Hong Kong SAR, 999077, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Hu P",
+              "lastName": "Hu",
+              "firstName": "Pengwei",
+              "initials": "P",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Computing, Hong Kong Polytechnic University, Hong Kong SAR, 999077, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Chan KCC",
+              "lastName": "Chan",
+              "firstName": "Keith C C",
+              "initials": "KCC",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Computing, Hong Kong Polytechnic University, Hong Kong SAR, 999077, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "You ZH",
+              "lastName": "You",
+              "firstName": "Zhu-Hong",
+              "initials": "ZH",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0003-1266-2696"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Computing, Hong Kong Polytechnic University, Hong Kong SAR, 999077, China."
+                  },
+                  {
+                    "affiliation": "Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Science, Urumqi 830011, China."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0002-5346-2394"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0003-1266-2696"
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "altmetrics"
+          ]
+        },
+        "journalInfo": {
+          "issue": "3",
+          "volume": "36",
+          "journalIssueId": 2910336,
+          "dateOfPublication": "2020 Feb",
+          "monthOfPublication": 2,
+          "yearOfPublication": 2020,
+          "journal": {
+            "medlineAbbreviation": "Bioinformatics",
+            "title": "Bioinformatics (Oxford, England)",
+            "essn": "1367-4811",
+            "issn": "1367-4803",
+            "isoabbreviation": "Bioinformatics",
+            "nlmid": "9808944"
+          },
+          "printPublicationDate": "2020-02-01"
+        },
+        "pubYear": "2020",
+        "pageInfo": "851-858",
+        "abstractText": "<h4>Motivation</h4>MicroRNA (miRNA) therapeutics is becoming increasingly important. However, aberrant expression of miRNAs is known to cause drug resistance and can become an obstacle for miRNA-based therapeutics. At present, little is known about associations between miRNA and drug resistance and there is no computational tool available for predicting such association relationship. Since it is known that miRNAs can regulate genes that encode specific proteins that are keys for drug efficacy, we propose here a computational approach, called GCMDR, for finding a three-layer latent factor model that can be used to predict miRNA-drug resistance associations.<h4>Results</h4>In this paper, we discuss how the problem of predicting such associations can be formulated as a link prediction problem involving a bipartite attributed graph. GCMDR makes use of the technique of graph convolution to build a latent factor model, which can effectively utilize information of high-dimensional attributes of miRNA/drug in an end-to-end learning scheme. In addition, GCMDR also learns graph embedding features for miRNAs and drugs. We leveraged the data from multiple databases storing miRNA expression profile, drug substructure fingerprints, gene ontology and disease ontology. The test for performance shows that the GCMDR prediction model can achieve AUCs of 0.9301 ± 0.0005, 0.9359 ± 0.0006 and 0.9369 ± 0.0003 based on 2-fold, 5-fold and 10-fold cross validation, respectively. Using this model, we show that the associations between miRNA and drug resistance can be reliably predicted by properly introducing useful side information like miRNA expression profile and drug structure fingerprints.<h4>Availability and implementation</h4>Python codes and dataset are available at https://github.com/yahuang1991polyu/GCMDR/.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+        "affiliation": "Department of Computing, Hong Kong Polytechnic University, Hong Kong SAR, 999077, China.",
+        "publicationStatus": "ppublish",
+        "language": "eng",
+        "pubModel": "Print",
+        "pubTypeList": {
+          "pubType": [
+            "Research Support, Non-U.S. Gov't",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "agency": "National Natural Science Foundation of China",
+              "grantId": "61572506",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "MicroRNAs"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Area Under Curve"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Computational Biology"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Drug Resistance"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Algorithms"
+            }
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "MicroRNAs",
+              "registryNumber": "0"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1093/bioinformatics/btz621"
+            }
+          ]
+        },
+        "isOpenAccess": "N",
+        "inEPMC": "N",
+        "inPMC": "N",
+        "citedByCount": 74,
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasPDF": "N",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "hasLabsLinks": "Y",
+        "hasData": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2020-09-17",
+        "dateOfCreation": "2019-08-10",
+        "dateOfRevision": "2020-09-17",
+        "firstPublicationDate": "2020-02-01",
+        "firstIndexDate": "2019-08-10",
+        "hasEvaluations": "N"
+      },
+      {
+        "id": "36671734",
+        "source": "MED",
+        "pmid": "36671734",
+        "pmcid": "PMC9855084",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC9855084"
+          ]
+        },
+        "doi": "10.3390/biology12010041",
+        "title": "MFIDMA: A Multiple Information Integration Model for the Prediction of Drug-miRNA Associations.",
+        "authorString": "Guan YJ, Yu CQ, Qiao Y, Li LP, You ZH, Ren ZH, Li YC, Pan J.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Guan YJ",
+              "lastName": "Guan",
+              "firstName": "Yong-Jian",
+              "initials": "YJ",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-2324-9437"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Electronic Information, Xijing University, Xi'an 710129, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Yu CQ",
+              "lastName": "Yu",
+              "firstName": "Chang-Qing",
+              "initials": "CQ",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Electronic Information, Xijing University, Xi'an 710129, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Qiao Y",
+              "lastName": "Qiao",
+              "firstName": "Yan",
+              "initials": "Y",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0001-9426-8347"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Agriculture and Forestry, Longdong University, Qingyang 745000, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Li LP",
+              "lastName": "Li",
+              "firstName": "Li-Ping",
+              "initials": "LP",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Electronic Information, Xijing University, Xi'an 710129, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "You ZH",
+              "lastName": "You",
+              "firstName": "Zhu-Hong",
+              "initials": "ZH",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0003-1266-2696"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Northwestern Polytechnical University, Xi'an 710129, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Ren ZH",
+              "lastName": "Ren",
+              "firstName": "Zhong-Hao",
+              "initials": "ZH",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Electronic Information, Xijing University, Xi'an 710129, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Li YC",
+              "lastName": "Li",
+              "firstName": "Yue-Chao",
+              "initials": "YC",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-9912-0648"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Electronic Information, Xijing University, Xi'an 710129, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Pan J",
+              "lastName": "Pan",
+              "firstName": "Jie",
+              "initials": "J",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-4993-298X"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Key Laboratory of Resources Biology and Biotechnology in Western China, Ministry of Education, College of Life Science, Northwest University, Xi'an 710129, China."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0001-9426-8347"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-2324-9437"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-4993-298X"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-9912-0648"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0003-1266-2696"
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "1",
+          "volume": "12",
+          "journalIssueId": 3493357,
+          "dateOfPublication": "2022 Dec",
+          "monthOfPublication": 12,
+          "yearOfPublication": 2022,
+          "journal": {
+            "medlineAbbreviation": "Biology (Basel)",
+            "title": "Biology",
+            "essn": "2079-7737",
+            "issn": "2079-7737",
+            "isoabbreviation": "Biology (Basel)",
+            "nlmid": "101587988"
+          },
+          "printPublicationDate": "2022-12-01"
+        },
+        "pubYear": "2022",
+        "pageInfo": "41",
+        "abstractText": "Abnormal microRNA (miRNA) functions play significant roles in various pathological processes. Thus, predicting drug-miRNA associations (DMA) may hold great promise for identifying the potential targets of drugs. However, discovering the associations between drugs and miRNAs through wet experiments is time-consuming and laborious. Therefore, it is significant to develop computational prediction methods to improve the efficiency of identifying DMA on a large scale. In this paper, a multiple features integration model (MFIDMA) is proposed to predict drug-miRNA association. Specifically, we first formulated known DMA as a bipartite graph and utilized structural deep network embedding (SDNE) to learn the topological features from the graph. Second, the Word2vec algorithm was utilized to construct the attribute features of the miRNAs and drugs. Third, two kinds of features were entered into the convolution neural network (CNN) and deep neural network (DNN) to integrate features and predict potential target miRNAs for the drugs. To evaluate the MFIDMA model, it was implemented on three different datasets under a five-fold cross-validation and achieved average AUCs of 0.9407, 0.9444 and 0.8919. In addition, the MFIDMA model showed reliable results in the case studies of Verapamil and hsa-let-7c-5p, confirming that the proposed model can also predict DMA in real-world situations. The model was effective in analyzing the neighbors and topological features of the drug-miRNA network by SDNE. The experimental results indicated that the MFIDMA is an accurate and robust model for predicting potential DMA, which is significant for miRNA therapeutics research and drug discovery.",
+        "affiliation": "School of Electronic Information, Xijing University, Xi'an 710129, China.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "agency": "Natural Science Basic Research Program of Shaanxi",
+              "grantId": "No.2022JQ-700",
+              "orderIn": 0
+            },
+            {
+              "agency": "Science and Technology Innovation 2030-New Generation Artificial Intelligence Major Project",
+              "grantId": "No.2018AAA0100103",
+              "orderIn": 0
+            },
+            {
+              "agency": "Science and Technology Innovation 2030-New Generation Artificial Intelligence Major Project",
+              "grantId": "No.2022JQ-700",
+              "orderIn": 0
+            },
+            {
+              "agency": "Natural Science Basic Research Program of Shaanxi",
+              "grantId": "No.2018AAA0100103",
+              "orderIn": 0
+            }
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Smiles",
+            "Deep Neural Network",
+            "Word2vec",
+            "Convolution Neural Network",
+            "Sdne",
+            "Drug–mirna Association"
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Unpaywall",
+              "url": "https://www.mdpi.com/2079-7737/12/1/41/pdf?version=1672046025"
+            },
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.3390/biology12010041"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC9855084"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC9855084?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "citedByCount": 9,
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "hasLabsLinks": "N",
+        "hasData": "N",
+        "license": "cc by",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2023-01-21",
+        "dateOfRevision": "2023-02-01",
+        "electronicPublicationDate": "2022-12-26",
+        "firstPublicationDate": "2022-12-26",
+        "firstIndexDate": "2023-01-23",
+        "fullTextReceivedDate": "2025-02-04",
+        "hasEvaluations": "N"
+      },
+      {
+        "id": "35910223",
+        "source": "MED",
+        "pmid": "35910223",
+        "pmcid": "PMC9334674",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC9334674"
+          ]
+        },
+        "doi": "10.3389/fgene.2022.919264",
+        "title": "BNEMDI: A Novel MicroRNA-Drug Interaction Prediction Model Based on Multi-Source Information With a Large-Scale Biological Network.",
+        "authorString": "Guan YJ, Yu CQ, Li LP, You ZH, Ren ZH, Pan J, Li YC.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Guan YJ",
+              "lastName": "Guan",
+              "firstName": "Yong-Jian",
+              "initials": "YJ",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-2324-9437"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Information Engineering, Xijing University, Xi'an, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Yu CQ",
+              "lastName": "Yu",
+              "firstName": "Chang-Qing",
+              "initials": "CQ",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Information Engineering, Xijing University, Xi'an, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Li LP",
+              "lastName": "Li",
+              "firstName": "Li-Ping",
+              "initials": "LP",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Information Engineering, Xijing University, Xi'an, China."
+                  },
+                  {
+                    "affiliation": "College of Grassland and Environment Sciences, Xinjiang Agricultural University, Urumqi, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "You ZH",
+              "lastName": "You",
+              "firstName": "Zhu-Hong",
+              "initials": "ZH",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Northwestern Polytechnical University, Xi'an, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Ren ZH",
+              "lastName": "Ren",
+              "firstName": "Zhong-Hao",
+              "initials": "ZH",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-1614-8988"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Information Engineering, Xijing University, Xi'an, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Pan J",
+              "lastName": "Pan",
+              "firstName": "Jie",
+              "initials": "J",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-4993-298X"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Key Laboratory of Resources Biology and Biotechnology in Western China, Ministry of Education, College of Life Science, Northwest University, Xi'an, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Li YC",
+              "lastName": "Li",
+              "firstName": "Yue-Chao",
+              "initials": "YC",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Information Engineering, Xijing University, Xi'an, China."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0002-1614-8988"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-2324-9437"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-4993-298X"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-9912-0648"
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "altmetrics"
+          ]
+        },
+        "journalInfo": {
+          "volume": "13",
+          "journalIssueId": 3306976,
+          "dateOfPublication": "2022 ",
+          "monthOfPublication": 0,
+          "yearOfPublication": 2022,
+          "journal": {
+            "medlineAbbreviation": "Front Genet",
+            "title": "Frontiers in genetics",
+            "essn": "1664-8021",
+            "issn": "1664-8021",
+            "isoabbreviation": "Front Genet",
+            "nlmid": "101560621"
+          },
+          "printPublicationDate": "2022-01-01"
+        },
+        "pubYear": "2022",
+        "pageInfo": "919264",
+        "abstractText": "As a novel target in pharmacy, microRNA (miRNA) can regulate gene expression under specific disease conditions to produce specific proteins. To date, many researchers leveraged miRNA to reveal drug efficacy and pathogenesis at the molecular level. As we all know that conventional wet experiments suffer from many problems, including time-consuming, labor-intensity, and high cost. Thus, there is an urgent need to develop a novel computational model to facilitate the identification of miRNA-drug interactions (MDIs). In this work, we propose a novel bipartite network embedding-based method called BNEMDI to predict MDIs. First, the Bipartite Network Embedding (BiNE) algorithm is employed to learn the topological features from the network. Then, the inherent attributes of drugs and miRNAs are expressed as attribute features by MACCS fingerprints and <i>k</i>-mers. Finally, we feed these features into deep neural network (DNN) for training the prediction model. To validate the prediction ability of the BNEMDI model, we apply it to five different benchmark datasets under five-fold cross-validation, and the proposed model obtained excellent AUC values of 0.9568, 0.9420, 0.8489, 0.8774, and 0.9005 in ncDR, RNAInter, SM2miR1, SM2miR2, and SM2miR MDI datasets, respectively. To further verify the prediction performance of the BNEMDI model, we compare it with some existing powerful methods. We also compare the BiNE algorithm with several different network embedding methods. Furthermore, we carry out a case study on a common drug named 5-fluorouracil. Among the top 50 miRNAs predicted by the proposed model, there were 38 verified by the experimental literature. The comprehensive experiment results demonstrated that our method is effective and robust for predicting MDIs. In the future work, we hope that the BNEMDI model can be a reliable supplement method for the development of pharmacology and miRNA therapeutics.",
+        "affiliation": "School of Information Engineering, Xijing University, Xi'an, China.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic-eCollection",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "k-mer",
+            "Deep Neural Network",
+            "Bine",
+            "Maccs Fingerprint",
+            "Mirna–drug Interaction"
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Unpaywall",
+              "url": "https://www.frontiersin.org/articles/10.3389/fgene.2022.919264/pdf"
+            },
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.3389/fgene.2022.919264"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC9334674"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC9334674?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "citedByCount": 6,
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "hasLabsLinks": "Y",
+        "hasData": "N",
+        "license": "cc by",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2022-08-01",
+        "dateOfRevision": "2022-08-02",
+        "electronicPublicationDate": "2022-07-15",
+        "firstPublicationDate": "2022-07-15",
+        "firstIndexDate": "2022-08-02",
+        "fullTextReceivedDate": "2022-08-02",
+        "hasEvaluations": "N"
+      }
+    ]
+  }
+}

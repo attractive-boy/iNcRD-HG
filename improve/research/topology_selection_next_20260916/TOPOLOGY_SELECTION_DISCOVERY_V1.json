@@ -1,0 +1,1382 @@
+{
+  "created_at_utc": "2026-09-15T21:51:39.264251+00:00",
+  "records": [
+    {
+      "name": "arxiv_topology",
+      "url": "https://export.arxiv.org/api/query",
+      "params": {
+        "search_query": "all:\"link prediction\" AND (all:\"persistent homology\" OR all:\"topological\") AND submittedDate:[202301010000 TO 202609162359]",
+        "max_results": 15,
+        "sortBy": "submittedDate",
+        "sortOrder": "descending"
+      },
+      "utc": "2026-09-15T21:51:23.396451+00:00",
+      "status": 200,
+      "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/topology_selection_next_20260916/arxiv_topology_v1.xml",
+      "sha256": "64842d263a1209abc523de1c2db2b118d8b614ebbc2e132cf5403707e3ad4337",
+      "items": [
+        {
+          "title": "Link prediction in complex networks via fusing node centrality and local similarity indices",
+          "id": "http://arxiv.org/abs/2609.09658v1",
+          "published": "2026-09-09T03:15:51Z",
+          "authors": [
+            "Yingying Zhang",
+            "Chengye Zhao"
+          ],
+          "abstract": "Local similarity indices are widely used in link prediction on complex networks owing to their low computational cost; however, in sparse networks they assign a zero score to every node pair lacking common neighbors, which severely limits their predictive power. A natural remedy is to fuse node centrality indices with local similarity indices: the former provide global importance for the node pair, while the latter capture fine-grained local topology, and the two can be combined into complementary scores within a unified framework. This paper uses PageRank and DomiRank as two representative centrality measures and constructs a centrality--local-similarity fusion framework. The PageRank-based fusion proposed by Charikhi is first generalized to seven classical local similarity indices, and the universality of its improvement is systematically verified on nine real-world network datasets. Furthermore, the DomiRank centrality is introduced to build the DR-MD series of fused indices under a unified weighting coefficient, which overcomes the drawback that the PageRank-based fusion requires index-by-index weight tuning. Results of five-fold cross-validation together with Wilcoxon signed-rank tests show that, under the unified experimental protocol, all DR-MD indices consistently outperform the corresponding local baselines and their PR-MD counterparts on all nine datasets ($p=0.002$), and that the improvements remain robust against perturbations of $σ$ and the weighting coefficients within the near-critical parameter plateau; in particular, DR-RA achieves an average AUC of 0.7084, surpassing global methods such as Katz and RWR as well as several advanced similarity indices. The framework is inherently extensible, and its fusion paradigm can be straightforwardly generalized to couple other node centrality indices with local similarity indices."
+        },
+        {
+          "title": "TTGBench: Benchmarking Topological Evolution and Semantic Drift in Text-attributed Temporal Graphs",
+          "id": "http://arxiv.org/abs/2609.08226v1",
+          "published": "2026-09-08T04:19:11Z",
+          "authors": [
+            "Longfei Ma",
+            "Zemin Liu",
+            "Fei Wu"
+          ],
+          "abstract": "Temporal graph learning models the evolution of dynamic systems, where both structural interactions and semantic states change over time. However, existing benchmarks primarily emphasize structural evolution via temporal link prediction (TLP), while support for semantic evolution remains limited. Although temporal node classification (TNC) is sometimes included, it is typically restricted to simplistic binary settings that fail to capture realistic semantic drift. Moreover, commonly used datasets exhibit high link repetition, leading to inflated performance estimates and obscuring true model capability. To address these limitations, we introduce \\textbf{TTGBench}, a new benchmark that jointly evaluates structural and semantic evolution. TTGBench comprises six real-world, text-rich datasets characterized by \\emph{Dual Volatility}, enabling rigorous and fair evaluation of existing models. Notably, it is the first benchmark to support both multi-class and multi-label TNC, filling a critical gap in evaluating temporal semantic drift. We conduct a comprehensive evaluation of 17 state-of-the-art methods across Temporal Graph Neural Networks (TGNNs) and Large Language Model (LLM)-based paradigms. The results reveal a clear \\emph{capability divide} between the two paradigms: TGNN-based methods excel at structural prediction but fail at semantic tracking, whereas LLM-based predictors show the opposite trend. Through in-depth analysis, we uncover their fundamental limitations and provide insights for developing more comprehensive temporal graph models."
+        },
+        {
+          "title": "Towards Unified Multimodal Graph Foundation Model: A Bridge-Router-Adapter Based Approach",
+          "id": "http://arxiv.org/abs/2609.06668v1",
+          "published": "2026-09-06T15:21:40Z",
+          "authors": [
+            "Sirui Zhang",
+            "Yubing Zhou",
+            "Xunkai Li",
+            "Zekai Chen",
+            "Shumeng Li",
+            "Wang Luo",
+            "Yinlin Zhu",
+            "Yujin Gao",
+            "Rong-Hua Li"
+          ],
+          "abstract": "Multimodal graphs couple node attributes in different modalities, such as text and images, with relational structure, enabling topological structure and cross-modality attributes to be modeled jointly. Multimodal graph foundation models seek unified representations from such data that transfer across different graph domains and downstream tasks. However, existing methods exhibit two fundamental limitations. (1) Cross-Scope Context Entanglement. They merge scope-specific graph contexts into a unified representation, obscuring their distinctions during multimodal construction. (2) Scope-Ignorant Modality Routing. They route modalities within a fixed graph scope, overlooking how modality relevance varies across neighborhood ranges. To address these challenges, we propose BRAIN, a unified model that focuses on graph context that combines neighborhood scope with modality composition. BRAIN comprises a scope-conditioned Bridge that combines structural information spanning local-to-global neighborhood scopes with different modality compositions; a hierarchical Router that estimates the relevance between the scope and the task, and selects compositions separately within each scope, allowing modality utility to vary with graph range; and a lightweight residual Adapter that further specializes the routed embedding for downstream prediction. BRAIN is trained through multi-graph pretraining followed by task-specific adaptation. Experiments across nine datasets and four task families demonstrate its broad effectiveness, improving node-classification and link-prediction performance by up to 4.73% relative to the strongest baseline, while achieving an average relative improvement of 14.72% across four graph-to-text and two graph-to-image metrics."
+        },
+        {
+          "title": "ReCoG: Reciprocal Co-Evolution for Multimodal Graph Learning",
+          "id": "http://arxiv.org/abs/2608.22786v1",
+          "published": "2026-08-24T04:16:13Z",
+          "authors": [
+            "Rui Xue",
+            "Tianfu Wu"
+          ],
+          "abstract": "Multimodal graph learning requires jointly training over graph structure and heterogeneous node attributes, yet existing methods largely decouple these processes: prior multimodal graph neural networks (GNNs) focus on aligning modalities in a shared embedding space while operating on fixed or weakly adapted graph structures, and graph structure learning approaches infer topology from unimodal node representations without accounting for multimodal interactions. This separation fundamentally limits the ability of GNNs to capture semantically meaningful relationships in multimodal settings, where observed edges are often noisy, incomplete, or misaligned with underlying semantics. We propose ReCoG (Reciprocal Co-Evolution for Multimodal Graph Learning), a new learning paradigm that tightly couples graph structure learning and multimodal representation learning through end-to-end reciprocal interaction. Concretely, ReCoG integrates (i) a multimodal graph refiner that infers and corrects edges using cross-modal semantic evidence, and (ii) a coupled cross-modal message passing mechanism that performs joint intra- and inter-modality propagation over the refined graph. This unified design yields greater expressiveness than decoupled or two-stage formulations and allows dynamic interaction between topology and representation learning. Across diverse benchmarks for node classification and link prediction, ReCoG consistently outperforms strong multimodal graph structure learning baselines, including graph foundation models. Our results demonstrate that reciprocal co-evolution of structure and semantics is important for effective multimodal graph learning, challenging the prevailing separation between topology and representation learning."
+        },
+        {
+          "title": "Hyperbolic Graph Embedders for Link Prediction and Topology Reconstruction",
+          "id": "http://arxiv.org/abs/2608.07029v1",
+          "published": "2026-08-07T09:42:26Z",
+          "authors": [
+            "Robert Jankowski",
+            "Maksim Kitsak",
+            "Dorota Celińska-Kopczyńska"
+          ],
+          "abstract": "Hyperbolic embeddings provide compact geometric representations of complex networks in hyperbolic spaces, but systematic comparisons of methods developed in machine learning, network science, and algorithmics remain rare. We benchmark 13 unsupervised hyperbolic graph embedders under a unified protocol for link prediction and topology reconstruction on synthetic and empirical networks. The protocol captures both missing-link recovery and the preservation of local and global network structure. Maximum-likelihood and representation-learning-based approaches, including hybrid variants, achieve the strongest overall performance, although no method dominates across all tasks and structural regimes. Performance is more strongly associated with embedding paradigm than with disciplinary origin. We identify the network regimes in which different paradigms succeed or fail and provide practical guidance for method selection in downstream applications."
+        },
+        {
+          "title": "Dynamic Graph Prompting via Topology-Routed Mixed-Curvature Experts",
+          "id": "http://arxiv.org/abs/2608.06031v1",
+          "published": "2026-08-06T13:37:52Z",
+          "authors": [
+            "Quanxin Wang",
+            "Xuanting Xie",
+            "Bingheng Li",
+            "Xingtong Yu",
+            "Shuo Wang",
+            "Ruiyi Fang",
+            "Zhao Kang"
+          ],
+          "abstract": "Dynamic graph prompting freezes a pre-trained temporal backbone and adapts it to label-scarce downstream tasks using lightweight prompts. However, existing methods operate within a single, fixed embedding space. In this work, we reveal that temporal shifts in local clustering and degree heterogeneity actively reorganize the edge curvature spectrum---indicating that the optimal representation geometry dynamically evolves with local topology over time. We formalize this unaddressed mismatch as geometry under-adaptation. To overcome this limitation, we propose CurvPrompt, a topology-routed geometry prompting framework for dynamic graphs. Instead of relying on a single space, CurvPrompt maintains a bank of curvature-diverse Riemannian experts, each paired with a learnable prompt. A topology-aware gate dynamically routes each node--time instance to a sparse subset of experts, constructing a personalized mixed-curvature representation. To ensure parameter efficiency and training stability under extreme label scarcity, CurvPrompt employs soft routing during pre-training to build a continuous topology--geometry mapping, and transitions to hard Top-K routing with uniform weights during downstream adaptation. Extensive experiments across four benchmark datasets show that CurvPrompt significantly advances few-shot link prediction while delivering strong, consistent performance on node classification tasks, validating the necessity of geometry-adaptive prompting."
+        },
+        {
+          "title": "Towards the Explainability of Temporal Graph Networks via Memory Backtracking and Topological Attribution",
+          "id": "http://arxiv.org/abs/2607.07716v1",
+          "published": "2026-07-04T08:35:07Z",
+          "authors": [
+            "Yazheng Liu",
+            "Xi Zhang",
+            "Sihong Xie",
+            "Hui Xiong"
+          ],
+          "abstract": "Temporal graphs are ubiquitous in real-world applications and Temporal Graph Networks (TGNs) have achieved superior predictive accuracy. Understanding which historical events drive model predictions can enhance trustworthiness of TGNs. Existing explanation methods overlook the memory module, the core component that records and updates node histories, leaving the influence of past events unexplored. To address this, we attribute TGNs predictions through the topology attribution tree and memory backtracking tree. The topology attribution tree captures the influence of neighbors and their memory vectors, then the memory backtracking tree quantifies how historical events shape node memory vectors. We apply the LRP in TGNs, ensuring that the total contribution of events equals the logits of model. Finally, top-k selection may be unfaithful due to the nonlinear mapping from logits to probabilities, we design optimization objectives to identify the important events. Experiments on nine temporal graph datasets, spanning node property prediction, link prediction tasks and graph classification tasks, show that our method provides faithful explanations and outperforms state-of-the-art baselines. The code is available at https://github.com/yazhengliu/MemExplainer"
+        },
+        {
+          "title": "Out-of-distribution Neural Inference in Dynamical Ising Models",
+          "id": "http://arxiv.org/abs/2607.03039v1",
+          "published": "2026-07-03T07:31:30Z",
+          "authors": [
+            "Yuan-Bin Zhu",
+            "Shuang Qiao",
+            "Shi-Ju Ran"
+          ],
+          "abstract": "Neural networks are increasingly used to infer hidden physical structure from dynamical observations, yet it remains unclear whether their out-of-distribution performance reflects transferable physical rule learning. We address this question in a controlled inverse problem: reconstructing interaction graphs of a kinetic Ising model from Glauber magnetization trajectories. Across convolutional, graph, Transformer, and hybrid architectures, we find that data-driven training produces distinct and reproducible statistical strategies under topology and temperature shifts. Edge-population diagnostics reveal that Transformer-based models tend to preserve the link density of the training ensemble, whereas convolutional models can collapse toward sparse- or no-link predictions that appear out-of-distribution stable by exploiting the majority no-link class. Thus, high in-distribution accuracy and apparent out-of-distribution robustness do not necessarily imply a learned dynamics-to-structure rule. Instead, neural reconstruction can be governed by architecture-dependent statistical priors. Our results identify a concrete failure mode of standard data-driven learning in physical inverse problems and motivate rule-guided principles for machine-learning-assisted scientific discovery."
+        },
+        {
+          "title": "TAG-DLM: Diffusion Language Models for Text-Attributed Graph Learning",
+          "id": "http://arxiv.org/abs/2606.31166v1",
+          "published": "2026-06-30T05:56:18Z",
+          "authors": [
+            "Lingjie Chen",
+            "Yuanchen Bei",
+            "Haobo Xu",
+            "Yanjun Zhao",
+            "Yuzhong Chen",
+            "Hanghang Tong"
+          ],
+          "abstract": "Text-attributed graphs (TAGs), where each node carries a natural language description, require models to jointly reason over text and graph topology. Existing approaches often handle the two modalities separately: graph neural networks operate on shallow text features, while hybrids of LLMs and graphs use the language model mainly as a text encoder and delegate structure learning to a separate graph module. We propose method that unifies textual reasoning and graph message passing within a masked diffusion language model, a language model with bidirectional attention and generative decoding. For each graph instance, method linearises a sampled local neighbourhood into a token sequence and injects graph structure through a topology attention mask, which realises message passing over the graph. Because the diffusion language model can both interpret and generate text, the method adapts to different tasks simply by changing the prompt, supporting node classification, link prediction, and cross-dataset transfer with no target-specific fine-tuning. Experiments show that method outperforms graph neural networks, graph transformers, and LLM-based baselines on all three TAG benchmarks across two tasks, improving over the strongest baseline by up to 3.9 points."
+        },
+        {
+          "title": "Learning Long Range Spatio-Temporal Representations over Continuous Time Dynamic Graphs with State Space Models",
+          "id": "http://arxiv.org/abs/2606.04672v2",
+          "published": "2026-06-03T09:54:35Z",
+          "authors": [
+            "Ayushman Raghuvanshi",
+            "Thummaluru Siddartha Reddy",
+            "Sundeep Prabhakar Chepuri",
+            "Mahesh Chandran"
+          ],
+          "abstract": "Continuous-time dynamic graphs (CTDGs) provide a richer framework to capture fine-grained temporal patterns in evolving relational data. Long-range information propagation is a key challenge while learning representations, wherein it is important to retain and update information over long temporal horizons. Existing approaches restrict models to capture one-hop or local temporal neighborhoods and fail to capture multi-hop or global structural patterns. To mitigate this, we derive a parameter-efficient state-space modeling framework for continuous-time dynamic graphs (CTDG-SSM) from first principles. We first introduce continuous-time Topology-Aware higher order polynomial projection operator (CTT-HiPPO), a novel memory-based reformulation of HiPPO to jointly encode temporal dynamics and graph structure. The solution from CTT-HiPPO is obtained by projecting the classical HiPPO solution through a polynomial of the Laplacian matrix, yielding topology-aware memory updates that admit an equivalent state-space formulation for CTDGs (CTDG-SSM). Then a computationally efficient discrete formulation is obtained using the zero-order hold approach for model implementation. Across benchmarks on dynamic link prediction, dynamic node classification, and sequence classification, CTDG-SSM achieves state-of-the-art performance. Notably, it achieves large performance gains on datasets that require long range temporal (LRT) and spatial reasoning."
+        },
+        {
+          "title": "Forget Less, Generalize More: Unifying Temporal and Structural Adaptation for Dynamic Graphs",
+          "id": "http://arxiv.org/abs/2605.29453v1",
+          "published": "2026-05-28T06:47:08Z",
+          "authors": [
+            "Qian Chang",
+            "Ciprian Doru Giurcaneanu",
+            "Runsong Jia",
+            "Xia Li",
+            "Guoping Hu",
+            "Xiufeng Cheng",
+            "Jinqing Yang",
+            "Mengjia Wu",
+            "Yi Zhang"
+          ],
+          "abstract": "Representation learning on dynamic graphs requires capturing complex dependencies that evolve across both time and structure. Existing approaches typically adopt fixed temporal decay schemes or predetermined structural propagation depths, limiting their ability to generalize across graphs with diverse interaction frequencies and topological characteristics. We propose Dual-Scale Retentive Dynamics (DSRD), a unified framework that maintains a retentive representation state encoding both temporal memory and structural context. DSRD introduces two key components: (i) a retentive state with dual-scale adaptation that jointly models temporal dynamics and structural propagation within a single recurrent formulation, and (ii) adaptive decay kernels with learnable time-sensitivity parameters that automatically balance short-term responsiveness and long-term retention based on the underlying interaction patterns. We provide theoretical analysis establishing the equivalence between event-wise parallel aggregation and efficient recurrent state updates, as well as stability and boundedness guarantees for the learned dynamics. Extensive experiments on 14 real-world benchmarks demonstrate that DSRD consistently achieves state-of-the-art performance on both link prediction and node classification tasks, with strong generalization across transductive and inductive settings."
+        },
+        {
+          "title": "Temporal Hyperbolic Graph Representation Learning for Scale-Free Internet Routing and Delay Prediction",
+          "id": "http://arxiv.org/abs/2605.28155v1",
+          "published": "2026-05-27T08:39:47Z",
+          "authors": [
+            "Yi-Ling Kuo",
+            "Hao-Yu Tien",
+            "Shih-Yu Tsai"
+          ],
+          "abstract": "Predicting Internet round-trip time (RTT) is critical for routing optimization, quality-of-service (QoS) provisioning, and traffic engineering, yet remains challenging due to long-term temporal dependencies, evolving routing dynamics, and heavy-tailed latency distributions. While Temporal Graph Neural Networks (TGNNs) can model evolving network topologies, most existing approaches operate in Euclidean space, which poorly captures the hierarchical and scale-free structure of Internet routing graphs. Hyperbolic geometry provides a more suitable representation space. We propose HERMIT (Hyperbolic Edge-aware RTT Modeling via Integrated Topology), a hybrid framework combining a hyperbolic manifold-preserving temporal GNN with a Random Forest regressor for joint link prediction and RTT prediction. Built on HMPTGN, HERMIT introduces RTT-aware edge features and a learnable edge encoder to improve modeling of evolving link states and routing behavior. The resulting hyperbolic node representations are combined with historical RTT statistics for robust latency prediction. We evaluate HERMIT on a large-scale real Internet dataset spanning 2015-2024. HERMIT consistently outperforms a strong Random Forest baseline using only historical RTT statistics, achieving a 6% RMSE improvement while reducing large errors on heavy-tailed samples. It also surpasses prior hyperbolic TGNN models, including HMPTGN and HTGN, in link prediction performance. These results demonstrate that combining hyperbolic temporal graph learning with tree-based regression provides a scalable solution for RTT prediction in real-world Internet topologies."
+        },
+        {
+          "title": "PolyFusionAgent: A Multimodal Foundation Model and Autonomous AI Assistant for Polymer Property Prediction and Inverse Design",
+          "id": "http://arxiv.org/abs/2605.26543v1",
+          "published": "2026-05-26T04:45:11Z",
+          "authors": [
+            "Manpreet Kaur",
+            "Xingying Zhang",
+            "Qian Liu"
+          ],
+          "abstract": "Polymer discovery is central to fields ranging from energy storage to biomedicine, but it is hindered by an astronomically large chemical design space and fragmented representations of structure, properties, and prior knowledge. This fragmentation leaves many AI models disconnected from physical and experimental reality, restricting their ability to support directly actionable design decisions. Here we introduce PolyFusionAgent, an interactive framework coupling a multimodal polymer foundation model (PolyFusion) with a tool-augmented, literature-grounded design agent (PolyAgent). PolyFusion aligns complementary polymer views including sequence, topology, 3D geometry, and fingerprints across millions of polymers to learn a shared latent space transferable across chemistries and data regimes, improving thermophysical property prediction and enabling property-conditioned generation of chemically valid, structurally novel polymers beyond the reference design space. PolyAgent closes the design loop by linking prediction and inverse design with evidence retrieval from the polymer literature, proposing, evaluating, and contextualizing hypotheses with explicit precedent in one workflow. Together, PolyFusionAgent enables interactive, evidence-linked polymer discovery combining large-scale representation learning, multimodal chemical knowledge, and verifiable scientific reasoning."
+        },
+        {
+          "title": "'Si'multaneous 'S'patial-'T'emporal Message Passing for Dynamic Graph Representation Learning",
+          "id": "http://arxiv.org/abs/2605.25548v1",
+          "published": "2026-05-25T08:04:32Z",
+          "authors": [
+            "Shubhajit Roy",
+            "Anirban Dasgupta"
+          ],
+          "abstract": "Dynamic graph neural networks (DGNNs) that operate on snapshot sequences typically fall into one of two categories. \\emph{Temporal-first} approaches build per-node temporal embeddings and only afterwards perform spatial aggregation, whereas \\emph{Spatial-first} approaches invert this order, feeding the output of a graph convolution into a downstream temporal module. In either case, the rigid sequencing forces the second stage to consume an already-compressed summary produced by the first, ruling out joint reasoning over topology and evolution; concretely, the message-passing operator never gets to weight a neighbor's contribution by that neighbor's \\emph{past} trajectory. This paper introduces \\textbf{SiST-GNN} (\\textbf{Si}multaneous \\textbf{S}patial-\\textbf{T}emporal \\textbf{GNN}), which fuses the two signals inside a single message-passing operation rather than chaining them. Concretely, at each snapshot we maintain a recurrent hidden state per node that summarises its history, pair it with the node's current feature vector, and treat the pair as two nodes joined by a cross-time edge; running a standard graph convolution on this temporally augmented graph yields the updated representation. Our empirical study spans nine public baselines and fourteen model-dataset combinations, covering both fixed-split and live-update evaluation regimes. Across every public benchmark, SiST-GNN sets a new state of the art in link prediction task over the strongest prior method by $109$--$277\\%$ in the fixed-split setting and by $68$--$194\\%$ in the live-update setting. We additionally construct three dynamic node-classification tasks by discretising the underlying continuous-time event streams; here SiST-GNN beats the leading discrete-time (DTDG) baseline by $7$--$22\\%$ and matches continuous-time (CTDG) methods that consume the raw events directly."
+        },
+        {
+          "title": "Leveraging Graph Structure in Seq2Seq Models for Knowledge Graph Link Prediction",
+          "id": "http://arxiv.org/abs/2605.18211v1",
+          "published": "2026-05-18T10:56:14Z",
+          "authors": [
+            "Luu Huu Phuc",
+            "Ratan Bahadur Thapa",
+            "Mojtaba Nayyeri",
+            "Jingcheng Wu",
+            "Evgeny Kharlamov",
+            "Steffen Staab"
+          ],
+          "abstract": "We introduce Graph-Augmented Sequence-to-Sequence (GA-S2S), a novel framework that integrates a T5-small encoder-decoder with a Relational Graph Attention Network (RGAT) to improve link prediction in knowledge graphs. While existing Seq2Seq models rely solely on surface-level textual descriptions of entities and relations and at best, flatten the neighborhoods of a query entity into a single linear sequence, thereby discarding the inherent graph structure, GA-S2S jointly encodes both textual features and the full $k$-hop subgraph topology surrounding the query entity. By integrating raw encoder outputs with RGAT's relation-aware embeddings, our model captures and leverages richer multi-hop relational patterns and textual information. Our preliminary experiments on the CoDEx dataset demonstrate that GA-S2S outperforms competitive Seq2Seq-based baseline models, achieving up to a 19\\% relative gain in link prediction accuracy."
+        }
+      ]
+    },
+    {
+      "name": "arxiv_selection",
+      "url": "https://export.arxiv.org/api/query",
+      "params": {
+        "search_query": "(all:\"positive unlabeled\" OR all:\"positive-unlabeled\") AND (all:\"selected not at random\" OR all:\"non-random\" OR all:\"graph\") AND submittedDate:[202301010000 TO 202609162359]",
+        "max_results": 15,
+        "sortBy": "submittedDate",
+        "sortOrder": "descending"
+      },
+      "utc": "2026-09-15T21:51:23.397219+00:00",
+      "status": 200,
+      "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/topology_selection_next_20260916/arxiv_selection_v1.xml",
+      "sha256": "e0884afd85fc23fae23687596f3256096862267e4c45b4d56ff1950e905705c5",
+      "items": [
+        {
+          "title": "RelateAnything: Real-Time Open-Vocabulary Relation Prediction From Any Inputs",
+          "id": "http://arxiv.org/abs/2609.12552v1",
+          "published": "2026-09-11T07:57:41Z",
+          "authors": [
+            "Maëlic Neau"
+          ],
+          "abstract": "Open-vocabulary detection accepts any class list at inference, and promptable segmentation returns regions without class names: the taxonomy has left the model and become an input. Relation prediction has not. Scene-graph models are still trained and evaluated on the 50 or 56 predicates of one annotation style, their relation head conditioned on object labels and so tied to one detector. Three obstacles explain this, none primarily modelling: no relation corpus is both free-text and verified, a label-conditioned architecture cannot accept a vocabulary it was not trained on, and the standard metric rewards agreement with the training corpus, so a larger vocabulary scores as a regression. We present RelateAnything, a 53M-parameter model taking an image and regions from any source and returning scored relations over a predicate vocabulary supplied at inference as strings. Object labels are never an input, so the region source can change without retraining, and the vocabulary is a bank of text embeddings, not a learned classifier. It runs at 20 ms/frame. Training over 19,103 predicates requires positive-unlabeled supervision and a text encoder that separates antonyms, which contrastive encoders embed at cosine 0.95. To supply the supervision we build RA-4M, 474k images and 4.3M relations over 10,102 free-text predicates, generated against numbered box markers and geometrically verified. To measure it we build OV-SGG-Bench, six axes scored across datasets that the priors standard recall rewards cannot satisfy. On three cross-dataset benchmarks and a fourth zero-shot, RelateAnything has 2.3-3.5x the mean recall of the strongest open-vocabulary method of comparable scale, margins that survive a real detector, and leads a 3B-VLM scene-graph model on both metrics at under 2% of its parameters. In-domain measurement overstates transfer gains ~5x. Model, corpus and benchmark are public."
+        },
+        {
+          "title": "No Data Is Not No Risk: Visibility Aware Graph-Based Inference of Business Conduct Risk",
+          "id": "http://arxiv.org/abs/2607.26859v1",
+          "published": "2026-07-29T12:44:09Z",
+          "authors": [
+            "Tsuyoshi Iwata",
+            "Johannes Laurmaa",
+            "Ryohei Hisano"
+          ],
+          "abstract": "The monitoring of business conduct risk is hindered by sparse, uneven, and visibility-biased data. Prior studies show that business conduct risk information and media coverage propagate through supply chain, peer, and corporate structure networks, yet incident records remain incomplete for many firms. As a result, the absence of reported events could reflect limited coverage rather than the absence of underlying business conduct risk. This paper examines whether inter-firm relationships can improve the prediction of future recorded conduct related incidents, particularly among firms with limited prior visibility. We formulate the task as Positive--Unlabeled node classification on a corporate ownership graph, where firms with recorded incidents are treated as labeled positives and firms without recorded incidents remain unlabeled. We then propose a visibility- and relation-aware GCNII framework that combines relation specific message passing with non-negative Positive--Unlabeled learning to account for positive contamination in the unlabeled set. In a forward-looking evaluation, the proposed approach achieved the strongest observed ranking performance relative to non-graph- and simple graph-based benchmarks. The results further show that graph-based inference retains its predictive value among firms without prior recorded incidents. These findings demonstrate the value of inter-firm relational structure as a complementary source of information for extending risk prioritization"
+        },
+        {
+          "title": "PUe: Biased Positive-Unlabeled Learning Enhancement by Causal Inference",
+          "id": "http://arxiv.org/abs/2607.13428v1",
+          "published": "2026-07-15T04:12:30Z",
+          "authors": [
+            "Xutao Wang",
+            "Hanting Chen",
+            "Tianyu Guo",
+            "Yunhe Wang"
+          ],
+          "abstract": "Positive-Unlabeled (PU) learning aims to achieve high-accuracy binary classification with limited labeled positive examples and numerous unlabeled ones. Existing cost-sensitive-based methods often rely on strong assumptions that examples with an observed positive label were selected entirely at random. In fact, the uneven distribution of labels is prevalent in real-world PU problems, indicating that most actual positive and unlabeled data are subject to selection bias. Building on the SAR-PU propensity-weighted framework of Bekker et al., we study a PU learning enhancement (PUe) framework using normalized propensity scores and normalized inverse probability weighting (NIPW). PUe's main contributions are a normalized inverse-probability-weighted PU risk formulation; additional theoretical analyses of normalized sample-weight error and common PU estimators under biased labeling; regularized deep propensity-score estimation; integration with modern cost-sensitive PU methods; and support for selectively labeled negative classes. Experiments on MNIST, CIFAR-10, and ADNI demonstrate improvements over several PU baselines under non-uniform label distributions."
+        },
+        {
+          "title": "RelWitness: Open-Vocabulary 3D Scene Graph Generation with Visual-Geometric Relation Witnesses",
+          "id": "http://arxiv.org/abs/2605.20823v3",
+          "published": "2026-05-20T07:18:56Z",
+          "authors": [
+            "Minh Anh Nguyen",
+            "Quang Huy Tran",
+            "Bao Ngoc Le",
+            "Tuan Kiet Pham",
+            "Sui Yang Guang"
+          ],
+          "abstract": "Open-vocabulary 3D scene graph generation seeks to describe object instances and their relations with flexible natural-language predicates. The central difficulty is not only vocabulary expansion, but supervision reliability: relation annotations in 3D scene graph datasets are selective, and many valid object-pair relations are unannotated. We propose RelWitness, a framework for open-vocabulary 3D scene graph generation from posed RGB-D sequences under incomplete relation supervision. The key concept is a relation witness: a concrete visual-geometric cue that makes a relation observable in the captured scene. Support relations require contact and vertical ordering; containment requires enclosure; proximity requires metric closeness; orientation requires facing direction; and stable relations should persist across views where both objects are visible. RelWitness constructs relation witness records from RGB views, depth maps, reconstructed 3D geometry, role-sensitive text, object-prior null views, and multi-view consistency. A visual-geometric witness verifier assigns unannotated relation candidates to verified missing positives, reliable negatives, or uncertain unlabeled cases. A witness-guided positive-unlabeled objective then learns from incomplete annotations without turning every missing label into a negative. We further introduce witness-consistent decoding and an RGB-D missing-relation audit protocol. Simulated manuscript-planning experiments on 3DSSG/3RScan and ScanNet-derived open-vocabulary splits show the intended behavior: improved unseen-relation recognition, higher witness precision, lower hallucination, and reduced redundant relation phrases. All numerical results are planning values and must be replaced by reproduced measurements before submission"
+        },
+        {
+          "title": "ReLIC-SGG: Relation Lattice Completion for Open-Vocabulary Scene Graph Generation",
+          "id": "http://arxiv.org/abs/2604.22546v6",
+          "published": "2026-04-24T13:36:41Z",
+          "authors": [
+            "Amir Hosseini",
+            "Sara Farahani",
+            "Xinyi Li",
+            "Suiyang Guang"
+          ],
+          "abstract": "Open-vocabulary scene graph generation (SGG) aims to describe visual scenes with flexible relation phrases beyond a fixed predicate set. Existing methods usually treat annotated triplets as positives and all unannotated object-pair relations as negatives. However, scene graph annotations are inherently incomplete: many valid relations are missing, and the same interaction can be described at different granularities, e.g., \\textit{on}, \\textit{standing on}, \\textit{resting on}, and \\textit{supported by}. This issue becomes more severe in open-vocabulary SGG due to the much larger relation space. We propose \\textbf{ReLIC-SGG}, a relation-incompleteness-aware framework that treats unannotated relations as latent variables rather than definite negatives. ReLIC-SGG builds a semantic relation lattice to model similarity, entailment, and contradiction among open-vocabulary predicates, and uses it to infer missing positive relations from visual-language compatibility, graph context, and semantic consistency. A positive-unlabeled graph learning objective further reduces false-negative supervision, while lattice-guided decoding produces compact and semantically consistent scene graphs. Experiments on conventional, open-vocabulary, and panoptic SGG benchmarks show that ReLIC-SGG improves rare and unseen predicate recognition and better recovers missing relations."
+        },
+        {
+          "title": "Positive-Unlabeled Learning for Control Group Construction in Observational Causal Inference",
+          "id": "http://arxiv.org/abs/2507.14528v1",
+          "published": "2025-07-19T08:06:08Z",
+          "authors": [
+            "Ilias Tsoumas",
+            "Dimitrios Bormpoudakis",
+            "Vasileios Sitokonstantinou",
+            "Athanasios Askitopoulos",
+            "Andreas Kalogeras",
+            "Charalampos Kontoes",
+            "Ioannis Athanasiadis"
+          ],
+          "abstract": "In causal inference, whether through randomized controlled trials or observational studies, access to both treated and control units is essential for estimating the effect of a treatment on an outcome of interest. When treatment assignment is random, the average treatment effect (ATE) can be estimated directly by comparing outcomes between groups. In non-randomized settings, various techniques are employed to adjust for confounding and approximate the counterfactual scenario to recover an unbiased ATE. A common challenge, especially in observational studies, is the absence of units clearly labeled as controls-that is, units known not to have received the treatment. To address this, we propose positive-unlabeled (PU) learning as a framework for identifying, with high confidence, control units from a pool of unlabeled ones, using only the available treated (positive) units. We evaluate this approach using both simulated and real-world data. We construct a causal graph with diverse relationships and use it to generate synthetic data under various scenarios, assessing how reliably the method recovers control groups that allow estimates of true ATE. We also apply our approach to real-world data on optimal sowing and fertilizer treatments in sustainable agriculture. Our findings show that PU learning can successfully identify control (negative) units from unlabeled data based only on treated units and, through the resulting control group, estimate an ATE that closely approximates the true value. This work has important implications for observational causal inference, especially in fields where randomized experiments are difficult or costly. In domains such as earth, environmental, and agricultural sciences, it enables a plethora of quasi-experiments by leveraging available earth observation and climate data, particularly when treated units are available but control units are lacking."
+        },
+        {
+          "title": "MOFClassifier: A Machine Learning Approach for Validating Computation-Ready Metal-Organic Frameworks",
+          "id": "http://arxiv.org/abs/2506.14845v2",
+          "published": "2025-06-16T15:08:58Z",
+          "authors": [
+            "Guobin Zhao",
+            "Pengyu Zhao",
+            "Yongchul G. Chung"
+          ],
+          "abstract": "The computational discovery and design of new crystalline materials, particularly metal-organic frameworks (MOFs), heavily relies on high-quality, computation-ready structural data. However, recent studies have revealed significant error rates within existing MOF databases, posing a critical data problem that hinders efficient high-throughput computational screening. While rule-based algorithms like MOSAEC, MOFChecker, and the Chen and Manz method (Chen-Manz) have been developed to address this, they often suffer from inherent limitations and misclassification of structures. To overcome this challenge, we developed MOFClassifier, a novel machine learning approach built upon a positive-unlabeled crystal graph convolutional neural network (PU-CGCNN) model. MOFClassifier learns intricate patterns from perfect crystal structures to predict a crystal-likeness score (CLscore), effectively classifying MOFs as computation-ready. Our model achieves a ROC value of 0.979 (previous best 0.912) and, importantly, can identify subtle structural and chemical errors that are undetectable by current rule-based methods. By accurately recovering previously misclassified false-negative structures, MOFClassifier reduces the risk of overlooking promising material candidates in large-scale computational screening campaigns. This user-friendly tool is freely available and has been integrated into the prepara-tion workflow for the updated CoRE MOF DB 2025 v1.0, contributing to accelerated computational discovery of MOF materials."
+        },
+        {
+          "title": "InfoNCE is a Free Lunch for Semantically guided Graph Contrastive Learning",
+          "id": "http://arxiv.org/abs/2505.06282v1",
+          "published": "2025-05-07T05:27:36Z",
+          "authors": [
+            "Zixu Wang",
+            "Bingbing Xu",
+            "Yige Yuan",
+            "Huawei Shen",
+            "Xueqi Cheng"
+          ],
+          "abstract": "As an important graph pre-training method, Graph Contrastive Learning (GCL) continues to play a crucial role in the ongoing surge of research on graph foundation models or LLM as enhancer for graphs. Traditional GCL optimizes InfoNCE by using augmentations to define self-supervised tasks, treating augmented pairs as positive samples and others as negative. However, this leads to semantically similar pairs being classified as negative, causing significant sampling bias and limiting performance. In this paper, we argue that GCL is essentially a Positive-Unlabeled (PU) learning problem, where the definition of self-supervised tasks should be semantically guided, i.e., augmented samples with similar semantics are considered positive, while others, with unknown semantics, are treated as unlabeled. From this perspective, the key lies in how to extract semantic information. To achieve this, we propose IFL-GCL, using InfoNCE as a \"free lunch\" to extract semantic information. Specifically, We first prove that under InfoNCE, the representation similarity of node pairs aligns with the probability that the corresponding contrastive sample is positive. Then we redefine the maximum likelihood objective based on the corrected samples, leading to a new InfoNCE loss function. Extensive experiments on both the graph pretraining framework and LLM as an enhancer show significantly improvements of IFL-GCL in both IID and OOD scenarios, achieving up to a 9.05% improvement, validating the effectiveness of semantically guided. Code for IFL-GCL is publicly available at: https://github.com/Camel-Prince/IFL-GCL."
+        },
+        {
+          "title": "Knowledge-Infused Legal Wisdom: Navigating LLM Consultation through the Lens of Diagnostics and Positive-Unlabeled Reinforcement Learning",
+          "id": "http://arxiv.org/abs/2406.03600v1",
+          "published": "2024-06-05T19:47:35Z",
+          "authors": [
+            "Yang Wu",
+            "Chenghao Wang",
+            "Ece Gumusel",
+            "Xiaozhong Liu"
+          ],
+          "abstract": "The integration of generative Large Language Models (LLMs) into various applications, including the legal domain, has been accelerated by their expansive and versatile nature. However, when facing a legal case, users without a legal background often struggle to formulate professional queries and may inadvertently overlook critical legal factors when presenting their case narrative to LLMs. To address this issue, we propose the Diagnostic Legal Large Language Model (D3LM), which utilizes adaptive lawyer-like diagnostic questions to collect additional case information and then provides high-quality feedback. D3LM incorporates an innovative graph-based Positive-Unlabeled Reinforcement Learning (PURL) algorithm, enabling the generation of critical questions and enhancing user-LLM interactions. Moreover, an integrated LLM-based stopping criterion facilitates precise Court Views Generation (CVG). Our research also introduces a new English-language CVG dataset based on the US case law database, enriching the realm of LLM research and deployment with a vital dimension. D3LM surpasses classical LLMs by delivering outstanding performance and a remarkable user experience in the legal domain."
+        },
+        {
+          "title": "Unraveling the Impact of Heterophilic Structures on Graph Positive-Unlabeled Learning",
+          "id": "http://arxiv.org/abs/2405.19919v2",
+          "published": "2024-05-30T10:30:44Z",
+          "authors": [
+            "Yuhao Wu",
+            "Jiangchao Yao",
+            "Bo Han",
+            "Lina Yao",
+            "Tongliang Liu"
+          ],
+          "abstract": "While Positive-Unlabeled (PU) learning is vital in many real-world scenarios, its application to graph data still remains under-explored. We unveil that a critical challenge for PU learning on graph lies on the edge heterophily, which directly violates the irreducibility assumption for Class-Prior Estimation (class prior is essential for building PU learning algorithms) and degenerates the latent label inference on unlabeled nodes during classifier training. In response to this challenge, we introduce a new method, named Graph PU Learning with Label Propagation Loss (GPL). Specifically, GPL considers learning from PU nodes along with an intermediate heterophily reduction, which helps mitigate the negative impact of the heterophilic structure. We formulate this procedure as a bilevel optimization that reduces heterophily in the inner loop and efficiently learns a classifier in the outer loop. Extensive experiments across a variety of datasets have shown that GPL significantly outperforms baseline methods, confirming its effectiveness and superiority."
+        },
+        {
+          "title": "Accurate Link Prediction for Edge-Incomplete Graphs via PU Learning",
+          "id": "http://arxiv.org/abs/2405.11911v2",
+          "published": "2024-05-20T09:47:22Z",
+          "authors": [
+            "Junghun Kim",
+            "Ka Hyun Park",
+            "Hoyoung Yoon",
+            "U Kang"
+          ],
+          "abstract": "Given an edge-incomplete graph, how can we accurately find the missing links? The link prediction in edge-incomplete graphs aims to discover the missing relations between entities when their relationships are represented as a graph. Edge-incomplete graphs are prevalent in real-world due to practical limitations, such as not checking all users when adding friends in a social network. Addressing the problem is crucial for various tasks, including recommending friends in social networks and finding references in citation networks. However, previous approaches rely heavily on the given edge-incomplete (observed) graph, making it challenging to consider the missing (unobserved) links during training. In this paper, we propose PULL (PU-Learning-based Link predictor), an accurate link prediction method based on the positive-unlabeled (PU) learning. PULL treats the observed edges in the training graph as positive examples, and the unconnected node pairs as unlabeled ones. PULL effectively prevents the link predictor from overfitting to the observed graph by proposing latent variables for every edge, and leveraging the expected graph structure with respect to the variables. Extensive experiments on five real-world datasets show that PULL consistently outperforms the baselines for predicting links in edge-incomplete graphs."
+        },
+        {
+          "title": "Verifying the Selected Completely at Random Assumption in Positive-Unlabeled Learning",
+          "id": "http://arxiv.org/abs/2404.00145v1",
+          "published": "2024-03-29T20:36:58Z",
+          "authors": [
+            "Paweł Teisseyre",
+            "Konrad Furmańczyk",
+            "Jan Mielniczuk"
+          ],
+          "abstract": "The goal of positive-unlabeled (PU) learning is to train a binary classifier on the basis of training data containing positive and unlabeled instances, where unlabeled observations can belong either to the positive class or to the negative class. Modeling PU data requires certain assumptions on the labeling mechanism that describes which positive observations are assigned a label. The simplest assumption, considered in early works, is SCAR (Selected Completely at Random Assumption), according to which the propensity score function, defined as the probability of assigning a label to a positive observation, is constant. On the other hand, a much more realistic assumption is SAR (Selected at Random), which states that the propensity function solely depends on the observed feature vector. SCAR-based algorithms are much simpler and computationally much faster compared to SAR-based algorithms, which usually require challenging estimation of the propensity score. In this work, we propose a relatively simple and computationally fast test that can be used to determine whether the observed data meet the SCAR assumption. Our test is based on generating artificial labels conforming to the SCAR case, which in turn allows to mimic the distribution of the test statistic under the null hypothesis of SCAR. We justify our method theoretically. In experiments, we demonstrate that the test successfully detects various deviations from SCAR scenario and at the same time it is possible to effectively control the type I error. The proposed test can be recommended as a pre-processing step to decide which final PU algorithm to choose in cases when nature of labeling mechanism is not known."
+        },
+        {
+          "title": "Lambda: Learning Matchable Prior For Entity Alignment with Unlabeled Dangling Cases",
+          "id": "http://arxiv.org/abs/2403.10978v2",
+          "published": "2024-03-16T17:21:58Z",
+          "authors": [
+            "Hang Yin",
+            "Liyao Xiang",
+            "Dong Ding",
+            "Yuheng He",
+            "Yihan Wu",
+            "Xinbing Wang",
+            "Chenghu Zhou"
+          ],
+          "abstract": "We investigate the entity alignment (EA) problem with unlabeled dangling cases, meaning that partial entities have no counterparts in the other knowledge graph (KG), and this type of entity remains unlabeled. To address this challenge, we propose the framework \\textit{Lambda} for dangling detection and then entity alignment. Lambda features a GNN-based encoder called KEESA with spectral contrastive learning for EA and a positive-unlabeled learning algorithm for dangling detection called iPULE. iPULE offers theoretical guarantees of unbiasedness, uniform deviation bounds, and convergence. Experimental results demonstrate that each component contributes to overall performances that are superior to baselines, even when baselines additionally exploit 30\\% of dangling entities labeled for training."
+        },
+        {
+          "title": "Contrastive Learning with Negative Sampling Correction",
+          "id": "http://arxiv.org/abs/2401.08690v1",
+          "published": "2024-01-13T11:18:18Z",
+          "authors": [
+            "Lu Wang",
+            "Chao Du",
+            "Pu Zhao",
+            "Chuan Luo",
+            "Zhangchi Zhu",
+            "Bo Qiao",
+            "Wei Zhang",
+            "Qingwei Lin",
+            "Saravan Rajmohan",
+            "Dongmei Zhang",
+            "Qi Zhang"
+          ],
+          "abstract": "As one of the most effective self-supervised representation learning methods, contrastive learning (CL) relies on multiple negative pairs to contrast against each positive pair. In the standard practice of contrastive learning, data augmentation methods are utilized to generate both positive and negative pairs. While existing works have been focusing on improving the positive sampling, the negative sampling process is often overlooked. In fact, the generated negative samples are often polluted by positive samples, which leads to a biased loss and performance degradation. To correct the negative sampling bias, we propose a novel contrastive learning method named Positive-Unlabeled Contrastive Learning (PUCL). PUCL treats the generated negative samples as unlabeled samples and uses information from positive samples to correct bias in contrastive loss. We prove that the corrected loss used in PUCL only incurs a negligible bias compared to the unbiased contrastive loss. PUCL can be applied to general contrastive learning problems and outperforms state-of-the-art methods on various image and graph classification tasks. The code of PUCL is in the supplementary file."
+        },
+        {
+          "title": "PULSAR: Graph based Positive Unlabeled Learning with Multi Stream Adaptive Convolutions for Parkinson's Disease Recognition",
+          "id": "http://arxiv.org/abs/2312.05780v2",
+          "published": "2023-12-10T05:56:20Z",
+          "authors": [
+            "Md. Zarif Ul Alam",
+            "Md Saiful Islam",
+            "Ehsan Hoque",
+            "M Saifur Rahman"
+          ],
+          "abstract": "Parkinson's disease (PD) is a neuro-degenerative disorder that affects movement, speech, and coordination. Timely diagnosis and treatment can improve the quality of life for PD patients. However, access to clinical diagnosis is limited in low and middle income countries (LMICs). Therefore, development of automated screening tools for PD can have a huge social impact, particularly in the public health sector. In this paper, we present PULSAR, a novel method to screen for PD from webcam-recorded videos of the finger-tapping task from the Movement Disorder Society - Unified Parkinson's Disease Rating Scale (MDS-UPDRS). PULSAR is trained and evaluated on data collected from 382 participants (183 self-reported as PD patients). We used an adaptive graph convolutional neural network to dynamically learn the spatio temporal graph edges specific to the finger-tapping task. We enhanced this idea with a multi stream adaptive convolution model to learn features from different modalities of data critical to detect PD, such as relative location of the finger joints, velocity and acceleration of tapping. As the labels of the videos are self-reported, there could be cases of undiagnosed PD in the non-PD labeled samples. We leveraged the idea of Positive Unlabeled (PU) Learning that does not need labeled negative data. Our experiments show clear benefit of modeling the problem in this way. PULSAR achieved 80.95% accuracy in validation set and a mean accuracy of 71.29% (2.49% standard deviation) in independent test, despite being trained with limited amount of data. This is specially promising as labeled data is scarce in health care sector. We hope PULSAR will make PD screening more accessible to everyone. The proposed techniques could be extended for assessment of other movement disorders, such as ataxia, and Huntington's disease."
+        }
+      ]
+    },
+    {
+      "name": "crossref_topology",
+      "url": "https://api.crossref.org/works",
+      "params": {
+        "query": "link prediction persistent homology topology",
+        "rows": 12,
+        "filter": "from-pub-date:2023-01-01,until-pub-date:2026-09-16"
+      },
+      "utc": "2026-09-15T21:51:23.398015+00:00",
+      "status": 429,
+      "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/topology_selection_next_20260916/crossref_topology_v1.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "items": []
+    },
+    {
+      "name": "crossref_selection",
+      "url": "https://api.crossref.org/works",
+      "params": {
+        "query": "positive unlabeled selected not at random graph learning",
+        "rows": 12,
+        "filter": "from-pub-date:2024-01-01,until-pub-date:2026-09-16"
+      },
+      "utc": "2026-09-15T21:51:23.399060+00:00",
+      "status": 200,
+      "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/topology_selection_next_20260916/crossref_selection_v1.json",
+      "sha256": "da483d9f3667e9652cd8b345b8f225c66f2a28980c0b7614f7d846767d1db227",
+      "items": [
+        {
+          "title": "Positive-unlabeled learning without instruments: identified sets for latent-class moments under selected-at-random labeling",
+          "doi": "10.2139/ssrn.6664249",
+          "year": [
+            [
+              2026
+            ]
+          ],
+          "journal": null,
+          "authors": [
+            "Shaohui Wang"
+          ],
+          "abstract": "<jats:p>We study positive-unlabeled data under selected-at-random labeling when no valid instrument is available. We first show that, in this environment, the latent labeling rule and the posterior class probability are not point identified from the observables. We then shift attention from the unidentified latent probability itself to a finite-dimensional latent-class moment target and prove that this target is sharply set identified under a simple positivity bound. Our main result characterizes the exact identified region as a convex set generated by admissible inverse-selection weights and shows that this region depends only on the observable regression. We further derive a support-function representation of the identified set, which delivers sharp bounds on latent prevalence and, for suitable choices of the moment transformation, on positive-class feature means. Finally, we provide a simulation to demonstrate the effectiveness of our method.</jats:p>",
+          "score": 40.95991
+        },
+        {
+          "title": "Positive Unlabeled Learning Selected Not At Random (PULSNAR): class proportion estimation without the selected completely at random assumption",
+          "doi": "10.7717/peerj-cs.2451",
+          "year": [
+            [
+              2024,
+              11,
+              5
+            ]
+          ],
+          "journal": [
+            "PeerJ Computer Science"
+          ],
+          "authors": [
+            "Praveen Kumar",
+            "Christophe G. Lambert"
+          ],
+          "abstract": "<jats:p>Positive and unlabeled (PU) learning is a type of semi-supervised binary classification where the machine learning algorithm differentiates between a set of positive instances (labeled) and a set of both positive and negative instances (unlabeled). PU learning has broad applications in settings where confirmed negatives are unavailable or difficult to obtain, and there is value in discovering positives among the unlabeled (<jats:italic>e.g</jats:italic>., viable drugs among untested compounds). Most PU learning algorithms make the selected completely at random (SCAR) assumption, namely that positives are selected independently of their features. However, in many real-world applications, such as healthcare, positives are not SCAR (<jats:italic>e.g</jats:italic>., severe cases are more likely to be diagnosed), leading to a poor estimate of the proportion, α, of positives among unlabeled examples and poor model calibration, resulting in an uncertain decision threshold for selecting positives. PU learning algorithms vary; some estimate only the proportion, α, of positives in the unlabeled set, while others calculate the probability that each specific unlabeled instance is positive, and some can do both. We propose two PU learning algorithms to estimate α, calculate calibrated probabilities for PU instances, and improve classification metrics: i) PULSCAR (positive unlabeled learning selected completely at random), and ii) PULSNAR (positive unlabeled learning selected not at random). PULSNAR employs a divide-and-conquer approach to cluster SNAR positives into subtypes and estimates α for each subtype by applying PULSCAR to positives from each cluster and all unlabeled. In our experiments, PULSNAR outperformed state-of-the-art approaches on both synthetic and real-world benchmark datasets.</jats:p>",
+          "score": 34.16537
+        },
+        {
+          "title": "XG-PUL: A Network-Based Framework for Disease Gene Prioritization Using Graph Representation Learning and Positive-Unlabeled Learning",
+          "doi": "10.21203/rs.3.rs-10423323/v1",
+          "year": [
+            [
+              2026,
+              8,
+              12
+            ]
+          ],
+          "journal": null,
+          "authors": [
+            "Mahdiyeh Ayouman",
+            "Zahra Narimani"
+          ],
+          "abstract": "<title>Abstract</title>\n                <p>Identifying disease-associated genes through experimental approaches remains costly and time-consuming. Computational approaches based on biological networks provide an effective alternative for disease gene prioritization and disease module identification. However, existing machine learning methods often require reliable negative examples, whereas in disease gene prioritization only a limited number of confirmed disease genes are available and the remaining genes cannot be confidently considered negative samples. This positive--unlabeled (PU) learning setting introduces substantial label uncertainty and remains a major challenge for computational disease gene discovery.\nIn this study, we propose XG-PUL, a machine learning framework designed for disease gene prioritization under a PU learning scenario. XG-PUL employs a two-stage strategy in which label-independent node representations are first learned from the protein--protein interaction (PPI) network using Node2Vec. These representations are then integrated with complementary graph-topological features to capture both latent network patterns and explicit connectivity characteristics of genes. Subsequently, a bagging-based PU classifier is applied to aggregate multiple classifiers trained on different bootstrap samples of unlabeled genes, improving robustness against uncertainty in the unlabeled data.\nThe proposed framework was evaluated on ten complex disease datasets and compared with representative network-based methods and graph learning approaches. XG-PUL demonstrated improved ranking performance, achieving higher AUPR and F1-score values across the evaluated diseases and ranking thresholds, while maintaining competitive AUC-ROC performance. Functional enrichment analysis and literature-based validation further confirmed the biological relevance of prioritized candidates, showing that XG-PUL can recover genes involved in disease-related pathways and molecular mechanisms beyond known disease annotations. These results demonstrate that integrating label-independent network representation learning with PU learning provides a robust framework for disease gene prioritization in incomplete biological knowledge scenarios.</p>",
+          "score": 33.148983
+        },
+        {
+          "title": "Graph Positive-Unlabeled Learning Via Bootstrapping Label Disambiguation",
+          "doi": "10.2139/ssrn.5046216",
+          "year": [
+            [
+              2024
+            ]
+          ],
+          "journal": null,
+          "authors": [
+            "Chunquan Liang",
+            "Luyue Wang",
+            "Xinyuan Feng",
+            "Yuying Cheng",
+            "Mei Li",
+            "Shirui Pan",
+            "Hongming Zhang"
+          ],
+          "abstract": null,
+          "score": 32.324406
+        },
+        {
+          "title": "Positive-Unlabeled Learning in Implicit Feedback from Data Missing-Not-At-Random Perspective",
+          "doi": "10.3390/e28010041",
+          "year": [
+            [
+              2025,
+              12,
+              29
+            ]
+          ],
+          "journal": [
+            "Entropy"
+          ],
+          "authors": [
+            "Sichao Wang",
+            "Tianyu Xia",
+            "Lingxiao Yang"
+          ],
+          "abstract": "<jats:p>The lack of explicit negative labels issue is a prevalent challenge in numerous domains, including CV, NLP, and Recommender Systems (RSs). To address this challenge, many negative sample completion methods are proposed, such as optimizing sample distribution through pseudo-negative sampling and confidence screening in CV, constructing reliable negative examples by leveraging textual semantics in NLP, and supplementing negative samples via sparsity analysis of user interaction behaviors and preference inference in RS for handling implicit feedback. However, most existing methods fail to adequately address the Missing-Not-At-Random (MNAR) nature of the data and the potential presence of unmeasured confounders, which compromise model robustness in practice. In this paper, we first formulate the prediction task in RS with implicit feedback as a positive-unlabeled (PU) learning problem. We then propose a two-phase debiasing framework consisting of exposure status imputation, followed by debiasing through the proposed doubly robust estimator. Moreover, our theoretical analysis shows that existing propensity-based approaches are biased in the presence of unmeasured confounders. To overcome this, we incorporate a robust deconfounding method in the debiasing phase to effectively mitigate the impact of unmeasured confounders. We conduct extensive experiments on three widely used real-world datasets to demonstrate the effectiveness and potential of the proposed methods.</jats:p>",
+          "score": 30.235561
+        },
+        {
+          "title": "Bootstrap Latent Prototypes for graph positive-unlabeled learning",
+          "doi": "10.1016/j.inffus.2024.102553",
+          "year": [
+            [
+              2024,
+              12
+            ]
+          ],
+          "journal": [
+            "Information Fusion"
+          ],
+          "authors": [
+            "Chunquan Liang",
+            "Yi Tian",
+            "Dongmin Zhao",
+            "Mei Li",
+            "Shirui Pan",
+            "Hongming Zhang",
+            "Jicheng Wei"
+          ],
+          "abstract": null,
+          "score": 28.915298
+        },
+        {
+          "title": "Uncertainty-aware graph representation learning with positive-unlabeled classification for biomarker discovery in peripheral artery disease",
+          "doi": "10.64898/2026.05.08.723757",
+          "year": [
+            [
+              2026,
+              5,
+              13
+            ]
+          ],
+          "journal": null,
+          "authors": [
+            "Venkat Siva Radha Krishna Ayyalasomayajula",
+            "Max L. Senders",
+            "Jelmer M. Wolterink",
+            "Kak Khee Yeung"
+          ],
+          "abstract": "<jats:p>Peripheral artery disease (PAD) is a complex vascular disorder characterized by heterogeneous molecular mechanisms and incomplete functional annotation, limiting systematic biomarker discovery. Network-based learning approaches provide a powerful framework for disease gene prioritization; however, most existing methods produce overconfident predictions without explicitly accounting for model uncertainty or structural novelty. Here, we present an uncertainty-aware framework for PAD biomarker discovery that integrates unsupervised graph representation learning, positive–unlabeled (PU) classification, ensemble prediction, and mechanistic explainability. Node embeddings were learned using multiple unsupervised graph neural network (GNN) objectives and combined with heterogeneous classifiers to generate ensemble-averaged probability estimates and epistemic uncertainty. By jointly modeling predictive confidence and embedding-space novelty, we stratified candidates into high-confidence rediscoveries and structurally novel hypotheses under explicit uncertainty control. Across eight embedding objectives and five classifiers, ensemble aggregation produced stable, well-calibrated predictions and enabled prioritization of 100 candidate PAD-associated proteins. Probability-heavy candidates clustered tightly with known PAD proteins and were enriched for established vascular and hemostatic pathways, including extracellular matrix organization, integrin signaling, coagulation, and fibrinolysis. In contrast, novelty-heavy candidates occupied distinct embedding-space regions and partitioned into multiple coherent clusters enriched for upstream regulatory and signaling processes, including G protein-coupled receptor, ephrin receptor, kinase-driven, and NF-κB-associated pathways. Five-fold cross-validated comparison with established PU learning baselines demonstrated consistent improvement across all evaluation metrics (AUC 0.916 ± 0.019 vs. 0.821 ± 0.030 for the best baseline), and external validity was confirmed by significant enrichment of top candidates for related cardiovascular disease annotations (5.7× above background). Together, these results demonstrate that integrating uncertainty, novelty, and explainability enables calibrated and biologically grounded biomarker prioritization, with broad applicability to PAD and other complex diseases.</jats:p>",
+          "score": 28.746479
+        },
+        {
+          "title": "Two-Stage Angular Alignment for Positive-Unlabeled Learning",
+          "doi": "10.5220/0013964100004067",
+          "year": [
+            [
+              2026
+            ]
+          ],
+          "journal": [
+            "Proceedings of the 15th International Conference on Pattern Recognition Applications and Methods"
+          ],
+          "authors": [
+            "Vasileios Sevetlidis",
+            "George Pavlidis",
+            "Antonios Gasteratos"
+          ],
+          "abstract": null,
+          "score": 28.70636
+        },
+        {
+          "title": "A Federated Learning Method for Multi-Positive and Unlabeled Data Using an Ensemble of One-Positive and Unlabeled Learning Models",
+          "doi": "10.5626/jcse.2025.19.1.16",
+          "year": [
+            [
+              2025,
+              3,
+              31
+            ]
+          ],
+          "journal": [
+            "Journal of Computing Science and Engineering"
+          ],
+          "authors": [
+            "Cheong Hee Park"
+          ],
+          "abstract": null,
+          "score": 28.023657
+        },
+        {
+          "title": "Review for \"Quantitative Analysis of Miniature Synaptic Calcium Transients Using Positive Unlabeled Deep Learning\"",
+          "doi": "10.1039/d4dd00197d/v1/review3",
+          "year": [
+            [
+              2024,
+              8,
+              18
+            ]
+          ],
+          "journal": null,
+          "authors": [],
+          "abstract": null,
+          "score": 27.700865
+        },
+        {
+          "title": "Review for \"Quantitative Analysis of Miniature Synaptic Calcium Transients Using Positive Unlabeled Deep Learning\"",
+          "doi": "10.1039/d4dd00197d/v1/review1",
+          "year": [
+            [
+              2024,
+              7,
+              8
+            ]
+          ],
+          "journal": null,
+          "authors": [],
+          "abstract": null,
+          "score": 27.700865
+        },
+        {
+          "title": "Positive-Unlabeled Learning Using Pairwise Similarity and Parametric Minimum Cuts",
+          "doi": "10.5220/0012948100003838",
+          "year": [
+            [
+              2024
+            ]
+          ],
+          "journal": [
+            "Proceedings of the 16th International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management"
+          ],
+          "authors": [
+            "Torpong Nitayanont",
+            "Dorit Hochbaum"
+          ],
+          "abstract": null,
+          "score": 27.551044
+        }
+      ]
+    }
+  ],
+  "deduplicated": [
+    {
+      "title": "Link prediction in complex networks via fusing node centrality and local similarity indices",
+      "id": "http://arxiv.org/abs/2609.09658v1",
+      "published": "2026-09-09T03:15:51Z",
+      "authors": [
+        "Yingying Zhang",
+        "Chengye Zhao"
+      ],
+      "abstract": "Local similarity indices are widely used in link prediction on complex networks owing to their low computational cost; however, in sparse networks they assign a zero score to every node pair lacking common neighbors, which severely limits their predictive power. A natural remedy is to fuse node centrality indices with local similarity indices: the former provide global importance for the node pair, while the latter capture fine-grained local topology, and the two can be combined into complementary scores within a unified framework. This paper uses PageRank and DomiRank as two representative centrality measures and constructs a centrality--local-similarity fusion framework. The PageRank-based fusion proposed by Charikhi is first generalized to seven classical local similarity indices, and the universality of its improvement is systematically verified on nine real-world network datasets. Furthermore, the DomiRank centrality is introduced to build the DR-MD series of fused indices under a unified weighting coefficient, which overcomes the drawback that the PageRank-based fusion requires index-by-index weight tuning. Results of five-fold cross-validation together with Wilcoxon signed-rank tests show that, under the unified experimental protocol, all DR-MD indices consistently outperform the corresponding local baselines and their PR-MD counterparts on all nine datasets ($p=0.002$), and that the improvements remain robust against perturbations of $σ$ and the weighting coefficients within the near-critical parameter plateau; in particular, DR-RA achieves an average AUC of 0.7084, surpassing global methods such as Katz and RWR as well as several advanced similarity indices. The framework is inherently extensible, and its fusion paradigm can be straightforwardly generalized to couple other node centrality indices with local similarity indices.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "TTGBench: Benchmarking Topological Evolution and Semantic Drift in Text-attributed Temporal Graphs",
+      "id": "http://arxiv.org/abs/2609.08226v1",
+      "published": "2026-09-08T04:19:11Z",
+      "authors": [
+        "Longfei Ma",
+        "Zemin Liu",
+        "Fei Wu"
+      ],
+      "abstract": "Temporal graph learning models the evolution of dynamic systems, where both structural interactions and semantic states change over time. However, existing benchmarks primarily emphasize structural evolution via temporal link prediction (TLP), while support for semantic evolution remains limited. Although temporal node classification (TNC) is sometimes included, it is typically restricted to simplistic binary settings that fail to capture realistic semantic drift. Moreover, commonly used datasets exhibit high link repetition, leading to inflated performance estimates and obscuring true model capability. To address these limitations, we introduce \\textbf{TTGBench}, a new benchmark that jointly evaluates structural and semantic evolution. TTGBench comprises six real-world, text-rich datasets characterized by \\emph{Dual Volatility}, enabling rigorous and fair evaluation of existing models. Notably, it is the first benchmark to support both multi-class and multi-label TNC, filling a critical gap in evaluating temporal semantic drift. We conduct a comprehensive evaluation of 17 state-of-the-art methods across Temporal Graph Neural Networks (TGNNs) and Large Language Model (LLM)-based paradigms. The results reveal a clear \\emph{capability divide} between the two paradigms: TGNN-based methods excel at structural prediction but fail at semantic tracking, whereas LLM-based predictors show the opposite trend. Through in-depth analysis, we uncover their fundamental limitations and provide insights for developing more comprehensive temporal graph models.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "Towards Unified Multimodal Graph Foundation Model: A Bridge-Router-Adapter Based Approach",
+      "id": "http://arxiv.org/abs/2609.06668v1",
+      "published": "2026-09-06T15:21:40Z",
+      "authors": [
+        "Sirui Zhang",
+        "Yubing Zhou",
+        "Xunkai Li",
+        "Zekai Chen",
+        "Shumeng Li",
+        "Wang Luo",
+        "Yinlin Zhu",
+        "Yujin Gao",
+        "Rong-Hua Li"
+      ],
+      "abstract": "Multimodal graphs couple node attributes in different modalities, such as text and images, with relational structure, enabling topological structure and cross-modality attributes to be modeled jointly. Multimodal graph foundation models seek unified representations from such data that transfer across different graph domains and downstream tasks. However, existing methods exhibit two fundamental limitations. (1) Cross-Scope Context Entanglement. They merge scope-specific graph contexts into a unified representation, obscuring their distinctions during multimodal construction. (2) Scope-Ignorant Modality Routing. They route modalities within a fixed graph scope, overlooking how modality relevance varies across neighborhood ranges. To address these challenges, we propose BRAIN, a unified model that focuses on graph context that combines neighborhood scope with modality composition. BRAIN comprises a scope-conditioned Bridge that combines structural information spanning local-to-global neighborhood scopes with different modality compositions; a hierarchical Router that estimates the relevance between the scope and the task, and selects compositions separately within each scope, allowing modality utility to vary with graph range; and a lightweight residual Adapter that further specializes the routed embedding for downstream prediction. BRAIN is trained through multi-graph pretraining followed by task-specific adaptation. Experiments across nine datasets and four task families demonstrate its broad effectiveness, improving node-classification and link-prediction performance by up to 4.73% relative to the strongest baseline, while achieving an average relative improvement of 14.72% across four graph-to-text and two graph-to-image metrics.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "ReCoG: Reciprocal Co-Evolution for Multimodal Graph Learning",
+      "id": "http://arxiv.org/abs/2608.22786v1",
+      "published": "2026-08-24T04:16:13Z",
+      "authors": [
+        "Rui Xue",
+        "Tianfu Wu"
+      ],
+      "abstract": "Multimodal graph learning requires jointly training over graph structure and heterogeneous node attributes, yet existing methods largely decouple these processes: prior multimodal graph neural networks (GNNs) focus on aligning modalities in a shared embedding space while operating on fixed or weakly adapted graph structures, and graph structure learning approaches infer topology from unimodal node representations without accounting for multimodal interactions. This separation fundamentally limits the ability of GNNs to capture semantically meaningful relationships in multimodal settings, where observed edges are often noisy, incomplete, or misaligned with underlying semantics. We propose ReCoG (Reciprocal Co-Evolution for Multimodal Graph Learning), a new learning paradigm that tightly couples graph structure learning and multimodal representation learning through end-to-end reciprocal interaction. Concretely, ReCoG integrates (i) a multimodal graph refiner that infers and corrects edges using cross-modal semantic evidence, and (ii) a coupled cross-modal message passing mechanism that performs joint intra- and inter-modality propagation over the refined graph. This unified design yields greater expressiveness than decoupled or two-stage formulations and allows dynamic interaction between topology and representation learning. Across diverse benchmarks for node classification and link prediction, ReCoG consistently outperforms strong multimodal graph structure learning baselines, including graph foundation models. Our results demonstrate that reciprocal co-evolution of structure and semantics is important for effective multimodal graph learning, challenging the prevailing separation between topology and representation learning.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "Hyperbolic Graph Embedders for Link Prediction and Topology Reconstruction",
+      "id": "http://arxiv.org/abs/2608.07029v1",
+      "published": "2026-08-07T09:42:26Z",
+      "authors": [
+        "Robert Jankowski",
+        "Maksim Kitsak",
+        "Dorota Celińska-Kopczyńska"
+      ],
+      "abstract": "Hyperbolic embeddings provide compact geometric representations of complex networks in hyperbolic spaces, but systematic comparisons of methods developed in machine learning, network science, and algorithmics remain rare. We benchmark 13 unsupervised hyperbolic graph embedders under a unified protocol for link prediction and topology reconstruction on synthetic and empirical networks. The protocol captures both missing-link recovery and the preservation of local and global network structure. Maximum-likelihood and representation-learning-based approaches, including hybrid variants, achieve the strongest overall performance, although no method dominates across all tasks and structural regimes. Performance is more strongly associated with embedding paradigm than with disciplinary origin. We identify the network regimes in which different paradigms succeed or fail and provide practical guidance for method selection in downstream applications.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "Dynamic Graph Prompting via Topology-Routed Mixed-Curvature Experts",
+      "id": "http://arxiv.org/abs/2608.06031v1",
+      "published": "2026-08-06T13:37:52Z",
+      "authors": [
+        "Quanxin Wang",
+        "Xuanting Xie",
+        "Bingheng Li",
+        "Xingtong Yu",
+        "Shuo Wang",
+        "Ruiyi Fang",
+        "Zhao Kang"
+      ],
+      "abstract": "Dynamic graph prompting freezes a pre-trained temporal backbone and adapts it to label-scarce downstream tasks using lightweight prompts. However, existing methods operate within a single, fixed embedding space. In this work, we reveal that temporal shifts in local clustering and degree heterogeneity actively reorganize the edge curvature spectrum---indicating that the optimal representation geometry dynamically evolves with local topology over time. We formalize this unaddressed mismatch as geometry under-adaptation. To overcome this limitation, we propose CurvPrompt, a topology-routed geometry prompting framework for dynamic graphs. Instead of relying on a single space, CurvPrompt maintains a bank of curvature-diverse Riemannian experts, each paired with a learnable prompt. A topology-aware gate dynamically routes each node--time instance to a sparse subset of experts, constructing a personalized mixed-curvature representation. To ensure parameter efficiency and training stability under extreme label scarcity, CurvPrompt employs soft routing during pre-training to build a continuous topology--geometry mapping, and transitions to hard Top-K routing with uniform weights during downstream adaptation. Extensive experiments across four benchmark datasets show that CurvPrompt significantly advances few-shot link prediction while delivering strong, consistent performance on node classification tasks, validating the necessity of geometry-adaptive prompting.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "Towards the Explainability of Temporal Graph Networks via Memory Backtracking and Topological Attribution",
+      "id": "http://arxiv.org/abs/2607.07716v1",
+      "published": "2026-07-04T08:35:07Z",
+      "authors": [
+        "Yazheng Liu",
+        "Xi Zhang",
+        "Sihong Xie",
+        "Hui Xiong"
+      ],
+      "abstract": "Temporal graphs are ubiquitous in real-world applications and Temporal Graph Networks (TGNs) have achieved superior predictive accuracy. Understanding which historical events drive model predictions can enhance trustworthiness of TGNs. Existing explanation methods overlook the memory module, the core component that records and updates node histories, leaving the influence of past events unexplored. To address this, we attribute TGNs predictions through the topology attribution tree and memory backtracking tree. The topology attribution tree captures the influence of neighbors and their memory vectors, then the memory backtracking tree quantifies how historical events shape node memory vectors. We apply the LRP in TGNs, ensuring that the total contribution of events equals the logits of model. Finally, top-k selection may be unfaithful due to the nonlinear mapping from logits to probabilities, we design optimization objectives to identify the important events. Experiments on nine temporal graph datasets, spanning node property prediction, link prediction tasks and graph classification tasks, show that our method provides faithful explanations and outperforms state-of-the-art baselines. The code is available at https://github.com/yazhengliu/MemExplainer",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "Out-of-distribution Neural Inference in Dynamical Ising Models",
+      "id": "http://arxiv.org/abs/2607.03039v1",
+      "published": "2026-07-03T07:31:30Z",
+      "authors": [
+        "Yuan-Bin Zhu",
+        "Shuang Qiao",
+        "Shi-Ju Ran"
+      ],
+      "abstract": "Neural networks are increasingly used to infer hidden physical structure from dynamical observations, yet it remains unclear whether their out-of-distribution performance reflects transferable physical rule learning. We address this question in a controlled inverse problem: reconstructing interaction graphs of a kinetic Ising model from Glauber magnetization trajectories. Across convolutional, graph, Transformer, and hybrid architectures, we find that data-driven training produces distinct and reproducible statistical strategies under topology and temperature shifts. Edge-population diagnostics reveal that Transformer-based models tend to preserve the link density of the training ensemble, whereas convolutional models can collapse toward sparse- or no-link predictions that appear out-of-distribution stable by exploiting the majority no-link class. Thus, high in-distribution accuracy and apparent out-of-distribution robustness do not necessarily imply a learned dynamics-to-structure rule. Instead, neural reconstruction can be governed by architecture-dependent statistical priors. Our results identify a concrete failure mode of standard data-driven learning in physical inverse problems and motivate rule-guided principles for machine-learning-assisted scientific discovery.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "TAG-DLM: Diffusion Language Models for Text-Attributed Graph Learning",
+      "id": "http://arxiv.org/abs/2606.31166v1",
+      "published": "2026-06-30T05:56:18Z",
+      "authors": [
+        "Lingjie Chen",
+        "Yuanchen Bei",
+        "Haobo Xu",
+        "Yanjun Zhao",
+        "Yuzhong Chen",
+        "Hanghang Tong"
+      ],
+      "abstract": "Text-attributed graphs (TAGs), where each node carries a natural language description, require models to jointly reason over text and graph topology. Existing approaches often handle the two modalities separately: graph neural networks operate on shallow text features, while hybrids of LLMs and graphs use the language model mainly as a text encoder and delegate structure learning to a separate graph module. We propose method that unifies textual reasoning and graph message passing within a masked diffusion language model, a language model with bidirectional attention and generative decoding. For each graph instance, method linearises a sampled local neighbourhood into a token sequence and injects graph structure through a topology attention mask, which realises message passing over the graph. Because the diffusion language model can both interpret and generate text, the method adapts to different tasks simply by changing the prompt, supporting node classification, link prediction, and cross-dataset transfer with no target-specific fine-tuning. Experiments show that method outperforms graph neural networks, graph transformers, and LLM-based baselines on all three TAG benchmarks across two tasks, improving over the strongest baseline by up to 3.9 points.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "Learning Long Range Spatio-Temporal Representations over Continuous Time Dynamic Graphs with State Space Models",
+      "id": "http://arxiv.org/abs/2606.04672v2",
+      "published": "2026-06-03T09:54:35Z",
+      "authors": [
+        "Ayushman Raghuvanshi",
+        "Thummaluru Siddartha Reddy",
+        "Sundeep Prabhakar Chepuri",
+        "Mahesh Chandran"
+      ],
+      "abstract": "Continuous-time dynamic graphs (CTDGs) provide a richer framework to capture fine-grained temporal patterns in evolving relational data. Long-range information propagation is a key challenge while learning representations, wherein it is important to retain and update information over long temporal horizons. Existing approaches restrict models to capture one-hop or local temporal neighborhoods and fail to capture multi-hop or global structural patterns. To mitigate this, we derive a parameter-efficient state-space modeling framework for continuous-time dynamic graphs (CTDG-SSM) from first principles. We first introduce continuous-time Topology-Aware higher order polynomial projection operator (CTT-HiPPO), a novel memory-based reformulation of HiPPO to jointly encode temporal dynamics and graph structure. The solution from CTT-HiPPO is obtained by projecting the classical HiPPO solution through a polynomial of the Laplacian matrix, yielding topology-aware memory updates that admit an equivalent state-space formulation for CTDGs (CTDG-SSM). Then a computationally efficient discrete formulation is obtained using the zero-order hold approach for model implementation. Across benchmarks on dynamic link prediction, dynamic node classification, and sequence classification, CTDG-SSM achieves state-of-the-art performance. Notably, it achieves large performance gains on datasets that require long range temporal (LRT) and spatial reasoning.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "Forget Less, Generalize More: Unifying Temporal and Structural Adaptation for Dynamic Graphs",
+      "id": "http://arxiv.org/abs/2605.29453v1",
+      "published": "2026-05-28T06:47:08Z",
+      "authors": [
+        "Qian Chang",
+        "Ciprian Doru Giurcaneanu",
+        "Runsong Jia",
+        "Xia Li",
+        "Guoping Hu",
+        "Xiufeng Cheng",
+        "Jinqing Yang",
+        "Mengjia Wu",
+        "Yi Zhang"
+      ],
+      "abstract": "Representation learning on dynamic graphs requires capturing complex dependencies that evolve across both time and structure. Existing approaches typically adopt fixed temporal decay schemes or predetermined structural propagation depths, limiting their ability to generalize across graphs with diverse interaction frequencies and topological characteristics. We propose Dual-Scale Retentive Dynamics (DSRD), a unified framework that maintains a retentive representation state encoding both temporal memory and structural context. DSRD introduces two key components: (i) a retentive state with dual-scale adaptation that jointly models temporal dynamics and structural propagation within a single recurrent formulation, and (ii) adaptive decay kernels with learnable time-sensitivity parameters that automatically balance short-term responsiveness and long-term retention based on the underlying interaction patterns. We provide theoretical analysis establishing the equivalence between event-wise parallel aggregation and efficient recurrent state updates, as well as stability and boundedness guarantees for the learned dynamics. Extensive experiments on 14 real-world benchmarks demonstrate that DSRD consistently achieves state-of-the-art performance on both link prediction and node classification tasks, with strong generalization across transductive and inductive settings.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "Temporal Hyperbolic Graph Representation Learning for Scale-Free Internet Routing and Delay Prediction",
+      "id": "http://arxiv.org/abs/2605.28155v1",
+      "published": "2026-05-27T08:39:47Z",
+      "authors": [
+        "Yi-Ling Kuo",
+        "Hao-Yu Tien",
+        "Shih-Yu Tsai"
+      ],
+      "abstract": "Predicting Internet round-trip time (RTT) is critical for routing optimization, quality-of-service (QoS) provisioning, and traffic engineering, yet remains challenging due to long-term temporal dependencies, evolving routing dynamics, and heavy-tailed latency distributions. While Temporal Graph Neural Networks (TGNNs) can model evolving network topologies, most existing approaches operate in Euclidean space, which poorly captures the hierarchical and scale-free structure of Internet routing graphs. Hyperbolic geometry provides a more suitable representation space. We propose HERMIT (Hyperbolic Edge-aware RTT Modeling via Integrated Topology), a hybrid framework combining a hyperbolic manifold-preserving temporal GNN with a Random Forest regressor for joint link prediction and RTT prediction. Built on HMPTGN, HERMIT introduces RTT-aware edge features and a learnable edge encoder to improve modeling of evolving link states and routing behavior. The resulting hyperbolic node representations are combined with historical RTT statistics for robust latency prediction. We evaluate HERMIT on a large-scale real Internet dataset spanning 2015-2024. HERMIT consistently outperforms a strong Random Forest baseline using only historical RTT statistics, achieving a 6% RMSE improvement while reducing large errors on heavy-tailed samples. It also surpasses prior hyperbolic TGNN models, including HMPTGN and HTGN, in link prediction performance. These results demonstrate that combining hyperbolic temporal graph learning with tree-based regression provides a scalable solution for RTT prediction in real-world Internet topologies.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "PolyFusionAgent: A Multimodal Foundation Model and Autonomous AI Assistant for Polymer Property Prediction and Inverse Design",
+      "id": "http://arxiv.org/abs/2605.26543v1",
+      "published": "2026-05-26T04:45:11Z",
+      "authors": [
+        "Manpreet Kaur",
+        "Xingying Zhang",
+        "Qian Liu"
+      ],
+      "abstract": "Polymer discovery is central to fields ranging from energy storage to biomedicine, but it is hindered by an astronomically large chemical design space and fragmented representations of structure, properties, and prior knowledge. This fragmentation leaves many AI models disconnected from physical and experimental reality, restricting their ability to support directly actionable design decisions. Here we introduce PolyFusionAgent, an interactive framework coupling a multimodal polymer foundation model (PolyFusion) with a tool-augmented, literature-grounded design agent (PolyAgent). PolyFusion aligns complementary polymer views including sequence, topology, 3D geometry, and fingerprints across millions of polymers to learn a shared latent space transferable across chemistries and data regimes, improving thermophysical property prediction and enabling property-conditioned generation of chemically valid, structurally novel polymers beyond the reference design space. PolyAgent closes the design loop by linking prediction and inverse design with evidence retrieval from the polymer literature, proposing, evaluating, and contextualizing hypotheses with explicit precedent in one workflow. Together, PolyFusionAgent enables interactive, evidence-linked polymer discovery combining large-scale representation learning, multimodal chemical knowledge, and verifiable scientific reasoning.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "'Si'multaneous 'S'patial-'T'emporal Message Passing for Dynamic Graph Representation Learning",
+      "id": "http://arxiv.org/abs/2605.25548v1",
+      "published": "2026-05-25T08:04:32Z",
+      "authors": [
+        "Shubhajit Roy",
+        "Anirban Dasgupta"
+      ],
+      "abstract": "Dynamic graph neural networks (DGNNs) that operate on snapshot sequences typically fall into one of two categories. \\emph{Temporal-first} approaches build per-node temporal embeddings and only afterwards perform spatial aggregation, whereas \\emph{Spatial-first} approaches invert this order, feeding the output of a graph convolution into a downstream temporal module. In either case, the rigid sequencing forces the second stage to consume an already-compressed summary produced by the first, ruling out joint reasoning over topology and evolution; concretely, the message-passing operator never gets to weight a neighbor's contribution by that neighbor's \\emph{past} trajectory. This paper introduces \\textbf{SiST-GNN} (\\textbf{Si}multaneous \\textbf{S}patial-\\textbf{T}emporal \\textbf{GNN}), which fuses the two signals inside a single message-passing operation rather than chaining them. Concretely, at each snapshot we maintain a recurrent hidden state per node that summarises its history, pair it with the node's current feature vector, and treat the pair as two nodes joined by a cross-time edge; running a standard graph convolution on this temporally augmented graph yields the updated representation. Our empirical study spans nine public baselines and fourteen model-dataset combinations, covering both fixed-split and live-update evaluation regimes. Across every public benchmark, SiST-GNN sets a new state of the art in link prediction task over the strongest prior method by $109$--$277\\%$ in the fixed-split setting and by $68$--$194\\%$ in the live-update setting. We additionally construct three dynamic node-classification tasks by discretising the underlying continuous-time event streams; here SiST-GNN beats the leading discrete-time (DTDG) baseline by $7$--$22\\%$ and matches continuous-time (CTDG) methods that consume the raw events directly.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "Leveraging Graph Structure in Seq2Seq Models for Knowledge Graph Link Prediction",
+      "id": "http://arxiv.org/abs/2605.18211v1",
+      "published": "2026-05-18T10:56:14Z",
+      "authors": [
+        "Luu Huu Phuc",
+        "Ratan Bahadur Thapa",
+        "Mojtaba Nayyeri",
+        "Jingcheng Wu",
+        "Evgeny Kharlamov",
+        "Steffen Staab"
+      ],
+      "abstract": "We introduce Graph-Augmented Sequence-to-Sequence (GA-S2S), a novel framework that integrates a T5-small encoder-decoder with a Relational Graph Attention Network (RGAT) to improve link prediction in knowledge graphs. While existing Seq2Seq models rely solely on surface-level textual descriptions of entities and relations and at best, flatten the neighborhoods of a query entity into a single linear sequence, thereby discarding the inherent graph structure, GA-S2S jointly encodes both textual features and the full $k$-hop subgraph topology surrounding the query entity. By integrating raw encoder outputs with RGAT's relation-aware embeddings, our model captures and leverages richer multi-hop relational patterns and textual information. Our preliminary experiments on the CoDEx dataset demonstrate that GA-S2S outperforms competitive Seq2Seq-based baseline models, achieving up to a 19\\% relative gain in link prediction accuracy.",
+      "sources": [
+        "arxiv_topology"
+      ]
+    },
+    {
+      "title": "RelateAnything: Real-Time Open-Vocabulary Relation Prediction From Any Inputs",
+      "id": "http://arxiv.org/abs/2609.12552v1",
+      "published": "2026-09-11T07:57:41Z",
+      "authors": [
+        "Maëlic Neau"
+      ],
+      "abstract": "Open-vocabulary detection accepts any class list at inference, and promptable segmentation returns regions without class names: the taxonomy has left the model and become an input. Relation prediction has not. Scene-graph models are still trained and evaluated on the 50 or 56 predicates of one annotation style, their relation head conditioned on object labels and so tied to one detector. Three obstacles explain this, none primarily modelling: no relation corpus is both free-text and verified, a label-conditioned architecture cannot accept a vocabulary it was not trained on, and the standard metric rewards agreement with the training corpus, so a larger vocabulary scores as a regression. We present RelateAnything, a 53M-parameter model taking an image and regions from any source and returning scored relations over a predicate vocabulary supplied at inference as strings. Object labels are never an input, so the region source can change without retraining, and the vocabulary is a bank of text embeddings, not a learned classifier. It runs at 20 ms/frame. Training over 19,103 predicates requires positive-unlabeled supervision and a text encoder that separates antonyms, which contrastive encoders embed at cosine 0.95. To supply the supervision we build RA-4M, 474k images and 4.3M relations over 10,102 free-text predicates, generated against numbered box markers and geometrically verified. To measure it we build OV-SGG-Bench, six axes scored across datasets that the priors standard recall rewards cannot satisfy. On three cross-dataset benchmarks and a fourth zero-shot, RelateAnything has 2.3-3.5x the mean recall of the strongest open-vocabulary method of comparable scale, margins that survive a real detector, and leads a 3B-VLM scene-graph model on both metrics at under 2% of its parameters. In-domain measurement overstates transfer gains ~5x. Model, corpus and benchmark are public.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "No Data Is Not No Risk: Visibility Aware Graph-Based Inference of Business Conduct Risk",
+      "id": "http://arxiv.org/abs/2607.26859v1",
+      "published": "2026-07-29T12:44:09Z",
+      "authors": [
+        "Tsuyoshi Iwata",
+        "Johannes Laurmaa",
+        "Ryohei Hisano"
+      ],
+      "abstract": "The monitoring of business conduct risk is hindered by sparse, uneven, and visibility-biased data. Prior studies show that business conduct risk information and media coverage propagate through supply chain, peer, and corporate structure networks, yet incident records remain incomplete for many firms. As a result, the absence of reported events could reflect limited coverage rather than the absence of underlying business conduct risk. This paper examines whether inter-firm relationships can improve the prediction of future recorded conduct related incidents, particularly among firms with limited prior visibility. We formulate the task as Positive--Unlabeled node classification on a corporate ownership graph, where firms with recorded incidents are treated as labeled positives and firms without recorded incidents remain unlabeled. We then propose a visibility- and relation-aware GCNII framework that combines relation specific message passing with non-negative Positive--Unlabeled learning to account for positive contamination in the unlabeled set. In a forward-looking evaluation, the proposed approach achieved the strongest observed ranking performance relative to non-graph- and simple graph-based benchmarks. The results further show that graph-based inference retains its predictive value among firms without prior recorded incidents. These findings demonstrate the value of inter-firm relational structure as a complementary source of information for extending risk prioritization",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "PUe: Biased Positive-Unlabeled Learning Enhancement by Causal Inference",
+      "id": "http://arxiv.org/abs/2607.13428v1",
+      "published": "2026-07-15T04:12:30Z",
+      "authors": [
+        "Xutao Wang",
+        "Hanting Chen",
+        "Tianyu Guo",
+        "Yunhe Wang"
+      ],
+      "abstract": "Positive-Unlabeled (PU) learning aims to achieve high-accuracy binary classification with limited labeled positive examples and numerous unlabeled ones. Existing cost-sensitive-based methods often rely on strong assumptions that examples with an observed positive label were selected entirely at random. In fact, the uneven distribution of labels is prevalent in real-world PU problems, indicating that most actual positive and unlabeled data are subject to selection bias. Building on the SAR-PU propensity-weighted framework of Bekker et al., we study a PU learning enhancement (PUe) framework using normalized propensity scores and normalized inverse probability weighting (NIPW). PUe's main contributions are a normalized inverse-probability-weighted PU risk formulation; additional theoretical analyses of normalized sample-weight error and common PU estimators under biased labeling; regularized deep propensity-score estimation; integration with modern cost-sensitive PU methods; and support for selectively labeled negative classes. Experiments on MNIST, CIFAR-10, and ADNI demonstrate improvements over several PU baselines under non-uniform label distributions.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "RelWitness: Open-Vocabulary 3D Scene Graph Generation with Visual-Geometric Relation Witnesses",
+      "id": "http://arxiv.org/abs/2605.20823v3",
+      "published": "2026-05-20T07:18:56Z",
+      "authors": [
+        "Minh Anh Nguyen",
+        "Quang Huy Tran",
+        "Bao Ngoc Le",
+        "Tuan Kiet Pham",
+        "Sui Yang Guang"
+      ],
+      "abstract": "Open-vocabulary 3D scene graph generation seeks to describe object instances and their relations with flexible natural-language predicates. The central difficulty is not only vocabulary expansion, but supervision reliability: relation annotations in 3D scene graph datasets are selective, and many valid object-pair relations are unannotated. We propose RelWitness, a framework for open-vocabulary 3D scene graph generation from posed RGB-D sequences under incomplete relation supervision. The key concept is a relation witness: a concrete visual-geometric cue that makes a relation observable in the captured scene. Support relations require contact and vertical ordering; containment requires enclosure; proximity requires metric closeness; orientation requires facing direction; and stable relations should persist across views where both objects are visible. RelWitness constructs relation witness records from RGB views, depth maps, reconstructed 3D geometry, role-sensitive text, object-prior null views, and multi-view consistency. A visual-geometric witness verifier assigns unannotated relation candidates to verified missing positives, reliable negatives, or uncertain unlabeled cases. A witness-guided positive-unlabeled objective then learns from incomplete annotations without turning every missing label into a negative. We further introduce witness-consistent decoding and an RGB-D missing-relation audit protocol. Simulated manuscript-planning experiments on 3DSSG/3RScan and ScanNet-derived open-vocabulary splits show the intended behavior: improved unseen-relation recognition, higher witness precision, lower hallucination, and reduced redundant relation phrases. All numerical results are planning values and must be replaced by reproduced measurements before submission",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "ReLIC-SGG: Relation Lattice Completion for Open-Vocabulary Scene Graph Generation",
+      "id": "http://arxiv.org/abs/2604.22546v6",
+      "published": "2026-04-24T13:36:41Z",
+      "authors": [
+        "Amir Hosseini",
+        "Sara Farahani",
+        "Xinyi Li",
+        "Suiyang Guang"
+      ],
+      "abstract": "Open-vocabulary scene graph generation (SGG) aims to describe visual scenes with flexible relation phrases beyond a fixed predicate set. Existing methods usually treat annotated triplets as positives and all unannotated object-pair relations as negatives. However, scene graph annotations are inherently incomplete: many valid relations are missing, and the same interaction can be described at different granularities, e.g., \\textit{on}, \\textit{standing on}, \\textit{resting on}, and \\textit{supported by}. This issue becomes more severe in open-vocabulary SGG due to the much larger relation space. We propose \\textbf{ReLIC-SGG}, a relation-incompleteness-aware framework that treats unannotated relations as latent variables rather than definite negatives. ReLIC-SGG builds a semantic relation lattice to model similarity, entailment, and contradiction among open-vocabulary predicates, and uses it to infer missing positive relations from visual-language compatibility, graph context, and semantic consistency. A positive-unlabeled graph learning objective further reduces false-negative supervision, while lattice-guided decoding produces compact and semantically consistent scene graphs. Experiments on conventional, open-vocabulary, and panoptic SGG benchmarks show that ReLIC-SGG improves rare and unseen predicate recognition and better recovers missing relations.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "Positive-Unlabeled Learning for Control Group Construction in Observational Causal Inference",
+      "id": "http://arxiv.org/abs/2507.14528v1",
+      "published": "2025-07-19T08:06:08Z",
+      "authors": [
+        "Ilias Tsoumas",
+        "Dimitrios Bormpoudakis",
+        "Vasileios Sitokonstantinou",
+        "Athanasios Askitopoulos",
+        "Andreas Kalogeras",
+        "Charalampos Kontoes",
+        "Ioannis Athanasiadis"
+      ],
+      "abstract": "In causal inference, whether through randomized controlled trials or observational studies, access to both treated and control units is essential for estimating the effect of a treatment on an outcome of interest. When treatment assignment is random, the average treatment effect (ATE) can be estimated directly by comparing outcomes between groups. In non-randomized settings, various techniques are employed to adjust for confounding and approximate the counterfactual scenario to recover an unbiased ATE. A common challenge, especially in observational studies, is the absence of units clearly labeled as controls-that is, units known not to have received the treatment. To address this, we propose positive-unlabeled (PU) learning as a framework for identifying, with high confidence, control units from a pool of unlabeled ones, using only the available treated (positive) units. We evaluate this approach using both simulated and real-world data. We construct a causal graph with diverse relationships and use it to generate synthetic data under various scenarios, assessing how reliably the method recovers control groups that allow estimates of true ATE. We also apply our approach to real-world data on optimal sowing and fertilizer treatments in sustainable agriculture. Our findings show that PU learning can successfully identify control (negative) units from unlabeled data based only on treated units and, through the resulting control group, estimate an ATE that closely approximates the true value. This work has important implications for observational causal inference, especially in fields where randomized experiments are difficult or costly. In domains such as earth, environmental, and agricultural sciences, it enables a plethora of quasi-experiments by leveraging available earth observation and climate data, particularly when treated units are available but control units are lacking.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "MOFClassifier: A Machine Learning Approach for Validating Computation-Ready Metal-Organic Frameworks",
+      "id": "http://arxiv.org/abs/2506.14845v2",
+      "published": "2025-06-16T15:08:58Z",
+      "authors": [
+        "Guobin Zhao",
+        "Pengyu Zhao",
+        "Yongchul G. Chung"
+      ],
+      "abstract": "The computational discovery and design of new crystalline materials, particularly metal-organic frameworks (MOFs), heavily relies on high-quality, computation-ready structural data. However, recent studies have revealed significant error rates within existing MOF databases, posing a critical data problem that hinders efficient high-throughput computational screening. While rule-based algorithms like MOSAEC, MOFChecker, and the Chen and Manz method (Chen-Manz) have been developed to address this, they often suffer from inherent limitations and misclassification of structures. To overcome this challenge, we developed MOFClassifier, a novel machine learning approach built upon a positive-unlabeled crystal graph convolutional neural network (PU-CGCNN) model. MOFClassifier learns intricate patterns from perfect crystal structures to predict a crystal-likeness score (CLscore), effectively classifying MOFs as computation-ready. Our model achieves a ROC value of 0.979 (previous best 0.912) and, importantly, can identify subtle structural and chemical errors that are undetectable by current rule-based methods. By accurately recovering previously misclassified false-negative structures, MOFClassifier reduces the risk of overlooking promising material candidates in large-scale computational screening campaigns. This user-friendly tool is freely available and has been integrated into the prepara-tion workflow for the updated CoRE MOF DB 2025 v1.0, contributing to accelerated computational discovery of MOF materials.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "InfoNCE is a Free Lunch for Semantically guided Graph Contrastive Learning",
+      "id": "http://arxiv.org/abs/2505.06282v1",
+      "published": "2025-05-07T05:27:36Z",
+      "authors": [
+        "Zixu Wang",
+        "Bingbing Xu",
+        "Yige Yuan",
+        "Huawei Shen",
+        "Xueqi Cheng"
+      ],
+      "abstract": "As an important graph pre-training method, Graph Contrastive Learning (GCL) continues to play a crucial role in the ongoing surge of research on graph foundation models or LLM as enhancer for graphs. Traditional GCL optimizes InfoNCE by using augmentations to define self-supervised tasks, treating augmented pairs as positive samples and others as negative. However, this leads to semantically similar pairs being classified as negative, causing significant sampling bias and limiting performance. In this paper, we argue that GCL is essentially a Positive-Unlabeled (PU) learning problem, where the definition of self-supervised tasks should be semantically guided, i.e., augmented samples with similar semantics are considered positive, while others, with unknown semantics, are treated as unlabeled. From this perspective, the key lies in how to extract semantic information. To achieve this, we propose IFL-GCL, using InfoNCE as a \"free lunch\" to extract semantic information. Specifically, We first prove that under InfoNCE, the representation similarity of node pairs aligns with the probability that the corresponding contrastive sample is positive. Then we redefine the maximum likelihood objective based on the corrected samples, leading to a new InfoNCE loss function. Extensive experiments on both the graph pretraining framework and LLM as an enhancer show significantly improvements of IFL-GCL in both IID and OOD scenarios, achieving up to a 9.05% improvement, validating the effectiveness of semantically guided. Code for IFL-GCL is publicly available at: https://github.com/Camel-Prince/IFL-GCL.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "Knowledge-Infused Legal Wisdom: Navigating LLM Consultation through the Lens of Diagnostics and Positive-Unlabeled Reinforcement Learning",
+      "id": "http://arxiv.org/abs/2406.03600v1",
+      "published": "2024-06-05T19:47:35Z",
+      "authors": [
+        "Yang Wu",
+        "Chenghao Wang",
+        "Ece Gumusel",
+        "Xiaozhong Liu"
+      ],
+      "abstract": "The integration of generative Large Language Models (LLMs) into various applications, including the legal domain, has been accelerated by their expansive and versatile nature. However, when facing a legal case, users without a legal background often struggle to formulate professional queries and may inadvertently overlook critical legal factors when presenting their case narrative to LLMs. To address this issue, we propose the Diagnostic Legal Large Language Model (D3LM), which utilizes adaptive lawyer-like diagnostic questions to collect additional case information and then provides high-quality feedback. D3LM incorporates an innovative graph-based Positive-Unlabeled Reinforcement Learning (PURL) algorithm, enabling the generation of critical questions and enhancing user-LLM interactions. Moreover, an integrated LLM-based stopping criterion facilitates precise Court Views Generation (CVG). Our research also introduces a new English-language CVG dataset based on the US case law database, enriching the realm of LLM research and deployment with a vital dimension. D3LM surpasses classical LLMs by delivering outstanding performance and a remarkable user experience in the legal domain.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "Unraveling the Impact of Heterophilic Structures on Graph Positive-Unlabeled Learning",
+      "id": "http://arxiv.org/abs/2405.19919v2",
+      "published": "2024-05-30T10:30:44Z",
+      "authors": [
+        "Yuhao Wu",
+        "Jiangchao Yao",
+        "Bo Han",
+        "Lina Yao",
+        "Tongliang Liu"
+      ],
+      "abstract": "While Positive-Unlabeled (PU) learning is vital in many real-world scenarios, its application to graph data still remains under-explored. We unveil that a critical challenge for PU learning on graph lies on the edge heterophily, which directly violates the irreducibility assumption for Class-Prior Estimation (class prior is essential for building PU learning algorithms) and degenerates the latent label inference on unlabeled nodes during classifier training. In response to this challenge, we introduce a new method, named Graph PU Learning with Label Propagation Loss (GPL). Specifically, GPL considers learning from PU nodes along with an intermediate heterophily reduction, which helps mitigate the negative impact of the heterophilic structure. We formulate this procedure as a bilevel optimization that reduces heterophily in the inner loop and efficiently learns a classifier in the outer loop. Extensive experiments across a variety of datasets have shown that GPL significantly outperforms baseline methods, confirming its effectiveness and superiority.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "Accurate Link Prediction for Edge-Incomplete Graphs via PU Learning",
+      "id": "http://arxiv.org/abs/2405.11911v2",
+      "published": "2024-05-20T09:47:22Z",
+      "authors": [
+        "Junghun Kim",
+        "Ka Hyun Park",
+        "Hoyoung Yoon",
+        "U Kang"
+      ],
+      "abstract": "Given an edge-incomplete graph, how can we accurately find the missing links? The link prediction in edge-incomplete graphs aims to discover the missing relations between entities when their relationships are represented as a graph. Edge-incomplete graphs are prevalent in real-world due to practical limitations, such as not checking all users when adding friends in a social network. Addressing the problem is crucial for various tasks, including recommending friends in social networks and finding references in citation networks. However, previous approaches rely heavily on the given edge-incomplete (observed) graph, making it challenging to consider the missing (unobserved) links during training. In this paper, we propose PULL (PU-Learning-based Link predictor), an accurate link prediction method based on the positive-unlabeled (PU) learning. PULL treats the observed edges in the training graph as positive examples, and the unconnected node pairs as unlabeled ones. PULL effectively prevents the link predictor from overfitting to the observed graph by proposing latent variables for every edge, and leveraging the expected graph structure with respect to the variables. Extensive experiments on five real-world datasets show that PULL consistently outperforms the baselines for predicting links in edge-incomplete graphs.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "Verifying the Selected Completely at Random Assumption in Positive-Unlabeled Learning",
+      "id": "http://arxiv.org/abs/2404.00145v1",
+      "published": "2024-03-29T20:36:58Z",
+      "authors": [
+        "Paweł Teisseyre",
+        "Konrad Furmańczyk",
+        "Jan Mielniczuk"
+      ],
+      "abstract": "The goal of positive-unlabeled (PU) learning is to train a binary classifier on the basis of training data containing positive and unlabeled instances, where unlabeled observations can belong either to the positive class or to the negative class. Modeling PU data requires certain assumptions on the labeling mechanism that describes which positive observations are assigned a label. The simplest assumption, considered in early works, is SCAR (Selected Completely at Random Assumption), according to which the propensity score function, defined as the probability of assigning a label to a positive observation, is constant. On the other hand, a much more realistic assumption is SAR (Selected at Random), which states that the propensity function solely depends on the observed feature vector. SCAR-based algorithms are much simpler and computationally much faster compared to SAR-based algorithms, which usually require challenging estimation of the propensity score. In this work, we propose a relatively simple and computationally fast test that can be used to determine whether the observed data meet the SCAR assumption. Our test is based on generating artificial labels conforming to the SCAR case, which in turn allows to mimic the distribution of the test statistic under the null hypothesis of SCAR. We justify our method theoretically. In experiments, we demonstrate that the test successfully detects various deviations from SCAR scenario and at the same time it is possible to effectively control the type I error. The proposed test can be recommended as a pre-processing step to decide which final PU algorithm to choose in cases when nature of labeling mechanism is not known.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "Lambda: Learning Matchable Prior For Entity Alignment with Unlabeled Dangling Cases",
+      "id": "http://arxiv.org/abs/2403.10978v2",
+      "published": "2024-03-16T17:21:58Z",
+      "authors": [
+        "Hang Yin",
+        "Liyao Xiang",
+        "Dong Ding",
+        "Yuheng He",
+        "Yihan Wu",
+        "Xinbing Wang",
+        "Chenghu Zhou"
+      ],
+      "abstract": "We investigate the entity alignment (EA) problem with unlabeled dangling cases, meaning that partial entities have no counterparts in the other knowledge graph (KG), and this type of entity remains unlabeled. To address this challenge, we propose the framework \\textit{Lambda} for dangling detection and then entity alignment. Lambda features a GNN-based encoder called KEESA with spectral contrastive learning for EA and a positive-unlabeled learning algorithm for dangling detection called iPULE. iPULE offers theoretical guarantees of unbiasedness, uniform deviation bounds, and convergence. Experimental results demonstrate that each component contributes to overall performances that are superior to baselines, even when baselines additionally exploit 30\\% of dangling entities labeled for training.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "Contrastive Learning with Negative Sampling Correction",
+      "id": "http://arxiv.org/abs/2401.08690v1",
+      "published": "2024-01-13T11:18:18Z",
+      "authors": [
+        "Lu Wang",
+        "Chao Du",
+        "Pu Zhao",
+        "Chuan Luo",
+        "Zhangchi Zhu",
+        "Bo Qiao",
+        "Wei Zhang",
+        "Qingwei Lin",
+        "Saravan Rajmohan",
+        "Dongmei Zhang",
+        "Qi Zhang"
+      ],
+      "abstract": "As one of the most effective self-supervised representation learning methods, contrastive learning (CL) relies on multiple negative pairs to contrast against each positive pair. In the standard practice of contrastive learning, data augmentation methods are utilized to generate both positive and negative pairs. While existing works have been focusing on improving the positive sampling, the negative sampling process is often overlooked. In fact, the generated negative samples are often polluted by positive samples, which leads to a biased loss and performance degradation. To correct the negative sampling bias, we propose a novel contrastive learning method named Positive-Unlabeled Contrastive Learning (PUCL). PUCL treats the generated negative samples as unlabeled samples and uses information from positive samples to correct bias in contrastive loss. We prove that the corrected loss used in PUCL only incurs a negligible bias compared to the unbiased contrastive loss. PUCL can be applied to general contrastive learning problems and outperforms state-of-the-art methods on various image and graph classification tasks. The code of PUCL is in the supplementary file.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "PULSAR: Graph based Positive Unlabeled Learning with Multi Stream Adaptive Convolutions for Parkinson's Disease Recognition",
+      "id": "http://arxiv.org/abs/2312.05780v2",
+      "published": "2023-12-10T05:56:20Z",
+      "authors": [
+        "Md. Zarif Ul Alam",
+        "Md Saiful Islam",
+        "Ehsan Hoque",
+        "M Saifur Rahman"
+      ],
+      "abstract": "Parkinson's disease (PD) is a neuro-degenerative disorder that affects movement, speech, and coordination. Timely diagnosis and treatment can improve the quality of life for PD patients. However, access to clinical diagnosis is limited in low and middle income countries (LMICs). Therefore, development of automated screening tools for PD can have a huge social impact, particularly in the public health sector. In this paper, we present PULSAR, a novel method to screen for PD from webcam-recorded videos of the finger-tapping task from the Movement Disorder Society - Unified Parkinson's Disease Rating Scale (MDS-UPDRS). PULSAR is trained and evaluated on data collected from 382 participants (183 self-reported as PD patients). We used an adaptive graph convolutional neural network to dynamically learn the spatio temporal graph edges specific to the finger-tapping task. We enhanced this idea with a multi stream adaptive convolution model to learn features from different modalities of data critical to detect PD, such as relative location of the finger joints, velocity and acceleration of tapping. As the labels of the videos are self-reported, there could be cases of undiagnosed PD in the non-PD labeled samples. We leveraged the idea of Positive Unlabeled (PU) Learning that does not need labeled negative data. Our experiments show clear benefit of modeling the problem in this way. PULSAR achieved 80.95% accuracy in validation set and a mean accuracy of 71.29% (2.49% standard deviation) in independent test, despite being trained with limited amount of data. This is specially promising as labeled data is scarce in health care sector. We hope PULSAR will make PD screening more accessible to everyone. The proposed techniques could be extended for assessment of other movement disorders, such as ataxia, and Huntington's disease.",
+      "sources": [
+        "arxiv_selection"
+      ]
+    },
+    {
+      "title": "Positive-unlabeled learning without instruments: identified sets for latent-class moments under selected-at-random labeling",
+      "doi": "10.2139/ssrn.6664249",
+      "year": [
+        [
+          2026
+        ]
+      ],
+      "journal": null,
+      "authors": [
+        "Shaohui Wang"
+      ],
+      "abstract": "<jats:p>We study positive-unlabeled data under selected-at-random labeling when no valid instrument is available. We first show that, in this environment, the latent labeling rule and the posterior class probability are not point identified from the observables. We then shift attention from the unidentified latent probability itself to a finite-dimensional latent-class moment target and prove that this target is sharply set identified under a simple positivity bound. Our main result characterizes the exact identified region as a convex set generated by admissible inverse-selection weights and shows that this region depends only on the observable regression. We further derive a support-function representation of the identified set, which delivers sharp bounds on latent prevalence and, for suitable choices of the moment transformation, on positive-class feature means. Finally, we provide a simulation to demonstrate the effectiveness of our method.</jats:p>",
+      "score": 40.95991,
+      "sources": [
+        "crossref_selection"
+      ]
+    },
+    {
+      "title": "Positive Unlabeled Learning Selected Not At Random (PULSNAR): class proportion estimation without the selected completely at random assumption",
+      "doi": "10.7717/peerj-cs.2451",
+      "year": [
+        [
+          2024,
+          11,
+          5
+        ]
+      ],
+      "journal": [
+        "PeerJ Computer Science"
+      ],
+      "authors": [
+        "Praveen Kumar",
+        "Christophe G. Lambert"
+      ],
+      "abstract": "<jats:p>Positive and unlabeled (PU) learning is a type of semi-supervised binary classification where the machine learning algorithm differentiates between a set of positive instances (labeled) and a set of both positive and negative instances (unlabeled). PU learning has broad applications in settings where confirmed negatives are unavailable or difficult to obtain, and there is value in discovering positives among the unlabeled (<jats:italic>e.g</jats:italic>., viable drugs among untested compounds). Most PU learning algorithms make the selected completely at random (SCAR) assumption, namely that positives are selected independently of their features. However, in many real-world applications, such as healthcare, positives are not SCAR (<jats:italic>e.g</jats:italic>., severe cases are more likely to be diagnosed), leading to a poor estimate of the proportion, α, of positives among unlabeled examples and poor model calibration, resulting in an uncertain decision threshold for selecting positives. PU learning algorithms vary; some estimate only the proportion, α, of positives in the unlabeled set, while others calculate the probability that each specific unlabeled instance is positive, and some can do both. We propose two PU learning algorithms to estimate α, calculate calibrated probabilities for PU instances, and improve classification metrics: i) PULSCAR (positive unlabeled learning selected completely at random), and ii) PULSNAR (positive unlabeled learning selected not at random). PULSNAR employs a divide-and-conquer approach to cluster SNAR positives into subtypes and estimates α for each subtype by applying PULSCAR to positives from each cluster and all unlabeled. In our experiments, PULSNAR outperformed state-of-the-art approaches on both synthetic and real-world benchmark datasets.</jats:p>",
+      "score": 34.16537,
+      "sources": [
+        "crossref_selection"
+      ]
+    },
+    {
+      "title": "XG-PUL: A Network-Based Framework for Disease Gene Prioritization Using Graph Representation Learning and Positive-Unlabeled Learning",
+      "doi": "10.21203/rs.3.rs-10423323/v1",
+      "year": [
+        [
+          2026,
+          8,
+          12
+        ]
+      ],
+      "journal": null,
+      "authors": [
+        "Mahdiyeh Ayouman",
+        "Zahra Narimani"
+      ],
+      "abstract": "<title>Abstract</title>\n                <p>Identifying disease-associated genes through experimental approaches remains costly and time-consuming. Computational approaches based on biological networks provide an effective alternative for disease gene prioritization and disease module identification. However, existing machine learning methods often require reliable negative examples, whereas in disease gene prioritization only a limited number of confirmed disease genes are available and the remaining genes cannot be confidently considered negative samples. This positive--unlabeled (PU) learning setting introduces substantial label uncertainty and remains a major challenge for computational disease gene discovery.\nIn this study, we propose XG-PUL, a machine learning framework designed for disease gene prioritization under a PU learning scenario. XG-PUL employs a two-stage strategy in which label-independent node representations are first learned from the protein--protein interaction (PPI) network using Node2Vec. These representations are then integrated with complementary graph-topological features to capture both latent network patterns and explicit connectivity characteristics of genes. Subsequently, a bagging-based PU classifier is applied to aggregate multiple classifiers trained on different bootstrap samples of unlabeled genes, improving robustness against uncertainty in the unlabeled data.\nThe proposed framework was evaluated on ten complex disease datasets and compared with representative network-based methods and graph learning approaches. XG-PUL demonstrated improved ranking performance, achieving higher AUPR and F1-score values across the evaluated diseases and ranking thresholds, while maintaining competitive AUC-ROC performance. Functional enrichment analysis and literature-based validation further confirmed the biological relevance of prioritized candidates, showing that XG-PUL can recover genes involved in disease-related pathways and molecular mechanisms beyond known disease annotations. These results demonstrate that integrating label-independent network representation learning with PU learning provides a robust framework for disease gene prioritization in incomplete biological knowledge scenarios.</p>",
+      "score": 33.148983,
+      "sources": [
+        "crossref_selection"
+      ]
+    },
+    {
+      "title": "Graph Positive-Unlabeled Learning Via Bootstrapping Label Disambiguation",
+      "doi": "10.2139/ssrn.5046216",
+      "year": [
+        [
+          2024
+        ]
+      ],
+      "journal": null,
+      "authors": [
+        "Chunquan Liang",
+        "Luyue Wang",
+        "Xinyuan Feng",
+        "Yuying Cheng",
+        "Mei Li",
+        "Shirui Pan",
+        "Hongming Zhang"
+      ],
+      "abstract": null,
+      "score": 32.324406,
+      "sources": [
+        "crossref_selection"
+      ]
+    },
+    {
+      "title": "Positive-Unlabeled Learning in Implicit Feedback from Data Missing-Not-At-Random Perspective",
+      "doi": "10.3390/e28010041",
+      "year": [
+        [
+          2025,
+          12,
+          29
+        ]
+      ],
+      "journal": [
+        "Entropy"
+      ],
+      "authors": [
+        "Sichao Wang",
+        "Tianyu Xia",
+        "Lingxiao Yang"
+      ],
+      "abstract": "<jats:p>The lack of explicit negative labels issue is a prevalent challenge in numerous domains, including CV, NLP, and Recommender Systems (RSs). To address this challenge, many negative sample completion methods are proposed, such as optimizing sample distribution through pseudo-negative sampling and confidence screening in CV, constructing reliable negative examples by leveraging textual semantics in NLP, and supplementing negative samples via sparsity analysis of user interaction behaviors and preference inference in RS for handling implicit feedback. However, most existing methods fail to adequately address the Missing-Not-At-Random (MNAR) nature of the data and the potential presence of unmeasured confounders, which compromise model robustness in practice. In this paper, we first formulate the prediction task in RS with implicit feedback as a positive-unlabeled (PU) learning problem. We then propose a two-phase debiasing framework consisting of exposure status imputation, followed by debiasing through the proposed doubly robust estimator. Moreover, our theoretical analysis shows that existing propensity-based approaches are biased in the presence of unmeasured confounders. To overcome this, we incorporate a robust deconfounding method in the debiasing phase to effectively mitigate the impact of unmeasured confounders. We conduct extensive experiments on three widely used real-world datasets to demonstrate the effectiveness and potential of the proposed methods.</jats:p>",
+      "score": 30.235561,
+      "sources": [
+        "crossref_selection"
+      ]
+    },
+    {
+      "title": "Bootstrap Latent Prototypes for graph positive-unlabeled learning",
+      "doi": "10.1016/j.inffus.2024.102553",
+      "year": [
+        [
+          2024,
+          12
+        ]
+      ],
+      "journal": [
+        "Information Fusion"
+      ],
+      "authors": [
+        "Chunquan Liang",
+        "Yi Tian",
+        "Dongmin Zhao",
+        "Mei Li",
+        "Shirui Pan",
+        "Hongming Zhang",
+        "Jicheng Wei"
+      ],
+      "abstract": null,
+      "score": 28.915298,
+      "sources": [
+        "crossref_selection"
+      ]
+    },
+    {
+      "title": "Uncertainty-aware graph representation learning with positive-unlabeled classification for biomarker discovery in peripheral artery disease",
+      "doi": "10.64898/2026.05.08.723757",
+      "year": [
+        [
+          2026,
+          5,
+          13
+        ]
+      ],
+      "journal": null,
+      "authors": [
+        "Venkat Siva Radha Krishna Ayyalasomayajula",
+        "Max L. Senders",
+        "Jelmer M. Wolterink",
+        "Kak Khee Yeung"
+      ],
+      "abstract": "<jats:p>Peripheral artery disease (PAD) is a complex vascular disorder characterized by heterogeneous molecular mechanisms and incomplete functional annotation, limiting systematic biomarker discovery. Network-based learning approaches provide a powerful framework for disease gene prioritization; however, most existing methods produce overconfident predictions without explicitly accounting for model uncertainty or structural novelty. Here, we present an uncertainty-aware framework for PAD biomarker discovery that integrates unsupervised graph representation learning, positive–unlabeled (PU) classification, ensemble prediction, and mechanistic explainability. Node embeddings were learned using multiple unsupervised graph neural network (GNN) objectives and combined with heterogeneous classifiers to generate ensemble-averaged probability estimates and epistemic uncertainty. By jointly modeling predictive confidence and embedding-space novelty, we stratified candidates into high-confidence rediscoveries and structurally novel hypotheses under explicit uncertainty control. Across eight embedding objectives and five classifiers, ensemble aggregation produced stable, well-calibrated predictions and enabled prioritization of 100 candidate PAD-associated proteins. Probability-heavy candidates clustered tightly with known PAD proteins and were enriched for established vascular and hemostatic pathways, including extracellular matrix organization, integrin signaling, coagulation, and fibrinolysis. In contrast, novelty-heavy candidates occupied distinct embedding-space regions and partitioned into multiple coherent clusters enriched for upstream regulatory and signaling processes, including G protein-coupled receptor, ephrin receptor, kinase-driven, and NF-κB-associated pathways. Five-fold cross-validated comparison with established PU learning baselines demonstrated consistent improvement across all evaluation metrics (AUC 0.916 ± 0.019 vs. 0.821 ± 0.030 for the best baseline), and external validity was confirmed by significant enrichment of top candidates for related cardiovascular disease annotations (5.7× above background). Together, these results demonstrate that integrating uncertainty, novelty, and explainability enables calibrated and biologically grounded biomarker prioritization, with broad applicability to PAD and other complex diseases.</jats:p>",
+      "score": 28.746479,
+      "sources": [
+        "crossref_selection"
+      ]
+    },
+    {
+      "title": "Two-Stage Angular Alignment for Positive-Unlabeled Learning",
+      "doi": "10.5220/0013964100004067",
+      "year": [
+        [
+          2026
+        ]
+      ],
+      "journal": [
+        "Proceedings of the 15th International Conference on Pattern Recognition Applications and Methods"
+      ],
+      "authors": [
+        "Vasileios Sevetlidis",
+        "George Pavlidis",
+        "Antonios Gasteratos"
+      ],
+      "abstract": null,
+      "score": 28.70636,
+      "sources": [
+        "crossref_selection"
+      ]
+    },
+    {
+      "title": "A Federated Learning Method for Multi-Positive and Unlabeled Data Using an Ensemble of One-Positive and Unlabeled Learning Models",
+      "doi": "10.5626/jcse.2025.19.1.16",
+      "year": [
+        [
+          2025,
+          3,
+          31
+        ]
+      ],
+      "journal": [
+        "Journal of Computing Science and Engineering"
+      ],
+      "authors": [
+        "Cheong Hee Park"
+      ],
+      "abstract": null,
+      "score": 28.023657,
+      "sources": [
+        "crossref_selection"
+      ]
+    },
+    {
+      "title": "Review for \"Quantitative Analysis of Miniature Synaptic Calcium Transients Using Positive Unlabeled Deep Learning\"",
+      "doi": "10.1039/d4dd00197d/v1/review1",
+      "year": [
+        [
+          2024,
+          8,
+          18
+        ]
+      ],
+      "journal": null,
+      "authors": [],
+      "abstract": null,
+      "score": 27.700865,
+      "sources": [
+        "crossref_selection",
+        "crossref_selection"
+      ]
+    },
+    {
+      "title": "Positive-Unlabeled Learning Using Pairwise Similarity and Parametric Minimum Cuts",
+      "doi": "10.5220/0012948100003838",
+      "year": [
+        [
+          2024
+        ]
+      ],
+      "journal": [
+        "Proceedings of the 16th International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management"
+      ],
+      "authors": [
+        "Torpong Nitayanont",
+        "Dorit Hochbaum"
+      ],
+      "abstract": null,
+      "score": 27.551044,
+      "sources": [
+        "crossref_selection"
+      ]
+    }
+  ],
+  "all_are_discovery_hits_not_verified_fulltext": true,
+  "formal_fits": 0,
+  "selected_papers": []
+}

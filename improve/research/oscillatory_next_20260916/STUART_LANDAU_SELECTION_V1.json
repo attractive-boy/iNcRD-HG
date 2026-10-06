@@ -1,0 +1,54 @@
+{
+  "created_at_utc": "2026-09-16T08:20:17.701704+00:00",
+  "family": "stuart_landau",
+  "primary_kind": "full",
+  "primary_controls": [
+    "no_phase_feedback",
+    "linear_oscillator"
+  ],
+  "core_parameters": {
+    "width": 32,
+    "depth": 16,
+    "readout_width": 64,
+    "dropout": 0.1,
+    "folds": 5,
+    "dt": 0.1,
+    "alpha": 1.0,
+    "beta": 1.0,
+    "omega": 1.0,
+    "gamma": 0.5,
+    "coupling_strength": 1.0,
+    "leaky_relu_slope": 0.2,
+    "local_dtype": "float64",
+    "coupling_dtype": "float32",
+    "radial_solver": "unique positive cubic via hyperbolic inverse in squared radius",
+    "radial_gradient": "implicit derivative including zero-radius extension",
+    "radial_residual_tolerance": 2e-12,
+    "local_order": "local update plus explicit coupling of old state",
+    "coupling": "symmetric-degree-normalized complex linear GCN with typed positive channel gates",
+    "coupling_imaginary_weight_initialization": "zero; real weight Xavier-uniform",
+    "graph_self_loops": "preserve the common physical graph convention",
+    "node_readout": "real component, following source SLGCN",
+    "lnc_policy": "identity_strong_reference"
+  },
+  "lrs": [
+    0.001,
+    0.003
+  ],
+  "epochs": 400,
+  "check_interval": 20,
+  "screen_seed": 666,
+  "confirm_seeds": [
+    0,
+    1
+  ],
+  "strong_weight": 0.1,
+  "weight_decay": 0.001,
+  "lnc_policy": "identity_strong_reference",
+  "new_performance_observed": false,
+  "one_broader_oscillatory_family_only": true,
+  "adaptation_sha256": "3584c7f55b5130f51c449c5004f65b5dbc9afa2377671a49fad1d3ff5b71b494",
+  "unit_sha256": "383db2536e1111a03550af141f061ac0c6395099cf4a90f70c17b6d860e3e8b2",
+  "smoke_sha256": "1fc20712fcfee4b71058faedaff4045b81455ff38725a5bd46ef47211f9526e9",
+  "sha256": "6ed8d01719dced14b0ac13b9c56ec329a1264c2b0f32d843d55d2f7fc0e28fb9"
+}

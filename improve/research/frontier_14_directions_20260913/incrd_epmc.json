@@ -1,0 +1,371 @@
+{
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fbioinformatics%2Fbtag029%22&format=json&resultType=core&pageSize=5",
+  "as_of": "2026-09-13",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1093/bioinformatics/btag029\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 5,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "41533702",
+          "source": "MED",
+          "pmid": "41533702",
+          "pmcid": "PMC12866671",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC12866671"
+            ]
+          },
+          "doi": "10.1093/bioinformatics/btag029",
+          "title": "Semantic-enhanced heterogeneous graph learning for identifying ncRNAs associated with drug resistance.",
+          "authorString": "Wei H, Xie Y, Zhang W, Li L, Wu S, Gao L.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Wei H",
+                "firstName": "Hang",
+                "lastName": "Wei",
+                "initials": "H",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0579-1716"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Xie Y",
+                "firstName": "Yuran",
+                "lastName": "Xie",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang W",
+                "firstName": "Wenxiang",
+                "lastName": "Zhang",
+                "initials": "W",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8926-1615"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Biomedical Engineering, Shenzhen University Medical School, Shenzhen 518060, China."
+                    },
+                    {
+                      "affiliation": "Central Laboratory, Shenzhen University General Hospital, Shenzhen University, Shenzhen 518060, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li L",
+                "firstName": "Linyang",
+                "lastName": "Li",
+                "initials": "L",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wu S",
+                "firstName": "Shuai",
+                "lastName": "Wu",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Gao L",
+                "firstName": "Lin",
+                "lastName": "Gao",
+                "initials": "L",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6396-0787"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6396-0787"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0579-1716"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8926-1615"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "2",
+            "volume": "42",
+            "journalIssueId": 4112026,
+            "dateOfPublication": "2026 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-01-01",
+            "journal": {
+              "title": "Bioinformatics (Oxford, England)",
+              "medlineAbbreviation": "Bioinformatics",
+              "issn": "1367-4803",
+              "essn": "1367-4811",
+              "isoabbreviation": "Bioinformatics",
+              "nlmid": "9808944"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "btag029",
+          "abstractText": "<h4>Motivation</h4>Identifying non-coding RNAs (ncRNAs) associated with drug resistance is critical for elucidating molecular mechanisms underlying drug response, facilitating drug screening, and discovering novel therapeutic targets. While several graph neural network-based methods have been proposed to infer ncRNA-drug resistance associations, they remain fundamentally constrained by semantic distortion induced by a sparse bipartite network and neglect of relational semantics among molecular entities, ultimately compromising both predictive reliability and biological interpretability.<h4>Results</h4>In this study, we propose iNcRD-HG, a novel framework for identifying ncRNA-drug resistance associations. The framework addresses three critical aspects: constructing a context-enriched heterogeneous network that integrates six distinct molecular interaction types with bio-entity-specific attributes, developing a semantic-enhanced graph learning architecture that implements relation-type-aware message passing to capture complex contextual dependencies, and introducing an interpretability mechanism to reveal potential synergistic pathways underlying drug response. Experimental results demonstrate that iNcRD-HG achieves superior predictive performance across diverse benchmark datasets while deriving association features with strong discriminative capability. By identifying molecular synergistic contexts, iNcRD-HG provides mechanistically interpretable insights into ncRNA-mediated drug resistance.<h4>Availability and implementation</h4>Datasets and source codes are available at https://github.com/Biohang/iNcRD-HG.",
+          "affiliation": "School of Computer Science and Technology, Xidian University, Xi'an, Shaanxi 710126, China.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "62302378",
+                "agency": "National Natural Science Foundation of China",
+                "orderIn": 0
+              },
+              {
+                "grantId": "62573335",
+                "agency": "National Natural Science Foundation of China",
+                "orderIn": 0
+              },
+              {
+                "grantId": "QCYRCXM2023-115",
+                "agency": "Entrepreneurship Talent Project of Qin Chuang Yuan",
+                "orderIn": 0
+              },
+              {
+                "grantId": "ZYTS25083",
+                "agency": "Fundamental Research Funds for the Central Universities",
+                "orderIn": 0
+              },
+              {
+                "grantId": "62302359",
+                "agency": "National Natural Science Foundation of China",
+                "orderIn": 0
+              },
+              {
+                "grantId": "62572374",
+                "agency": "National Natural Science Foundation of China",
+                "orderIn": 0
+              },
+              {
+                "grantId": "ZYTS25080",
+                "agency": "Fundamental Research Funds for the Central Universities",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "RNA, Untranslated",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computational Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Drug Resistance",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Drug Resistance, Neoplasm",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Semantics"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Graph Neural Networks"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "RNA, Untranslated",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/bioinformatics/btag029"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12866671"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12866671?pdf=render"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "42637252",
+                "source": "MED",
+                "reference": "Bioinformatics. 2026 Aug 3;42(8):btag497. doi: 10.1093/bioinformatics/btag497.",
+                "type": "Erratum in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "citedByCount": 0,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "gen"
+            ]
+          },
+          "dateOfCompletion": "2026-06-26",
+          "dateOfCreation": "2026-01-14",
+          "firstIndexDate": "2026-01-15",
+          "fullTextReceivedDate": "2026-02-14",
+          "dateOfRevision": "2026-09-09",
+          "firstPublicationDate": "2026-01-01"
+        }
+      ]
+    }
+  }
+}

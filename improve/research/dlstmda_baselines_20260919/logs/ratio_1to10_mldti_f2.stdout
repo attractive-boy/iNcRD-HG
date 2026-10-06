@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "run_bench.py", line 201, in <module>
+    main()
+  File "run_bench.py", line 174, in main
+    best, last = run_fold_mldti(fold, args.seed, device, epochs, lr, batch, log)
+  File "run_bench.py", line 135, in run_fold_mldti
+    return train_tensor(model, prep(tr_pairs, tr_y), prep(te_pairs, te_y),
+  File "run_bench.py", line 95, in train_tensor
+    p = torch.sigmoid(model(prot_te.to(device), drug_te.to(device)).view(-1)).cpu().numpy()
+  File "/data1/licheng/miniconda3/envs/ncRNAdrug/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/dlstmda_baselines_20260919/models.py", line 235, in forward
+    drug_x = self.drug_conv1(drug_x)
+  File "/data1/licheng/miniconda3/envs/ncRNAdrug/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/dlstmda_baselines_20260919/models.py", line 156, in forward
+    return self.inc(x)
+  File "/data1/licheng/miniconda3/envs/ncRNAdrug/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data1/licheng/miniconda3/envs/ncRNAdrug/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/data1/licheng/miniconda3/envs/ncRNAdrug/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data1/licheng/miniconda3/envs/ncRNAdrug/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/data1/licheng/miniconda3/envs/ncRNAdrug/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: Unable to find a valid cuDNN algorithm to run convolution

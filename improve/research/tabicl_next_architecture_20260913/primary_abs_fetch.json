@@ -1,0 +1,110 @@
+[
+  {
+    "name": "kernel_icl",
+    "url": "https://arxiv.org/abs/2602.02162",
+    "ok": true,
+    "status": 200,
+    "final_url": "https://arxiv.org/abs/2602.02162",
+    "sha256": "039612fc4a585c623eed846d7eac8cb768744d9c53b5607b9d52c5418f6b662d",
+    "metadata": {
+      "citation_title": "Interpretable Tabular Foundation Models via In-Context Kernel Regression",
+      "citation_author": "Valentin, Simon",
+      "citation_date": "2026/02/02",
+      "citation_online_date": "2026/02/02",
+      "citation_pdf_url": "https://arxiv.org/pdf/2602.02162",
+      "citation_arxiv_id": "2602.02162",
+      "citation_abstract": "Tabular foundation models like TabPFN and TabICL achieve state-of-the-art performance through in-context learning, yet their architectures remain fundamentally opaque. We introduce KernelICL, a framework to enhance tabular foundation models with quantifiable sample-based interpretability. Building on the insight that in-context learning is akin to kernel regression, we make this mechanism explicit by replacing the final prediction layer with kernel functions (Gaussian, dot-product, kNN) so that every prediction is a transparent weighted average of training labels. We introduce a two-dimensional taxonomy that formally unifies standard kernel methods, modern neighbor-based approaches, and attention mechanisms under a single framework, and quantify inspectability via the perplexity of the weight distribution over training samples. On 55 TALENT benchmark datasets, KernelICL achieves performance on par with existing tabular foundation models, demonstrating that explicit kernel constraints on the final layer enable inspectable predictions without sacrificing performance."
+    },
+    "abstract": "Abstract: Tabular foundation models like TabPFN and TabICL achieve state-of-the-art performance through in-context learning, yet their architectures remain fundamentally opaque. We introduce KernelICL, a framework to enhance tabular foundation models with quantifiable sample-based interpretability. Building on the insight that in-context learning is akin to kernel regression, we make this mechanism explicit by replacing the final prediction layer with kernel functions (Gaussian, dot-product, kNN) so that every prediction is a transparent weighted average of training labels. We introduce a two-dimensional taxonomy that formally unifies standard kernel methods, modern neighbor-based approaches, and attention mechanisms under a single framework, and quantify inspectability via the perplexity of the weight distribution over training samples. On 55 TALENT benchmark datasets, KernelICL achieves performance on par with existing tabular foundation models, demonstrating that explicit kernel constraints on the final layer enable inspectable predictions without sacrificing performance."
+  },
+  {
+    "name": "icl_pu",
+    "url": "https://arxiv.org/abs/2605.05591",
+    "ok": true,
+    "status": 200,
+    "final_url": "https://arxiv.org/abs/2605.05591",
+    "sha256": "0294f91fd8ae8463f9a3f511317da20ee2fa73727d3029db6cf48a92287ecc59",
+    "metadata": {
+      "citation_title": "In-Context Positive-Unlabeled Learning",
+      "citation_author": "Li, Pengfei",
+      "citation_date": "2026/05/07",
+      "citation_online_date": "2026/05/07",
+      "citation_pdf_url": "https://arxiv.org/pdf/2605.05591",
+      "citation_arxiv_id": "2605.05591",
+      "citation_abstract": "Positive-unlabeled (PU) learning addresses binary classification when only a set of labeled positives is available alongside a pool of unlabeled samples drawn from a mixture of positives and negatives. Existing PU methods typically require dataset-specific training or iterative optimization, which limits their applicability when many tasks must be solved quickly or with little tuning. We introduce PUICL, a pretrained transformer that solves PU classification entirely through in-context learning. PUICL is pretrained on synthetic PU datasets generated from randomly instantiated structural causal models, exposing it to a wide range of feature-label relationships and class-prior configurations. At inference time, PUICL receives the labeled positives and the unlabeled samples as a single input and returns class probabilities for the unlabeled rows in one forward pass, with no gradient updates or per-task fitting. On 20 semi-synthetic PU benchmarks derived from the UCI Machine Learning Repository, OpenML, and scikit-learn, PUICL outperforms four standard PU learning baselines in average AUC and accuracy, and is competitive on F1-score. These results show that the in-context learning paradigm extends naturally beyond fully supervised tabular prediction to the semi-supervised PU setting."
+    },
+    "abstract": "Abstract: Positive-unlabeled (PU) learning addresses binary classification when only a set of labeled positives is available alongside a pool of unlabeled samples drawn from a mixture of positives and negatives. Existing PU methods typically require dataset-specific training or iterative optimization, which limits their applicability when many tasks must be solved quickly or with little tuning. We introduce PUICL, a pretrained transformer that solves PU classification entirely through in-context learning. PUICL is pretrained on synthetic PU datasets generated from randomly instantiated structural causal models, exposing it to a wide range of feature-label relationships and class-prior configurations. At inference time, PUICL receives the labeled positives and the unlabeled samples as a single input and returns class probabilities for the unlabeled rows in one forward pass, with no gradient updates or per-task fitting. On 20 semi-synthetic PU benchmarks derived from the UCI Machine Learning Repository, OpenML, and scikit-learn, PUICL outperforms four standard PU learning baselines in average AUC and accuracy, and is competitive on F1-score. These results show that the in-context learning paradigm extends naturally beyond fully supervised tabular prediction to the semi-supervised PU setting."
+  },
+  {
+    "name": "tunetables",
+    "url": "https://arxiv.org/abs/2406.03441",
+    "ok": true,
+    "status": 200,
+    "final_url": "https://arxiv.org/abs/2406.03441",
+    "sha256": "c21dbe316fe89eef2197aaa4f34b0a95950e486ea3c02adc773f17968297a0d0",
+    "metadata": {
+      "citation_title": "Cycles of Thought: Measuring LLM Confidence through Stable Explanations",
+      "citation_author": "Soatto, Stefano",
+      "citation_date": "2024/06/05",
+      "citation_online_date": "2024/06/05",
+      "citation_pdf_url": "https://arxiv.org/pdf/2406.03441",
+      "citation_arxiv_id": "2406.03441",
+      "citation_abstract": "In many high-risk machine learning applications it is essential for a model to indicate when it is uncertain about a prediction. While large language models (LLMs) can reach and even surpass human-level accuracy on a variety of benchmarks, their overconfidence in incorrect responses is still a well-documented failure mode. Traditional methods for ML uncertainty quantification can be difficult to directly adapt to LLMs due to the computational cost of implementation and closed-source nature of many models. A variety of black-box methods have recently been proposed, but these often rely on heuristics such as self-verbalized confidence. We instead propose a framework for measuring an LLM&#39;s uncertainty with respect to the distribution of generated explanations for an answer. While utilizing explanations is not a new idea in and of itself, by interpreting each possible model+explanation pair as a test-time classifier we can calculate a posterior answer distribution over the most likely of these classifiers. We demonstrate how a specific instance of this framework using explanation entailment as our classifier likelihood improves confidence score metrics (in particular AURC and AUROC) over baselines across five different datasets. We believe these results indicate that our framework is both a well-principled and effective way of quantifying uncertainty in LLMs."
+    },
+    "abstract": "Abstract: In many high-risk machine learning applications it is essential for a model to indicate when it is uncertain about a prediction. While large language models (LLMs) can reach and even surpass human-level accuracy on a variety of benchmarks, their overconfidence in incorrect responses is still a well-documented failure mode. Traditional methods for ML uncertainty quantification can be difficult to directly adapt to LLMs due to the computational cost of implementation and closed-source nature of many models. A variety of black-box methods have recently been proposed, but these often rely on heuristics such as self-verbalized confidence. We instead propose a framework for measuring an LLM&#39;s uncertainty with respect to the distribution of generated explanations for an answer. While utilizing explanations is not a new idea in and of itself, by interpreting each possible model+explanation pair as a test-time classifier we can calculate a posterior answer distribution over the most likely of these classifiers. We demonstrate how a specific instance of this framework using explanation entailment as our classifier likelihood improves confidence score metrics (in particular AURC and AUROC) over baselines across five different datasets. We believe these results indicate that our framework is both a well-principled and effective way of quantifying uncertainty in LLMs."
+  },
+  {
+    "name": "unleashed",
+    "url": "https://arxiv.org/abs/2502.02527",
+    "ok": true,
+    "status": 200,
+    "final_url": "https://arxiv.org/abs/2502.02527",
+    "sha256": "0a511b80c5d12dd87782b0b5dd242bb74caa2f6d0ffc5e7bced96715031d71a8",
+    "metadata": {
+      "citation_title": "TabPFN Unleashed: A Scalable and Effective Solution to Tabular Classification Problems",
+      "citation_author": "Ye, Han-Jia",
+      "citation_date": "2025/02/04",
+      "citation_online_date": "2025/02/04",
+      "citation_pdf_url": "https://arxiv.org/pdf/2502.02527",
+      "citation_arxiv_id": "2502.02527",
+      "citation_abstract": "TabPFN has emerged as a promising in-context learning model for tabular data, capable of directly predicting the labels of test samples given labeled training examples. It has demonstrated competitive performance, particularly on small-scale classification tasks. However, despite its effectiveness, TabPFN still requires further refinement in several areas, including handling high-dimensional features, aligning with downstream datasets, and scaling to larger datasets. In this paper, we revisit existing variants of TabPFN and observe that most approaches focus either on reducing bias or variance, often neglecting the need to address the other side, while also increasing inference overhead. To fill this gap, we propose Beta (Bagging and Encoder-based Fine-tuning for TabPFN Adaptation), a novel and effective method designed to minimize both bias and variance. To reduce bias, we introduce a lightweight encoder to better align downstream tasks with the pre-trained TabPFN. By increasing the number of encoders in a lightweight manner, Beta mitigate variance, thereby further improving the model&#39;s performance. Additionally, bootstrapped sampling is employed to further reduce the impact of data perturbations on the model, all while maintaining computational efficiency during inference. Our approach enhances TabPFN&#39;s ability to handle high-dimensional data and scale to larger datasets. Experimental results on over 200 benchmark classification datasets demonstrate that Beta either outperforms or matches state-of-the-art methods."
+    },
+    "abstract": "Abstract: TabPFN has emerged as a promising in-context learning model for tabular data, capable of directly predicting the labels of test samples given labeled training examples. It has demonstrated competitive performance, particularly on small-scale classification tasks. However, despite its effectiveness, TabPFN still requires further refinement in several areas, including handling high-dimensional features, aligning with downstream datasets, and scaling to larger datasets. In this paper, we revisit existing variants of TabPFN and observe that most approaches focus either on reducing bias or variance, often neglecting the need to address the other side, while also increasing inference overhead. To fill this gap, we propose Beta (Bagging and Encoder-based Fine-tuning for TabPFN Adaptation), a novel and effective method designed to minimize both bias and variance. To reduce bias, we introduce a lightweight encoder to better align downstream tasks with the pre-trained TabPFN. By increasing the number of encoders in a lightweight manner, Beta mitigate variance, thereby further improving the model&#39;s performance. Additionally, bootstrapped sampling is employed to further reduce the impact of data perturbations on the model, all while maintaining computational efficiency during inference. Our approach enhances TabPFN&#39;s ability to handle high-dimensional data and scale to larger datasets. Experimental results on over 200 benchmark classification datasets demonstrate that Beta either outperforms or matches state-of-the-art methods."
+  },
+  {
+    "name": "interface_survival",
+    "url": "https://arxiv.org/abs/2609.04901",
+    "ok": true,
+    "status": 200,
+    "final_url": "https://arxiv.org/abs/2609.04901",
+    "sha256": "bd761b1997087020d206cf899a7b0d386874b93d7a71a14ae942389ef957018f",
+    "metadata": {
+      "citation_title": "Adaptation Interfaces for In-Context Tabular Foundation Models in Time-to-Event Prediction",
+      "citation_author": "Bezbradica, Marija",
+      "citation_date": "2026/09/04",
+      "citation_online_date": "2026/09/04",
+      "citation_pdf_url": "https://arxiv.org/pdf/2609.04901",
+      "citation_arxiv_id": "2609.04901",
+      "citation_abstract": "Tabular foundation models (TabFMs) achieve strong performance on structured data, particularly for standard classification and regression problems. Yet, extending them to censored time-to-event prediction is challenging because it requires properly handling censoring and event-time dynamics. Building on our prior work, we further link TabFMs with CoxPH and DeepHit and revise the context-resampled training procedure. We evaluate temporal zero-shot reformulation, classification-based fine-tuning, and survival-head adaptation using frozen TabFM backbones on 74 single-risk data sets, and we additionally study 4 competing-risk data sets. Zero-shot inference is effective on smaller single-risk data sets, whereas supervised adaptation becomes increasingly advantageous as data sets scale. Cox provides the most reliably strong interface, especially for Integrated Brier Score (IBS) on larger data sets. DeepHit is relatively stronger for the time-dependent Concordance Index than for IBS, while cause-specific MTLR ranks highest among the TabFM survival heads in the four-data-set competing-risk analysis. Classification fine-tuning becomes more competitive with zero-shot inference as data sets grow but remains weaker for probabilistic prediction. Overall, our results indicate that effective TabFM transfer depends on the data regime and on the statistical structure represented by the chosen adaptation interface. The implementation scripts used for this work are available at https://github.com/kaylode/survival-fm."
+    },
+    "abstract": "Abstract: Tabular foundation models (TabFMs) achieve strong performance on structured data, particularly for standard classification and regression problems. Yet, extending them to censored time-to-event prediction is challenging because it requires properly handling censoring and event-time dynamics. Building on our prior work, we further link TabFMs with CoxPH and DeepHit and revise the context-resampled training procedure. We evaluate temporal zero-shot reformulation, classification-based fine-tuning, and survival-head adaptation using frozen TabFM backbones on 74 single-risk data sets, and we additionally study 4 competing-risk data sets. Zero-shot inference is effective on smaller single-risk data sets, whereas supervised adaptation becomes increasingly advantageous as data sets scale. Cox provides the most reliably strong interface, especially for Integrated Brier Score (IBS) on larger data sets. DeepHit is relatively stronger for the time-dependent Concordance Index than for IBS, while cause-specific MTLR ranks highest among the TabFM survival heads in the four-data-set competing-risk analysis. Classification fine-tuning becomes more competitive with zero-shot inference as data sets grow but remains weaker for probabilistic prediction. Overall, our results indicate that effective TabFM transfer depends on the data regime and on the statistical structure represented by the chosen adaptation interface. The implementation scripts used for this work are available at  this https URL ."
+  },
+  {
+    "name": "orion",
+    "url": "https://arxiv.org/abs/2511.02818",
+    "ok": true,
+    "status": 200,
+    "final_url": "https://arxiv.org/abs/2511.02818",
+    "sha256": "69e317c31dac9b8c9377ae9d0999352bd72ba892f8e923bc1e95beb64be237de",
+    "metadata": {
+      "citation_title": "Orion-MSP: Multi-Scale Sparse Attention for Tabular In-Context Learning",
+      "citation_author": "Sankarapu, Vinay Kumar",
+      "citation_date": "2025/11/04",
+      "citation_online_date": "2025/11/07",
+      "citation_pdf_url": "https://arxiv.org/pdf/2511.02818",
+      "citation_arxiv_id": "2511.02818",
+      "citation_abstract": "Tabular data remain the predominant format for real-world applications. Yet, developing effective neural models for tabular data remains challenging due to heterogeneous feature types and complex interactions occurring at multiple scales. Recent advances in tabular in-context learning (ICL), such as TabPFN and TabICL, have achieved state-of-the-art performance comparable to gradient-boosted trees (GBTs) without task-specific fine-tuning. However, current architectures exhibit key limitations: (1) single-scale feature processing that overlooks hierarchical dependencies, (2) dense attention with quadratic scaling in table width, and (3) strictly sequential component processing that prevents iterative representation refinement and cross-component communication. To address these challenges, we introduce Orion-MSP, a tabular ICL architecture featuring three key innovations: (1) multi-scale processing to capture hierarchical feature interactions; (2) block-sparse attention combining windowed, global, and random patterns for scalable efficiency and long-range connectivity; and (3) a Perceiver-style memory enabling safe bidirectional information flow across components. Across diverse benchmarks, Orion-MSP matches or surpasses state-of-the-art performance while scaling effectively to high-dimensional tables, establishing a new standard for efficient tabular in-context learning. The model is publicly available at https://github.com/Lexsi-Labs/Orion-MSP ."
+    },
+    "abstract": "Abstract: Tabular data remain the predominant format for real-world applications. Yet, developing effective neural models for tabular data remains challenging due to heterogeneous feature types and complex interactions occurring at multiple scales. Recent advances in tabular in-context learning (ICL), such as TabPFN and TabICL, have achieved state-of-the-art performance comparable to gradient-boosted trees (GBTs) without task-specific fine-tuning. However, current architectures exhibit key limitations: (1) single-scale feature processing that overlooks hierarchical dependencies, (2) dense attention with quadratic scaling in table width, and (3) strictly sequential component processing that prevents iterative representation refinement and cross-component communication. To address these challenges, we introduce Orion-MSP, a tabular ICL architecture featuring three key innovations: (1) multi-scale processing to capture hierarchical feature interactions; (2) block-sparse attention combining windowed, global, and random patterns for scalable efficiency and long-range connectivity; and (3) a Perceiver-style memory enabling safe bidirectional information flow across components. Across diverse benchmarks, Orion-MSP matches or surpasses state-of-the-art performance while scaling effectively to high-dimensional tables, establishing a new standard for efficient tabular in-context learning. The model is publicly available at  this https URL  ."
+  }
+]

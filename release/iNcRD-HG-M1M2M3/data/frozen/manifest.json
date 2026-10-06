@@ -1,0 +1,264 @@
+{
+  "description": "Frozen inputs used by the reported iNcRD-HG + M1 + M2 + M3 runs (2026-10-04).",
+  "original_encoder": {
+    "repository": "https://github.com/attractive-boy/iNcRD-HG",
+    "commit": "eb8de624a731a4c076143bf2f9c91e539affee43",
+    "files": {
+      "predict_association.py": "8e13a7193945e2226fc17747ae2b17e80e7dee20d55dd1ea66a1b9c201aabfa5",
+      "heter_data_prepare.py": "b5171608653ca44d3b25c125365363f70fc0b8081384d279f2fe7ade698040e1",
+      "README.md": "6e659a73b68d4cb2d5279aea0582340fa365827fa801d7386a9567a3d4322639",
+      "drug_language_feature.py": "cb5a50a457bca166aaafa63a804cac7d8de2c5df9dcb1088879755827f9544ef"
+    }
+  },
+  "graphs": "released features and auxiliary relations; target relation installed at run time from the shared training positives",
+  "datasets": {
+    "MiDrug": {
+      "graph_file": "MiDrug_graph.pt",
+      "graph_sha256": "261af46231e3a44a7e2e7b60d64f582c99d1f697a86d777877d2de94e71ff84c",
+      "nodes": {
+        "lncRNA": [
+          1322,
+          938
+        ],
+        "miRNA": [
+          605,
+          938
+        ],
+        "drug": [
+          216,
+          768
+        ]
+      },
+      "relations": {
+        "lncRNA|LncLnc|lncRNA": 8772,
+        "lncRNA|LncDrug|drug": 2109,
+        "miRNA|MiMi|miRNA": 16232,
+        "drug|DrugDrug|drug": 852,
+        "lncRNA|LncMi|miRNA": 1841,
+        "drug|rev_LncDrug|lncRNA": 2109,
+        "miRNA|rev_LncMi|lncRNA": 1841
+      },
+      "adaptation": "Original expression/ChemBERTa features and lncRNA-miRNA-drug auxiliary relations; exclude later circRNA extension; shared unique target pairs.",
+      "folds": {
+        "0": {
+          "file": "MiDrug_fold0.npz",
+          "sha256": "1b5aad5cf7715939df77c78b6a6e233f0b031834de9d9b623be5a5ed0723eca1",
+          "train": [
+            9712,
+            3236
+          ],
+          "val": [
+            3234,
+            1078
+          ],
+          "test": [
+            3234,
+            1078
+          ]
+        }
+      }
+    },
+    "MDR": {
+      "graph_file": "MDR_graph.pt",
+      "graph_sha256": "93674e8a10b5dde6108a6fe3f6613d1252c0fe442d9fad42e58b5620a8543c1e",
+      "nodes": {
+        "miRNA": [
+          1317,
+          80
+        ],
+        "drug": [
+          105,
+          768
+        ]
+      },
+      "relations": {
+        "miRNA|MiMi|miRNA": 19943,
+        "drug|DrugDrug|drug": 1635
+      },
+      "adaptation": "No released expression/lncRNA auxiliary network: 80-d 2+3-mer miRNA, original ChemBERTa-zinc-base-v1 768-d drug cache, symmetric cosine kNN(10), one self-loop per node.",
+      "folds": {
+        "0": {
+          "file": "MDR_fold0.npz",
+          "sha256": "d77d3bc19dabb42b252066e5ac772a78cbfbbb240f92b1f3fd7d5573b888c527",
+          "train": [
+            7791,
+            3900
+          ],
+          "val": [
+            866,
+            433
+          ],
+          "test": [
+            2165,
+            1078
+          ]
+        },
+        "1": {
+          "file": "MDR_fold1.npz",
+          "sha256": "c6a934380b397b75b3ce878b24845237c37967e0b2804e0b807efe9932a6aaaa",
+          "train": [
+            7791,
+            3894
+          ],
+          "val": [
+            866,
+            433
+          ],
+          "test": [
+            2165,
+            1084
+          ]
+        },
+        "2": {
+          "file": "MDR_fold2.npz",
+          "sha256": "8aadbbcc067a4ac3e8b3a63ed7c33955bacb4a6429e19abe07a108766b3f4cec",
+          "train": [
+            7792,
+            3920
+          ],
+          "val": [
+            866,
+            436
+          ],
+          "test": [
+            2164,
+            1055
+          ]
+        },
+        "3": {
+          "file": "MDR_fold3.npz",
+          "sha256": "9f66d80f6c24b83dd2b2bfb4899d80de36be8da66750452b3223d723379218bd",
+          "train": [
+            7792,
+            3873
+          ],
+          "val": [
+            866,
+            430
+          ],
+          "test": [
+            2164,
+            1108
+          ]
+        },
+        "4": {
+          "file": "MDR_fold4.npz",
+          "sha256": "6ebabd7d0c26b26768af5a17c2cc9c79313e29cde91379036ae2a22f2952cf48",
+          "train": [
+            7792,
+            3892
+          ],
+          "val": [
+            866,
+            433
+          ],
+          "test": [
+            2164,
+            1086
+          ]
+        }
+      }
+    },
+    "MDS": {
+      "graph_file": "MDS_graph.pt",
+      "graph_sha256": "cbdbcdfa9d00366bc41eb123f0b058e5974af0f187d421ef4368c6b1140b30a6",
+      "nodes": {
+        "miRNA": [
+          1252,
+          80
+        ],
+        "drug": [
+          140,
+          768
+        ]
+      },
+      "relations": {
+        "miRNA|MiMi|miRNA": 18602,
+        "drug|DrugDrug|drug": 2178
+      },
+      "adaptation": "No released expression/lncRNA auxiliary network: 80-d 2+3-mer miRNA, original ChemBERTa-zinc-base-v1 768-d drug cache, symmetric cosine kNN(10), one self-loop per node.",
+      "folds": {
+        "0": {
+          "file": "MDS_fold0.npz",
+          "sha256": "e5ebc95290715379b24fdbfbaf87e360baa653f651ca97da9cec23b59daa0ad9",
+          "train": [
+            7277,
+            3643
+          ],
+          "val": [
+            809,
+            405
+          ],
+          "test": [
+            2022,
+            1006
+          ]
+        },
+        "1": {
+          "file": "MDS_fold1.npz",
+          "sha256": "936c44d0b4cf53a5b8b81030e7b8de8d5270ccc969930379756b494b23294db3",
+          "train": [
+            7277,
+            3621
+          ],
+          "val": [
+            809,
+            402
+          ],
+          "test": [
+            2022,
+            1031
+          ]
+        },
+        "2": {
+          "file": "MDS_fold2.npz",
+          "sha256": "37fd73490a07d3c60ce6edc1c81b4a53af9aa6107cc0cba3a31b89ed8b5a42fa",
+          "train": [
+            7277,
+            3648
+          ],
+          "val": [
+            809,
+            406
+          ],
+          "test": [
+            2022,
+            1000
+          ]
+        },
+        "3": {
+          "file": "MDS_fold3.npz",
+          "sha256": "d32e6e851e653e373960025397e207cef8364a9dc1b6c7af52ffb59777c9d16e",
+          "train": [
+            7278,
+            3640
+          ],
+          "val": [
+            809,
+            405
+          ],
+          "test": [
+            2021,
+            1009
+          ]
+        },
+        "4": {
+          "file": "MDS_fold4.npz",
+          "sha256": "6117719af0f30f0319d4f22729463379d147b54d0f86c413349ad81632a90434",
+          "train": [
+            7278,
+            3641
+          ],
+          "val": [
+            809,
+            405
+          ],
+          "test": [
+            2021,
+            1008
+          ]
+        }
+      }
+    }
+  }
+}

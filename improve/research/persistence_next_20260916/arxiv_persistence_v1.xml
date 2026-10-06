@@ -1,0 +1,471 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/W/btaja1rJah34rWucnZI139PrQ</id>
+  <title>arXiv Query: search_query=(all:"persistent homology" OR all:"learnable filtration") AND (all:"graph neural" OR all:"link prediction") AND submittedDate:"202401010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-09-16T04:29:41Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22persistent+homology%22+OR+all:%22learnable+filtration%22)+AND+((all:%22graph+neural%22+OR+all:%22link+prediction%22)+AND+submittedDate:%22202401010000+TO+202609162359%22)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>28</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2404.15225v2</id>
+    <title>PHLP: Sole Persistent Homology for Link Prediction - Interpretable Feature Extraction</title>
+    <updated>2025-02-17T07:09:37Z</updated>
+    <link href="https://arxiv.org/abs/2404.15225v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.15225v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction (LP), inferring the connectivity between nodes, is a significant research area in graph data, where a link represents essential information on relationships between nodes. Although graph neural network (GNN)-based models have achieved high performance in LP, understanding why they perform well is challenging because most comprise complex neural networks. We employ persistent homology (PH), a topological data analysis method that helps analyze the topological information of graphs, to interpret the features used for prediction. We propose a novel method that employs PH for LP (PHLP) focusing on how the presence or absence of target links influences the overall topology. The PHLP utilizes the angle hop subgraph and new node labeling called degree double radius node labeling (Degree DRNL), distinguishing the information of graphs better than DRNL. Using only a classifier, PHLP performs similarly to state-of-the-art (SOTA) models on most benchmark datasets. Incorporating the outputs calculated using PHLP into the existing GNN-based SOTA models improves performance across all benchmark datasets. To the best of our knowledge, PHLP is the first method of applying PH to LP without GNNs. The proposed approach, employing PH while not relying on neural networks, enables the identification of crucial factors for improving performance.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-23T16:54:56Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Neurocomputing 665 (2026) 132147</arxiv:journal_ref>
+    <author>
+      <name>Junwon You</name>
+    </author>
+    <author>
+      <name>Eunwoo Heo</name>
+    </author>
+    <author>
+      <name>Jae-Hun Jung</name>
+    </author>
+    <arxiv:doi>10.1016/j.neucom.2025.132147</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.neucom.2025.132147" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.08217v2</id>
+    <title>CliquePH: Higher-Order Information for Graph Neural Networks through Persistent Homology on Clique Graphs</title>
+    <updated>2024-11-26T18:01:01Z</updated>
+    <link href="https://arxiv.org/abs/2409.08217v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.08217v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks have become the default choice by practitioners for graph learning tasks such as graph classification and node classification. Nevertheless, popular graph neural network models still struggle to capture higher-order information, i.e., information that goes \emph{beyond} pairwise interactions. Recent work has shown that persistent homology, a tool from topological data analysis, can enrich graph neural networks with topological information that they otherwise could not capture. Calculating such features is efficient for dimension 0 (connected components) and dimension 1 (cycles). However, when it comes to higher-order structures, it does not scale well, with a complexity of $O(n^d)$, where $n$ is the number of nodes and $d$ is the order of the structures. In this work, we introduce a novel method that extracts information about higher-order structures in the graph while still using the efficient low-dimensional persistent homology algorithm. On standard benchmark datasets, we show that our method can lead to up to $31\%$ improvements in test accuracy.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-12T16:56:26Z</published>
+    <arxiv:comment>Published in Proceedings of the Third Learning on Graphs Conference (LoG 2024), PMLR 269</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Davide Buffelli</name>
+    </author>
+    <author>
+      <name>Farzin Soleymani</name>
+    </author>
+    <author>
+      <name>Bastian Rieck</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.14302v1</id>
+    <title>Graphcode: Learning from multiparameter persistent homology using graph neural networks</title>
+    <updated>2024-05-23T08:22:00Z</updated>
+    <link href="https://arxiv.org/abs/2405.14302v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.14302v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce graphcodes, a novel multi-scale summary of the topological properties of a dataset that is based on the well-established theory of persistent homology. Graphcodes handle datasets that are filtered along two real-valued scale parameters. Such multi-parameter topological summaries are usually based on complicated theoretical foundations and difficult to compute; in contrast, graphcodes yield an informative and interpretable summary and can be computed as efficient as one-parameter summaries. Moreover, a graphcode is simply an embedded graph and can therefore be readily integrated in machine learning pipelines using graph neural networks. We describe such a pipeline and demonstrate that graphcodes achieve better classification accuracy than state-of-the-art approaches on various datasets.</summary>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-23T08:22:00Z</published>
+    <arxiv:primary_category term="math.AT"/>
+    <author>
+      <name>Michael Kerber</name>
+    </author>
+    <author>
+      <name>Florian Russold</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.05204v2</id>
+    <title>Leveraging Persistent Homology Features for Accurate Defect Formation Energy Predictions via Graph Neural Networks</title>
+    <updated>2024-10-31T17:15:21Z</updated>
+    <link href="https://arxiv.org/abs/2407.05204v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.05204v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In machine-learning-assisted high-throughput defect studies, a defect-aware latent representation of the supercell structure is crucial to the accurate prediction of defect properties. The performance of current graph neural network (GNN) models is limited due to the fact that defect properties depend strongly on the local atomic configurations near the defect sites and due to the over-smoothing problem of GNN. Herein, we demonstrate that persistent homology features, which encode the topological information of local chemical environment around each atomic site, can characterize the structural information of defects. Using the dataset containing a wide spectrum of \ch{O}-based perovskites with all available vacancies as an example, we show that incorporating the persistent homology features, along with proper choices of graph pooling operations, significantly increases the prediction accuracy, with the MAE reduced by 55\%. Those features can be easily integrated into the state-of-the-art GNN models, including the graph Transformer network and the equivariant neural network, and universally improve their performance. Besides, our model also overcomes the convergence issue with respect to the supercell size that was present in previous GNN models. Furthermore, using the datasets of defective \ch{BaTiO3} with multiple substitutions and multiple vacancies as examples, our GNN model can also predict the defect-defect interactions accurately. These results suggest that persistent homology features can effectively improve the performance of machine learning models and assist the accelerated discovery of functional defects for technological applications.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-06T23:07:59Z</published>
+    <arxiv:comment>30 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Zhenyao Fang</name>
+    </author>
+    <author>
+      <name>Qimin Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.24917v2</id>
+    <title>Frequent subgraph-based persistent homology for graph classification</title>
+    <updated>2026-01-02T12:53:32Z</updated>
+    <link href="https://arxiv.org/abs/2512.24917v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.24917v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Persistent homology (PH) has recently emerged as a powerful tool for extracting topological features. Integrating PH into machine learning and deep learning models enhances topology awareness and interpretability. However, most PH methods on graphs rely on a limited set of filtrations, such as degree-based or weight-based filtrations, which overlook richer features like recurring information across the dataset and thus restrict expressive power. In this work, we propose a novel graph filtration called Frequent Subgraph Filtration (FSF), which is derived from frequent subgraphs and produces stable and information-rich frequency-based persistent homology (FPH) features. We study the theoretical properties of FSF and provide both proofs and experimental validation. Beyond persistent homology itself, we introduce two approaches for graph classification: an FPH-based machine learning model (FPH-ML) and a hybrid framework that integrates FPH with graph neural networks (FPH-GNNs) to enhance topology-aware graph representation learning. Our frameworks bridge frequent subgraph mining and topological data analysis, offering a new perspective on topology-aware feature extraction. Experimental results show that FPH-ML achieves competitive or superior accuracy compared with kernel-based and degree-based filtration methods. When integrated into graph neural networks, FPH yields relative performance gains ranging from 0.4 to 21 percent, with improvements of up to 8.2 percentage points over GCN and GIN backbones across benchmarks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-31T15:21:15Z</published>
+    <arxiv:comment>v2: Author list updated to include previously omitted co-authors</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xinyang Chen</name>
+    </author>
+    <author>
+      <name>Amaël Broustet</name>
+    </author>
+    <author>
+      <name>Guanyuan Zeng</name>
+    </author>
+    <author>
+      <name>Cheng He</name>
+    </author>
+    <author>
+      <name>Guoting Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.16346v3</id>
+    <title>Boosting Graph Pooling with Persistent Homology</title>
+    <updated>2024-10-18T08:09:14Z</updated>
+    <link href="https://arxiv.org/abs/2402.16346v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.16346v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, there has been an emerging trend to integrate persistent homology (PH) into graph neural networks (GNNs) to enrich expressive power. However, naively plugging PH features into GNN layers always results in marginal improvement with low interpretability. In this paper, we investigate a novel mechanism for injecting global topological invariance into pooling layers using PH, motivated by the observation that filtration operation in PH naturally aligns graph pooling in a cut-off manner. In this fashion, message passing in the coarsened graph acts along persistent pooled topology, leading to improved performance. Experimentally, we apply our mechanism to a collection of graph pooling methods and observe consistent and substantial performance gain over several popular datasets, demonstrating its wide applicability and flexibility.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-26T07:00:24Z</published>
+    <arxiv:comment>Published at NeurIPS 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Advances in Neural Information Processing Systems, 38 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Chaolong Ying</name>
+    </author>
+    <author>
+      <name>Xinjian Zhao</name>
+    </author>
+    <author>
+      <name>Tianshu Yu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.05814v1</id>
+    <title>Positional Encoding meets Persistent Homology on Graphs</title>
+    <updated>2025-06-06T07:22:17Z</updated>
+    <link href="https://arxiv.org/abs/2506.05814v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.05814v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The local inductive bias of message-passing graph neural networks (GNNs) hampers their ability to exploit key structural information (e.g., connectivity and cycles). Positional encoding (PE) and Persistent Homology (PH) have emerged as two promising approaches to mitigate this issue. PE schemes endow GNNs with location-aware features, while PH methods enhance GNNs with multiresolution topological features. However, a rigorous theoretical characterization of the relative merits and shortcomings of PE and PH has remained elusive. We bridge this gap by establishing that neither paradigm is more expressive than the other, providing novel constructions where one approach fails but the other succeeds. Our insights inform the design of a novel learnable method, PiPE (Persistence-informed Positional Encoding), which is provably more expressive than both PH and PE. PiPE demonstrates strong performance across a variety of tasks (e.g., molecule property prediction, graph classification, and out-of-distribution generalization), thereby advancing the frontiers of graph representation learning. Code is available at https://github.com/Aalto-QuML/PIPE.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-06T07:22:17Z</published>
+    <arxiv:comment>Accepted at ICML 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yogesh Verma</name>
+    </author>
+    <author>
+      <name>Amauri H. Souza</name>
+    </author>
+    <author>
+      <name>Vikas Garg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.14240v2</id>
+    <title>Persistent Homology-induced Graph Ensembles for Time Series Regressions</title>
+    <updated>2025-03-19T10:33:40Z</updated>
+    <link href="https://arxiv.org/abs/2503.14240v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.14240v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The effectiveness of Spatio-temporal Graph Neural Networks (STGNNs) in time-series applications is often limited by their dependence on fixed, hand-crafted input graph structures. Motivated by insights from the Topological Data Analysis (TDA) paradigm, of which real-world data exhibits multi-scale patterns, we construct several graphs using Persistent Homology Filtration -- a mathematical framework describing the multiscale structural properties of data points. Then, we use the constructed graphs as an input to create an ensemble of Graph Neural Networks. The ensemble aggregates the signals from the individual learners via an attention-based routing mechanism, thus systematically encoding the inherent multiscale structures of data. Four different real-world experiments on seismic activity prediction and traffic forecasting (PEMS-BAY, METR-LA) demonstrate that our approach consistently outperforms single-graph baselines while providing interpretable insights.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-18T13:22:52Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Viet The Nguyen</name>
+    </author>
+    <author>
+      <name>Duy Anh Pham</name>
+    </author>
+    <author>
+      <name>An Thai Le</name>
+    </author>
+    <author>
+      <name>Jans Peter</name>
+    </author>
+    <author>
+      <name>Gunther Gust</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.09123v1</id>
+    <title>Dynamic Neural Dowker Network: Approximating Persistent Homology in Dynamic Directed Graphs</title>
+    <updated>2024-08-17T07:13:12Z</updated>
+    <link href="https://arxiv.org/abs/2408.09123v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.09123v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Persistent homology, a fundamental technique within Topological Data Analysis (TDA), captures structural and shape characteristics of graphs, yet encounters computational difficulties when applied to dynamic directed graphs. This paper introduces the Dynamic Neural Dowker Network (DNDN), a novel framework specifically designed to approximate the results of dynamic Dowker filtration, aiming to capture the high-order topological features of dynamic directed graphs. Our approach creatively uses line graph transformations to produce both source and sink line graphs, highlighting the shared neighbor structures that Dowker complexes focus on. The DNDN incorporates a Source-Sink Line Graph Neural Network (SSLGNN) layer to effectively capture the neighborhood relationships among dynamic edges. Additionally, we introduce an innovative duality edge fusion mechanism, ensuring that the results for both the sink and source line graphs adhere to the duality principle intrinsic to Dowker complexes. Our approach is validated through comprehensive experiments on real-world datasets, demonstrating DNDN's capability not only to effectively approximate dynamic Dowker filtration results but also to perform exceptionally in dynamic graph classification tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-17T07:13:12Z</published>
+    <arxiv:comment>KDD 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hao Li</name>
+    </author>
+    <author>
+      <name>Hao Jiang</name>
+    </author>
+    <author>
+      <name>Jiajun Fan</name>
+    </author>
+    <author>
+      <name>Dongsheng Ye</name>
+    </author>
+    <author>
+      <name>Liang Du</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.13852v1</id>
+    <title>Topologically-Stabilized Graph Neural Networks: Empirical Robustness Across Domains</title>
+    <updated>2025-12-15T19:39:11Z</updated>
+    <link href="https://arxiv.org/abs/2512.13852v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.13852v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph Neural Networks (GNNs) have become the standard for graph representation learning but remain vulnerable to structural perturbations. We propose a novel framework that integrates persistent homology features with stability regularization to enhance robustness. Building on the stability theorems of persistent homology \cite{cohen2007stability}, our method combines GIN architectures with multi-scale topological features extracted from persistence images, enforced by Hiraoka-Kusano-inspired stability constraints. Across six diverse datasets spanning biochemical, social, and collaboration networks , our approach demonstrates exceptional robustness to edge perturbations while maintaining competitive accuracy. Notably, we observe minimal performance degradation (0-4\% on most datasets) under perturbation, significantly outperforming baseline stability. Our work provides both a theoretically-grounded and empirically-validated approach to robust graph learning that aligns with recent advances in topological regularization</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-15T19:39:11Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jelena Losic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.06574v1</id>
+    <title>Topological Regularization for Force Prediction in Active Particle Suspension with EGNN and Persistent Homology</title>
+    <updated>2025-09-08T11:39:42Z</updated>
+    <link href="https://arxiv.org/abs/2509.06574v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.06574v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Capturing the dynamics of active particles, i.e., small self-propelled agents that both deform and are deformed by a fluid in which they move is a formidable problem as it requires coupling fine scale hydrodynamics with large scale collective effects. So we present a multi-scale framework that combines the three learning-driven tools to learn in concert within one pipeline. We use high-resolution Lattice Boltzmann snapshots of fluid velocity and particle stresses in a periodic box as input to the learning pipeline. the second step takes the morphology and positions orientations of particles to predict pairwise interaction forces between them with a E(2)-equivariant graph neural network that necessarily respect flat symmetries. Then, a physics-informed neural network further updates these local estimates by summing over them with a stress data using Fourier feature mappings and residual blocks that is additionally regularized with a topological term (introduced by persistent homology) to penalize unrealistically tangled or spurious connections. In concert, these stages deliver an holistic highly-data driven full force network prediction empathizing on the physical underpinnings together with emerging multi-scale structure typical for active matter.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-08T11:39:42Z</published>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <author>
+      <name>Sadra Saremi</name>
+    </author>
+    <author>
+      <name>Amirhossein Ahmadkhan Kordbacheh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.12007v3</id>
+    <title>Tensor-view Topological Graph Neural Network</title>
+    <updated>2024-01-30T03:10:15Z</updated>
+    <link href="https://arxiv.org/abs/2401.12007v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.12007v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph classification is an important learning task for graph-structured data. Graph neural networks (GNNs) have recently gained growing attention in graph learning and have shown significant improvements in many important graph problems. Despite their state-of-the-art performances, existing GNNs only use local information from a very limited neighborhood around each node, suffering from loss of multi-modal information and overheads of excessive computation. To address these issues, we propose a novel Tensor-view Topological Graph Neural Network (TTG-NN), a class of simple yet effective topological deep learning built upon persistent homology, graph convolution, and tensor operations. This new method incorporates tensor learning to simultaneously capture Tensor-view Topological (TT), as well as Tensor-view Graph (TG) structural information on both local and global levels. Computationally, to fully exploit graph topology and structure, we propose two flexible TT and TG representation learning modules that disentangle feature tensor aggregation and transformation and learn to preserve multi-modal structure with less computation. Theoretically, we derive high probability bounds on both the out-of-sample and in-sample mean squared approximation errors for our proposed Tensor Transformation Layer (TTL). Real data experiments show that the proposed TTG-NN outperforms 20 state-of-the-art methods on various graph benchmarks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-22T14:55:01Z</published>
+    <arxiv:comment>Accepted at AISTATS 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Tao Wen</name>
+    </author>
+    <author>
+      <name>Elynn Chen</name>
+    </author>
+    <author>
+      <name>Yuzhou Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.06293v1</id>
+    <title>Prediction of Bank Credit Ratings using Heterogeneous Topological Graph Neural Networks</title>
+    <updated>2025-05-17T13:49:25Z</updated>
+    <link href="https://arxiv.org/abs/2506.06293v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.06293v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agencies such as Standard &amp; Poor's and Moody's provide bank credit ratings that influence economic stability and decision-making by stakeholders. Accurate and timely predictions support informed decision-making, regulatory actions, and investor protection. However, a complete interbank connection graph is often unavailable due to privacy concerns, complicating the direct application of Graph Neural Networks (GNNs) for rating prediction. our research utilizes persistent homology to construct a network that captures relationships among banks and combines this with a traditional lending network to create a heterogeneous network that integrates information from both sources, leading to improved predictions. Experiments on a global, real-world dataset validate the effectiveness of HTGNN. This research has implications for investors and regulatory bodies in enhancing proactive risk mitigation and the implementation of effective market interventions.The code can be find at https://github.com/Liu-Jun-Yi/HTGNN.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-17T13:49:25Z</published>
+    <arxiv:comment>WITS 2024 (Workshop on Information Technologies and Systems 2024)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Junyi Liu</name>
+    </author>
+    <author>
+      <name>Stanley Kok</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07598v1</id>
+    <title>A Topological Characterization of Graph Neural Networks via Stochastic Block Model Embeddings on the n-Sphere</title>
+    <updated>2026-05-29T07:21:12Z</updated>
+    <link href="https://arxiv.org/abs/2606.07598v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07598v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a topological framework for comparing trained Graph Neural Networks (GNNs) by mapping the Stochastic Block Models (SBMs) induced on the graphon-signal space of a Message Passing Neural Network (MPNN) onto the unit $n$-sphere $\sphere^{n-1}\subset\R^n$. The construction rests on three classical pillars: the \emph{compactness} of the cut-distance graphon space $(\Wo,\cutdist)$ \citep{lovasz2006limits,lovasz2012large}, the Frieze--Kannan \emph{weak regularity lemma} together with its graphon-signal extension due to \citet{levie2023graphon}, and the Lipschitz continuity of MPNNs with respect to the cut-distance. We show that, for any prescribed tolerance $\varepsilon&gt;0$, a trained MPNN $Φ$ acting on a sufficiently large graph factors (up to $\varepsilon$) through a step-graphon-signal of bounded complexity, and we construct an explicit measure-preserving map $Ψ_n\colon[0,1]\to\sphere^{n-1}$ that places the SBM regions on disjoint spherical caps. This produces a problem-agnostic, low-dimensional ``fingerprint'' of a trained GNN that is amenable to visual inspection and to nearest-neighbour search across model zoos, enabling \emph{transfer-learning candidate retrieval} without retraining. We discuss the obstruction posed by concentration of measure in high dimension -- a phenomenon directly relevant to LLM-scale embeddings. We close with five concrete future research directions: hyperbolic and Grassmannian alternatives to the spherical model, Gromov--Wasserstein distances on graphon-signals as an isometry-free alternative to the $n$-sphere map, an information-geometric (Fisher) reformulation of the SBM manifold, persistent-homology fingerprints of layer-wise embedding clouds, and a spectral-distance baseline derived from the graphon eigendecomposition.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-29T07:21:12Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Gopal Anantharaman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.00453v1</id>
+    <title>TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction</title>
+    <updated>2025-05-31T08:15:23Z</updated>
+    <link href="https://arxiv.org/abs/2506.00453v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.00453v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dynamic graphs evolve continuously, presenting challenges for traditional graph learning due to their changing structures and temporal dependencies. Recent advancements have shown potential in addressing these challenges by developing suitable meta-learning-based dynamic graph neural network models. However, most meta-learning approaches for dynamic graphs rely on fixed weight update parameters, neglecting the essential intrinsic complex high-order topological information of dynamically evolving graphs. We have designed Dowker Zigzag Persistence (DZP), an efficient and stable dynamic graph persistent homology representation method based on Dowker complex and zigzag persistence, to capture the high-order features of dynamic graphs. Armed with the DZP ideas, we propose TMetaNet, a new meta-learning parameter update model based on dynamic topological features. By utilizing the distances between high-order topological features, TMetaNet enables more effective adaptation across snapshots. Experiments on real-world datasets demonstrate TMetaNet's state-of-the-art performance and resilience to graph noise, illustrating its high potential for meta-learning and dynamic graph analysis. Our code is available at https://github.com/Lihaogx/TMetaNet.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-31T08:15:23Z</published>
+    <arxiv:comment>ICML2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hao Li</name>
+    </author>
+    <author>
+      <name>Hao Wan</name>
+    </author>
+    <author>
+      <name>Yuzhou Chen</name>
+    </author>
+    <author>
+      <name>Dongsheng Ye</name>
+    </author>
+    <author>
+      <name>Yulia Gel</name>
+    </author>
+    <author>
+      <name>Hao Jiang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.09178v1</id>
+    <title>Enhancing Graph Representation Learning with Localized Topological Features</title>
+    <updated>2025-01-15T22:12:27Z</updated>
+    <link href="https://arxiv.org/abs/2501.09178v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.09178v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Representation learning on graphs is a fundamental problem that can be crucial in various tasks. Graph neural networks, the dominant approach for graph representation learning, are limited in their representation power. Therefore, it can be beneficial to explicitly extract and incorporate high-order topological and geometric information into these models. In this paper, we propose a principled approach to extract the rich connectivity information of graphs based on the theory of persistent homology. Our method utilizes the topological features to enhance the representation learning of graph neural networks and achieve state-of-the-art performance on various node classification and link prediction benchmarks. We also explore the option of end-to-end learning of the topological features, i.e., treating topological computation as a differentiable operator during learning. Our theoretical analysis and empirical study provide insights and potential guidelines for employing topological features in graph learning tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-15T22:12:27Z</published>
+    <arxiv:comment>Accepted in JMLR 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zuoyu Yan</name>
+    </author>
+    <author>
+      <name>Qi Zhao</name>
+    </author>
+    <author>
+      <name>Ze Ye</name>
+    </author>
+    <author>
+      <name>Tengfei Ma</name>
+    </author>
+    <author>
+      <name>Liangcai Gao</name>
+    </author>
+    <author>
+      <name>Zhi Tang</name>
+    </author>
+    <author>
+      <name>Yusu Wang</name>
+    </author>
+    <author>
+      <name>Chao Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.02130v1</id>
+    <title>Cross-View Topology-Aware Graph Representation Learning</title>
+    <updated>2025-12-01T19:00:58Z</updated>
+    <link href="https://arxiv.org/abs/2512.02130v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.02130v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph classification has gained significant attention due to its applications in chemistry, social networks, and bioinformatics. While Graph Neural Networks (GNNs) effectively capture local structural patterns, they often overlook global topological features that are critical for robust representation learning. In this work, we propose GraphTCL, a dual-view contrastive learning framework that integrates structural embeddings from GNNs with topological embeddings derived from persistent homology. By aligning these complementary views through a cross-view contrastive loss, our method enhances representation quality and improves classification performance. Extensive experiments on benchmark datasets, including TU and OGB molecular graphs, demonstrate that GraphTCL consistently outperforms state-of-the-art baselines. This study highlights the importance of topology-aware contrastive learning for advancing graph representation methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-01T19:00:58Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ahmet Sami Korkmaz</name>
+    </author>
+    <author>
+      <name>Selim Coskunuzer</name>
+    </author>
+    <author>
+      <name>Md Joshem Uddin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.08241v1</id>
+    <title>Persistent Topological Structures and Cohomological Flows as a Mathematical Framework for Brain-Inspired Representation Learning</title>
+    <updated>2025-12-09T04:48:50Z</updated>
+    <link href="https://arxiv.org/abs/2512.08241v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.08241v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a mathematically rigorous framework for brain-inspired representation learning founded on the interplay between persistent topological structures and cohomological flows. Neural computation is reformulated as the evolution of cochain maps over dynamic simplicial complexes, enabling representations that capture invariants across temporal, spatial, and functional brain states. The proposed architecture integrates algebraic topology with differential geometry to construct cohomological operators that generalize gradient-based learning within a homological landscape. Synthetic data with controlled topological signatures and real neural datasets are jointly analyzed using persistent homology, sheaf cohomology, and spectral Laplacians to quantify stability, continuity, and structural preservation. Empirical results demonstrate that the model achieves superior manifold consistency and noise resilience compared to graph neural and manifold-based deep architectures, establishing a coherent mathematical foundation for topology-driven representation learning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-09T04:48:50Z</published>
+    <arxiv:comment>6 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Preksha Girish</name>
+    </author>
+    <author>
+      <name>Rachana Mysore</name>
+    </author>
+    <author>
+      <name>Mahanthesha U</name>
+    </author>
+    <author>
+      <name>Shrey Kumar</name>
+    </author>
+    <author>
+      <name>Shipra Prashant</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.03164v1</id>
+    <title>Topological Neural Networks go Persistent, Equivariant, and Continuous</title>
+    <updated>2024-06-05T11:56:54Z</updated>
+    <link href="https://arxiv.org/abs/2406.03164v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.03164v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Topological Neural Networks (TNNs) incorporate higher-order relational information beyond pairwise interactions, enabling richer representations than Graph Neural Networks (GNNs). Concurrently, topological descriptors based on persistent homology (PH) are being increasingly employed to augment the GNNs. We investigate the benefits of integrating these two paradigms. Specifically, we introduce TopNets as a broad framework that subsumes and unifies various methods in the intersection of GNNs/TNNs and PH such as (generalizations of) RePHINE and TOGL. TopNets can also be readily adapted to handle (symmetries in) geometric complexes, extending the scope of TNNs and PH to spatial settings. Theoretically, we show that PH descriptors can provably enhance the expressivity of simplicial message-passing networks. Empirically, (continuous and E(n)-equivariant extensions of) TopNets achieve strong performance across diverse tasks, including antibody design, molecular dynamics simulation, and drug property prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-05T11:56:54Z</published>
+    <arxiv:comment>Accepted to ICML 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yogesh Verma</name>
+    </author>
+    <author>
+      <name>Amauri H Souza</name>
+    </author>
+    <author>
+      <name>Vikas Garg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.06571v3</id>
+    <title>Graph Persistence goes Spectral</title>
+    <updated>2026-02-04T16:44:53Z</updated>
+    <link href="https://arxiv.org/abs/2506.06571v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.06571v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Including intricate topological information (e.g., cycles) provably enhances the expressivity of message-passing graph neural networks (GNNs) beyond the Weisfeiler-Leman (WL) hierarchy. Consequently, Persistent Homology (PH) methods are increasingly employed for graph representation learning. In this context, recent works have proposed decorating classical PH diagrams with vertex and edge features for improved expressivity. However, these methods still fail to capture basic graph structural information. In this paper, we propose SpectRe -- a new topological descriptor for graphs that integrates spectral information into PH diagrams. Notably, SpectRe is strictly more expressive than PH and spectral information on graphs alone. We also introduce notions of global and local stability to analyze existing descriptors and establish that SpectRe is locally stable. Finally, experiments on synthetic and real-world datasets demonstrate the effectiveness of SpectRe and its potential to enhance the capabilities of graph models in relevant learning tasks. Code is available at https://github.com/Aalto-QuML/SpectRe/.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-06T22:51:08Z</published>
+    <arxiv:comment>32 pages, 4 figures, 7 tables. Accepted at NeurIPS 2025. Final version, clarified minor bug</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mattie Ji</name>
+    </author>
+    <author>
+      <name>Amauri H. Souza</name>
+    </author>
+    <author>
+      <name>Vikas Garg</name>
+    </author>
+  </entry>
+</feed>

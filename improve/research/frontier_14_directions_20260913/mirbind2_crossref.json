@@ -1,0 +1,969 @@
+{
+  "url": "https://api.crossref.org/works/10.1093%2Fbioinformatics%2Fbtag410",
+  "as_of": "2026-09-13",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            24
+          ]
+        ],
+        "date-time": "2026-08-24T11:25:14Z",
+        "timestamp": 1787570714625,
+        "version": "build-2736575974"
+      },
+      "reference-count": 51,
+      "publisher": "Oxford University Press (OUP)",
+      "issue": "Supplement_2",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                24
+              ]
+            ],
+            "date-time": "2026-08-24T00:00:00Z",
+            "timestamp": 1787529600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 23,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "funder": [
+        {
+          "name": "BioGeMT"
+        },
+        {
+          "name": "HORIZON-WIDERA-2022",
+          "award": [
+            "101086768"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "101086768"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bioinformatics Core Facility of CEITEC Masaryk University supported by the NCMG Research Infrastructure",
+          "award": [
+            "LM2023067"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "LM2023067"
+              ]
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/501100001823",
+          "name": "MEYS CR",
+          "doi-asserted-by": "crossref",
+          "id": [
+            {
+              "id": "10.13039/501100001823",
+              "id-type": "DOI",
+              "asserted-by": "crossref"
+            }
+          ]
+        },
+        {
+          "name": "BioGeMT"
+        },
+        {
+          "name": "HORIZON-WIDERA-2022",
+          "award": [
+            "101086768"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "101086768"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "University of Malta, and the e-INFRA CZ project",
+          "award": [
+            "90254"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "90254"
+              ]
+            }
+          ]
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [],
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Motivation</jats:title>\n                    <jats:p>MicroRNAs (miRNAs) regulate gene expression by guiding Argonaute proteins to partially complementary sites on target RNAs. While classical prediction methods rely on engineered features such as seed match categories, evolutionary conservation, and site context, recent advances in deep learning offer the potential to learn targeting rules directly from sequence. We developed a sequence-based deep learning model that improves miRNA target site prediction, and further validated the learned target site representations by extending the model to gene-level functional repression prediction.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>We introduce miRBind2, a deep learning method for miRNA target site prediction that incorporates a novel pairwise nucleotide representation capturing all possible miRNA-target nucleotide interactions, with a CNN-based architecture. miRBind2 outperforms previous SotA models across four independent datasets from the debiased miRBench benchmark, while using 92% fewer parameters. We show that the convolutional features and weights learned by miRBind2 can be transferred to transcript-level prediction by extending the miRBind2 architecture and fine-tuning it on miRNA perturbation experiments. This miRBind2-3UTR model predicts gene repression from sequence alone. On a dataset of 50 549 miRNA-gene pairs, miRBind2-3UTR significantly outperforms TargetScan. These results show that deep models pretrained on target site data can capture regulatory signals and predict functional repression without requiring conventional engineered biological features.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Availability</jats:title>\n                    <jats:p>Models and source code are freely available via GitHub (https://github.com/BioGeMT/miRBind_2.0). A publicly available web-tool for novel predictions and visualization is available at: (https://huggingface.co/spaces/dimostzim/BioGeMT-miRBind2).</jats:p>\n                  </jats:sec>",
+      "DOI": "10.1093/bioinformatics/btag410",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            6,
+            18
+          ]
+        ],
+        "date-time": "2026-06-18T11:42:24Z",
+        "timestamp": 1781782944000
+      },
+      "source": "Crossref",
+      "is-referenced-by-count": 0,
+      "title": [
+        "miRBind2 enables sequence-only prediction of miRNA binding and transcript repression"
+      ],
+      "prefix": "10.1093",
+      "volume": "42",
+      "author": [
+        {
+          "given": "David",
+          "family": "Čechák",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Central European Institute of Technology, Masaryk University , Brno 625 00,",
+              "place": [
+                "Czech Republic"
+              ]
+            },
+            {
+              "name": "National Centre for Biomolecular Research, Faculty of Science, Masaryk University , Brno 625 00,",
+              "place": [
+                "Czech Republic"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dimosthenis",
+          "family": "Tzimotoudis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Applied Biomedical Science, Faculty of Health Sciences, University of Malta , Msida,",
+              "place": [
+                "Malta"
+              ]
+            },
+            {
+              "name": "Centre for Molecular Medicine and Biobanking, University of Malta , Msida,",
+              "place": [
+                "Malta"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Stephanie",
+          "family": "Sammut",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Applied Biomedical Science, Faculty of Health Sciences, University of Malta , Msida,",
+              "place": [
+                "Malta"
+              ]
+            },
+            {
+              "name": "Centre for Molecular Medicine and Biobanking, University of Malta , Msida,",
+              "place": [
+                "Malta"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Katarina",
+          "family": "Gresova",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Applied Biomedical Science, Faculty of Health Sciences, University of Malta , Msida,",
+              "place": [
+                "Malta"
+              ]
+            },
+            {
+              "name": "Centre for Molecular Medicine and Biobanking, University of Malta , Msida,",
+              "place": [
+                "Malta"
+              ]
+            },
+            {
+              "name": "Max-Delbrück-Center for Molecular Medicine in the Helmholtz Association (MDC), Berlin Institute for Medical Systems Biology (BIMSB) , Berlin,",
+              "place": [
+                "Germany"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Eva",
+          "family": "Marsalkova",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Central European Institute of Technology, Masaryk University , Brno 625 00,",
+              "place": [
+                "Czech Republic"
+              ]
+            },
+            {
+              "name": "National Centre for Biomolecular Research, Faculty of Science, Masaryk University , Brno 625 00,",
+              "place": [
+                "Czech Republic"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "David",
+          "family": "Farrugia",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Faculty of ICT, University of Malta , Msida, MSD 2080,",
+              "place": [
+                "Malta"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-3437-7482",
+          "authenticated-orcid": false,
+          "given": "Panagiotis",
+          "family": "Alexiou",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Applied Biomedical Science, Faculty of Health Sciences, University of Malta , Msida,",
+              "place": [
+                "Malta"
+              ]
+            },
+            {
+              "name": "Centre for Molecular Medicine and Biobanking, University of Malta , Msida,",
+              "place": [
+                "Malta"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "286",
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            21
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "2026082407020530100_btag410-B1",
+          "doi-asserted-by": "crossref",
+          "first-page": "5362",
+          "DOI": "10.1038/s41467-025-60392-2",
+          "article-title": "Split RNA switch orchestrates pre- and post-translational control to enable cell type-specific gene expression",
+          "volume": "16",
+          "author": "Abe",
+          "year": "2025",
+          "journal-title": "Nat Commun"
+        },
+        {
+          "key": "2026082407020530100_btag410-B2",
+          "doi-asserted-by": "crossref",
+          "first-page": "e05005",
+          "DOI": "10.7554/eLife.05005",
+          "article-title": "Predicting effective microRNA target sites in mammalian mRNAs",
+          "volume": "4",
+          "author": "Agarwal",
+          "year": "2015",
+          "journal-title": "Elife"
+        },
+        {
+          "key": "2026082407020530100_btag410-B3",
+          "doi-asserted-by": "crossref",
+          "first-page": "3049",
+          "DOI": "10.1093/bioinformatics/btp565",
+          "article-title": "Lost in translation: an assessment and perspective for computational microRNA target identification",
+          "volume": "25",
+          "author": "Alexiou",
+          "year": "2009",
+          "journal-title": "Bioinformatics"
+        },
+        {
+          "key": "2026082407020530100_btag410-B4",
+          "doi-asserted-by": "crossref",
+          "first-page": "20",
+          "DOI": "10.1016/j.cell.2018.03.006",
+          "article-title": "Metazoan microRNAs",
+          "volume": "173",
+          "author": "Bartel",
+          "year": "2018",
+          "journal-title": "Cell"
+        },
+        {
+          "key": "2026082407020530100_btag410-B5",
+          "doi-asserted-by": "crossref",
+          "first-page": "281",
+          "DOI": "10.1016/S0092-8674(04)00045-5",
+          "article-title": "MicroRNAs: genomics, biogenesis, mechanism, and function",
+          "volume": "116",
+          "author": "Bartel",
+          "year": "2004",
+          "journal-title": "Cell"
+        },
+        {
+          "key": "2026082407020530100_btag410-B6",
+          "doi-asserted-by": "crossref",
+          "first-page": "215",
+          "DOI": "10.1038/ng1253",
+          "article-title": "Dicer is essential for mouse development",
+          "volume": "35",
+          "author": "Bernstein",
+          "year": "2003",
+          "journal-title": "Nat Genet"
+        },
+        {
+          "key": "2026082407020530100_btag410-B7",
+          "doi-asserted-by": "crossref",
+          "first-page": "12164",
+          "DOI": "10.3390/ijms262412164",
+          "article-title": "The role of miRNAs in Parkinson’s disease: a systematic review",
+          "volume": "26",
+          "author": "Chrysanthou",
+          "year": "2025",
+          "journal-title": "Int J Mol Sci"
+        },
+        {
+          "key": "2026082407020530100_btag410-B8",
+          "doi-asserted-by": "crossref",
+          "first-page": "276",
+          "DOI": "10.3390/cells9020276",
+          "article-title": "miRNAs as biomarkers in disease: latest findings regarding their role in diagnosis and prognosis",
+          "volume": "9",
+          "author": "Condrat",
+          "year": "2020",
+          "journal-title": "Cells"
+        },
+        {
+          "key": "2026082407020530100_btag410-B9",
+          "doi-asserted-by": "crossref",
+          "first-page": "163",
+          "DOI": "10.1016/j.trsl.2011.01.007",
+          "article-title": "MicroRNA, a new paradigm for understanding immunoregulation, inflammation, and autoimmune diseases",
+          "volume": "157",
+          "author": "Dai",
+          "year": "2011",
+          "journal-title": "Transl Res"
+        },
+        {
+          "key": "2026082407020530100_btag410-B10",
+          "doi-asserted-by": "crossref",
+          "first-page": "837",
+          "DOI": "10.2307/2531595",
+          "article-title": "Comparing the areas under two or more correlated receiver operating characteristic curves: a nonparametric approach",
+          "volume": "44",
+          "author": "DeLong",
+          "year": "1988",
+          "journal-title": "Biometrics"
+        },
+        {
+          "key": "2026082407020530100_btag410-B11",
+          "doi-asserted-by": "crossref",
+          "first-page": "126",
+          "DOI": "10.1186/s13046-025-03391-x",
+          "article-title": "MicroRNA in cancer therapy: breakthroughs and challenges in early clinical applications",
+          "volume": "44",
+          "author": "Di Martino",
+          "year": "2025",
+          "journal-title": "J Exp Clin Cancer Res"
+        },
+        {
+          "key": "2026082407020530100_btag410-B12",
+          "doi-asserted-by": "crossref",
+          "first-page": "237",
+          "DOI": "10.1126/science.1215691",
+          "article-title": "miRNA-mediated gene silencing by translational repression followed by mRNA deadenylation and decay",
+          "volume": "336",
+          "author": "Djuranovic",
+          "year": "2012",
+          "journal-title": "Science"
+        },
+        {
+          "key": "2026082407020530100_btag410-B13",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1201/9780429246593",
+          "volume-title": "An Introduction to the Bootstrap",
+          "author": "Efron",
+          "year": "1994"
+        },
+        {
+          "key": "2026082407020530100_btag410-B14",
+          "doi-asserted-by": "crossref",
+          "first-page": "620",
+          "DOI": "10.1038/s42256-021-00343-w",
+          "article-title": "Improving performance of deep learning models with axiomatic attribution priors and expected gradients",
+          "volume": "3",
+          "author": "Erion",
+          "year": "2021",
+          "journal-title": "Nat Mach Intell"
+        },
+        {
+          "key": "2026082407020530100_btag410-B15",
+          "doi-asserted-by": "crossref",
+          "first-page": "1139",
+          "DOI": "10.1038/nsmb.2115",
+          "article-title": "Weak seed-pairing stability and high target-site abundance decrease the proficiency of lsy-6 and other microRNAs",
+          "volume": "18",
+          "author": "Garcia",
+          "year": "2011",
+          "journal-title": "Nat Struct Mol Biol"
+        },
+        {
+          "key": "2026082407020530100_btag410-B16",
+          "first-page": "369",
+          "article-title": "Using attribution sequence alignment to interpret deep learning models for miRNA binding site prediction",
+          "volume": "12",
+          "author": "Grešová",
+          "year": "2023",
+          "journal-title": "Biology (Basel)"
+        },
+        {
+          "key": "2026082407020530100_btag410-B17",
+          "doi-asserted-by": "crossref",
+          "first-page": "1647433",
+          "DOI": "10.3389/fimmu.2025.1647433",
+          "article-title": "Multiplex engineering using microRNA-mediated gene silencing in CAR T cells",
+          "volume": "16",
+          "author": "Golinelli",
+          "year": "2025",
+          "journal-title": "Front Immunol"
+        },
+        {
+          "key": "2026082407020530100_btag410-B18",
+          "doi-asserted-by": "crossref",
+          "first-page": "91",
+          "DOI": "10.1016/j.molcel.2007.06.017",
+          "article-title": "MicroRNA targeting specificity in mammals: determinants beyond seed pairing",
+          "volume": "27",
+          "author": "Grimson",
+          "year": "2007",
+          "journal-title": "Mol Cell"
+        },
+        {
+          "key": "2026082407020530100_btag410-B19",
+          "doi-asserted-by": "crossref",
+          "first-page": "199",
+          "DOI": "10.1016/j.tins.2008.12.003",
+          "article-title": "Alterations of the microRNA network cause neurodegenerative disease",
+          "volume": "32",
+          "author": "Hébert",
+          "year": "2009",
+          "journal-title": "Trends Neurosci"
+        },
+        {
+          "key": "2026082407020530100_btag410-B20",
+          "doi-asserted-by": "crossref",
+          "first-page": "22895",
+          "DOI": "10.1038/s41598-023-49757-z",
+          "article-title": "Analysis of chimeric reads characterises the diverse targetome of AGO2-mediated regulation",
+          "volume": "13",
+          "author": "Hejret",
+          "year": "2023",
+          "journal-title": "Sci Rep"
+        },
+        {
+          "key": "2026082407020530100_btag410-B21",
+          "doi-asserted-by": "crossref",
+          "first-page": "654",
+          "DOI": "10.1016/j.cell.2013.03.043",
+          "article-title": "Mapping the human miRNA interactome by CLASH reveals frequent noncanonical binding",
+          "volume": "153",
+          "author": "Helwak",
+          "year": "2013",
+          "journal-title": "Cell"
+        },
+        {
+          "key": "2026082407020530100_btag410-B22",
+          "volume-title": "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+          "author": "Howard",
+          "year": "2018"
+        },
+        {
+          "key": "2026082407020530100_btag410-B23",
+          "doi-asserted-by": "crossref",
+          "first-page": "21",
+          "DOI": "10.14348/molcells.2023.2157",
+          "article-title": "Determinants of functional MicroRNA targeting",
+          "volume": "46",
+          "author": "Hwang",
+          "year": "2023",
+          "journal-title": "Mol Cells"
+        },
+        {
+          "key": "2026082407020530100_btag410-B24",
+          "doi-asserted-by": "crossref",
+          "first-page": "367",
+          "DOI": "10.1152/physiolgenomics.00144.2007",
+          "article-title": "Altered microRNA expression in human heart disease",
+          "volume": "31",
+          "author": "Ikeda",
+          "year": "2007",
+          "journal-title": "Physiol Genomics"
+        },
+        {
+          "key": "2026082407020530100_btag410-B25",
+          "doi-asserted-by": "publisher",
+          "author": "Ilse",
+          "DOI": "10.48550/arXiv.1802.04712,"
+        },
+        {
+          "key": "2026082407020530100_btag410-B26",
+          "doi-asserted-by": "crossref",
+          "first-page": "36",
+          "DOI": "10.1016/j.stem.2010.06.012",
+          "article-title": "MicroRNAs as regulators of differentiation and cell fate decisions",
+          "volume": "7",
+          "author": "Ivey",
+          "year": "2010",
+          "journal-title": "Cell Stem Cell"
+        },
+        {
+          "key": "2026082407020530100_btag410-B27",
+          "doi-asserted-by": "crossref",
+          "first-page": "2622",
+          "DOI": "10.1038/s41591-025-03730-7",
+          "article-title": "A microRNA-based dynamic risk score for type 1 diabetes",
+          "volume": "31",
+          "author": "Joglekar",
+          "year": "2025",
+          "journal-title": "Nat Med"
+        },
+        {
+          "key": "2026082407020530100_btag410-B28",
+          "doi-asserted-by": "crossref",
+          "first-page": "421",
+          "DOI": "10.1038/nrg3965",
+          "article-title": "Towards a molecular understanding of microRNA-mediated gene silencing",
+          "volume": "16",
+          "author": "Jonas",
+          "year": "2015",
+          "journal-title": "Nat Rev Genet"
+        },
+        {
+          "key": "2026082407020530100_btag410-B29",
+          "doi-asserted-by": "crossref",
+          "first-page": "239",
+          "DOI": "10.1038/s41571-025-01114-x",
+          "article-title": "MicroRNAs in oncology: a translational perspective in the era of AI",
+          "volume": "23",
+          "author": "Jurj",
+          "year": "2026",
+          "journal-title": "Nat Rev Clin Oncol"
+        },
+        {
+          "key": "2026082407020530100_btag410-B30",
+          "doi-asserted-by": "publisher",
+          "author": "Keshvarikhojasteh",
+          "DOI": "10.48550/arXiv.2404.05362,"
+        },
+        {
+          "key": "2026082407020530100_btag410-B31",
+          "doi-asserted-by": "crossref",
+          "first-page": "2323",
+          "DOI": "10.3390/genes13122323",
+          "article-title": "miRBind: a deep learning method for miRNA binding classification",
+          "volume": "13",
+          "author": "Klimentová",
+          "year": "2022",
+          "journal-title": "Genes (Basel)"
+        },
+        {
+          "key": "2026082407020530100_btag410-B32",
+          "doi-asserted-by": "publisher",
+          "author": "Kokhlikyan",
+          "DOI": "10.48550/arXiv.2009.07896,"
+        },
+        {
+          "key": "2026082407020530100_btag410-B33",
+          "doi-asserted-by": "crossref",
+          "first-page": "843",
+          "DOI": "10.1016/0092-8674(93)90529-Y",
+          "article-title": "The C. elegans heterochronic gene lin-4 encodes small RNAs with antisense complementarity to lin-14",
+          "volume": "75",
+          "author": "Lee",
+          "year": "1993",
+          "journal-title": "Cell"
+        },
+        {
+          "key": "2026082407020530100_btag410-B34",
+          "doi-asserted-by": "crossref",
+          "first-page": "15",
+          "DOI": "10.1016/j.cell.2004.12.035",
+          "article-title": "Conserved seed pairing, often flanked by adenosines, indicates that thousands of human genes are microRNA targets",
+          "volume": "120",
+          "author": "Lewis",
+          "year": "2005",
+          "journal-title": "Cell"
+        },
+        {
+          "key": "2026082407020530100_btag410-B35",
+          "doi-asserted-by": "crossref",
+          "first-page": "1658",
+          "DOI": "10.3390/ijms26041658",
+          "article-title": "Clinical proof-of-concept of a non-gene editing technology using miRNA-Based shRNA to engineer allogeneic CAR T-cells",
+          "volume": "26",
+          "author": "Lonez",
+          "year": "2025",
+          "journal-title": "Int J Mol Sci"
+        },
+        {
+          "key": "2026082407020530100_btag410-B36",
+          "doi-asserted-by": "crossref",
+          "first-page": "e69803",
+          "DOI": "10.7554/eLife.69803",
+          "article-title": "MicroRNA 3’-compensatory pairing occurs through two binding modes, with affinity shaped by nucleotide identity and position",
+          "volume": "11",
+          "author": "McGeary",
+          "year": "2022",
+          "journal-title": "Elife"
+        },
+        {
+          "key": "2026082407020530100_btag410-B37",
+          "doi-asserted-by": "crossref",
+          "first-page": "eaav1741",
+          "DOI": "10.1126/science.aav1741",
+          "article-title": "The biochemical basis of microRNA targeting efficacy",
+          "volume": "366",
+          "author": "McGeary",
+          "year": "2019",
+          "journal-title": "Science"
+        },
+        {
+          "key": "2026082407020530100_btag410-B38",
+          "doi-asserted-by": "crossref",
+          "first-page": "1604",
+          "DOI": "10.1073/pnas.0610731104",
+          "article-title": "MicroRNA-155 is induced during the macrophage inflammatory response",
+          "volume": "104",
+          "author": "O’Connell",
+          "year": "2007",
+          "journal-title": "Proc Natl Acad Sci U S A"
+        },
+        {
+          "key": "2026082407020530100_btag410-B39",
+          "doi-asserted-by": "crossref",
+          "first-page": "71",
+          "DOI": "10.1186/s12943-026-02603-y",
+          "article-title": "miRNA-driven cancer cell plasticity, tolerance and therapy resistance: lessons from melanoma",
+          "volume": "25",
+          "author": "Ortolano",
+          "year": "2026",
+          "journal-title": "Mol Cancer"
+        },
+        {
+          "key": "2026082407020530100_btag410-B40",
+          "doi-asserted-by": "crossref",
+          "first-page": "23",
+          "DOI": "10.3389/fgene.2014.00023",
+          "article-title": "Common features of microRNA target prediction tools",
+          "volume": "5",
+          "author": "Peterson",
+          "year": "2014",
+          "journal-title": "Front Genet"
+        },
+        {
+          "key": "2026082407020530100_btag410-B41",
+          "doi-asserted-by": "crossref",
+          "first-page": "1695894",
+          "DOI": "10.3389/fimmu.2025.1695894",
+          "article-title": "The role of microRNAs and long non-coding RNAs in epigenetic regulation of T cells: implications for autoimmunity",
+          "volume": "16",
+          "author": "Prasad",
+          "year": "2025",
+          "journal-title": "Front Immunol"
+        },
+        {
+          "key": "2026082407020530100_btag410-B42",
+          "doi-asserted-by": "crossref",
+          "first-page": "424",
+          "DOI": "10.1111/imcb.12551",
+          "article-title": "MicroRNA-mediated metabolic reprogramming of chimeric antigen receptor T cells",
+          "volume": "100",
+          "author": "Rad",
+          "year": "2022",
+          "journal-title": "Immunol Cell Biol"
+        },
+        {
+          "key": "2026082407020530100_btag410-B43",
+          "doi-asserted-by": "crossref",
+          "first-page": "18255",
+          "DOI": "10.1073/pnas.0608791103",
+          "article-title": "A signature pattern of stress-responsive microRNAs that can evoke cardiac hypertrophy and heart failure",
+          "volume": "103",
+          "author": "van Rooij",
+          "year": "2006",
+          "journal-title": "Proc Natl Acad Sci U S A"
+        },
+        {
+          "key": "2026082407020530100_btag410-B44",
+          "doi-asserted-by": "crossref",
+          "first-page": "860",
+          "DOI": "10.1038/nrd3864",
+          "article-title": "MicroRNA therapeutics for cardiovascular disease: opportunities and obstacles",
+          "volume": "11",
+          "author": "van Rooij",
+          "year": "2012",
+          "journal-title": "Nat Rev Drug Discov"
+        },
+        {
+          "key": "2026082407020530100_btag410-B45",
+          "doi-asserted-by": "crossref",
+          "first-page": "203",
+          "DOI": "10.1038/nrd.2016.246",
+          "article-title": "MicroRNA therapeutics: towards a new era for the management of cancer and other diseases",
+          "volume": "16",
+          "author": "Rupaimoole",
+          "year": "2017",
+          "journal-title": "Nat Rev Drug Discov"
+        },
+        {
+          "key": "2026082407020530100_btag410-B46",
+          "doi-asserted-by": "crossref",
+          "first-page": "i542",
+          "DOI": "10.1093/bioinformatics/btaf233",
+          "article-title": "miRBench: novel benchmark datasets for microRNA binding site prediction that mitigate against prevalent microRNA frequency class bias",
+          "volume": "41",
+          "author": "Sammut",
+          "year": "2025",
+          "journal-title": "Bioinformatics"
+        },
+        {
+          "key": "2026082407020530100_btag410-B47",
+          "doi-asserted-by": "crossref",
+          "first-page": "24",
+          "DOI": "10.1111/j.1582-4934.2008.00534.x",
+          "article-title": "Advances in microRNAs: implications for immunity and inflammatory diseases",
+          "volume": "13",
+          "author": "Sonkoly",
+          "year": "2009",
+          "journal-title": "J Cell Mol Med"
+        },
+        {
+          "key": "2026082407020530100_btag410-B48",
+          "doi-asserted-by": "crossref",
+          "first-page": "245",
+          "DOI": "10.1037/0033-2909.87.2.245",
+          "article-title": "Tests for comparing elements of a correlation matrix",
+          "volume": "87",
+          "author": "Steiger",
+          "year": "1980",
+          "journal-title": "Psychol. Bull"
+        },
+        {
+          "key": "2026082407020530100_btag410-B49",
+          "doi-asserted-by": "publisher",
+          "author": "Sundararajan",
+          "year": "2017",
+          "DOI": "10.48550/arXiv.1703.01365,"
+        },
+        {
+          "key": "2026082407020530100_btag410-B50",
+          "doi-asserted-by": "crossref",
+          "first-page": "751",
+          "DOI": "10.1161/CIRCRESAHA.116.303549",
+          "article-title": "Long noncoding RNAs and microRNAs in cardiovascular pathophysiology",
+          "volume": "116",
+          "author": "Thum",
+          "year": "2015",
+          "journal-title": "Circ Res"
+        },
+        {
+          "key": "2026082407020530100_btag410-B51",
+          "doi-asserted-by": "crossref",
+          "first-page": "251",
+          "DOI": "10.1186/s12943-025-02463-y",
+          "article-title": "Advances in RNA-based cancer therapeutics: pre-clinical and clinical implications",
+          "volume": "24",
+          "author": "Yan",
+          "year": "2025",
+          "journal-title": "Mol Cancer"
+        }
+      ],
+      "container-title": [
+        "Bioinformatics"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://academic.oup.com/bioinformatics/article-pdf/42/Supplement_2/btag410/70726079/btag410.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "syndication"
+        },
+        {
+          "URL": "https://academic.oup.com/bioinformatics/article-pdf/42/Supplement_2/btag410/70726079/btag410.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            24
+          ]
+        ],
+        "date-time": "2026-08-24T11:02:22Z",
+        "timestamp": 1787569342000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://academic.oup.com/bioinformatics/article/doi/10.1093/bioinformatics/btag410/8767265"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            1
+          ]
+        ]
+      },
+      "references-count": 51,
+      "journal-issue": {
+        "issue": "Supplement_2",
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "URL": "https://doi.org/10.1093/bioinformatics/btag410",
+      "relation": {},
+      "ISSN": [
+        "1367-4803",
+        "1367-4811"
+      ],
+      "issn-type": [
+        {
+          "value": "1367-4803",
+          "type": "print"
+        },
+        {
+          "value": "1367-4811",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published-other": {
+        "date-parts": [
+          [
+            2026,
+            8
+          ]
+        ]
+      },
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            1
+          ]
+        ]
+      },
+      "article-number": "btag410"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+--- layers.py.orig	2026-09-19 14:43:56.626858270 +0800
++++ layers.py	2026-09-19 14:44:04.298909077 +0800
+@@ -1,3 +1,4 @@
++import os
+ import torch
+ import torch.nn as nn
+ import torch.nn.functional as F
+@@ -11,6 +12,16 @@
+ import warnings
+ warnings.filterwarnings('ignore', category=UserWarning, module='torch_geometric')
+ 
++# Local paths to off-line pre-trained weights (HuggingFace hub is unreachable here).
++_CHEMBERTA_DIR = os.environ.get(
++    "CHEMBERTA_DIR",
++    os.path.join(os.path.dirname(os.path.abspath(__file__)), "DeepChem", "ChemBERTa-77M-MLM"),
++)
++_RNAFM_WEIGHTS = os.environ.get(
++    "RNAFM_PRETRAINED",
++    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/new5_repro_20260919/models/rnafm/RNA-FM_pretrained.pth",
++)
++
+ class CNNFeatureExtractor(nn.Module):
+ 
+     def __init__(self, output_dim, vocab_size=5, embed_dim=128, num_filters=64, filter_sizes=[2, 3, 4]):
+@@ -48,7 +59,7 @@
+     def __init__(self, output_dim, model_layer=12):
+         super(RNAFMFeatureExtractor, self).__init__()
+ 
+-        self.model, self.alphabet = fm.pretrained.rna_fm_t12()
++        self.model, self.alphabet = fm.pretrained.rna_fm_t12(_RNAFM_WEIGHTS)
+         self.batch_converter = self.alphabet.get_batch_converter()
+         self.model.eval()
+ 
+@@ -118,8 +129,8 @@
+ 
+     def __init__(self, output_dim):
+         super(ChemBERTaFeatureExtractor, self).__init__()
+-        self.tokenizer = AutoTokenizer.from_pretrained("DeepChem/ChemBERTa-77M-MLM")
+-        self.model = AutoModel.from_pretrained("DeepChem/ChemBERTa-77M-MLM")
++        self.tokenizer = AutoTokenizer.from_pretrained(_CHEMBERTA_DIR)
++        self.model = AutoModel.from_pretrained(_CHEMBERTA_DIR)
+ 
+         for param in self.model.parameters():
+             param.requires_grad = False

@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/fVIEpbILhs1zolkDlXruHLnT7Ac</id>
+  <title>arXiv Query: search_query=(ti:"link prediction") AND (all:Gaussian OR all:kernel OR all:residual OR all:correction)&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T01:17:16Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22link+prediction%22+AND+(all:Gaussian+OR+(all:kernel+OR+(all:residual+OR+all:correction)))&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>19</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.09899v1</id>
+    <title>Fairness in Link Prediction Beyond Demographic Parity: A Reproducibility Study</title>
+    <updated>2026-08-10T17:47:19Z</updated>
+    <link href="https://arxiv.org/abs/2608.09899v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.09899v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In fair ranked link prediction, demographic parity ($Δ_\mathrm{DP}$) is a common fairness metric. Yet, Mattos et al. (2025) argue that it fails to detect exposure bias because it ignores where links appear in the ranking. In this study, we reproduce this claim by showing that $Δ_\mathrm{DP}$ can indicate aggregate parity even when some subgroup-pair links are systematically ranked lower than others. The proposed rank-aware Normalized Discounted KL-divergence (NDKL), however, does detect such disparities. We also reproduce the effectiveness of MORAL, a post-processing method that improves exposure-based fairness while maintaining competitive utility. Beyond reproduction, we assess robustness using synthetic homophily settings, categorical sensitive attributes, and additional fairness and utility metrics, including subgroup-pair-adapted Attention-Weighted Rank Fairness (AWRF). Overall, our results show that exposure-based metrics uncover biases hidden by $Δ_\mathrm{DP}$ and that MORAL reduces these biases with minimal utility loss across diverse settings and datasets. We release a corrected, reproducible implementation at https://github.com/Floris93100/reproducing-MORAL.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-10T17:47:19Z</published>
+    <arxiv:comment>Published in Transactions on Machine Learning Research (05/2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Transactions on Machine Learning Research, 2026</arxiv:journal_ref>
+    <author>
+      <name>Valentijn Oldenburg</name>
+    </author>
+    <author>
+      <name>Floris de Kam</name>
+    </author>
+    <author>
+      <name>Stef de Wildt</name>
+    </author>
+    <author>
+      <name>Jarno Nilson Balk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.25978v1</id>
+    <title>Mini-Batch Class Composition Bias in Link Prediction</title>
+    <updated>2026-04-28T14:03:50Z</updated>
+    <link href="https://arxiv.org/abs/2604.25978v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.25978v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prior work on node classification has shown that Graph Neural Networks (GNNs) can learn representations that transfer across graphs, when underlying graph properties are shared. For a fixed graph, one would then expect GNNs trained for link prediction to learn a representation consistent with that learnt for node classification. We show this intuition does not hold in the general case. Instead, we find popular link prediction models can learn a trivial mini-batch dependent heuristic, enabled by batch-normalisation layers, to solve the edge classification task. When correcting for this, we observe increased alignment of the network representation with node-class relevant features, suggesting the network has learnt a graph representation that better aligns with the underlying graph's properties. Our findings suggest that standard link prediction training may be leading us to overestimate link predictors' ability to learn a generalised representation of a graph that is consistent across tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-28T14:03:50Z</published>
+    <arxiv:comment>Accepted at GCLR 2026: the 5th Workshop on Graphs and more Complex Structures For Learning and Reasoning, colocated with AAAI 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Kieran Maguire</name>
+    </author>
+    <author>
+      <name>Srinandan Dasmahapatra</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.23370v2</id>
+    <title>Link prediction in ecological networks under extreme taxonomic bias</title>
+    <updated>2025-11-17T21:12:19Z</updated>
+    <link href="https://arxiv.org/abs/2506.23370v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.23370v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ecological networks offer powerful insights into community function, but without first characterizing these networks accurately, our ability to detect and interpret changes under environmental stress is limited. We develop an approach to reduce bias in link prediction in the common scenario in which data are derived from studies focused on a small number of species. Our Extended Covariate-Informed Link Prediction (COIL+) framework employs a latent factor model that flexibly borrows information across species, incorporates species traits and phylogeny, and leverages information from multiple studies to address uncertainty in species occurrence. We also propose a trait-matching procedure that allows heterogeneity in species-level trait-interaction associations. We illustrate the approach with a literature-based dataset of 268 sources reporting Afrotropical frugivory and compare performance with and without correction for occurrence uncertainty. COIL+ substantially improves link prediction and reduces sampling bias, revealing 5637 likely but unobserved frugivory interactions (a median of nine additional interactions per frugivore). Newly predicted interactions are concentrated among poorly sampled frugivores, such as the water chevrotain (Hyemoschus aquaticus, a small forest-dwelling ungulate) and the rufous-bellied helmetshrike (Prionops rufiventris, a passerine bird of East African tropical forests). Additionally, the method improves model discrimination compared to existing methods under strong taxonomic bias and narrow study focus. This framework generalizes to diverse network contexts and provides a useful tool for link prediction in the face of biased interaction data.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-29T19:09:37Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Jennifer N. Kampe</name>
+    </author>
+    <author>
+      <name>Camille M. M. DeSisto</name>
+    </author>
+    <author>
+      <name>David B. Dunson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.03019v1</id>
+    <title>Identification of Device Dependencies Using Link Prediction</title>
+    <updated>2024-07-03T11:28:09Z</updated>
+    <link href="https://arxiv.org/abs/2407.03019v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.03019v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Devices in computer networks cannot work without essential network services provided by a limited count of devices. Identification of device dependencies determines whether a pair of IP addresses is a dependency, i.e., the host with the first IP address is dependent on the second one. These dependencies cannot be identified manually in large and dynamically changing networks. Nevertheless, they are important due to possible unexpected failures, performance issues, and cascading effects. We address the identification of dependencies using a new approach based on graph-based machine learning. The approach belongs to link prediction based on a latent representation of the computer network's communication graph. It samples random walks over IP addresses that fulfill time conditions imposed on network dependencies. The constrained random walks are used by a neural network to construct IP address embedding, which is a space that contains IP addresses that often appear close together in the same communication chain (i.e., random walk). Dependency embedding is constructed by combining values for IP addresses from their embedding and used for training the resulting dependency classifier. We evaluated the approach using IP flow datasets from a controlled environment and university campus network that contain evidence about dependencies. Evaluation concerning the correctness and relationship to other approaches shows that the approach achieves acceptable performance. It can simultaneously consider all types of dependencies and is applicable for batch processing in operational conditions.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-03T11:28:09Z</published>
+    <arxiv:comment>IEEE/IFIP NOMS 2024 conference, 10 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Lukáš Sadlek</name>
+    </author>
+    <author>
+      <name>Martin Husák</name>
+    </author>
+    <author>
+      <name>Pavel Čeleda</name>
+    </author>
+    <arxiv:doi>10.1109/NOMS59830.2024.10575713</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/NOMS59830.2024.10575713" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.14985v2</id>
+    <title>Implicit degree bias in the link prediction task</title>
+    <updated>2024-05-29T08:39:50Z</updated>
+    <link href="https://arxiv.org/abs/2405.14985v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.14985v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction -- a task of distinguishing actual hidden edges from random unconnected node pairs -- is one of the quintessential tasks in graph machine learning. Despite being widely accepted as a universal benchmark and a downstream task for representation learning, the validity of the link prediction benchmark itself has been rarely questioned. Here, we show that the common edge sampling procedure in the link prediction task has an implicit bias toward high-degree nodes and produces a highly skewed evaluation that favors methods overly dependent on node degree, to the extent that a ``null'' link prediction method based solely on node degree can yield nearly optimal performance. We propose a degree-corrected link prediction task that offers a more reasonable assessment that aligns better with the performance in the recommendation task. Finally, we demonstrate that the degree-corrected benchmark can more effectively train graph machine-learning models by reducing overfitting to node degrees and facilitating the learning of relevant structures in graphs.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-23T18:38:42Z</published>
+    <arxiv:comment>13 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Rachith Aiyappa</name>
+    </author>
+    <author>
+      <name>Xin Wang</name>
+    </author>
+    <author>
+      <name>Munjung Kim</name>
+    </author>
+    <author>
+      <name>Ozgur Can Seckin</name>
+    </author>
+    <author>
+      <name>Jisung Yoon</name>
+    </author>
+    <author>
+      <name>Yong-Yeol Ahn</name>
+    </author>
+    <author>
+      <name>Sadamori Kojaku</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.13996v1</id>
+    <title>Emulating the Human Mind: A Neural-symbolic Link Prediction Model with Fast and Slow Reasoning and Filtered Rules</title>
+    <updated>2023-10-21T12:45:11Z</updated>
+    <link href="https://arxiv.org/abs/2310.13996v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.13996v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction is an important task in addressing the incompleteness problem of knowledge graphs (KG). Previous link prediction models suffer from issues related to either performance or explanatory capability. Furthermore, models that are capable of generating explanations, often struggle with erroneous paths or reasoning leading to the correct answer. To address these challenges, we introduce a novel Neural-Symbolic model named FaSt-FLiP (stands for Fast and Slow Thinking with Filtered rules for Link Prediction task), inspired by two distinct aspects of human cognition: "commonsense reasoning" and "thinking, fast and slow." Our objective is to combine a logical and neural model for enhanced link prediction. To tackle the challenge of dealing with incorrect paths or rules generated by the logical model, we propose a semi-supervised method to convert rules into sentences. These sentences are then subjected to assessment and removal of incorrect rules using an NLI (Natural Language Inference) model. Our approach to combining logical and neural models involves first obtaining answers from both the logical and neural models. These answers are subsequently unified using an Inference Engine module, which has been realized through both algorithmic implementation and a novel neural model architecture. To validate the efficacy of our model, we conducted a series of experiments. The results demonstrate the superior performance of our model in both link prediction metrics and the generation of more reliable explanations.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-21T12:45:11Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Mohammad Hossein Khojasteh</name>
+    </author>
+    <author>
+      <name>Najmeh Torabian</name>
+    </author>
+    <author>
+      <name>Ali Farjami</name>
+    </author>
+    <author>
+      <name>Saeid Hosseini</name>
+    </author>
+    <author>
+      <name>Behrouz Minaei-Bidgoli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.00286v4</id>
+    <title>Treat Different Negatives Differently: Enriching Loss Functions with Domain and Range Constraints for Link Prediction</title>
+    <updated>2024-03-05T20:49:10Z</updated>
+    <link href="https://arxiv.org/abs/2303.00286v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.00286v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graph embedding models (KGEMs) are used for various tasks related to knowledge graphs (KGs), including link prediction. They are trained with loss functions that consider batches of true and false triples. However, different kinds of false triples exist and recent works suggest that they should not be valued equally, leading to specific negative sampling procedures. In line with this recent assumption, we posit that negative triples that are semantically valid w.r.t. signatures of relations (domain and range) are high-quality negatives. Hence, we enrich the three main loss functions for link prediction such that all kinds of negatives are sampled but treated differently based on their semantic validity. In an extensive and controlled experimental setting, we show that the proposed loss functions systematically provide satisfying results which demonstrates both the generality and superiority of our proposed approach. In fact, the proposed loss functions (1) lead to better MRR and Hits@10 values, and (2) drive KGEMs towards better semantic correctness as measured by the Sem@K metric. This highlights that relation signatures globally improve KGEMs, and thus should be incorporated into loss functions. Domains and ranges of relations being largely available in schema-defined KGs, this makes our approach both beneficial and widely usable in practice.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-01T07:25:28Z</published>
+    <arxiv:comment>Accepted in ESWC 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nicolas Hubert</name>
+    </author>
+    <author>
+      <name>Pierre Monnin</name>
+    </author>
+    <author>
+      <name>Armelle Brun</name>
+    </author>
+    <author>
+      <name>Davy Monticolo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.10688v2</id>
+    <title>ReInform: Selecting paths with reinforcement learning for contextualized link prediction</title>
+    <updated>2023-01-23T11:29:44Z</updated>
+    <link href="https://arxiv.org/abs/2211.10688v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.10688v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose to use reinforcement learning to inform transformer-based contextualized link prediction models by providing paths that are most useful for predicting the correct answer. This is in contrast to previous approaches, that either used reinforcement learning (RL) to directly search for the answer, or based their prediction on limited or randomly selected context. Our experiments on WN18RR and FB15k-237 show that contextualized link prediction models consistently outperform RL-based answer search, and that additional improvements (of up to 13.5% MRR) can be gained by combining RL with a link prediction model. The PyTorch implementation of the RL agent is available at https://github.com/marina-sp/reinform</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-19T13:04:53Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Marina Speranskaya</name>
+    </author>
+    <author>
+      <name>Sameh Methias</name>
+    </author>
+    <author>
+      <name>Benjamin Roth</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.09079v1</id>
+    <title>Network structural perturbation against interlayer link prediction</title>
+    <updated>2022-05-18T17:10:24Z</updated>
+    <link href="https://arxiv.org/abs/2205.09079v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.09079v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Interlayer link prediction aims at matching the same entities across different layers of the multiplex network. Existing studies attempt to predict more accurately, efficiently, or generically from the aspects of network structure, attribute characteristics, and their combination. Few of them analyze the effects of intralayer links. Namely, few works study the backbone structures which can effectively preserve the predictive accuracy while dealing with a smaller number of intralayer links. It can be used to investigate what types of intralayer links are most important for correct prediction. Are there any intralayer links whose presence leads to worse predictive performance than their absence, and how to attack the prediction algorithms at the minimum cost? To this end, two kinds of network structural perturbation methods are proposed. For the scenario where the structural information of the whole network is completely known, we offer a global perturbation strategy that gives different perturbation weights to different types of intralayer links and then selects a predetermined proportion of intralayer links to remove according to the weights. In contrast, if these information cannot be obtained at one time, we design a biased random walk procedure, local perturbation strategy, to execute perturbation. Four kinds of interlayer link prediction algorithms are carried out on different real-world and artificial perturbed multiplex networks. We find out that the intralayer links connected with small degree nodes have the most significant impact on the prediction accuracy. The intralayer links connected with large degree nodes may have side effects on the interlayer link prediction.</summary>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-18T17:10:24Z</published>
+    <arxiv:primary_category term="physics.soc-ph"/>
+    <author>
+      <name>Rui Tang</name>
+    </author>
+    <author>
+      <name>Shuyu Jiang</name>
+    </author>
+    <author>
+      <name>Xingshu Chen</name>
+    </author>
+    <author>
+      <name>Wenxian Wang</name>
+    </author>
+    <author>
+      <name>Wei Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.15230v2</id>
+    <title>Convolutional Hypercomplex Embeddings for Link Prediction</title>
+    <updated>2021-11-18T09:36:15Z</updated>
+    <link href="https://arxiv.org/abs/2106.15230v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.15230v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graph embedding research has mainly focused on the two smallest normed division algebras, $\mathbb{R}$ and $\mathbb{C}$. Recent results suggest that trilinear products of quaternion-valued embeddings can be a more effective means to tackle link prediction. In addition, models based on convolutions on real-valued embeddings often yield state-of-the-art results for link prediction. In this paper, we investigate a composition of convolution operations with hypercomplex multiplications. We propose the four approaches QMult, OMult, ConvQ and ConvO to tackle the link prediction problem. QMult and OMult can be considered as quaternion and octonion extensions of previous state-of-the-art approaches, including DistMult and ComplEx. ConvQ and ConvO build upon QMult and OMult by including convolution operations in a way inspired by the residual learning framework. We evaluated our approaches on seven link prediction datasets including WN18RR, FB15K-237 and YAGO3-10. Experimental results suggest that the benefits of learning hypercomplex-valued vector representations become more apparent as the size and complexity of the knowledge graph grows. ConvO outperforms state-of-the-art approaches on FB15K-237 in MRR, Hit@1 and Hit@3, while QMult, OMult, ConvQ and ConvO outperform state-of-the-approaches on YAGO3-10 in all metrics. Results also suggest that link prediction performances can be further improved via prediction averaging. To foster reproducible research, we provide an open-source implementation of approaches, including training and evaluation scripts as well as pretrained models.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-29T10:26:51Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>The 13th Asian Conference on Machine Learning, ACML 2021</arxiv:journal_ref>
+    <author>
+      <name>Caglar Demir</name>
+    </author>
+    <author>
+      <name>Diego Moussallem</name>
+    </author>
+    <author>
+      <name>Stefan Heindorf</name>
+    </author>
+    <author>
+      <name>Axel-Cyrille Ngonga Ngomo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.12524v1</id>
+    <title>Out-of-Vocabulary Entities in Link Prediction</title>
+    <updated>2021-05-26T12:58:18Z</updated>
+    <link href="https://arxiv.org/abs/2105.12524v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.12524v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graph embedding techniques are key to making knowledge graphs amenable to the plethora of machine learning approaches based on vector representations. Link prediction is often used as a proxy to evaluate the quality of these embeddings. Given that the creation of benchmarks for link prediction is a time-consuming endeavor, most work on the subject matter uses only a few benchmarks. As benchmarks are crucial for the fair comparison of algorithms, ensuring their quality is tantamount to providing a solid ground for developing better solutions to link prediction and ipso facto embedding knowledge graphs. First studies of benchmarks pointed to limitations pertaining to information leaking from the development to the test fragments of some benchmark datasets. We spotted a further common limitation of three of the benchmarks commonly used for evaluating link prediction approaches: out-of-vocabulary entities in the test and validation sets. We provide an implementation of an approach for spotting and removing such entities and provide corrected versions of the datasets WN18RR, FB15K-237, and YAGO3-10. Our experiments on the corrected versions of WN18RR, FB15K-237, and YAGO3-10 suggest that the measured performance of state-of-the-art approaches is altered significantly with p-values &lt;1%, &lt;1.4%, and &lt;1%, respectively. Overall, state-of-the-art approaches gain on average absolute $3.29 \pm 0.24\%$ in all metrics on WN18RR. This means that some of the conclusions achieved in previous works might need to be revisited. We provide an open-source implementation of our experiments and corrected datasets at at https://github.com/dice-group/OOV-In-Link-Prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-26T12:58:18Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Caglar Demir</name>
+    </author>
+    <author>
+      <name>Axel-Cyrille Ngonga Ngomo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.00695v2</id>
+    <title>ResVGAE: Going Deeper with Residual Modules for Link Prediction</title>
+    <updated>2022-08-04T20:30:34Z</updated>
+    <link href="https://arxiv.org/abs/2105.00695v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.00695v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph autoencoders are efficient at embedding graph-based data sets. Most graph autoencoder architectures have shallow depths which limits their ability to capture meaningful relations between nodes separated by multi-hops. In this paper, we propose Residual Variational Graph Autoencoder, ResVGAE, a deep variational graph autoencoder model with multiple residual modules. We show that our multiple residual modules, a convolutional layer with residual connection, improve the average precision of the graph autoencoders. Experimental results suggest that our proposed model with residual modules outperforms the models without residual modules and achieves similar results when compared with other state-of-the-art methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-03T09:05:46Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Indrit Nallbani</name>
+    </author>
+    <author>
+      <name>Reyhan Kevser Keser</name>
+    </author>
+    <author>
+      <name>Aydin Ayanzadeh</name>
+    </author>
+    <author>
+      <name>Nurullah Çalık</name>
+    </author>
+    <author>
+      <name>Behçet Uğur Töreyin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.11414v2</id>
+    <title>Deepened Graph Auto-Encoders Help Stabilize and Enhance Link Prediction</title>
+    <updated>2022-08-26T15:01:24Z</updated>
+    <link href="https://arxiv.org/abs/2103.11414v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.11414v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks have been used for a variety of learning tasks, such as link prediction, node classification, and node clustering. Among them, link prediction is a relatively under-studied graph learning task, with current state-of-the-art models based on one- or two-layer of shallow graph auto-encoder (GAE) architectures. In this paper, we focus on addressing a limitation of current methods for link prediction, which can only use shallow GAEs and variational GAEs, and creating effective methods to deepen (variational) GAE architectures to achieve stable and competitive performance. Our proposed methods innovatively incorporate standard auto-encoders (AEs) into the architectures of GAEs, where standard AEs are leveraged to learn essential, low-dimensional representations via seamlessly integrating the adjacency information and node features, while GAEs further build multi-scaled low-dimensional representations via residual connections to learn a compact overall embedding for link prediction. Empirically, extensive experiments on various benchmarking datasets verify the effectiveness of our methods and demonstrate the competitive performance of our deepened graph models for link prediction. Theoretically, we prove that our deep extensions inclusively express multiple polynomial filters with different orders.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-21T14:43:10Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Published as a conference paper at IJCAI 2022</arxiv:journal_ref>
+    <author>
+      <name>Xinxing Wu</name>
+    </author>
+    <author>
+      <name>Qiang Cheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.12657v1</id>
+    <title>Spectral Evolution with Approximated Eigenvalue Trajectories for Link Prediction</title>
+    <updated>2020-06-22T22:42:50Z</updated>
+    <link href="https://arxiv.org/abs/2006.12657v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.12657v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The spectral evolution model aims to characterize the growth of large networks (i.e., how they evolve as new edges are established) in terms of the eigenvalue decomposition of the adjacency matrices. It assumes that, while eigenvectors remain constant, eigenvalues evolve in a predictable manner over time. This paper extends the original formulation of the model twofold.
+  First, it presents a method to compute an approximation of the spectral evolution of eigenvalues based on the Rayleigh quotient.
+  Second, it proposes an algorithm to estimate the evolution of eigenvalues by extrapolating only a fraction of their approximated values.
+  The proposed model is used to characterize mention networks of users who posted tweets that include the most popular political hashtags in Colombia from August 2017 to August 2018 (the period which concludes the disarmament of the Revolutionary Armed Forces of Colombia). To evaluate the extent to which the spectral evolution model resembles these networks, link prediction methods based on learning algorithms (i.e., extrapolation and regression) and graph kernels are implemented. Experimental results show that the learning algorithms deployed on the approximated trajectories outperform the usual kernel and extrapolation methods at predicting the formation of new edges.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-22T22:42:50Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Miguel Romero</name>
+    </author>
+    <author>
+      <name>Jorge Finke</name>
+    </author>
+    <author>
+      <name>Camilo Rocha</name>
+    </author>
+    <author>
+      <name>Luis Tobón</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.14187v1</id>
+    <title>Data-driven Link Prediction over Graphical Models</title>
+    <updated>2020-04-29T13:31:24Z</updated>
+    <link href="https://arxiv.org/abs/2004.14187v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.14187v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The positive link prediction (PLP) problem is formulated in a system identification framework: we consider dynamic graphical models for auto-regressive moving-average (ARMA) Gaussian random processes. For the identification of the parameters, we model our network on two different time scales: a quicker one, over which we assume that the process representing the dynamics of the agents can be considered to be stationary, and a slower one in which the model parameters may vary. The latter accounts for the possible appearance of new edges. The identification problem is cast into an optimization framework which can be seen as a generalization of the existing methods for the identification of ARMA graphical models. We prove the existence and uniqueness of the solution of such an optimization problem and we propose a procedure to compute numerically this solution. Simulations testing the performances of our method are provided.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-29T13:31:24Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Daniele Alpago</name>
+    </author>
+    <author>
+      <name>Mattia Zorzi</name>
+    </author>
+    <author>
+      <name>Augusto Ferrante</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.01168v3</id>
+    <title>Evaluating the Calibration of Knowledge Graph Embeddings for Trustworthy Link Prediction</title>
+    <updated>2020-10-06T09:31:15Z</updated>
+    <link href="https://arxiv.org/abs/2004.01168v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.01168v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Little is known about the trustworthiness of predictions made by knowledge graph embedding (KGE) models. In this paper we take initial steps toward this direction by investigating the calibration of KGE models, or the extent to which they output confidence scores that reflect the expected correctness of predicted knowledge graph triples. We first conduct an evaluation under the standard closed-world assumption (CWA), in which predicted triples not already in the knowledge graph are considered false, and show that existing calibration techniques are effective for KGE under this common but narrow assumption. Next, we introduce the more realistic but challenging open-world assumption (OWA), in which unobserved predictions are not considered true or false until ground-truth labels are obtained. Here, we show that existing calibration techniques are much less effective under the OWA than the CWA, and provide explanations for this discrepancy. Finally, to motivate the utility of calibration for KGE from a practitioner's perspective, we conduct a unique case study of human-AI collaboration, showing that calibrated predictions can improve human performance in a knowledge graph completion task.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-02T17:46:47Z</published>
+    <arxiv:comment>EMNLP 2020</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Tara Safavi</name>
+    </author>
+    <author>
+      <name>Danai Koutra</name>
+    </author>
+    <author>
+      <name>Edgar Meij</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.04337v1</id>
+    <title>Graph Convolutional Gaussian Processes For Link Prediction</title>
+    <updated>2020-02-11T12:12:21Z</updated>
+    <link href="https://arxiv.org/abs/2002.04337v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.04337v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction aims to reveal missing edges in a graph. We address this task with a Gaussian process that is transformed using simplified graph convolutions to better leverage the inductive bias of the domain. To scale the Gaussian process model to large graphs, we introduce a variational inducing point method that places pseudo inputs on a graph-structured domain. We evaluate our model on eight large graphs with up to thousands of nodes and report consistent improvements over existing Gaussian process models as well as competitive performance when compared to state-of-the-art graph neural network approaches.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-11T12:12:21Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Felix L. Opolka</name>
+    </author>
+    <author>
+      <name>Pietro Liò</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.06525v1</id>
+    <title>Fast Computation of Katz Index for Efficient Processing of Link Prediction Queries</title>
+    <updated>2019-12-13T14:26:38Z</updated>
+    <link href="https://arxiv.org/abs/1912.06525v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.06525v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Network proximity computations are among the most common operations in various data mining applications, including link prediction and collaborative filtering. A common measure of network proximity is Katz index, which has been shown to be among the best-performing path-based link prediction algorithms. With the emergence of very large network databases, such proximity computations become an important part of query processing in these databases. Consequently, significant effort has been devoted to developing algorithms for efficient computation of Katz index between a given pair of nodes or between a query node and every other node in the network. Here, we present LRC-Katz, an algorithm based on indexing and low-rank correction to accelerate Katz index-based network proximity queries. Using a variety of very large real-world networks, we show that LRC-Katz outperforms the fastest existing method, Conjugate Gradient, for a wide range of parameter values. We also show that this acceleration in the computation of Katz index can be used to drastically improve the efficiency of processing link prediction queries in very large networks. Motivated by this observation, we propose a new link prediction algorithm that exploits modularity of networks that are encountered in practical applications. Our experimental results on the link prediction problem show that our modularity based algorithm significantly outperforms the state-of-the-art link prediction Katz method.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-13T14:26:38Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Mustafa Coskun</name>
+    </author>
+    <author>
+      <name>Abdelkader Baggag</name>
+    </author>
+    <author>
+      <name>Mehmet Koyuturk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1006.5367v1</id>
+    <title>The Link Prediction Problem in Bipartite Networks</title>
+    <updated>2010-06-28T14:40:37Z</updated>
+    <link href="https://arxiv.org/abs/1006.5367v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1006.5367v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We define and study the link prediction problem in bipartite networks, specializing general link prediction algorithms to the bipartite case. In a graph, a link prediction function of two vertices denotes the similarity or proximity of the vertices. Common link prediction functions for general graphs are defined using paths of length two between two nodes. Since in a bipartite graph adjacency vertices can only be connected by paths of odd lengths, these functions do not apply to bipartite graphs. Instead, a certain class of graph kernels (spectral transformation kernels) can be generalized to bipartite graphs when the positive-semidefinite kernel constraint is relaxed. This generalization is realized by the odd component of the underlying spectral transformation. This construction leads to several new link prediction pseudokernels such as the matrix hyperbolic sine, which we examine for rating graphs, authorship graphs, folksonomies, document--feature networks and other types of bipartite networks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-06-28T14:40:37Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jérôme Kunegis</name>
+    </author>
+    <author>
+      <name>Ernesto W. De Luca</name>
+    </author>
+    <author>
+      <name>Sahin Albayrak</name>
+    </author>
+  </entry>
+</feed>

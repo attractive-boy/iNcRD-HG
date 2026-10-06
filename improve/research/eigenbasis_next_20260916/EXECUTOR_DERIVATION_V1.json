@@ -1,0 +1,50 @@
+{
+  "source": "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_preconditioning_experiment_v1.py",
+  "source_sha256": "d8f00300f33ac07f5336858b4495439ccfcf7dacedcc305c67b3b26802332bad",
+  "target": "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_eigenbasis_experiment_v1.py",
+  "target_sha256": "8ed780cd5ad392078380fa6c3ec2649fda78f9de375edf3e0ff6d98b19574824",
+  "replacements": [
+    {
+      "old": "anchor_preconditioning_experiment_v1",
+      "new": "anchor_eigenbasis_experiment_v1",
+      "occurrences": 2
+    },
+    {
+      "old": "kronecker_preconditioning",
+      "new": "eigenbasis_adam",
+      "occurrences": 5
+    },
+    {
+      "old": "preconditioned_graph_v1",
+      "new": "eigenbasis_graph_v1",
+      "occurrences": 1
+    },
+    {
+      "old": "All four arms",
+      "new": "All three arms",
+      "occurrences": 1
+    },
+    {
+      "old": "Four declared arms",
+      "new": "Three declared arms",
+      "occurrences": 1
+    },
+    {
+      "old": "Full must beat scalar_coupling, SOAP and AdamW",
+      "new": "Full must beat separable_variance and AdamW",
+      "occurrences": 1
+    },
+    {
+      "old": "primary_and_controls_fixed_before_screening=True,",
+      "new": "primary_and_controls_fixed_before_new_fits=True, parent_screening_results_seen=True,\n        this_revision_has_independent_screen=False, baseline_adoption=parent['baseline_adoption'],",
+      "occurrences": 1
+    },
+    {
+      "old": "\n\ndef prepare(out, family, cache, core):",
+      "new": "\n\nOWN += ('kronecker_preconditioning_v1.py', 'preconditioned_graph_v1.py',\n        'anchor_preconditioning_experiment_v1.py')\n\ndef prepare(out, family, cache, core):",
+      "occurrences": 1
+    }
+  ],
+  "parent_source_unchanged": true,
+  "training_loop_and_prediction_body_unchanged": true
+}

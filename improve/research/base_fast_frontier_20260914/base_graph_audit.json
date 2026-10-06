@@ -1,0 +1,122 @@
+{
+  "tasks": {
+    "LncDrug": {
+      "nodes": {
+        "lncRNA": [
+          1322,
+          938
+        ],
+        "miRNA": [
+          605,
+          938
+        ],
+        "drug": [
+          216,
+          768
+        ],
+        "circRNA": [
+          2758,
+          43
+        ]
+      },
+      "edges": {
+        "lncRNA|LncLnc|lncRNA": 8772,
+        "lncRNA|LncDrug|drug": 1266,
+        "miRNA|MiMi|miRNA": 16232,
+        "miRNA|MiDrug|drug": 5394,
+        "drug|DrugDrug|drug": 852,
+        "lncRNA|LncMi|miRNA": 1841,
+        "circRNA|CircCirc|circRNA": 31188,
+        "circRNA|CircDrug|drug": 2936,
+        "circRNA|CircHost|circRNA": 6318,
+        "drug|rev_LncDrug|lncRNA": 1266,
+        "drug|rev_MiDrug|miRNA": 5394,
+        "miRNA|rev_LncMi|lncRNA": 1841,
+        "drug|rev_CircDrug|circRNA": 2936
+      },
+      "train_positives": 1266,
+      "train_unlabeled": 2534,
+      "val_pairs": 1263,
+      "val_positives": 421,
+      "train_positive_target_edges_present": 1266,
+      "validation_target_edges_present": 0,
+      "reverse_consistent": true,
+      "graph_sha256": "4fa7e42a30b279ef2bde97a11cd7d38c675ec46331200e23c6c98bf00d82d3db",
+      "input_sha256": "b5fadacfe33b0342b5496c8800fae642a3bac6cfbb6dc2ad3cadba49a3b1b5c7",
+      "input_keys_are_train_val_only": true,
+      "lncRNA_target_degree": {
+        "zero": 416,
+        "one": 697,
+        "two": 147,
+        "median": 1.0,
+        "max": 24
+      },
+      "drug_target_degree": {
+        "zero": 161,
+        "one": 25,
+        "two": 7,
+        "median": 0.0,
+        "max": 454
+      }
+    },
+    "MiDrug": {
+      "nodes": {
+        "lncRNA": [
+          1322,
+          938
+        ],
+        "miRNA": [
+          605,
+          938
+        ],
+        "drug": [
+          216,
+          768
+        ],
+        "circRNA": [
+          2758,
+          43
+        ]
+      },
+      "edges": {
+        "lncRNA|LncLnc|lncRNA": 8772,
+        "lncRNA|LncDrug|drug": 2109,
+        "miRNA|MiMi|miRNA": 16232,
+        "miRNA|MiDrug|drug": 3236,
+        "drug|DrugDrug|drug": 852,
+        "lncRNA|LncMi|miRNA": 1841,
+        "circRNA|CircCirc|circRNA": 31188,
+        "circRNA|CircDrug|drug": 2936,
+        "circRNA|CircHost|circRNA": 6318,
+        "drug|rev_LncDrug|lncRNA": 2109,
+        "drug|rev_MiDrug|miRNA": 3236,
+        "miRNA|rev_LncMi|lncRNA": 1841,
+        "drug|rev_CircDrug|circRNA": 2936
+      },
+      "train_positives": 3236,
+      "train_unlabeled": 6476,
+      "val_pairs": 3234,
+      "val_positives": 1078,
+      "train_positive_target_edges_present": 3236,
+      "validation_target_edges_present": 0,
+      "reverse_consistent": true,
+      "graph_sha256": "9bc416f0c1e326e81157a2069ee0750e47c51de0dddb0684560d49fc8c0816b9",
+      "input_sha256": "43e8eec8d1933ed426a67edd0fcaa0019a30e6b5c1fe91d1ff323fa9776033ae",
+      "input_keys_are_train_val_only": true,
+      "miRNA_target_degree": {
+        "zero": 33,
+        "one": 87,
+        "two": 82,
+        "median": 4.0,
+        "max": 27
+      },
+      "drug_target_degree": {
+        "zero": 50,
+        "one": 78,
+        "two": 14,
+        "median": 1.0,
+        "max": 277
+      }
+    }
+  }
+}

@@ -1,0 +1,1192 @@
+[
+  {
+    "tag": "p",
+    "heading": "",
+    "text": "Content selection saved. Describe the issue below:"
+  },
+  {
+    "tag": "h1",
+    "heading": "Multimodal AI predicts clinical outcomes of drug combinations from preclinical data",
+    "text": "Multimodal AI predicts clinical outcomes of drug combinations from preclinical data"
+  },
+  {
+    "tag": "p",
+    "heading": "Multimodal AI predicts clinical outcomes of drug combinations from preclinical data",
+    "text": "Predicting clinical outcomes from preclinical data is essential for identifying safe and effective drug combinations, reducing late-stage clinical failures, and accelerating the development of precision therapies. Current AI models rely on structural or target-based features but fail to incorporate the multimodal data necessary for accurate, clinically relevant predictions. Here, we introduce Madrigal, a multimodal AI model that learns from structural, pathway, cell‑viability, and transcriptomic data to predict drug‑combination effects across 953 clinical outcomes and 21,842 compounds, including combinations of approved drugs and novel compounds in development. Madrigal uses an attention bottleneck module to unify preclinical drug data modalities while handling missing data during training and inference, a major challenge in multimodal learning. It outperforms single‑modality methods and state‑of‑the‑art models in predicting adverse drug interactions, and ablations show both modality alignment and multimodality are necessary. It captures transporter-mediated interactions and aligns with head-to-head clinical trial differences for neutropenia, anemia, alopecia, and hypoglycemia. In type 2 diabetes and MASH, Madrigal supports polypharmacy decisions and prioritizes resmetirom among safer candidates. Extending to personalization, Madrigal improves patient-level adverse-event prediction in a longitudinal EHR cohort and an independent oncology cohort, and predicts ex vivo efficacy in primary acute myeloid leukemia samples and patient‑derived xenograft models. Madrigal links preclinical multimodal readouts to safety risks of drug combinations and offers a generalizable foundation for safer combination design."
+  },
+  {
+    "tag": "p",
+    "heading": "Multimodal AI predicts clinical outcomes of drug combinations from preclinical data",
+    "text": "1.2"
+  },
+  {
+    "tag": "p",
+    "heading": "Multimodal AI predicts clinical outcomes of drug combinations from preclinical data",
+    "text": "1.4"
+  },
+  {
+    "tag": "h2",
+    "heading": "Main",
+    "text": "Main"
+  },
+  {
+    "tag": "p",
+    "heading": "Main",
+    "text": "Combination therapies are central to modern treatment: by leveraging complementary mechanisms or dose reduction, they can enhance efficacy, mitigate single-agent toxicities, or both [1, 2, 3]. Yet combining agents also increases the risk of adverse drug reactions driven by drug-drug interactions (DDIs). For example, infliximab plus azathioprine improves corticosteroid-free remission in Crohn’s disease compared with monotherapy but is associated with infections and other adverse events [4]; likewise, nivolumab with chemotherapy prolongs overall survival in advanced esophageal squamous cell carcinoma at the cost of higher treatment-related toxicities [5]. These risks are magnified in vulnerable populations, including cancer survivors [6] and patients with chronic [7] and neurological diseases [8]. Moreover, identifying combinations that are both effective and safe remains challenging due to the combinatorial explosion of possible pairs and the heterogeneity of clinical effects across patients and indications [9, 10]."
+  },
+  {
+    "tag": "p",
+    "heading": "Main",
+    "text": "A major challenge in predicting drug combination effects for novel compounds—those in preclinical or early clinical development—is the lack of critical data that emerge only in later stages of testing. Missing information such as clinical safety profiles, long-term efficacy, and pharmacokinetics limits the ability to accurately forecast drug interactions and therapeutic responses. Developing predictive models that can reliably infer combination outcomes from limited preclinical data is therefore essential for improving clinical success rates [11], minimizing patient risk, and avoiding unnecessary clinical studies."
+  },
+  {
+    "tag": "p",
+    "heading": "Main",
+    "text": "Various preclinical data modalities provide complementary insight into the clinical effects of drug combinations, including molecular structures, mechanisms of action, and perturbation outcomes from cell-based assays. Although molecular structure is universally available and informative for drug bioactivity [12, 13], it is often insufficient to fully characterize combinations. This limitation stems from complex pharmacodynamic interactions that extend beyond intrinsic molecular properties [14] (Supplementary Fig. S1c) and demands a broader understanding of drug action[15]. Perturbation-based modalities, such as transcriptional changes in cell lines [16] and cell-viability profiles [17] following chemical perturbations, can be measured at high throughput and capture complex biological responses to drugs [18, 19, 20]. Despite their relevance, perturbation data remain underutilized in predictive modeling, yet they are essential for understanding drug synergy and safety [21, 22]. Transcriptional phenotypes provide readouts of drug-protein interactions and pathway-level changes in cellular activity [23, 24, 25, 26], while cell-viability data reveal how drugs influence signaling pathways across tissues and cell types, enabling the identification of gene functions relevant to drug action [27, 28, 29]. This information is critical for target prioritization [30], detecting adverse drug interactions [31, 32, 33], and managing polypharmacy in patients with comorbidities."
+  },
+  {
+    "tag": "p",
+    "heading": "Main",
+    "text": "A key barrier to predicting clinical outcomes of drug combinations from preclinical data is the “missing-modality” problem [34, 35, 36] (Fig. c, Supplementary Fig. S1d), in which crucial data are unavailable for novel compounds in preclinical or early clinical stages and even for some approved drugs. Methods that assume complete data during training either discard or distort drugs with incomplete modality profiles, limiting generalization to real-world settings. This disproportionately affects novel compounds lacking pathway annotations and early-stage experimental drugs with sparse toxicity data. Accordingly, there is a need for multimodal AI models that are robust to missing modalities at both training and inference, leveraging available information without relying on complete profiles."
+  },
+  {
+    "tag": "p",
+    "heading": "Main",
+    "text": "Here, we introduce Madrigal, a multimodal AI model that predicts drug-combination outcomes (safety-related phenotypes). Madrigal integrates structural, pathway, cell viability, and transcriptomic modalities for each drug and operates when some modalities are absent at both training and inference (Fig. c). Using contrastive learning[37, 38], it maps modality-specific drug encodings into a shared latent space that preserves pharmacologic signal and allows observed modalities to inform missing ones. For a candidate drug pair, Madrigal then fuses the aligned representations through an attention bottleneck to generate risk scores for clinical outcomes. Madrigal captures transporter-mediated interactions: combinations that share transporters show higher predicted risks for serum-level and excretion-related outcomes, and exemplar pairs (e.g., doxycycline with tacrolimus) rank among the most concerning in transporter-relevant phenotypes. We test Madrigal in predicting safety of combination therapies in head-to-head clinical trials. In 35 post-2000 advanced-stage trials with multiple combination arms, Madrigal’s ordering of predicted risk agrees with observed differences for key adverse events (alopecia, anemia, hypoglycemia, neutropenia), indicating alignment between predicted outcomes and prospectively measured toxicities. We further evaluate Madrigal for chronic metabolic disorders, including type 2 diabetes (T2D) and metabolic dysfunction-associated steatohepatitis (MASH), where it supports polypharmacy management and ranks resmetirom, the first FDA-approved drug for MASH, among candidates with the most favorable predicted safety profiles. Madrigal supports personalized therapies by predicting effective combinations using patient demographic and genomic profiles from primary acute myeloid leukemia samples [39, 40] and patient-derived tumor xenografts [41]. In patient datasets, Madrigal predicts patient-level adverse-event risk of drug combinations in a longitudinal event-time cohort [42] and an independent oncology cohort at a major cancer center."
+  },
+  {
+    "tag": "h2",
+    "heading": "Results",
+    "text": "Results"
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Madrigal multimodal AI model for predicting drug combination outcomes."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Predicting effective combination therapies requires models that generalize across diverse data modalities and remain reliable when some modalities are unavailable. Many existing approaches assume complete modality coverage during training and inference, which limits their utility in preclinical and clinical settings where information on novel or experimental compounds is often sparse."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Madrigal is a multimodal model designed to handle incomplete modality inputs during both training and inference. It predicts clinical outcomes and adverse reactions of drug combinations from preclinical data, supporting decisions for both existing therapies and new candidates. Using structural drug information, a molecular pathways knowledge graph, transcriptomic responses, and cell viability data, Madrigal predicts combination effects across 953 outcomes (for example, “increase in QTc prolongation”; Fig. a; Supplementary Note S6)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "For each drug pair, Madrigal encodes each modality with a modality-specific encoder and maps the resulting embeddings into a unified space through an attention bottleneck fusion module (Supplementary Fig. S1b, Supplementary Note S3). Bottleneck tokens are inserted between structure, pathway, cell viability, and transcriptomic embeddings to regulate information flow and to balance signal from transcriptomic responses across cell lines [43]. The fusion module produces a single multimodal embedding via cross-attention between a summarization query token and the bottleneck tokens from the last attention bottleneck layer [44, 45]. Pairwise combination of the two drug embeddings followed by a prediction head yields a score for each outcome (Fig. b; Supplementary Fig. S1a). To align data modalities, Madrigal uses contrastive learning that anchors modality-specific embeddings to the structure modality, which is universally available for small molecules (Fig.a,c). After alignment, Madrigal forms unified latent representations that enable fine-tuning on drug combination datasets (Methods Sec. ; Fig. d; Supplementary Fig. S1a). This design preserves predictive performance when some modalities are missing at inference and improves training efficiency."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Benchmarking Madrigal across challenging drug-combination tasks."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "We evaluate Madrigal on two settings: (1) holding out all samples for specific drug pairs (“split-by-drug pairs”) and (2) holding out all samples for specific drugs together with any of their pairings (“split-by-drugs”). The split-by-drugs setting better reflects prediction for a novel compound combined with an approved partner (Fig. a)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Madrigal is trained on two datasets: TWOSIDES (2019-11-15), a FAERS-derived resource with 4,656,138 combinations across 1,457 drugs and 795 outcomes [46], and DrugBank (2023-01-04), an expert-curated resource with 1,188,371 combinations involving 3,632 drugs and 158 outcomes [47] (Methods Sec. ). To probe Madrigal’s generalization, we introduce two harder variants of split-by-drugs. In split-by-drugs (target), test-set drugs share minimal therapeutic targets with training drugs. In split-by-drugs (ATC), we exclude drugs of certain first-level Anatomical Therapeutic Chemical (ATC) categories from training (Methods Sec. ). Both strategies increase structural dissimilarity between training and test drugs relative to random splits (Supplementary Fig. S2a). For each dataset and split, models are trained separately and evaluated on the corresponding test set."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "These splits mirror real development scenarios in which a novel compound is combined with an approved drug to mitigate safety issues, enhance efficacy, or extend indications despite limited preclinical data for the new agent. We compare against state-of-the-art models spanning three modality classes: structure-based models (DeepDDI [48], CASTER [49], GMPNN-CS [50]); knowledge-graph models (DDKG [51]); and multimodal models (MUFFIN [52], TIGER [53]). We report area under receiver-operator curve (AUROC), area under precision-recall curve (AUPRC), and maximum F measure (Fmax) (Methods Sec. )."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "To reflect real constraints when information is sparse for novel compounds, we restrict Madrigal’s test-time inputs to modalities typically available preclinically (Fig. a). In contrast, other models receive their full multimodal inputs. This deliberate asymmetry makes the task harder for Madrigal and directly assesses robustness to missing modalities while preserving a fair, task-matched comparison."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Performance across challenging, clinically realistic settings."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Under the most stringent split-by-drugs (target) setting, Madrigal achieves strong and consistent performance across both datasets (Fig. b; other splits in Supplementary Fig. S3). On TWOSIDES, Madrigal attains AUROC 0.789±\\pm0.012, AUPRC 0.640±\\pm0.011, and Fmax 0.654±\\pm0.003, improving on structure-based models by an average of 10.7% across metrics. On DrugBank, Madrigal reaches AUROC 0.836±\\pm0.007, AUPRC 0.772±\\pm0.007, and Fmax 0.752±\\pm0.007, with average gains of 6.2% over most structure-based baselines (Fig. b). Although GMPNN-CS matches Madrigal ’s AUROC on DrugBank within +0.001 in this split and CASTER excels in split-by-drug pairs, Madrigal is the most reliable overall, particularly in the harder generalization settings."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Relative to multimodal KG-structure models, Madrigal improves AUROC by 22.5% and 12.8% on average on TWOSIDES and DrugBank, respectively, under split-by-drugs (target) (Fig. b). Similar gains hold across split-by-drugs (ATC), split-by-drugs (random), and split-by-drug pairs, indicating that integrating and aligning diverse modalities advances drug-combination outcome prediction (Supplementary Fig.S3). Ablations confirm that both contrastive modality alignment and multimodality contribute beyond structure alone (Fig.b; Supplementary Fig. S3)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "We next examine robustness. We hypothesize that test drugs with greater representation and higher structural similarity to training drugs will yield higher accuracy. Accuracy increases with structural similarity for the full model, for the model without contrastive alignment (w/o CL), and for the structure-only ablation (Fig. c). Similarity in target profiles further strengthens performance (Fig. d)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Multimodal Madrigal outperforms the unimodal model across outcome types, with the largest gains when modalities are aligned (Fig. e). Predictions for narrowly defined outcomes that map to specific biological pathways are generally more accurate than for broader phenotypes, consistent with the value of pathway-resolved knowledge (Supplementary Fig. S2b) [54]. Performance improves as additional modalities are incorporated (Supplementary Fig. S2c,e). Including an additional bioassay modality further improves performance across datasets and splits (Supplementary Table S9; Supplementary Note S8). Attention-weight analyses indicate that transcriptomic signals contribute strongly despite lower prevalence (Supplementary Fig. S2d)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Single-drug safety profiling and transporter-mediated interactions."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "To assess whether Madrigal captures safety signals beyond combination contexts, we evaluate it on individual drugs by pairing each drug with itself. Madrigal’s predictions correlate with established safety profiles for liver injury (DILIrank) [55], cardiotoxicity (DICTrank) [56], and QT prolongation (DIQTA) [57] (Fig. a-c; Supplementary Fig. S4), indicating that Madrigal surfaces clinically relevant single-drug risks from preclinical modalities."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "We next examine a common mechanism of DDIs: shared transport mechanisms [58, 59]. Membrane transporters influence absorption, distribution, and elimination, and shared transporter use can produce clinically meaningful interactions. Analysis by the International Transporter Consortium reported that about 75% of the top 200 prescribed drugs are substrates of at least one transporter, with many engaging multiple transporters and therefore at higher potential for transporter-mediated DDI [60]."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Madrigal captures transporter-mediated DDIs, exemplified by doxycycline’s interactions with digoxin, warfarin, tacrolimus, and levetiracetam (Fig. d). Madrigal assigns a high normalized rank (prediction score ranked among all drugs and normalized to [0,1]; Methods Sec. ) to the doxycycline + tacrolimus pair and a moderately high rank to doxycycline + levetiracetam, despite neither pair appearing in Madrigal’s training data."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Drugs that share transporters, enzymes, or carriers show a significantly higher tendency for interaction in Madrigal’s predictions (Fig. e). For drugs sharing specific transporters that regulatory guidance prioritizes due to organ-specific safety risks [59], Madrigal highlights corresponding transporter-related safety events (Fig. f). These results suggest that Madrigal can help prioritize potential transporter-mediated risks for follow-up testing and clinical risk management."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Alignment with clinical trial safety."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Controlled trials that compare combinations head-to-head provide a rigorous benchmark for combination toxicity. We identify 35 advanced-stage trials since 2000 that tested multiple small-molecule combinations under comparable conditions (Methods Sec. ; Supplementary Table S10). For each trial, we select adverse events (AEs) with significantly different incidences between arms (Methods Sec. ). Across AEs with at least five arm comparisons (alopecia, anemia, hypoglycemia, and neutropenia), Madrigal’s ordering of arm-pair risk agrees with trial outcomes in 7/8, 4/5, 6/6, and 7/9 arm pairs, respectively (Fig. a; Supplementary Tables S11-S14, 19/35 trials with significantly different incidences between arms for at least one of neutropenia, hypoglycemia, anemia, and alopecia). Agreement is defined as the trial arm with a more favorable safety profile also receiving a lower Madrigal score (Methods Sec. )."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "We next test whether Madrigal differentiates combinations that have progressed into the clinic. Madrigal recapitulates known hematologic toxicities of poly(ADP-ribose) polymerase inhibitor (PARPi) combinations, including the higher rates of grade 3-4 hematologic AEs, including neutropenia, reported for (olaparib + paclitaxel) in gastric cancer [61], which has so far not been approved (Supplementary Fig. S5a-c; Supplementary Note S9)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "PARPi combinations under investigation or approval [62, 63, 64] are predicted to have more favorable safety profiles than pairing PARPi with cancer drugs for endocrine, kidney, heart, and liver effects, and to be comparable for blood and gastrointestinal effects (Fig. c; Supplementary Note S10). In all organs except liver, these PARPi combinations are also predicted to be safer than clinically investigated oncology combinations, including those active in 2024, failed, or withdrawn [65]. Combinations already used in patients (US FDA Orange Book) are predicted to be safest overall across organs, with heart as second safest. We visualize normalized ranks across outcomes for each PARPi combination under clinical investigation. PARPi combinations that have advanced further clinically or are approved generally receive more favorable safety predictions than those in earlier phases (Supplementary Fig. S5d; ordered left to right by increasing average of the top five highest normalized ranks)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Applying Madrigal to T2D and MASH polypharmacy."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "The management of chronic metabolic disorders often requires complex polypharmacy due to multimorbidity and multifactorial pathophysiology [66]. This is pronounced in type 2 diabetes (T2D) and metabolic dysfunction-associated steatohepatitis (MASH), which are increasingly prevalent [67, 68] and heterogeneous in mechanism [69, 3, 70, 71]. MASH frequently co-occurs with T2D [68], with global prevalence estimates rising from 5-7% in the general population to 37% among people with T2D [72]. The first MASH therapy, resmetirom, was approved in 2024 [73]. We use Madrigal to examine combinations in three settings: (1) T2D and heart failure, a well-characterized comorbidity; (2) T2D and MASH, an emerging area; and (3) MASH combination therapy, where options are limited."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "T2D and heart failure. Madrigal’s safety rankings align with clinical knowledge. Combinations involving rosiglitazone are predicted to have less favorable cardiovascular profiles than those with pioglitazone, consistent with reports of myocardial infarction and stroke risk [74] (Fig. a; Supplementary Table S4, S6). When pairing heart-failure therapies with glucose-lowering drugs, Madrigal reflects the hyperkalemia risk associated with renin-angiotensin-aldosterone system inhibitors [75] and the mitigating association of SGLT2 inhibitors [76]. Combinations including sodium zirconium cyclosilicate, used to treat hyperkalemia, are predicted to have significantly improved safety relative to other pairings, consistent with recent clinical practice and trial design [77, 78, 79]; candesartan, with known hyperkalemia risk [80], serves as a control (Fig. b). For renal effects, combinations with SGLT2 inhibitors are predicted to have more favorable renal safety than those with diuretics, in line with clinical observations [81, 82] (Supplementary Fig. S6a)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "T2D and MASH. We evaluate safety profiles when MASH drugs or candidates (approved, in trials, or used off-label [83]) are combined with T2D drugs of different mechanisms (Fig. c,g; Supplementary Fig. S6b; Supplementary Table S5; Methods Sec. ). Madrigal ranks resmetirom, the first FDA-approved MASH drug, as the second most favorable. The top-ranked candidate, elafibranor, has shown a consistent safety profile across trials, including in primary biliary cholangitis [84]; although the RESOLVE-IT Phase III trial (NCT02704403) did not meet its primary MASH efficacy endpoint, safety and tolerability were consistent with prior studies, suggesting a potential role for elafibranor within combination regimens. Some risks are not captured by our label sets: tropifexor’s dose-related pruritus in Phase II [85] and firsocostat-associated hypertriglyceridemia [86] are not annotated in the Madrigal DrugBank-derived outcomes, which may lead to underestimation in our predictions. Across candidates, combinations involving Phase I candidates, where clinical programs focus on safety, tend to rank less favorably than those in later phases (Fig. d,e), and safety varies by mechanism of action when paired with T2D drugs (Fig. f)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "MASH combination strategies. MASH combinations are typically motivated by either improved efficacy (targeting independent pathways or multiple nodes of one pathway) or improved safety (a second agent mitigates the first agent’s adverse effects) [3] (Fig. g). We annotate combinations under clinical investigation [87, 71, 70, 3] and rank their safety using the average of the top five normalized ranks across outcomes. Each regimen is compared against background combinations formed from other pairings between drug pairs with the same respective mechanisms of action (Methods Sec. ). By this criterion, 3/5 combinations curated for enhanced safety and 5/11 curated for enhanced efficacy rank as relatively safe (ranked first among fewer than five background combinations, or first/second among five or more; Fig. h)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Personalized ex vivo efficacy prediction with Madrigal."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "We test whether Madrigal can support individualized prioritization of cancer drug combinations [88, 89] by pairing its drug embeddings with patient molecular profiles in two ex vivo systems: primary cancer cells from BeatAML and patient-derived xenografts from PDXE (Fig. a; Supplementary Fig. S7a)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "BeatAML. For each drug combination, Madrigal’s two drug embeddings are fused with a bilinear decoder. The fused embedding is concatenated with dimensionality-reduced gene expression and clinical attributes, then passed to a multi-layer perceptron (Methods Sec. ). The classification target is synergy defined by a drug combination ratio less than 1 [40] (Supplementary Fig. S7c). Models that combine Madrigal with patient genomic profiles outperform models without genomics when patients are held out (Fig. b) and when drugs are held out (Supplementary Fig. S7b), indicating the predictive value of patient information. Patient features alone are insufficient without the combined drug embeddings."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "PDXE. We integrate gene expression and mutation data with Madrigal and evaluate performance by holding out each drug combination. The element-wise maximum of the two Madrigal drug embeddings is concatenated with dimensionality-reduced gene expression and used as input to a random forest regressor. We train two predictors: treatment response (BestAvgResponse) and progression-free survival (PFS, TimeToDouble) [41]. For response, Madrigal shows significant correlations between predicted and observed responses in 8 of 11 held-out combinations (Kendall’s τ\\tau, p<0.05p<0.05), with an average τ=0.465\\tau=0.465 (Fig. c). We stratify patients using an mRECIST-based threshold (predicted response below −20-20 as responders, otherwise non-responders) [41]. For combinations with at least five predicted responders and five predicted non-responders, Kaplan-Meier estimates show significant differences in ground-truth PFS between strata (Fig. e,f; Supplementary Fig. S7d). For PFS prediction, Madrigal again correlates with observed survival in 7 of 11 combinations (p<0.05p<0.05, average τ=0.489\\tau=0.489; Supplementary Fig. S7e). Stratifying by predicted response reproduces differences in observed PFS (Fig. d; Supplementary Fig. S7f). These results show that Madrigal can transfer from multimodal preclinical drug information to patient-level ex vivo efficacy when combined with genomic context."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Real-world, personalized safety prediction in EHR and oncology cohorts."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Having established that Madrigal supports individualized combination response in ex vivo models, we next evaluate clinical safety prediction in patients (Fig. g,h)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Longitudinal EHR cohort. We integrate Madrigal into TransformerEHR [90] and fine-tune on longitudinal health records from the EHRSHOT Stanford Medicine cohort (n=6,739) [42] (Methods Sec. ). We focus on medication-related outcomes: hospital re-admission, all-cause mortality, and five AEs (thrombocytopenia, hyperkalemia, hypoglycemia, hyponatremia, anemia) (Methods Sec. ). Using Madrigal with TransformerEHR improves performance consistently across all seven outcomes by 12.2% (AUROC) on average (Fig. i; Supplementary Table S19)."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "Oncology cohort. We curate a Dana-Farber Cancer Institute cohort of patients treated with first-line regimens comprising exactly two small-molecule oncology drugs between June 2015 and March 2025 (n=3,577; 26 two-drug regimens). We track 13 AEs across five classes: hematotoxicity, neuropathy, thromboembolism, renal impairment, and fluid/electrolyte imbalance (Supplementary Table S15; Methods Sec. )."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "At the population level, we quantify the association between Madrigal-predicted scores and observed AE incidence using Kendall’s τ\\tau (Methods Sec. ). Madrigal scores correlate significantly with real-world incidence for 9 of 13 AEs (Kendall’s τ=0.26​-​0.68\\tau=0.26\\text{-}0.68, p<0.05p<0.05; Supplementary Table S16). In multivariable logistic models adjusted for age, gender, race, and palliative intent, Madrigal scores remain independent predictors for 9 of 13 AEs, with positive log-odds coefficients of 0.12-1.31 (Wald p<0.05p<0.05; Supplementary Table S17). All 13 coefficients are positive, indicating that higher Madrigal scores are consistently associated with increased AE incidence."
+  },
+  {
+    "tag": "p",
+    "heading": "Results",
+    "text": "We then assess patient-level prediction by combining Madrigal drug embeddings with clinical covariates (age, gender, palliative intent, race, tumor tissue type) in random forest models. Performance is evaluated on a held-out test set of patients. Using Madrigal embeddings (PCA to 32 dimensions) achieves an average AUROC of 0.68 and outperforms competing methods in 9 of 13 outcomes; Madrigal outperforms Morgan fingerprints by up to 8.7% (hypercalcemia) and one-hot drug encoding approach by up to 9.8% (hypocalcemia) (Fig. j; Supplementary Table S18), demonstrating utility for individualized risk estimation in real-world decision-making."
+  },
+  {
+    "tag": "h2",
+    "heading": "Discussion",
+    "text": "Discussion"
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Combination therapies are central to treating complex diseases such as hypertension, cancer, and infectious diseases, yet current models often fall short in translating preclinical data to predict clinical outcomes. Integrating diverse modalities (structure, pathways, cell viability, and transcriptomics) addresses this gap. We develop Madrigal, a multimodal AI model that predicts the effects of drug combinations across 953 clinical outcomes and 21,842 compounds, including approved and investigational drugs. Madrigal surpasses single-modality and multimodal baselines for adverse drug interaction prediction, captures clinical transporter-mediated DDIs, and reflects the safety of clinically tested combinations and combinations used in chronic conditions such as T2D and MASH. Madrigal also supports personalized combination selection by predicting individualized outcomes using BeatAML genomic profiles, patient-derived xenografts, and real-world patient data."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Madrigal can be applied preclinically. When prospectively scoring drug-combination risks under evaluation in ComboMATCH [89], Madrigal flags risk for eight combinations (Supplementary Fig. S8c, Supplementary Note S2). We observe correlations between proteomic changes after drug perturbation [91] and predicted DDIs (Supplementary Fig. S8a, Supplementary Note S1). These proteomic signals partially explain similarities between Madrigal drug embeddings, even after controlling for target-profile similarity (Supplementary Fig. S8b), suggesting that Madrigal captures off-target and pathway-level effects."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Multimodal models such as Madrigal can help prioritize candidates for combination testing while remaining flexible in how drugs and outcomes are encoded. This flexibility is important given limitations in drug-combination effect datasets, including incomplete annotations for outcomes that are reported clinically [92, 93] but absent from drug-effect datasets. Clinical practice patterns can also introduce biases, for example, SGLT2 inhibitors more frequently prescribed in T2D with heart failure [94], leading to different combination exposures across populations with distinct baseline risks. By linking Madrigal to an LLM interface, users can formulate free-text clinical effects that are not fully represented in standard terminologies and benchmark candidate combinations against such descriptors, potentially improving triage before experimental testing (Supplementary Fig. S9, Supplementary Note S4)."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "One limitation is the indication-agnostic nature of training data and predictions. Although the underlying datasets cover diverse drugs and outcomes, they often lack specificity on indication, population, and context. As a result, Madrigal ’s safety predictions are broadly applicable screens rather than indication-definitive assessments. For instance, firsocostat is an OATP1B1/1B3 substrate, and these transporter activities can decline with cirrhosis [95], potentially altering risk when co-administered with other potent OATP1B1/1B3 substrates. In practice, we envision Madrigal enabling focused comparisons that benchmark a new combination against a standard regimen with a known safety profile for a target population and incorporate indication-specific context."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Clinical failures of drug development arise primarily from insufficient efficacy (40-50%), followed by toxicity (20-30%) and pharmacokinetic issues (10-15%) [96, 97]. A favorable Madrigal safety screen is necessary but not sufficient to de-risk a combination. Decision-making can be strengthened by coupling Madrigal with efficacy models and PK/PD simulators that connect exposure to target engagement. Incorporating indication-specific efficacy datasets could support a more holistic risk-benefit predictor. Explicit dose modeling and harmonized PK parameters (currently implicit in FAERS, drug labels, and trial reports) would improve accuracy and, together with physiologically based PK modeling, extend applicability to new formulations and dose-escalation studies. Emerging efforts to compile PK parameters for combination therapies will facilitate this direction."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Another direction is deeper clinical contextualization. Incorporating richer patient data (demographics, comorbidities, concomitant medications, and genomic profiles) can refine safety prediction, as suggested by our EHR and oncology cohort analyses. Including more diverse and fine-grained clinical covariates will further improve predictive accuracy."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Madrigal presently treats safety outcomes as single end points rather than time-to-event processes, and available labels do not distinguish acute, delayed, or cumulative toxicities. Consequently, late-onset myelosuppression, chronic organ toxicity, or efficacy decay during starts/stops and dose adjustments are not modeled. Future work will leverage longitudinal cohorts and time-to-event modeling to extend predictions to dynamic, real-world treatment courses, building on our longitudinal event-time analyses. With such data, variable dosing schedules, administration sequences, and drug holidays can be modeled to better reflect clinical practice, where personalized dose adjustments have improved safety [98]."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Predictions may be less reliable for underrepresented drug classes even when a specific drug has rich preclinical data. For example, adavosertib has cell-viability and transcriptomic data, but it is the only WEE1 inhibitor in the dataset; the model thus sees fewer class-consistent perturbation patterns, which may limit detection of WEE1-linked hematologic toxicities [99, 100]. Knowledge-grounded retrieval within foundation-model frameworks [101, 102, 103] could mitigate such class sparsity by integrating targeted preclinical literature during training."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Madrigal integrates translational pharmacology with multimodal AI to predict drug-combination outcomes. It identifies interactions between approved and investigational agents and can guide safer co-administration. In oncology and metabolic disorders, Madrigal links molecular toxicity signals to clinical outcomes, supporting more precise selection of combination regimens. Madrigal provides a generalizable safety-screening layer that can prioritize combinations for experimental validation and inform clinical study design."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Acknowledgements. We obtained the latest BeatAML dataset from Jeffrey Tyner, and we thank Christopher Eide for his help with data processing. We thank Man Qing Liang and Xiang Zhang for their helpful discussions on the TWOSIDES dataset and Payal Chandak for discussions on the PrimeKG knowledge graph. We thank Philip Isola, Shanghua Gao, Huan He, Wenxian Shi, and Michelle M. Li for their feedback on model development. We thank Ayush Noori for discussions on using Madrigal for personalized clinical outcome prediction. We appreciate Walker Rickord’s comments on the manuscript. We thank Nigel Greene, Hebatallah Mohamed, and Michaël Ughetto for helpful feedback on Madrigal and analyses. We thank Jane Knöchel for interpreting model predictions in MASH. We also thank Diansong Zhou and Karthick Vishwanathan for their valuable insights into the analysis of cancer drug combinations. We gratefully acknowledge the support of NIH R01-HD108794, NSF CAREER 2339524, US DoD FA8702-15-D-0001, Harvard Data Science Initiative, Amazon Faculty Research, Google Research Scholar Program, AstraZeneca Research, Roche Alliance with Distinguished Scientists, Sanofi iDEA-iTECH, Pfizer Research, Gates Foundation (INV-079038), Chan Zuckerberg Initiative, John and Virginia Kaneb Fellowship at Harvard Medical School, Biswas Computational Biology Initiative in partnership with the Milken Institute, Harvard Medical School Dean’s Innovation Fund for the Use of Artificial Intelligence, and Kempner Institute for the Study of Natural and Artificial Intelligence at Harvard University. Any opinions, findings, conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the funders."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Data availability. Data and results of our analyses are shared via the project website at https://zitniklab.hms.harvard.edu/projects/Madrigal. Datasets are available at Harvard Dataverse repository at https://doi.org/10.7910/DVN/ZFTW3J. The BeatAML dataset is not publicly available due to patient privacy. Clinical dataset from the Dana-Farber Cancer Institute is not publicly available due to patient privacy. The process of accessing the clinical dataset from Stanford Medicine is described at https://stanford.redivis.com/datasets/53gc-8rhx41kgt. The PDXE data can be accessed via https://www.nature.com/articles/nm.3954."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Code availability. Python implementation of Madrigal is available via the project website at https://zitniklab.hms.harvard.edu/projects/Madrigal. The code to reproduce results with examples of usage is at https://github.com/mims-harvard/Madrigal."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Authors contributions. Y.H. developed and implemented Madrigal and designed evaluation setup. Y.H. retrieved and processed multimodal drug datasets used to train Madrigal models and performed detailed analyses of Madrigal’s algorithm and model evaluation. V.U. implemented first-stage pretraining of Madrigal for three modalities and integrated Madrigal with a large language model. X.S., V.U., and Y.H. implemented alternative methods for benchmarking. N.H. retrieved and processed cell viability data. Y.H., X.S., and I.L. performed analyses on cancer combination therapies. I.L. processed datasets on T2D and cancer combination therapies, and Y.H. and I.L. performed analyses on metabolic disorders. I.M. retrieved and processed the single-index oncology cohort data. X.S. retrieved and processed the longitudinal event-time cohort data. Y.H., X.S., and I.M. performed analyses to predict personalized clinical outcomes. L.C., D.O., B.J., R.J., M.G., and A.G. provided expertise on clinical pharmacology and safety of drug combinations. L.C., D.O., and B.J. provided additional expertise on the development of new machine learning methods, design of evaluation setup, benchmarking analyses, as well as real-world applications. M.Z. designed and led the study. All authors contributed to writing the manuscript."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "Competing interests. L.C., D.O., and M.G. employees and stockholders of AstraZeneca. B.J. performed this research while he was employed by AstraZeneca. The remaining authors declare no competing interests."
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": ""
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": ""
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": ""
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": ""
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": ""
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": ""
+  },
+  {
+    "tag": "p",
+    "heading": "Discussion",
+    "text": "1.4"
+  },
+  {
+    "tag": "h2",
+    "heading": "Online Methods",
+    "text": "Online Methods"
+  },
+  {
+    "tag": "p",
+    "heading": "Online Methods",
+    "text": "The Methods section discusses (1) Data used in model development and benchmarking, model validation, and case studies; (2) Details about the architecture and optimization of Madrigal; and (3) Details about model validation and pharmacological applications."
+  },
+  {
+    "tag": "h2",
+    "heading": "1 Datasets",
+    "text": "1 Datasets"
+  },
+  {
+    "tag": "p",
+    "heading": "1 Datasets",
+    "text": "Here, we describe the collection and preprocessing of drug combination data, compound modality data, external datasets used for model evaluation, and information on pharmacological applications."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.1 Drug Combination Safety Dataset",
+    "text": "1.1 Drug Combination Safety Dataset"
+  },
+  {
+    "tag": "p",
+    "heading": "1.1 Drug Combination Safety Dataset",
+    "text": "We collect datasets from TWOSIDES (2019-11) [46] and DrugBank (2023-01-04) [47]. TWOSIDES is a database derived from the FDA Adverse Event Reporting System (FAERS). FAERS is a comprehensive repository of adverse event and medication error reports submitted to the FDA. To ensure the reliability and relevance of our data, we adhere to widely accepted criteria in the existing literature on drug safety data mining [105, 106]. These criteria include: (1) a minimum of three reports for the pair of drugs that report the side effect; (2) a proportional reporting ratio of at least 2; (3) a mean reporting frequency of 0.01 or higher; and (4) a Chi-square test statistic of 3.841 or higher (pp-value <0.05<0.05, with propensity-score matched drugs). Applying these criteria and filtering out safety outcomes with less than 100 samples [50], we have compiled a total of 4,656,138 samples, which include 1,457 unique drugs and 795 unique safety outcomes."
+  },
+  {
+    "tag": "p",
+    "heading": "1.1 Drug Combination Safety Dataset",
+    "text": "In addition, we also collect data from DrugBank (2023-01-04) [47]. Concretely, we extract raw drug interaction statements from the XML dump and extract drugs and the safety outcome from those statements with manually specified regular expression patterns. The extracted safety outcomes are then manually examined, those that differ by rephrasing are grouped, and the directionality between the two drugs in the statement is neutralized. For example, “@Drug1 increase the QTc-prolonging activities of @Drug2” is grouped with “The risk or severity of QTc prolongation can be increased when @Drug1 is combined with @Drug2”. We filter extracted data to (1) only contain small-molecule drugs with valid SMILES and (2) only include safety outcomes that have more than 20 drug pairs annotated. Applying these criteria, we have compiled 1,188,371 samples, covering 3,632 drugs and 158 unique safety outcomes."
+  },
+  {
+    "tag": "p",
+    "heading": "1.1 Drug Combination Safety Dataset",
+    "text": "Supplementary Fig. S1 shows the number of drugs with different modality availability, the distributions of the number of safety outcomes per unique drug pair, and the distributions of the number of drug pairs per unique safety outcome."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.2 Drug Data Modalities",
+    "text": "1.2 Drug Data Modalities"
+  },
+  {
+    "tag": "p",
+    "heading": "1.2 Drug Data Modalities",
+    "text": "We mainly consider four main “views” about a small molecule compound, each offering a unique modality of information:"
+  },
+  {
+    "tag": "p",
+    "heading": "1.2 Drug Data Modalities",
+    "text": "Structure (struc.): As we focus on small-molecule compounds, structural information is essential and is universally available, represented by SMILES strings. These strings are converted into unique molecular graphs using the RDKit package [107]."
+  },
+  {
+    "tag": "p",
+    "heading": "1.2 Drug Data Modalities",
+    "text": "Pathways-based KG (PKG): We incorporate biomedical knowledge at the pathway level from the drug-centric precision medicine knowledge graph, PrimeKG [108]. This resource provides interaction profiles between approved drugs and diseases or proteins, and higher-order interactions with biological pathways. We exclude all drug-drug interactions and drug-phenotype interactions (individual drug side effects) to avoid information leakage."
+  },
+  {
+    "tag": "p",
+    "heading": "1.2 Drug Data Modalities",
+    "text": "Cell viability profile upon drug perturbation (CV): We utilize cell viability profiles from the PRISM Repurposing 19Q4 dataset [17] available at DepMap. This dataset includes cell-line screens of chemical perturbation viability for 4,518 compounds against 578 cell lines. We use the preprocessing pipeline from [29], resulting in a 559-dimensional characteristic vector for each compound, with each entry corresponding to the change in viability of a cell line."
+  },
+  {
+    "tag": "p",
+    "heading": "1.2 Drug Data Modalities",
+    "text": "Transcriptomics profile upon drug perturbation (trans.): We gather transcriptomics profiles from the Extended CMap 2020 dataset available at Connectivity Map [16]. We apply a quality control pipeline adapted from [109]. We select profiles from representative cell lines from each cell lineage and primary disease (among cell lines where more than 500 compounds are screened after filtering) and treat each cell line as a separate modality. In total, 16 cell lines are selected (as specified below). For each compound, within each cell line and treatment time, following recommendations in [110], we select the profiles from the maximal dosage applied. We adapt the pipeline in [111], where molecules are selected if they have more than five replications (irrespective of the cell line, treatment time, dose, and plate). Repetitions and plates are averaged. We concatenate profiles for each compound at two treatment times, namely 24h and 6h. The resulting input from each modality is a (2×978=2\\times 978=) 1956-dimensional feature vector, with two entries corresponding to the expression change of a landmark gene at two-time stamps."
+  },
+  {
+    "tag": "p",
+    "heading": "1.2 Drug Data Modalities",
+    "text": "We match data from these modalities based on the RDKit-transformed canonical SMILES, each uniquely identifying a compound. Drug interaction data are mapped to compounds via DrugBank ID. Fig. c and Supplementary Fig. S1 provides an overview of the availability of drug data across these modalities."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.3 Drug-Induced Liver Injury (DILI) Datasets",
+    "text": "1.3 Drug-Induced Liver Injury (DILI) Datasets"
+  },
+  {
+    "tag": "p",
+    "heading": "1.3 Drug-Induced Liver Injury (DILI) Datasets",
+    "text": "Using names and SMILES, we match drugs in the DILI dataset curated by [55] to DrugBank identifiers in our data. This yields 262, 234, 217, and 159 drugs with minor, no, ambiguous, and most severe DILI concerns, respectively."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.4 Drug-Induced Cardiotoxicity (DICT) Dataset",
+    "text": "1.4 Drug-Induced Cardiotoxicity (DICT) Dataset"
+  },
+  {
+    "tag": "p",
+    "heading": "1.4 Drug-Induced Cardiotoxicity (DICT) Dataset",
+    "text": "Using names and SMILES, we match drugs in the DICT dataset curated by [56] to DrugBank identifiers in our data. This yields 301, 236, 68, and 206 drugs with minor, no, ambiguous, and most severe DICT concerns, respectively."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.5 Drug-Induced QTc Prolongation (DIQTA) Dataset",
+    "text": "1.5 Drug-Induced QTc Prolongation (DIQTA) Dataset"
+  },
+  {
+    "tag": "p",
+    "heading": "1.5 Drug-Induced QTc Prolongation (DIQTA) Dataset",
+    "text": "Using names and SMILES, we match drugs in the DIQTA dataset curated by [57] to DrugBank identifiers in our data. This yields 55, 241, 100, and 109 drugs with moderate, no, ambiguous, and most severe DIQTA concerns, respectively."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.6 Type II Diabetes Comorbidity Drugs",
+    "text": "1.6 Type II Diabetes Comorbidity Drugs"
+  },
+  {
+    "tag": "p",
+    "heading": "1.6 Type II Diabetes Comorbidity Drugs",
+    "text": "We have also curated an extensive dataset of disease comorbidities used in our case studies, where we examine specific diseases, such as Type II Diabetes (T2D). The main comorbidities dataset is created by combining pre-existing datasets from FAERs [112] and Type I and Type II Diabetes datasets [113]. The FAERs dataset consists of common disease comorbidities extracted from FDA’s Adverse Event Reporting System using Association Rule Mining (2014 - 2017), with 25215 disease pairs, which includes 20159 unique diseases. Type I and Type II diabetes comorbidities were extracted from Austria patients from 2006 - 2007; comorbidities were calculated through risk ratios (RR), and disease pairs with an RR of at least 2.0 were considered comorbid. With that comorbidity calculation metric, there were 391 T1D comorbidity pairs, which included 829 unique diseases, and 265 T2D comorbidity pairs, which included 937 unique diseases. However, when examining specific diseases (MASH, heart failure, and kidney diseases), we note that they appear in our curated comorbidity dataset but are not included in PrimeKG [108] due to compatible identification mapping. Thus, not all diseases in a specific class are examined, even though they might appear in the comorbidities dataset; only diseases in our comorbidity dataset and PrimeKG are used in the following analyses."
+  },
+  {
+    "tag": "p",
+    "heading": "1.6 Type II Diabetes Comorbidity Drugs",
+    "text": "T2D medications are sourced from DrugCentral through PrimeKG [108], the FDA Orange Book, and supplemented with mechanism of action data from UCSF [114], Mayo Clinic [115], and Cleveland Clinic [116]. We ensure that all medications, if not approved in the US, are marketed in Europe or Japan. Although we focus primarily on small-molecule drugs and exclude insulin and its analogs, we include GLP-1 receptor agonists such as semaglutide, cotadutide, and lixisenatide, with available SMILES data. The complete list of drugs is shown in Supplementary Table S3. Similarly, HF medications are sourced from the American Heart Association and the Orange FDA book. The complete list of drugs is shown in Supplementary Table S4."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.7 MASH Combination Therapies",
+    "text": "1.7 MASH Combination Therapies"
+  },
+  {
+    "tag": "p",
+    "heading": "1.7 MASH Combination Therapies",
+    "text": "We obtain the MASH clinical candidates and approved drugs, including monotherapies [83, 73] and combination therapies [71, 87, 70]. The MOAs and clinical phases are manually annotated by extracting information from the references above. Only small-molecule drugs with valid SMILES are considered. The specific candidates included and their MoAs are shown in Supplementary Table S5, and also in Fig. h and Supplementary Fig. S6d."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "1.8 Drug Combination Clinical Trials Dataset"
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "To allow for external validation on comprehensive head-to-head drug combination safety comparisons, we systematically extract clinical trials concurrently investigating more than one combination. We extract AE data from clinical trials registered on clinicaltrials.gov through the Continuous Drug Combination Database (CDCDB) [65] (originally sourced via AACT; version April 16, 2024). Two trials not in CDCDB were additionally identified and included through intensive Deep Research using OpenAI’s GPT-o3 model. To ensure valid comparisons of safety, we apply the following criteria for selecting appropriate trials:"
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "Is above Phase I;"
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "Started after year 2000;"
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "Has AE data;"
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "Has at least 20 participants per arm on average;"
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "Has at least two arms with exactly two different small molecule drugs that can be mapped to our DrugBank identifiers; each arm has a safety population size of at least 20."
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "We next compare AE data between each arm pair (pairs of arms with exactly two different small molecule drugs and a safety population size of at least 20). We apply three criteria to obtain the data for comparison for each trial (arm pairs and AEs):"
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "The AE incidences significantly differ between arms with a two-sided Fisher’s exact test after Bonferroni correction (adjusted pp-value << 0.05);"
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "At least one of the two arms had ≥\\geq3 affected participants with an incidence ≥\\geq1%;"
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "The two arms should have comparable patient backgrounds and no design confounders such as crossover."
+  },
+  {
+    "tag": "p",
+    "heading": "1.8 Drug Combination Clinical Trials Dataset",
+    "text": "Considering these three criteria, we identify 35 trials (Supplementary Table S10). For trials that contain several arms administering the same drug combination (e.g., at different institutions), we manually confirm that their safety trends were concordant. We thus deem the comparison between that combination and any other combination arm significant for an AE if at least one of the same-combination arms meet the statistical threshold."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.9 BeatAML Ex Vivo Drug Synergy Dataset",
+    "text": "1.9 BeatAML Ex Vivo Drug Synergy Dataset"
+  },
+  {
+    "tag": "p",
+    "heading": "1.9 BeatAML Ex Vivo Drug Synergy Dataset",
+    "text": "We obtain the latest BeatAML ex vivo drug synergy dataset courtesy of Dr. Jeffrey Tyner, which is an updated dataset of similar outcome measurement as in [39, 40], comprising more patients and drug combinations tested. The data preprocessing was done in the same approach as in [39], courtesy of Dr. Christopher Eide. We further filter the data so that only patients with RNA-seq profiles and small-molecule drug information are included. This gives us 336 patient samples, 135 drug combinations, and 12,161 (patient sample, drug combination) pairs."
+  },
+  {
+    "tag": "p",
+    "heading": "1.9 BeatAML Ex Vivo Drug Synergy Dataset",
+    "text": "Following the original BeatAML paper [40], the synergy measure we use is combination ratio (CR), defined as the AUC (percentage of max) of the drug combination divided by the minimum AUC of each drug in the combination. A CR lower than 1 represents synergy pairs, and vice versa. The drugs in the dataset are matched with DrugBank ID based on their names."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.10 Patient-derived Xenograft Drug Combination Dataset",
+    "text": "1.10 Patient-derived Xenograft Drug Combination Dataset"
+  },
+  {
+    "tag": "p",
+    "heading": "1.10 Patient-derived Xenograft Drug Combination Dataset",
+    "text": "We obtain the patient-derived xenograft encyclopedia (PDXE) dataset from [41]. We further filter the data so that only patients with RNA-seq profiles and small molecule drugs with structural information available are included. This gives us 171 models, 11 drug combinations, and 366 (model, drug combination) pairs. An overview of the data is presented in Supplementary Fig. S7."
+  },
+  {
+    "tag": "p",
+    "heading": "1.10 Patient-derived Xenograft Drug Combination Dataset",
+    "text": "The efficacy measures we use are TimeToDouble, which corresponds to progression-free survival (time until tumor volume reaches 200% of baseline), and BestAvgResponse, which corresponds to response (minimum value of the average of Δ​V​o​lt\\Delta{Vol}_{t} from t == 0 to T, for T ≥\\geq 10 d). The drugs in the dataset are mapped to DrugBank ID by name and through manual confirmation with literature."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.11 Longitudinal Event-Time Cohort",
+    "text": "1.11 Longitudinal Event-Time Cohort"
+  },
+  {
+    "tag": "p",
+    "heading": "1.11 Longitudinal Event-Time Cohort",
+    "text": "We extract the cohort from EHRSHOT [42], which contains de-identified structured data (e.g., diagnosis and procedure codes, medications, lab values) from EHRs of 6,739 patients from Stanford Medicine. EHRSHOT is longitudinal and includes data beyond ICU and emergency department patients."
+  },
+  {
+    "tag": "p",
+    "heading": "1.11 Longitudinal Event-Time Cohort",
+    "text": "We exclude patients with fewer than two visits or those lacking procedure, medication, or diagnosis codes, following [90]. After filtering, 768 patients remain in the cohort for the re-admission and mortality prediction tasks. For the AE prediction task, we use the AE seriousness labels (normal, mild, moderate, severe) provided in [42]. For each patient’s visit and each AE, we select the first occurrence of the highest seriousness (because the patient can be tested multiple times in a visit), resulting in 589, 576, 647, 577, and 612 samples (composed of patient’s visit, time, AE, seriousness) for thrombocytopenia, hyperkalemia, hypoglycemia, hyponatremia, and anemia, respectively."
+  },
+  {
+    "tag": "h3",
+    "heading": "1.12 Single-Index Oncology Cohort",
+    "text": "1.12 Single-Index Oncology Cohort"
+  },
+  {
+    "tag": "p",
+    "heading": "1.12 Single-Index Oncology Cohort",
+    "text": "Analyses of patient-level data from the Dana-Farber Cancer Institute were conducted with approval from the Dana-Farber Institutional Review Board under protocols 19-033 and 19-025. Both protocols were granted waivers of authorization under the Health Insurance Portability and Accountability Act (HIPAA)."
+  },
+  {
+    "tag": "p",
+    "heading": "1.12 Single-Index Oncology Cohort",
+    "text": "We curate a single-index oncology cohort from the Dana-Farber Cancer Institute in which patients were on first-line regimens that contained exactly two small-molecule oncology drugs from June 2015 to March 2025. Regimens are retained only when at least ten patients meet these criteria and neither drugs are indicated for hematological malignancies (as hematological malignancies can confound hematological AE measurements). Patients with missing treatment-related ICD codes or diagnosed with hematological malignancies are excluded. We consider the following AEs: hematotoxicity, neuropathy, thromboembolism, renal impairment, and fluid and electrolyte imbalance. Each AE is mapped to a set of ICD-10 codes determined by an oncology expert (Supplementary Table S15). These ICD-10 codes recorded within 28 days from the start of the first cycle of a regimen are flagged as regimen-related AEs. In total, we curate 3,577 patients with 26 unique regimens and 13 AE types (Supplementary Table S15). For each patient, in addition to regimen and ICD-based tumor tissue type, we also include age, gender, and palliative intent of treatment for each patient."
+  },
+  {
+    "tag": "h2",
+    "heading": "2 Madrigal Model",
+    "text": "2 Madrigal Model"
+  },
+  {
+    "tag": "p",
+    "heading": "2 Madrigal Model",
+    "text": "We aim to utilize compounds with incomplete information or without combination safety information to inform the understanding of drugs that lack specific modalities. To achieve this, we focus on pretraining the model so that the modality-specific representations of drugs, encoded by various encoders, are aligned. Intuitively, once we have well-aligned representations from different modalities, the representations derived from a subset of available modalities of a compound should retain shared information from the missing modality. By ensuring an aligned initialization of encoders, we circumvent the pitfalls of random model initialization, which has been shown to lead to the undesirable phenomenon of modality competition [35]."
+  },
+  {
+    "tag": "h3",
+    "heading": "2.1 Problem Setup and Notation",
+    "text": "2.1 Problem Setup and Notation"
+  },
+  {
+    "tag": "p",
+    "heading": "2.1 Problem Setup and Notation",
+    "text": "Let 𝒟={di}i=1nD\\mathcal{D}=\\{d_{i}\\}_{i=1}^{n_{D}} denote the set of compounds available to us with either multiple modalities of information or a combination of safety information available. For the subset of drugs in 𝒟\\mathcal{D} that have combination safety information available, a sample is defined by (d1,d2,r)(d_{1},d_{2},r) where d1,d2∈𝒟d_{1},d_{2}\\in\\mathcal{D} are two compounds and r∈ℛr\\in\\mathcal{R} is a type of combination outcome. Each compound di∈𝒟d_{i}\\in\\mathcal{D} is uniquely identified by a SMILES string xi𝗌𝗆𝗂𝗅𝖾𝗌x_{i}^{\\mathsf{smiles}} and characterized by at most nM=19n_{M}=19 modalities, namely:"
+  },
+  {
+    "tag": "p",
+    "heading": "2.1 Problem Setup and Notation",
+    "text": "struc.: represented by a molecular graph, xi𝗌𝗍𝗋𝗎𝖼=(𝒱xi,ℰxi,𝐗xi,𝐄xi)x_{i}^{\\mathsf{struc}}=(\\mathcal{V}_{x_{i}},\\mathcal{E}_{x_{i}},\\mathbf{X}_{x_{i}},\\mathbf{E}_{x_{i}}) (generated from xi𝗌𝗆𝗂𝗅𝖾𝗌x_{i}^{\\mathsf{smiles}})"
+  },
+  {
+    "tag": "p",
+    "heading": "2.1 Problem Setup and Notation",
+    "text": "PKG: represented by a drug node and its neighborhood or computation tree on a drug-centered knowledge graph GG, xi𝖯𝖪𝖦=(di,G)x_{i}^{\\mathsf{PKG}}=(d_{i},G)"
+  },
+  {
+    "tag": "p",
+    "heading": "2.1 Problem Setup and Notation",
+    "text": "CV: represented by a perturbation profile, xi𝖢𝖵∈ℝ559x_{i}^{\\mathsf{CV}}\\in\\mathbb{R}^{559}"
+  },
+  {
+    "tag": "p",
+    "heading": "2.1 Problem Setup and Notation",
+    "text": "trans.-{cell line} ({cell line} denotes one of the 16 cell lines we collected, for example, MCF7): represented by a perturbation profile, xi𝗍𝗋𝖺𝗇𝗌.-​{𝖼𝖾𝗅𝗅​𝗅𝗂𝗇𝖾}∈ℝ1956x_{i}^{\\mathsf{trans.}\\text{-}\\mathsf{\\{cell\\ line\\}}}\\in\\mathbb{R}^{1956}"
+  },
+  {
+    "tag": "p",
+    "heading": "2.1 Problem Setup and Notation",
+    "text": "Denote the full set of modalities as ℳ=\\mathcal{M}= {𝗌𝗍𝗋𝗎𝖼.\\mathsf{struc.}, 𝖯𝖪𝖦\\mathsf{PKG}, 𝖢𝖵\\mathsf{CV}, 𝗍𝗋𝖺𝗇𝗌.-​𝖬𝖢𝖥𝟩\\mathsf{trans.}\\text{-}\\mathsf{MCF7}, 𝗍𝗋𝖺𝗇𝗌.-​𝖵𝖢𝖠𝖯\\mathsf{trans.}\\text{-}\\mathsf{VCAP}, 𝗍𝗋𝖺𝗇𝗌.-​𝖯𝖢𝟥\\mathsf{trans.}\\text{-}\\mathsf{PC3}, 𝗍𝗋𝖺𝗇𝗌.-​𝖠𝟧𝟦𝟫\\mathsf{trans.}\\text{-}\\mathsf{A549}, 𝗍𝗋𝖺𝗇𝗌.-​𝖠𝟥𝟩𝟧\\mathsf{trans.}\\text{-}\\mathsf{A375}, 𝗍𝗋𝖺𝗇𝗌.-​𝖧𝖠𝟣𝖤\\mathsf{trans.}\\text{-}\\mathsf{HA1E}, 𝗍𝗋𝖺𝗇𝗌.-​𝖧𝖳𝟤𝟫\\mathsf{trans.}\\text{-}\\mathsf{HT29}, 𝗍𝗋𝖺𝗇𝗌.-​𝖧𝖢𝖢𝟧𝟣𝟧\\mathsf{trans.}\\text{-}\\mathsf{HCC515}, 𝗍𝗋𝖺𝗇𝗌.-​𝖭𝖯𝖢\\mathsf{trans.}\\text{-}\\mathsf{NPC}, 𝗍𝗋𝖺𝗇𝗌.-​𝖧𝖤𝖫𝖠\\mathsf{trans.}\\text{-}\\mathsf{HELA}, 𝗍𝗋𝖺𝗇𝗌.-​𝖧𝖤𝖢𝟣𝟢𝟪\\mathsf{trans.}\\text{-}\\mathsf{HEC108}, 𝗍𝗋𝖺𝗇𝗌.-​𝖳𝖧𝖯𝟣\\mathsf{trans.}\\text{-}\\mathsf{THP1}, 𝗍𝗋𝖺𝗇𝗌.-​𝖧𝖤𝖯𝖦𝟤\\mathsf{trans.}\\text{-}\\mathsf{HEPG2}, 𝗍𝗋𝖺𝗇𝗌.-​𝖸𝖠𝖯𝖢\\mathsf{trans.}\\text{-}\\mathsf{YAPC}, 𝗍𝗋𝖺𝗇𝗌.-​𝖠𝖲𝖢\\mathsf{trans.}\\text{-}\\mathsf{ASC}, 𝗍𝗋𝖺𝗇𝗌.-​𝖧𝖴𝖵𝖤𝖢\\mathsf{trans.}\\text{-}\\mathsf{HUVEC}}. Also, denote the set of modalities available to a compound dd as ℳd⊆ℳ\\mathcal{M}_{d}\\subseteq\\mathcal{M}. For each modality m∈ℳm\\in\\mathcal{M}, a modality-specific encoder fm:𝒳m→ℝsharedf^{m}:\\mathcal{X}^{m}\\to\\mathbb{R}^{\\mathrm{shared}} maps the modality-specific data to representations in a shared latent space. Note, for simplicity, through the following development, we denote transcriptomics as one modality (𝗍𝗋𝖺𝗇𝗌.\\mathsf{trans.}), while it is treated as 16 modalities (each cell line as one) in the model."
+  },
+  {
+    "tag": "h3",
+    "heading": "2.2 Three-stage Optimization",
+    "text": "2.2 Three-stage Optimization"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2 Three-stage Optimization",
+    "text": "Our model architecture, designed to handle any composition of compound modalities as input and predict safety profiles for drug combinations, is depicted in Fig. . The model’s encoder components are first initialized and adapted with encoder-specific pretext tasks. They are then pretrained with a contrastive objective and transferred to the downstream finetuning for combination safety prediction. The model architecture and learning objectives are formally defined in the following subsections and optimized sequentially in three stages."
+  },
+  {
+    "tag": "h4",
+    "heading": "2.2.1 Initializing and adapting individual modality-specific encoders",
+    "text": "2.2.1 Initializing and adapting individual modality-specific encoders"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.1 Initializing and adapting individual modality-specific encoders",
+    "text": "For each modality, we employ modality-specific state-of-the-art encoders. Specifically, we utilize a Heterogeneous Graph Transformer [117] encoder for the pathways-based KG modality, a Graph Isomorphism Network [118] backbone encoder for the molecular structure modality, a multilayer perceptron for the cell viability upon perturbation modality (only using the encoder part when encoding), and one chemCPA [119] encoder (with RDKit descriptor and no dosage) for all transcriptomics perturbation modalities. To allow encoders to produce meaningful representations before alignment, we initialize encoder fmf^{m} for each modality m∈ℳm\\in\\mathcal{M} from scratch and adapt them with individual modality-specific pretext tasks."
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.1 Initializing and adapting individual modality-specific encoders",
+    "text": "struc.: A supervised property prediction task is used to train the structure encoder. Let y𝗌𝗍𝗋𝗎𝖼.y^{\\mathsf{struc.}} denote the measurement of some property of interest for compound dd. We apply a linear head h𝗌𝗍𝗋𝗎𝖼.h^{\\mathsf{struc.}} above the structural encodings to predict 17 properties for about 90k molecules from PubChem BioAssay [120] compiled by the MoleculeNet benchmark as the Maximum Unbiased Validation (MUV) dataset [121]. We then optimize f𝗌𝗍𝗋f^{\\mathsf{str}} by minimizing a mean square error loss, i.e."
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.1 Initializing and adapting individual modality-specific encoders",
+    "text": "PKG: A self-supervised knowledge graph link prediction task is used to train the pathways encoder. In this task, we predict the existence of edges between two nodes in the knowledge graph GG (removing all drug-drug and drug-phenotype edges). Let EE denote all such edges, NN denote negative samples and h𝖯𝖪𝖦h^{\\mathsf{PKG}} denote the scoring function for link prediction from a triplet of (f𝖯𝖪𝖦​(s,G),f𝖯𝖪𝖦​(t,G),r)(f^{\\mathsf{PKG}}(s,G),f^{\\mathsf{PKG}}(t,G),r), where ss is the source node, tt is the target node and rr is the edge type. We optimize f𝖯𝖪𝖦f^{\\mathsf{PKG}} for minimizing a binary cross-entropy loss, i.e."
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.1 Initializing and adapting individual modality-specific encoders",
+    "text": "CV: A reconstruction [122] objective is used to train the CV encoder. The encoder compresses the input information into a latent representation from which the decoder reconstructs the input. Specifically, f𝖢𝖵f^{\\mathsf{CV}} encodes x𝖢𝖵x^{\\mathsf{CV}} as latent vector z𝖢𝖵z^{\\mathsf{CV}}, while h𝖢𝖵h^{\\mathsf{CV}} decodes z𝖢𝖵z^{\\mathsf{CV}} to reconstruct x𝖢𝖵x^{\\mathsf{CV}}. In practice, we train the model to minimize the mean square error loss:"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.1 Initializing and adapting individual modality-specific encoders",
+    "text": "trans. (trans.-{cell lines}): We pretrain the encoder with a strategy similar to chemCPA despite removing the drug adversarial loss on our dataset as we intend to learn drug representations instead of making counterfactual predictions. We refer interested authors to [119] for details about their training objective."
+  },
+  {
+    "tag": "h4",
+    "heading": "2.2.2 Modality alignment with multimodal contrastive learning",
+    "text": "2.2.2 Modality alignment with multimodal contrastive learning"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.2 Modality alignment with multimodal contrastive learning",
+    "text": "In this stage, our objective is to align the representations generated for the same drug from different modalities with the structure modality with a multimodal contrastive representation learning objective. We adopted the InfoNCE objective [123] with minor modifications similar as in [124], and jointly learn all encoders fm,m∈ℳf^{m},m\\in\\mathcal{M}, initialized from stage 1, s.t. the loss"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.2 Modality alignment with multimodal contrastive learning",
+    "text": "where"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.2 Modality alignment with multimodal contrastive learning",
+    "text": "and"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.2 Modality alignment with multimodal contrastive learning",
+    "text": "is minimized."
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.2 Modality alignment with multimodal contrastive learning",
+    "text": "In implementation, we randomly sample the other modality (other than structure) for each compound, with the probability inversely proportional to the modality’s availability, measured by its prevalence in the pre-training set of compounds."
+  },
+  {
+    "tag": "h4",
+    "heading": "2.2.3 Additional note on modality alignment",
+    "text": "2.2.3 Additional note on modality alignment"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.3 Additional note on modality alignment",
+    "text": "Concretely, let z𝗌𝗍𝗋𝗎𝖼.,z𝖯𝖪𝖦,z𝖢𝖵,z𝗍𝗋𝖺𝗇𝗌.z_{\\mathsf{struc.}},z_{\\mathsf{PKG}},z_{\\mathsf{CV}},z_{\\mathsf{trans.}} be modality-specific representations encoded by respective encoders fmf^{m}, where m=𝗌𝗍𝗋𝗎𝖼.,𝖯𝖪𝖦,𝖢𝖵,𝗍𝗋𝖺𝗇𝗌.m=\\mathsf{struc.},\\mathsf{PKG},\\mathsf{CV},\\mathsf{trans.}, as defined before. A careful reader might note that the structure modality is anchor-like in the contrastive objective above. Minimizing the sum of InfoNCE objectives between the structure modality and other modalities, respectively, can be viewed as maximizing a lower bound estimate of the sum of mutual information shared between representations of the structure modality and other modalities, respectively [125], i.e.,"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.3 Additional note on modality alignment",
+    "text": "where II denotes mutual information, which directly aims to align the structure modality with all other modalities. Under the assumption of conditional independence structure between other modalities given the structure modality, i.e. z𝖢𝖵⟂z𝖯𝖪𝖦|z𝗌𝗍𝗋𝗎𝖼.,z𝗍𝗋𝖺𝗇𝗌.⟂z𝖯𝖪𝖦|z𝗌𝗍𝗋𝗎𝖼.,z𝗍𝗋𝖺𝗇𝗌.⟂z𝖢𝖵|z𝗌𝗍𝗋𝗎𝖼.z_{\\mathsf{CV}}\\perp z_{\\mathsf{PKG}}\\ |\\ z_{\\mathsf{struc.}},z_{\\mathsf{trans.}}\\perp z_{\\mathsf{PKG}}\\ |\\ z_{\\mathsf{struc.}},z_{\\mathsf{trans.}}\\perp z_{\\mathsf{CV}}\\ |\\ z_{\\mathsf{struc.}}, the pairwise mutual information objective is equivalent to:"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.3 Additional note on modality alignment",
+    "text": "where HH denotes entropy, it can thus be interpreted that the maximization of ∑mH⁡(zm)\\sum_{m}{H(z_{m})} ensures that each modality retains its inherent variability and richness, and the minimization of H⁡(z𝗌𝗍𝗋𝗎𝖼.,z𝖯𝖪𝖦,z𝖢𝖵,z𝗍𝗋𝖺𝗇𝗌.)H(z_{\\mathsf{struc.}},z_{\\mathsf{PKG}},z_{\\mathsf{CV}},z_{\\mathsf{trans.}}) as ensuring that the joint representation is compact and has lower redundancy."
+  },
+  {
+    "tag": "h4",
+    "heading": "2.2.4 Model finetuning",
+    "text": "2.2.4 Model finetuning"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.4 Model finetuning",
+    "text": "Given the impressive performance of attention-based fusion in other multimodal learning contexts, particularly in vision-language models [126, 127, 45], and their flexibility of inputs, we adopt a specialized Transformer encoder architecture with attention bottlenecks for modality fusion to model the joint representations across modalities [43]. To address the large number of cell lines within the transcriptomics modality, we insert bottleneck tokens and restrict attention among those cell line tokens to only within themselves and with the bottleneck tokens thereafter, and vice versa for other modality tokens (Supplementary Fig. S1b). The output bottleneck tokens are max-pooled to generate a multimodal drug embedding. Unless explicitly mentioned (as in the case of Madrigal-LLM), a bilinear decoder is used as the prediction module for scoring the probabilities of a pair of compounds having any safety outcomes for computational efficiency (see Supplementary Note S3 for details)."
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.4 Model finetuning",
+    "text": "Denote a flexible fusion module as gfusiong^{\\mathrm{fusion}}, which maps any one or combination of modality-specific encodings for compound dd: {fm​(xm)}m∈ℳd\\{f^{m}(x^{m})\\}_{m\\in\\mathcal{M}_{d}} to a single compound embedding 𝐳ℳd∈ℝjoint\\mathbf{z}^{\\mathcal{M}_{d}}\\in\\mathbb{R}^{\\mathrm{joint}}. Denote as hdec:ℝjoint×ℝjoint×ℛ→[0,1]h^{\\mathrm{dec}}:\\mathbb{R}^{\\mathrm{joint}}\\times\\mathbb{R}^{\\mathrm{joint}}\\times\\mathcal{R}\\to[0,1] the prediction module (decoder) for safety outcomes from the multimodal encodings of drugs. Let SS denote all samples, and SnegS_{\\mathrm{neg}} denote all negative samples. We then jointly optimize all encoders fmf^{m} (initialized from stage 2) and gfusion,hdecg^{\\mathrm{fusion}},h^{\\mathrm{dec}} (both randomly initialized), s.t. the loss"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.4 Model finetuning",
+    "text": "is minimized. During finetuning, we also randomly drop each available modality with probability 0.5, while ensuring at least one remains. This is equivalent to uniformly sampling one non-empty subset of modalities observed for that compound and further teaches the model to handle whichever modalities available at inference time."
+  },
+  {
+    "tag": "h4",
+    "heading": "2.2.5 Implementation details",
+    "text": "2.2.5 Implementation details"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.5 Implementation details",
+    "text": "At the third stage of model training, we finetuned the encoders, fusion module, and prediction module on the combination safety prediction task, with encoders initialized from a pretrained model checkpoint. We used the AdamW optimizer for all three stages and followed a linear warm-up with a cosine annealing schedule, a common practice in training multimodal models. Model checkpoint that achieved the highest AUPRC on the validation set was kept."
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.5 Implementation details",
+    "text": "Hyperparameter tuning. We leverage Weights and Biases [128] to select optimal hyperparameters via a random search over the hyperparameter space. The best-performing hyperparameters are selected by optimizing the AUPRC on the validation set. The hyperparameter space on which we perform a random search to choose the optimal set of hyperparameters is: position embedding ∈[learnable,sinusoidal]\\in[\\text{learnable},\\text{sinusoidal}], position embedding dropout ∈[0.1,0.2,0.4]\\in[0.1,0.2,0.4], number of heads in transformer encoder ∈[2,4,8]\\in[2,4,8], dimension of heads in transformer encoder ∈[64,128,256]\\in[64,128,256], number of layers in transformer encoder ∈[2,3,4,6]\\in[2,3,4,6], dimension of feed forward layer in transformer encoder ∈[256,512,1024]\\in[256,512,1024], dropout in transformer encoder ∈[0.2,0.3,0.4]\\in[0.2,0.3,0.4], number of attention bottlenecks ∈[2,4]\\in[2,4], dropout in projector ∈[0.1,0.2,0.4]\\in[0.1,0.2,0.4], warmup epochs ∈[10,20,50,100]\\in[10,20,50,100], learning rate (for each of structure encoder, pathways encoder, cell viability and transcriptomics encoder, fusion module, prediction module) ∈[1e\\in[1e-4,5​e4,5e-4,1​e4,1e-3,5​e3,5e-3]3], weight decay ∈[0.001,0.01,0.1]\\in[0.001,0.01,0.1], epsilon ∈[1e\\in[1e-8,1​e8,1e-7,1​e7,1e-6]6], whether or not having a separate adaptor when the drug only has one (structure) modality available, and the ordering of dropout and normalization layer (i.e., normalization before dropout, or vice versa)."
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.5 Implementation details",
+    "text": "To reduce cost, we only tune hyperparameters for each dataset using one splitting strategy (split-by-drugs (random)). The optimal sets of hyperparameters selected are:"
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.5 Implementation details",
+    "text": "DrugBank dataset: position embedding =sinusoidal=\\texttt{sinusoidal}, position embedding dropout =0.2=0.2, number of heads in transformer encoder =8=8, dimension of heads in transformer encoder =64=64, number of layers in transformer encoder =2=2, dimension of feed-forward layer in transformer encoder =256=256, dropout in transformer encoder =0.3=0.3, number of attention bottlenecks =4=4, dropout in projector =0.1=0.1, warmup epochs =100=100, learning rate (for each of structure encoder, pathways encoder, cell viability and transcriptomics encoder, fusion module, prediction module) =1​e=1e-4,1​e4,1e-3,1​e3,1e-4,1​e4,1e-3,1​e3,1e-33, weight decay =0.001=0.001, epsilon =1​e=1e-66, no separate projector for when the drug has only one (structure) modality available, and normalization layer first."
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.5 Implementation details",
+    "text": "TWOSIDES dataset: position embedding =sinusoidal=\\texttt{sinusoidal}, position embedding dropout =0.2=0.2, number of heads in transformer encoder =8=8, dimension of heads in transformer encoder =256=256, number of layers in transformer encoder =2=2, dimension of feed-forward layer in transformer encoder =1024=1024, dropout in transformer encoder =0.2=0.2, number of attention bottlenecks =2=2, dropout in projector =0.2=0.2, warmup epochs =100=100, learning rate (for each of structure encoder, pathways encoder, cell viability and transcriptomics encoder, fusion module, prediction module) =5​e=5e-3,5​e3,5e-3,1​e3,1e-4,1​e4,1e-4,1​e4,1e-44, weight decay =0.1=0.1, epsilon =1​e=1e-77, separate projector for when the drug has only one (structure) modality available, and normalization layer first."
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.5 Implementation details",
+    "text": "Implementation. We implement all Madrigal models using Pytorch (Version 1.12.1) [129]. We used Weights and Biases [128] for hyperparameter tuning and visualization of model training. Madrigal models are trained on a single NVIDIA A100 GPU. When predicting drug combination synergy in the BeatAML dataset, gradient boosting classifiers are implemented using scikit-learn [130] and trained on the CPU."
+  },
+  {
+    "tag": "p",
+    "heading": "2.2.5 Implementation details",
+    "text": "Madrigal is computationally efficient due to the relatively small computation overhead and the feasibility of fitting the entire dataset to a single GPU with efficient operations, taking only a few hours to fine-tune on the DrugBank data set on one GPU, compared to the longer runtime required by a few strong baselines (Supplementary Table S7)."
+  },
+  {
+    "tag": "h2",
+    "heading": "3 Benchmarking Madrigal Model",
+    "text": "3 Benchmarking Madrigal Model"
+  },
+  {
+    "tag": "h3",
+    "heading": "3.1 Dataset Splits",
+    "text": "3.1 Dataset Splits"
+  },
+  {
+    "tag": "p",
+    "heading": "3.1 Dataset Splits",
+    "text": "As novel compounds typically lack combination safety information, we held out (about) 20% approved drugs in each dataset, along with their associated combinations, to rigorously evaluate model performance under realistic conditions. To achieve this, we designed three distinct testing scenarios using different data splitting strategies: based on drug ATC codes (“split-by-drugs (atc)”), drug targets (“split-by-drugs (target)”), random splits by drugs (“split-by-drugs (random)”). In each splitting setting, we also additionally split (about) 10% drugs into a validation set to prevent model overfitting and for hyperparameter tuning. In addition, to evaluate the model also in a more traditional setting, in the fourth strategy, we randomly split 20% drug pairs and all associated combinations into a test set (“split-by-drug pairs”), 10% drug pairs and all associated combinations into validations set, and rest in the training set."
+  },
+  {
+    "tag": "p",
+    "heading": "3.1 Dataset Splits",
+    "text": "In the three split-by-drugs settings, training samples are formed by selecting those samples where both drugs are in the train set. However, there is a unique aspect for validation or test samples in these settings: for each validation or test drug, the other drugs it interacts with could either be in the validation or test or included in the train set. These two types of samples have different implications: one scenario mimics the case where both drugs are novel compounds, while the other can be viewed as the scenario where one drug is a novel compound and the other is an approved drug. In practice, it is more valuable to understand the interaction profiles of a novel compound with approved drugs in related therapeutic areas (such as comorbidities). Therefore, we focus on the latter group of samples when evaluating the model. Specifically, validation samples are formed by selecting those samples where one drug is in the validation set while the other is in the train set; test samples are formed by selecting those samples where one drug is in the test set while the other is in the train or validation set."
+  },
+  {
+    "tag": "p",
+    "heading": "3.1 Dataset Splits",
+    "text": "In the split-by-drugs (ATC) setting, drugs in each dataset are grouped according to the initial letter of their ATC codes (anatomical or pharmacological groups). ATC codes are randomly split into train, validation, and test sets. For the DrugBank dataset, drugs whose ATC codes start with “N”, “V”, “J”, “B”, “C”, “A” are split into train set, containing a total of 2589 drugs and 584,891 samples, drugs whose ATC codes start with “D”, “L” are split into validation set, containing a total of 433 drugs and 162,608 samples, drugs whose ATC codes start with “G”, “H”, “M,” “R”, “P”, “S” are split into test set, containing a total of 670 drugs and 368,646 samples. For the TWOSIDES dataset, drugs whose ATC codes start with “H”, “L”, “G”, “S”, “D”, “A”, “N”, “J”, “M”, are split into train sets containing a total of 1043 drugs and 2,084,566 samples, drugs whose ATC codes start with “R”, “P” are split into validation set, containing a total of 149 drugs and 747,959 samples, and drugs whose ATC codes start with “B”, “V”, “C” are split into test set, containing a total of 276 drugs and 1,478,489 samples."
+  },
+  {
+    "tag": "p",
+    "heading": "3.1 Dataset Splits",
+    "text": "In the split-by-drugs (target) setting, because each drug can have multiple targets, which makes naively splitting targets infeasible, we construct a drug network where two drugs are connected if they share any target. The largest connected component (LCC) contains more than half (DrugBank dataset: 52%; TWOSIDES dataset: 66%) of drugs with target profiles, which we then detect communities (DrugBank dataset: 14; TWOSIDES dataset: 9) via the Louvain algorithm. The communities from LCC, along with other components in the network, are randomly split such that 20% of drugs are in the test set, 10% of drugs are in the validation set, and others are in the train set. All drugs without target information in DrugBank are split into train sets. Specifically, for the DrugBank dataset, 2482, 423, 727 drugs are split into train, validation, and test sets, containing a total of 426,890, 264,272, 381,841 samples, respectively; for the TWOSIDES dataset, 987, 156, 314 drugs are split into train, validation, and test sets, containing a total of 1,923,741, 669,568, 1,706,453 samples, respectively."
+  },
+  {
+    "tag": "p",
+    "heading": "3.1 Dataset Splits",
+    "text": "In the split-by-drugs (random) setting, we randomly divided the drugs in each dataset into train, validation, and test sets with the ratios above. For the DrugBank dataset, the train, validation, and test sets contain 565,166, 170,888, and 388,492 samples, respectively; for the TWOSIDES dataset, the train, validation, and test sets contain 2,345,947, 664,265, and 1,432,496 samples, respectively."
+  },
+  {
+    "tag": "p",
+    "heading": "3.1 Dataset Splits",
+    "text": "In the drug pair splits, we randomly divided drug pairs in each dataset into train, validation, and test sets with the ratios above. For the DrugBank dataset, the train, validation, and test sets contain 831,859, 118,837, and 237,675 samples, respectively; for the TWOSIDES dataset, the train, validation, and test sets contain 3,254,433, 466,311, and 935,394 samples, respectively."
+  },
+  {
+    "tag": "h3",
+    "heading": "3.2 Experimental Setup",
+    "text": "3.2 Experimental Setup"
+  },
+  {
+    "tag": "p",
+    "heading": "3.2 Experimental Setup",
+    "text": "For Madrigal only, we also artificially removed the knowledge graph modalities for test drugs, allowing us to simulate the realistic scenario where much of the clinical and postmarketing information about novel compounds is not available. Madrigal is trained with five different seeds (0, 1, 2, 42, 99) for each splitting strategy, and average performances with standard deviations are presented in all benchmarking tables."
+  },
+  {
+    "tag": "p",
+    "heading": "3.2 Experimental Setup",
+    "text": "We also ablate Madrigal in three ways:"
+  },
+  {
+    "tag": "p",
+    "heading": "3.2 Experimental Setup",
+    "text": "W/o CL: Training the model directly on the combination safety dataset without modality alignment."
+  },
+  {
+    "tag": "p",
+    "heading": "3.2 Experimental Setup",
+    "text": "Struc. only: Only using structure modality during model finetuning (but with all modalities during modality alignment)."
+  },
+  {
+    "tag": "p",
+    "heading": "3.2 Experimental Setup",
+    "text": "Struc. only w/o CL: Training the model directly on the combination safety dataset using only structure modality, without modality alignment."
+  },
+  {
+    "tag": "h3",
+    "heading": "3.3 Performance Metrics",
+    "text": "3.3 Performance Metrics"
+  },
+  {
+    "tag": "p",
+    "heading": "3.3 Performance Metrics",
+    "text": "We evaluate model performance with standard classification metrics, including the area under receiver-operating curve (AUROC), the area under the precision-recall curve (AUPRC), and maximum F-measure (Fmax), calculated in a “macro” manner, i.e., within each label (safety outcome) then averaged. Such averaging approach is in practice more useful than “micro” (i.e. flattening predictions across all labels and calculate metric over all predictions), which compares predictions across labels and might not be meaningful without appropriately encoding information about safety outcomes (for example, with a language model)."
+  },
+  {
+    "tag": "p",
+    "heading": "3.3 Performance Metrics",
+    "text": "Specifically, for each outcome, given predicted scores 𝐬=(s1,s2,…,sN)\\mathbf{s}=(s_{1},s_{2},\\dots,s_{N}) and corresponding binary labels 𝐲=(y1,y2,…,yN)\\mathbf{y}=(y_{1},y_{2},\\dots,y_{N}), Fmax is calculated as:"
+  },
+  {
+    "tag": "p",
+    "heading": "3.3 Performance Metrics",
+    "text": "where the F1 score at threshold τ\\tau is defined as"
+  },
+  {
+    "tag": "p",
+    "heading": "3.3 Performance Metrics",
+    "text": "with the precision and recall at threshold τ\\tau being"
+  },
+  {
+    "tag": "p",
+    "heading": "3.3 Performance Metrics",
+    "text": "where 𝟙​(⋅)\\mathbbm{1}(\\cdot) is the indicator function."
+  },
+  {
+    "tag": "p",
+    "heading": "3.3 Performance Metrics",
+    "text": "Following benchmarking setups in previous literature [50, 51, 53], for each (drug 1, drug 2, outcome) sample, we obtain negative samples by randomly sampling a drug (drug 2’) to replace drug 2 and a drug (drug 1’) to replace drug 1, forming two negative samples (drug 1, drug 2’, outcome) and (drug 1’, drug 2, outcome). We also ensure the negative samples do not exist in the dataset."
+  },
+  {
+    "tag": "p",
+    "heading": "3.3 Performance Metrics",
+    "text": "In certain analyses, we also calculate metrics for each test drug. This is done by calculating metrics within all test samples containing the test drug and all corresponding negative samples."
+  },
+  {
+    "tag": "h3",
+    "heading": "3.4 Baselines",
+    "text": "3.4 Baselines"
+  },
+  {
+    "tag": "p",
+    "heading": "3.4 Baselines",
+    "text": "To test the performance of our proposed Madrigal, we compare Madrigal with six baselines across two modalities on two datasets. These models use either late fusion [51, 52, 53]—where each drug molecule is encoded separately and merged—or early fusion, where molecular interactions are modeled from the start [131, 49, 50]."
+  },
+  {
+    "tag": "p",
+    "heading": "3.4 Baselines",
+    "text": "DeepDDI [131] is a structure-based DDI prediction model. It uses a deep neural network to predict drug combinations from drug structural information. It has been shown to predict adverse drug interactions involving SARS-COV-2 therapies [48]."
+  },
+  {
+    "tag": "p",
+    "heading": "3.4 Baselines",
+    "text": "CASTER [49] is inspired by drug chemical substructures. It first extracts frequent substructures from a molecular database. Then, it designs a latent feature embedding module to represent drugs in terms of the extracted frequent substructures and predict drug combinations."
+  },
+  {
+    "tag": "p",
+    "heading": "3.4 Baselines",
+    "text": "GMPNN-CS [50] predicts drug combinations by learning chemical substructures with different sizes and shapes from the molecular graph representations of drugs. It considers the edge between atoms as gates that control the flow of message passing and, therefore, delimit the substructures in a learnable way."
+  },
+  {
+    "tag": "p",
+    "heading": "3.4 Baselines",
+    "text": "DDKG [51] predicts potential drug combinations based on drug representations learned from KG by GCN. Besides that, DDKG also integrates drug SMILES into DDI predictions by initializing drug embeddings with SMILES."
+  },
+  {
+    "tag": "p",
+    "heading": "3.4 Baselines",
+    "text": "MUFFIN [52] explores the joint effect of drug molecular structures and semantic information of drugs in KG for DDI prediction. It predicts drug combinations by jointly learning the drug representation based on the drug-self structure information and the KG with rich biomedical information."
+  },
+  {
+    "tag": "p",
+    "heading": "3.4 Baselines",
+    "text": "TIGER [53] is a transformer-based DDI prediction model. It predicts potential drug combinations based on drug molecular graphs and KGs. TIGER extends the transformer to graph-level and node-level representation learning, thus finishing drug combination predictions."
+  },
+  {
+    "tag": "h3",
+    "heading": "3.5 Modality Ablation Tests",
+    "text": "3.5 Modality Ablation Tests"
+  },
+  {
+    "tag": "p",
+    "heading": "3.5 Modality Ablation Tests",
+    "text": "In this study, we utilize various modalities—such as drug structures, pathways, cell viability profiles following drug perturbations, and transcriptomics profiles after drug perturbations—to predict drug combinations. To assess the effectiveness of these modalities, we conduct an ablation study by removing each modality one at a time and testing the model’s model’s performance with the remaining modalities. By comparing the performances with and without specific modalities, we can identify which ones are most critical for model performance."
+  },
+  {
+    "tag": "h2",
+    "heading": "4 Research Applications of Madrigal",
+    "text": "4 Research Applications of Madrigal"
+  },
+  {
+    "tag": "p",
+    "heading": "4 Research Applications of Madrigal",
+    "text": "Each DrugBank safety outcomes are annotated with one of nine organs, namely “blood” (hematological), “heart” (cardiovascular), “liver” (hepatic), “kidney” (renal), “gastrointestinal”, “endocrine”, “urinary”, “immune”, “lung”, or otherwise “others/general” (Supplementary Table S1). Organs with less than five occurrences (“urinary”, “immune”, “lung”) are not considered in all organ-level analyses. 7 out of 158 safety outcomes, including “adverse effects, decrease”, “cardiotoxicity, decrease”, “hypertension, decrease”, “hypoglycemia, decrease”, “hypotension, decrease”, “nephrotoxicity, decrease”, and “therapeutic efficacy, increase” are considered as potentially beneficial safety outcomes and are thus excluded from all safety-oriented analyses."
+  },
+  {
+    "tag": "h3",
+    "heading": "4.1 Drug-Induced Effects on Liver, Heart and QT Prolongation",
+    "text": "4.1 Drug-Induced Effects on Liver, Heart and QT Prolongation"
+  },
+  {
+    "tag": "p",
+    "heading": "4.1 Drug-Induced Effects on Liver, Heart and QT Prolongation",
+    "text": "For each drug (drug A) in each dataset, we query the model trained on the DrugBank safety dataset with the input of the form (drug A, drug A, outcome) and obtain scores across all outcomes. For each outcome, we then obtain the normalized rank of drug A by ranking the score among all scores of this outcome produced by 11,601 DrugBank small molecule drugs or novel compounds in our data using the same query format, before normalizing to [0,1]."
+  },
+  {
+    "tag": "p",
+    "heading": "4.1 Drug-Induced Effects on Liver, Heart and QT Prolongation",
+    "text": "When correlating our model predictions with annotations in each dataset, since the organ where the toxicity is measured differs, we also make sure the outcomes we consider for our model match such organs (Supplementary Table S1). Specifically, for the DILI (liver) dataset, we obtain predictions from our model with all liver-related outcomes (“excretion rate, increase || serum level, decrease || efficacy, decrease”, “liver damage, increase”, “liver enzyme elevations, increase”, “metabolism, decrease”, and “metabolism, increase”); for the DICT (cardiovascular) dataset, we obtain predictions from our model with all heart-related outcomes (in total, 44 outcomes); and for the DIQTA (QTc prolongation), we obtain predictions from our model with all QTc prolongation-related outcomes (“QTc prolongation, decrease”, “QTc prolongation, hypotension, increase”, “QTc prolongation, increase”, “QTc prolongation, torsade de pointes, cardiotoxicity, increase”). For DILI and DIQTA, we correlate annotations with predictions for each outcome individually; for DICT, due to the large number of outcomes, we correlate annotations with the average of the highest five predictions across 44 heart-related outcomes."
+  },
+  {
+    "tag": "h3",
+    "heading": "4.2 Transporter, Carrier, and Enzyme-Mediated Outcomes",
+    "text": "4.2 Transporter, Carrier, and Enzyme-Mediated Outcomes"
+  },
+  {
+    "tag": "p",
+    "heading": "4.2 Transporter, Carrier, and Enzyme-Mediated Outcomes",
+    "text": "We identify safety outcomes in the DrugBank dataset that are potentially transporter-mediated, including “absorption, decrease”, “absorption, decrease || serum level, decrease || efficacy, decrease”, “absorption, increase || serum level, increase || adverse effects, increase”, “excretion rate, decrease || serum level, increase”, “excretion rate, increase || serum level, decrease || efficacy, decrease”, “excretion, decrease”, “excretion, increase”, “serum level of the active metabolites, decrease”, “serum level of the active metabolites, decrease || efficacy, decrease”, “serum level of the active metabolites, increase”, “serum level, decrease”, “serum level, increase”. Among them, “excretion rate, decrease || serum level, increase”, “excretion, decrease”, “serum level of the active metabolites, increase”, “serum level, decrease”, and “serum level, increase” are considered as safety outcomes that are relevant to increase in serum concentration as explored in [58]. We also identified safety outcomes in the DrugBank dataset that are potentially carrier-mediated, including “absorption, decrease”, “absorption, decrease || serum level, decrease || efficacy, decrease”, “absorption, increase || serum level, increase || adverse effects, increase”, “bioavailability, decrease”, “bioavailability, increase”, “protein binding, decrease”, “serum level, decrease”, “serum level, increase”. Similarly, potential enzyme-mediated safety outcomes include “bioavailability, decrease”, “bioavailability, increase”, “metabolism, decrease”, “metabolism, increase”, “protein binding, decrease”, “serum level of the active metabolites, decrease”, “serum level of the active metabolites, decrease || efficacy, decrease”, “serum level of the active metabolites, increase”."
+  },
+  {
+    "tag": "p",
+    "heading": "4.2 Transporter, Carrier, and Enzyme-Mediated Outcomes",
+    "text": "To examine identified transporter-mediated DDIs validated in [58], we first query the model to obtain normalized ranks for the above safety outcomes that are relevant to the increase in serum concentration between doxycycline and each of digoxin, warfarin, tacrolimus, and levetiracetam. Piracetam is a positive control because it is structurally similar to levetiracetam with a side chain modification. It s known to interact with doxycycline, leading to a decrease in excretion and thus, increase in serum concentration. The maximum of the five normalized ranks is presented for each drug pair. Since each drug can interact with many other substrates of their respective transporter (BCRP and MRP2 here), we also calculate two additional values: (1) the quantile of the maximum normalized rank among all pairs of the form (doxycycline, X), and (2) the quantile of the maximum normalized rank among all pairs of the form (digoxin, X), (warfarin, X), (tacrolimus, X), or (levetiracetam, X), calculated individually for each drug, where X is any other DrugBank compound we curate."
+  },
+  {
+    "tag": "p",
+    "heading": "4.2 Transporter, Carrier, and Enzyme-Mediated Outcomes",
+    "text": "To systematically compare the maximum normalized rank of transporter-mediated, carrier-mediated, and enzyme-mediated outcomes among drug pairs with and without overlap in their transporter, carrier, and enzyme profiles, respectively, we consider all drug pairs between drugs with respective profiles available in DrugBank and partition them into two groups, depending on whether or not the two drugs’ profiles overlap. The maximum normalized rank of each safety outcome group is then taken for each drug pair and aggregated according to the drug pair grouping."
+  },
+  {
+    "tag": "p",
+    "heading": "4.2 Transporter, Carrier, and Enzyme-Mediated Outcomes",
+    "text": "Finally, drugs that share each specific transporter are paired and queried to the model to probe into the potential outcomes mediated by individual transporters. The median across all such drug pairs is then taken to rank the relevance of each safety outcome. The signs of outcomes are neutralized. Representative carriers, enzymes, and targets with many drugs sharing them are taken as controls, with the outcomes ranked similarly."
+  },
+  {
+    "tag": "h3",
+    "heading": "4.3 Drug Combination Clinical Trials",
+    "text": "4.3 Drug Combination Clinical Trials"
+  },
+  {
+    "tag": "p",
+    "heading": "4.3 Drug Combination Clinical Trials",
+    "text": "We derive pairwise safety comparisons from clinical trial AE data and compare them with those derived from Madrigal predictions for the corresponding drug combinations. We restrict this analysis to AEs with ≥\\geq5 significant arm pairs across the curated trials, namely, alopecia, anemia, hypoglycemia, and neutropenia."
+  },
+  {
+    "tag": "p",
+    "heading": "4.3 Drug Combination Clinical Trials",
+    "text": "Agreement between Madrigal predictions and AE data for some adverse event ee is assessed by whether the safer arm in the trial also receives the lower Madrigal score. More precisely,"
+  },
+  {
+    "tag": "p",
+    "heading": "4.3 Drug Combination Clinical Trials",
+    "text": "where 𝟙​{⋅}\\mathbbm{1}\\{\\cdot\\} denotes indicator function, Incide(i)\\mathrm{Incid}_{e}^{(i)} denotes the incidence of adverse event ee for arm ii, and Scoree(i)\\mathrm{Score}_{e}^{(i)} denotes the Madrigal predicted score for adverse event ee. Because both DrugBank and TWOSIDES outcomes can be mapped to some of the AEs, we utilized models trained on both datasets and apply Madrigal trained on DrugBank first to compare predicted scores. If the score difference is fewer than 0.1, we resort to Madrigal trained on TWOSIDES for decision."
+  },
+  {
+    "tag": "h3",
+    "heading": "4.4 Type 2 Diabetes Comorbidities",
+    "text": "4.4 Type 2 Diabetes Comorbidities"
+  },
+  {
+    "tag": "p",
+    "heading": "4.4 Type 2 Diabetes Comorbidities",
+    "text": "To support our analysis, the T2D medications are sourced from DrugCentral [132] through PrimeKG knowledge graph [108] (from the Orange Book of the US FDA [133]), and supplemented with mechanism of action data from UCSF [114], Mayo Clinic [115], Cleveland Clinic [116], and DrugBank [47] (Supplementary Table S3). We ensure that all medications, if not approved in the US, are marketed in Europe or Japan. Due to our focus on small molecule drugs, insulin and its analogs are excluded from this analysis."
+  },
+  {
+    "tag": "p",
+    "heading": "4.4 Type 2 Diabetes Comorbidities",
+    "text": "We first query Madrigal with pairs composed of pioglitazone or rosiglitazone and all other T2D drugs before taking the mean across all pairs of such drugs for each outcome related to myocardial infarction or stroke (Supplementary Table S6)."
+  },
+  {
+    "tag": "p",
+    "heading": "4.4 Type 2 Diabetes Comorbidities",
+    "text": "For the hyperkalemia analysis, we consider “hyperkalemia, increase”, “hypotension, hyperkalemia, nephrotoxicity, increase”, “renal failure, hyperkalemia, hypertension, increase”, and “renal failure, hypotension, hyperkalemia, increase” as hyperkalemia-related outcomes. We then query the model with pairs composed of each HF drug with all T2D drugs. We take the maximum value across the above four outcomes as the safety score, representing each drug pair’s level of hyperkalemia-specific safety concern. For each MoA group of HF drugs, all drug pairs containing an HF drug within the group are considered when plotting the point plot, using the geometric mean as the estimator."
+  },
+  {
+    "tag": "p",
+    "heading": "4.4 Type 2 Diabetes Comorbidities",
+    "text": "To generate a safety profile for each MASH drug or clinical candidate when combined with T2D drugs or clinical candidates, we first take the average of the highest five normalized ranks for each pair (MASH drug or candidate, T2D drug or candidate). Then, for each MASH drug or clinical candidate, we take the lowest five drug pairs containing it with such scores. This effectively gives us a scalar score for each MASH drug or clinical candidate, representing the (worst) safety profile of the best possible combinations with T2D drugs containing it."
+  },
+  {
+    "tag": "h3",
+    "heading": "4.5 MASH Combination Therapies",
+    "text": "4.5 MASH Combination Therapies"
+  },
+  {
+    "tag": "p",
+    "heading": "4.5 MASH Combination Therapies",
+    "text": "For MASH drug combinations currently under clinical investigation, we first manually annotate them to be either “efficacy” or “safety” based on descriptions of the rationales of developing such drug combinations in existing literature [87, 71, 70]. We then obtain the average of the highest five normalized ranks. In addition, for each such combination, we take all drug pairs with aligned MoA pairs and calculate the average of the highest five normalized ranks, treating those as rational “background” safety for the combination."
+  },
+  {
+    "tag": "h3",
+    "heading": "4.6 Drug Combination Synergy Prediction in BeatAML",
+    "text": "4.6 Drug Combination Synergy Prediction in BeatAML"
+  },
+  {
+    "tag": "p",
+    "heading": "4.6 Drug Combination Synergy Prediction in BeatAML",
+    "text": "We use principal component analysis (PCA) to reduce the dimension of gene expression data from 22783 to 150, which retains 90.3% of variance. We binary encode somatic mutation data, considering only pathogenic or potentially pathogenic mutations, and filter out those genes with less than three mutations across all patients. We then use multiple correspondence analysis (MCA) to reduce the dimension of the somatic mutation data from 447 to 30, which retains 93.0% of variance. We also keep clinical attributes with less than 10% missingness and impute with either the most frequent or mean values, depending on whether the attribute is categorical or numeric. We exclude technical and administrative attributes and attributes about patient information after specimen collection. After filtering, the following attributes are kept: “gender”, “ageAtDiagnosis”, “priorMalignancyNonMyeloid”, “cumulativeChemo”, “priorMalignancyRadiationTx”, “priorMDS”, “priorMDSMoreThanTwoMths”, “priorMDSMPN”, “priorMDSMPNMoreThanTwoMths”, “priorMPN”, “priorMPNMoreThanTwoMths”, “riskGroup”, “specificDxAtAcquisition”, “ageAtSpecimenAcquisition”, “specimenGroups”, “specimenType”, “FLT3_ITDCall”, “NPM1Call”, “priorTreatmentTypeCount”, “priorTreatmentRegimenCount”, “priorTreatmentStageCount”."
+  },
+  {
+    "tag": "p",
+    "heading": "4.6 Drug Combination Synergy Prediction in BeatAML",
+    "text": "To adapt Madrigal for personalized drug combination synergy prediction, we first use frozen Madrigal encoders trained with the DrugBank combination safety dataset to generate drug embeddings. Then, we adopt a symmetric bilinear decoder to fuse the two drug embeddings. We concatenate the fused output with dimension-reduced gene expression, somatic mutation data, and clinical attributes before feeding into an MLP, which is trained from scratch to predict binary labels of whether or not drugs combinations are synergistic for the patient, defined above in Methods Sec. . For each Madrigal model (trained with five seeds), we use five seeds to train the bilinear decoder and the MLP for at most 200 epochs, leading to 25 models evaluated for each group. The model’s hyperparameters are the bilinear decoder output dimension =128=128, MLP hidden dimensions =[256,128]=[256,128], MLP dropout =0.2=0.2, and learning rate =0.001=0.001. The AdamW optimizer is used for training."
+  },
+  {
+    "tag": "p",
+    "heading": "4.6 Drug Combination Synergy Prediction in BeatAML",
+    "text": "For evaluation, 10% of patients or drugs are sampled and all associated responsed data are held out. We use AUROC as our primary performance metric. We calculate AUROC in two distinct ways: (1) Patient-centric AUROC: For each patient, we compute the AUROC across all drug combination predictions, then averaged these values over all patients. (2) Drug-centric AUROC: For each drug combination, we compute the AUROC across predictions from different patients, and then averaged these values. This dual approach provides complementary insights into the model’s performance at both the patient level and the drug combination level."
+  },
+  {
+    "tag": "h3",
+    "heading": "4.7 Drug Combination Response Prediction in Patient-derived Xenografts",
+    "text": "4.7 Drug Combination Response Prediction in Patient-derived Xenografts"
+  },
+  {
+    "tag": "p",
+    "heading": "4.7 Drug Combination Response Prediction in Patient-derived Xenografts",
+    "text": "Given the small number of samples available, we use PCA to reduce the dimension of gene expression data from 20,684 down to 25, which retains 64.5% of variance. We binary encoded somatic mutation data, considering only pathogenic or potentially pathogenic mutations, and filtered out genes with fewer than three mutations in all patients. We then use MCA to reduce the dimension of the somatic mutation data from 2935 to 25, which retains 63.7% of variance."
+  },
+  {
+    "tag": "p",
+    "heading": "4.7 Drug Combination Response Prediction in Patient-derived Xenografts",
+    "text": "To adapt Madrigal for personalized drug combination response prediction, we first use frozen Madrigal encoders trained with the DrugBank dataset to generate drug embeddings as with the BeatAML dataset. Then, given the small amount of data available, we adopt a simple element-wise max to fuse the two drug embeddings and concatenate the fused output with dimension-reduced gene expression and somatic mutation data before feeding into a random forest regressor. For each Madrigal weight (trained with five seeds), we again use five seeds to train the random forest regressor, leading to 25 models. The hyperparameters of the model are: number of estimators (trees) =1000=1000, criterion to measure the quality of a split =friedman-MSE=\\texttt{friedman-MSE}, maximum depth of the tree =Not set=\\texttt{Not set}, minimum number of samples required to split an internal node =2=2."
+  },
+  {
+    "tag": "p",
+    "heading": "4.7 Drug Combination Response Prediction in Patient-derived Xenografts",
+    "text": "Given the small number of unique drug combinations in the dataset, we evaluate model performance by leaving out one drug combination each time. The prediction cutoff of responsiveness is set to -20, aligning with [41] (complete response, partial response vs. stable disease, progressive disease according to the mRECIST criteria), and the threshold of minimum predicted responder or nonresponder is set to 5."
+  },
+  {
+    "tag": "h3",
+    "heading": "4.8 Mortality, Readmission, and Adverse Events Prediction in a Longitudinal Event-Time Cohort",
+    "text": "4.8 Mortality, Readmission, and Adverse Events Prediction in a Longitudinal Event-Time Cohort"
+  },
+  {
+    "tag": "p",
+    "heading": "4.8 Mortality, Readmission, and Adverse Events Prediction in a Longitudinal Event-Time Cohort",
+    "text": "Hospital re-admission. This task predicts whether a patient will be re-admitted to the hospital within 15 days after being discharged from a visit, using their historical visit records as input."
+  },
+  {
+    "tag": "p",
+    "heading": "4.8 Mortality, Readmission, and Adverse Events Prediction in a Longitudinal Event-Time Cohort",
+    "text": "All-cause mortality. This task predicts the mortality outcome of the visit following the patient’s current visit (excluding the final visit), using the current visit as input."
+  },
+  {
+    "tag": "p",
+    "heading": "4.8 Mortality, Readmission, and Adverse Events Prediction in a Longitudinal Event-Time Cohort",
+    "text": "Adverse events. This task predicts the seriousness of each AE (thrombocytopenia, hyperkalemia, hypoglycemia, hyponatremia, anemia) during each visit, using all events prior to the AE timestamp during the visit as input."
+  },
+  {
+    "tag": "p",
+    "heading": "4.8 Mortality, Readmission, and Adverse Events Prediction in a Longitudinal Event-Time Cohort",
+    "text": "To evaluate performance, we split the dataset for each task in a stratified manner using an 8:1:1 ratio to construct the train, validation, and test sets. For the readmission and mortality prediction tasks, the train set contains 614 samples, each consisting of a patient visit along with the corresponding readmission or mortality label. The validation and test sets each contain 154 samples. For AE prediction tasks, the train sets for the five AEs include 471, 460, 517, 461, and 489 samples, respectively. Each sample includes information on the patient visit, time, AE type, and seriousness. The corresponding validation sets contain 118, 116, 130, 58, and 61 samples, while the test sets contain 118, 116, 130, 58, and 62 samples, respectively. We use AUROC as the evaluation metric. Each result shown in Fig. i and Supplementary Table S19 is averaged from five runs."
+  },
+  {
+    "tag": "h3",
+    "heading": "4.9 Adverse Events Prediction in a Single-Index Oncology Cohort",
+    "text": "4.9 Adverse Events Prediction in a Single-Index Oncology Cohort"
+  },
+  {
+    "tag": "p",
+    "heading": "4.9 Adverse Events Prediction in a Single-Index Oncology Cohort",
+    "text": "Population-level correlations. We filter for regimens with ≥\\geq 32 patients for sufficient statistical power. The patient number threshold comes from the exact binomial test [134, 135]: with a true incidence of 5%, a cohort of 32 patients gives about 80% power to observe at least one event. This leaves us with combinations Abiraterone+Leuprolide, Bicalutamide+Leuprolide, Capecitabine+Temozolomide, Carboplatin+Etoposide, Carboplatin+Gemcitabine, Carboplatin+Paclitaxel, Carboplatin+Pemetrexed, Cisplatin+Etoposide, Cisplatin+Gemcitabine, Cisplatin+Pemetrexed, Dabrafenib+Trametinib, Fluorouracil+Leucovorin, Fluorouracil+Mitomycin, Fulvestrant+Palbociclib, Gemcitabine+Paclitaxel, Letrozole+Palbociclib. For every qualifying two-drug regimen we compute the observed incidence of each AE outcome and measured its correlation with the corresponding Madrigal (Madrigal trained on TWOSIDES) predicted score using Kendall’s τ\\tau. Within these retained regimens, we additionally adjusted for age, gender, palliative intent, and race (by fitting L1-penalized logistic regression models with 5-fold stratified cross-validation with λ∈{10−4,10−3.5,…,102}\\lambda\\in\\{10^{-4},10^{-3.5},...,10^{2}\\}). Tumor tissue type is not used as a covariate here as regimens are typically uniquely indicated for a small set of tumors. The Madrigal coefficients from these models represent the score’s adjusted log-odds effect on AE risk. For the race feature, categories with fewer than 100 patients are also grouped."
+  },
+  {
+    "tag": "p",
+    "heading": "4.9 Adverse Events Prediction in a Single-Index Oncology Cohort",
+    "text": "Personalized predictions. We include all 3,577 patients in the cohort and include tumor tissue type as a covariate. We train random forest models to predict individual AE occurrence using Madrigal drug embeddings combined with patient characteristics (age, gender, palliative intent, race, and tumor tissue type). Performance is estimated with 5-fold stratified cross validation. Tumor tissue types are limited to the ten most common ICD-based tissue types (namely lung, breast, ovary or fallopian tube, prostate, pancreas, uterus, liver, esophagus, bladder, [UNSPECIFIED]), with [UNSPECIFIED] category including both missing annotations and all tissue types not listed above. Each Madrigal model mean/std is derived from three Madrigal runs with different seeds and five-fold cross-validation, other mean/std are derived from five-fold cross-validation."
+  },
+  {
+    "tag": "h2",
+    "heading": "References",
+    "text": "References"
+  },
+  {
+    "tag": "p",
+    "heading": "References",
+    "text": "1"
+  },
+  {
+    "tag": "h2",
+    "heading": "References",
+    "text": "References"
+  },
+  {
+    "tag": "h2",
+    "heading": "Instructions for reporting errors",
+    "text": "Instructions for reporting errors"
+  },
+  {
+    "tag": "p",
+    "heading": "Instructions for reporting errors",
+    "text": "We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the methods listed below:"
+  },
+  {
+    "tag": "p",
+    "heading": "Instructions for reporting errors",
+    "text": "Tip: You can select the relevant text first, to include it in your report."
+  },
+  {
+    "tag": "p",
+    "heading": "Instructions for reporting errors",
+    "text": "Our team has already identified the following issues. We appreciate your time reviewing and reporting rendering errors we may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability should not be a barrier to accessing research. Thank you for your continued support in championing open access for all."
+  },
+  {
+    "tag": "p",
+    "heading": "Instructions for reporting errors",
+    "text": "Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion, and welcome developer contributions."
+  }
+]

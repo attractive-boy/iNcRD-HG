@@ -1,0 +1,162 @@
+{
+  "created_at_utc": "2026-09-16T06:26:57.189465+00:00",
+  "protocol_sha256": "65e4f150ba3f7cbcfe272bce1a9ee0ad07499192421ea699189aa425d4cd5254",
+  "source_sha256": "6be05bd5de529d8b2e1e8af8fa9dbc18f93159079234eb0a20236d3238095629",
+  "results": [
+    {
+      "created_at_utc": "2026-09-16T06:26:03.181724+00:00",
+      "split": "historical",
+      "protocol_sha256": "65e4f150ba3f7cbcfe272bce1a9ee0ad07499192421ea699189aa425d4cd5254",
+      "metrics": {
+        "666": {
+          "reference": {
+            "auc": 0.9627256377964776,
+            "ap": 0.9278591979450169,
+            "criterion": 0.9452924178707472,
+            "macro_drug_ap": 0.7177135132126892,
+            "macro_drugs": 82
+          },
+          "full": {
+            "auc": 0.9627482969832275,
+            "ap": 0.9278679581700314,
+            "criterion": 0.9453081275766295,
+            "macro_drug_ap": 0.7191618449679912,
+            "macro_drugs": 82
+          },
+          "quadratic": {
+            "auc": 0.9627447192168986,
+            "ap": 0.9278945896740367,
+            "criterion": 0.9453196544454676,
+            "macro_drug_ap": 0.7177725686160773,
+            "macro_drugs": 82
+          }
+        },
+        "0": {
+          "reference": {
+            "auc": 0.9627602228709906,
+            "ap": 0.9278940891412732,
+            "criterion": 0.9453271560061319,
+            "macro_drug_ap": 0.7206514515994259,
+            "macro_drugs": 82
+          },
+          "full": {
+            "auc": 0.9627590302822142,
+            "ap": 0.9278804940033799,
+            "criterion": 0.9453197621427971,
+            "macro_drug_ap": 0.7203039802938305,
+            "macro_drugs": 82
+          },
+          "quadratic": {
+            "auc": 0.9627578376934379,
+            "ap": 0.9279218659674595,
+            "criterion": 0.9453398518304488,
+            "macro_drug_ap": 0.7207231876109037,
+            "macro_drugs": 82
+          }
+        },
+        "1": {
+          "reference": {
+            "auc": 0.9627280229740302,
+            "ap": 0.9278553172316557,
+            "criterion": 0.9452916701028429,
+            "macro_drug_ap": 0.7174271804688521,
+            "macro_drugs": 82
+          },
+          "full": {
+            "auc": 0.9627304081515828,
+            "ap": 0.9278455443372953,
+            "criterion": 0.945287976244439,
+            "macro_drug_ap": 0.7178259332747455,
+            "macro_drugs": 82
+          },
+          "quadratic": {
+            "auc": 0.9627256377964777,
+            "ap": 0.9278371746902722,
+            "criterion": 0.945281406243375,
+            "macro_drug_ap": 0.717530988179796,
+            "macro_drugs": 82
+          }
+        }
+      },
+      "lnc_identity_metrics": {
+        "666": {
+          "auc": 0.9942543521138839,
+          "ap": 0.988187475938475,
+          "criterion": 0.9912209140261794,
+          "macro_drug_ap": 0.9426419858349923,
+          "macro_drugs": 23
+        },
+        "0": {
+          "auc": 0.9942309641306297,
+          "ap": 0.9881600587209654,
+          "criterion": 0.9911955114257975,
+          "macro_drug_ap": 0.9209028554002096,
+          "macro_drugs": 23
+        },
+        "1": {
+          "auc": 0.9942387601250477,
+          "ap": 0.9881009197176454,
+          "criterion": 0.9911698399213466,
+          "macro_drug_ap": 0.9426419858349923,
+          "macro_drugs": 23
+        }
+      },
+      "contexts": [
+        666,
+        0,
+        1
+      ],
+      "context_count_is_not_fit_count": true,
+      "query_order_and_batch_max_error": 0.0,
+      "files": {
+        "scores.npz": "f35128610331d034cd410071f40e70919d5f9b2886a910fd227a1d7f82e5edde",
+        "TRAINING.json": "2c33d77c8b6d258f3177768eb5057654762f47dd6a54354766e286e7feb98b50",
+        "lnc_identity_666.npz": "02965bf66c124020e4c19178ef01f54dc54e81e7998e1bcac5981e602cc174ae",
+        "lnc_identity_0.npz": "ccf4c8da2c9fda83228d93fe83b4e1ac25598e49023857e4c665850c37d5d6e0",
+        "lnc_identity_1.npz": "3c1c0153e588740fb714523dede21ce9e06b8925a7d0b6bdc26b86fac47f6fbc"
+      },
+      "sha256": "8d47a3b9fd908188db5a4900a2248a9368ebb687b240dc2bae0c5066216cef30"
+    }
+  ],
+  "independent_stationarity": {
+    "historical": [
+      {
+        "arm": "quadratic",
+        "objective": 1781.456186666799,
+        "maximum_gradient": 4.275169995793249e-09,
+        "newton_steps": 4,
+        "cg_steps": 587
+      },
+      {
+        "arm": "full",
+        "objective": 1563.6464838059794,
+        "maximum_gradient": 2.964295475749168e-13,
+        "newton_steps": 7,
+        "cg_steps": 446
+      }
+    ]
+  },
+  "all_metrics_recomputed": true,
+  "adopted_solutions_bitwise_verified": true,
+  "saved_field_objective_and_maximum_principle_verified": true,
+  "exact_lnc_identity": true,
+  "added_by_this_audit_fits": 0,
+  "queue": {
+    "created_at_utc": "2026-09-16T06:26:03.847312+00:00",
+    "protocol_sha256": "65e4f150ba3f7cbcfe272bce1a9ee0ad07499192421ea699189aa425d4cd5254",
+    "historical_gate": false,
+    "partition_gate": null,
+    "new_formal_numerical_solves": 0,
+    "adopted_training_only_numerical_solves": 2,
+    "total_distinct_numerical_solves_including_probe": 2,
+    "new_neural_fits": 0,
+    "new_outer_fits": 0,
+    "cumulative_formal_partition_neural_fits": 333,
+    "confirmed_final_innovations": 0,
+    "next_step": "stop_this_version",
+    "sha256": "2331045d758e6da5a7c0eb38849726fdb4660c5a96fb167c84472992b1a68d24"
+  },
+  "original_test_source_access": false,
+  "confirmed_final_innovations": 0,
+  "sha256": "4b47eec3149b2645053770564f172a8ceb07120d78029e85ac3bf6c17ea1c640"
+}

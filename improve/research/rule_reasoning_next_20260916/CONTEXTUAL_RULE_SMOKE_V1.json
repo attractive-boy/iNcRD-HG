@@ -1,0 +1,2864 @@
+{
+  "created_at_utc": "2026-09-16T00:08:11.769791+00:00",
+  "device": "cuda:1",
+  "core_parameters": {
+    "width": 64,
+    "depth": 2,
+    "dropout": 0.1,
+    "folds": 5,
+    "physical_schema": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "max_rule_length": 3,
+    "minimum_rule_support": 2,
+    "candidate_rules": 32,
+    "subgraph_hops": 1,
+    "neighbor_cap": 32,
+    "subgraph_seed": 29016,
+    "coverage_penalty": 0.65,
+    "temperature": 0.5,
+    "grounding_tau": 2.0,
+    "margin": 1.0,
+    "ranking_weight": 0.1,
+    "triplet_batch": 256,
+    "lnc_policy": "identity_strong_reference"
+  },
+  "new_short_neural_fits": 2,
+  "identity_replays": 2,
+  "formal_fits": 0,
+  "performance_metrics_computed": false,
+  "records": [
+    {
+      "task": "MiDrug",
+      "kind": "full",
+      "epoch": 10,
+      "seconds": 2.877442132681608,
+      "parameters": 142529,
+      "trainable_parameters": 142529,
+      "fixed_step_training": true,
+      "trained_neural_model": true,
+      "training_steps": 10,
+      "gradient_evaluations": 10,
+      "optimizer_steps": 10,
+      "rule_triplets_per_update": 256,
+      "final_optimizer_state_epoch": 10,
+      "identity_preserves_anchor": false,
+      "all_device_seeding_used": false,
+      "mean_raw_residual": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "nested_feature_crossfit": true,
+      "dropout_rng_sha256": "216042714b38c9f49bdc5e74feb4dd4fb6bbaf527a530c053c8cf5562632b6b1",
+      "private_rng_sha256": "18ed9aec22907a2537d6359d68e60146e830718b3a5c571287bba16f3b8c3ad2",
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.16048955917358398,
+      "files": {
+        "model.pt": "98813e02c7770c34b9c7b41987482ee4fc14f53033f31bd45aa5cb24f91d2bcf",
+        "training_final.pt": "fa7bc9acc47247ee48e83f66e0b030753c77d9004badb6281e2dcc9a5370ace3",
+        "trace.json": "3a560e8366c91050c95a079cbb36e35af9f71d4e4fef6ab533bfa2b35cf06eab"
+      },
+      "sha256": "0b179c8bb930d2ea3ba580c4a2da8eaf03e101037abe0f95be2b1c0737f166bb"
+    },
+    {
+      "task": "MiDrug",
+      "kind": "global_rules",
+      "epoch": 10,
+      "seconds": 0.35988915152847767,
+      "parameters": 142529,
+      "trainable_parameters": 142529,
+      "fixed_step_training": true,
+      "trained_neural_model": true,
+      "training_steps": 10,
+      "gradient_evaluations": 10,
+      "optimizer_steps": 10,
+      "rule_triplets_per_update": 256,
+      "final_optimizer_state_epoch": 10,
+      "identity_preserves_anchor": false,
+      "all_device_seeding_used": false,
+      "mean_raw_residual": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "nested_feature_crossfit": true,
+      "dropout_rng_sha256": "216042714b38c9f49bdc5e74feb4dd4fb6bbaf527a530c053c8cf5562632b6b1",
+      "private_rng_sha256": "18ed9aec22907a2537d6359d68e60146e830718b3a5c571287bba16f3b8c3ad2",
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.16054916381835938,
+      "files": {
+        "model.pt": "8259376e9f7dcc26df2b6152ce3620df53caa8933f5c41fbfb71693fcd1d44fc",
+        "training_final.pt": "f742d94491a1b82214fccdf4cc4b60d3a224f125dc4c46ec7a3162b46fa7acf9",
+        "trace.json": "131a44bf949cd4e70b977d5e83e80ee91b1a7f42d3b6edb9b795c70ec31a144c"
+      },
+      "sha256": "70e4cc80e4bce1592c556b45d140478fa97a1ac2aee9f741d2cfedb14dcba668"
+    },
+    {
+      "task": "LncDrug",
+      "kind": "full",
+      "epoch": 0,
+      "seconds": 0.0,
+      "parameters": 0,
+      "trainable_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": false,
+      "training_steps": 0,
+      "gradient_evaluations": 0,
+      "optimizer_steps": 0,
+      "rule_triplets_per_update": 0,
+      "identity_preserves_anchor": true,
+      "no_new_lnc_training": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "dropout_rng_sha256": "c8d7c92bd1f592ff5016d522668d67357e9d83d44d1f8f7d9c7695062280b945",
+      "private_rng_sha256": null,
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.06253719329833984,
+      "files": {
+        "model.pt": "d0fb79e98f887337d82426499bc2b735d0b90a81924380932507ec0ff78bd7a6",
+        "training_final.pt": "ce0ee1ad522e2a8aec2eac913f6e3f02183ba289368ec0b9feca97716c211fe9",
+        "trace.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "sha256": "d1d6faf04f44836bdce47ab20e4edef03b22e8c49a2357f79ab082171be86bac"
+    },
+    {
+      "task": "LncDrug",
+      "kind": "global_rules",
+      "epoch": 0,
+      "seconds": 0.0,
+      "parameters": 0,
+      "trainable_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": false,
+      "training_steps": 0,
+      "gradient_evaluations": 0,
+      "optimizer_steps": 0,
+      "rule_triplets_per_update": 0,
+      "identity_preserves_anchor": true,
+      "no_new_lnc_training": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "dropout_rng_sha256": "c8d7c92bd1f592ff5016d522668d67357e9d83d44d1f8f7d9c7695062280b945",
+      "private_rng_sha256": null,
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.06254959106445312,
+      "files": {
+        "model.pt": "d0fb79e98f887337d82426499bc2b735d0b90a81924380932507ec0ff78bd7a6",
+        "training_final.pt": "ce0ee1ad522e2a8aec2eac913f6e3f02183ba289368ec0b9feca97716c211fe9",
+        "trace.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "sha256": "643de38407f1de4564fa7e7086c2a6c1fee71b43f3fa2adf56bc2c71b131e0e9"
+    }
+  ],
+  "fold_audits": [
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 0,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 498,
+      "support_audit": {
+        "fold": 0,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1229,
+          124,
+          967,
+          1681,
+          435,
+          1324,
+          150,
+          1517,
+          1887,
+          624,
+          874,
+          409,
+          1648
+        ],
+        "body_counts": [
+          14615,
+          3962,
+          9635,
+          32622,
+          22873,
+          21670,
+          5920,
+          27080,
+          52416,
+          3747,
+          8217,
+          18013,
+          45452
+        ],
+        "array_sha256": {
+          "node_features": "64d4ca7b433b097f1de8c24d246af318d098568804579785f8d6a4d9c103a336",
+          "context_edges": "698971bb945a0535018867a2e13fc2d45e37370480576018b2398fb9dc4f9de8",
+          "context_relations": "630e8f101ef94b44b385ed1322751a6a6806c5353669d6961681bf6e73718c32",
+          "node_batch": "5b3d5ded07b733fbab22e0872f8014155597922bd83b83dd648462b972489816",
+          "head_indices": "efc89f43e2da2042011519496a6d1e3bee5157111e8ad875c0962a7d97a0b13e",
+          "subgraph_sizes": "35bb1e87a075ae2734f14ef98d1376847a71c1c1564591a7757eed263e8d31ad",
+          "grounding": "0e3842066f7812842485050c5e72fc194774f614adafb7daca97c873e6c80e50",
+          "candidates": "78772455a46a053a86c31ae4018faee878e619f6644cddad57fec65b5dcb7c48",
+          "tail_count": "b7d57fafa079edbb2535cd7bff47f1a2c0a1cc207edad558d218a462c68b7aee",
+          "rule_stats": "282c0de23b2aa0e788e743eb2eda1e9d0bee2d914453f8cdbba4f0e1d62169e8",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "a13a278cba324a48d42db2e80e3fec8c0145cb38d79a2d7d2bee3045a5d9328c",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 1,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 502,
+      "support_audit": {
+        "fold": 1,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 597,
+        "support_counts": [
+          1249,
+          104,
+          953,
+          1690,
+          404,
+          1319,
+          135,
+          1490,
+          1863,
+          619,
+          853,
+          384,
+          1636
+        ],
+        "body_counts": [
+          15044,
+          3925,
+          9635,
+          33490,
+          23238,
+          21670,
+          5944,
+          27900,
+          55873,
+          3809,
+          8217,
+          18013,
+          47739
+        ],
+        "array_sha256": {
+          "node_features": "0c9e39f4a66f9acf3c45cc66de2fbd77a07dae9b7635648066bfcca588e5401a",
+          "context_edges": "0c854000dbb48d7e8bf930852030597fdd08e450e2ef2a2084ca6360be248f14",
+          "context_relations": "816c39e844893e704dac07225411609370ce73705e3db047a475ad3795d87006",
+          "node_batch": "fe6140ca7875387f4acb2a2f81a705c3c5fd7c566b53607085cf3d882547a2c4",
+          "head_indices": "853a8884e69b3c3cfff7942f63736e6b121d1520a3601b40e3dc7e67aa45e8e5",
+          "subgraph_sizes": "fa2706236c2b0dffd9da7b357826d98e7b389a048abfe3aba1fa43409a87b089",
+          "grounding": "1bb8fb16006c6ce36790762bed99a435ae39ebaba20abd2a53faf19d25ce1a98",
+          "candidates": "07e51dec3385a56069de585cb8a5d5be690551642fc3be64187b391211b6487c",
+          "tail_count": "ac48100c525bd22b045089c42174c2dd31831e2d87224b485f25a13882992601",
+          "rule_stats": "a5c90df8a019bdc9f7d28d38bd0a05decaf99a15fab5cb2e2a49ddb71a7aaff8",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "e4342f6eb04de5354554d4b1041d996a462e4ecc09355b329652bb3038a75e60",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 2,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 504,
+      "support_audit": {
+        "fold": 2,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1265,
+          99,
+          937,
+          1698,
+          414,
+          1311,
+          130,
+          1484,
+          1870,
+          650,
+          858,
+          394,
+          1630
+        ],
+        "body_counts": [
+          15305,
+          3907,
+          9635,
+          33684,
+          23538,
+          21670,
+          5821,
+          27475,
+          55245,
+          3790,
+          8217,
+          18013,
+          46281
+        ],
+        "array_sha256": {
+          "node_features": "fd1c43cf40490415da2e399201da1c63c6eff57152b8f6393ce78576997b0394",
+          "context_edges": "31bcc58fd9233aebdccd03baa5696e4a4dd2d4c5846a8252b6a53246728d6942",
+          "context_relations": "7d816159760a9f32d5dac2dc02f3bb5936e11c0880a793094ca6a788825ce949",
+          "node_batch": "44db4f14f91f404c202f4d175758958558d5172731c6dfd5a7053a111fdd235a",
+          "head_indices": "8b3585adc62d4720864c088ff2b4f614691376116aa8207dc8384a97f4899300",
+          "subgraph_sizes": "d4200f57bec91a3dc52aa06c5019e11839ce1bc828499813186fbe1fe9cde532",
+          "grounding": "fce3f89a49a17106855b7729817ce9dffd0c9585dfe8d5327f634110d338f639",
+          "candidates": "62b4f6a33856ce0429a7a5e26ad535e4589a03e8f6ecc596f97af6b4507934fb",
+          "tail_count": "33480d37386226a75753f019ca77149b9f2e873411bcf45eb39f234281711a1f",
+          "rule_stats": "2716382c76dd2f4de31e814c6cb804add93b8a655f4f888a706611f4f09e56c4",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "6e0edb00287143d8cea34ca85468081b07c3e0d147e35b8eea1346cdc63c1ed4",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 3,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 487,
+      "support_audit": {
+        "fold": 3,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1275,
+          91,
+          941,
+          1678,
+          405,
+          1300,
+          112,
+          1489,
+          1875,
+          610,
+          852,
+          372,
+          1636
+        ],
+        "body_counts": [
+          14977,
+          3880,
+          9635,
+          33083,
+          22985,
+          21670,
+          5868,
+          27570,
+          52307,
+          3837,
+          8217,
+          18013,
+          44351
+        ],
+        "array_sha256": {
+          "node_features": "2705e5f9f77b176ea0c2e0af4dce7d889f704505d0558c38ca754dbe4d57b57e",
+          "context_edges": "e67ab2f986a5c5e9fd038daecd6642cefb397b5505ea043e975b870455366430",
+          "context_relations": "bc2fe4e3a693e694c41f669cab4a9a2a3d0e48579b70ef572327100b086c68e0",
+          "node_batch": "d61f03ff2659fbbb327294cbc7b5b39e95cd35e23b65cf9f97c0dd70af651adc",
+          "head_indices": "d355b1520d692dbdabceeb36252a47f5300acbd4de18d4e6a268cfec2478a580",
+          "subgraph_sizes": "7283f7b4ca74cd1bff3f803910e76ca61730f8c3183002ffe3cf2d82f93ed2f5",
+          "grounding": "d89a87a36e9734be450d6b3448686d861add2da0805efee43091c17538944146",
+          "candidates": "8b40ab0af1da90cf2f3a30d65c9d84268cfae58f0b4e76c14a1c3bf7f02134b3",
+          "tail_count": "86cf8a65e5d59af4d391e337a8827d79ec9b471fcb5942fe4ca03c86754b0daa",
+          "rule_stats": "d0230815a8d5bc3b5172ad76cea42dafae9fbcd1cc0432214d08f3369b159c4d",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "c6fd2ff68dc717dc0ae51fb53c34ac42a71f666ddd672b04c0b5085d8416b138",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 4,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 492,
+      "support_audit": {
+        "fold": 4,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1280,
+          112,
+          958,
+          1687,
+          382,
+          1322,
+          145,
+          1520,
+          1879,
+          663,
+          875,
+          405,
+          1631
+        ],
+        "body_counts": [
+          14808,
+          3946,
+          9635,
+          32554,
+          22803,
+          21670,
+          5968,
+          27334,
+          53350,
+          3851,
+          8217,
+          18013,
+          44401
+        ],
+        "array_sha256": {
+          "node_features": "c50c0bdbe79c4dc561552381119dc0eb5a560a1218bcad417c36aa2ad986f5e5",
+          "context_edges": "2294bd0b9777bb84fd3541b4ec1fbce4c38081a6861d6f04f099fc31c8239982",
+          "context_relations": "360dd9cb03c01f7ce32865633e58f30c12f6d9ff7b8fb8ef837c38b3b1cd7f09",
+          "node_batch": "4baf8afa99a811d8261b15f83488746f1538daed29231cf5342e5de2c8ed2486",
+          "head_indices": "1adc994a91335d5b03d38e8f4cbd72c11e9ea2a83c8a0bf30ee72d22984b1b48",
+          "subgraph_sizes": "a1eca266190634369f1b36095cf38103cad8d55e65121de89c01c8383050707b",
+          "grounding": "05687866da2fd1048e4d562d16124f078f343b34cf7c07504df3178bcf7c8225",
+          "candidates": "e2696561bc315a0bfa1cf9c7911fd6505be44c0f52ebe327ee0f2591d6a28509",
+          "tail_count": "7453d1af0f55b1b895c431f6ca8df58bd69c344d3c543529c693dbf94968abad",
+          "rule_stats": "6dfdd366d965feb82120e1d749c6ddab86c641b99ac73ab2162347c2e53e248a",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "4bd60de20e28412b3b162a422c696c232a1dd80631f1ff5d9d6c4c0f98046af3",
+        "physical_relations_sha256": "f4d7bf9c5e03da9c7b9c07fba292aa3e98331b3523b0f99d1c702bf01420f8ab"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "fold": 0,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 502,
+      "support_audit": {
+        "fold": 0,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 599,
+        "support_counts": [
+          1259,
+          101,
+          956,
+          1699,
+          430,
+          1336,
+          123,
+          1500,
+          1882,
+          639,
+          864,
+          403,
+          1628
+        ],
+        "body_counts": [
+          14925,
+          3993,
+          9635,
+          32608,
+          23652,
+          21670,
+          6016,
+          27823,
+          53380,
+          3818,
+          8217,
+          18013,
+          44533
+        ],
+        "array_sha256": {
+          "node_features": "51067e9cb718ea5f4093e372a6ee25194d8d07d02af99825973e4705a8194fc6",
+          "context_edges": "db3aae5a23ba99c427946f1ae1539f41501d327519cf7df6bae57144fba7efb6",
+          "context_relations": "81dd3ebae46e0016c17ebaf323dfc7d2d1078d004b018f0ef38e0e25d0996028",
+          "node_batch": "015a7e7d9d2896712c62fe6a93aa0ed7be8cbe0d904d364d4c6ba4aa9ef75e7f",
+          "head_indices": "1ccbac090bfb13797e09f3b3395c1a70442e5c885801b0ce5961b28997c1297b",
+          "subgraph_sizes": "80d4406566b95fa37d232332723933c26823b375294e99909f2f778ac17a216e",
+          "grounding": "fb550c23ec44ea914e2384414071162abb5f9078536e96430248170ef093e520",
+          "candidates": "a2924908d1f9b26fc6351c67910a9369cbeccb678148f99ad190474c343a3eaa",
+          "tail_count": "b244b4030e18e8930bc319f0172acdd48bf2c01d546e6bdfeecffbab99356c29",
+          "rule_stats": "c4b40505eeb7bca85c735cb7667b56c255126dacfe43863acceae7dabb7ce3cc",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "487dc82244eea9c2f1f8d240a4a00a3693aa19bb3f0d05a4416dbcc6ca6d2537",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "fold": 1,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 501,
+      "support_audit": {
+        "fold": 1,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 599,
+        "support_counts": [
+          1280,
+          99,
+          982,
+          1703,
+          406,
+          1351,
+          123,
+          1512,
+          1865,
+          693,
+          886,
+          413,
+          1618
+        ],
+        "body_counts": [
+          15056,
+          4021,
+          9635,
+          33326,
+          23436,
+          21670,
+          5959,
+          27703,
+          53761,
+          3881,
+          8217,
+          18013,
+          46842
+        ],
+        "array_sha256": {
+          "node_features": "b1236485818c6a928e717fd6837f4dbdd1814d2a10b32d6907d345ab473372d9",
+          "context_edges": "577685f45a428f17ebe029463b7ddbcc8aed7126ab2797e05da4f7ee0b613ea3",
+          "context_relations": "2246ebc31bba2b5348c7a4cc6ae488f1cab8f0f967280f9e720e94beed6d5570",
+          "node_batch": "9190631ab368c8b7b25914b22c4d53c1153df82f61fc6fd423625013cbd3a1a3",
+          "head_indices": "1ce47fbbdb9d208fcca8738ee6a805f3f79b0d27b291ea647bd6aa84da40204f",
+          "subgraph_sizes": "429e18dc4bfa403be9442aa4cf3947f2717c85475aaaaebddb764832af4f8a91",
+          "grounding": "c729f84286cc8a9de6b25cd02ecc2c549710f21f9dbc7653efdbc2ec2c42c0f6",
+          "candidates": "edbaede3d91b056b3b0f6c4a1d339e996b4286e789a1c6cc0196168209edd7b1",
+          "tail_count": "c3065966bb041d7c88208ba78cea80d1b0a02efaef4bd79f43068ddb65ccb11f",
+          "rule_stats": "ef692ead3015a442267f795dcbca7bcfe7de3072e6c7d4a81d5021dcb9ab6dde",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "0ea3bbfbb79ccad49a7f4cecc4b752354c6fee6449a119116b82c984ce97c9af",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "fold": 2,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 498,
+      "support_audit": {
+        "fold": 2,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1253,
+          110,
+          981,
+          1683,
+          381,
+          1346,
+          146,
+          1527,
+          1867,
+          667,
+          896,
+          404,
+          1617
+        ],
+        "body_counts": [
+          14812,
+          3979,
+          9635,
+          33046,
+          23388,
+          21670,
+          5919,
+          27706,
+          53559,
+          3932,
+          8217,
+          18013,
+          46337
+        ],
+        "array_sha256": {
+          "node_features": "92a3e0f02103c2ef390c01d6a23bcd4fefc64797e4069eecbac591269e5d0394",
+          "context_edges": "5a00f4f22e69152bee8cd9c932f4dd1b9d9882b8d1b191b21c4374bd4fffc659",
+          "context_relations": "1f32bce3144181e86f6a757a2871a8a6bfef22ac8a15d833aac832dd8d0cb1a2",
+          "node_batch": "26292baeba5ab3645364c5de566f9d7255ae67f52fffc7cac7369f435305fb21",
+          "head_indices": "9d5cf1fbc8363c28549462a6d8b867e0eb037f7ca423fe5d0442228b2a320ed4",
+          "subgraph_sizes": "33bc0b84763835d9fbdf4e5be5d9d07af4afd2b39d20b7528cd3e5922f3b390f",
+          "grounding": "f2cdbf1b618fe1ca7c4c646f9e4c63657a279cb7607af2909cd6d277991fb63b",
+          "candidates": "e3ba530c30644b4706fe80dece9a0226e18978401e7645f8d027f9ea86b361ba",
+          "tail_count": "2c8f9fc7b0ec8e102fd1931e29bfd1cbb1c28da19fb42ffb342b9bb300893f87",
+          "rule_stats": "0dbaf8a57720c8483aec375692c6f80669a84eca877ba43dd9c34eeb447cbda4",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "3c56b948683a2fcedb29d2bf7f8f3beb465c2e777ac601db9e9aa802dc70e000",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "fold": 3,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 493,
+      "support_audit": {
+        "fold": 3,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 599,
+        "support_counts": [
+          1273,
+          84,
+          960,
+          1696,
+          416,
+          1341,
+          113,
+          1511,
+          1879,
+          665,
+          868,
+          374,
+          1601
+        ],
+        "body_counts": [
+          15055,
+          3941,
+          9635,
+          33078,
+          23561,
+          21670,
+          5995,
+          28221,
+          54741,
+          3976,
+          8217,
+          18013,
+          45811
+        ],
+        "array_sha256": {
+          "node_features": "293997bdf95144b50ffc4e349aaa5c29bfbf2bb5a5b1ab4030ae79d79382f23a",
+          "context_edges": "a542f5bfc3d3dced48f96383c76114f2a5711da6fe46c2296b609f734bdcb803",
+          "context_relations": "308a6573d26d7f82b431fe44fda786c0c78eb2f79b60829ce39d1cf570f277cd",
+          "node_batch": "91e1ec0fe6c510254f4a64442dab6af2616c7d617c5e995c68f76e79002f697f",
+          "head_indices": "ff786b5a69bb30414518d983bc716acc91bb1d717eef29cb408a6156db3751e0",
+          "subgraph_sizes": "3958b754429bb3adc36dd646f71e281140e4a385ef4b8847df2a3c734ff5fd71",
+          "grounding": "33e3d10b1911f4529fcce07b2f90572454c96499aa41bdab5c6f76101af4ffd5",
+          "candidates": "75e12d1c6867af6a54c1daf5ab0a13f7f714815808b4640ba335879919c5dfc5",
+          "tail_count": "b0c538a3c9b670db9e277a3615038be283b05a9df45b963e108e7554cbf6c871",
+          "rule_stats": "d43f28971031a6b22811f784cc09aa7dae0479167c169dd1922c00ae0d5b6ea0",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "99930fda706b705d9675a192a08e178201555e442f09557166ed9dac94c5b43e",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "fold": 4,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 489,
+      "support_audit": {
+        "fold": 4,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 596,
+        "support_counts": [
+          1231,
+          98,
+          965,
+          1686,
+          402,
+          1330,
+          122,
+          1505,
+          1874,
+          649,
+          870,
+          394,
+          1641
+        ],
+        "body_counts": [
+          15043,
+          3886,
+          9635,
+          33360,
+          23119,
+          21670,
+          5825,
+          27681,
+          52868,
+          3885,
+          8217,
+          18013,
+          45818
+        ],
+        "array_sha256": {
+          "node_features": "1110c5f9c42417d7840b4424aa514462fa857d5c18d703d0222abf96f5a41850",
+          "context_edges": "cf67bb3da6c711d084715635d36ec0775b938aaed61a09af4310205eed90b188",
+          "context_relations": "302300f748fe51261af239ea00d702ff7befc4268a8e44e7023528bb868086af",
+          "node_batch": "2a7b5f6de728aaf7e480c6c4eea6e6c2af91cbd5b6d3fc9b1d8722bc424911f6",
+          "head_indices": "e54ddb937abc650b0b52fef661d85ddaa2823720f9b4a4031685b53c8fdb10d9",
+          "subgraph_sizes": "67ad9e696866dd00493522f485b5f2eea7ea5df6472488081153ca0afb326565",
+          "grounding": "6bc64a32a310317671d3149df93f53b5dd18e45c5bb49df0d2e0f44c7fe41f57",
+          "candidates": "9fe6a6cadcdee7214d99126ce54b7de738bcc6992dbd0e8b486d40f1e85cb3e5",
+          "tail_count": "73c39fc2d3ffb3b3cb4d29ae6a70af2ad7f97127bfe5a0b1731c7669a6326ef6",
+          "rule_stats": "477de192e23b08bdaf0416bfdb69de572adda067d53db3a88d155e90a0ec4239",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "c9f2d246045ddfe0818420f5f248eb2c2c13fec2bb13e62bccff3e98c3d5be9f",
+        "physical_relations_sha256": "f4d7bf9c5e03da9c7b9c07fba292aa3e98331b3523b0f99d1c702bf01420f8ab"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "fold": 0,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 501,
+      "support_audit": {
+        "fold": 0,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 596,
+        "support_counts": [
+          1293,
+          130,
+          948,
+          1702,
+          452,
+          1324,
+          141,
+          1509,
+          1873,
+          657,
+          868,
+          419,
+          1613
+        ],
+        "body_counts": [
+          15115,
+          3846,
+          9635,
+          33954,
+          23791,
+          21670,
+          5743,
+          27102,
+          52933,
+          3729,
+          8217,
+          18013,
+          46303
+        ],
+        "array_sha256": {
+          "node_features": "e2c20510baf558e663b5f168b98d4a57571537adb8e259625dd63a197551f3bf",
+          "context_edges": "dd7b1670b42123be53e3f3f90893cae53eb2076403ad2ae3fc2f6bbb00846b49",
+          "context_relations": "1f680a798e206dce379f7970e93cfa80b42dfc2e7251c48a7234a516ea54d851",
+          "node_batch": "0640abd33c30f2f97790293dd5e102a10d84d262f70ad2ec143db4676b1647ba",
+          "head_indices": "744fb77e6b0bfcdac01dbbf75dc97d8d4c4ec56d860a51437a356909615f34d2",
+          "subgraph_sizes": "6a5ebb42633f9c1c07a45c3aa66bde0a873b925cda4319c9789e07810093c703",
+          "grounding": "49af96b4bca7021777aa972ec9036ab78c653932f6a19e7c70162ff4f507443f",
+          "candidates": "d9576c8fbfa995e238bf76e2374a3ea9872afec735a6cdd2640e230e0a36a5ab",
+          "tail_count": "acf74585e3b8a6fbd294fe9a82c54ba2a2d930f97726ea56475fdc01d3595f10",
+          "rule_stats": "3a6773f5777b8ac889dac1abb4da01880ba549f55376515d452305353d8e727a",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "80f2b15a6bca969999857b442c286123a77f97b404be089597fa5454008ac697",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "fold": 1,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 504,
+      "support_audit": {
+        "fold": 1,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1266,
+          96,
+          964,
+          1689,
+          428,
+          1320,
+          126,
+          1510,
+          1870,
+          638,
+          858,
+          399,
+          1610
+        ],
+        "body_counts": [
+          14928,
+          3883,
+          9635,
+          32898,
+          22931,
+          21670,
+          5820,
+          27391,
+          54575,
+          3786,
+          8217,
+          18013,
+          46680
+        ],
+        "array_sha256": {
+          "node_features": "0940ec5ff713f8b5b77078d49d0b3bd33330d2551c9cd257a3d550930bf67343",
+          "context_edges": "fd1d90037ac7d5d275995083685c80d8538c7dde4a6b43ce0aa8d42d06a1538c",
+          "context_relations": "3e2e95f906d0f8c0d59dae7c84cc53d0b4d49bef5fe9f33b18275daa85a038be",
+          "node_batch": "662e844e9d6a32e8fbfabe836ce945777c0cce41a12eb99d8519306a50b2ed8f",
+          "head_indices": "cc1ec2bbb243024477627f25f23dcfbb2f21c2e2f0d05cda8c931c9338a3ca98",
+          "subgraph_sizes": "7e5ca7d12ee048d820fa44dc755e0784a52fb10afa1464f263dec54b63388d8e",
+          "grounding": "d076416d5e3d9ee1f177feead496bd6804be1aaa940f14d6c779c75ecc08e980",
+          "candidates": "670e83574655f3b8f11befb0cc7630f0c98c4baef1232d945f629dd7fecb69d7",
+          "tail_count": "d3fa5c0b889b29a25d492f17638090eaad2befd68f3d49a9630d17723dc69a82",
+          "rule_stats": "73cf9ff68dee62311966f8918a14938e252dd87b1c5ce64bf839b98f0d05c595",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "0fd9496292a1c4a5a4be11aa120e2271b6aecc6185afe8209a4fdd81ff50c59b",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "fold": 2,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 492,
+      "support_audit": {
+        "fold": 2,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1253,
+          113,
+          954,
+          1684,
+          421,
+          1317,
+          127,
+          1489,
+          1874,
+          646,
+          868,
+          397,
+          1629
+        ],
+        "body_counts": [
+          14901,
+          3833,
+          9635,
+          32834,
+          23579,
+          21670,
+          5701,
+          27080,
+          51269,
+          3700,
+          8217,
+          18013,
+          42743
+        ],
+        "array_sha256": {
+          "node_features": "a4747619bba2a22b98daa58e969cf8d9b86414728e9fbafb56d5e7f5c394223d",
+          "context_edges": "a629df128a8fd635f02e84af0aafd05cf6e43e6b8d83e2a8a6ced2c3f1ba669c",
+          "context_relations": "894dd843d1141cda79ccb4617bd3beb891a73c5fbf7c0e5bf2fed483e807a6bb",
+          "node_batch": "6c762282cb4cc71e9c95e3a876966a3bc5bec444f63d3f2cb28666fa2046c750",
+          "head_indices": "0cc85acd59551829b7f0d1f19ecb7cba76ed526c6e56be6ef12a6873380daa46",
+          "subgraph_sizes": "716296ede7c890a8b12c024df78c4afa264943765263309c378c79781e633e80",
+          "grounding": "20c1f5ad80f016a746b5bcf7c0aac0f80ec99beb94e3eddca911ec915d5f45f6",
+          "candidates": "00e47dc3f3580c6a10c883c6cdb106fba10368fc014fc3a11cbe88389ae3267a",
+          "tail_count": "c526afafa304ae53e270bf15bed1ac6b7c73bd646c196dfcd26ccfcfde2e3287",
+          "rule_stats": "faf4abab6a095410c405c5eed388097f59f34b4095f3c8d7bcf7b1d7b2f7f4a4",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "1a63c97020655cebbeb4fc39666eb0466908b481cbde00ce99e0fc05bbafdf7b",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "fold": 3,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 502,
+      "support_audit": {
+        "fold": 3,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1246,
+          116,
+          941,
+          1689,
+          416,
+          1314,
+          151,
+          1516,
+          1875,
+          645,
+          850,
+          413,
+          1614
+        ],
+        "body_counts": [
+          14924,
+          3865,
+          9635,
+          33439,
+          23227,
+          21670,
+          5741,
+          27203,
+          55054,
+          3766,
+          8217,
+          18013,
+          46497
+        ],
+        "array_sha256": {
+          "node_features": "3fcef8929e9fe2a660c750e2fcbca2199249392adcaf085f390fb9d994bbc9e7",
+          "context_edges": "4eb32dc72891e6b59d9af0b459c616a1588b6afa24415fa40ac3b79b75e0f62b",
+          "context_relations": "351a693352ef8fae9f1d80b0bd9427af473f88eda246bf602200fdd25449d8ba",
+          "node_batch": "522c727ee33f085c9bf00c49ee5aabdcd4cf5ff0655c53e196fb2153d41c8887",
+          "head_indices": "dee5650d4c79c434b25a9ee754ad67b0e9d79e8d6c0ef2f1ad6167af0103314b",
+          "subgraph_sizes": "d917a609cd6b642fbd59f8edfa2507a760591f20e9f8ca152dc9c99b184c680e",
+          "grounding": "395e2a49258d67a23c236213db99b073d8c7c907c61630a8bcea8ea0c6a0485f",
+          "candidates": "2c1d827645a75fbbf6d43d0ca289572d334ed7d75c7bb2dc8415ffbdd140c21a",
+          "tail_count": "8fef07ebbccb4e2ba3bfa7b35fb8ed311d3214d193b8c84fcf0973e10ec116ee",
+          "rule_stats": "bfc3f95454f5fc486de2e6a09135b8e6cd5278087aa3a23009755e2934c0831f",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "d5ccc3730cafbcd658388587bc14ce181edc83d394de809fb42504ea8962560c",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "fold": 4,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 489,
+      "support_audit": {
+        "fold": 4,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 595,
+        "support_counts": [
+          1269,
+          119,
+          973,
+          1685,
+          447,
+          1333,
+          137,
+          1525,
+          1881,
+          678,
+          884,
+          412,
+          1639
+        ],
+        "body_counts": [
+          14737,
+          3986,
+          9635,
+          32715,
+          23768,
+          21670,
+          5942,
+          26709,
+          50972,
+          3803,
+          8217,
+          18013,
+          43845
+        ],
+        "array_sha256": {
+          "node_features": "988c48e0e70b7babe017d5ce2bd203c6dac628239b107ed831fe1603347afec7",
+          "context_edges": "5627584234219fc198f6b18e32ecf9e48bfbf8ee9196f46a65b575e7ad0ea4ec",
+          "context_relations": "107897ad0e876ed404dd39851b0b532555c257c1305fa8f66fbbfd92e8f932e4",
+          "node_batch": "c744c5524f053bbca05ae6abc62acc75c48e8b7e349bda31ae6d26802a5e81a5",
+          "head_indices": "097e890df604ce924977f0298277ec8761ed4d8f5f73fc88350beaec7dc90a03",
+          "subgraph_sizes": "c4056f6d5e21304d9fdf34368fb9d58b57d22b29b32a61e4cbf81516aaec5f0f",
+          "grounding": "21628e26ef758be4ab9924bdf263d75c4b3850c25bc051255b3e0ed73cee4988",
+          "candidates": "93f5f9a226163ce59484c56d88efc8ffc545343a1d6989e05263db27d408af02",
+          "tail_count": "9eb4b38696de04ea00d72cf3158c55201c0156d7571bac00b3f1d5cb3355ea73",
+          "rule_stats": "96e4e664d5bbbdc5009102805bcf270f8d9e05a591e1045cc6ccce051df68975",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "d656f6c67a49daf85c21087363ea811cc5f93b4bea89790972f441f8c250edcf",
+        "physical_relations_sha256": "f4d7bf9c5e03da9c7b9c07fba292aa3e98331b3523b0f99d1c702bf01420f8ab"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "fold": 0,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 492,
+      "support_audit": {
+        "fold": 0,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1304,
+          110,
+          947,
+          1695,
+          384,
+          1325,
+          137,
+          1488,
+          1881,
+          664,
+          870,
+          392,
+          1613
+        ],
+        "body_counts": [
+          14791,
+          3928,
+          9635,
+          32756,
+          23342,
+          21670,
+          6004,
+          27320,
+          52297,
+          3856,
+          8217,
+          18013,
+          44253
+        ],
+        "array_sha256": {
+          "node_features": "969c94076470b09dc1b068b537fdaa098569a4efa3a4fff33750f78a21a7af1d",
+          "context_edges": "60c81050599231d933176c05c2864952985afbf91f83a316c0dd163398efa5e1",
+          "context_relations": "6c07f9315748b355b57bbb9737d278166c82bed5a4213d18a446b97f9b04767e",
+          "node_batch": "f351547b8f4bf66bb9757e616b2b7d0efe478b38bab06e7de50f797267941d2b",
+          "head_indices": "f6406bbddc9f2ec5d0fb1577edab7e190620fd33692ba2e3b201a4a9ca87071e",
+          "subgraph_sizes": "ebe707cf22b8cebfd77d90c78bb6edb4c8f4e3633d803f3a5429de5ddc141eb9",
+          "grounding": "e7cbf93f56db7e4bbc4f6e5ff18004cb6f4d695bb8041a0b7459b9202fcd8ead",
+          "candidates": "20ca5747443db580b72871e6b9207797c75ffdd32fc20f7f118ed59748bdc3fd",
+          "tail_count": "52bf78219970ddc015dd233c219c893449278bcb15284219a248e8a95dec9d7e",
+          "rule_stats": "9f167fe0eb99b19bdc46a5e00b9b9a62aa9823f80959f826874e5ce179cf4ccb",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "43ba0bed3987a8c483fd4753bc062959155ec3399f84c74a068cee02c69f9529",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "fold": 1,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 502,
+      "support_audit": {
+        "fold": 1,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1269,
+          102,
+          959,
+          1680,
+          399,
+          1301,
+          139,
+          1477,
+          1873,
+          661,
+          881,
+          384,
+          1621
+        ],
+        "body_counts": [
+          14788,
+          3843,
+          9635,
+          32517,
+          22893,
+          21670,
+          5652,
+          27461,
+          53988,
+          3821,
+          8217,
+          18013,
+          47047
+        ],
+        "array_sha256": {
+          "node_features": "2d23eb870de6a390b38f5bbdde17341d1462c23c4f213eab985b5da8719d2836",
+          "context_edges": "e6f275092010240fe9c69a3a8c493892ec6a6629e820098391ea14b6efce1627",
+          "context_relations": "2107cff4ca7a41cfc2d50da4991213a6415cfe4d29ebb5ebcd5d7583f04b7e1b",
+          "node_batch": "988de2ee73ad4f6d39bd6363feced8921ab107fd54cef4808ac189d781b4b59d",
+          "head_indices": "dbff1794cd138bc000db3b4c89f16a94705125c725d04eee15e3322778b9b61a",
+          "subgraph_sizes": "aae540664e8e58ec55997665ed4e6cf1dfb7e666f3065481f61dc4fa9216c1b4",
+          "grounding": "b1008eaccae47b2a13348c6ef1ddf7a3956c030e6189e1b005d28e4be6416358",
+          "candidates": "62b81a400708aba7e2369246f5d961f0ce468a337770322730d0b945bf6a3656",
+          "tail_count": "3b8e0f06883f354aaf79cc62ec3d9c3a2a930a6223370ac090438dae44d86d78",
+          "rule_stats": "45e621a3642a3c2796c60d5e16a6551d3260f97bb76c1fe57e8e7e6bdc697458",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "89068cd9e04b6273c38ce8d767d0627c6e7053fcaa57dd1467881e1da1dbad37",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "fold": 2,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 497,
+      "support_audit": {
+        "fold": 2,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 599,
+        "support_counts": [
+          1264,
+          98,
+          948,
+          1700,
+          407,
+          1326,
+          140,
+          1483,
+          1893,
+          661,
+          879,
+          386,
+          1618
+        ],
+        "body_counts": [
+          14870,
+          3938,
+          9635,
+          33090,
+          23312,
+          21670,
+          5960,
+          27163,
+          52942,
+          3743,
+          8217,
+          18013,
+          45191
+        ],
+        "array_sha256": {
+          "node_features": "798a64df84a0c4c3944e6baaa1a99b7f6da53a1b6d04f346c990a5de3d437e2e",
+          "context_edges": "9ab7a7ac625f4ff03e191047cba7d577a54c867bd688de1589327ce61b7d82c4",
+          "context_relations": "d6c1e7096965b7367d5b2079c59ef097d858c1af771cca69a0eb5a5459fcd3d1",
+          "node_batch": "b3f57d5b1b9ec7d7e6e3fc5ee0923026d3f07fd98ffb0f09cc49e5aa0cd8c057",
+          "head_indices": "d19da1eb956b6d54f706afe580b83072760d20f43d4a9aeace21e3a45e65592f",
+          "subgraph_sizes": "44752382d28fcfc70d8911a2a5ff7fd70a39c7992d5e204b03c2119412aa0ed1",
+          "grounding": "e2e44d48c9ff9889c43e77e2a28626b1dc167bbfc5f1665fd7a7484a39442883",
+          "candidates": "c55410f9a2300ef6563cd5a78496ce00658840d56ab6c5953364f623cd8c6ee0",
+          "tail_count": "0441985e6c5f62c85a8cefaf539cdff744f99f99b2a96d22811e6c172c6756f0",
+          "rule_stats": "808ebae67ae9521194b209c46ba0e3377a63f29f89904a3930b519a1fe9014ed",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "47dc0337c298c8549a4931bba8a519db95f88d8d89ac749f8f51eba355741ea7",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "fold": 3,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 497,
+      "support_audit": {
+        "fold": 3,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 598,
+        "support_counts": [
+          1289,
+          120,
+          964,
+          1697,
+          424,
+          1330,
+          146,
+          1505,
+          1882,
+          638,
+          863,
+          392,
+          1632
+        ],
+        "body_counts": [
+          14940,
+          3932,
+          9635,
+          33378,
+          23298,
+          21670,
+          5851,
+          27078,
+          51848,
+          3759,
+          8217,
+          18013,
+          44689
+        ],
+        "array_sha256": {
+          "node_features": "c30e82410e88be6ffb4a1bbe80f4edebb26b2125fa12b098050e4aca8263053d",
+          "context_edges": "59eeb163a79d4ad470c51a8aaf635dc86f963253e3675320175daa0ba8b26cd9",
+          "context_relations": "777c9708dcf156265657cfef86fd9213b3f9619183e651f5996f188064d2ae3b",
+          "node_batch": "96ae31e414e81ece53b23e283ea4752d5acc1ee3af7b21a80fb8293d5495844f",
+          "head_indices": "676a5332254a198b8ee6daf0359d4599cd2687f7184255d73edb9cf555c7de56",
+          "subgraph_sizes": "fd6db7719c89438a2aac4d409ea54c634cd71d62468233cc4043f59c509c04ac",
+          "grounding": "c62da57ebf165e7fbaf683eb643159b32e5b1143159712218655176c4d00dbe2",
+          "candidates": "fa1db7f289b7c40d96be2fd64a85b13d991721e9ef3cb5d2bd32e52dd79ce9b6",
+          "tail_count": "5cbeb7ff34ec57f2465ac95466639524df7011dc43f06216a15abd65177d4863",
+          "rule_stats": "432895a114fe41544a935609fa08db6bf07b57621aeaae0933ff9f33c33c9513",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "d0c311eefcdd9c4dbb5f503535ce6c329d32370da6946731bfe0ff189454b481",
+        "physical_relations_sha256": "9f623262792dba40b307510803f30f79434d21312203ee882809db8493057ea8"
+      }
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "fold": 4,
+      "identity": false,
+      "forbidden_overlap": 0,
+      "paths_statistics_context_outcome_invariant": true,
+      "eligible_positive_queries": 497,
+      "support_audit": {
+        "fold": 4,
+        "rules": 13,
+        "valid_rules": 13,
+        "heads_with_candidates": 597,
+        "support_counts": [
+          1272,
+          104,
+          938,
+          1708,
+          441,
+          1318,
+          119,
+          1471,
+          1875,
+          643,
+          851,
+          394,
+          1618
+        ],
+        "body_counts": [
+          14957,
+          3886,
+          9635,
+          33156,
+          23568,
+          21670,
+          5836,
+          27033,
+          51326,
+          3695,
+          8217,
+          18013,
+          45482
+        ],
+        "array_sha256": {
+          "node_features": "6d65d1e42521d9fbdedc10e8bda7d927fb2cbe2c34621e8ffb8c7e8165919371",
+          "context_edges": "292e5888876db1538f92d35293965d20da029c683f75662ebf30365e3f055b19",
+          "context_relations": "ce80e4ca4a1de5710dd9f3560f20e516ef86a0f1de7446adaac528bcb5dfcd75",
+          "node_batch": "91ab81a51a99ba54bea108ede69daa4c3071bee821edd6f5d1cbf41649429725",
+          "head_indices": "9d27f0a1cc1211c865d2186a6c21e5b76c684406f469f19b25973da02c2cd4be",
+          "subgraph_sizes": "bdfef8b28fef277a74640ba75b76597f3b6a3967e1df5428bc4f294d1d92ab57",
+          "grounding": "2a9a48f060f0a08e7e4cca0388c9d41f1cb730ebd65bea9d97ab86aae7af0fde",
+          "candidates": "027a61303f37107f601c38c42eb947fb1b39a295abacd941dda8015e45acca50",
+          "tail_count": "55eb4baaebb96caf04fb2627db125650e272fdae2d939ea0f1c8072192dccb97",
+          "rule_stats": "a1610fd971ac1b55256c127be5e851842142bcfa6b77ee776d2ae6c7f9313029",
+          "rule_ids": "ea7a40da16df183c5669979f12c784b3babd908f1de33097e207a3f31affe89d",
+          "rule_lengths": "7205f873150e9b289565b92b0a4c023703d13f887c623eeb19f2f8aca359d8bc",
+          "pair_offset": "1486529a46fac1419a369470bd0ec53dd5bbaa5123b3132f19ac5cb3d0ca25e6"
+        },
+        "paths": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            3,
+            16,
+            7
+          ],
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            14,
+            1,
+            4
+          ],
+          [
+            14,
+            5,
+            3
+          ]
+        ],
+        "physical_edges_sha256": "d64ee67e617888cd8f1368d760d269fe4d1359b3e16a29b5aa4a7c091370f87e",
+        "physical_relations_sha256": "f4d7bf9c5e03da9c7b9c07fba292aa3e98331b3523b0f99d1c702bf01420f8ab"
+      }
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 0,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 1,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 2,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 3,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 4,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "fold": 0,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "fold": 1,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "fold": 2,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "fold": 3,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "fold": 4,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "fold": 0,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "fold": 1,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "fold": 2,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "fold": 3,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "fold": 4,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "fold": 0,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "fold": 1,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "fold": 2,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "fold": 3,
+      "identity": true,
+      "new_graph_constructed": false
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "fold": 4,
+      "identity": true,
+      "new_graph_constructed": false
+    }
+  ],
+  "input_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_residual_energy_v2_20260916/inputs/MiDrug/arrays.npz": "39910438b09c0c3d595f654eb91d20ffa8e60f4554559fb0dcc4892def39d3bf",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/MiDrug/61453/arrays.npz": "8fc4b1220fecedd124ff6d9804aa14c636d7b9402ef1b437aaff5f2a9d104efc",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/MiDrug/7919/arrays.npz": "24c604e8b7355b4c5a8ca09697483396903ec62eb3a0a51144d7acb60cb252af",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/MiDrug/104729/arrays.npz": "bbf6d839e58b01bb1f9b414939c8242e71cee148739581424dbfb20098d6fbe9",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_residual_energy_v2_20260916/inputs/LncDrug/arrays.npz": "8ba53521ba808917710731737bade787debf58d0326b00eb10914e80a389e7b9",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/LncDrug/61453/arrays.npz": "f11426ee4bdddeec2c76a309c70510b5324aa4e2849b369062c2196f161385aa",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/LncDrug/7919/arrays.npz": "fef189438d3419e8e44c0ff43a766df7bc0550c4982717153d1b5663639bf8fd",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/LncDrug/104729/arrays.npz": "b77a7375b35c412745a1b6d1e8e109c6cfe794567f621d5cf7f6491ca2cb2bd8"
+  },
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/rule_reasoning_next_20260916/contextual_rule_study_v1.py": "22e77a07cd2e3e6e743c79d36e7038050da0eaffbbb2e09e25ab71f1b8f09e33",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/contextual_rule_graph_v1.py": "cec44dea0b1ed3aef3615f5ab672e41b0c1f4128be6d776fe3f015a056ee6261",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_contextual_rule_v1.py": "cd31755826ca2f4b294891332168822b3c769efd1c3c08446a206ae35fdbedd8",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/sharpness_graph_v1.py": "49f346bb2d84281082c9cd38f65254abacdfe6b0d78fa0dd238320451d347982",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/overlap_block_models.py": "8cd9369ecab95c93889ae2bfa2d1e9e0809f4bc260dd70d7bad74ac440182791",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/rule_reasoning_next_20260916/CONTEXTUAL_RULE_UNIT_V2.json": "a56c1b66377d36d9ddc4c7cbc531adba5d59c5ca4f9d2df467fb2abdda2fc6eb"
+  },
+  "original_test_source_access": false,
+  "confirmed_final_innovations": 0,
+  "sha256": "d3c875fda24a521b09322343e51592003b02c182a63c79a7eda92a8311fc71ca"
+}

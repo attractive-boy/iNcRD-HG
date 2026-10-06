@@ -1,0 +1,3588 @@
+{
+  "version": "6.9",
+  "hitCount": 28196,
+  "nextCursorMark": "AoIIQLi2oig1NTI1MzI1Mg==",
+  "nextPageUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=miRNA AND (target OR degradation) AND (foundation OR transformer) AND FIRST_PDATE:[2024-01-01 TO 2026-09-13]&cursorMark=AoIIQLi2oig1NTI1MzI1Mg==&resultType=core&pageSize=12&format=json",
+  "request": {
+    "queryString": "miRNA AND (target OR degradation) AND (foundation OR transformer) AND FIRST_PDATE:[2024-01-01 TO 2026-09-13]",
+    "resultType": "core",
+    "cursorMark": "*",
+    "pageSize": 12,
+    "sort": "",
+    "synonym": false
+  },
+  "resultList": {
+    "result": [
+      {
+        "id": "42412822",
+        "source": "MED",
+        "pmid": "42412822",
+        "pmcid": "PMC13340221",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13340221"
+          ]
+        },
+        "doi": "10.1093/bioinformatics/btag222",
+        "title": "MiRformer: a dual-transformer-encoder framework for predicting microRNA-mRNA interactions from paired sequences.",
+        "authorString": "Gu J, Chen C, Li Y.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Gu J",
+              "firstName": "Jiayao",
+              "lastName": "Gu",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, McGill University, Montréal, QC, H3A 0G4, Canada."
+                  },
+                  {
+                    "affiliation": "Mila-Quebéc AI Institute, Montréal, QC, H2S 3H1, Canada."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Chen C",
+              "firstName": "Can",
+              "lastName": "Chen",
+              "initials": "C",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Mila-Quebéc AI Institute, Montréal, QC, H2S 3H1, Canada."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Li Y",
+              "firstName": "Yue",
+              "lastName": "Li",
+              "initials": "Y",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0003-3844-4865"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, McGill University, Montréal, QC, H3A 0G4, Canada."
+                  },
+                  {
+                    "affiliation": "Mila-Quebéc AI Institute, Montréal, QC, H2S 3H1, Canada."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0003-3844-4865"
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "1",
+          "volume": "42",
+          "journalIssueId": 4259227,
+          "dateOfPublication": "2026 Jul",
+          "monthOfPublication": 7,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-07-01",
+          "journal": {
+            "title": "Bioinformatics (Oxford, England)",
+            "medlineAbbreviation": "Bioinformatics",
+            "essn": "1367-4811",
+            "issn": "1367-4803",
+            "isoabbreviation": "Bioinformatics",
+            "nlmid": "9808944"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "btag222",
+        "abstractText": "<h4>Motivation</h4>MicroRNAs (miRNAs) regulate gene expression by binding to target messenger RNAs (mRNAs), inducing translational repression or mRNA degradation. Accurate prediction of miRNA-mRNA interactions and precise localization of binding and cleavage sites are critical for understanding post-transcriptional regulation and for enabling RNA therapeutics. Existing computational methods often rely on handcrafted or indirect features, scale poorly to kilobase-long mRNA sequences, or provide limited interpretability.<h4>Results</h4>We present MiRformer, a transformer-based framework that jointly predicts miRNA-mRNA interactions and localizes miRNA binding and cleavage sites directly from raw sequence pairs. MiRformer employs a dual-transformer encoder architecture for miRNA and mRNA sequences and incorporates a sliding-window attention mechanism to efficiently model kilobase-long mRNA contexts while preserving nucleotide-level resolution. Across multiple benchmrks, MiRformer achieves state-of-the-art performance on interaction prediction, binding-site localization, and cleavage-site identification from experimental Human Degradome-seq data. Beyond accuracy, MiRformer provides strong interpretability: attention patterns consistently highlight miRNA seed regions within 500-nt mRNA windows, revealing clear and biologically meaningful interaction signals. When applied to jointly infer binding and cleavage sites across 13k miRNA-mRNA pairs, predicted sites frequently co-localize, supporting a miRNA-mediated degradation mechanism.<h4>Availability and implementation</h4>Python code and datasets are publicly available at https://github.com/li-lab-mcgill/miRformer.",
+        "affiliation": "School of Computer Science, McGill University, Montréal, QC, H3A 0G4, Canada.",
+        "publicationStatus": "ppublish",
+        "language": "eng",
+        "pubModel": "Print",
+        "pubTypeList": {
+          "pubType": [
+            "Research Support, Non-U.S. Gov't",
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "CIHR PJT-540722",
+              "agency": "DNA2RNA",
+              "orderIn": 0
+            },
+            {
+              "grantId": "CRC-2021–00547",
+              "agency": "DNA2RNA",
+              "orderIn": 0
+            },
+            {
+              "grantId": "CRC-2021-00547",
+              "agency": "DNA2RNA",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "MicroRNAs",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "ME",
+                    "qualifierName": "metabolism",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "CH",
+                    "qualifierName": "chemistry",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "RNA, Messenger",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "ME",
+                    "qualifierName": "metabolism",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "CH",
+                    "qualifierName": "chemistry",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Sequence Analysis, RNA",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Binding Sites"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Software"
+            }
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "RNA, Messenger",
+              "registryNumber": "0"
+            },
+            {
+              "name": "MicroRNAs",
+              "registryNumber": "0"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1093/bioinformatics/btag222"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13340221"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13340221?pdf=render"
+            }
+          ]
+        },
+        "commentCorrectionList": {
+          "commentCorrection": [
+            {
+              "id": "PPR1124473",
+              "source": "PPR",
+              "type": "Preprint in",
+              "note": "Link created based on a title-first author match",
+              "orderIn": 10002
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2026-07-07",
+        "dateOfCreation": "2026-07-07",
+        "firstIndexDate": "2026-07-08",
+        "fullTextReceivedDate": "2026-09-03",
+        "dateOfRevision": "2026-09-07",
+        "firstPublicationDate": "2026-07-01"
+      },
+      {
+        "id": "42650039",
+        "source": "MED",
+        "pmid": "42650039",
+        "pmcid": "PMC13512291",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13512291"
+          ]
+        },
+        "doi": "10.3390/genes17080846",
+        "title": "A Context-Aware Graph Transformer Framework for microRNA-Gene Regulatory Inference Across Bulk Tumor and Single-Cell Cancer Data.",
+        "authorString": "Ohia J, Cui J.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Ohia J",
+              "firstName": "Jane",
+              "lastName": "Ohia",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Systems Biology and Biomedical Informatics Laboratory, School of Computing, University of Nebraska-Lincoln, Lincoln, NE 68588, USA."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Cui J",
+              "firstName": "Juan",
+              "lastName": "Cui",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Systems Biology and Biomedical Informatics Laboratory, School of Computing, University of Nebraska-Lincoln, Lincoln, NE 68588, USA."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "8",
+          "volume": "17",
+          "journalIssueId": 4250071,
+          "dateOfPublication": "2026 Jul",
+          "monthOfPublication": 7,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-07-01",
+          "journal": {
+            "title": "Genes",
+            "medlineAbbreviation": "Genes (Basel)",
+            "essn": "2073-4425",
+            "issn": "2073-4425",
+            "isoabbreviation": "Genes (Basel)",
+            "nlmid": "101551097"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "846",
+        "abstractText": "<b>Background</b>: MicroRNAs are key post-transcriptional regulators of gene expression and contribute to cancer progression, tumor heterogeneity, and context-dependent regulatory rewiring. However, most computational approaches rely on sequence-based target prediction or bulk expression association and are not designed to jointly model regulatory priors, expression context, and heterogeneous cancer states, particularly when matched single-cell microRNA/mRNA co-profiling data are scarce. <b>Methods</b>: We developed a context-aware graph transformer framework for microRNA-gene regulatory analysis across biological resolutions. The framework represents microRNAs, genes, and biological contexts as a heterogeneous graph, where contexts correspond to individual cells in single-cell data and tumor samples or subtype-defined profiles in bulk cohorts. Heterogeneous graph transformer learning generated regulatory embeddings, Bayesian topology optimization refined candidate microRNA-gene interactions, and a dominance-based competition layer with Dominance Share scoring identified master regulators and cooperative target modules. <b>Results</b>: We applied miR-CellMap to matched single-cell miRNA/mRNA co-sequencing data from K562 leukemia cells and paired bulk cancer datasets spanning pan-cancer and subtype-specific cohorts, including breast, colon, glioblastoma, lower-grade glioma, and ovarian cancer. The framework identified recurrent and dataset-specific miRNA regulatory programs, including regulators such as miR-186-5p, miR-214-3p, miR-27a-3p, and let-7 family members. Embedding-derived context analysis showed that predicted miRNA target programs were consistently closer to observed context-specific gene programs than random matched gene programs across all seven datasets. Dominance Share analysis further identified cooperative target modules and co-repressed target programs, supporting the use of miR-CellMap for interpretable cancer-focused miRNA regulatory discovery. <b>Conclusions</b>: This framework provides an interpretable strategy for mapping conserved, cancer-specific, and context-dependent microRNA-gene regulatory programs across single-cell and bulk cancer datasets.",
+        "affiliation": "Systems Biology and Biomedical Informatics Laboratory, School of Computing, University of Nebraska-Lincoln, Lincoln, NE 68588, USA.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article",
+            "Research Support, N.I.H., Extramural"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "P20 GM104320",
+              "agency": "NIGMS NIH HHS",
+              "acronym": "GM",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "K562 Cells"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Neoplasms",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "MicroRNAs",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "RNA, Messenger",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Bayes Theorem"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Gene Expression Regulation, Neoplastic",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Gene Regulatory Networks"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Single-Cell Analysis",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Single-Cell Gene Expression Analysis"
+            }
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Gene regulation",
+            "Bayesian network",
+            "non-coding RNA",
+            "MicroRNA",
+            "Tumor Heterogeneity",
+            "Cancer Genomics",
+            "Regulatory Network Inference",
+            "Heterogeneous Graph Learning",
+            "Single-cell Multi-omics",
+            "Graph Transformer"
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "RNA, Messenger",
+              "registryNumber": "0"
+            },
+            {
+              "name": "MicroRNAs",
+              "registryNumber": "0"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.3390/genes17080846"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13512291"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13512291?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2026-08-27",
+        "dateOfCreation": "2026-08-27",
+        "firstIndexDate": "2026-08-30",
+        "fullTextReceivedDate": "2026-09-10",
+        "dateOfRevision": "2026-08-30",
+        "electronicPublicationDate": "2026-07-23",
+        "firstPublicationDate": "2026-07-23"
+      },
+      {
+        "id": "42056851",
+        "source": "MED",
+        "pmid": "42056851",
+        "pmcid": "PMC13270722",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13270722"
+          ]
+        },
+        "doi": "10.1186/s12859-026-06396-1",
+        "title": "Multi-granularity transformer contrastive learning and feature reconstruction for prediction of disease-related miRNAs.",
+        "authorString": "Xuan P, Guo Z, Lu S, Cui H, Ding J, Zhang T.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Xuan P",
+              "firstName": "Ping",
+              "lastName": "Xuan",
+              "initials": "P",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Cyberspace Security, Hainan University, Haikou, 570228, China. pingxuan@hainanu.edu.cn."
+                  },
+                  {
+                    "affiliation": "Department of Computer Science and Technology, Shantou University, Shantou, 515063, China. pingxuan@hainanu.edu.cn."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Guo Z",
+              "firstName": "Zhicheng",
+              "lastName": "Guo",
+              "initials": "Z",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Computer Science and Technology, Shantou University, Shantou, 515063, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Lu S",
+              "firstName": "Siyuan",
+              "lastName": "Lu",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science and Technology, Heilongjiang University, Harbin, 150080, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Cui H",
+              "firstName": "Hui",
+              "lastName": "Cui",
+              "initials": "H",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Computer Science and Information Technology, La Trobe University, Melbourne, 3083, Australia."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Ding J",
+              "firstName": "Jian",
+              "lastName": "Ding",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Harbin Conservatory of Music, Harbin, 150028, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zhang T",
+              "firstName": "Tiangang",
+              "lastName": "Zhang",
+              "initials": "T",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Cyberspace Security, Hainan University, Haikou, 570228, China. zhangtg@hainanu.edu.cn."
+                  },
+                  {
+                    "affiliation": "School of Computer Science and Technology, Heilongjiang University, Harbin, 150080, China. zhangtg@hainanu.edu.cn."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "1",
+          "volume": "27",
+          "journalIssueId": 4174665,
+          "dateOfPublication": "2026 Apr",
+          "monthOfPublication": 4,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-04-01",
+          "journal": {
+            "title": "BMC bioinformatics",
+            "medlineAbbreviation": "BMC Bioinformatics",
+            "essn": "1471-2105",
+            "issn": "1471-2105",
+            "isoabbreviation": "BMC Bioinformatics",
+            "nlmid": "100965194"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "133",
+        "abstractText": "The increasing research confirms the function of microRNAs (miRNAs) play a vital role in the diagnosis, treatment, and prognosis of diseases. Screening the potential candidate miRNAs related to the diseases by the computational methods may be helpful for reducing the experimental cost for discovering the actual disease-miRNA associations. Most of the recent methods exploited the data from multiple sources to infer the association tendencies between miRNAs and diseases. However, these methods did not completely learn the features of the multi-source data from multiple granularities. This paper present an association prediction model based on multi-granularity transformer contrastive learning and feature reconstruction convolution (APMF). First, the strongly correlated node sequences are constructed by random walks, and then the features of the positive and negative node sequences for the target node are learned. Second, the multi-granularity transformer strategy is designed to refine the features of the miRNA, disease, and lncRNA nodes from fine-granularity and coarse-granularity, respectively. Third, the contrastive learning strategy is presented to maximize the consistency among the features of positive samples and the difference among the features of positive samples and negative ones. Finally, the feature reconstruction convolution is constructed to capture the diverse semantics of features and suppress the noises of the data. The experimental results indicate that APMF outperforms several state-of-the-art methods for prediction of disease-related miRNAs. The ablation experiments demonstrate the effectiveness of the multi-granularity transformer contrastive learning and the feature reconstruction convolution. The case analysis over three diseases also shows APMF’s ability in discovering the potential miRNA candidates for the diseases.",
+        "affiliation": "School of Cyberspace Security, Hainan University, Haikou, 570228, China. pingxuan@hainanu.edu.cn.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "2024A1515010176",
+              "agency": "Basic and Applied Basic Research Foundation of Guangdong Province",
+              "orderIn": 0
+            },
+            {
+              "grantId": "LH2023F044",
+              "agency": "Natural Science Foundation of Heilongjiang Province",
+              "orderIn": 0
+            },
+            {
+              "grantId": "NTF22032",
+              "agency": "STU Scientific Research Initiation Grant",
+              "orderIn": 0
+            },
+            {
+              "grantId": "62372282",
+              "agency": "Natural Science Foundation of China",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "MicroRNAs",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Algorithms"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "RNA, Long Noncoding",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Machine Learning"
+            }
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Attributes Of Multiple Types Of Nodes",
+            "Dynamic Attribute Learning Of Hyperedges",
+            "Dynamic Topology Formulation Of Hypergraph",
+            "Encoding Association Characteristics Among Multiple Lncrnas And Diseases",
+            "Pairwise Attribute Learning Enhanced By Gated Cnn"
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "MicroRNAs",
+              "registryNumber": "0"
+            },
+            {
+              "name": "RNA, Long Noncoding",
+              "registryNumber": "0"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1186/s12859-026-06396-1"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13270722"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13270722?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by-nc-nd",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2026-06-27",
+        "dateOfCreation": "2026-04-30",
+        "firstIndexDate": "2026-04-30",
+        "fullTextReceivedDate": "2026-06-24",
+        "dateOfRevision": "2026-08-13",
+        "electronicPublicationDate": "2026-04-29",
+        "firstPublicationDate": "2026-04-29"
+      },
+      {
+        "id": "42676509",
+        "source": "MED",
+        "pmid": "42676509",
+        "pmcid": "PMC13527166",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13527166"
+          ]
+        },
+        "doi": "10.1093/nargab/lqag099",
+        "title": "From rules to foundation models: a comprehensive review of machine learning approaches for siRNA design.",
+        "authorString": "Khodagholi Z, Yousefi N.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Khodagholi Z",
+              "firstName": "Zahra",
+              "lastName": "Khodagholi",
+              "initials": "Z",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0009-0004-6015-5300"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Industrial Engineering, University of Central Florida ,4000 Central Florida Blvd.,Orlando, FL 32816,United States."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Yousefi N",
+              "firstName": "Niloofar",
+              "lastName": "Yousefi",
+              "initials": "N",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Industrial Engineering, University of Central Florida ,4000 Central Florida Blvd.,Orlando, FL 32816,United States."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0009-0004-6015-5300"
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "3",
+          "volume": "8",
+          "journalIssueId": 4222563,
+          "dateOfPublication": "2026 Sep",
+          "monthOfPublication": 9,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-09-01",
+          "journal": {
+            "title": "NAR genomics and bioinformatics",
+            "medlineAbbreviation": "NAR Genom Bioinform",
+            "essn": "2631-9268",
+            "issn": "2631-9268",
+            "isoabbreviation": "NAR Genom Bioinform",
+            "nlmid": "101756213"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "lqag099",
+        "abstractText": "Small interfering RNAs (siRNAs) are a clinically validated therapeutic modality with eight FDA-approved drugs, yet designing effective siRNAs remains computationally challenging due to complex dependencies on sequence composition, thermodynamic properties, target-site accessibility, and off-target interactions. Over two decades, computational approaches have evolved from empirical heuristics to deep learning systems integrating physical priors with learned representations. We review the complete landscape of machine learning methods for siRNA design, spanning classical scoring rules, pretrained RNA foundation models, transformer-based efficacy predictors, graph neural networks encoding siRNA/messenger RNA interaction topology, off-target prediction frameworks, and chemical modification-aware architectures. Across over 40 studies, we identify convergent findings: hybrid models integrating thermodynamic features with learned representations are among the strongest performers, although this evidence rests largely on single-model ablations and does not establish that foundation-model embeddings specifically are required; graph neural networks with leakage-aware data splitting address pervasive benchmark inflation; and off-target prediction has matured through empirical RNA-seq frameworks and structure-based features. We distinguish throughout between chemically unmodified siRNAs, which dominate public benchmarks, and the fully modified siRNAs used therapeutically, whose efficacy data remain scarce and whose prediction is correspondingly harder. We provide a taxonomy of methods, head-to-head performance comparisons, benchmark dataset descriptions, code availability, biology-informed interpretability analysis with formal saliency validation protocols, and concrete recommendations for advancing siRNA design. Critical gaps in uncertainty quantification, active learning, and prospective experimental validation are identified as priorities for clinical translation.",
+        "affiliation": "Department of Industrial Engineering, University of Central Florida ,4000 Central Florida Blvd.,Orlando, FL 32816,United States.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic-eCollection",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Review",
+            "Journal Article"
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "RNA, Small Interfering",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "CH",
+                    "qualifierName": "chemistry",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Machine Learning"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Graph Neural Networks"
+            }
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "RNA, Small Interfering",
+              "registryNumber": "0"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1093/nargab/lqag099"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13527166"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13527166?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "citedByCount": 0,
+        "hasData": "N",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2026-09-01",
+        "dateOfCreation": "2026-09-01",
+        "firstIndexDate": "2026-09-02",
+        "fullTextReceivedDate": "2026-09-11",
+        "dateOfRevision": "2026-09-02",
+        "electronicPublicationDate": "2026-08-31",
+        "firstPublicationDate": "2026-08-31"
+      },
+      {
+        "id": "42608480",
+        "source": "MED",
+        "pmid": "42608480",
+        "doi": "10.1038/s44318-026-00889-8",
+        "title": "Canonical and non-canonical miRNA degradation shapes state transitions and stemness in breast cancer.",
+        "authorString": "Rubolino C, D'Onghia M, Tordonato C, Sabò A, D'Agnelli A, Bisi S, Giambruno R, Giuliani B, Marzi MJ, Nicassio F.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Rubolino C",
+              "firstName": "Carmela",
+              "lastName": "Rubolino",
+              "initials": "C",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Genomic Science of IIT@SEMM, Istituto Italiano di Tecnologia (IIT) - Via Adamello 16, 20139, Milan, Italy."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "D'Onghia M",
+              "firstName": "Manfredi",
+              "lastName": "D'Onghia",
+              "initials": "M",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Genomic Science of IIT@SEMM, Istituto Italiano di Tecnologia (IIT) - Via Adamello 16, 20139, Milan, Italy."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Tordonato C",
+              "firstName": "Chiara",
+              "lastName": "Tordonato",
+              "initials": "C",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0001-6556-1747"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Experimental Oncology, European Institute of Oncology (IEO) - IRCCS, Milan, Italy."
+                  },
+                  {
+                    "affiliation": "Department of Oncology and Haemato-Oncology, Università degli Studi di Milano, Milan, Italy."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Sabò A",
+              "firstName": "Arianna",
+              "lastName": "Sabò",
+              "initials": "A",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Experimental Oncology, European Institute of Oncology (IEO) - IRCCS, Milan, Italy."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "D'Agnelli A",
+              "firstName": "Alessandro",
+              "lastName": "D'Agnelli",
+              "initials": "A",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0009-0004-6434-3237"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Genomic Science of IIT@SEMM, Istituto Italiano di Tecnologia (IIT) - Via Adamello 16, 20139, Milan, Italy."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Bisi S",
+              "firstName": "Sara",
+              "lastName": "Bisi",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Genomic Science of IIT@SEMM, Istituto Italiano di Tecnologia (IIT) - Via Adamello 16, 20139, Milan, Italy."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Giambruno R",
+              "firstName": "Roberto",
+              "lastName": "Giambruno",
+              "initials": "R",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-4566-261X"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Genomic Science of IIT@SEMM, Istituto Italiano di Tecnologia (IIT) - Via Adamello 16, 20139, Milan, Italy."
+                  },
+                  {
+                    "affiliation": "Institute for Biomedical Research and Innovation, National Research Council, Palermo, Italy."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Giuliani B",
+              "firstName": "Bianca",
+              "lastName": "Giuliani",
+              "initials": "B",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0001-7505-9697"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Genomic Science of IIT@SEMM, Istituto Italiano di Tecnologia (IIT) - Via Adamello 16, 20139, Milan, Italy."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Marzi MJ",
+              "firstName": "Matteo Jacopo",
+              "lastName": "Marzi",
+              "initials": "MJ",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-5068-782X"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Genomic Science of IIT@SEMM, Istituto Italiano di Tecnologia (IIT) - Via Adamello 16, 20139, Milan, Italy. matteo.marzi@iit.it."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Nicassio F",
+              "firstName": "Francesco",
+              "lastName": "Nicassio",
+              "initials": "F",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-5954-5318"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Genomic Science of IIT@SEMM, Istituto Italiano di Tecnologia (IIT) - Via Adamello 16, 20139, Milan, Italy. francesco.nicassio@iit.it."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0001-6556-1747"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0001-7505-9697"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-4566-261X"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-5068-782X"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-5954-5318"
+            },
+            {
+              "type": "ORCID",
+              "value": "0009-0004-6434-3237"
+            }
+          ]
+        },
+        "journalInfo": {
+          "journalIssueId": 4238041,
+          "dateOfPublication": "2026 Aug",
+          "monthOfPublication": 8,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-08-01",
+          "journal": {
+            "title": "The EMBO journal",
+            "medlineAbbreviation": "EMBO J",
+            "essn": "1460-2075",
+            "issn": "0261-4189",
+            "isoabbreviation": "EMBO J",
+            "nlmid": "8208664"
+          }
+        },
+        "pubYear": "2026",
+        "abstractText": "Target-directed microRNA degradation (TDMD) is an emerging post-transcriptional mechanism that controls miRNA turnover, yet its role in human cancers remains largely unexplored. Here, we combine CRISPRi-mediated ZSWIM8 depletion, miRNA-seq, and AGO2-eCLIP to define the TDMD landscape across breast cancer subtypes. We identify 19 high-confidence TDMD substrates, including miR-29b-3p and miR-33a/b-5p, and show that TDMD shapes miRNA target occupancy and target repression. Integration with single-cell transcriptomics reveals that TDMD of miR-29b-3p triggered by NREP transcript is associated with transcriptional plasticity along the epithelial-mesenchymal axis and marks a stem-like subpopulation of malignat cells with tumor-initiating potential in triple-negative breast cancer. Unexpectedly, we also uncover a non-canonical TDMD mechanism, independent of ubiquitin ligase ZSWIM8 and the proteasome, which includes SERPINE1-triggered miR-30c-5p degradation, conferring paclitaxel resistance and enhancing sphere-forming potential. These findings establish target-directed microRNA degradation as a functional layer of miRNA regulation in cancer, linking miRNA decay to cellular state transitions and therapeutic response. Our results broaden the mechanistic spectrum of TDMD and provide a framework to investigate how regulated miRNA decay contributes to aggressive breast cancer phenotypes.",
+        "affiliation": "Center for Genomic Science of IIT@SEMM, Istituto Italiano di Tecnologia (IIT) - Via Adamello 16, 20139, Milan, Italy.",
+        "publicationStatus": "aheadofprint",
+        "language": "eng",
+        "pubModel": "Print-Electronic",
+        "pubTypeList": {
+          "pubType": [
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "2015-0590",
+              "agency": "Fondazione Cariplo (Cariplo Foundation)",
+              "orderIn": 0
+            },
+            {
+              "grantId": "101226670",
+              "agency": "EC | H2020 | PRIORITY 'Excellent science' | H2020 Marie Skłodowska-Curie Actions (MSCA)",
+              "orderIn": 0
+            },
+            {
+              "grantId": "IG22851",
+              "agency": "Fondazione AIRC per la ricerca sul cancro ETS (AIRC)",
+              "orderIn": 0
+            },
+            {
+              "grantId": "Mission 4,Component 2,CUP B93D21010860004",
+              "agency": "EC | NextGenerationEU (NGEU)",
+              "orderIn": 0
+            },
+            {
+              "grantId": "22438",
+              "agency": "Fondazione AIRC per la ricerca sul cancro ETS (AIRC)",
+              "orderIn": 0
+            },
+            {
+              "grantId": "IG32172",
+              "agency": "Fondazione AIRC per la ricerca sul cancro ETS (AIRC)",
+              "orderIn": 0
+            },
+            {
+              "grantId": "101072892",
+              "agency": "EC | H2020 | PRIORITY 'Excellent science' | H2020 Marie Skłodowska-Curie Actions (MSCA)",
+              "orderIn": 0
+            },
+            {
+              "grantId": "2016-0615",
+              "agency": "Fondazione Cariplo (Cariplo Foundation)",
+              "orderIn": 0
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1038/s44318-026-00889-8"
+            }
+          ]
+        },
+        "isOpenAccess": "N",
+        "inEPMC": "N",
+        "inPMC": "N",
+        "hasPDF": "N",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "citedByCount": 0,
+        "hasData": "N",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCreation": "2026-08-18",
+        "firstIndexDate": "2026-08-19",
+        "dateOfRevision": "2026-08-18",
+        "electronicPublicationDate": "2026-08-17",
+        "firstPublicationDate": "2026-08-17"
+      },
+      {
+        "id": "PMC13298311",
+        "source": "PMC",
+        "pmcid": "PMC13298311",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13298311"
+          ]
+        },
+        "title": "DBCL-DFNet: Dual-Branch Contrastive Learning for Multi-Omics Dynamic Fusion",
+        "authorString": "Dang Y, Yan X, Zhou L, Li D.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Dang Y",
+              "firstName": "Yun",
+              "lastName": "Dang",
+              "initials": "Y",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Technology, Taiyuan University of Technology, Taiyuan 030024, China;"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Yan X",
+              "firstName": "Xiaoran",
+              "lastName": "Yan",
+              "initials": "X",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Artificial Intelligence, Taiyuan University of Technology, Taiyuan 030024, China"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zhou L",
+              "firstName": "Li",
+              "lastName": "Zhou",
+              "initials": "L",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Technology, Taiyuan University of Technology, Taiyuan 030024, China;"
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Li D",
+              "firstName": "Dongxi",
+              "lastName": "Li",
+              "initials": "D",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Technology, Taiyuan University of Technology, Taiyuan 030024, China;"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "supporting_data"
+          ]
+        },
+        "journalInfo": {
+          "issue": "6",
+          "volume": "28",
+          "journalIssueId": 4220341,
+          "dateOfPublication": "2026 May",
+          "monthOfPublication": 5,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-05-01",
+          "journal": {
+            "title": "Entropy (Basel, Switzerland)",
+            "medlineAbbreviation": "Entropy (Basel)",
+            "essn": "1099-4300",
+            "issn": "1099-4300",
+            "isoabbreviation": "Entropy (Basel)",
+            "nlmid": "101243874"
+          }
+        },
+        "pubYear": "2026",
+        "language": "eng",
+        "pubModel": "Undetermined",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Gat",
+            "Multi-omics Integration",
+            "Mamba",
+            "Contrastive Learning",
+            "Heterogeneous Graph",
+            "Copula Entropy"
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13298311/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "PubMedCentral",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13298311/pdf/?tool=EBI"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13298311"
+            },
+            {
+              "availability": "Free",
+              "availabilityCode": "F",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13298311?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "N",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "Y",
+        "tmAccessionTypeList": {
+          "accessionType": [
+            "doi"
+          ]
+        },
+        "dateOfCreation": "2026-06-27",
+        "firstIndexDate": "2026-06-27",
+        "fullTextReceivedDate": "2026-06-27",
+        "dateOfRevision": "2026-06-27",
+        "electronicPublicationDate": "2026-05-30",
+        "firstPublicationDate": "2026-05-30"
+      },
+      {
+        "id": "42371766",
+        "source": "MED",
+        "pmid": "42371766",
+        "pmcid": "PMC13384059",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13384059"
+          ]
+        },
+        "doi": "10.1093/bioinformatics/btag468",
+        "title": "OmicsTransformer: self-supervised masked consistency and uncertainty-aware fusion for robust multi-omics prediction.",
+        "authorString": "Feng J, Shan B, Deng J, Jiang Z, Peng S, Peng S, Yang J, Wang G, Peng X, Li X.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Feng J",
+              "firstName": "Junxuan",
+              "lastName": "Feng",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Software Engineering, Shenzhen University, Shenzhen, 518060, China."
+                  },
+                  {
+                    "affiliation": "National Engineering Laboratory for Big Data System Computing Technology, Shenzhen University, Shenzhen, 518060, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Shan B",
+              "firstName": "Bingshen",
+              "lastName": "Shan",
+              "initials": "B",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Software Engineering, Shenzhen University, Shenzhen, 518060, China."
+                  },
+                  {
+                    "affiliation": "National Engineering Laboratory for Big Data System Computing Technology, Shenzhen University, Shenzhen, 518060, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Deng J",
+              "firstName": "Jie",
+              "lastName": "Deng",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Software Engineering, Shenzhen University, Shenzhen, 518060, China."
+                  },
+                  {
+                    "affiliation": "National Engineering Laboratory for Big Data System Computing Technology, Shenzhen University, Shenzhen, 518060, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Jiang Z",
+              "firstName": "Zixin",
+              "lastName": "Jiang",
+              "initials": "Z",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Mechatronics and Control Engineering, Shenzhen University, Shenzhen, 518060, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Peng S",
+              "firstName": "Siqin",
+              "lastName": "Peng",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Wuhan University, Wuhan, 430072, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Peng S",
+              "firstName": "Sijun",
+              "lastName": "Peng",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Zhejiang University-University of Edinburgh Institute, Zhejiang University, Hangzhou, 314400, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Yang J",
+              "firstName": "Jian",
+              "lastName": "Yang",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Beijing Key Laboratory of Mental Disorders, National Clinical Research Center for Mental Disorders and National Center for Mental Disorders, Beijing Anding Hospital, Capital Medical University, Beijing, 100088, China."
+                  },
+                  {
+                    "affiliation": "Advanced Innovation Center for Human Brain Protection, Capital Medical University, Beijing, 100088, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Wang G",
+              "firstName": "Gang",
+              "lastName": "Wang",
+              "initials": "G",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Beijing Key Laboratory of Mental Disorders, National Clinical Research Center for Mental Disorders and National Center for Mental Disorders, Beijing Anding Hospital, Capital Medical University, Beijing, 100088, China."
+                  },
+                  {
+                    "affiliation": "Advanced Innovation Center for Human Brain Protection, Capital Medical University, Beijing, 100088, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Peng X",
+              "firstName": "Xiaogang",
+              "lastName": "Peng",
+              "initials": "X",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "National Engineering Laboratory for Big Data System Computing Technology, Shenzhen University, Shenzhen, 518060, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Li X",
+              "firstName": "Xiaozheng",
+              "lastName": "Li",
+              "initials": "X",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-0802-6454"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Life Sciences and Oceanography, Shenzhen University, Shenzhen, 518060, China."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0002-0802-6454"
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "supporting_data"
+          ]
+        },
+        "journalInfo": {
+          "issue": "7",
+          "volume": "42",
+          "journalIssueId": 4225057,
+          "dateOfPublication": "2026 Jul",
+          "monthOfPublication": 7,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-07-01",
+          "journal": {
+            "title": "Bioinformatics (Oxford, England)",
+            "medlineAbbreviation": "Bioinformatics",
+            "essn": "1367-4811",
+            "issn": "1367-4803",
+            "isoabbreviation": "Bioinformatics",
+            "nlmid": "9808944"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "btag468",
+        "abstractText": "<h4>Motivation</h4>Multi-omics integration can improve cancer diagnosis and prognosis, but current models are limited by extreme dimensionality, redundant raw-feature similarities, missing assays, and incomplete pathway priors. We ask whether biologically meaningful patient manifolds can be learned directly from high-dimensional multi-omics data without heuristic graph construction or fixed knowledge-base constraints.<h4>Results</h4>We present OmicsTransformer, an end-to-end framework that projects each omics modality into latent patches, enforces masked semantic consistency through an Exponential Cosine Consistency Loss, models global patch dependencies with a Transformer encoder, and fuses modalities by sample-specific uncertainty. Across eight diagnostic and prognostic cohorts, OmicsTransformer achieved strong performance, including 89.4% accuracy for TCGA-BRCA subtyping and 90.6% area under the receiver operating characteristic curve (AUC) for TCGA-LGG grading. It improved recurrence prediction over the pathway-restricted DeepKEGG baseline by approximately 21.5 percentage points in accuracy (ACC) on TCGA-LIHC and 11.1 percentage points in ACC on TCGA-BLCA. Variance-weighted attribution with ensemble stability selection recovered reproducible cross-modal biomarker cores and non-canonical progression drivers.<h4>Availability and implementation</h4>Source code and datasets are freely available at https://github.com/FFJXX/OmicTransformer and https://doi.org/10.6084/m9.figshare.31523905. OmicsTransformer is implemented in PyTorch.",
+        "affiliation": "College of Computer Science and Software Engineering, Shenzhen University, Shenzhen, 518060, China.",
+        "publicationStatus": "ppublish",
+        "language": "eng",
+        "pubModel": "Print",
+        "pubTypeList": {
+          "pubType": [
+            "Research Support, Non-U.S. Gov't",
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "SZU-BDSC-OF2024-19",
+              "agency": "Open Fund of National Engineering Laboratory for Big Data System Computing Technology",
+              "orderIn": 0
+            },
+            {
+              "grantId": "2024YFA1306901",
+              "agency": "The National Key Research and Development Program of China",
+              "orderIn": 0
+            },
+            {
+              "grantId": "82171526",
+              "agency": "The National Natural Science Foundation of China",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Neoplasms",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "DI",
+                    "qualifierName": "diagnosis",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "ME",
+                    "qualifierName": "metabolism",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Uncertainty"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Algorithms"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Software"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Multiomics"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1093/bioinformatics/btag468"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13384059"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13384059?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "Y",
+        "tmAccessionTypeList": {
+          "accessionType": [
+            "doi"
+          ]
+        },
+        "dateOfCompletion": "2026-07-20",
+        "dateOfCreation": "2026-06-29",
+        "firstIndexDate": "2026-07-02",
+        "fullTextReceivedDate": "2026-09-03",
+        "dateOfRevision": "2026-09-08",
+        "firstPublicationDate": "2026-07-01"
+      },
+      {
+        "id": "42185901",
+        "source": "MED",
+        "pmid": "42185901",
+        "pmcid": "PMC13390208",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13390208"
+          ]
+        },
+        "doi": "10.1186/s12967-026-08310-y",
+        "title": "MicroRNAs in endometriosis: bioinformatics resources, machine learning strategies, and multi-omics perspectives.",
+        "authorString": "Guo C, Liu Q, Hai D, Zhu X, Mo Z, Wang Y, Zhao Q, Zhang C.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Guo C",
+              "firstName": "Cuishan",
+              "lastName": "Guo",
+              "initials": "C",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Obstetrics and Gynecology, Shengjing Hospital of China Medical University, Shenyang, 110004, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Liu Q",
+              "firstName": "Qing",
+              "lastName": "Liu",
+              "initials": "Q",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Obstetrics and Gynecology, Shengjing Hospital of China Medical University, Shenyang, 110004, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Hai D",
+              "firstName": "Darong",
+              "lastName": "Hai",
+              "initials": "D",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Nursing, Wenzhou Medical University, Wenzhou, 325000, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zhu X",
+              "firstName": "Xingyu",
+              "lastName": "Zhu",
+              "initials": "X",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "The First School of Medicine, School of Information and Engineering, Wenzhou Medical University, Wenzhou, 325000, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Mo Z",
+              "firstName": "Zefei",
+              "lastName": "Mo",
+              "initials": "Z",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Biomedical Engineering, School of Ophthalmology and Optometry, Eye Hospital, Wenzhou Medical University, Wenzhou, 325000, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Wang Y",
+              "firstName": "Yi",
+              "lastName": "Wang",
+              "initials": "Y",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Biomedical Engineering, School of Ophthalmology and Optometry, Eye Hospital, Wenzhou Medical University, Wenzhou, 325000, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zhao Q",
+              "firstName": "Qi",
+              "lastName": "Zhao",
+              "initials": "Q",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0001-9713-1864"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science and Software Engineering, University of Science and Technology Liaoning, Anshan, 114051, China. zhaoqi@lnu.edu.cn."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zhang C",
+              "firstName": "Chiyuan",
+              "lastName": "Zhang",
+              "initials": "C",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Obstetrics and Gynecology, Shengjing Hospital of China Medical University, Shenyang, 110004, China. zhangcy@sj-hospital.org."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0001-9713-1864"
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "1",
+          "volume": "24",
+          "journalIssueId": 4187144,
+          "dateOfPublication": "2026 May",
+          "monthOfPublication": 5,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-05-01",
+          "journal": {
+            "title": "Journal of translational medicine",
+            "medlineAbbreviation": "J Transl Med",
+            "essn": "1479-5876",
+            "issn": "1479-5876",
+            "isoabbreviation": "J Transl Med",
+            "nlmid": "101190741"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "943",
+        "abstractText": "<h4>Background</h4>Endometriosis is a heterogeneous gynecological disorder characterized by chronic pain, infertility, and substantial impairment of quality of life. Increasing evidence indicates that microRNAs (miRNAs) are key regulators of endometriosis pathogenesis through their effects on inflammation, angiogenesis, cell proliferation, fibrosis, and hormone-responsive pathways.<h4>Methods</h4>In this review, we summarize the biological roles of miRNAs in endometriosis and discuss their emerging value as diagnostic biomarkers and therapeutic targets. We further examine major bioinformatics resources and analytical tools used in miRNA research, including databases, target prediction platforms, and expression profiling approaches, with emphasis on their relevance and limitations in the context of endometriosis. In addition, we review recent advances in machine learning and deep learning for miRNA identification, target prediction, regulatory network reconstruction, and miRNA-disease association modeling. Particular attention is given to multi-omics integration strategies, which may better capture the molecular heterogeneity of endometriosis and improve biologically informed stratification.<h4>Results</h4>This review highlights the key roles of miRNAs in endometriosis-related inflammation, angiogenesis, proliferation, fibrosis, and hormone-responsive signaling, and summarizes their potential as non-invasive biomarkers and therapeutic targets. It also emphasizes the value of bioinformatics, machine learning, and multi-omics approaches in identifying clinically relevant miRNA signatures, while acknowledging current challenges in standardization, validation, and interpretability.<h4>Conclusions</h4>Future studies should prioritize standardized multicenter datasets, explainable artificial intelligence, and integrative multi-omics frameworks to develop robust and clinically applicable miRNA-based diagnostic and therapeutic strategies for endometriosis.",
+        "affiliation": "Department of Obstetrics and Gynecology, Shengjing Hospital of China Medical University, Shenyang, 110004, China.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic",
+        "pubTypeList": {
+          "pubType": [
+            "Research Support, Non-U.S. Gov't",
+            "review-article",
+            "Review",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "2023-MSLH-385",
+              "agency": "Foundation of Science and Technology Department of Liaoning Province",
+              "orderIn": 0
+            },
+            {
+              "grantId": "LJ212410146026",
+              "agency": "Fundamental Research Funds for the Liaoning Universities",
+              "orderIn": 0
+            },
+            {
+              "grantId": "2025-MSLH-351",
+              "agency": "Foundation of Science and Technology Department of Liaoning Province",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Endometriosis",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "MicroRNAs",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "ME",
+                    "qualifierName": "metabolism",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Female"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Machine Learning"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Multiomics"
+            }
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Bioinformatics",
+            "Endometriosis",
+            "Machine Learning",
+            "microRNAs",
+            "Multi-omics Integration"
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "MicroRNAs",
+              "registryNumber": "0"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1186/s12967-026-08310-y"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13390208"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13390208?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "citedByCount": 0,
+        "hasData": "N",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2026-07-22",
+        "dateOfCreation": "2026-05-25",
+        "firstIndexDate": "2026-05-26",
+        "fullTextReceivedDate": "2026-09-03",
+        "dateOfRevision": "2026-08-26",
+        "electronicPublicationDate": "2026-05-25",
+        "firstPublicationDate": "2026-05-25"
+      },
+      {
+        "id": "42196220",
+        "source": "MED",
+        "pmid": "42196220",
+        "pmcid": "PMC13207841",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13207841"
+          ]
+        },
+        "doi": "10.3390/ijms27104237",
+        "title": "MOTCS: A Cancer Subtype Classification and Key Biomarker Recognition Model Based on Multi-Omics Data Integration of Transformer.",
+        "authorString": "Meng P, Wang G, Zhang T.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Meng P",
+              "firstName": "Ping",
+              "lastName": "Meng",
+              "initials": "P",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0009-0002-2547-3974"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Faculty of Computing, Harbin Institute of Technology, Harbin 150001, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Wang G",
+              "firstName": "Guohua",
+              "lastName": "Wang",
+              "initials": "G",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Faculty of Computing, Harbin Institute of Technology, Harbin 150001, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zhang T",
+              "firstName": "Tianjiao",
+              "lastName": "Zhang",
+              "initials": "T",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0001-9807-8620"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science and Artificial Intelligence, Northeast Forestry University, Harbin 150040, China."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0001-9807-8620"
+            },
+            {
+              "type": "ORCID",
+              "value": "0009-0002-2547-3974"
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "supporting_data"
+          ]
+        },
+        "journalInfo": {
+          "issue": "10",
+          "volume": "27",
+          "journalIssueId": 4192896,
+          "dateOfPublication": "2026 May",
+          "monthOfPublication": 5,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-05-01",
+          "journal": {
+            "title": "International journal of molecular sciences",
+            "medlineAbbreviation": "Int J Mol Sci",
+            "essn": "1422-0067",
+            "issn": "1422-0067",
+            "isoabbreviation": "Int J Mol Sci",
+            "nlmid": "101092791"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "4237",
+        "abstractText": "Cancer, as a complex disease with high heterogeneity, is gradually shifting from standardization to individualization. Current research indicates that integrating multi-omics data, including genome, transcriptome, and epigenome, can more comprehensively reveal the molecular features of tumors, thereby providing a more reliable basis for subtype classification. It is worth noting that driver genes, as key factors directly involved in tumorigenesis and development, when combined with multi-omics data, improve model interpretability. We proposed a cancer subtype classification model named MOTCS, which consists of four key steps: (1) The extraction of driver gene features from existing databases and the execution of preliminary feature selection for non-driver genes in different omics data; (2) the use of the transformer encoder to conduct feature representation learning for non-driver gene features and driver gene features, respectively; (3) the non-driver gene feature embeddings and driver gene feature embeddings of each omics learned are concatenated and input into the MLP classifier to obtain the classification probabilities of each subtype. (4) By integrating the above features through view association discovery networks, cross-omics feature representations are learned so as to achieve effective classification. The results show that MOTCS outperformed existing methods across all four datasets and that the introduction of driver genes will enhance the classification performance of MOTCS. MOTCS achieved precise classification of cancer subtypes by mining the feature embeddings of driver genes and non-driver gene features.",
+        "affiliation": "Faculty of Computing, Harbin Institute of Technology, Harbin 150001, China.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "2572025JT05-02",
+              "agency": "Fundamental Research Funds for the Central Universities",
+              "orderIn": 0
+            },
+            {
+              "grantId": "LH2024F003",
+              "agency": "Natural Science Foundation of Heilongjiang Province",
+              "orderIn": 0
+            },
+            {
+              "grantId": "62473094",
+              "agency": "National Natural Science Foundation of China",
+              "orderIn": 0
+            },
+            {
+              "grantId": "62531007",
+              "agency": "Key Program of the National Natural Science Foundation of China",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Neoplasms",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "CL",
+                    "qualifierName": "classification",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "ME",
+                    "qualifierName": "metabolism",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Genomics",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Biomarkers, Tumor",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Multiomics"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Classification Algorithms"
+            }
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Driver Gene",
+            "Multi-omics",
+            "Transformer",
+            "Cancer Subtype"
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "Biomarkers, Tumor",
+              "registryNumber": "0"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.3390/ijms27104237"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13207841"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13207841?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "Y",
+        "tmAccessionTypeList": {
+          "accessionType": [
+            "doi"
+          ]
+        },
+        "dateOfCompletion": "2026-07-17",
+        "dateOfCreation": "2026-05-27",
+        "firstIndexDate": "2026-05-28",
+        "fullTextReceivedDate": "2026-05-27",
+        "dateOfRevision": "2026-08-13",
+        "electronicPublicationDate": "2026-05-10",
+        "firstPublicationDate": "2026-05-10"
+      },
+      {
+        "id": "42430786",
+        "source": "MED",
+        "pmid": "42430786",
+        "pmcid": "PMC13354062",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13354062"
+          ]
+        },
+        "doi": "10.1093/bib/bbag367",
+        "title": "Advancing bioinformatics with language models: components, applications, and perspectives.",
+        "authorString": "Liu J, Yang M, Yu Y, Xu H, Wang T, Li K, Zhou X.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Liu J",
+              "firstName": "Jiajia",
+              "lastName": "Liu",
+              "initials": "J",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-0038-9592"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Computational Systems Medicine, McWilliams School of Biomedical Informatics, The University of Texas Health Science Center at Houston, 7000 Fannin St, Houston, Houston, TX 77030, United States."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Yang M",
+              "firstName": "Mengyuan",
+              "lastName": "Yang",
+              "initials": "M",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Cell Biology and Genetics, School of Basic Medical Sciences, Xi'an Jiaotong University Health Science Center, No. 28 Xianning West Road, Xian City, Shaanxi Province, 710049, P.R. China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Yu Y",
+              "firstName": "Yankai",
+              "lastName": "Yu",
+              "initials": "Y",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computing and Artificial Intelligence, Southwest Jiaotong University, No. 999, Xi'an Road, Pidu District, Chengdu, Sichuan, 611756, P.R. China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Xu H",
+              "firstName": "Haixia",
+              "lastName": "Xu",
+              "initials": "H",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Computational Systems Medicine, McWilliams School of Biomedical Informatics, The University of Texas Health Science Center at Houston, 7000 Fannin St, Houston, Houston, TX 77030, United States."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Wang T",
+              "firstName": "Tiangang",
+              "lastName": "Wang",
+              "initials": "T",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Computational Systems Medicine, McWilliams School of Biomedical Informatics, The University of Texas Health Science Center at Houston, 7000 Fannin St, Houston, Houston, TX 77030, United States."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Li K",
+              "firstName": "Kang",
+              "lastName": "Li",
+              "initials": "K",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "West China Biomedical Big Data Center, West China Hospital, Sichuan University, No. 17, Section 3, South Renmin Road, Chengdu, Sichuan, 610041, P.R. China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zhou X",
+              "firstName": "Xiaobo",
+              "lastName": "Zhou",
+              "initials": "X",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Center for Computational Systems Medicine, McWilliams School of Biomedical Informatics, The University of Texas Health Science Center at Houston, 7000 Fannin St, Houston, Houston, TX 77030, United States."
+                  },
+                  {
+                    "affiliation": "McGovern Medical School, The University of Texas Health Science Center at Houston, 6431 Fannin St, Houston, Houston, TX 77030, United States."
+                  },
+                  {
+                    "affiliation": "School of Dentistry, The University of Texas Health Science Center at Houston, 7500 Cambridge St, Houston, TX 77030, United States."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0002-0038-9592"
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "4",
+          "volume": "27",
+          "journalIssueId": 4226278,
+          "dateOfPublication": "2026 Jul",
+          "monthOfPublication": 7,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-07-01",
+          "journal": {
+            "title": "Briefings in bioinformatics",
+            "medlineAbbreviation": "Brief Bioinform",
+            "essn": "1477-4054",
+            "issn": "1467-5463",
+            "isoabbreviation": "Brief Bioinform",
+            "nlmid": "100912837"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "bbag367",
+        "abstractText": "Large language models (LLMs) are deep learning-based artificial intelligence models that have achieved remarkable success in natural language processing. Typically composed of neural networks with billions of parameters, they are trained on massive unlabeled datasets using self-supervised or semi-supervised learning. Beyond language, LLMs hold immense potential for addressing complex bioinformatics challenges. This review provides a comprehensive overview of transformer-based model applications in genomics, transcriptomics, proteomics, drug discovery, and single-cell analysis. We discuss critical components, including tokenization strategies for diverse biological data, transformer architectures, attention mechanisms, and pretraining approaches. We also survey currently available foundation models and their downstream applications across bioinformatics domains. Finally, we highlight major challenges that remain insufficiently addressed in prior reviews and outline future perspectives and design principles for next-generation biological language models, offering practical guidance for both users and developers.",
+        "affiliation": "Center for Computational Systems Medicine, McWilliams School of Biomedical Informatics, The University of Texas Health Science Center at Houston, 7000 Fannin St, Houston, Houston, TX 77030, United States.",
+        "publicationStatus": "ppublish",
+        "language": "eng",
+        "pubModel": "Print",
+        "pubTypeList": {
+          "pubType": [
+            "review-article",
+            "Review",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "R01 LM014156",
+              "agency": "NLM NIH HHS",
+              "acronym": "LM",
+              "orderIn": 0
+            },
+            {
+              "grantId": "RP250043",
+              "agency": "Cancer Prevention and Research Institute of Texas",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01 GM153822",
+              "agency": "NIGMS NIH HHS",
+              "acronym": "GM",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01CA241930",
+              "agency": "NIH HHS",
+              "acronym": "NH",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01AA032723",
+              "agency": "NIH HHS",
+              "acronym": "NH",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01AA032723",
+              "agency": "National Institutes of Health",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01LM014156",
+              "agency": "National Institutes of Health",
+              "orderIn": 0
+            },
+            {
+              "grantId": "2326879",
+              "agency": "National Science Foundation",
+              "orderIn": 0
+            },
+            {
+              "agency": "University of Texas Health Science Center at Houston",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01 CA241930",
+              "agency": "NCI NIH HHS",
+              "acronym": "CA",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01LM014156",
+              "agency": "NIH HHS",
+              "acronym": "NH",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01CA241930",
+              "agency": "National Institutes of Health",
+              "orderIn": 0
+            },
+            {
+              "grantId": "21035",
+              "agency": "Alkek-Williams Dementia Prevention and Research Institute of Texas",
+              "orderIn": 0
+            },
+            {
+              "grantId": "2217515",
+              "agency": "National Science Foundation",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01 AA032723",
+              "agency": "NIAAA NIH HHS",
+              "acronym": "AA",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01GM153822",
+              "agency": "NIH HHS",
+              "acronym": "NH",
+              "orderIn": 0
+            },
+            {
+              "grantId": "R01GM153822",
+              "agency": "National Institutes of Health",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Proteomics"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Genomics"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Natural Language Processing"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Drug Discovery"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Single-Cell Analysis"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Deep Learning"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Neural Networks, Computer"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Large Language Models"
+            }
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "drug discovery",
+            "Single-cell Analysis",
+            "Language Model",
+            "Multi-omics Application",
+            "Transformer Architecture",
+            "Foundation Model"
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1093/bib/bbag367"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13354062"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13354062?pdf=render"
+            }
+          ]
+        },
+        "commentCorrectionList": {
+          "commentCorrection": [
+            {
+              "id": "38259343",
+              "source": "MED",
+              "reference": "ArXiv. 2025 Jan 31:arXiv:2401.04155v2.",
+              "type": "Update of",
+              "orderIn": 1
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "N",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2026-07-11",
+        "dateOfCreation": "2026-07-10",
+        "firstIndexDate": "2026-07-12",
+        "fullTextReceivedDate": "2026-09-03",
+        "dateOfRevision": "2026-08-18",
+        "firstPublicationDate": "2026-07-01"
+      },
+      {
+        "id": "41739939",
+        "source": "MED",
+        "pmid": "41739939",
+        "pmcid": "PMC12935051",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC12935051"
+          ]
+        },
+        "doi": "10.1126/sciadv.aeb5612",
+        "title": "DNA framework-based molecular transformer for logic-driven precision diagnostics.",
+        "authorString": "Zhang S, Xia K, Wang L, Fan C, Yin F, Zuo X.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Zhang S",
+              "firstName": "Shuyang",
+              "lastName": "Zhang",
+              "initials": "S",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0009-0007-7581-2475"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Institute of Molecular Medicine, Shanghai Key Laboratory for Nucleic Acid Chemistry and Nanomedicine, Renji Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai 200127, China."
+                  },
+                  {
+                    "affiliation": "State Key Laboratory of Synergistic Chem-Bio Synthesis, School of Chemistry and Chemical Engineering, New Cornerstone Science Laboratory, Frontiers Science Center for Transformative Molecules, Zhangjiang Institute for Advanced Study and National Center for Translational Medicine, Shanghai Jiao Tong University, Shanghai 200240, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Xia K",
+              "firstName": "Kai",
+              "lastName": "Xia",
+              "initials": "K",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0009-0009-5906-7764"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Xiangfu Laboratory, Jiashan 314102, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Wang L",
+              "firstName": "Lihua",
+              "lastName": "Wang",
+              "initials": "L",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Xiangfu Laboratory, Jiashan 314102, China."
+                  },
+                  {
+                    "affiliation": "Institute of Materiobiology, Department of Chemistry, College of Science, Shanghai University, Shanghai 200444, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Fan C",
+              "firstName": "Chunhai",
+              "lastName": "Fan",
+              "initials": "C",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-7171-7338"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "State Key Laboratory of Synergistic Chem-Bio Synthesis, School of Chemistry and Chemical Engineering, New Cornerstone Science Laboratory, Frontiers Science Center for Transformative Molecules, Zhangjiang Institute for Advanced Study and National Center for Translational Medicine, Shanghai Jiao Tong University, Shanghai 200240, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Yin F",
+              "firstName": "Fangfei",
+              "lastName": "Yin",
+              "initials": "F",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0001-7203-5518"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Institute of Molecular Medicine, Shanghai Key Laboratory for Nucleic Acid Chemistry and Nanomedicine, Renji Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai 200127, China."
+                  },
+                  {
+                    "affiliation": "State Key Laboratory of Synergistic Chem-Bio Synthesis, School of Chemistry and Chemical Engineering, New Cornerstone Science Laboratory, Frontiers Science Center for Transformative Molecules, Zhangjiang Institute for Advanced Study and National Center for Translational Medicine, Shanghai Jiao Tong University, Shanghai 200240, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zuo X",
+              "firstName": "Xiaolei",
+              "lastName": "Zuo",
+              "initials": "X",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0001-7505-2727"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Institute of Molecular Medicine, Shanghai Key Laboratory for Nucleic Acid Chemistry and Nanomedicine, Renji Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai 200127, China."
+                  },
+                  {
+                    "affiliation": "State Key Laboratory of Synergistic Chem-Bio Synthesis, School of Chemistry and Chemical Engineering, New Cornerstone Science Laboratory, Frontiers Science Center for Transformative Molecules, Zhangjiang Institute for Advanced Study and National Center for Translational Medicine, Shanghai Jiao Tong University, Shanghai 200240, China."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0001-7203-5518"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0001-7505-2727"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-7171-7338"
+            },
+            {
+              "type": "ORCID",
+              "value": "0009-0007-7581-2475"
+            },
+            {
+              "type": "ORCID",
+              "value": "0009-0009-5906-7764"
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "supporting_data"
+          ]
+        },
+        "journalInfo": {
+          "issue": "9",
+          "volume": "12",
+          "journalIssueId": 4131519,
+          "dateOfPublication": "2026 Feb",
+          "monthOfPublication": 2,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-02-01",
+          "journal": {
+            "title": "Science advances",
+            "medlineAbbreviation": "Sci Adv",
+            "essn": "2375-2548",
+            "issn": "2375-2548",
+            "isoabbreviation": "Sci Adv",
+            "nlmid": "101653440"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "eaeb5612",
+        "abstractText": "Precision diagnostics requires logical integration of diverse biomarker information, but molecular heterogeneity and inconsistent identification kinetics hinder robust logic analysis. To overcome this, we develop a universal molecular transformer using DNA tetrahedral frameworks (DTFs) as programmable scaffolds. This system converts diverse biomarkers including proteins and variable-length nucleic acids into uniform 22-nucleotide DNA sequences, normalizing information dimensionality and identification kinetics. These uniform sequences serve as inputs for three fundamentals Boolean logic gates (AND, OR, and INHIBIT), enabling programmable molecular decision-making. Integrated on a gold-chip platform, the DTF transformer and logic system achieved statistically significant discrimination (<i>P</i> < 0.0001) among patients with prostate cancer, patients with benign prostatic hyperplasia, and healthy individuals using only two biomarkers (prostate-specific antigen and ALU115). By unifying signal transformation for Boolean logic computation, we resolve the critical challenges in molecular heterogeneity and establish a versatile platform for next-generation precision diagnostics.",
+        "affiliation": "Institute of Molecular Medicine, Shanghai Key Laboratory for Nucleic Acid Chemistry and Nanomedicine, Renji Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai 200127, China.",
+        "publicationStatus": "ppublish",
+        "language": "eng",
+        "pubModel": "Print-Electronic",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "19JC1410300",
+              "agency": "Natural Science Foundation of Shanghai",
+              "orderIn": 0
+            },
+            {
+              "grantId": "2024AIYB008",
+              "agency": "Shanghai Municipal Education Commission",
+              "orderIn": 0
+            },
+            {
+              "grantId": "SHSMU-ZLCX20212602",
+              "agency": "Innovative Research Team of High Level Local Universities in Shanghai",
+              "orderIn": 0
+            },
+            {
+              "grantId": "24HC2820100",
+              "agency": "Technology Commission of Shanghai Municipality",
+              "orderIn": 0
+            },
+            {
+              "grantId": "25HC2830100",
+              "agency": "Technology Commission of Shanghai Municipality",
+              "orderIn": 0
+            },
+            {
+              "grantId": "U24A20497",
+              "agency": "National Nature Science Foundation of China",
+              "orderIn": 0
+            },
+            {
+              "agency": "The New Cornerstone Science Foundation",
+              "orderIn": 0
+            },
+            {
+              "grantId": "2022JC027",
+              "agency": "Shanghai Municipal Health Commission",
+              "orderIn": 0
+            },
+            {
+              "grantId": "2023YFB3208200",
+              "agency": "National key R&amp;D program of China",
+              "orderIn": 0
+            },
+            {
+              "grantId": "21TQ1400222",
+              "agency": "Shanghai Pilot Program for Basic Research Shanghai Jiao Tong University",
+              "orderIn": 0
+            },
+            {
+              "grantId": "22025404",
+              "agency": "National Nature Science Foundation of China",
+              "orderIn": 0
+            },
+            {
+              "grantId": "T2188102",
+              "agency": "National Nature Science Foundation of China",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Prostatic Neoplasms",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "DI",
+                    "qualifierName": "diagnosis",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Prostatic Hyperplasia",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "DI",
+                    "qualifierName": "diagnosis",
+                    "majorTopic_YN": "N"
+                  },
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Prostate-Specific Antigen"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "DNA",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "CH",
+                    "qualifierName": "chemistry",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Logic"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Computers, Molecular"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Male"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Precision Medicine",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "DNA Nanostructures"
+            }
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "DNA",
+              "registryNumber": "9007-49-2"
+            },
+            {
+              "name": "Prostate-Specific Antigen",
+              "registryNumber": "EC 3.4.21.77"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1126/sciadv.aeb5612"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC12935051"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC12935051?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "citedByCount": 0,
+        "hasData": "Y",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "Y",
+        "license": "cc by-nc",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2026-07-09",
+        "dateOfCreation": "2026-02-25",
+        "firstIndexDate": "2026-02-25",
+        "fullTextReceivedDate": "2026-02-26",
+        "dateOfRevision": "2026-08-13",
+        "electronicPublicationDate": "2026-02-25",
+        "firstPublicationDate": "2026-02-25"
+      },
+      {
+        "id": "41922959",
+        "source": "MED",
+        "pmid": "41922959",
+        "pmcid": "PMC13169815",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC13169815"
+          ]
+        },
+        "doi": "10.1186/s12859-026-06436-w",
+        "title": "DHGCMDA: a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction.",
+        "authorString": "Sun Y, Zhang F, Yan S, Kong X, Wang H, Shang J, Liu JX.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Sun Y",
+              "firstName": "Yan",
+              "lastName": "Sun",
+              "initials": "Y",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Engineering, Qufu Normal University, Rizhao, 276826, Shandong, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Zhang F",
+              "firstName": "Fanyu",
+              "lastName": "Zhang",
+              "initials": "F",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Qufu Normal University, Rizhao, 276826, Shandong, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Yan S",
+              "firstName": "Shijia",
+              "lastName": "Yan",
+              "initials": "S",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Qufu Normal University, Rizhao, 276826, Shandong, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Kong X",
+              "firstName": "Xiaotong",
+              "lastName": "Kong",
+              "initials": "X",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Qufu Normal University, Rizhao, 276826, Shandong, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Wang H",
+              "firstName": "Hanxiang",
+              "lastName": "Wang",
+              "initials": "H",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Qufu Normal University, Rizhao, 276826, Shandong, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Shang J",
+              "firstName": "Junliang",
+              "lastName": "Shang",
+              "initials": "J",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Computer Science, Qufu Normal University, Rizhao, 276826, Shandong, China. shangjunliang110@163.com."
+                  },
+                  {
+                    "affiliation": "Rizhao-Qufu Normal University Joint Technology Transfer Center, Qufu Normal University, Rizhao, 276826, China. shangjunliang110@163.com."
+                  },
+                  {
+                    "affiliation": "Shandong Key Laboratory of Wetland Ecology and Biodiversity Conservation in the Lower Yellow River, Qufu, 273165, China. shangjunliang110@163.com."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Liu JX",
+              "firstName": "Jin-Xing",
+              "lastName": "Liu",
+              "initials": "JX",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "School of Health and Life Sciences, University of Health and Rehabilitation Sciences, Qingdao, 266113, Shandong, China. sdcavell@126.com."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "journalInfo": {
+          "issue": "1",
+          "volume": "27",
+          "journalIssueId": 4174665,
+          "dateOfPublication": "2026 Apr",
+          "monthOfPublication": 4,
+          "yearOfPublication": 2026,
+          "printPublicationDate": "2026-04-01",
+          "journal": {
+            "title": "BMC bioinformatics",
+            "medlineAbbreviation": "BMC Bioinformatics",
+            "essn": "1471-2105",
+            "issn": "1471-2105",
+            "isoabbreviation": "BMC Bioinformatics",
+            "nlmid": "100965194"
+          }
+        },
+        "pubYear": "2026",
+        "pageInfo": "100",
+        "abstractText": "BACKGROUND: Accumulating evidence demonstrates that microRNA (miRNA) dysregulation drives the pathogenesis of diverse human diseases via intricate, context-dependent molecular mechanisms. Hence, prediction of miRNA-disease association types is a critical prerequisite for dissecting functional roles of miRNAs in disease initiation and progression. Although computational methods offer cost-effective, time-efficient alternatives to wet-lab experiments for miRNA-disease association type prediction, most of them are hampered by three key limitations: excessive reliance on association-derived similarity metrics gives rise to quantification bias, traditional pairwise graph architectures inadequately capture high-order biological interactions, and existing representation learning strategies fail to generate consistent embeddings across heterogeneous views and modalities. RESULTS: To address these issues, this study presents DHGCMDA, a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction. Specifically, dual-view hypergraphs are first constructed based on heterogeneous similarity data to avoid excessive reliance on association-derived similarity metrics. A hypergraph convolutional network is then employed to capture high-order topological relationships between miRNAs and diseases, with its convolution cooperatively integrated with contrastive learning, intra-modality for cross-view consistency and cross-modality for embedding space alignment, to enhance feature representation quality. Finally, an attention-guided adaptive view fusion strategy dynamically weights and integrates distinct view representations, and type-aware message passing via heterogeneous graph Transformer simultaneously enables prediction of association presence and functional types. 5-fold cross-validation on HMDD v2.0 and v3.2 datasets demonstrates that DHGCMDA outperforms several state-of-the-art methods. Furthermore, case studies on breast neoplasms and hepatocellular carcinoma reveal that most predicted association types are corroborated by published literature, thereby validating the efficacy of DHGCMDA in miRNA-disease association type prediction. CONCLUSIONS: DHGCMDA exhibits robust discriminative power and generalization capability, providing a reliable computational alternative for miRNA-disease association type prediction. The source code is publicly available at https://github.com/CDMBlab/DHGCMDA .",
+        "affiliation": "College of Engineering, Qufu Normal University, Rizhao, 276826, Shandong, China.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "grantId": "62472250",
+              "agency": "National Natural Science Foundation of China",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "MicroRNAs",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "abbreviation": "MT",
+                    "qualifierName": "methods",
+                    "majorTopic_YN": "N"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Algorithms"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Graph Neural Networks"
+            }
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Contrastive Learning",
+            "Hypergraph Convolutional Network",
+            "Heterogeneous Graph Transformer",
+            "Association Type Prediction",
+            "Dual-view Hypergraphs"
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "MicroRNAs",
+              "registryNumber": "0"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1186/s12859-026-06436-w"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13169815"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC13169815?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "citedByCount": 0,
+        "hasData": "N",
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasLabsLinks": "N",
+        "license": "cc by-nc-nd",
+        "hasEvaluations": "N",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2026-06-27",
+        "dateOfCreation": "2026-04-02",
+        "firstIndexDate": "2026-04-03",
+        "fullTextReceivedDate": "2026-05-20",
+        "dateOfRevision": "2026-08-13",
+        "electronicPublicationDate": "2026-04-01",
+        "firstPublicationDate": "2026-04-01"
+      }
+    ]
+  }
+}

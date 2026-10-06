@@ -1,0 +1,27 @@
+{
+  "created_at_utc": "2026-09-17",
+  "protocol": "author RandomLinkSplit released protocol (S_val / S_test)",
+  "technique": "ncRNA-disease x drug-disease bridge columns added to the non-GNN GBDT member",
+  "data": ["RNADisease v4.0 human experimental", "HMDD v4.0", "CTD chemicals-diseases therapeutic/marker-mechanism"],
+  "columns": ["shared_disease_count", "idf_shared_sum", "idf_rna_side_sum", "rna_disease_breadth", "drug_disease_breadth"],
+  "gbdt_seeds": [666, 0, 1],
+  "blend_weight_selected_on_validation": true,
+  "mi_drug": {
+    "accepted_blend": {"auc_val": 0.9569, "auc_test": 0.9582, "aupr_val": 0.9213, "aupr_test": 0.9191},
+    "disease": {"auc_val": 0.9582, "auc_test": 0.9593, "aupr_val": 0.9225, "aupr_test": 0.9201},
+    "controls_5_permuted_map": {
+      "auc_val": [0.9573, 0.9580], "auc_test": [0.9587, 0.9590],
+      "aupr_val": [0.9209, 0.9223], "aupr_test": [0.9186, 0.9198]
+    },
+    "disease_exceeds_all_controls_all_cells": true
+  },
+  "lnc_drug": {
+    "accepted_blend": {"auc_test": 0.9885, "aupr_test": 0.9714},
+    "disease": {"auc_test": 0.9908, "aupr_test": 0.9761},
+    "not_down": true
+  },
+  "limitations": [
+    "Author protocol is a single frozen split; verification uses permutation controls.",
+    "The channel fails on the improve/ TabICL reference (negative MiDrug inner dAUC)."
+  ]
+}

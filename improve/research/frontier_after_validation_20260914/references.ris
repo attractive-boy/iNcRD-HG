@@ -1,0 +1,350 @@
+TY  - JOUR
+ID  - R01
+TI  - miRBind2 enables sequence-only prediction of miRNA binding and transcript repression
+AU  - Čechák, David
+AU  - Tzimotoudis, Dimosthenis
+AU  - Sammut, Stephanie
+AU  - Gresova, Katarina
+AU  - Marsalkova, Eva
+AU  - Farrugia, David
+AU  - Alexiou, Panagiotis
+PY  - 2026
+T2  - Bioinformatics
+DO  - 10.1093/bioinformatics/btag410
+UR  - https://doi.org/10.1093/bioinformatics/btag410
+N1  - 全文相关方法/结果/讨论（复用 2026-09-13 缓存）
+AB  - Abstract Motivation MicroRNAs (miRNAs) regulate gene expression by guiding Argonaute proteins to partially complementary sites on target RNAs. While classical prediction methods rely on engineered features such as seed match categories, evolutionary conservation, and site context, recent advances in deep learning offer the potential to learn targeting rules directly from sequence. We developed a sequence-based deep learning model that improves miRNA target site prediction, and further validated the learned target site representations by extending the model to gene-level functional repression prediction. Results We introduce miRBind2, a deep learning method for miRNA target site prediction that incorporates a novel pairwise nucleotide representation capturing all possible miRNA-target nucleotide interactions, with a CNN-based architecture. miRBind2 outperforms previous SotA models across four independent datasets from the debiased miRBench benchmark, while using 92% fewer parameters. We show that the convolutional features and weights learned by miRBind2 can be transferred to transcript-level prediction by extending the miRBind2 architecture and fine-tuning it on miRNA perturbation experiments. This miRBind2-3UTR model predicts gene repression from sequence alone. On a dataset of 50 549 miRNA-gene pairs, miRBind2-3UTR significantly outperforms TargetScan. These results show that deep models pretrained on target site data can capture regulatory signals and predict functional repression without requiring conventional engineered biological features. Availability Models and source code are freely available via GitHub (https://github.com/BioGeMT/miRBind_2.0). A publicly available web-tool for novel predictions and visualization is available at: (https://huggingface.co/spaces/dimostzim/BioGeMT-miRBind2).
+ER  - 
+
+TY  - JOUR
+ID  - R02
+TI  - Target-site Dynamics Explain a Large Share of Apparent MicroRNA Differential Expression
+AU  - Cihan, Mert
+AU  - More, Piyush
+AU  - Sprang, Maximilian
+AU  - Marini, Federico
+AU  - Andrade-Navarro, Miguel A
+PY  - 2026
+T2  - RNA
+DO  - 10.1261/rna.080990.126
+UR  - https://doi.org/10.1261/rna.080990.126
+N1  - 全文相关方法/结果/讨论（本轮获取）
+AB  - MicroRNA (miRNA) abundance reflects a dynamic balance between biogenesis, target engagement, and decay, yet differential expression analyses typically ignore changes in target-site availability driven by alternative polyadenylation (APA). We introduce MIRNAPEX, an expression-stratification-based machine learning framework that quantifies miRNA regulatory effect sizes from RNA-seq data by integrating target-gene expression with 3'UTR isoform usage to infer effective binding-site dosage. Using pan-cancer training sets, we train models that learn relationships between transcriptomic features and miRNA log fold changes, with APA patterns providing context-dependent complementary information alongside gene expression. When applied to knockdowns of core APA regulators, MIRNAPEX captured widespread 3'UTR shortening and predicted miRNA-specific shifts whose direction was consistent with changes in the APA-associated 3'UTR landscapes of target genes. Analysis of target-directed miRNA degradation interactions further showed that loss of distal decay-trigger sites coincides with increased miRNA abundance, consistent with reduced target-directed miRNA degradation. Together, these findings suggest that apparent miRNA differential expression can be associated with dynamic target-site landscapes in addition to altered miRNA transcription, and that neglecting this dimension can lead to misestimation of regulatory effect sizes.
+ER  - 
+
+TY  - UNPB
+ID  - R03
+TI  - PARNET: A CLIP-SEQ-BASED FOUNDATION MODEL FOR RNA SEQUENCE REPRESENTATION LEARNING
+AU  - Moyon, Lambert
+AU  - Tirabassi, Andreina
+AU  - Baranowskii, Artem
+AU  - Capitanchik, Charlotte
+AU  - Kuret Hodnik, Klara
+AU  - Wilkinson, Leo
+AU  - Londhe, Shubankar
+AU  - Dumbovic, Gabrijela
+AU  - Gagneur, Julien
+AU  - Ule, Jernej
+AU  - Horlacher, Marc
+AU  - Marsico, Annalisa
+PY  - 2026
+T2  - bioRxiv
+DO  - 10.64898/2026.08.08.743506
+UR  - https://doi.org/10.64898/2026.08.08.743506
+N1  - 预印本全文相关段落（复用 2026-09-13 缓存）；预印本，未经同行评审。
+AB  - RNA-binding proteins (RBPs) orchestrate a complex combinatorial regulatory "code" that governs RNA splicing, stability, localization, and translation. Learning the relationship between RNA sequences and these processes is a central challenge in genomics. Foundation models, notably RNA language models, have emerged as the dominant approach, learning general-purpose representations from unlabeled sequence at scale. While RNA language models have demonstrated impressive performance across a broad range of downstream tasks, they generally learn from sequence reconstruction objectives alone, lacking direct connections to the regulatory principles that govern RNA function. Here we introduce Parnet, an RNA foundation model trained directly and exclusively on experimental CLIP-seq data. Parnet is a multi-task foundation model trained end-to-end on 223 eCLIP-seq experiments spanning 150 RBPs to predict base-resolution RBP binding profiles directly from RNA sequence. This CLIP-seq pretraining strategy departs fundamentally from the masked-language-modeling paradigm, anchoring learned RNA representations directly in measured protein-RNA interactions rather than sequence statistics. Parnet substantially outperforms its single-task predecessor RBPNet in binding profile and motif recovery, generalizes to unseen cell types and iCLIP data, and recapitulates position-dependent splicing regulation. Frozen Parnet embeddings, without task-specific fine-tuning, match or exceed the performance of both task-specific tools, as well as larger self-supervised RNA and genomic language models across diverse downstream tasks, including RNA biotype classification, lncRNA chromatin localization, translational efficiency, splice-site recognition, intron retention, and non-coding variant effect prediction. Importantly, Parnet remains mechanistically interpretable, tracing predictions back to the specific RBPs and motifs that drive them. These results establish the RBP interactome as a compact, functionally sufficient, and interpretable basis for foundation model pretraining in RNA biology.
+ER  - 
+
+TY  - JOUR
+ID  - R04
+TI  - RNA-Binding Protein Occupancy Composition Predicts Long Noncoding RNA Subcellular Localization
+AU  - Tani, Hidenori
+PY  - 2026
+T2  - International Journal of Molecular Sciences
+DO  - 10.3390/ijms27125593
+UR  - https://doi.org/10.3390/ijms27125593
+N1  - 全文相关方法/结果/讨论（本轮获取）
+AB  - The subcellular localization of long noncoding RNAs (lncRNAs) is a central determinant of their function, yet its molecular determinants remain incompletely defined, and most existing predictors rely on the primary sequence. Because RNA-binding proteins (RBPs) are the proximal effectors of RNA compartmentalization, this study tested whether the composition of RBPs bound to a lncRNA is predictive of its nuclear or cytoplasmic localization. Enhanced crosslinking and immunoprecipitation (eCLIP) occupancy for 139 RBPs in K562 cells was integrated with the cytoplasmic-nuclear relative concentration indices (CN-RCIs) derived from matched subcellular fractionation, and localization was modeled under chromosome-grouped cross-validation with nested regularization. RBP-occupancy composition predicted localization beyond the transcript size and total binding amount (incremental cross-validated coefficient of determination, delta-R-squared = 0.17; receiver-operating-characteristic area under the curve, AUC = 0.73, a moderate-strength association; Freedman-Lane permutation, p = 0.005). This increment persisted (delta-R-squared = 0.12; p = 0.005) against an expanded baseline that additionally absorbed the transcript abundance, intron content and exon number, indicating predictive information that is not reducible to these transcript features, and the classifier was well calibrated (Brier score = 0.10; expected calibration error = 0.02). The signed coefficient profile separated RBP function systematically: factors acting in nuclear processes (splicing, 3'-end processing, and nuclear-matrix association) carried negative, nuclear-direction weights, whereas factors acting in cytoplasmic processes (translation and messenger RNA stability) carried positive, cytoplasmic-direction weights (Mann-Whitney p = 0.013). The profile generalized across cell lines: a K562-trained model predicted HepG2 localization (transfer AUC = 0.71 using 76 shared RBPs), and HepG2 reproduced the association independently (AUC = 0.77). The association is correlational and of moderate strength; it is presented as an interpretable, RBP-occupancy-based complement to sequence-based predictors of lncRNA localization.
+ER  - 
+
+TY  - JOUR
+ID  - R05
+TI  - Multi-to-uni modal knowledge transfer pre-training for molecular representation learning
+AU  - Xiong, Zhankun
+AU  - Wang, Ziyan
+AU  - Huang, Feng
+AU  - Qiu, Minyao
+AU  - Fang, Shuyan
+AU  - Yang, Liuqing
+AU  - Zhou, Xionghui
+AU  - Liu, Shichao
+AU  - Zhang, Ping
+AU  - Zhang, Wen
+PY  - 2026
+T2  - Nature Communications
+DO  - 10.1038/s41467-026-69302-6
+UR  - https://doi.org/10.1038/s41467-026-69302-6
+N1  - 全文相关方法/结果/讨论（本轮获取）
+AB  - The pre-training molecular representation learning (MRL) has shown considerable potential in computer-aided drug discovery. Recently, many multimodal pre-training MRL methods have been presented, incorporating multimodal molecular data for pre-training and achieving high-accuracy predictions in downstream tasks. However, most current methods require completeness of modality for molecular data in the pre-training phase and often overlook their adaptation to real-world scenarios where, for example, molecular modalities except 2D topological graphs (2D modality) are often unavailable. In this study, we propose a multimodal pre-training MRL framework called M2UMol, which separately matches 2D modality to multiple modalities and undergoes pre-training jointly with a modality classifier. In this way, M2UMol elegantly transfers multimodal knowledge into the 2D modal encoder and allows for inputting incomplete modalities in the pre-training stage. Moreover, in downstream tasks with only the 2D modality given, M2UMol enables the precise simulation of molecular multimodal information based on the pre-trained 2D modal encoder. Comprehensive experimental results show the superior performance of M2UMol in a wide range of molecular tasks with higher efficiency in pre-training than pioneer models and demonstrate the validity of the multimodal knowledge transfer. Furthermore, we developed a user-friendly package based on M2UMol, integrating molecular representation learning, key functional group analysis, molecular multimodal retrieval, etc. It may be conveniently used in diverse fields related to drug discovery and promises to facilitate the process of developing drugs. Our code, pre-trained weights of M2UMol, and the package are available at https://github.com/Zhankun-Xiong/M2UMol .
+ER  - 
+
+TY  - JOUR
+ID  - R06
+TI  - SELFormerMM: multimodal molecular representation learning via SELFIES, structure, text, and knowledge graph integration
+AU  - Ulusoy, Erva
+AU  - Bostancı, Şevval
+AU  - Deniz, Bora Engin
+AU  - Doğan, Tunca
+PY  - 2026
+T2  - Bioinformatics
+DO  - 10.1093/bioinformatics/btag451
+UR  - https://doi.org/10.1093/bioinformatics/btag451
+N1  - 全文相关方法/结果/讨论（本轮获取）
+AB  - Motivation Molecular representation learning is central to computational drug discovery. However, most existing models rely on single-modality inputs, such as molecular sequences or graphs, which capture only limited aspects of molecular behaviour. Yet unifying these modalities with complementary resources, such as textual descriptions and biological interaction networks, into a coherent multimodal framework remains non-trivial, hindering the development of more informative and biologically grounded representations. Results We introduce SELFormer Multimodal (SELFormerMM), a multimodal molecular representation learning framework that integrates SELFIES notations with structural graphs, textual descriptions and knowledge graph-derived biological interaction data. By aligning these heterogeneous views, SELFormerMM effectively captures complementary signals that unimodal approaches often overlook. Our performance evaluation has revealed that SELFormerMM outperforms structure-, sequence- and knowledge-based models on multiple molecular property prediction tasks. Ablation analyses further indicate that effective cross-modal alignment and modality coverage improve the model's ability to exploit complementary information. Overall, integrating SELFIES with structural, textual and biological context enables richer molecular representations and provides a promising framework for hypothesis-driven drug discovery. Availability and implementation SELFormerMM is available as a programmatic tool at https://github.com/HUBioDataLab/SELFormerMM. Pre-trained and fine-tuned model checkpoints, multimodal pre-training and finetuning datasets including SMILES, textual descriptions and knowledge graph, and their precomputed single-modality embedding files are available at https://huggingface.co/datasets/HUBioDataLab/SELFormerMM.
+ER  - 
+
+TY  - JOUR
+ID  - R07
+TI  - Gene dependency-informed inference of response to targeted cancer therapies
+AU  - Bhattacharjee, Nilabja
+AU  - Peela, Sreeram Chandra Murthy
+AU  - Halder, Abhishek
+AU  - Mathew, Bernadette
+AU  - Samanta, Swarnava
+AU  - Gujral, Sakshi
+AU  - Kumari, Stuti
+AU  - Panda, Smruti
+AU  - Ganguly, Ritwik
+AU  - Ahuja, Gaurav
+AU  - De, Subhajyoti
+AU  - Majumdar, Angshul
+AU  - Sengupta, Debarka
+PY  - 2026
+T2  - Nature Communications
+DO  - 10.1038/s41467-026-73977-2
+UR  - https://doi.org/10.1038/s41467-026-73977-2
+N1  - 全文相关方法/结果/讨论（复用 2026-09-13 缓存）
+ER  - 
+
+TY  - JOUR
+ID  - R08
+TI  - DiSPA: differential substructure-pathway attention for drug response prediction
+AU  - Han, Yewon
+AU  - Kim, Sunghyun
+AU  - Jeong, Eunyi
+AU  - Lee, Sungkyung
+AU  - Yun, Seokwoo
+AU  - Lim, Sangsoo
+PY  - 2026
+T2  - Bioinformatics
+DO  - 10.1093/bioinformatics/btag272
+UR  - https://doi.org/10.1093/bioinformatics/btag272
+N1  - 全文相关方法/结果/讨论（复用 2026-09-13 缓存）
+AB  - Abstract Motivation Accurate prediction of drug response in precision medicine requires models that capture how specific chemical substructures interact with cellular pathway states. However, most existing deep learning approaches treat chemical and transcriptomic modalities independently or combine them only at late stages, limiting their ability to model fine-grained, context-dependent mechanisms of drug action. In addition, vanilla attention mechanisms are often sensitive to noise and sparsity in high-dimensional biological networks, hindering both generalization and interpretability. Results We present Differential Substructure–Pathway Attention (DiSPA), a framework that models bidirectional interactions between chemical substructures and pathway-level gene expression. DiSPA introduces differential cross-attention to suppress spurious associations while enhancing context-relevant interactions. On the GDSC benchmark, DiSPA achieves state-of-the-art performance, with strong improvements in the disjoint setting. These gains are consistent across random and drug-blind splits, suggesting improved robustness. Analyses of attention patterns indicate more selective and concentrated interactions compared to standard cross-attention. Exploratory evaluation shows that differential attention better prioritizes predefined target-related pathways, although this does not constitute mechanistic validation. DiSPA also shows promising generalization on external datasets (CTRP) and cross-dataset settings, although further validation is needed. It further enables zero-shot application to spatial transcriptomics, providing exploratory insights into region-specific drug sensitivity patterns without ground-truth validation. Availability and implementation Source code and data are available at https://github.com/sslim-aidrug/DiSPA.
+ER  - 
+
+TY  - JOUR
+ID  - R09
+TI  - MPHGNN: metapath-guided heterogeneous graph neural network for miRNA-drug resistance association prediction
+AU  - Huang, Guangsheng
+AU  - Peng, Yali
+AU  - Wu, Shuai
+AU  - Wei, Hang
+AU  - Liu, Shigang
+PY  - 2026
+T2  - Briefings in Bioinformatics
+DO  - 10.1093/bib/bbag013
+UR  - https://doi.org/10.1093/bib/bbag013
+N1  - 全文相关方法/结果/讨论（复用 2026-09-13 缓存）
+AB  - Aberrant expression of microRNAs (miRNAs) is closely associated with the pathogenesis and progression of various diseases, particularly cancer, as well as therapeutic responses. Identification of miRNA-drug resistance associations is critical for drug screening and precision medicine. However, conventional experimental approaches remain time-consuming and labor-intensive, while existing computational methods often face challenge in capturing higher-order semantic inference from sparse prior bipartite association network. To address this, we propose MPHGNN, a heterogeneous graph convolutional network (GCN) architecture for predicting miRNA-drug resistance associations. MPHGNN constructs a miRNA-gene-drug heterogeneous network with multimodal biological features, including miRNA expression profiles, drug structural descriptors, and gene functional similarities, and leverages dual learning modules at both metapath and global levels to capture localized patterns and global representations simultaneously. Experimental results demonstrate that MPHGNN outperforms state-of-the-art methods and enhances the discriminative ability of association representations. Interpretability analyses further reveal that metapaths effectively capture underlying biological mechanisms, while the constructed heterogeneous biological network makes important contributions to prediction.
+ER  - 
+
+TY  - JOUR
+ID  - R10
+TI  - MIFNDRA: an innovative knowledge-enhanced multimodal fusion and graph learning framework for predicting drug resistance-related ncRNAs
+AU  - Sui, Jianan
+AU  - Cui, Weirong
+AU  - Jin, Xiaojie
+AU  - Duan, Hongliang
+AU  - Guo, Jingjing
+PY  - 2026
+T2  - Briefings in Bioinformatics
+DO  - 10.1093/bib/bbag322
+UR  - https://doi.org/10.1093/bib/bbag322
+N1  - 全文相关方法/结果/讨论（复用 2026-09-13 缓存）
+AB  - Drug resistance is a significant challenge in cancer treatment, greatly impacting treatment efficacy. Non-coding RNAs (ncRNAs) play crucial roles in mediating drug resistance, yet few computational models effectively predict drug resistance-associated ncRNAs. Existing methods often overlook the complex sequence patterns of ncRNA and their intricate interrelationships, resulting in suboptimal performance. To address these challenges, we propose MIFNDRA, a multimodal integrative framework that jointly models ncRNA and drug features to identify drug resistance-related ncRNAs. MIFNDRA employs a pre-trained Graph Isomorphism Network to extract drug structural features and a pre-trained SpliceBERT model to encode ncRNA sequences. It also incorporates various similarity features for both drugs and ncRNAs, while improving representation through a novel ncRNA interaction network that includes interactions between different ncRNA types as a strategy for knowledge enhancement. By leveraging advanced graph learning techniques, including residual GraphSAGE and contrastive learning, the model improves the identification of drug resistance-associated ncRNAs. Additionally, we curated a new benchmark dataset pairing ncRNA sequences with drug SMILES and resistance annotations. Comprehensive experiments demonstrate that MIFNDRA achieved state-of-the-art performance. Case studies on cisplatin and gemcitabine further validate the model's robustness and potential in advancing drug resistance research and drug development. The data and code required for this work are available at https://github.com/SJNNNN/MIFNDRA.
+ER  - 
+
+TY  - JOUR
+ID  - R11
+TI  - mDADGAN: Predicting miRNA–Drug Response Associations Using lncRNAs and a Diffusion-Based Generative Adversarial Network
+AU  - Lai, Wenyin
+AU  - Wang, Li
+AU  - Tang, Chunyan
+AU  - Chen, Danyang
+AU  - Zhong, Cheng
+PY  - 2026
+T2  - Journal of Chemical Information and Modeling
+DO  - 10.1021/acs.jcim.6c00254
+UR  - https://doi.org/10.1021/acs.jcim.6c00254
+N1  - 摘要与元数据；未阅读全文
+AB  - MicroRNAs (miRNAs) are key regulators of anticancer drug response, including sensitivity and resistance. Accurate prediction of miRNA-drug response associations is important for understanding response mechanisms and guiding targeted therapy. Existing prediction methods are difficult to fully capture complex high-order biological interactions and are sensitive to data sparsity and class imbalance. In this paper, we present an miRNA-drug response association prediction method called mDADGAN by constructing a diffusion-based generative adversarial network. First, we curated a large-scale and biologically informative data set from four public data resources by aggregating functional associations to facilitate model training. Second, we built a miRNA-lncRNA-drug interaction network by integrating lncRNA into the miRNA-drug network to address data sparsity and employed heterogeneous graph convolution to extract latent features from the interactions among miRNAs, lncRNAs, and drugs. Third, we applied diffusion-based perturbation to denoise and enhance the robustness of feature representations. Finally, we performed cost-sensitive learning to optimize the objective function in an adversarial training process to address class imbalance. The experimental results on four data sets demonstrated that, compared with the existing six methods, mDADGAN achieved higher values for AUC, AUPR, ACC, Recall, and F1-score. The case study demonstrates that integrating lncRNA information effectively enhances miRNA-drug response association prediction. mDADGAN can not only accurately identify known associations in the data sets but also predict previously unreported candidate associations supported by published evidence. Overall, our method mDADGAN has the ability to identify potential miRNA-drug response associations and can provide guidance for future biological experiments to enhance experimental efficiency and reduce experimental costs.
+ER  - 
+
+TY  - JOUR
+ID  - R12
+TI  - Router-guided dual attention with graph masked autoencoder for microRNA–drug association prediction
+AU  - Li, Yunyin
+AU  - Ren, Chuanru
+AU  - Zhang, Yuanyuan
+AU  - Liu, Yingye
+AU  - Wang, Shudong
+AU  - Pang, Shanchen
+PY  - 2026
+T2  - Computational Biology and Chemistry
+DO  - 10.1016/j.compbiolchem.2026.109236
+UR  - https://doi.org/10.1016/j.compbiolchem.2026.109236
+N1  - 摘要与元数据；未阅读全文
+AB  - MicroRNAs (miRNAs), a major class of small non-coding RNAs, regulate gene expression and serve as key mediators of drug response. Identifying miRNA-drug associations is therefore important for elucidating drug-response mechanisms and supporting therapeutic discovery. However, existing computational methods still struggle to simultaneously capture long-range dependency patterns and fine-grained local topological structures, particularly under sparse association observations and noisy biological data. To address this challenge, we present router-guided dual attention with graph masked autoencoder (RGDAGMAE), a unified predictive framework that couples route-mediated global dependency modeling with gated graph masked reconstruction. The router-guided dual attention module couples softmax-based routed aggregation with low-rank route-mediated interaction to model global dependencies with controlled computational complexity. In parallel, the gated graph masked autoencoder performs self-supervised feature masking and gate-controlled message passing to reconstruct local structures and suppress spurious noise. Their complementary representations are then fused to generate association scores. Extensive experiments on three benchmark datasets show that RGDAGMAE consistently outperforms representative competing methods. Further ablation studies confirm the effectiveness of adaptive attention routing and masked graph reconstruction in capturing informative miRNA-drug association patterns. Case studies on vorinostat and miR-509-3p further support the biological plausibility of RGDAGMAE in prioritizing candidate miRNA-drug associations.
+ER  - 
+
+TY  - JOUR
+ID  - R13
+TI  - miRBench: novel benchmark datasets for microRNA binding site prediction that mitigate against prevalent microRNA frequency class bias
+AU  - Sammut, Stephanie
+AU  - Gresova, Katarina
+AU  - Tzimotoudis, Dimosthenis
+AU  - Marsalkova, Eva
+AU  - Cechak, David
+AU  - Alexiou, Panagiotis
+PY  - 2025
+T2  - Bioinformatics
+DO  - 10.1093/bioinformatics/btaf233
+UR  - https://doi.org/10.1093/bioinformatics/btaf233
+N1  - 全文相关方法/结果/讨论（复用 2026-09-13 缓存）
+AB  - Abstract Motivation MicroRNAs (miRNAs) are crucial regulators of gene expression, but the precise mechanisms governing their binding to target sites remain unclear. A major contributing factor to this is the lack of unbiased experimental datasets for training accurate prediction models. While recent experimental advances have provided numerous miRNA–target interactions, these are solely positive interactions. Generating negative examples in silico is challenging and prone to introducing biases, such as the miRNA frequency class bias identified in this work. Biases within datasets can compromise model generalization, leading models to learn dataset-specific artifacts rather than true biological patterns. Results We introduce a novel methodology for negative sample generation that effectively mitigates the miRNA frequency class bias. Using this methodology, we curate several new, extensive datasets and benchmark several state-of-the-art methods on them. We find that a simple convolutional neural network model, retrained on some of these datasets, is able to outperform state-of-the-art methods reaching average precision scores between 0.81 and 0.86 in test datasets. This highlights the potential for leveraging unbiased datasets to achieve improved performance in miRNA binding site prediction. To facilitate further research and lower the barrier to entry for machine learning researchers, we provide an easily accessible Python package, miRBench, for dataset retrieval, sequence encoding, and the execution of state-of-the-art models. Availability and implementation The miRBench Python package is accessible at https://github.com/katarinagresova/miRBench/releases/tag/v1.0.1.
+ER  - 
+
+TY  - JOUR
+ID  - R14
+TI  - Positive Unlabeled Learning Selected Not At Random (PULSNAR): class proportion estimation without the selected completely at random assumption
+AU  - Kumar, Praveen
+AU  - Lambert, Christophe G.
+PY  - 2024
+T2  - PeerJ Computer Science
+DO  - 10.7717/peerj-cs.2451
+UR  - https://doi.org/10.7717/peerj-cs.2451
+N1  - 摘要与元数据；未阅读全文
+AB  - Positive and unlabeled (PU) learning is a type of semi-supervised binary classification where the machine learning algorithm differentiates between a set of positive instances (labeled) and a set of both positive and negative instances (unlabeled). PU learning has broad applications in settings where confirmed negatives are unavailable or difficult to obtain, and there is value in discovering positives among the unlabeled ( e.g ., viable drugs among untested compounds). Most PU learning algorithms make the selected completely at random (SCAR) assumption, namely that positives are selected independently of their features. However, in many real-world applications, such as healthcare, positives are not SCAR ( e.g ., severe cases are more likely to be diagnosed), leading to a poor estimate of the proportion, α, of positives among unlabeled examples and poor model calibration, resulting in an uncertain decision threshold for selecting positives. PU learning algorithms vary; some estimate only the proportion, α, of positives in the unlabeled set, while others calculate the probability that each specific unlabeled instance is positive, and some can do both. We propose two PU learning algorithms to estimate α, calculate calibrated probabilities for PU instances, and improve classification metrics: i) PULSCAR (positive unlabeled learning selected completely at random), and ii) PULSNAR (positive unlabeled learning selected not at random). PULSNAR employs a divide-and-conquer approach to cluster SNAR positives into subtypes and estimates α for each subtype by applying PULSCAR to positives from each cluster and all unlabeled. In our experiments, PULSNAR outperformed state-of-the-art approaches on both synthetic and real-world benchmark datasets.
+ER  - 
+
+TY  - JOUR
+ID  - R15
+TI  - Prediction of bacterial protein–compound interactions with only positive samples
+AU  - Kim, Ki-Hwa
+AU  - Yaganapu, Avinash
+AU  - Kosaraju, Sai
+AU  - Bhatt, Aashish
+AU  - Luo, Yun Lyna
+AU  - Parsa, Sai Phani
+AU  - Park, Juyeon
+AU  - Lee, Hyun
+AU  - Lee, Jun Hyuck
+AU  - Oh, Tae-Jin
+AU  - Kang, Mingon
+PY  - 2026
+T2  - Bioinformatics
+DO  - 10.1093/bioinformatics/btag067
+UR  - https://doi.org/10.1093/bioinformatics/btag067
+N1  - 全文相关方法/结果/讨论（本轮获取）
+AB  - Motivation Prediction of Compound-Protein Interactions (CPI) in bacteria is crucial to advance various pharmaceutical and chemical engineering fields, including biocatalysis, drug discovery, and industrial processing. However, current CPI models cannot be applied for bacterial CPI prediction due to the lack of curated negative interaction samples. Results We propose a novel Positive-Unlabeled (PU) learning framework, named BIN-PU, to address this limitation. BIN-PU generates pseudo positive and negative labels from known positive interaction data, enabling effective training of deep learning models for CPI prediction. We also propose a weighted positive loss function that weights to truly positive samples. We have validated BIN-PU coupled with multiple CPI backbone models, comparing the performance with the existing PU models using bacterial cytochrome P450 (CYP) data. Extensive experiments demonstrate the superiority of BIN-PU over the benchmark models in predicting CPIs with only truly positive samples. Furthermore, we have validated BIN-PU on additional bacterial proteins obtained from literature review, human CYP datasets, and uncurated data for its reproducibility. We have also validated the CPI prediction for the uncurated CYP data with biological and biophysical experiments. BIN-PU represents a significant advancement in CPI prediction for bacterial proteins, opening new possibilities for improving predictive models in related biological interaction tasks. Availability and implementation The source code and data are available at https://github.com/datax-lab/CYP.
+ER  - 
+
+TY  - JOUR
+ID  - R16
+TI  - FourierDrug: a domain generalization framework for robust drug response prediction via frequency-space asymmetric attention
+AU  - Song, Ran
+AU  - Bai, Yinpu
+AU  - Liu, Xuejun
+AU  - Liu, Hui
+PY  - 2026
+T2  - Bioinformatics
+DO  - 10.1093/bioinformatics/btag276
+UR  - https://doi.org/10.1093/bioinformatics/btag276
+N1  - 全文相关方法/结果/讨论（本轮获取）
+AB  - Motivation Accurate prediction of drug response remains a major challenge in precision oncology, particularly at the single-cell level and in clinical settings, due to significant distribution shifts between preclinical models and real-world patient data. Existing approaches often rely on transfer learning from cell lines to target domains, but typically require access to target-domain data during training, which is frequently unavailable in practice. Results We propose FourierDrug, a novel domain generalization framework for robust drug response prediction. Given gene expression profiles, the model performs Fourier transformation to project features into the frequency domain and introduces an asymmetric attention mechanism that encourages drug-sensitive samples to form compact clusters while driving resistant samples to be more dispersed. This design facilitates the learning of domain-invariant yet task-relevant representations. Extensive experiments demonstrate that FourierDrug effectively leverages diverse source domains and generalizes well to unseen cancer types. Notably, when evaluated on single-cell and patient-level prediction tasks, our method-trained solely on in vitro cell line data without access to target-domain data-consistently outperforms or matches state-of-the-art approaches. Availability and implementation The source code and processed datasets are available at: https://github.com/hliulab/FourierDrug.
+ER  - 
+
+TY  - JOUR
+ID  - R17
+TI  - Simple controls exceed best deep learning algorithms and reveal foundation model effectiveness for predicting genetic perturbations
+AU  - Wong, Daniel R
+AU  - Hill, Abby S
+AU  - Moccia, Rob
+PY  - 2025
+T2  - Bioinformatics
+DO  - 10.1093/bioinformatics/btaf317
+UR  - https://doi.org/10.1093/bioinformatics/btaf317
+N1  - 全文相关方法/结果/讨论（本轮获取）
+AB  - Motivation Modeling genetic perturbations and their effect on the transcriptome is a key area of pharmaceutical research. Due to the complexity of the transcriptome, there has been much excitement and development in deep learning (DL) because of its ability to model complex relationships. In particular, the transformer-based foundation model paradigm emerged as the gold-standard of predicting post-perturbation responses. However, understanding these increasingly complex models and evaluating their practical utility is lacking, along with simple but appropriate benchmarks to compare predictive methods. Results Here, we present a simple baseline method that outperforms both state of the art (SOTA) in DL and other proposed simpler neural architectures, setting a necessary benchmark to evaluate in the field of post-perturbation prediction. We also elucidate the utility of foundation models for the task of post-perturbation prediction via generalizable fine-tuning experiments that can be translated to different applications of transformer-based foundation models to tasks of interest. Furthermore, we provide a corrected version of a popular dataset used for benchmarking perturbation prediction models. Our hope is that this work will properly contextualize further development of DL models in the perturbation space with necessary control procedures. Availability and implementation All source code is available at: https://github.com/pfizer-opensource/perturb_seq. The DOI is 10.5281/zenodo.15352937.
+ER  - 
+
+TY  - JOUR
+ID  - R18
+TI  - A systematic comparison of single-cell perturbation response prediction models
+AU  - Li, Lanxiang
+AU  - You, Yue
+AU  - Fu, Yunlin
+AU  - Liao, Wenyu
+AU  - Fan, Xueying
+AU  - Lu, Shihong
+AU  - Cao, Ye
+AU  - Li, Bo
+AU  - Ren, Wenle
+AU  - Kong, Jiaming
+AU  - Zheng, Shuangjia
+AU  - Chen, Jizheng
+AU  - Liu, Xiaodong
+AU  - Tian, Luyi
+PY  - 2026
+T2  - Science Advances
+DO  - 10.1126/sciadv.aed3414
+UR  - https://doi.org/10.1126/sciadv.aed3414
+N1  - 摘要与元数据；未阅读全文
+AB  - Predicting single-cell transcriptional responses to perturbations is central to dissecting gene regulation and accelerating therapeutic design, yet the field lacks a rigorous, task-spanning assessment of model behavior. We present a large-scale benchmark of 13 representative methods and baselines across 25 datasets spanning diverse perturbation modalities and species, including two primary immune-cell drug-response resources. We evaluated three core tasks-generalization to unseen single-gene perturbations, prediction of combinatorial interactions, and transfer across cell types-using 24 metrics covering expression-level accuracy, relative changes, differential expression (DE) recovery, and distributional similarity. Across tasks, performance depended strongly on perturbation effect size and evaluation perspective: Expression-level agreement was the highest for small-effect perturbations resembling controls, whereas delta- and DE-based metrics improved with larger effects, providing clearer signals. Models shared a conservative bias, with fine-tuned foundation models compressing variance and underestimating synergistic effects in combinations. PerturbNet showed superior recovery of DE signatures in Tasks 1 and 2, while no method consistently generalized across cell types in Task 3, where biological consistency dominated outcomes. This benchmark establishes current methodological limits, clarifies that different metrics probe distinct biological signals rather than redundant summaries of the same prediction problem, and provides a foundation for developing virtual-cell models that more faithfully capture heterogeneous perturbation responses.
+ER  - 
+
+TY  - UNPB
+ID  - R19
+TI  - SLIM: A small linear model with STRING embeddings for single-cell genetic perturbation prediction
+AU  - Hu, Dewei
+AU  - Pielies Avellí, Marc
+AU  - Jensen, Lars Juhl
+AU  - Rasmussen, Simon
+PY  - 2026
+T2  - bioRxiv
+DO  - 10.64898/2026.08.07.743481
+UR  - https://doi.org/10.64898/2026.08.07.743481
+N1  - 摘要与元数据；未阅读全文；预印本，未经同行评审。
+AB  - Predicting cellular responses to genetic perturbations is central to understanding gene function and prioritizing therapeutic targets, but experimental screens cannot exhaustively cover genes, cell types, and perturbation combinations. Recent benchmarks have shown that simple baselines can match or outperform substantially more complex models, suggesting that informative biological priors may be as important as model capacity. Here we present SLIM, a lightweight extension of the bilinear model of Ahlmann-Eltze et al. SLIM represents perturbations with 64-dimensional embeddings derived from the STRING protein network and predicts mean transcriptional responses through a closed-form ridge-regression estimator. It then constructs single-cell populations by retrieving training cells and rescaling each gene to match the predicted mean. We evaluated SLIM against four deep learning models and two simple baselines on four single-gene perturbation datasets and one combinatorial perturbation dataset. Across these within-dataset benchmarks, SLIM achieved competitive mean-response accuracy, ranked first in eight of twelve single-gene dataset–metric comparisons, and produced substantially lower maximum mean discrepancy values than the evaluated alternatives. The model has 640 trainable parameters and fitted each benchmark dataset in under 10 seconds on a CPU. These results show that compact biological representations can support accurate and computationally efficient perturbation prediction. Code is available at https://github.com/RasmussenLab/SLIM . Key Points SLIM combines a closed-form bilinear predictor with STRING-derived perturbation embeddings. Across five within-dataset benchmarks, SLIM achieved competitive mean-response prediction with only 640 trainable parameters. SLIM builds cell populations by rescaling retrieved training cells to the predicted mean, so they inherit realistic cell-to-cell variation and gene–gene covariation. The results highlight the importance of perturbation representations and population-construction procedures in low-data benchmarks. SLIM fits each benchmark dataset in under 10 seconds on a standard CPU.
+ER  - 
+
+TY  - UNPB
+ID  - R20
+TI  - A mechanism-annotated benchmark reveals limited fidelity to drug-response signatures in single-cell perturbation models
+AU  - Li, Lehang
+AU  - Duan, Shaoming
+AU  - Zha, Xinyu
+AU  - Fang, Ye
+AU  - Zhang, Yuhao
+AU  - Zhang, Xinyi
+AU  - Cao, Yang
+AU  - Liu, Chuanyi
+AU  - Fang, Binxing
+PY  - 2026
+T2  - bioRxiv
+DO  - 10.64898/2026.08.19.745729
+UR  - https://doi.org/10.64898/2026.08.19.745729
+N1  - 摘要与元数据；未阅读全文；预印本，未经同行评审。
+AB  - Single-cell drug perturbation models are increasingly used to predict how compounds remodel cellular states, but they are still largely assessed by expression reconstruction. Whether high expression similarity reflects preservation of drug-response signatures remains unclear. Here we present scDrugPerturb-Bench, a mechanism-annotated benchmark that links matched control and drug-treated single-cell RNA-sequencing profiles to literature-curated directional key-gene evidence. The resource covers 181 datasets, 423 annotated response cases, 717 unique key genes and 2.5 million cells. We introduce the Mechanism Fidelity Score (MFS) to evaluate key-gene direction, effect-size recovery, gene-set co-herence, mechanism specificity and pathway-level response polarity. Across 12 perturbation-prediction models, 3 baselines and 10 data splits, expression-similarity metrics were weakly aligned with MFS and selected different model configurations. Mechanism-aware selection improved early drug retrieval in a transcriptome-based drug design evaluation, indicating that MFS provides practical information beyond benchmark reporting. Systematic benchmarking revealed limited fidelity to drug-response signatures across cell-line and source-integrated settings. Frozen single-cell foundation model embeddings produced local, metric-dependent gains rather than universal improvements, and source context substantially reshaped model assessment. Hard-negative tests further showed that plausible perturbation responses can arise from non-specific transcriptional shortcuts. These results show that expression reconstruction is an insufficient proxy for preserving drug-response signatures and establish scDrugPerturb-Bench as a benchmark for mechanism-aware evaluation of single-cell drug perturbation models.
+ER  - 

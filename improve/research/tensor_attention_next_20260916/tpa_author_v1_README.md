@@ -1,0 +1,172 @@
+# TPA: Tensor ProducT ATTenTion Transformer (T6)
+
+[![NeurIPS 2025 Spotlight](https://img.shields.io/badge/NeurIPS2025-Published-blue)](https://arxiv.org/abs/2501.06425) 
+[![arXiv](https://img.shields.io/badge/arXiv-2501.06425-b31b1b.svg)](https://arxiv.org/abs/2501.06425) 
+[![Website](https://img.shields.io/badge/Project-Website-blue)](https://tensorgi.github.io/TPA) 
+![Python](https://img.shields.io/badge/python-3.10%2B-green.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.4.0-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-yellow.svg) 
+
+**[NeurIPS 2025 Spotlight]** **Tensor ProducT ATTenTion (TPA) Transformer** (T6) is a state-of-the-art transformer model that leverages Tensor Product Attention (TPA) mechanisms to enhance performance and reduce KV cache size. This repository provides tools for data preparation, model pretraining, and evaluation to facilitate research and development using the T6 architecture.
+
+This repository contains the official code for the paper "[Tensor Product Attention Is All You Need](https://arxiv.org/abs/2501.06425)".
+
+Authors: [Yifan Zhang](https://yifzhang.com)\*, [Yifeng Liu](https://lauyikfung.github.io)\*, [Huizhuo Yuan](https://scholar.google.com/citations?user=8foZzX4AAAAJ), [Zhen Qin](https://doraemonzzz.com), [Yang Yuan](https://scholar.google.com/citations?user=7o4wtKEAAAAJ&hl=en), [Quanquan Gu](https://web.cs.ucla.edu/~qgu/), [Andrew Chi-Chih Yao](https://en.wikipedia.org/wiki/Andrew_Yao)
+
+[[Webpage](https://tensorgi.github.io/TPA)] [[Huggingface](https://huggingface.co/papers/2501.06425)]
+
+## 🔔 NEWS
+- **[09/18/2025]** Our paper is accepted as **NeurIPS 2025 spotlight**!
+- **[07/04/2025]** The **prefilling code** for **FlashTPA** is available.
+- **[06/13/2025]** The **decoding code** for **FlashTPA** is available.
+- **[05/29/2025]** Our paper is updated on ArXiv for FlashTPA Decoding: https://arxiv.org/abs/2501.06425.
+- **[01/11/2025]** Our code is open-sourced!
+- **[01/11/2025]** Our paper is released on arXiv: https://arxiv.org/abs/2501.06425.
+
+## Table of Contents
+
+- [T6: Tensor ProducT ATTenTion Transformer](#t6-tensor-product-attention-transformer)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Hardware Requirements](#hardware-requirements)
+  - [Installation](#installation)
+  - [Data Preparation](#data-preparation)
+    - [Fineweb-Edu-100B](#fineweb-edu-100b)
+    - [OpenWebText](#openwebtext)
+  - [Pretraining](#pretraining)
+  - [Evaluation](#evaluation)
+  - [Acknowledgements](#acknowledgements)
+  - [Star History](#star-history)
+  - [Citation](#citation)
+
+## Features
+
+- **Tensor Product Attention:** Implements advanced attention mechanisms for improved model performance.
+- **Scalability:** Efficient training procedures optimized for large-scale datasets and multi-GPU setups.
+- **Flexible Data Support:** Compatible with popular datasets like [Fineweb-Edu-100B](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/) and [OpenWebText](https://openwebtext2.readthedocs.io/en/latest/).
+- **Comprehensive Evaluation:** Integrated with [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) for standardized benchmarking.
+- **FlashTPA Decoding**: see Algorithm 2 and 3 in [Paper](./Tensor_Product_Attention.pdf) for FlashTPA Decoding algorithms and [./decode](./decode) for Python and Triton implementations.
+
+## Hardware Requirements
+A100 and H100 are recommended. At least 8*80G VRAM is needed.
+
+## Installation
+
+Ensure you have Python 3.10 or higher installed. It's recommended to use a virtual environment to manage dependencies.
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/tensorgi/TPA.git
+   cd TPA
+   ```
+2. **Create and Activate a Virtual Environment**
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. **Install Required Packages**
+
+   ```bash
+   pip install torch==2.4.0 numpy transformers datasets tiktoken wandb tqdm
+   ```
+
+## Data Preparation
+
+Prepare the necessary datasets before pretraining the model. T6 supports both [Fineweb-Edu-100B](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/) and [OpenWebText](https://openwebtext2.readthedocs.io/en/latest/).
+
+### Fineweb-Edu-100B
+
+Fineweb-Edu-100B is a large-scale educational dataset hosted on Hugging Face.
+
+1. **Navigate to the Data Directory**
+
+   ```bash
+   cd data/fineweb-edu
+   ```
+2. **Run the Data Preparation Script**
+
+   ```bash
+   python fineweb-edu.py
+   ```
+3. **Move the Prepared Data**
+
+   ```bash
+   mv fineweb-edu100B ..
+   cd ../..
+   ```
+
+### OpenWebText
+
+OpenWebText is an open reproduction of OpenAI's WebText dataset.
+
+1. **Run the Data Preparation Script**
+
+   ```bash
+   python data/openwebtext/prepare.py
+   ```
+
+   *Ensure you have sufficient storage and computational resources, as OpenWebText is sizable.*
+
+## Pretraining
+
+Pretrain the T6 model using the prepared datasets. The provided scripts support distributed training across multiple GPUs.
+
+1. **Using the Provided Bash Script**
+
+   Execute the pretraining script, which handles the training process.
+
+   ```bash
+   bash pretrain.sh
+   ```
+2. **Manual Execution with `torchrun`**
+
+   For more control or customization, use `torchrun` to initiate training. Replace `config/train_T6_medium_adam_80g8.py` with your desired configuration file.
+
+   ```bash
+   torchrun --standalone --nproc_per_node=8 \
+       train_adam_fw.py \
+       config/train_T6_medium_adam_80g8.py
+   ```
+
+   - `--nproc_per_node=8` specifies the number of processes (typically matching the number of GPUs).
+
+## Evaluation
+
+Evaluate the performance of the pretrained T6 model using standardized benchmarks.
+
+1. **Navigate to the Evaluation Harness Directory**
+
+   ```bash
+   cd lm-evaluation-harness
+   ```
+2. **Follow the Instructions Within This Directory**
+
+   *Ensure your model is compatible with the evaluation harness requirements.*
+
+## Acknowledgements
+
+- [Karpathy’s nanoGPT](https://github.com/karpathy/nanoGPT) provides the foundational codebase upon which this repo is built.
+- [Hugging Face](https://huggingface.co/) for providing the [Fineweb-Edu-100B](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/) dataset.
+- [EleutherAI](https://www.eleuther.ai/) for the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
+- [OpenWebText](https://openwebtext2.readthedocs.io/en/latest/) team for replicating the WebText dataset.
+
+## Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=tensorgi/TPA&type=Date)](https://star-history.dera.page/#tensorgi/TPA&Date)
+
+## Citation
+
+If you use Tensor Product Attention (TPA) or the Tensor ProducT ATTenTion Transformer (T6) in your research or application, please consider citing it!
+
+```bibtex
+@article{zhang2026tensor,
+  title={Tensor product attention is all you need},
+  author={Zhang, Yifan and Liu, Yifeng and Yuan, Huizhuo and Qin, Zhen and Yuan, Yang and Gu, Quanquan and Yao, Andrew},
+  journal={Advances in Neural Information Processing Systems},
+  volume={38},
+  pages={112206--112251},
+  year={2026}
+}
+```

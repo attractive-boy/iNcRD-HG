@@ -1,0 +1,108 @@
+{
+  "created_at_utc": "2026-09-16T06:24:36.725697+00:00",
+  "family": "nonlinear_pair_field",
+  "parameters": {
+    "neighbors": 10,
+    "neighbor_tie_tolerance": 1e-12,
+    "graph_bandwidth": "median positive squared distance of retained directed entity neighbors",
+    "graph_axis_normalization": "each entity axis has mean weighted degree one",
+    "regularization": 1.0,
+    "ridge": 0.001,
+    "primary_exponent": 3.0,
+    "control_exponent": 2.0,
+    "continuation": [
+      2.0,
+      3.0
+    ],
+    "conductance_floor": 1e-06,
+    "gradient_tolerance": 1e-08,
+    "maximum_newton_steps": 60,
+    "cg_relative_tolerance": 1e-09,
+    "cg_absolute_tolerance": 1e-12,
+    "maximum_cg_steps": 1500,
+    "armijo": 0.0001,
+    "maximum_backtracks": 40,
+    "residual_clip": 2.0,
+    "strong_weight": 0.1,
+    "dtype": "float64",
+    "lnc_policy": "identity_strong_reference"
+  },
+  "device": "cuda:1",
+  "seconds": 4.339347509667277,
+  "peak_allocated_gib": 0.2703676223754883,
+  "graph": {
+    "rna": {
+      "nodes": 605,
+      "neighbor_budget": 10,
+      "directed_retained": 6050,
+      "undirected_edges": 4736,
+      "ties_kept": 0,
+      "bandwidth": 0.6109282941180294,
+      "average_weighted_degree": 1.0,
+      "maximum_degree": 58
+    },
+    "drug": {
+      "nodes": 216,
+      "neighbor_budget": 10,
+      "directed_retained": 2160,
+      "undirected_edges": 1616,
+      "ties_kept": 0,
+      "bandwidth": 0.005888587286307256,
+      "average_weighted_degree": 1.0,
+      "maximum_degree": 34
+    },
+    "nodes": 130680,
+    "undirected_edges": 2000656,
+    "maximum_degree": 92,
+    "graph_uses_only_fixed_entity_features": true,
+    "target_edges_used": false,
+    "labels_used": false
+  },
+  "checks": [
+    {
+      "kind": "quadratic",
+      "exponent": 2.0,
+      "maximum_gradient": 4.2751699402820975e-09,
+      "newton_steps": 4,
+      "cg_steps": 587,
+      "objective": 1781.4561866667996,
+      "replay_max_abs": 0.0,
+      "discrete_maximum_principle": true,
+      "field_minimum": -2.860949329593691,
+      "field_maximum": 2.4213174020135706
+    },
+    {
+      "kind": "full",
+      "exponent": 3.0,
+      "maximum_gradient": 2.964295475749168e-13,
+      "newton_steps": 7,
+      "cg_steps": 446,
+      "objective": 1563.6464838059796,
+      "replay_max_abs": 0.0,
+      "discrete_maximum_principle": true,
+      "field_minimum": -2.4226518817888136,
+      "field_maximum": 2.2163171840919804
+    }
+  ],
+  "new_training_only_numerical_solves": 2,
+  "new_neural_fits": 0,
+  "formal_fits": 0,
+  "performance_metrics_computed": false,
+  "evaluation_labels_read": false,
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/p_energy_next_20260916/nonlinear_field_smoke_v1.py": "2f6b6ab1093ff11643f07ba07ef0253d70df55db0dc1734e77860e55256ebb32",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/nonlinear_pair_field_v1.py": "71723956a2bfac63d7b77a91938c7aeff65644066378d53d8a51b2c9fc0e23b4",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_nonlinear_pair_field_v1.py": "15ea10866a6fed36fa508282fbe56618a0ae61e97dc5965c674bc38ec07006f2"
+  },
+  "input_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_morphological_alignment_v1_20260916/inputs/MiDrug/arrays.npz": "39910438b09c0c3d595f654eb91d20ffa8e60f4554559fb0dcc4892def39d3bf",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/nested_anchor_v2_20260915/historical/offsets/MiDrug/historical/manifest.json": "a01b62ffa6772f481c0077a35a031449f0f0fba89d5cc6f29a596521919f57fb",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/p_energy_next_20260916/NONLINEAR_FIELD_UNIT_V1.json": "54685796caa740bd6ef06440243ece078ee4617fe0d3e73cbbed29ee526f98eb"
+  },
+  "files": {
+    "fields.npz": "8906517a8a43a1ff4f1c8e879e0a2f1f1f2f4cda49c765a99fa45c81a11bbf22",
+    "traces.json": "7c3cb325a9a4a746571ca17209cb469785c002f183ec6491836e5909bdd52921",
+    "graph.json": "da3c9283e6e6b3cb56aa4bfeb42e642fe541e8acdf0bed93f53fc9b4ae811292"
+  },
+  "sha256": "fe836c429b9c9376ae75edd1e2590dcaecb8f42bb962bb07de045dfed3e1fbfa"
+}

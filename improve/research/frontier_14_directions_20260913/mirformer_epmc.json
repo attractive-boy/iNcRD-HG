@@ -1,0 +1,313 @@
+{
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fbioinformatics%2Fbtag222%22&format=json&resultType=core&pageSize=5",
+  "as_of": "2026-09-13",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1093/bioinformatics/btag222\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 5,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "42412822",
+          "source": "MED",
+          "pmid": "42412822",
+          "pmcid": "PMC13340221",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13340221"
+            ]
+          },
+          "doi": "10.1093/bioinformatics/btag222",
+          "title": "MiRformer: a dual-transformer-encoder framework for predicting microRNA-mRNA interactions from paired sequences.",
+          "authorString": "Gu J, Chen C, Li Y.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Gu J",
+                "firstName": "Jiayao",
+                "lastName": "Gu",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Computer Science, McGill University, Montréal, QC, H3A 0G4, Canada."
+                    },
+                    {
+                      "affiliation": "Mila-Quebéc AI Institute, Montréal, QC, H2S 3H1, Canada."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Chen C",
+                "firstName": "Can",
+                "lastName": "Chen",
+                "initials": "C",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Mila-Quebéc AI Institute, Montréal, QC, H2S 3H1, Canada."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li Y",
+                "firstName": "Yue",
+                "lastName": "Li",
+                "initials": "Y",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-3844-4865"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Computer Science, McGill University, Montréal, QC, H3A 0G4, Canada."
+                    },
+                    {
+                      "affiliation": "Mila-Quebéc AI Institute, Montréal, QC, H2S 3H1, Canada."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3844-4865"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "42",
+            "journalIssueId": 4259227,
+            "dateOfPublication": "2026 Jul",
+            "monthOfPublication": 7,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-07-01",
+            "journal": {
+              "title": "Bioinformatics (Oxford, England)",
+              "medlineAbbreviation": "Bioinformatics",
+              "issn": "1367-4803",
+              "essn": "1367-4811",
+              "isoabbreviation": "Bioinformatics",
+              "nlmid": "9808944"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "btag222",
+          "abstractText": "<h4>Motivation</h4>MicroRNAs (miRNAs) regulate gene expression by binding to target messenger RNAs (mRNAs), inducing translational repression or mRNA degradation. Accurate prediction of miRNA-mRNA interactions and precise localization of binding and cleavage sites are critical for understanding post-transcriptional regulation and for enabling RNA therapeutics. Existing computational methods often rely on handcrafted or indirect features, scale poorly to kilobase-long mRNA sequences, or provide limited interpretability.<h4>Results</h4>We present MiRformer, a transformer-based framework that jointly predicts miRNA-mRNA interactions and localizes miRNA binding and cleavage sites directly from raw sequence pairs. MiRformer employs a dual-transformer encoder architecture for miRNA and mRNA sequences and incorporates a sliding-window attention mechanism to efficiently model kilobase-long mRNA contexts while preserving nucleotide-level resolution. Across multiple benchmrks, MiRformer achieves state-of-the-art performance on interaction prediction, binding-site localization, and cleavage-site identification from experimental Human Degradome-seq data. Beyond accuracy, MiRformer provides strong interpretability: attention patterns consistently highlight miRNA seed regions within 500-nt mRNA windows, revealing clear and biologically meaningful interaction signals. When applied to jointly infer binding and cleavage sites across 13k miRNA-mRNA pairs, predicted sites frequently co-localize, supporting a miRNA-mediated degradation mechanism.<h4>Availability and implementation</h4>Python code and datasets are publicly available at https://github.com/li-lab-mcgill/miRformer.",
+          "affiliation": "School of Computer Science, McGill University, Montréal, QC, H3A 0G4, Canada.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "CIHR PJT-540722",
+                "agency": "DNA2RNA",
+                "orderIn": 0
+              },
+              {
+                "grantId": "CRC-2021–00547",
+                "agency": "DNA2RNA",
+                "orderIn": 0
+              },
+              {
+                "grantId": "CRC-2021-00547",
+                "agency": "DNA2RNA",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "MicroRNAs",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    },
+                    {
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism",
+                      "majorTopic_YN": "N"
+                    },
+                    {
+                      "abbreviation": "CH",
+                      "qualifierName": "chemistry",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "RNA, Messenger",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    },
+                    {
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism",
+                      "majorTopic_YN": "N"
+                    },
+                    {
+                      "abbreviation": "CH",
+                      "qualifierName": "chemistry",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Sequence Analysis, RNA",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computational Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Binding Sites"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Software"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "RNA, Messenger",
+                "registryNumber": "0"
+              },
+              {
+                "name": "MicroRNAs",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/bioinformatics/btag222"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13340221"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13340221?pdf=render"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "PPR1124473",
+                "source": "PPR",
+                "type": "Preprint in",
+                "note": "Link created based on a title-first author match",
+                "orderIn": 10002
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "citedByCount": 0,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2026-07-07",
+          "dateOfCreation": "2026-07-07",
+          "firstIndexDate": "2026-07-08",
+          "fullTextReceivedDate": "2026-09-03",
+          "dateOfRevision": "2026-09-07",
+          "firstPublicationDate": "2026-07-01"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "created_at_utc": "2026-09-16T02:34:10.191351+00:00",
+  "queries": [
+    {
+      "source": "arxiv",
+      "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22Bellman-Ford%22+OR+all%3A%22path-based+reasoning%22%29+AND+%28all%3A%22graph%22+OR+all%3A%22link+prediction%22%29&sortBy=submittedDate&sortOrder=descending&max_results=18",
+      "status": 200,
+      "file": "improve/research/path_reasoning_next_20260916/search_arxiv_v1.xml",
+      "results": [
+        {
+          "title": "A Concurrent Queue System for Multi-GPU Platforms: Application to Bellman-Ford SSSP",
+          "id": "http://arxiv.org/abs/2608.21826v1",
+          "published": "2026-08-22T07:50:42Z",
+          "summary": "This paper presents the design and implementation of a multi-GPU concurrent queue system using NVIDIA's NVSHMEM. The Bellman-Ford algorithm is used as a case study to evaluate the performance of the proposed concurrent FIFO queue, with this multi-GPU implementation being the first known instance of its kind. Experimental results demonstrate that the multi-GPU queue implementation achieves a maximum speedup of 3.92x and an average speedup of 3.04x over the singleGPU baseline on four NVIDIA A100 GPUs. When applied to the Bellman-Ford Single-Source Shortest Path (SSSP) algorithm, the multi-GPU system achieves a maximum speedup of 3.03x and an average speedup of 2.65x compared to the single-GPU implementation, tested on 10 graphs of different kinds taken from the SuiteSparse Matrix Collection."
+        },
+        {
+          "title": "Bellman-Ford in Almost-Linear Time",
+          "id": "http://arxiv.org/abs/2607.19346v1",
+          "published": "2026-07-21T17:59:30Z",
+          "summary": "We consider the single-source shortest paths problem on a directed graph with real-valued (possibly negative) edge weights and solve this problem in $m^{1+o(1)}$ time."
+        },
+        {
+          "title": "Weaving Multi-Source Evidence for Biomedical Reasoning: The BioMedHop Benchmark and BioWeave Framework",
+          "id": "http://arxiv.org/abs/2606.16211v1",
+          "published": "2026-06-15T04:38:24Z",
+          "summary": "Biomedical question answering (QA) increasingly requires reasoning over interacting entities, where supporting evidence is scattered across biomedical knowledge graphs, literature documents, and web-accessible resources. However, existing biomedical QA benchmarks mainly focus on exam-style knowledge, literature comprehension, or short-range multi-hop inference, leaving source-conditioned graph reasoning and evidence topology construction underexplored. To fill this gap, we introduce BioMedHop, a multi-source graph-grounded benchmark for evaluating biomedical reasoning over structured evidence topologies. BioMedHop contains 10,045 instances across KG, document, web, and hybrid evidence settings, covering shared-neighbor matching, intersection reasoning, path-based reasoning, and counting, with option-based, open-ended, and numeric count renderings. To support this benchmark, we further propose BioWeave, a source-aware reasoning framework that retrieves biomedical KG paths, gathers supporting clues from documents and web sources, assembles them into a unified evidence graph, and verifies answers through entity-level evidence support. Comprehensive experiments show that BioWeave achieves the best overall performance among compared methods on BioMedHop, outperforming the strong hybrid baseline ToG-2 by 10.5% in the overall average. Moreover, BioWeave consistently improves different LLM backbones and enables smaller models, such as Qwen3-4B, to achieve reasoning performance comparable to GPT-4-Turbo."
+        },
+        {
+          "title": "AlertStar: Path-Aware Alert Prediction on Hyper-Relational Knowledge Graphs",
+          "id": "http://arxiv.org/abs/2604.03104v1",
+          "published": "2026-04-03T15:26:51Z",
+          "summary": "Cyber-attacks continue to grow in scale and sophistication, yet existing network intrusion detection approaches lack the semantic depth required for path reasoning over attacker-victim interactions. We address this by first modelling network alerts as a knowledge graph, then formulating hyper-relational alert prediction as a hyper-relational knowledge graph completion (HR-KGC) problem, representing each network alert as a qualified statement (h, r, t, Q), where h and t are source and destination IPs, r denotes the attack type, and Q encodes flow-level metadata such as timestamps, ports, protocols, and attack intensity, going beyond standard KGC binary triples (h, r, t) that would discard this contextual richness. We introduce five models across three contributions: first, Hyper-relational Neural Bellman-Ford (HR-NBFNet) extends Neural Bellman-Ford Networks to the hyper-relational setting with qualifier-aware multi-hop path reasoning, while its multi-task variant MT-HR-NBFNet jointly predicts tail, relation, and qualifier-value within a single traversal pass; second, AlertStar fuses qualifier context and structural path information entirely in embedding space via cross-attention and learned path composition, and its multi-task extension MT-AlertStar eliminates the overhead of full knowledge graph propagation; third, HR-NBFNet-CQ extends qualifier-aware representations to answer complex first-order logic queries, including one-hop, two-hop chain, two-anchor intersection, and union, enabling multi-condition threat reasoning over the alert knowledge graph. Evaluated inductively on the Warden and UNSW-NB15 benchmarks across three qualifier-density regimes, AlertStar and MT-AlertStar achieve superior MR, MRR, and Hits@k, demonstrating that local qualifier fusion is both sufficient and more efficient than global path propagation for hyper-relational alert prediction."
+        },
+        {
+          "title": "Lozenge Tiling by Computing Distances",
+          "id": "http://arxiv.org/abs/2603.02476v1",
+          "published": "2026-03-02T23:55:04Z",
+          "summary": "The Calisson puzzle is a tiling puzzle in which one must tile a triangular grid inside a hexagon with lozenges, under the constraint that certain prescribed edges remain tile boundaries and that adjacent lozenges along these edges have different orientations. We present the first polynomial-time algorithm for this problem, with cubic running time. This algorithm, called the advancing surface algorithm, can be executed in a simple and intuitive way, even by hand with a pencil and an eraser. Its apparent simplicity conceals a deeper algorithmic reinterpretation of the classical ideas of John Conway and William Thurston, revisited here from a theoretical computer science perspective.\n  We introduce a graph-theoretic overlay based on directed cuts and systems of difference constraints that complements Thurston's theory of lozenge tilings and makes its algorithmic structure explicit. In Thurston's approach, lozenge tilings are lifted to monotone stepped surfaces in the three-dimensional cubic lattice and projected back to the plane using height functions, reducing tilability to the computation of heights. We show that selecting a monotone surface corresponds to selecting a directed cut in a periodic directed graph, while height functions arise as solutions of a system of difference constraints. In this formulation, a region is tilable if and only if the associated weighted directed graph contains no cycle of strictly negative weight. This additional graph layer shows that the Bellman-Ford algorithm suffices to decide feasibility and compute solutions. In particular, our framework allows one to decide whether the infinite triangular grid can be tiled while respecting a finite set of prescribed local constraints, even in the absence of boundary conditions."
+        },
+        {
+          "title": "MINAR: Mechanistic Interpretability for Neural Algorithmic Reasoning",
+          "id": "http://arxiv.org/abs/2602.21442v1",
+          "published": "2026-02-24T23:38:06Z",
+          "summary": "The recent field of neural algorithmic reasoning (NAR) studies the ability of graph neural networks (GNNs) to emulate classical algorithms like Bellman-Ford, a phenomenon known as algorithmic alignment. At the same time, recent advances in large language models (LLMs) have spawned the study of mechanistic interpretability, which aims to identify granular model components like circuits that perform specific computations. In this work, we introduce Mechanistic Interpretability for Neural Algorithmic Reasoning (MINAR), an efficient circuit discovery toolbox that adapts attribution patching methods from mechanistic interpretability to the GNN setting. We show through two case studies that MINAR recovers faithful neuron-level circuits from GNNs trained on algorithmic tasks. Our study sheds new light on the process of circuit formation and pruning during training, as well as giving new insight into how GNNs trained to perform multiple tasks in parallel reuse circuit components for related tasks. Our code is available at https://github.com/pnnl/MINAR."
+        },
+        {
+          "title": "Bellman-Ford in Almost-Linear Time for Dense Graphs",
+          "id": "http://arxiv.org/abs/2602.16153v1",
+          "published": "2026-02-18T02:55:48Z",
+          "summary": "We consider the single-source shortest paths problem on a directed graph with real-valued (possibly negative) edge weights and solve this problem in $n^{2+o(1)}$ time by refining the shortcutting procedure introduced in Li, Li, Rao, and Zhang (2026)."
+        },
+        {
+          "title": "Which Algorithms Can Graph Neural Networks Learn?",
+          "id": "http://arxiv.org/abs/2602.13106v2",
+          "published": "2026-02-13T17:09:50Z",
+          "summary": "In recent years, there has been growing interest in understanding neural architectures' ability to learn to execute discrete algorithms, a line of work often referred to as neural algorithmic reasoning. The goal is to integrate algorithmic reasoning capabilities into larger neural pipelines. Many such architectures are based on (message-passing) graph neural networks (MPNNs), owing to their permutation equivariance and ability to deal with sparsity and variable-sized inputs. However, existing work is either largely empirical and lacks formal guarantees or it focuses solely on expressivity, leaving open the question of when and how such architectures generalize beyond a finite training set. In this work, we propose a general theoretical framework that characterizes the sufficient conditions under which MPNNs can learn an algorithm from a training set of small instances and provably approximate its behavior on inputs of arbitrary size. Our framework applies to a broad class of algorithms, including single-source shortest paths, minimum spanning trees, and general dynamic programming problems, such as the $0$-$1$ knapsack problem. In addition, we establish impossibility results for a wide range of algorithmic tasks, showing that standard MPNNs cannot learn them, and we derive more expressive MPNN-like architectures that overcome these limitations. Finally, we refine our analysis for the Bellman-Ford algorithm, yielding a substantially smaller required training set and significantly extending the recent work of Nerem et al. [2025] by allowing for a differentiable regularization loss. Empirical results largely support our theoretical findings."
+        },
+        {
+          "title": "Learning to Execute Graph Algorithms Exactly with Graph Neural Networks",
+          "id": "http://arxiv.org/abs/2601.23207v2",
+          "published": "2026-01-30T17:31:26Z",
+          "summary": "Understanding what graph neural networks can learn, especially their ability to learn to execute algorithms, remains a central theoretical challenge. In this work, we prove exact learnability results for graph algorithms under bounded-degree and finite-precision constraints. Our approach follows a two-step process. First, we train an ensemble of multi-layer perceptrons (MLPs) to execute the local instructions of a single node. Second, during inference, we use the trained MLP ensemble as the update function within a graph neural network (GNN). Leveraging Neural Tangent Kernel (NTK) theory, we show that local instructions can be learned from a small training set, enabling the complete graph algorithm to be executed during inference without error and with high probability. To illustrate the learning power of our setting, we establish a rigorous learnability result for the LOCAL model of distributed computation. We further demonstrate positive learnability results for widely studied algorithms such as message flooding, breadth-first and depth-first search, and Bellman-Ford."
+        },
+        {
+          "title": "The Geometry of Thought: Disclosing the Transformer as a Tropical Polynomial Circuit",
+          "id": "http://arxiv.org/abs/2601.09775v1",
+          "published": "2026-01-14T18:05:42Z",
+          "summary": "We prove that the Transformer self-attention mechanism in the high-confidence regime ($β\\to \\infty$, where $β$ is an inverse temperature) operates in the tropical semiring (max-plus algebra). In particular, we show that taking the tropical limit of the softmax attention converts it into a tropical matrix product. This reveals that the Transformer's forward pass is effectively executing a dynamic programming recurrence (specifically, a Bellman-Ford path-finding update) on a latent graph defined by token similarities. Our theoretical result provides a new geometric perspective for chain-of-thought reasoning: it emerges from an inherent shortest-path (or longest-path) algorithm being carried out within the network's computation."
+        },
+        {
+          "title": "JFR: An Efficient Jump Frontier Relaxation Strategy for Bellman-Ford",
+          "id": "http://arxiv.org/abs/2512.01802v4",
+          "published": "2025-12-01T15:35:53Z",
+          "summary": "We propose JFR, a Bellman-Ford-based optimization framework leveraging frontier contraction and abstract multi-hop jump propagation to accelerate shortest-path computation while strictly preserving correctness. JFR achieves substantial reductions in relaxation operations, ranging from -31 to 99 percent, across sparse, dense, and negative-edge graphs, ensuring robust performance even under adversarial or highly connected topologies. On ultra-large graphs with up to N=10,000 nodes and 55,000,000 edges, JFR maintains strong operational reductions and comparable or improved runtime relative to SPFA-SLF, demonstrating consistent robustness across graph size and density. Lower relaxation counts imply reduced memory-access overheads and computational effort; this normalized work reduction highlights JFR's suitability for scenarios requiring high throughput or energy-conscious operation. Future work focuses on integrating high-performance queue structures, adaptive frontier strategies, and cache-aware techniques to further reduce constant-factor overheads and fully realize JFR's practical runtime potential."
+        },
+        {
+          "title": "When No Paths Lead to Rome: Benchmarking Systematic Neural Relational Reasoning",
+          "id": "http://arxiv.org/abs/2510.23532v1",
+          "published": "2025-10-27T17:09:16Z",
+          "summary": "Designing models that can learn to reason in a systematic way is an important and long-standing challenge. In recent years, a wide range of solutions have been proposed for the specific case of systematic relational reasoning, including Neuro-Symbolic approaches, variants of the Transformer architecture, and specialised Graph Neural Networks. However, existing benchmarks for systematic relational reasoning focus on an overly simplified setting, based on the assumption that reasoning can be reduced to composing relational paths. In fact, this assumption is hard-baked into the architecture of several recent models, leading to approaches that can perform well on existing benchmarks but are difficult to generalise to other settings. To support further progress in the field of systematic relational reasoning with neural networks, we introduce NoRA, a new benchmark which adds several levels of difficulty and requires models to go beyond path-based reasoning."
+        },
+        {
+          "title": "Enabling Down Syndrome Research through a Knowledge Graph-Driven Analytical Framework",
+          "id": "http://arxiv.org/abs/2509.01565v1",
+          "published": "2025-09-01T15:50:38Z",
+          "summary": "Trisomy 21 results in Down syndrome, a multifaceted genetic disorder with diverse clinical phenotypes, including heart defects, immune dysfunction, neurodevelopmental differences, and early-onset dementia risk. Heterogeneity and fragmented data across studies challenge comprehensive research and translational discovery. The NIH INCLUDE (INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE) initiative has assembled harmonized participant-level datasets, yet realizing their potential requires integrative analytical frameworks. We developed a knowledge graph-driven platform transforming nine INCLUDE studies, comprising 7,148 participants, 456 conditions, 501 phenotypes, and over 37,000 biospecimens, into a unified semantic infrastructure. Cross-resource enrichment with Monarch Initiative data expands coverage to 4,281 genes and 7,077 variants. The resulting knowledge graph contains over 1.6 million semantic associations, enabling AI-ready analysis with graph embeddings and path-based reasoning for hypothesis generation. Researchers can query the graph via SPARQL or natural language interfaces. This framework converts static data repositories into dynamic discovery environments, supporting cross-study pattern recognition, predictive modeling, and systematic exploration of genotype-phenotype relationships in Down syndrome."
+        },
+        {
+          "title": "A Refutation of Elmasry's $\\tilde{O}(m \\sqrt{n})$-Time Algorithm for Single-Source Shortest Paths",
+          "id": "http://arxiv.org/abs/2508.04872v1",
+          "published": "2025-08-06T20:51:13Z",
+          "summary": "In this note we examine the recent paper \"Breaking the Bellman-Ford Shortest-Path Bound\" by Amr Elmasry, where he presents an algorithm for the single-source shortest path problem and claims that its running time complexity is $\\tilde{O}(m\\sqrt{n})$, where $n$ is the number of vertices and $m$ is the number of edges. We show that his analysis is incorrect, by providing an example of a weighted graph on which the running time of his algorithm is $Ω(mn)$."
+        },
+        {
+          "title": "Quantum Speedups for Polynomial-Time Dynamic Programming Algorithms",
+          "id": "http://arxiv.org/abs/2507.00823v1",
+          "published": "2025-07-01T14:55:18Z",
+          "summary": "We introduce a quantum dynamic programming framework that allows us to directly extend to the quantum realm a large body of classical dynamic programming algorithms. The corresponding quantum dynamic programming algorithms retain the same space complexity as their classical counterpart, while achieving a computational speedup. For a combinatorial (search or optimization) problem $\\mathcal P$ and an instance $I$ of $\\mathcal P$, such a speedup can be expressed in terms of the average degree $δ$ of the dependency digraph $G_{\\mathcal{P}}(I)$ of $I$, determined by a recursive formulation of $\\mathcal P$. The nodes of this graph are the subproblems of $\\mathcal P$ induced by $I$ and its arcs are directed from each subproblem to those on whose solution it relies. In particular, our framework allows us to solve the considered problems in $\\tilde{O}(|V(G_{\\mathcal{P}}(I))| \\sqrtδ)$ time. As an example, we obtain a quantum version of the Bellman-Ford algorithm for computing shortest paths from a single source vertex to all the other vertices in a weighted $n$-vertex digraph with $m$ edges that runs in $\\tilde{O}(n\\sqrt{nm})$ time, which improves the best known classical upper bound when $m \\in Ω(n^{1.4})$."
+        },
+        {
+          "title": "Analyzing the Influence of Knowledge Graph Information on Relation Extraction",
+          "id": "http://arxiv.org/abs/2506.16343v1",
+          "published": "2025-06-19T14:21:08Z",
+          "summary": "We examine the impact of incorporating knowledge graph information on the performance of relation extraction models across a range of datasets. Our hypothesis is that the positions of entities within a knowledge graph provide important insights for relation extraction tasks. We conduct experiments on multiple datasets, each varying in the number of relations, training examples, and underlying knowledge graphs. Our results demonstrate that integrating knowledge graph information significantly enhances performance, especially when dealing with an imbalance in the number of training examples for each relation. We evaluate the contribution of knowledge graph-based features by combining established relation extraction methods with graph-aware Neural Bellman-Ford networks. These features are tested in both supervised and zero-shot settings, demonstrating consistent performance improvements across various datasets."
+        },
+        {
+          "title": "Shortest Paths in a Weighted Simplicial Complex",
+          "id": "http://arxiv.org/abs/2506.12921v2",
+          "published": "2025-06-15T17:36:30Z",
+          "summary": "Simplicial complexes are extensively studied in the field of algebraic topology. They have gained attention in recent time due to their applications in fields like theoretical distributed computing and simplicial neural networks. Graphs are mono-dimensional simplicial complex. Graph theory has application in topics like theoretical computer science, operations research, bioinformatics and social sciences. This makes it natural to try to adapt graph-theoretic results for simplicial complexes, which can model more intricate and detailed structures appearing in real-world systems. Though seemingly obvious, we did not find any previous work that looked into this prospect of simplicial complexes.\n  In this article, we define the concept of weighted simplicial complex and $d$-path in a simplicial complex. Both these concepts have the potential to have numerous real-life applications. We start by adapting the Depth-First Search and Breadth-First Search algorithms for our setup. Next, we provide two novel algorithms to find the shortest paths in a weighted simplicial complex. The core principles of our algorithms align with those of Dijkstra$^\\prime$s algorithm and Bellman-Ford algorithm for graphs. Hence, this work lays a building block for the sake of integrating graph-theoretic concepts with abstract simplicial complexes."
+        },
+        {
+          "title": "Learning Efficient and Generalizable Graph Retriever for Knowledge-Graph Question Answering",
+          "id": "http://arxiv.org/abs/2506.09645v1",
+          "published": "2025-06-11T12:03:52Z",
+          "summary": "Large Language Models (LLMs) have shown strong inductive reasoning ability across various domains, but their reliability is hindered by the outdated knowledge and hallucinations. Retrieval-Augmented Generation mitigates these issues by grounding LLMs with external knowledge; however, most existing RAG pipelines rely on unstructured text, limiting interpretability and structured reasoning. Knowledge graphs, which represent facts as relational triples, offer a more structured and compact alternative. Recent studies have explored integrating knowledge graphs with LLMs for knowledge graph question answering (KGQA), with a significant proportion adopting the retrieve-then-reasoning paradigm. In this framework, graph-based retrievers have demonstrated strong empirical performance, yet they still face challenges in generalization ability. In this work, we propose RAPL, a novel framework for efficient and effective graph retrieval in KGQA. RAPL addresses these limitations through three aspects: (1) a two-stage labeling strategy that combines heuristic signals with parametric models to provide causally grounded supervision; (2) a model-agnostic graph transformation approach to capture both intra- and inter-triple interactions, thereby enhancing representational capacity; and (3) a path-based reasoning strategy that facilitates learning from the injected rational knowledge, and supports downstream reasoner through structured inputs. Empirically, RAPL outperforms state-of-the-art methods by $2.66\\%-20.34\\%$, and significantly reduces the performance gap between smaller and more powerful LLM-based reasoners, as well as the gap under cross-dataset settings, highlighting its superior retrieval capability and generalizability. Codes are available at: https://github.com/tianyao-aka/RAPL."
+        }
+      ]
+    },
+    {
+      "source": "crossref",
+      "url": "https://api.crossref.org/works?query=path+based+neural+graph+link+prediction+Bellman+Ford&filter=from-pub-date%3A2024-01-01&rows=12",
+      "status": 200,
+      "file": "improve/research/path_reasoning_next_20260916/search_crossref_v1.json",
+      "results": [
+        {
+          "title": [
+            "Applying the Neural Bellman-Ford Model to the Single Source Shortest Path Problem"
+          ],
+          "DOI": "10.5220/0012425800003654",
+          "URL": "https://doi.org/10.5220/0012425800003654",
+          "published": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "abstract": null,
+          "link": null
+        },
+        {
+          "title": [
+            "Time and Memory Trade-Offs in Shortest-Path Algorithms Across Graph Topologies: A*, Bellman–Ford, Dijkstra, AI-Augmented A* and a Neural Baseline"
+          ],
+          "DOI": "10.3390/computers14120545",
+          "URL": "https://doi.org/10.3390/computers14120545",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                10
+              ]
+            ]
+          },
+          "abstract": "<jats:p>This study presents a comparative evaluation of Dijkstra’s algorithm, A*, Bellman-Ford, AI-Augmented A* and a neural AI-based model for shortest-path computation across diverse graph topologies, with a focus on time efficiency and memory consumption under standardized experimental conditions. We analyzed grids, random graphs, and scale-free graphs of sizes up to 103,103 nodes, specifically examining 100- and 1000-node grids, 100- and 1000-node random graphs, and 100-node scale-free graphs. The algorithms were benchmarked through repeated runs per condition on a server-class system equipped with an Intel Xeon Gold 6248R processor, NVIDIA Tesla V100 GPU (32 GB), 256 GB RAM, and Ubuntu 20.04. A* consistently outperformed Dijkstra’s algorithm when paired with an informative admissible heuristic, exhibiting faster runtimes by approximately 1.37× to 1.91× across various topologies. In comparison, Bellman-Ford was slower than Dijkstra’s by approximately 1.50× to 1.92×, depending on graph type and size; however, it remained a robust option in scenarios involving negative edge weights or when early-termination conditions reduced practical iterations. The AI model demonstrated the slowest performance across conditions, incurring runtimes that were 2.60× to 3.23× higher than A* and 1.62× to 2.15× higher than Bellman-Ford, offering limited gains as a direct solver. These findings underscore topology-sensitive trade-offs: A* is preferred when a suitable heuristic is available; Dijkstra’s serves as a strong baseline in the absence of heuristics; Bellman-Ford is appropriate for handling negative weights; and current AI approaches are not yet competitive for exact shortest paths but may hold promise as learned heuristics to augment A*. We provide environmental details and comparative results to support reproducibility and facilitate further investigation into hybrid learned-classical strategies.</jats:p>",
+          "link": [
+            {
+              "URL": "https://www.mdpi.com/2073-431X/14/12/545/pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        },
+        {
+          "title": [
+            "Cross-GNN: a cross-network embedding framework for link prediction based graph neural networks"
+          ],
+          "DOI": "10.1038/s41598-026-63790-8",
+          "URL": "https://doi.org/10.1038/s41598-026-63790-8",
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                27
+              ]
+            ]
+          },
+          "abstract": null,
+          "link": [
+            {
+              "URL": "https://www.nature.com/articles/s41598-026-63790-8",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ]
+        },
+        {
+          "title": [
+            "Inductive Link Prediction in Knowledge Graphs using Path-based Neural Networks"
+          ],
+          "DOI": "10.1109/ijcnn60899.2024.10650053",
+          "URL": "https://doi.org/10.1109/ijcnn60899.2024.10650053",
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                30
+              ]
+            ]
+          },
+          "abstract": null,
+          "link": [
+            {
+              "URL": "http://xplorestaging.ieee.org/ielx8/10649807/10649898/10650053.pdf?arnumber=10650053",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        },
+        {
+          "title": [
+            "A Multi-Layer Transportation Network Link Prediction Algorithm Based on Graph Convolutional Neural Network"
+          ],
+          "DOI": "10.2139/ssrn.4984554",
+          "URL": "https://doi.org/10.2139/ssrn.4984554",
+          "published": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "abstract": null,
+          "link": null
+        },
+        {
+          "title": [
+            "Improving Link Prediction Algorithms Based on Graph Neural Networks"
+          ],
+          "DOI": "10.1109/nnice64954.2025.11063835",
+          "URL": "https://doi.org/10.1109/nnice64954.2025.11063835",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                1,
+                10
+              ]
+            ]
+          },
+          "abstract": null,
+          "link": [
+            {
+              "URL": "http://xplorestaging.ieee.org/ielx8/11063698/11063699/11063835.pdf?arnumber=11063835",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        },
+        {
+          "title": [
+            "Graph Neural Network-Based Link Prediction for Highly Imbalanced Network Data"
+          ],
+          "DOI": "10.1115/detc2024-143786",
+          "URL": "https://doi.org/10.1115/detc2024-143786",
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                8,
+                25
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>The rapid advancement of graph neural networks (GNN) has revolutionized the integration of complex network and neural network models, fostering diverse engineering applications such as the classification of assembly parts and the prediction of customer preferences. GNN-based link prediction (LP), as a representative study, has shown utility in resource allocation and system performance evaluation, as evidenced in the existing literature. However, the inherent challenge of imbalanced network data (i.e., sparse network) from engineering domains poses obstacles to accurate link predictions due to the lack of training data of positive links, leading to biases and reduced performance. In contrast to existing studies that focus on enhancing model architecture, this paper concentrates on exploring preprocessing methods, e.g., the data undersampling strategies, and two post-processing methods for accuracy calculation based on 1) probability threshold-based labeling and 2) probability rank-based labeling, and studies their impacts on the prediction results with a given GNN-based LP model architecture. Real-world network data sourced from shared mobility systems and product market systems, which exhibit various levels of imbalance, are used as test cases. This study contributes to a better understanding of effective data undersampling strategies and post-processing methods for handling imbalanced network data when applying GNN-based LP to real-world complex systems.</jats:p>",
+          "link": [
+            {
+              "URL": "https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-pdf/doi/10.1115/DETC2024-143786/7403118/v03bt03a005-detc2024-143786.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-pdf/doi/10.1115/DETC2024-143786/7403118/v03bt03a005-detc2024-143786.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        },
+        {
+          "title": [
+            "Self-Explaining Graph Neural Network for Link Prediction Based on Path-Aware Prototype Learning"
+          ],
+          "DOI": "10.1109/tkde.2026.3731869",
+          "URL": "https://doi.org/10.1109/tkde.2026.3731869",
+          "published": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "abstract": null,
+          "link": [
+            {
+              "URL": "http://xplorestaging.ieee.org/ielx8/69/4358933/11683389.pdf?arnumber=11683389",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        },
+        {
+          "title": [
+            "Resilient Internet Routing using Graph Neural Networks for Real-Time Path Prediction"
+          ],
+          "DOI": "10.2139/ssrn.5909383",
+          "URL": "https://doi.org/10.2139/ssrn.5909383",
+          "published": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "abstract": null,
+          "link": null
+        },
+        {
+          "title": [
+            "Fully-inductive link prediction with path-based graph neural network: A comparative analysis"
+          ],
+          "DOI": "10.1016/j.neucom.2024.128484",
+          "URL": "https://doi.org/10.1016/j.neucom.2024.128484",
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                12
+              ]
+            ]
+          },
+          "abstract": null,
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0925231224012554?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0925231224012554?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ]
+        },
+        {
+          "title": [
+            "Dual-Path Graph Neural Network with Adaptive Auxiliary Module for Link Prediction"
+          ],
+          "DOI": "10.1089/big.2023.0130",
+          "URL": "https://doi.org/10.1089/big.2023.0130",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                8,
+                1
+              ]
+            ]
+          },
+          "abstract": null,
+          "link": [
+            {
+              "URL": "https://www.liebertpub.com/doi/full-xml/10.1089/big.2023.0130",
+              "content-type": "application/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.liebertpub.com/doi/pdf/10.1089/big.2023.0130",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        },
+        {
+          "title": [
+            "Inter-Layer Similarity-Based Graph Neural Network for Link Prediction in Social Multiplex Networks"
+          ],
+          "DOI": "10.1109/icwr61162.2024.10533376",
+          "URL": "https://doi.org/10.1109/icwr61162.2024.10533376",
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                4,
+                24
+              ]
+            ]
+          },
+          "abstract": null,
+          "link": [
+            {
+              "URL": "http://xplorestaging.ieee.org/ielx7/10533315/10533316/10533376.pdf?arnumber=10533376",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/IHeIqqW9xC58qLOFMn3A0G6JZFc</id>
+  <title>arXiv Query: search_query=(all:"cell painting" OR all:"morphological profiling") AND (all:"representation" OR all:"drug") AND submittedDate:"202401010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=12</title>
+  <updated>2026-09-16T00:12:38Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22cell+painting%22+OR+all:%22morphological+profiling%22)+AND+((all:%22representation%22+OR+all:%22drug%22)+AND+submittedDate:%22202401010000+TO+202609162359%22)&amp;start=0&amp;max_results=12&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>12</opensearch:itemsPerPage>
+  <opensearch:totalResults>16</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07632v3</id>
+    <title>JUMP-lite: Compact, reproducible benchmarking of cell representations</title>
+    <updated>2026-09-01T14:42:40Z</updated>
+    <link href="https://arxiv.org/abs/2608.07632v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07632v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Image-based profiling captures rich phenotypic signatures for drug discovery and functional genomics. Large public datasets like JUMP Cell Painting now provide millions of images for systematic study. However, JUMP alone occupies 115 TB, and fragmented evaluation practices make systematic comparisons of representation methods impractical for many researchers. Here we present Nahual, an open-source framework for reproducible model deployment, and JUMP-lite, a 92.0 GB subset of JUMP that is approximately 1,250-fold smaller, selected to cover genetic modalities and compound annotations and reduced via lossy JPEG XL compression. Using these resources, we benchmark five representation methods, including classical features (CellProfiler) and deep learning models (MorphEM, OpenPhenom, SubCell, DINOv2). Moderate compression broadly retains signal relative to uncompressed images. Standardized phenotypic activity and consistency metrics reveal meaningful performance differences across methods. Together, JUMP-lite and Nahual provide a foundation for accessible, reproducible benchmarking of image-based cell representations.</summary>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T14:08:26Z</published>
+    <arxiv:comment>Submitted to WACV 2027</arxiv:comment>
+    <arxiv:primary_category term="q-bio.QM"/>
+    <author>
+      <name>Alán F. Muñoz</name>
+    </author>
+    <author>
+      <name>Johan Fredin Haslum</name>
+    </author>
+    <author>
+      <name>Runxi Shen</name>
+    </author>
+    <author>
+      <name>Anne E. Carpenter</name>
+    </author>
+    <author>
+      <name>Shantanu Singh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.03435v1</id>
+    <title>CP-Agent: Context-Aware Multimodal Reasoning for Cellular Morphological Profiling under Chemical Perturbations</title>
+    <updated>2026-06-02T10:20:00Z</updated>
+    <link href="https://arxiv.org/abs/2606.03435v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.03435v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cell Painting combines multiplexed fluorescent staining, high-content imaging, and quantitative analysis to generate high-dimensional phenotypic readouts to support diverse downstream tasks such as mechanism-of-action (MoA) inference, toxicity prediction, and construction of drug-disease atlases. However, existing workflows are slow, costly and difficult to interpret. Approaches for drug screening modeling predominantly focus on molecular representation learning, while neglecting actual experimental context (e.g., cell line, dosing schedule, etc.), limiting generalization and MoA resolution. We introduce CP-Agent, an agentic multimodal large language model (MLLM) capable of generating mechanism-relevant, human-interpretable rationales for cell morphological changes under drug perturbations. At its core, CP-Agent leverages a context-aware alignment module, CP-CLIP, that jointly embeds high-content images and experimental metadata to enable robust treatment and MoA discrimination (achieving a maximum F1-score of 0.896). By integrating CP-CLIP outputs with agentic tool usage and reasoning, CP-Agent compiles rationales into a structured report to guide experimental design and hypothesis refinement. These capabilities highlight CP-Agent's potential to accelerate drug discovery by enabling more interpretable, scalable, and context-aware phenotypic screening -- streamlining iterative cycles of hypothesis generation in drug discovery.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-02T10:20:00Z</published>
+    <arxiv:comment>ICLR 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yuxin Zhang</name>
+    </author>
+    <author>
+      <name>Yiyao Li</name>
+    </author>
+    <author>
+      <name>Ping Shu Ho</name>
+    </author>
+    <author>
+      <name>Simon See</name>
+    </author>
+    <author>
+      <name>Zhenqin Wu</name>
+    </author>
+    <author>
+      <name>Kevin Tsia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.15383v1</id>
+    <title>MorphoHELM: A Comprehensive Benchmark for Evaluating Representations for Microscopy-Based Morphology Assays</title>
+    <updated>2026-05-14T20:13:36Z</updated>
+    <link href="https://arxiv.org/abs/2605.15383v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.15383v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Microscopy images contain rich information about how cells respond to perturbations, making them essential to applications like drug screening. To quantify images, researchers often use representation extraction methods, and recent years have seen a proliferation of deep learning methods. While measuring the quality of these representations is essential, evaluation remains fragmented, with each proposed model evaluated on different tasks and datasets, using custom pipelines and metrics, making it difficult to fairly compare models. Here, we introduce MorphoHELM, a comprehensive open benchmark for evaluating feature extraction methods for Cell Painting, the most widely-used morphological profiling assay. MorphoHELM consolidates evaluation standards in the field, extends and corrects them to be more robust, and evaluates on the widest range of methods to date. A defining feature of the benchmark is that each task is evaluated at different degrees of batch effects (or technical noise), directly quantifying how the ability of methods to detect biological signal degrades as noise increases. Together, these properties enable MorphoHELM to detect trade-offs between methods, and we demonstrate that models that excel at certain kinds of biological signal are weaker at others. We show that no existing model outperforms classic computer vision analytic strategies across all settings, which remain the strongest general use-case representations. All datasets, code, and evaluation tools are publicly available at https://github.com/microsoft/MorphoHELM.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-14T20:13:36Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Emre Hayir</name>
+    </author>
+    <author>
+      <name>Lorin Crawford</name>
+    </author>
+    <author>
+      <name>Alex X. Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.22832v1</id>
+    <title>Intervention-Aware Multiscale Representation Learning from Imaging Phenomics and Perturbation Transcriptomics</title>
+    <updated>2026-04-19T19:14:21Z</updated>
+    <link href="https://arxiv.org/abs/2604.22832v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.22832v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Microscopy-based phenotypic profiling is scalable for drug discovery but lacks the mechanistic depth of transcriptomics, which remains costly and scarce. Existing multimodal approaches either use images to support other modalities or naively align representations by sample identity, ignoring cell-type and dose variations in weakly paired data-limiting generalization to unseen interventions. In this paper, we introduce an intervention-aware distillation framework that leverages perturbational transcriptomics to guide image representation learning. A transcriptome-conditioned teacher integrates gene expression and intervention metadata to produce soft distributions over a chemistry-aware codebook organized by drug similarity. The teacher employs a fine-tuned single-cell foundation model to encode cell-type context and disentangle dose effects. An image-only student learns to predict these distributions from microscopy alone, distilling mechanistic knowledge while operating independently at test time. This design emphasizes intervention semantics rather than identity alignment and explicitly handles dose and cell-type mismatches. We provide theoretical guarantees showing that transcriptomic guidance tightens the risk bound for image-based prediction. On Cell Painting and RxRx datasets paired with L1000, our method significantly improves one-shot transfer to unseen interventions and drug-target gene discovery compared to self-supervised and alignment baselines.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-19T19:14:21Z</published>
+    <arxiv:comment>CVPR 2026 main conference</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Jiayuan Chen</name>
+    </author>
+    <author>
+      <name>Ruoqi Liu</name>
+    </author>
+    <author>
+      <name>Zishan Gu</name>
+    </author>
+    <author>
+      <name>Ping Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.05622v1</id>
+    <title>Adversarial Batch Representation Augmentation for Batch Correction in High-Content Cellular Screening</title>
+    <updated>2026-03-05T19:26:26Z</updated>
+    <link href="https://arxiv.org/abs/2603.05622v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.05622v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-Content Screening routinely generates massive volumes of cell painting images for phenotypic profiling. However, technical variations across experimental executions inevitably induce biological batch (bio-batch) effects. These cause covariate shifts and degrade the generalization of deep learning models on unseen data. Existing batch correction methods typically rely on additional prior knowledge (e.g., treatment or cell culture information) or struggle to generalize to unseen bio-batches. In this work, we frame bio-batch mitigation as a Domain Generalization (DG) problem and propose Adversarial Batch Representation Augmentation (ABRA). ABRA explicitly models batch-wise statistical fluctuations by parameterizing feature statistics as structured uncertainties. Through a min-max optimization framework, it actively synthesizes worst-case bio-batch perturbations in the representation space, guided by a strict angular geometric margin to preserve fine-grained class discriminability. To prevent representation collapse during this adversarial exploration, we introduce a synergistic distribution alignment objective. Extensive evaluations on the large-scale RxRx1 and RxRx1-WILDS benchmarks demonstrate that ABRA establishes a new state-of-the-art for siRNA perturbation classification.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-05T19:26:26Z</published>
+    <arxiv:comment>Preprint</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <arxiv:journal_ref>Knowledge-based Systems, 2026</arxiv:journal_ref>
+    <author>
+      <name>Lei Tong</name>
+    </author>
+    <author>
+      <name>Xujing Yao</name>
+    </author>
+    <author>
+      <name>Adam Corrigan</name>
+    </author>
+    <author>
+      <name>Long Chen</name>
+    </author>
+    <author>
+      <name>Navin Rathna Kumar</name>
+    </author>
+    <author>
+      <name>Kerry Hallbrook</name>
+    </author>
+    <author>
+      <name>Jonathan Orme</name>
+    </author>
+    <author>
+      <name>Yinhai Wang</name>
+    </author>
+    <author>
+      <name>Huiyu Zhou</name>
+    </author>
+    <arxiv:doi>10.1016/j.knosys.2026.115829</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.knosys.2026.115829" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.22331v1</id>
+    <title>Scalable Batch Correction for Cell Painting via Batch-Dependent Kernels and Adaptive Sampling</title>
+    <updated>2026-01-29T21:20:08Z</updated>
+    <link href="https://arxiv.org/abs/2601.22331v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.22331v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cell Painting is a microscopy-based, high-content imaging assay that produces rich morphological profiles of cells and can support drug discovery by quantifying cellular responses to chemical perturbations. At scale, however, Cell Painting data is strongly affected by batch effects arising from differences in laboratories, instruments, and protocols, which can obscure biological signal. We present BALANS (Batch Alignment via Local Affinities and Subsampling), a scalable batch-correction method that aligns samples across batches by constructing a smoothed affinity matrix from pairwise distances. Given $n$ data points, BALANS builds a sparse affinity matrix $A \in \mathbb{R}^{n \times n}$ using two ideas. (i) For points $i$ and $j$, it sets a local scale using the distance from $i$ to its $k$-th nearest neighbor within the batch of $j$, then computes $A_{ij}$ via a Gaussian kernel calibrated by these batch-aware local scales. (ii) Rather than forming all $n^2$ entries, BALANS uses an adaptive sampling procedure that prioritizes rows with low cumulative neighbor coverage and retains only the strongest affinities per row, yielding a sparse but informative approximation of $A$. We prove that this sampling strategy is order-optimal in sample complexity and provides an approximation guarantee, and we show that BALANS runs in nearly linear time in $n$. Experiments on diverse real-world Cell Painting datasets and controlled large-scale synthetic benchmarks demonstrate that BALANS scales to large collections while improving runtime over native implementations of widely used batch-correction methods, without sacrificing correction quality.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-29T21:20:08Z</published>
+    <arxiv:comment>40 pages, many figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Aditya Narayan Ravi</name>
+    </author>
+    <author>
+      <name>Snehal Vadvalkar</name>
+    </author>
+    <author>
+      <name>Abhishek Pandey</name>
+    </author>
+    <author>
+      <name>Ilan Shomorony</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.18287v1</id>
+    <title>TRIDENT: A Trimodal Cascade Generative Framework for Drug and RNA-Conditioned Cellular Morphology Synthesis</title>
+    <updated>2025-11-23T04:43:27Z</updated>
+    <link href="https://arxiv.org/abs/2511.18287v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.18287v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurately modeling the relationship between perturbations, transcriptional responses, and phenotypic changes is essential for building an AI Virtual Cell (AIVC). However, existing methods typically constrained to modeling direct associations, such as Perturbation $\rightarrow$ RNA or Perturbation $\rightarrow$ Morphology, overlook the crucial causal link from RNA to morphology. To bridge this gap, we propose TRIDENT, a cascade generative framework that synthesizes realistic cellular morphology by conditioning on both the perturbation and the corresponding gene expression profile. To train and evaluate this task, we construct MorphoGene, a new dataset pairing L1000 gene expression with Cell Painting images for 98 compounds. TRIDENT significantly outperforms state-of-the-art approaches, achieving up to 7-fold improvement with strong generalization to unseen compounds. In a case study on docetaxel, we validate that RNA-guided synthesis accurately produces the corresponding phenotype. An ablation study further confirms that this RNA conditioning is essential for the model's high fidelity. By explicitly modeling transcriptome-phenome mapping, TRIDENT provides a powerful in silico tool and moves us closer to a predictive virtual cell.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-23T04:43:27Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Rui Peng</name>
+    </author>
+    <author>
+      <name>Ziru Liu</name>
+    </author>
+    <author>
+      <name>Lingyuan Ye</name>
+    </author>
+    <author>
+      <name>Yuxing Lu</name>
+    </author>
+    <author>
+      <name>Boxin Shi</name>
+    </author>
+    <author>
+      <name>Jinzhuo Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.19887v1</id>
+    <title>Compressing Biology: Evaluating the Stable Diffusion VAE for Phenotypic Drug Discovery</title>
+    <updated>2025-10-22T16:16:49Z</updated>
+    <link href="https://arxiv.org/abs/2510.19887v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.19887v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-throughput phenotypic screens generate vast microscopy image datasets that push the limits of generative models due to their large dimensionality. Despite the growing popularity of general-purpose models trained on natural images for microscopy data analysis, their suitability in this domain has not been quantitatively demonstrated. We present the first systematic evaluation of Stable Diffusion's variational autoencoder (SD-VAE) for reconstructing Cell Painting images, assessing performance across a large dataset with diverse molecular perturbations and cell types. We find that SD-VAE reconstructions preserve phenotypic signals with minimal loss, supporting its use in microscopy workflows. To benchmark reconstruction quality, we compare pixel-level, embedding-based, latent-space, and retrieval-based metrics for a biologically informed evaluation. We show that general-purpose feature extractors like InceptionV3 match or surpass publicly available bespoke models in retrieval tasks, simplifying future pipelines. Our findings offer practical guidelines for evaluating generative models on microscopy data and support the use of off-the-shelf models in phenotypic drug discovery.</summary>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-22T16:16:49Z</published>
+    <arxiv:comment>Accepted to the 3rd Workshop on Imageomics: Discovering Biological Knowledge from Images Using AI at the 39th Conference on Neural Information Processing Systems (NeurIPS 2025)</arxiv:comment>
+    <arxiv:primary_category term="q-bio.QM"/>
+    <author>
+      <name>Télio Cropsal</name>
+    </author>
+    <author>
+      <name>Rocío Mercado</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.19896v1</id>
+    <title>Efficient Cell Painting Image Representation Learning via Cross-Well Aligned Masked Siamese Network</title>
+    <updated>2025-09-24T08:48:29Z</updated>
+    <link href="https://arxiv.org/abs/2509.19896v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.19896v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Computational models that predict cellular phenotypic responses to chemical and genetic perturbations can accelerate drug discovery by prioritizing therapeutic hypotheses and reducing costly wet-lab iteration. However, extracting biologically meaningful and batch-robust cell painting representations remains challenging. Conventional self-supervised and contrastive learning approaches often require a large-scale model and/or a huge amount of carefully curated data, still struggling with batch effects. We present Cross-Well Aligned Masked Siamese Network (CWA-MSN), a novel representation learning framework that aligns embeddings of cells subjected to the same perturbation across different wells, enforcing semantic consistency despite batch effects. Integrated into a masked siamese architecture, this alignment yields features that capture fine-grained morphology while remaining data- and parameter-efficient. For instance, in a gene-gene relationship retrieval benchmark, CWA-MSN outperforms the state-of-the-art publicly available self-supervised (OpenPhenom) and contrastive learning (CellCLIP) methods, improving the benchmark scores by +29\% and +9\%, respectively, while training on substantially fewer data (e.g., 0.2M images for CWA-MSN vs. 2.2M images for OpenPhenom) or smaller model size (e.g., 22M parameters for CWA-MSN vs. 1.48B parameters for CellCLIP). Extensive experiments demonstrate that CWA-MSN is a simple and effective way to learn cell image representation, enabling efficient phenotype modeling even under limited data and parameter budgets.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-24T08:48:29Z</published>
+    <arxiv:comment>9 pages, 3 figures, reference 4 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Pin-Jui Huang</name>
+    </author>
+    <author>
+      <name>Yu-Hsuan Liao</name>
+    </author>
+    <author>
+      <name>SooHeon Kim</name>
+    </author>
+    <author>
+      <name>NoSeong Park</name>
+    </author>
+    <author>
+      <name>JongBae Park</name>
+    </author>
+    <author>
+      <name>DongMyung Shin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.06986v1</id>
+    <title>CellPainTR: Generalizable Representation Learning for Cross-Dataset Cell Painting Analysis</title>
+    <updated>2025-09-02T03:30:07Z</updated>
+    <link href="https://arxiv.org/abs/2509.06986v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.06986v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large-scale biological discovery requires integrating massive, heterogeneous datasets like those from the JUMP Cell Painting consortium, but technical batch effects and a lack of generalizable models remain critical roadblocks. To address this, we introduce CellPainTR, a Transformer-based architecture designed to learn foundational representations of cellular morphology that are robust to batch effects. Unlike traditional methods that require retraining on new data, CellPainTR's design, featuring source-specific context tokens, allows for effective out-of-distribution (OOD) generalization to entirely unseen datasets without fine-tuning. We validate CellPainTR on the large-scale JUMP dataset, where it outperforms established methods like ComBat and Harmony in both batch integration and biological signal preservation. Critically, we demonstrate its robustness through a challenging OOD task on the unseen Bray et al. dataset, where it maintains high performance despite significant domain and feature shifts. Our work represents a significant step towards creating truly foundational models for image-based profiling, enabling more reliable and scalable cross-study biological analysis.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-02T03:30:07Z</published>
+    <arxiv:comment>14 pages, 4 figures. Code available at: https://github.com/CellPainTR/CellPainTR</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Cedric Caruzzo</name>
+    </author>
+    <author>
+      <name>Jong Chul Ye</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.05383v1</id>
+    <title>Foreground-aware Virtual Staining for Accurate 3D Cell Morphological Profiling</title>
+    <updated>2025-07-07T18:11:56Z</updated>
+    <link href="https://arxiv.org/abs/2507.05383v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.05383v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Microscopy enables direct observation of cellular morphology in 3D, with transmitted-light methods offering low-cost, minimally invasive imaging and fluorescence microscopy providing specificity and contrast. Virtual staining combines these strengths by using machine learning to predict fluorescence images from label-free inputs. However, training of existing methods typically relies on loss functions that treat all pixels equally, thus reproducing background noise and artifacts instead of focusing on biologically meaningful signals. We introduce Spotlight, a simple yet powerful virtual staining approach that guides the model to focus on relevant cellular structures. Spotlight uses histogram-based foreground estimation to mask pixel-wise loss and to calculate a Dice loss on soft-thresholded predictions for shape-aware learning. Applied to a 3D benchmark dataset, Spotlight improves morphological representation while preserving pixel-level accuracy, resulting in virtual stains better suited for downstream tasks such as segmentation and profiling.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-07T18:11:56Z</published>
+    <arxiv:comment>ICML 2025 Generative AI and Biology (GenBio) Workshop</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Alexandr A. Kalinin</name>
+    </author>
+    <author>
+      <name>Paula Llanos</name>
+    </author>
+    <author>
+      <name>Theresa Maria Sommer</name>
+    </author>
+    <author>
+      <name>Giovanni Sestini</name>
+    </author>
+    <author>
+      <name>Xinhai Hou</name>
+    </author>
+    <author>
+      <name>Jonathan Z. Sexton</name>
+    </author>
+    <author>
+      <name>Xiang Wan</name>
+    </author>
+    <author>
+      <name>Ivo D. Dinov</name>
+    </author>
+    <author>
+      <name>Brian D. Athey</name>
+    </author>
+    <author>
+      <name>Nicolas Rivron</name>
+    </author>
+    <author>
+      <name>Anne E. Carpenter</name>
+    </author>
+    <author>
+      <name>Beth Cimini</name>
+    </author>
+    <author>
+      <name>Shantanu Singh</name>
+    </author>
+    <author>
+      <name>Matthew J. O'Meara</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.04704v3</id>
+    <title>SPATIA: Multimodal Generation and Prediction of Spatial Cell Phenotypes</title>
+    <updated>2026-06-15T21:09:00Z</updated>
+    <link href="https://arxiv.org/abs/2507.04704v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.04704v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Understanding how cellular morphology, gene expression, and spatial context jointly shape tissue function is a central challenge in biology. Image-based spatial transcriptomics technologies now provide high-resolution measurements of cell images and gene expression profiles, but existing methods typically analyze these modalities in isolation or at limited resolution. We address the problem by introducing SPATIA, a multi-level generative and predictive model that learns unified, spatially aware representations by fusing morphology, gene expression, and spatial context from the cell to the tissue level. SPATIA also incorporates a spatially conditioned generative framework with confidence-aware OT reweighting and morphology-profile alignment for modeling target-state morphology distributions. Specifically, we propose a confidence-aware flow matching objective that reweights weak optimal-transport pairs based on uncertainty. We further apply morphology-profile alignment to encourage biologically meaningful image generation, enabling the modeling of microenvironment-dependent phenotypic transitions. We assembled a multi-scale dataset consisting of 25.9 million cell-gene pairs across 17 tissues. We benchmark SPATIA against 18 models across 12 tasks, spanning categories such as phenotype generation, annotation, clustering, gene imputation, and cross-modal prediction. SPATIA achieves improved performance over state-of-the-art models, improving generative fidelity by 8% and predictive accuracy by up to 3%.</summary>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-07T06:54:02Z</published>
+    <arxiv:comment>ICML 2026</arxiv:comment>
+    <arxiv:primary_category term="q-bio.QM"/>
+    <author>
+      <name>Zhenglun Kong</name>
+    </author>
+    <author>
+      <name>Mufan Qiu</name>
+    </author>
+    <author>
+      <name>John Boesen</name>
+    </author>
+    <author>
+      <name>Xiang Lin</name>
+    </author>
+    <author>
+      <name>Sukwon Yun</name>
+    </author>
+    <author>
+      <name>Tianlong Chen</name>
+    </author>
+    <author>
+      <name>Manolis Kellis</name>
+    </author>
+    <author>
+      <name>Marinka Zitnik</name>
+    </author>
+  </entry>
+</feed>

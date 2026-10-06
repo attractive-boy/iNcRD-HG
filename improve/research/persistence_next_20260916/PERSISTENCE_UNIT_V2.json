@@ -1,0 +1,120 @@
+{
+  "created_at_utc": "2026-09-16T05:03:24.141943+00:00",
+  "success": true,
+  "tests": 8,
+  "failures": 0,
+  "errors": 0,
+  "evidence": {
+    "exact_cache": {
+      "output_bitwise_equal": true,
+      "cached_eigendecompositions": 5,
+      "uncached_eigendecompositions": 84,
+      "scope": "per native call and worker",
+      "maximum_entries_per_worker": 4096
+    },
+    "threshold_oracle": {
+      "graphs": 24,
+      "maximum_error": 5.329070518200751e-15,
+      "includes_isolated_vertices_and_empty_edge_sets": true
+    },
+    "author_unique_values": {
+      "graphs": 2,
+      "spectrum_maximum_error": 2.384185791015625e-07,
+      "tuple_values_equal": true,
+      "gather_gradients_equal": true,
+      "author_spectrum_dtype": "float32",
+      "local_spectrum_dtype": "float64"
+    },
+    "boundaries": {
+      "folds": 5,
+      "query_and_reverse_absent": true,
+      "all_common_neighbors_retained": true,
+      "query_label_invariance": true,
+      "lnc_identity": true
+    },
+    "invariance_and_derivatives": {
+      "node_relabel": true,
+      "edge_reorder": true,
+      "batch_padding_independent": true,
+      "isolated_vertex": true,
+      "finite_differences": true
+    },
+    "same_value_counterexample": {
+      "vertices": [
+        0.1,
+        0.3,
+        0.5,
+        0.2,
+        0.4
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "filtration": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "native_path_event": [
+        0.0,
+        0.9999999999999998,
+        3.0,
+        0.0,
+        0.0
+      ],
+      "author_path_event": [
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "independent_definition_passed": true
+    },
+    "arms": {
+      "same_initial_state": true,
+      "same_initial_rng": true,
+      "nonzero_head_query_replay": true,
+      "gradients": {
+        "full": {
+          "spectrum_gradient_l1": 0.15902381006162614
+        },
+        "no_spectrum": {
+          "spectrum_gradient_l1": 0.0
+        },
+        "final_spectrum": {
+          "spectrum_gradient_l1": 0.19114481378346682
+        }
+      }
+    },
+    "training": {
+      "arms": 3,
+      "steps_each": 6,
+      "gradients_each": 6,
+      "final_optimizer_verified": true,
+      "final_random_streams_equal": true,
+      "labels_from_training_only": true
+    }
+  },
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_spectral_persistence_graph_v1.py": "b4fea2b5a260934cb0719de4bd56a31d0bd8cbfd5b6621b286b505958cc71252",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/spectral_persistence_graph_v1.py": "272c5ef0bc555d31a6dbf20fa03acb8e3f94dc893d1679ba3b1be2098029a485",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_spectral_persistence_experiment_v1.py": "7a301d58c1ffc6e67ca73ee8490d7bdbb437fdb1092507be965c14bb0f90fa94",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/spectral_persistence_native_v1.cpp": "04a75f0191aa084f4f26c68ca024bf32f82b59926388bb7c7d7e3f4c4b426f3c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/spectral_persistence_build_v1.py": "4a9dc8bed77c1ff658465c8368bc736cd8fab4c551981a4a44c34314c1658553"
+  },
+  "evaluation_labels_read": false,
+  "formal_fits": 0,
+  "sha256": "f6ca4250508c9904ed710e5682817b220db1b076bd518bd426ceb60e3bef2714"
+}

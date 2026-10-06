@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/+WNjmxzNgnWrcOLgyTXkcRQhvAU</id>
+  <title>arXiv Query: search_query=all:"link prediction" AND (all:"persistent homology" OR all:"topological") AND submittedDate:"202301010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-09-15T21:51:38Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22link+prediction%22+AND+((all:%22persistent+homology%22+OR+all:%22topological%22)+AND+submittedDate:%22202301010000+TO+202609162359%22)&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>129</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.09658v1</id>
+    <title>Link prediction in complex networks via fusing node centrality and local similarity indices</title>
+    <updated>2026-09-09T03:15:51Z</updated>
+    <link href="https://arxiv.org/abs/2609.09658v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.09658v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Local similarity indices are widely used in link prediction on complex networks owing to their low computational cost; however, in sparse networks they assign a zero score to every node pair lacking common neighbors, which severely limits their predictive power. A natural remedy is to fuse node centrality indices with local similarity indices: the former provide global importance for the node pair, while the latter capture fine-grained local topology, and the two can be combined into complementary scores within a unified framework. This paper uses PageRank and DomiRank as two representative centrality measures and constructs a centrality--local-similarity fusion framework. The PageRank-based fusion proposed by Charikhi is first generalized to seven classical local similarity indices, and the universality of its improvement is systematically verified on nine real-world network datasets. Furthermore, the DomiRank centrality is introduced to build the DR-MD series of fused indices under a unified weighting coefficient, which overcomes the drawback that the PageRank-based fusion requires index-by-index weight tuning. Results of five-fold cross-validation together with Wilcoxon signed-rank tests show that, under the unified experimental protocol, all DR-MD indices consistently outperform the corresponding local baselines and their PR-MD counterparts on all nine datasets ($p=0.002$), and that the improvements remain robust against perturbations of $σ$ and the weighting coefficients within the near-critical parameter plateau; in particular, DR-RA achieves an average AUC of 0.7084, surpassing global methods such as Katz and RWR as well as several advanced similarity indices. The framework is inherently extensible, and its fusion paradigm can be straightforwardly generalized to couple other node centrality indices with local similarity indices.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T03:15:51Z</published>
+    <arxiv:comment>link prediction; complex networks; node centrality; local similarity; PageRank; DomiRank</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Yingying Zhang</name>
+    </author>
+    <author>
+      <name>Chengye Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.08226v1</id>
+    <title>TTGBench: Benchmarking Topological Evolution and Semantic Drift in Text-attributed Temporal Graphs</title>
+    <updated>2026-09-08T04:19:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.08226v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.08226v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Temporal graph learning models the evolution of dynamic systems, where both structural interactions and semantic states change over time. However, existing benchmarks primarily emphasize structural evolution via temporal link prediction (TLP), while support for semantic evolution remains limited. Although temporal node classification (TNC) is sometimes included, it is typically restricted to simplistic binary settings that fail to capture realistic semantic drift. Moreover, commonly used datasets exhibit high link repetition, leading to inflated performance estimates and obscuring true model capability. To address these limitations, we introduce \textbf{TTGBench}, a new benchmark that jointly evaluates structural and semantic evolution. TTGBench comprises six real-world, text-rich datasets characterized by \emph{Dual Volatility}, enabling rigorous and fair evaluation of existing models. Notably, it is the first benchmark to support both multi-class and multi-label TNC, filling a critical gap in evaluating temporal semantic drift. We conduct a comprehensive evaluation of 17 state-of-the-art methods across Temporal Graph Neural Networks (TGNNs) and Large Language Model (LLM)-based paradigms. The results reveal a clear \emph{capability divide} between the two paradigms: TGNN-based methods excel at structural prediction but fail at semantic tracking, whereas LLM-based predictors show the opposite trend. Through in-depth analysis, we uncover their fundamental limitations and provide insights for developing more comprehensive temporal graph models.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-08T04:19:11Z</published>
+    <arxiv:comment>24 pages, 8 figures, 22 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Longfei Ma</name>
+    </author>
+    <author>
+      <name>Zemin Liu</name>
+    </author>
+    <author>
+      <name>Fei Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.06668v1</id>
+    <title>Towards Unified Multimodal Graph Foundation Model: A Bridge-Router-Adapter Based Approach</title>
+    <updated>2026-09-06T15:21:40Z</updated>
+    <link href="https://arxiv.org/abs/2609.06668v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.06668v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal graphs couple node attributes in different modalities, such as text and images, with relational structure, enabling topological structure and cross-modality attributes to be modeled jointly. Multimodal graph foundation models seek unified representations from such data that transfer across different graph domains and downstream tasks. However, existing methods exhibit two fundamental limitations. (1) Cross-Scope Context Entanglement. They merge scope-specific graph contexts into a unified representation, obscuring their distinctions during multimodal construction. (2) Scope-Ignorant Modality Routing. They route modalities within a fixed graph scope, overlooking how modality relevance varies across neighborhood ranges. To address these challenges, we propose BRAIN, a unified model that focuses on graph context that combines neighborhood scope with modality composition. BRAIN comprises a scope-conditioned Bridge that combines structural information spanning local-to-global neighborhood scopes with different modality compositions; a hierarchical Router that estimates the relevance between the scope and the task, and selects compositions separately within each scope, allowing modality utility to vary with graph range; and a lightweight residual Adapter that further specializes the routed embedding for downstream prediction. BRAIN is trained through multi-graph pretraining followed by task-specific adaptation. Experiments across nine datasets and four task families demonstrate its broad effectiveness, improving node-classification and link-prediction performance by up to 4.73% relative to the strongest baseline, while achieving an average relative improvement of 14.72% across four graph-to-text and two graph-to-image metrics.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-06T15:21:40Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sirui Zhang</name>
+    </author>
+    <author>
+      <name>Yubing Zhou</name>
+    </author>
+    <author>
+      <name>Xunkai Li</name>
+    </author>
+    <author>
+      <name>Zekai Chen</name>
+    </author>
+    <author>
+      <name>Shumeng Li</name>
+    </author>
+    <author>
+      <name>Wang Luo</name>
+    </author>
+    <author>
+      <name>Yinlin Zhu</name>
+    </author>
+    <author>
+      <name>Yujin Gao</name>
+    </author>
+    <author>
+      <name>Rong-Hua Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.22786v1</id>
+    <title>ReCoG: Reciprocal Co-Evolution for Multimodal Graph Learning</title>
+    <updated>2026-08-24T04:16:13Z</updated>
+    <link href="https://arxiv.org/abs/2608.22786v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.22786v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal graph learning requires jointly training over graph structure and heterogeneous node attributes, yet existing methods largely decouple these processes: prior multimodal graph neural networks (GNNs) focus on aligning modalities in a shared embedding space while operating on fixed or weakly adapted graph structures, and graph structure learning approaches infer topology from unimodal node representations without accounting for multimodal interactions. This separation fundamentally limits the ability of GNNs to capture semantically meaningful relationships in multimodal settings, where observed edges are often noisy, incomplete, or misaligned with underlying semantics. We propose ReCoG (Reciprocal Co-Evolution for Multimodal Graph Learning), a new learning paradigm that tightly couples graph structure learning and multimodal representation learning through end-to-end reciprocal interaction. Concretely, ReCoG integrates (i) a multimodal graph refiner that infers and corrects edges using cross-modal semantic evidence, and (ii) a coupled cross-modal message passing mechanism that performs joint intra- and inter-modality propagation over the refined graph. This unified design yields greater expressiveness than decoupled or two-stage formulations and allows dynamic interaction between topology and representation learning. Across diverse benchmarks for node classification and link prediction, ReCoG consistently outperforms strong multimodal graph structure learning baselines, including graph foundation models. Our results demonstrate that reciprocal co-evolution of structure and semantics is important for effective multimodal graph learning, challenging the prevailing separation between topology and representation learning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-24T04:16:13Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Rui Xue</name>
+    </author>
+    <author>
+      <name>Tianfu Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07029v1</id>
+    <title>Hyperbolic Graph Embedders for Link Prediction and Topology Reconstruction</title>
+    <updated>2026-08-07T09:42:26Z</updated>
+    <link href="https://arxiv.org/abs/2608.07029v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07029v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hyperbolic embeddings provide compact geometric representations of complex networks in hyperbolic spaces, but systematic comparisons of methods developed in machine learning, network science, and algorithmics remain rare. We benchmark 13 unsupervised hyperbolic graph embedders under a unified protocol for link prediction and topology reconstruction on synthetic and empirical networks. The protocol captures both missing-link recovery and the preservation of local and global network structure. Maximum-likelihood and representation-learning-based approaches, including hybrid variants, achieve the strongest overall performance, although no method dominates across all tasks and structural regimes. Performance is more strongly associated with embedding paradigm than with disciplinary origin. We identify the network regimes in which different paradigms succeed or fail and provide practical guidance for method selection in downstream applications.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T09:42:26Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Robert Jankowski</name>
+    </author>
+    <author>
+      <name>Maksim Kitsak</name>
+    </author>
+    <author>
+      <name>Dorota Celińska-Kopczyńska</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.06031v1</id>
+    <title>Dynamic Graph Prompting via Topology-Routed Mixed-Curvature Experts</title>
+    <updated>2026-08-06T13:37:52Z</updated>
+    <link href="https://arxiv.org/abs/2608.06031v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.06031v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dynamic graph prompting freezes a pre-trained temporal backbone and adapts it to label-scarce downstream tasks using lightweight prompts. However, existing methods operate within a single, fixed embedding space. In this work, we reveal that temporal shifts in local clustering and degree heterogeneity actively reorganize the edge curvature spectrum---indicating that the optimal representation geometry dynamically evolves with local topology over time. We formalize this unaddressed mismatch as geometry under-adaptation. To overcome this limitation, we propose CurvPrompt, a topology-routed geometry prompting framework for dynamic graphs. Instead of relying on a single space, CurvPrompt maintains a bank of curvature-diverse Riemannian experts, each paired with a learnable prompt. A topology-aware gate dynamically routes each node--time instance to a sparse subset of experts, constructing a personalized mixed-curvature representation. To ensure parameter efficiency and training stability under extreme label scarcity, CurvPrompt employs soft routing during pre-training to build a continuous topology--geometry mapping, and transitions to hard Top-K routing with uniform weights during downstream adaptation. Extensive experiments across four benchmark datasets show that CurvPrompt significantly advances few-shot link prediction while delivering strong, consistent performance on node classification tasks, validating the necessity of geometry-adaptive prompting.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-06T13:37:52Z</published>
+    <arxiv:comment>Suggestions and comments are welcomed</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Quanxin Wang</name>
+    </author>
+    <author>
+      <name>Xuanting Xie</name>
+    </author>
+    <author>
+      <name>Bingheng Li</name>
+    </author>
+    <author>
+      <name>Xingtong Yu</name>
+    </author>
+    <author>
+      <name>Shuo Wang</name>
+    </author>
+    <author>
+      <name>Ruiyi Fang</name>
+    </author>
+    <author>
+      <name>Zhao Kang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07716v1</id>
+    <title>Towards the Explainability of Temporal Graph Networks via Memory Backtracking and Topological Attribution</title>
+    <updated>2026-07-04T08:35:07Z</updated>
+    <link href="https://arxiv.org/abs/2607.07716v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07716v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Temporal graphs are ubiquitous in real-world applications and Temporal Graph Networks (TGNs) have achieved superior predictive accuracy. Understanding which historical events drive model predictions can enhance trustworthiness of TGNs. Existing explanation methods overlook the memory module, the core component that records and updates node histories, leaving the influence of past events unexplored. To address this, we attribute TGNs predictions through the topology attribution tree and memory backtracking tree. The topology attribution tree captures the influence of neighbors and their memory vectors, then the memory backtracking tree quantifies how historical events shape node memory vectors. We apply the LRP in TGNs, ensuring that the total contribution of events equals the logits of model. Finally, top-k selection may be unfaithful due to the nonlinear mapping from logits to probabilities, we design optimization objectives to identify the important events. Experiments on nine temporal graph datasets, spanning node property prediction, link prediction tasks and graph classification tasks, show that our method provides faithful explanations and outperforms state-of-the-art baselines. The code is available at https://github.com/yazhengliu/MemExplainer</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-04T08:35:07Z</published>
+    <arxiv:comment>ICML 2026 Spotlight</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yazheng Liu</name>
+    </author>
+    <author>
+      <name>Xi Zhang</name>
+    </author>
+    <author>
+      <name>Sihong Xie</name>
+    </author>
+    <author>
+      <name>Hui Xiong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.03039v1</id>
+    <title>Out-of-distribution Neural Inference in Dynamical Ising Models</title>
+    <updated>2026-07-03T07:31:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.03039v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.03039v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural networks are increasingly used to infer hidden physical structure from dynamical observations, yet it remains unclear whether their out-of-distribution performance reflects transferable physical rule learning. We address this question in a controlled inverse problem: reconstructing interaction graphs of a kinetic Ising model from Glauber magnetization trajectories. Across convolutional, graph, Transformer, and hybrid architectures, we find that data-driven training produces distinct and reproducible statistical strategies under topology and temperature shifts. Edge-population diagnostics reveal that Transformer-based models tend to preserve the link density of the training ensemble, whereas convolutional models can collapse toward sparse- or no-link predictions that appear out-of-distribution stable by exploiting the majority no-link class. Thus, high in-distribution accuracy and apparent out-of-distribution robustness do not necessarily imply a learned dynamics-to-structure rule. Instead, neural reconstruction can be governed by architecture-dependent statistical priors. Our results identify a concrete failure mode of standard data-driven learning in physical inverse problems and motivate rule-guided principles for machine-learning-assisted scientific discovery.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-03T07:31:30Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yuan-Bin Zhu</name>
+    </author>
+    <author>
+      <name>Shuang Qiao</name>
+    </author>
+    <author>
+      <name>Shi-Ju Ran</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.31166v1</id>
+    <title>TAG-DLM: Diffusion Language Models for Text-Attributed Graph Learning</title>
+    <updated>2026-06-30T05:56:18Z</updated>
+    <link href="https://arxiv.org/abs/2606.31166v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.31166v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Text-attributed graphs (TAGs), where each node carries a natural language description, require models to jointly reason over text and graph topology. Existing approaches often handle the two modalities separately: graph neural networks operate on shallow text features, while hybrids of LLMs and graphs use the language model mainly as a text encoder and delegate structure learning to a separate graph module. We propose method that unifies textual reasoning and graph message passing within a masked diffusion language model, a language model with bidirectional attention and generative decoding. For each graph instance, method linearises a sampled local neighbourhood into a token sequence and injects graph structure through a topology attention mask, which realises message passing over the graph. Because the diffusion language model can both interpret and generate text, the method adapts to different tasks simply by changing the prompt, supporting node classification, link prediction, and cross-dataset transfer with no target-specific fine-tuning.
+  Experiments show that method outperforms graph neural networks, graph transformers, and LLM-based baselines on all three TAG benchmarks across two tasks, improving over the strongest baseline by up to 3.9 points.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-30T05:56:18Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Lingjie Chen</name>
+    </author>
+    <author>
+      <name>Yuanchen Bei</name>
+    </author>
+    <author>
+      <name>Haobo Xu</name>
+    </author>
+    <author>
+      <name>Yanjun Zhao</name>
+    </author>
+    <author>
+      <name>Yuzhong Chen</name>
+    </author>
+    <author>
+      <name>Hanghang Tong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.04672v2</id>
+    <title>Learning Long Range Spatio-Temporal Representations over Continuous Time Dynamic Graphs with State Space Models</title>
+    <updated>2026-06-04T09:25:02Z</updated>
+    <link href="https://arxiv.org/abs/2606.04672v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.04672v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continuous-time dynamic graphs (CTDGs) provide a richer framework to capture fine-grained temporal patterns in evolving relational data. Long-range information propagation is a key challenge while learning representations, wherein it is important to retain and update information over long temporal horizons. Existing approaches restrict models to capture one-hop or local temporal neighborhoods and fail to capture multi-hop or global structural patterns. To mitigate this, we derive a parameter-efficient state-space modeling framework for continuous-time dynamic graphs (CTDG-SSM) from first principles. We first introduce continuous-time Topology-Aware higher order polynomial projection operator (CTT-HiPPO), a novel memory-based reformulation of HiPPO to jointly encode temporal dynamics and graph structure. The solution from CTT-HiPPO is obtained by projecting the classical HiPPO solution through a polynomial of the Laplacian matrix, yielding topology-aware memory updates that admit an equivalent state-space formulation for CTDGs (CTDG-SSM). Then a computationally efficient discrete formulation is obtained using the zero-order hold approach for model implementation.
+  Across benchmarks on dynamic link prediction, dynamic node classification, and sequence classification, CTDG-SSM achieves state-of-the-art performance. Notably, it achieves large performance gains on datasets that require long range temporal (LRT) and spatial reasoning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-03T09:54:35Z</published>
+    <arxiv:comment>Accepted at ICML 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ayushman Raghuvanshi</name>
+    </author>
+    <author>
+      <name>Thummaluru Siddartha Reddy</name>
+    </author>
+    <author>
+      <name>Sundeep Prabhakar Chepuri</name>
+    </author>
+    <author>
+      <name>Mahesh Chandran</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.29453v1</id>
+    <title>Forget Less, Generalize More: Unifying Temporal and Structural Adaptation for Dynamic Graphs</title>
+    <updated>2026-05-28T06:47:08Z</updated>
+    <link href="https://arxiv.org/abs/2605.29453v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.29453v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Representation learning on dynamic graphs requires capturing complex dependencies that evolve across both time and structure. Existing approaches typically adopt fixed temporal decay schemes or predetermined structural propagation depths, limiting their ability to generalize across graphs with diverse interaction frequencies and topological characteristics. We propose Dual-Scale Retentive Dynamics (DSRD), a unified framework that maintains a retentive representation state encoding both temporal memory and structural context. DSRD introduces two key components: (i) a retentive state with dual-scale adaptation that jointly models temporal dynamics and structural propagation within a single recurrent formulation, and (ii) adaptive decay kernels with learnable time-sensitivity parameters that automatically balance short-term responsiveness and long-term retention based on the underlying interaction patterns. We provide theoretical analysis establishing the equivalence between event-wise parallel aggregation and efficient recurrent state updates, as well as stability and boundedness guarantees for the learned dynamics. Extensive experiments on 14 real-world benchmarks demonstrate that DSRD consistently achieves state-of-the-art performance on both link prediction and node classification tasks, with strong generalization across transductive and inductive settings.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-28T06:47:08Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Qian Chang</name>
+    </author>
+    <author>
+      <name>Ciprian Doru Giurcaneanu</name>
+    </author>
+    <author>
+      <name>Runsong Jia</name>
+    </author>
+    <author>
+      <name>Xia Li</name>
+    </author>
+    <author>
+      <name>Guoping Hu</name>
+    </author>
+    <author>
+      <name>Xiufeng Cheng</name>
+    </author>
+    <author>
+      <name>Jinqing Yang</name>
+    </author>
+    <author>
+      <name>Mengjia Wu</name>
+    </author>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.28155v1</id>
+    <title>Temporal Hyperbolic Graph Representation Learning for Scale-Free Internet Routing and Delay Prediction</title>
+    <updated>2026-05-27T08:39:47Z</updated>
+    <link href="https://arxiv.org/abs/2605.28155v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.28155v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Predicting Internet round-trip time (RTT) is critical for routing optimization, quality-of-service (QoS) provisioning, and traffic engineering, yet remains challenging due to long-term temporal dependencies, evolving routing dynamics, and heavy-tailed latency distributions. While Temporal Graph Neural Networks (TGNNs) can model evolving network topologies, most existing approaches operate in Euclidean space, which poorly captures the hierarchical and scale-free structure of Internet routing graphs. Hyperbolic geometry provides a more suitable representation space.
+  We propose HERMIT (Hyperbolic Edge-aware RTT Modeling via Integrated Topology), a hybrid framework combining a hyperbolic manifold-preserving temporal GNN with a Random Forest regressor for joint link prediction and RTT prediction. Built on HMPTGN, HERMIT introduces RTT-aware edge features and a learnable edge encoder to improve modeling of evolving link states and routing behavior. The resulting hyperbolic node representations are combined with historical RTT statistics for robust latency prediction.
+  We evaluate HERMIT on a large-scale real Internet dataset spanning 2015-2024. HERMIT consistently outperforms a strong Random Forest baseline using only historical RTT statistics, achieving a 6% RMSE improvement while reducing large errors on heavy-tailed samples. It also surpasses prior hyperbolic TGNN models, including HMPTGN and HTGN, in link prediction performance. These results demonstrate that combining hyperbolic temporal graph learning with tree-based regression provides a scalable solution for RTT prediction in real-world Internet topologies.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-27T08:39:47Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yi-Ling Kuo</name>
+    </author>
+    <author>
+      <name>Hao-Yu Tien</name>
+    </author>
+    <author>
+      <name>Shih-Yu Tsai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.26543v1</id>
+    <title>PolyFusionAgent: A Multimodal Foundation Model and Autonomous AI Assistant for Polymer Property Prediction and Inverse Design</title>
+    <updated>2026-05-26T04:45:11Z</updated>
+    <link href="https://arxiv.org/abs/2605.26543v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.26543v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Polymer discovery is central to fields ranging from energy storage to biomedicine, but it is hindered by an astronomically large chemical design space and fragmented representations of structure, properties, and prior knowledge. This fragmentation leaves many AI models disconnected from physical and experimental reality, restricting their ability to support directly actionable design decisions. Here we introduce PolyFusionAgent, an interactive framework coupling a multimodal polymer foundation model (PolyFusion) with a tool-augmented, literature-grounded design agent (PolyAgent). PolyFusion aligns complementary polymer views including sequence, topology, 3D geometry, and fingerprints across millions of polymers to learn a shared latent space transferable across chemistries and data regimes, improving thermophysical property prediction and enabling property-conditioned generation of chemically valid, structurally novel polymers beyond the reference design space. PolyAgent closes the design loop by linking prediction and inverse design with evidence retrieval from the polymer literature, proposing, evaluating, and contextualizing hypotheses with explicit precedent in one workflow. Together, PolyFusionAgent enables interactive, evidence-linked polymer discovery combining large-scale representation learning, multimodal chemical knowledge, and verifiable scientific reasoning.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-26T04:45:11Z</published>
+    <arxiv:comment>23 pages, 5 figures, 2 tables; Supplementary material included</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Manpreet Kaur</name>
+    </author>
+    <author>
+      <name>Xingying Zhang</name>
+    </author>
+    <author>
+      <name>Qian Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.25548v1</id>
+    <title>'Si'multaneous 'S'patial-'T'emporal Message Passing for Dynamic Graph Representation Learning</title>
+    <updated>2026-05-25T08:04:32Z</updated>
+    <link href="https://arxiv.org/abs/2605.25548v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.25548v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dynamic graph neural networks (DGNNs) that operate on snapshot sequences typically fall into one of two categories. \emph{Temporal-first} approaches build per-node temporal embeddings and only afterwards perform spatial aggregation, whereas \emph{Spatial-first} approaches invert this order, feeding the output of a graph convolution into a downstream temporal module. In either case, the rigid sequencing forces the second stage to consume an already-compressed summary produced by the first, ruling out joint reasoning over topology and evolution; concretely, the message-passing operator never gets to weight a neighbor's contribution by that neighbor's \emph{past} trajectory. This paper introduces \textbf{SiST-GNN} (\textbf{Si}multaneous \textbf{S}patial-\textbf{T}emporal \textbf{GNN}), which fuses the two signals inside a single message-passing operation rather than chaining them. Concretely, at each snapshot we maintain a recurrent hidden state per node that summarises its history, pair it with the node's current feature vector, and treat the pair as two nodes joined by a cross-time edge; running a standard graph convolution on this temporally augmented graph yields the updated representation. Our empirical study spans nine public baselines and fourteen model-dataset combinations, covering both fixed-split and live-update evaluation regimes. Across every public benchmark, SiST-GNN sets a new state of the art in link prediction task over the strongest prior method by $109$--$277\%$ in the fixed-split setting and by $68$--$194\%$ in the live-update setting. We additionally construct three dynamic node-classification tasks by discretising the underlying continuous-time event streams; here SiST-GNN beats the leading discrete-time (DTDG) baseline by $7$--$22\%$ and matches continuous-time (CTDG) methods that consume the raw events directly.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-25T08:04:32Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Shubhajit Roy</name>
+    </author>
+    <author>
+      <name>Anirban Dasgupta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.18211v1</id>
+    <title>Leveraging Graph Structure in Seq2Seq Models for Knowledge Graph Link Prediction</title>
+    <updated>2026-05-18T10:56:14Z</updated>
+    <link href="https://arxiv.org/abs/2605.18211v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.18211v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Graph-Augmented Sequence-to-Sequence (GA-S2S), a novel framework that integrates a T5-small encoder-decoder with a Relational Graph Attention Network (RGAT) to improve link prediction in knowledge graphs. While existing Seq2Seq models rely solely on surface-level textual descriptions of entities and relations and at best, flatten the neighborhoods of a query entity into a single linear sequence, thereby discarding the inherent graph structure, GA-S2S jointly encodes both textual features and the full $k$-hop subgraph topology surrounding the query entity. By integrating raw encoder outputs with RGAT's relation-aware embeddings, our model captures and leverages richer multi-hop relational patterns and textual information. Our preliminary experiments on the CoDEx dataset demonstrate that GA-S2S outperforms competitive Seq2Seq-based baseline models, achieving up to a 19\% relative gain in link prediction accuracy.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-18T10:56:14Z</published>
+    <arxiv:comment>9 pages, 1 figure, 2 tables. Preprint of a paper accepted at the 5th Workshop on LLM-Integrated Knowledge Graph Generation from Text (TEXT2KG), co-located with ESWC 2026, May 10--14, 2026, Dubrovnik, Croatia</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Luu Huu Phuc</name>
+    </author>
+    <author>
+      <name>Ratan Bahadur Thapa</name>
+    </author>
+    <author>
+      <name>Mojtaba Nayyeri</name>
+    </author>
+    <author>
+      <name>Jingcheng Wu</name>
+    </author>
+    <author>
+      <name>Evgeny Kharlamov</name>
+    </author>
+    <author>
+      <name>Steffen Staab</name>
+    </author>
+  </entry>
+</feed>

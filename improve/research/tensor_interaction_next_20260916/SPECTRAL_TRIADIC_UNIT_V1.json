@@ -1,0 +1,154 @@
+{
+  "created_at_utc": "2026-09-16T07:38:54.413324+00:00",
+  "tests": 6,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "evidence": {
+    "author": {
+      "commit": "bf38adfcfc441d4bf71e9eff43d87e41a0f1e7a7",
+      "source_sha256": "b7d7b83c88b837f525fb450cdec7617bd1066228486d4ce76671eca9dd9f0c3a",
+      "full_unmodified_layer_module_executed": true,
+      "original_training_scripts_executed": false,
+      "initialization_and_rng_exact": true,
+      "errors": [
+        {
+          "bias": false,
+          "forward": 0.0,
+          "gradient": 3.552713678800501e-15
+        },
+        {
+          "bias": true,
+          "forward": 0.0,
+          "gradient": 0.0
+        }
+      ]
+    },
+    "controls": {
+      "initial_rng_equal": true,
+      "full_direct_initial_function_and_input_gradient_equal": true,
+      "linear_layer_hessian_exact_zero": true,
+      "normalized_tensor_additive_constraint": true,
+      "spectral_gauge_shift_invariance": true,
+      "direct_tensor_can_violate_constraint": true,
+      "equal_trainable_capacity_claimed": false,
+      "complexity": [
+        {
+          "inputs": 16,
+          "outputs": 16,
+          "full_trainable": 457,
+          "direct_trainable": 2481,
+          "fixed_tensor_elements": 2176,
+          "quadratic_multiply_adds_per_query": 2176
+        },
+        {
+          "inputs": 32,
+          "outputs": 32,
+          "full_trainable": 1681,
+          "direct_trainable": 18017,
+          "fixed_tensor_elements": 16896,
+          "quadratic_multiply_adds_per_query": 16896
+        },
+        {
+          "inputs": 128,
+          "outputs": 64,
+          "full_trainable": 16769,
+          "direct_trainable": 536833,
+          "fixed_tensor_elements": 528384,
+          "quadratic_multiply_adds_per_query": 528384
+        },
+        {
+          "inputs": 64,
+          "outputs": 64,
+          "full_trainable": 6433,
+          "direct_trainable": 137409,
+          "fixed_tensor_elements": 133120,
+          "quadratic_multiply_adds_per_query": 133120
+        }
+      ]
+    },
+    "executor": {
+      "training_only_boundary": true,
+      "cuda0_rejected": true,
+      "evaluation_metrics_computed": false,
+      "training_random_streams_equal": true,
+      "all_active_gradients_finite": true,
+      "frozen_parameters_unchanged": true,
+      "lnc_exact_identity_without_training": true,
+      "records": [
+        {
+          "kind": "full",
+          "trainable_parameters": 2415,
+          "fixed_parameters": 1376,
+          "diagnostics": {
+            "calls": 5,
+            "layer_calls": 10,
+            "query_rows": 48,
+            "quadratic_terms": 8256,
+            "maximum_absolute_quadratic_weight": 0.7068662047386169,
+            "maximum_absolute_activation": 2.6575546264648438
+          }
+        },
+        {
+          "kind": "linear_only",
+          "trainable_parameters": 2415,
+          "fixed_parameters": 1376,
+          "diagnostics": {
+            "calls": 5,
+            "layer_calls": 10,
+            "query_rows": 48,
+            "quadratic_terms": 8256,
+            "maximum_absolute_quadratic_weight": 0.7068662047386169,
+            "maximum_absolute_activation": 2.5759308338165283
+          }
+        },
+        {
+          "kind": "direct_quadratic",
+          "trainable_parameters": 3603,
+          "fixed_parameters": 188,
+          "diagnostics": {
+            "calls": 5,
+            "layer_calls": 10,
+            "query_rows": 48,
+            "quadratic_terms": 8256,
+            "maximum_absolute_quadratic_weight": 0.7088940143585205,
+            "maximum_absolute_activation": 2.6595189571380615
+          }
+        }
+      ]
+    },
+    "graph": {
+      "query_edges_and_reverse_absent": true,
+      "omitted_labels_do_not_affect_graph": true,
+      "node_permutation_max_error": 0.0,
+      "query_order_max_error": 3.725290298461914e-09
+    },
+    "polynomial": {
+      "independent_numpy_max_error": 4.440892098500626e-16,
+      "input_and_all_active_parameter_gradcheck": true,
+      "analytic_hessian_max_error": 0.0,
+      "upper_triangular_cross_terms_counted_once": true,
+      "square_hessian_factor_two_verified": true
+    },
+    "failure": {
+      "exact_completed_steps": 2,
+      "current_failed_step": 3,
+      "operation": "forward",
+      "model_optimizer_and_rng_retained": true,
+      "formal_fit": false
+    }
+  },
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_spectral_triadic_graph_v1.py": "e6082b019e186308218e0592845e35b92a4f61bbcc50cb5bec55bc849fbf742a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/spectral_triadic_graph_v1.py": "f1e1928dc48d0cd6ea8b64b9f1b233d45aebb06b552d938ed6b479ee1b86486c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_spectral_triadic_experiment_v1.py": "a8ef741e06a2b268e3acbdc1c0b70c6d23eb92fcfb6d9d718fb054c9679d3fe6",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_nested_anchor_v2.py": "31b81bb2a0cfd1978b9fdf467b2dd5354b1fc748081b7b9522c6603e9d9015f0",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/overlap_block_models.py": "8cd9369ecab95c93889ae2bfa2d1e9e0809f4bc260dd70d7bad74ac440182791",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/sharpness_graph_v1.py": "49f346bb2d84281082c9cd38f65254abacdfe6b0d78fa0dd238320451d347982",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/tensor_interaction_next_20260916/SHONN_AUTHOR_SOURCE_V1.json": "92bb9d90efa5fb780ad612d6ffd8562bb2757e00e2effc66ad7d79cbdc212e54",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/tensor_interaction_next_20260916/shonn_author_v1_lib__layers.py": "b7d7b83c88b837f525fb450cdec7617bd1066228486d4ce76671eca9dd9f0c3a"
+  },
+  "formal_neural_fits": 0,
+  "evaluation_labels_read": false,
+  "sha256": "e9d3a6c6d98bce12a7139f91515534cf8e97e5fa7b6924a53068db0214eb0a88"
+}

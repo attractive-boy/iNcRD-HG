@@ -1,0 +1,346 @@
+[
+  {
+    "name": "arxiv_link",
+    "url": "https://export.arxiv.org/api/query",
+    "params": {
+      "search_query": "all:\"link prediction\" AND (all:invariance OR all:\"domain generalization\" OR all:\"causal learning\")",
+      "start": 0,
+      "max_results": 12,
+      "sortBy": "submittedDate",
+      "sortOrder": "descending"
+    },
+    "utc": "2026-09-15T23:31:11.740206+00:00",
+    "status": 200,
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/invariance_next_20260916/arxiv_link_v1.xml",
+    "sha256": "f00f7e394de51011990665165e4bcfbd2d98b507d2ebebbfde1be2391043aa55",
+    "results": [
+      {
+        "id": "http://arxiv.org/abs/2608.10668v1",
+        "title": "FITTER: Vocabulary-Agnostic Cross-Domain Inference on Temporal Knowledge Graphs",
+        "published": "2026-08-11T08:47:58Z",
+        "summary": "Temporal knowledge graphs are central to many uses of the Semantic Web, but existing completion methods assume the entities, relation names, and timestamps to be reasoned about are already known at training time, restricting each model to a single graph and vocabulary. We propose FITTER, the first fully-inductive structural model for temporal knowledge graph link prediction that supports cross-domain transfer: the inference graph may contain entirely unseen entities, relation names, and timestamps drawn from a different domain. FITTER represents each predicate by its interaction patterns with others and time through encodings of relative rather than absolute ordering; message-passing fuses local and global temporal context to produce vocabulary-agnostic embeddings. We prove the temporal encoding is time-shift invariant and evaluate FITTER on cross-domain, cross-graph transfer over six temporal knowledge graph benchmarks of diverse domains, granularities, and time spans. FITTER consistently outperforms inductive baselines without retraining, indicating that vocabulary-agnostic structural learning is a viable foundation for inference over the heterogeneous knowledge graphs of the Semantic Web."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.06154v1",
+        "title": "Graphlets as Building Blocks for Structural Vocabulary in Knowledge Graph Foundation Models",
+        "published": "2026-05-07T12:47:34Z",
+        "summary": "Foundation models excel at language, where sentences become tokens, and vision, where images become pixels, because both reduce to discrete symbols on a shared, fixed grid. Knowledge Graphs share the discreteness, but not the geometry. Their entities and relations are discrete symbols, yet their arrangement is relational and lacks a common, fixed grid. Knowledge Graphs (KGs) share the discreteness, but not the geometry. They form irregular, non-Euclidean topologies whose local neighborhoods differ from graph to graph. Therefore, Knowledge Graph Foundation Models (KGFMs) rely on identifying structural invariances to produce transferable representations. Without a universal token set, KGFMs are limited in their ability to transfer representations across unseen KGs. We close this gap by treating graphlets, small connected graphs, as structural tokens that recur in heterogeneous KGs. In this paper, We introduce a model-agnostic framework based on a vocabulary of graphlets that mines a KG between relations via pattern matching. In particular, we considered closed and open 2- and 3-path, and star graphlets, to obtain robust invariances. The framework is evaluated on 51 KGs from a wide range of domains, for zero-shot inductive and transductive link prediction. Experiments show that adding simple graphlets to the vocabulary yields models that outperform prior KGFMs."
+      },
+      {
+        "id": "http://arxiv.org/abs/2604.00380v1",
+        "title": "Data-Attributed Adaptive Control Barrier Functions: Safety-Certified Training Data Curation via Influence Analysis",
+        "published": "2026-04-01T02:05:13Z",
+        "summary": "Learning-based adaptation of Control Barrier Function (CBF) parameters offers a promising path toward safe autonomous navigation that balances conservatism with performance. Yet the accuracy of the underlying safety predictor is ultimately constrained by training data quality, and no prior work has formally characterized how prediction errors propagate through the adaptive pipeline to degrade closed-loop safety guarantees. We introduce Data-Attributed Adaptive CBF (DA-CBF), a framework that integrates TracIn-based data attribution into adaptive CBF learning. Our theoretical contributions are fourfold: (i) corrected two-sided bounds relating the safety-loss surrogate to the CBF constraint margin; (ii) a safety margin preservation theorem showing that prediction error induces quantifiable margin degradation and, via a smooth parameter selector, yields a genuine closed-loop forward invariance guarantee not conditioned on a fixed trajectory; (iii) a CBF-QP constraint perturbation bound that links prediction accuracy directly to recursive feasibility; and (iv) a principled leave-one-out justification for influence-based data curation under explicit smoothness assumptions. On a DynamicUnicycle2D benchmark, DA-CBF reduces prediction RMSE by 35.6\\%, expands the certified safe operating set by 39\\%, and achieves collision-free navigation in a 16-obstacle environment where the uncurated baseline incurs 3 collisions."
+      },
+      {
+        "id": "http://arxiv.org/abs/2602.05424v2",
+        "title": "THOR: Inductive Link Prediction over Hyper-Relational Knowledge Graphs",
+        "published": "2026-02-05T08:15:49Z",
+        "summary": "Knowledge graphs (KGs) have become a key ingredient supporting a variety of applications. Beyond the traditional triplet representation of facts where a relation connects two entities, modern KGs observe an increasing number of hyper-relational facts, where an arbitrary number of qualifiers associated with a triplet provide auxiliary information to further describe the rich semantics of the triplet, which can effectively boost the reasoning performance in link prediction tasks. However, existing link prediction techniques over such hyper-relational KGs (HKGs) mostly focus on a transductive setting, where KG embedding models are learned from the specific vocabulary of a given KG and subsequently can only make predictions within the same vocabulary, limiting their generalizability to previously unseen vocabularies. Against this background, we propose THOR, an inducTive link prediction technique for Hyper-relational knOwledge gRaphs. Specifically, we first introduce both relation and entity foundation graphs, modeling their fundamental inter- and intra-fact interactions in HKGs, which are agnostic to any specific relations and entities. Afterward, THOR is designed to learn from the two foundation graphs with two parallel graph encoders followed by a transformer decoder, which supports efficient masked training and fully-inductive inference. We conduct a thorough evaluation of THOR in hyper-relational link prediction tasks on 12 datasets with different settings. Results show that THOR outperforms a sizable collection of baselines, yielding 66.1%, 55.9%, and 20.4% improvement over the best-performing rule-based, semi-inductive, and fully-inductive techniques, respectively. A series of ablation studies also reveals our key design factors capturing the structural invariance transferable across HKGs for inductive tasks."
+      },
+      {
+        "id": "http://arxiv.org/abs/2511.14317v7",
+        "title": "Intervention Efficiency and Perturbation Validation Framework: Capacity-Aware and Robust Clinical Model Selection under the Rashomon Effect",
+        "published": "2025-11-18T10:21:07Z",
+        "summary": "In clinical machine learning, the coexistence of multiple models with comparable performance (a manifestation of the Rashomon Effect) poses fundamental challenges for trustworthy deployment and evaluation. Small, imbalanced, and noisy datasets, coupled with high-dimensional and weakly identified clinical features, amplify this multiplicity and make conventional validation schemes unreliable. As a result, selecting among equally performing models becomes uncertain, particularly when resource constraints and operational priorities are not considered by conventional metrics like F1 score. To address these issues, we propose two complementary tools for robust model assessment and selection: Intervention Efficiency (IE) and the Perturbation Validation Framework (PVF). IE is a capacity-aware metric that quantifies how efficiently a model identifies actionable true positives when only limited interventions are feasible, thereby linking predictive performance with clinical utility. PVF introduces a structured approach to assess the stability of models under data perturbations, identifying models whose performance remains most invariant across noisy or shifted validation sets. Empirical results on synthetic and real-world healthcare datasets show that using these tools facilitates the selection of models that generalize more robustly and align with capacity constraints, offering a new direction for tackling the Rashomon Effect in clinical settings."
+      },
+      {
+        "id": "http://arxiv.org/abs/2510.16885v1",
+        "title": "UniGTE: Unified Graph-Text Encoding for Zero-Shot Generalization across Graph Tasks and Domains",
+        "published": "2025-10-19T15:36:45Z",
+        "summary": "Generalizing to unseen graph tasks without task-specific supervision is challenging: conventional graph neural networks are typically tied to a fixed label space, while large language models (LLMs) struggle to capture graph structure. We introduce UniGTE, an instruction-tuned encoder-decoder framework that unifies structural and semantic reasoning. The encoder augments a pretrained autoregressive LLM with learnable alignment tokens and a structure-aware graph-text attention mechanism, enabling it to attend jointly to a tokenized graph and a natural-language task prompt while remaining permutation-invariant to node order. This yields compact, task-aware graph representations. Conditioned solely on these representations, a frozen LLM decoder predicts and reconstructs: it outputs the task answer and simultaneously paraphrases the input graph in natural language. The reconstruction objective regularizes the encoder to preserve structural cues. UniGTE is instruction-tuned on five datasets spanning node-level, edge-level, and graph-level tasks across diverse domains, yet requires no fine-tuning at inference. It achieves new state-of-the-art zero-shot results on node classification, link prediction, graph classification, and graph regression under cross-task and cross-domain settings, demonstrating that tight integration of graph structure with LLM semantics enables robust, transferable graph reasoning."
+      },
+      {
+        "id": "http://arxiv.org/abs/2510.01510v3",
+        "title": "Flock: A Knowledge Graph Foundation Model via Learning on Random Walks",
+        "published": "2025-10-01T23:09:46Z",
+        "summary": "We study the problem of zero-shot link prediction on knowledge graphs (KGs), which requires models to generalize to novel entities and novel relations. Knowledge graph foundation models (KGFMs) address this task by enforcing equivariance over both nodes and relations, which enables them to learn structural properties of nodes and relations that transfer to novel KGs with similar structure. However, the conventional notion of deterministic equivariance inherently limits the expressive power of KGFMs, as it prevents them from distinguishing relations that are structurally similar but semantically distinct. To overcome this limitation, we propose to leverage probabilistic node-relation equivariance, which preserves equivariance in distribution while using structured randomness to break symmetries at inference time. Building on this principle, we present Flock, a KGFM that iteratively samples random walks, encodes them into sequences, embeds them with a sequence model, and aggregates node and relation representations through learned pooling. Flock respects probabilistic node-relation equivariance and, crucially, is a universal approximator for isomorphism-invariant link-level functions over KGs. Empirically, Flock perfectly solves our new diagnostic dataset Petals on which current KGFMs fail, and achieves state-of-the-art performance on entity and relation prediction tasks across 54 KGs from diverse domains. Code is available at https://github.com/jw9730/flock."
+      },
+      {
+        "id": "http://arxiv.org/abs/2509.03860v1",
+        "title": "KGBERT4Eth: A Feature-Complete Transformer Powered by Knowledge Graph for Multi-Task Ethereum Fraud Detection",
+        "published": "2025-09-04T03:38:11Z",
+        "summary": "Ethereum's rapid ecosystem expansion and transaction anonymity have triggered a surge in malicious activity. Detection mechanisms currently bifurcate into three technical strands: expert-defined features, graph embeddings, and sequential transaction patterns, collectively spanning the complete feature sets of Ethereum's native data layer. Yet the absence of cross-paradigm integration mechanisms forces practitioners to choose between sacrificing sequential context awareness, structured fund-flow patterns, or human-curated feature insights in their solutions. To bridge this gap, we propose KGBERT4Eth, a feature-complete pre-training encoder that synergistically combines two key components: (1) a Transaction Semantic Extractor, where we train an enhanced Transaction Language Model (TLM) to learn contextual semantic representations from conceptualized transaction records, and (2) a Transaction Knowledge Graph (TKG) that incorporates expert-curated domain knowledge into graph node embeddings to capture fund flow patterns and human-curated feature insights. We jointly optimize pre-training objectives for both components to fuse these complementary features, generating feature-complete embeddings. To emphasize rare anomalous transactions, we design a biased masking prediction task for TLM to focus on statistical outliers, while the Transaction TKG employs link prediction to learn latent transaction relationships and aggregate knowledge. Furthermore, we propose a mask-invariant attention coordination module to ensure stable dynamic information exchange between TLM and TKG during pre-training. KGBERT4Eth significantly outperforms state-of-the-art baselines in both phishing account detection and de-anonymization tasks, achieving absolute F1-score improvements of 8-16% on three phishing detection benchmarks and 6-26% on four de-anonymization datasets."
+      },
+      {
+        "id": "http://arxiv.org/abs/2505.24178v1",
+        "title": "Invariant Link Selector for Spatial-Temporal Out-of-Distribution Problem",
+        "published": "2025-05-30T03:40:00Z",
+        "summary": "In the era of foundation models, Out-of- Distribution (OOD) problems, i.e., the data discrepancy between the training environments and testing environments, hinder AI generalization. Further, relational data like graphs disobeying the Independent and Identically Distributed (IID) condition makes the problem more challenging, especially much harder when it is associated with time. Motivated by this, to realize the robust invariant learning over temporal graphs, we want to investigate what components in temporal graphs are most invariant and representative with respect to labels. With the Information Bottleneck (IB) method, we propose an error-bounded Invariant Link Selector that can distinguish invariant components and variant components during the training process to make the deep learning model generalizable for different testing scenarios. Besides deriving a series of rigorous generalizable optimization functions, we also equip the training with task-specific loss functions, e.g., temporal link prediction, to make pretrained models solve real-world application tasks like citation recommendation and merchandise recommendation, as demonstrated in our experiments with state-of-the-art (SOTA) methods. Our code is available at https://github.com/kthrn22/OOD-Linker."
+      },
+      {
+        "id": "http://arxiv.org/abs/2505.24055v1",
+        "title": "Bridging Source and Target Domains via Link Prediction for Unsupervised Domain Adaptation on Graphs",
+        "published": "2025-05-29T22:54:40Z",
+        "summary": "Graph neural networks (GNNs) have shown great ability for node classification on graphs. However, the success of GNNs relies on abundant labeled data, while obtaining high-quality labels is costly and challenging, especially for newly emerging domains. Hence, unsupervised domain adaptation (UDA), which trains a classifier on the labeled source graph and adapts it to the unlabeled target graph, is attracting increasing attention. Various approaches have been proposed to alleviate the distribution shift between the source and target graphs to facilitate the classifier adaptation. However, most of them simply adopt existing UDA techniques developed for independent and identically distributed data to gain domain-invariant node embeddings for graphs, which do not fully consider the graph structure and message-passing mechanism of GNNs during the adaptation and will fail when label distribution shift exists among domains. In this paper, we proposed a novel framework that adopts link prediction to connect nodes between source and target graphs, which can facilitate message-passing between the source and target graphs and augment the target nodes to have ``in-distribution'' neighborhoods with the source domain. This strategy modified the target graph on the input level to reduce its deviation from the source domain in the embedding space and is insensitive to disproportional label distributions across domains. To prevent the loss of discriminative information in the target graph, we further design a novel identity-preserving learning objective, which guides the learning of the edge insertion module together with reconstruction and adaptation losses. Experimental results on real-world datasets demonstrate the effectiveness of our framework."
+      },
+      {
+        "id": "http://arxiv.org/abs/2505.11803v1",
+        "title": "VITA: Versatile Time Representation Learning for Temporal Hyper-Relational Knowledge Graphs",
+        "published": "2025-05-17T03:16:13Z",
+        "summary": "Knowledge graphs (KGs) have become an effective paradigm for managing real-world facts, which are not only complex but also dynamically evolve over time. The temporal validity of facts often serves as a strong clue in downstream link prediction tasks, which predicts a missing element in a fact. Traditional link prediction techniques on temporal KGs either consider a sequence of temporal snapshots of KGs with an ad-hoc defined time interval or expand a temporal fact over its validity period under a predefined time granularity; these approaches not only suffer from the sensitivity of the selection of time interval/granularity, but also face the computational challenges when handling facts with long (even infinite) validity. Although the recent hyper-relational KGs represent the temporal validity of a fact as qualifiers describing the fact, it is still suboptimal due to its ignorance of the infinite validity of some facts and the insufficient information encoded from the qualifiers about the temporal validity. Against this background, we propose VITA, a $\\underline{V}$ersatile t$\\underline{I}$me represen$\\underline{TA}$tion learning method for temporal hyper-relational knowledge graphs. We first propose a versatile time representation that can flexibly accommodate all four types of temporal validity of facts (i.e., since, until, period, time-invariant), and then design VITA to effectively learn the time information in both aspects of time value and timespan to boost the link prediction performance. We conduct a thorough evaluation of VITA compared to a sizable collection of baselines on real-world KG datasets. Results show that VITA outperforms the best-performing baselines in various link prediction tasks (predicting missing entities, relations, time, and other numeric literals) by up to 75.3%. Ablation studies and a case study also support our key design choices."
+      },
+      {
+        "id": "http://arxiv.org/abs/2502.01684v4",
+        "title": "Predict, Cluster, Refine: A Joint Embedding Predictive Self-Supervised Framework for Graph Representation Learning",
+        "published": "2025-02-02T07:42:45Z",
+        "summary": "Graph representation learning has emerged as a cornerstone for tasks like node classification and link prediction, yet prevailing self-supervised learning (SSL) methods face challenges such as computational inefficiency, reliance on contrastive objectives, and representation collapse. Existing approaches often depend on feature reconstruction, negative sampling, or complex decoders, which introduce training overhead and hinder generalization. Further, current techniques which address such limitations fail to account for the contribution of node embeddings to a certain prediction in the absence of labeled nodes. To address these limitations, we propose a novel joint embedding predictive framework for graph SSL that eliminates contrastive objectives and negative sampling while preserving semantic and structural information. Additionally, we introduce a semantic-aware objective term that incorporates pseudo-labels derived from Gaussian Mixture Models (GMMs), enhancing node discriminability by evaluating latent feature contributions. Extensive experiments demonstrate that our framework outperforms state-of-the-art graph SSL methods across benchmarks, achieving superior performance without contrastive loss or complex decoders. Key innovations include (1) a non-contrastive, view-invariant joint embedding predictive architecture, (2) Leveraging single context and multiple targets relationship between subgraphs, and (3) GMM-based pseudo-label scoring to capture semantic contributions. This work advances graph SSL by offering a computationally efficient, collapse-resistant paradigm that bridges spatial and semantic graph features for downstream tasks. The code for our paper can be found at https://github.com/Deceptrax123/JPEB-GSSL"
+      }
+    ]
+  },
+  {
+    "name": "arxiv_risk",
+    "url": "https://export.arxiv.org/api/query",
+    "params": {
+      "search_query": "all:\"risk distribution matching\" OR ti:Fishr",
+      "start": 0,
+      "max_results": 8
+    },
+    "utc": "2026-09-15T23:31:11.741018+00:00",
+    "status": 200,
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/invariance_next_20260916/arxiv_risk_v1.xml",
+    "sha256": "9b25613dae375e3caa1a16599f87f88f962f3ed3b9945353ccbb4385ec3a1e3e",
+    "results": [
+      {
+        "id": "http://arxiv.org/abs/2310.18598v1",
+        "title": "Domain Generalisation via Risk Distribution Matching",
+        "published": "2023-10-28T05:23:55Z",
+        "summary": "We propose a novel approach for domain generalisation (DG) leveraging risk distributions to characterise domains, thereby achieving domain invariance. In our findings, risk distributions effectively highlight differences between training domains and reveal their inherent complexities. In testing, we may observe similar, or potentially intensifying in magnitude, divergences between risk distributions. Hence, we propose a compelling proposition: Minimising the divergences between risk distributions across training domains leads to robust invariance for DG. The key rationale behind this concept is that a model, trained on domain-invariant or stable features, may consistently produce similar risk distributions across various domains. Building upon this idea, we propose Risk Distribution Matching (RDM). Using the maximum mean discrepancy (MMD) distance, RDM aims to minimise the variance of risk distributions across training domains. However, when the number of domains increases, the direct optimisation of variance leads to linear growth in MMD computations, resulting in inefficiency. Instead, we propose an approximation that requires only one MMD computation, by aligning just two distributions: that of the worst-case domain and the aggregated distribution from all domains. Notably, this method empirically outperforms optimising distributional variance while being computationally more efficient. Unlike conventional DG matching algorithms, RDM stands out for its enhanced efficacy by concentrating on scalar risk distributions, sidestepping the pitfalls of high-dimensional challenges seen in feature or gradient matching. Our extensive experiments on standard benchmark datasets demonstrate that RDM shows superior generalisation capability over state-of-the-art DG methods."
+      },
+      {
+        "id": "http://arxiv.org/abs/2109.02934v3",
+        "title": "Fishr: Invariant Gradient Variances for Out-of-Distribution Generalization",
+        "published": "2021-09-07T08:36:09Z",
+        "summary": "Learning robust models that generalize well under changes in the data distribution is critical for real-world applications. To this end, there has been a growing surge of interest to learn simultaneously from multiple training domains - while enforcing different types of invariance across those domains. Yet, all existing approaches fail to show systematic benefits under controlled evaluation protocols. In this paper, we introduce a new regularization - named Fishr - that enforces domain invariance in the space of the gradients of the loss: specifically, the domain-level variances of gradients are matched across training domains. Our approach is based on the close relations between the gradient covariance, the Fisher Information and the Hessian of the loss: in particular, we show that Fishr eventually aligns the domain-level loss landscapes locally around the final weights. Extensive experiments demonstrate the effectiveness of Fishr for out-of-distribution generalization. Notably, Fishr improves the state of the art on the DomainBed benchmark and performs consistently better than Empirical Risk Minimization. Our code is available at https://github.com/alexrame/fishr."
+      }
+    ]
+  },
+  {
+    "name": "crossref_risk",
+    "url": "https://api.crossref.org/works",
+    "params": {
+      "query.title": "Domain Generalization with Risk Distribution Matching",
+      "rows": 5
+    },
+    "utc": "2026-09-15T23:31:11.744442+00:00",
+    "status": 200,
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/invariance_next_20260916/crossref_risk_v1.json",
+    "sha256": "34e60577726af230d626b05b23791ec64b084c19b98cb54f95f4b81692d1b9f2",
+    "results": [
+      {
+        "title": [
+          "Feature Distribution Matching for Federated Domain Generalization"
+        ],
+        "DOI": "10.36227/techrxiv.19575760",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              9,
+              8
+            ]
+          ]
+        },
+        "container-title": null,
+        "abstract": "<jats:p>&lt;p&gt;Multi-source domain adaptation has been intensively studied. The distribution shift in features inherent to specific domains causes the negative transfer problem, degrading a model’s generality to unseen tasks. In Federated Learning (FL), learned model parameters are shared to train a global model that leverages the underlying knowledge across client models trained on separate data domains. Nonetheless, the data confidentiality of FL hinders the effectiveness of traditional domain adaptation methods that require prior knowledge of different domain data. We propose a new federated domain generalization method called Federated Knowledge Alignment (FedKA). FedKA leverages feature distribution matching in a global workspace such that the global model can learn domain-invariant client features under the constraint of unknown client data. FedKA employs a federated voting mechanism that generates target domain pseudo-labels based on the consensus from clients to facilitate global model fine-tuning. We performed extensive experiments, including an ablation study, to evaluate the effectiveness of the proposed method in both image and text classification tasks using different model architectures. The empirical results show that FedKA can achieve performance gains of 8.8% and 3.5% in Digit-Five and Office-Caltech10, respectively, and a gain of 0.7% in Amazon Review with extremely limited training data. Moreover, we studied the effectiveness of FedKA in alleviating the negative transfer of FL based on a new criterion called Group Effect. The results show that FedKA can reduce negative transfer, improving the performance gain via model aggregation by 4 times.&lt;/p&gt;</jats:p>"
+      },
+      {
+        "title": [
+          "Feature Distribution Matching for Federated Domain Generalization"
+        ],
+        "DOI": "10.36227/techrxiv.19575760.v2",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              9,
+              8
+            ]
+          ]
+        },
+        "container-title": null,
+        "abstract": "<jats:p>Multi-source domain adaptation has been intensively studied. The\ndistribution shift in features inherent to specific domains causes the\nnegative transfer problem, degrading a model’s generality to unseen\ntasks. In Federated Learning (FL), learned model parameters are shared\nto train a global model that leverages the underlying knowledge across\nclient models trained on separate data domains. Nonetheless, the data\nconfidentiality of FL hinders the effectiveness of traditional domain\nadaptation methods that require prior knowledge of different domain\ndata. We propose a new federated domain generalization method called\nFederated Knowledge Alignment (FedKA). FedKA leverages feature\ndistribution matching in a global workspace such that the global model\ncan learn domain-invariant client features under the constraint of\nunknown client data. FedKA employs a federated voting mechanism that\ngenerates target domain pseudo-labels based on the consensus from\nclients to facilitate global model fine-tuning. We performed extensive\nexperiments, including an ablation study, to evaluate the effectiveness\nof the proposed method in both image and text classification tasks using\ndifferent model architectures. The empirical results show that FedKA can\nachieve performance gains of 8.8% and 3.5% in Digit-Five and\nOffice-Caltech10, respectively, and a gain of 0.7% in Amazon Review\nwith extremely limited training data. Moreover, we studied the\neffectiveness of FedKA in alleviating the negative transfer of FL based\non a new criterion called Group Effect. The results show that FedKA can\nreduce negative transfer, improving the performance gain via model\naggregation by 4 times.</jats:p>"
+      },
+      {
+        "title": [
+          "Domain Generalisation via Risk Distribution Matching"
+        ],
+        "DOI": "10.1109/wacv57701.2024.00277",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              3
+            ]
+          ]
+        },
+        "container-title": [
+          "2024 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
+        ],
+        "abstract": null
+      },
+      {
+        "title": [
+          "How Does Distribution Matching Help Domain Generalization: An Information-Theoretic Analysis"
+        ],
+        "DOI": "10.1109/tit.2025.3531136",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              3
+            ]
+          ]
+        },
+        "container-title": [
+          "IEEE Transactions on Information Theory"
+        ],
+        "abstract": null
+      },
+      {
+        "title": [
+          "Exact Feature Distribution Matching for Arbitrary Style Transfer and Domain Generalization"
+        ],
+        "DOI": "10.1109/cvpr52688.2022.00787",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              6
+            ]
+          ]
+        },
+        "container-title": [
+          "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "abstract": null
+      }
+    ]
+  },
+  {
+    "name": "crossref_causal_link",
+    "url": "https://api.crossref.org/works",
+    "params": {
+      "query": "causal invariant link prediction graph domain generalization",
+      "filter": "from-pub-date:2024-01-01",
+      "rows": 6
+    },
+    "utc": "2026-09-15T23:31:11.746867+00:00",
+    "status": 200,
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/invariance_next_20260916/crossref_causal_link_v1.json",
+    "sha256": "95465b445884bdaf3d66800d4d90e473663baf3ba8cf9f9dc2a1ef8782c8b6b7",
+    "results": [
+      {
+        "title": [
+          "Bridging Graph Transformers and Invariant Learning for Graph OOD Generalization"
+        ],
+        "DOI": "10.2139/ssrn.5571156",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "container-title": null,
+        "abstract": null
+      },
+      {
+        "title": [
+          "Evaluating the Temporal Generalization of TGAT for Link Prediction on Dynamic Wikipedia Graph"
+        ],
+        "DOI": "10.1109/peeec67807.2025.00173",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              15
+            ]
+          ]
+        },
+        "container-title": [
+          "2025 International Conference on Power, Electrical Engineering, Electronics and Control (PEEEC)"
+        ],
+        "abstract": null
+      },
+      {
+        "title": [
+          "Adaptive Volatility-Aware Causal Domain Construction for Robust Stock Prediction using Domain Generalization"
+        ],
+        "DOI": "10.1109/icoeca68095.2026.11485306",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              9
+            ]
+          ]
+        },
+        "container-title": [
+          "2026 6th International Conference on Expert Clouds and Applications (ICOECA)"
+        ],
+        "abstract": null
+      },
+      {
+        "title": [
+          "Enhancing Domain Generalization in Speech Emotion Recognition by Combining Domain-Variant Representations and Domain-Invariant Classifiers"
+        ],
+        "DOI": "10.1109/slt61566.2024.10832334",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              12,
+              2
+            ]
+          ]
+        },
+        "container-title": [
+          "2024 IEEE Spoken Language Technology Workshop (SLT)"
+        ],
+        "abstract": null
+      },
+      {
+        "title": [
+          "Causal Graph Representation Learning for Outcome-Oriented Link Prediction"
+        ],
+        "DOI": "10.1109/ijcnn60899.2024.10651266",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              30
+            ]
+          ]
+        },
+        "container-title": [
+          "2024 International Joint Conference on Neural Networks (IJCNN)"
+        ],
+        "abstract": null
+      },
+      {
+        "title": [
+          "Multi-Relational Graph Neural Network for Out-of-Domain Link Prediction"
+        ],
+        "DOI": "10.1109/ijcnn60899.2024.10650198",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              30
+            ]
+          ]
+        },
+        "container-title": [
+          "2024 International Joint Conference on Neural Networks (IJCNN)"
+        ],
+        "abstract": null
+      }
+    ]
+  }
+]

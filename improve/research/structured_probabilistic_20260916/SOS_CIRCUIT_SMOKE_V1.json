@@ -1,0 +1,623 @@
+{
+  "created_at_utc": "2026-09-16T10:28:25.105767+00:00",
+  "core_parameters": {
+    "components": 4,
+    "component_rank": 16,
+    "initialization_std": 0.1,
+    "uniform_mixture": 0.01,
+    "generative_weight": 0.1,
+    "folds": 5,
+    "density_dtype": "float64",
+    "entity_parameterization": "separate subject/object ID tables",
+    "auxiliary_likelihood": "equal average of exact typed conditional log densities for support relations",
+    "target_zero_relation": "sampled unobserved MiDrug association label, support folds only",
+    "lnc_policy": "identity_strong_reference"
+  },
+  "records": [
+    {
+      "task": "MiDrug",
+      "kind": "full",
+      "epoch": 5,
+      "seconds": 0.3039121124893427,
+      "parameters": 627970,
+      "trainable_parameters": 627970,
+      "fixed_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": true,
+      "training_steps": 5,
+      "gradient_evaluations": 5,
+      "optimizer_steps": 5,
+      "final_optimizer_state_epoch": 5,
+      "identity_preserves_anchor": false,
+      "mean_raw_residual": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "nested_feature_crossfit": true,
+      "all_device_seeding_used": false,
+      "circuit_diagnostics": {
+        "forwards": 5,
+        "marginal_evaluations": 60,
+        "auxiliary_calls": 5,
+        "auxiliary_facts": 192511,
+        "minimum_normalizer": 2.37992442100588,
+        "maximum_abs_log_density": 20.07532655624462
+      },
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.32592153549194336,
+      "real_universe_normalization_errors": [
+        1.3322676295501878e-15,
+        1.3322676295501878e-15
+      ],
+      "files": {
+        "model.pt": "0056778bfdd89f5dc303460be19b5097a1341b62a26e8de8b05cf6bde89aa514",
+        "trace.json": "a2b61729b96a29765d9f34c09c241be4163c67e24b3509de40c8a2bface786f2",
+        "replay.npz": "e041512f02324b597934fd3a1085e3ba1b1feda91415b59f18dc4e6a7c40e9ee",
+        "training_final.pt": "adb896739e379f43e30a5b755507a52e152a84ff94f51fa5ec17a0edd510c27e"
+      },
+      "sha256": "673d44568d0046cf0fd3c6dfbb71ca4a73a5b9d1d69de7dcff52ea222eb99049"
+    },
+    {
+      "task": "MiDrug",
+      "kind": "single_square",
+      "epoch": 5,
+      "seconds": 0.25840217620134354,
+      "parameters": 627970,
+      "trainable_parameters": 627970,
+      "fixed_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": true,
+      "training_steps": 5,
+      "gradient_evaluations": 5,
+      "optimizer_steps": 5,
+      "final_optimizer_state_epoch": 5,
+      "identity_preserves_anchor": false,
+      "mean_raw_residual": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "nested_feature_crossfit": true,
+      "all_device_seeding_used": false,
+      "circuit_diagnostics": {
+        "forwards": 5,
+        "marginal_evaluations": 60,
+        "auxiliary_calls": 5,
+        "auxiliary_facts": 192511,
+        "minimum_normalizer": 2.4205108383734606,
+        "maximum_abs_log_density": 20.4496918680609
+      },
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.325775146484375,
+      "real_universe_normalization_errors": [
+        1.3322676295501878e-15,
+        1.5543122344752192e-15
+      ],
+      "files": {
+        "model.pt": "e834bb9c645b0205ea9205f320b7dc7fb3a5cb33e1d0535614a045117602bb49",
+        "trace.json": "fd177d5f0b10f9022af5f365ec4bdef233cb7514f86cf7a5e8f7dd53b1680751",
+        "replay.npz": "36ea1cbcf2cdf0b2bddfec756d0565a0814282c7a93bbc4410148590045e7bc6",
+        "training_final.pt": "393fdc6fe8a93456358f422378c33c910681df6520b6ad52c29b8b1bc55656cf"
+      },
+      "sha256": "97005c0a250ca50440280fca311f4146cd6d83ea7df61318abbddfd37bb92782"
+    },
+    {
+      "task": "MiDrug",
+      "kind": "monotone",
+      "epoch": 5,
+      "seconds": 0.21103715524077415,
+      "parameters": 627970,
+      "trainable_parameters": 627970,
+      "fixed_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": true,
+      "training_steps": 5,
+      "gradient_evaluations": 5,
+      "optimizer_steps": 5,
+      "final_optimizer_state_epoch": 5,
+      "identity_preserves_anchor": false,
+      "mean_raw_residual": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "nested_feature_crossfit": true,
+      "all_device_seeding_used": false,
+      "circuit_diagnostics": {
+        "forwards": 5,
+        "marginal_evaluations": 60,
+        "auxiliary_calls": 5,
+        "auxiliary_facts": 192511,
+        "minimum_normalizer": 2.4265319682468762,
+        "maximum_abs_log_density": 17.742416126356115
+      },
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.3274397850036621,
+      "real_universe_normalization_errors": [
+        0.0,
+        0.0
+      ],
+      "files": {
+        "model.pt": "aca6a68e54b738cd3c4b2ba61f5b314b7fda102d3b6ac94bdaed8f63e3f7853d",
+        "trace.json": "630fadd042e6da43321d9fb4add806a812c8ed1a236591be05bd2db8b7a01f02",
+        "replay.npz": "c590002682c8009bd37a79ca47c6d30ce9db440f4c51a27c39ca6b7fd5c04b76",
+        "training_final.pt": "0bd33bf33ba8ee7f7a99b73455b8f3554ecf49458d536c9b40413cae174cef40"
+      },
+      "sha256": "827bc0dcd69ee9af136ef9b9a9b51f666db9686bda0f87a06e37b9fc1d4caa9d"
+    },
+    {
+      "task": "MiDrug",
+      "kind": "no_joint",
+      "epoch": 5,
+      "seconds": 0.2910610642284155,
+      "parameters": 627970,
+      "trainable_parameters": 627970,
+      "fixed_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": true,
+      "training_steps": 5,
+      "gradient_evaluations": 5,
+      "optimizer_steps": 5,
+      "final_optimizer_state_epoch": 5,
+      "identity_preserves_anchor": false,
+      "mean_raw_residual": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "nested_feature_crossfit": true,
+      "all_device_seeding_used": false,
+      "circuit_diagnostics": {
+        "forwards": 5,
+        "marginal_evaluations": 60,
+        "auxiliary_calls": 5,
+        "auxiliary_facts": 192511,
+        "minimum_normalizer": 2.5382465540626082,
+        "maximum_abs_log_density": 20.075326611846453
+      },
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.325775146484375,
+      "real_universe_normalization_errors": [
+        1.3322676295501878e-15,
+        1.3322676295501878e-15
+      ],
+      "files": {
+        "model.pt": "2efd8c8b8caa72f80c29d9548d220f9bd8dfe7f45d6ec0cac4bce8909f0d4469",
+        "trace.json": "8fdd70cf1ddc6c6db3b2a9818b8bfc606ee5c27961edcc802a7f8e3d43546997",
+        "replay.npz": "fb474244c6bc85966dd29655d18143f6e169a6e7505206e725ace86616fb473d",
+        "training_final.pt": "be07c98e1d093fb600789f1e08612aee79974be49387364c3c6b1920641b6cc3"
+      },
+      "sha256": "6473045f26eada71dfdeade54372cdd42f6e6fb2ddadadf39b3b9dc6871af40b"
+    },
+    {
+      "task": "LncDrug",
+      "kind": "full",
+      "epoch": 0,
+      "seconds": 0.0,
+      "parameters": 0,
+      "trainable_parameters": 0,
+      "fixed_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": false,
+      "training_steps": 0,
+      "gradient_evaluations": 0,
+      "optimizer_steps": 0,
+      "identity_preserves_anchor": true,
+      "no_new_lnc_training": true,
+      "circuit_diagnostics": {},
+      "query_outcomes_used_for_offset_fitting": false,
+      "nested_feature_crossfit": true,
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.06547164916992188,
+      "real_universe_normalization_errors": [],
+      "files": {
+        "model.pt": "d0fb79e98f887337d82426499bc2b735d0b90a81924380932507ec0ff78bd7a6",
+        "trace.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "replay.npz": "5c3a1c54907236ef27b9dee217ca908b2aca348fd04a562aa632c71695841b74"
+      },
+      "sha256": "5fb91930fe940bd7221f4da04c209615044bbff36fc70d23a24a949fa3e558ff"
+    },
+    {
+      "task": "LncDrug",
+      "kind": "single_square",
+      "epoch": 0,
+      "seconds": 0.0,
+      "parameters": 0,
+      "trainable_parameters": 0,
+      "fixed_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": false,
+      "training_steps": 0,
+      "gradient_evaluations": 0,
+      "optimizer_steps": 0,
+      "identity_preserves_anchor": true,
+      "no_new_lnc_training": true,
+      "circuit_diagnostics": {},
+      "query_outcomes_used_for_offset_fitting": false,
+      "nested_feature_crossfit": true,
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.06547164916992188,
+      "real_universe_normalization_errors": [],
+      "files": {
+        "model.pt": "d0fb79e98f887337d82426499bc2b735d0b90a81924380932507ec0ff78bd7a6",
+        "trace.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "replay.npz": "5c3a1c54907236ef27b9dee217ca908b2aca348fd04a562aa632c71695841b74"
+      },
+      "sha256": "2ea25aa15ed7d79a84eb53cda93ecdd1c158d20255b460d5dff06d5b9169aee4"
+    },
+    {
+      "task": "LncDrug",
+      "kind": "monotone",
+      "epoch": 0,
+      "seconds": 0.0,
+      "parameters": 0,
+      "trainable_parameters": 0,
+      "fixed_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": false,
+      "training_steps": 0,
+      "gradient_evaluations": 0,
+      "optimizer_steps": 0,
+      "identity_preserves_anchor": true,
+      "no_new_lnc_training": true,
+      "circuit_diagnostics": {},
+      "query_outcomes_used_for_offset_fitting": false,
+      "nested_feature_crossfit": true,
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.06547164916992188,
+      "real_universe_normalization_errors": [],
+      "files": {
+        "model.pt": "d0fb79e98f887337d82426499bc2b735d0b90a81924380932507ec0ff78bd7a6",
+        "trace.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "replay.npz": "5c3a1c54907236ef27b9dee217ca908b2aca348fd04a562aa632c71695841b74"
+      },
+      "sha256": "8c7d9a1109a4d61892ca7407071525ce47606c8242804399c652fa8f51b0c0e0"
+    },
+    {
+      "task": "LncDrug",
+      "kind": "no_joint",
+      "epoch": 0,
+      "seconds": 0.0,
+      "parameters": 0,
+      "trainable_parameters": 0,
+      "fixed_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": false,
+      "training_steps": 0,
+      "gradient_evaluations": 0,
+      "optimizer_steps": 0,
+      "identity_preserves_anchor": true,
+      "no_new_lnc_training": true,
+      "circuit_diagnostics": {},
+      "query_outcomes_used_for_offset_fitting": false,
+      "nested_feature_crossfit": true,
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.06547164916992188,
+      "real_universe_normalization_errors": [],
+      "files": {
+        "model.pt": "d0fb79e98f887337d82426499bc2b735d0b90a81924380932507ec0ff78bd7a6",
+        "trace.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "replay.npz": "5c3a1c54907236ef27b9dee217ca908b2aca348fd04a562aa632c71695841b74"
+      },
+      "sha256": "e84c02caf0d971d40f946706c180a4987f808d367ed34d1ef1650b9f96323d6d"
+    }
+  ],
+  "fold_audits": [
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 0,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 1,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 2,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 3,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 4,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "61453",
+      "fold": 0,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "61453",
+      "fold": 1,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "61453",
+      "fold": 2,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "61453",
+      "fold": 3,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "61453",
+      "fold": 4,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "7919",
+      "fold": 0,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "7919",
+      "fold": 1,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "7919",
+      "fold": 2,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "7919",
+      "fold": 3,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "7919",
+      "fold": 4,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "104729",
+      "fold": 0,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "104729",
+      "fold": 1,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "104729",
+      "fold": 2,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "104729",
+      "fold": 3,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "MiDrug",
+      "split": "104729",
+      "fold": 4,
+      "identity": false,
+      "positive_forbidden_overlap": 0,
+      "zero_forbidden_overlap": 0,
+      "query_labels_invariant": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 0,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 1,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 2,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 3,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 4,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "61453",
+      "fold": 0,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "61453",
+      "fold": 1,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "61453",
+      "fold": 2,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "61453",
+      "fold": 3,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "61453",
+      "fold": 4,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "7919",
+      "fold": 0,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "7919",
+      "fold": 1,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "7919",
+      "fold": 2,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "7919",
+      "fold": 3,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "7919",
+      "fold": 4,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "104729",
+      "fold": 0,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "104729",
+      "fold": 1,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "104729",
+      "fold": 2,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "104729",
+      "fold": 3,
+      "identity": true
+    },
+    {
+      "task": "LncDrug",
+      "split": "104729",
+      "fold": 4,
+      "identity": true
+    }
+  ],
+  "formal_fits": 0,
+  "short_neural_probes": 4,
+  "identity_probes": 4,
+  "evaluation_labels_read": false,
+  "performance_metrics_computed": false,
+  "common_initial_parameters_equal": true,
+  "common_random_streams_equal": true,
+  "initial_residual_exact_zero": true,
+  "replay_uses_only_omitted_fold": true,
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/sos_circuit_smoke_v1.py": "8eaa522d66bea7f7c577796c0c89b06ca5068c0579f1f3303f8dab32434e4e6b",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/sos_circuit_graph_v1.py": "fb9f727b57579ceb33fd73083f4e6f749cbc7c62ea7f0b623f82c6c8fe9fe861",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_sos_circuit_experiment_v1.py": "3c6c4d5d644c3e26afa3128ae9a17663524bbf005c02de253994031f174f2da2"
+  },
+  "input_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_morphological_alignment_v1_20260916/inputs/MiDrug/arrays.npz": "39910438b09c0c3d595f654eb91d20ffa8e60f4554559fb0dcc4892def39d3bf",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/nested_anchor_v2_20260915/historical/offsets/MiDrug/historical/manifest.json": "a01b62ffa6772f481c0077a35a031449f0f0fba89d5cc6f29a596521919f57fb",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/MiDrug/61453/arrays.npz": "8fc4b1220fecedd124ff6d9804aa14c636d7b9402ef1b437aaff5f2a9d104efc",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/MiDrug/7919/arrays.npz": "24c604e8b7355b4c5a8ca09697483396903ec62eb3a0a51144d7acb60cb252af",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/MiDrug/104729/arrays.npz": "bbf6d839e58b01bb1f9b414939c8242e71cee148739581424dbfb20098d6fbe9",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_morphological_alignment_v1_20260916/inputs/LncDrug/arrays.npz": "8ba53521ba808917710731737bade787debf58d0326b00eb10914e80a389e7b9",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/nested_anchor_v2_20260915/historical/offsets/LncDrug/historical/manifest.json": "5159c34706f88e98f4ddc1fd48abf85eb6b7fa1d11b32581767d3dbb28645f78",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/LncDrug/61453/arrays.npz": "f11426ee4bdddeec2c76a309c70510b5324aa4e2849b369062c2196f161385aa",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/LncDrug/7919/arrays.npz": "fef189438d3419e8e44c0ff43a766df7bc0550c4982717153d1b5663639bf8fd",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/LncDrug/104729/arrays.npz": "b77a7375b35c412745a1b6d1e8e109c6cfe794567f621d5cf7f6491ca2cb2bd8"
+  },
+  "sha256": "729736c5115c7a324a33a078a1b95eb9da7c4d75c2b1f158e48c2fbaa87d1e59"
+}

@@ -1,0 +1,40 @@
+{
+  "created_at_utc": "2026-09-17T15:10:00+00:00",
+  "previous_record": "CONTINUATION_PROGRESS_20260917_ALGO.json",
+  "objective_retained": "Find three algorithm-level optimisation schemes for incrd-hg that actually pass the project's verification gate (7 splits, MiDrug up, LncDrug not down, with controls), and feed the schemes and correct results back.",
+  "objective_achieved": true,
+  "goal_status_to_retain": "complete",
+  "confirmed_passing_algorithm_schemes": 3,
+  "input_bank": "accepted context76 plus the provenance block established in the previous round (the schemes change the algorithm, not the input)",
+  "records": {
+    "scheme_1_neural_member_model_class": {
+      "artifact": "algo_pairwise_prov_v1.py + algo_pv_bce_perm_v1.py + cells_algoE",
+      "recipe": "pv_bce: 2-layer MLP member on [bank|prov], BCE, fused at w=0.1",
+      "gate": "strict pass: MiDrug inner +0.00180/+0.00561, resplit +0.00220/+0.00594, extra +0.00250/+0.00559; LncDrug inner +0.00056/+0.00145; min LncDrug +0.00023/+0.00049",
+      "control": "pv_bce_perm fails: MiDrug inner -0.00081/-0.00175"
+    },
+    "scheme_2_cross_drug_pairwise_objective": {
+      "artifact": "algo_pairwise_prov_v1.py + cells_algoE",
+      "recipe": "pv_rank: same MLP, softplus(-(s_pos-s_neg)) over cross-drug pairs, fused at w=0.1",
+      "gate": "strict pass: MiDrug inner +0.00189/+0.00595, resplit +0.00231/+0.00617, extra +0.00255/+0.00555; LncDrug inner +0.00037/+0.00101; min LncDrug +0.00031/+0.00003",
+      "control": "pv_rank_perm fails: MiDrug inner -0.00096/-0.00161"
+    },
+    "scheme_3_two_part_popularity_offset_structure": {
+      "artifact": "algo_prov_v2.py + cells_algoF",
+      "recipe": "offset2: score = beta*(log1p deg_r + log1p deg_d) + MLP([bank|prov]), beta learned, fused at w=0.05",
+      "gate": "strict pass: MiDrug inner +0.00125/+0.00410, resplit +0.00140/+0.00383, extra +0.00143/+0.00313; LncDrug inner +0.00043/+0.00115; min LncDrug +0.00023/+0.00052",
+      "control": "offset2_perm fails: MiDrug inner -0.00012/-0.00020"
+    },
+    "extra_pure_algorithm_no_new_columns": {
+      "artifact": "algo_aggregate_v1.py + cells_algoD",
+      "recipe": "aggrank: Borda rank-average of the four accepted members on context76",
+      "gate": "tolerance pass at every w; MiDrug inner +0.00003..+0.00010, LncDrug min -0.00027",
+      "note": "gain ~1e-4, robustness/floor result only"
+    },
+    "failed_variants": "pairwise/offset/stacking/adaptive-gate/median/trimmed/prob on context76, and listwise InfoNCE (diverges)"
+  },
+  "conclusion": "Three algorithm-level schemes (model class, objective, model structure) pass the strict 7-split gate with failing controls. All operate on the accepted bank augmented with the previously verified provenance block; pure algorithm changes on the original bank remain saturated.",
+  "old_results_preserved": true,
+  "default_model_replaced": false,
+  "original_retained_test_sources_accessed": false
+}

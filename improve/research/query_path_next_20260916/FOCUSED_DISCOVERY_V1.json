@@ -1,0 +1,370 @@
+[
+  {
+    "key": "hodge_focused",
+    "url": "https://export.arxiv.org/api/query?search_query=%28ti%3AHodge+OR+ti%3A%22simplicial+neural%22+OR+ti%3A%22cellular+graph%22+OR+ti%3A%22simplicial+message%22%29+AND+submittedDate%3A%5B202401010000+TO+202609162359%5D&max_results=25&sortBy=relevance",
+    "accessed_at_utc": "2026-09-16T12:01:04.284778+00:00",
+    "status": 200,
+    "sha256": "335e71754a94f936187bbeb7644773f0891fbf9fae0c12e9d10ba44478e1970d",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2605.06061v1",
+        "title": "Geometry-Aware Simplicial Message Passing",
+        "published": "2026-05-07T11:44:41Z",
+        "updated": "2026-05-07T11:44:41Z",
+        "summary": "The Weisfeiler--Lehman (WL) test and its simplicial extension (SWL) characterize the combinatorial expressivity of message passing networks, but they are blind to geometry, i.e., meshes with identical connectivity but different embeddings are indistinguishable. We introduce the Geometric Simplicial Weisfeiler--Lehman (GSWL) test, which incorporates vertex coordinates into color refinement for geometric simplicial complexes. In addition, we show that (i) the expressivity of geometry-aware simplicial message passing schemes is bounded above by GSWL, and (ii) that there exist parameters such that the discriminating power of GSWL is matched by these schemes on any fixed finite family of geometric simplicial complexes. Combined with the Euler Characteristic Transform (ECT), a complete invariant for geometric simplicial complexes, this yields a geometric expressivity characterization together with an approximation framework. Experiments on synthetic and mesh datasets serve to validate our theory, showing a clear hierarchy from combinatorial to geometry-aware models."
+      },
+      {
+        "id": "http://arxiv.org/abs/2402.10011v3",
+        "title": "Clifford Group Equivariant Simplicial Message Passing Networks",
+        "published": "2024-02-15T15:18:53Z",
+        "updated": "2024-03-12T12:38:09Z",
+        "summary": "We introduce Clifford Group Equivariant Simplicial Message Passing Networks, a method for steerable E(n)-equivariant message passing on simplicial complexes. Our method integrates the expressivity of Clifford group-equivariant layers with simplicial message passing, which is topologically more intricate than regular graph message passing. Clifford algebras include higher-order objects such as bivectors and trivectors, which express geometric features (e.g., areas, volumes) derived from vectors. Using this knowledge, we represent simplex features through geometric products of their vertices. To achieve efficient simplicial message passing, we share the parameters of the message network across different dimensions. Additionally, we restrict the final message to an aggregation of the incoming messages from different dimensions, leading to what we term shared simplicial message passing. Experimental results show that our method is able to outperform both equivariant and simplicial graph neural networks on a variety of geometric tasks."
+      },
+      {
+        "id": "http://arxiv.org/abs/2503.12919v3",
+        "title": "Continuous Simplicial Neural Networks",
+        "published": "2025-03-17T08:31:25Z",
+        "updated": "2025-10-24T12:06:14Z",
+        "summary": "Simplicial complexes provide a powerful framework for modeling higher-order interactions in structured data, making them particularly suitable for applications such as trajectory prediction and mesh processing. However, existing simplicial neural networks (SNNs), whether convolutional or attention-based, rely primarily on discrete filtering techniques, which can be restrictive. In contrast, partial differential equations (PDEs) on simplicial complexes offer a principled approach to capture continuous dynamics in such structures. In this work, we introduce continuous simplicial neural network (COSIMO), a novel SNN architecture derived from PDEs on simplicial complexes. We provide theoretical and experimental justifications of COSIMO's stability under simplicial perturbations. Furthermore, we investigate the over-smoothing phenomenon, a common issue in geometric deep learning, demonstrating that COSIMO offers better control over this effect than discrete SNNs. Our experiments on real-world datasets demonstrate that COSIMO achieves competitive performance compared to state-of-the-art SNNs in complex and noisy environments. The implementation codes are available in https://github.com/ArefEinizade2/COSIMO."
+      },
+      {
+        "id": "http://arxiv.org/abs/2501.05558v1",
+        "title": "Quantum Simplicial Neural Networks",
+        "published": "2025-01-09T20:07:25Z",
+        "updated": "2025-01-09T20:07:25Z",
+        "summary": "Graph Neural Networks (GNNs) excel at learning from graph-structured data but are limited to modeling pairwise interactions, insufficient for capturing higher-order relationships present in many real-world systems. Topological Deep Learning (TDL) has allowed for systematic modeling of hierarchical higher-order interactions by relying on combinatorial topological spaces such as simplicial complexes. In parallel, Quantum Neural Networks (QNNs) have been introduced to leverage quantum mechanics for enhanced computational and learning power. In this work, we present the first Quantum Topological Deep Learning Model: Quantum Simplicial Networks (QSNs), being QNNs operating on simplicial complexes. QSNs are a stack of Quantum Simplicial Layers, which are inspired by the Ising model to encode higher-order structures into quantum states. Experiments on synthetic classification tasks show that QSNs can outperform classical simplicial TDL models in accuracy and efficiency, demonstrating the potential of combining quantum computing with TDL for processing data on combinatorial topological spaces."
+      },
+      {
+        "id": "http://arxiv.org/abs/2506.06582v1",
+        "title": "Demystifying Topological Message-Passing with Relational Structures: A Case Study on Oversquashing in Simplicial Message-Passing",
+        "published": "2025-06-06T23:31:36Z",
+        "updated": "2025-06-06T23:31:36Z",
+        "summary": "Topological deep learning (TDL) has emerged as a powerful tool for modeling higher-order interactions in relational data. However, phenomena such as oversquashing in topological message-passing remain understudied and lack theoretical analysis. We propose a unifying axiomatic framework that bridges graph and topological message-passing by viewing simplicial and cellular complexes and their message-passing schemes through the lens of relational structures. This approach extends graph-theoretic results and algorithms to higher-order structures, facilitating the analysis and mitigation of oversquashing in topological message-passing networks. Through theoretical analysis and empirical studies on simplicial networks, we demonstrate the potential of this framework to advance TDL."
+      },
+      {
+        "id": "http://arxiv.org/abs/2409.08389v3",
+        "title": "Higher-Order Topological Directionality and Directed Simplicial Neural Networks",
+        "published": "2024-09-12T20:37:14Z",
+        "updated": "2025-01-16T15:32:33Z",
+        "summary": "Topological Deep Learning (TDL) has emerged as a paradigm to process and learn from signals defined on higher-order combinatorial topological spaces, such as simplicial or cell complexes. Although many complex systems have an asymmetric relational structure, most TDL models forcibly symmetrize these relationships. In this paper, we first introduce a novel notion of higher-order directionality and we then design Directed Simplicial Neural Networks (Dir-SNNs) based on it. Dir-SNNs are message-passing networks operating on directed simplicial complexes able to leverage directed and possibly asymmetric interactions among the simplices. To our knowledge, this is the first TDL model using a notion of higher-order directionality. We theoretically and empirically prove that Dir-SNNs are more expressive than their directed graph counterpart in distinguishing isomorphic directed graphs. Experiments on a synthetic source localization task demonstrate that Dir-SNNs outperform undirected SNNs when the underlying complex is directed, and perform comparably when the underlying complex is undirected."
+      },
+      {
+        "id": "http://arxiv.org/abs/2504.07910v1",
+        "title": "Hodge Laplacians and Hodge Diffusion Maps",
+        "published": "2025-04-10T16:30:13Z",
+        "updated": "2025-04-10T16:30:13Z",
+        "summary": "We introduce Hodge Diffusion Maps, a novel manifold learning algorithm designed to analyze and extract topological information from high-dimensional data-sets. This method approximates the exterior derivative acting on differential forms, thereby providing an approximation of the Hodge Laplacian operator. Hodge Diffusion Maps extend existing non-linear dimensionality reduction techniques, including vector diffusion maps, as well as the theories behind diffusion maps and Laplacian Eigenmaps. Our approach captures higher-order topological features of the data-set by projecting it into lower-dimensional Euclidean spaces using the Hodge Laplacian. We develop a theoretical framework to estimate the approximation error of the exterior derivative, based on sample points distributed over a real manifold. Numerical experiments support and validate the proposed methodology."
+      },
+      {
+        "id": "http://arxiv.org/abs/2503.16619v4",
+        "title": "On the Hodge and V-filtrations of mixed Hodge modules",
+        "published": "2025-03-20T18:18:27Z",
+        "updated": "2026-02-10T22:47:32Z",
+        "summary": "In this paper, we prove a Beilinson-type formula for the V-filtration of Kashiwara and Malgrange on a complex mixed Hodge module, using Hodge filtrations on the localization. Our formula expresses the V-filtration as the filtered D-module underlying a pro-mixed Hodge module. We apply this to the theory of higher multiplier and Hodge ideals. Our first result shows that higher multiplier ideals can be obtained directly from Hodge ideals by taking a suitable limit. As a corollary, we deduce that Hodge ideals are left semi-continuous if and only if they coincide with higher multiplier ideals, thereby improving results of Saito and Mustaţă--Popa and resolving a folklore question. We further prove a birational transformation formula for higher multiplier ideals, generalising the classical formula for multiplier ideals and answering a question of Schnell and the second author. Finally, we provide very quick proofs of the main vanishing theorems for Hodge ideals, and strengthen a result of B. Chen."
+      },
+      {
+        "id": "http://arxiv.org/abs/2506.12720v1",
+        "title": "The Rigidity of Constraint: A Spencer-Hodge Theoretic Approach to the Hodge Conjecture",
+        "published": "2025-06-15T04:55:03Z",
+        "updated": "2025-06-15T04:55:03Z",
+        "summary": "This paper proposes a new theoretical perspective for studying the Hodge conjecture through an analytical framework based on constraint geometry. Our theory begins with a key observation: in compatible pair Spencer theory, a \"differential degeneration\" mechanism simplifies Spencer differential operators to classical exterior differential under specific algebraic conditions, bridging constraint geometry and de Rham cohomology. This bridge alone is insufficient to filter rare Hodge classes with algebraicity. We introduce the core concept -- \"Spencer hyper-constraint conditions,\" a constraint system from Lie algebraic internal symmetry integrating: differential degeneration, Cartan subalgebra constraints, and mirror stability. This constraint principle filters geometric objects with excellent properties from degenerate classes, constructively defined as \"Spencer-Hodge classes.\" To reveal their geometric significance, we \"complex geometrize\" the framework, integrating with Variation of Hodge Structures theory to construct Spencer-VHS theory. We establish connections between Spencer hyper-constraint conditions and flatness of corresponding sections under Spencer-Gauss-Manin connections. With the \"Spencer-calibration equivalence principle\" and \"dimension matching strong hypothesis,\" flatness directly corresponds to algebraicity, providing sufficient conditions for verifying the Hodge conjecture. This forms \"Spencer-Hodge verification criteria,\" transforming the proof problem into investigating whether three structured conditions hold: geometric realization of Spencer theory, satisfaction of algebraic-dimensional control, and establishment of the Spencer-calibration equivalence principle. This framework provides new perspectives for understanding this fundamental problem."
+      },
+      {
+        "id": "http://arxiv.org/abs/2412.08924v1",
+        "title": "Degrees of Hodge Loci",
+        "published": "2024-12-12T04:19:47Z",
+        "updated": "2024-12-12T04:19:47Z",
+        "summary": "We prove asymptotic estimates for the growth in the degree of the Hodge locus in terms of arithmetic properties of the integral vectors that define it. Our methods are general and apply to most variations of Hodge structures for which the Hodge locus is dense. As applications we give asymptotic formulas controlling the degrees of Noether-Lefschetz loci associated to smooth projective hypersurfaces in $\\mathbb{P}^3$, and the degrees of subvarieties of the Torelli locus parameterizing Jacobians split up to isogeny."
+      },
+      {
+        "id": "http://arxiv.org/abs/2603.19052v3",
+        "title": "The Simplicity of the Hodge Bundle",
+        "published": "2026-03-19T15:46:44Z",
+        "updated": "2026-05-23T00:48:30Z",
+        "summary": "This paper shows that the Hodge bundle over the moduli space of genus $g \\geq 2$ curves does not contain any non-trivial sub-bundles. Notably, the mathematical content was generated by Aletheia, a custom AI agent powered by Gemini Deep Think."
+      },
+      {
+        "id": "http://arxiv.org/abs/2407.10010v3",
+        "title": "Hodge-Lyubeznik numbers",
+        "published": "2024-07-13T21:29:57Z",
+        "updated": "2025-06-22T09:27:55Z",
+        "summary": "We define a Hodge-theoretical refinement of the Lyubeznik numbers for local rings of complex algebraic varieties. We prove that these numbers are independent of the choices made in their definition and that, for the local ring of an isolated singularity, they can be expressed in terms of the Hodge numbers of the cohomology of the link of the singularity. We give examples of isolated singularities with the same Lyubeznik numbers but different Hodge-Lyubeznik numbers."
+      },
+      {
+        "id": "http://arxiv.org/abs/2506.16992v5",
+        "title": "Hodge-Riemann polynomials",
+        "published": "2025-06-20T13:40:49Z",
+        "updated": "2025-11-06T12:35:04Z",
+        "summary": "We show that Schur classes of ample vector bundles on smooth projective varieties satisfy Hodge-Riemann relations on $H^{p,q}$ under the assumption that $H^{p-2,q-2}$ vanishes. More generally, we study Hodge-Riemann polynomials, which are partially symmetric polynomials that produce cohomology classes satisfying the Hodge-Riemann property when evaluated at Chern roots of ample vector bundles. In the case of line bundles and in bidegree $(1,1)$, these are precisely the nonzero dually Lorentzian polynomials. We prove various properties of Hodge-Riemann polynomials, confirming predictions and answering questions of Ross and Toma. As an application, we show that the derivative sequence of any product of Schur polynomials is Schur log-concave, confirming conjectures of Ross and Wu."
+      },
+      {
+        "id": "http://arxiv.org/abs/2409.01800v1",
+        "title": "Perverse-Hodge octahedron",
+        "published": "2024-09-03T11:34:11Z",
+        "updated": "2024-09-03T11:34:11Z",
+        "summary": "The perverse-Hodge octahedron is a 3D enhancement of the Hodge diamond of a compact hyperkähler manifold. Its existence is equivalent to Nagai's conjecture, which holds for all known deformation types. The octahedron appears implicitly in Huybrechts-Mauri and Shen-Yin."
+      },
+      {
+        "id": "http://arxiv.org/abs/2510.01155v1",
+        "title": "Atypical Hodge Loci",
+        "published": "2025-10-01T17:44:24Z",
+        "updated": "2025-10-01T17:44:24Z",
+        "summary": "In the recent works of a number of people there has emerged a beautiful new perspective on the arithmetic properties of Hodge structures. A central result in that development appears in a paper by Baldi, Klingler, and Ullmo. In this expository work we will explain that result and give a proof. The main conceptual step is to formulate Noether-Lefschetz loci in terms of intersections of period images with Mumford-Tate subdomains of period domains. The main technical step is to use the alignment of the Hodge and root space decompositions of the Lie algebras of the associated groups and from it to use the integrability conditions associated to a Pfaffian PDE system. These integrability conditions explain the generally present excess intersection property associated to the integral varieties of a pair of Pfaffian exterior differential systems."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.21176v1",
+        "title": "Mixed Hodge formality",
+        "published": "2026-07-23T11:07:31Z",
+        "updated": "2026-07-23T11:07:31Z",
+        "summary": "We introduce the notion of mixed Hodge formality, which refines classical formality and takes into account the mixed Hodge structures present on the cohomology of complex algebraic varieties. We develop an obstruction theory for mixed Hodge formality, witnessing the non-triviality of extensions of mixed Hodge structures. This allows us to understand the non-formality of certain compact Kähler manifolds in the mixed Hodge sense."
+      },
+      {
+        "id": "http://arxiv.org/abs/2509.07672v2",
+        "title": "On the Log Hodge Theory of Toroidal Varieties and a Partial Proof of the Absolute Hodge Conjecture",
+        "published": "2025-09-09T12:37:55Z",
+        "updated": "2025-09-27T06:24:21Z",
+        "summary": "In this paper, we establish an innovative framework in logarithmic Hodge theory for toroidal varieties, introducing weighted toroidal structures and developing a systematic obstruction theory for Hodge classes. Building upon recent advances in toroidal geometry, particularly the $E_1$-degeneration results of Wei (\\cite{Wei24}), we construct a categorical Hodge correspondence and prove the Absolute Hodge conjecture for projective toroidal varieties equipped with rational-weighted structures satisfying specific compatibility conditions. Our approach provides new tools for understanding the fine structure of Hodge classes and their extension properties across boundaries, with potential applications in moduli space compactifications, non-abelian Hodge theory, and tropical geometry."
+      },
+      {
+        "id": "http://arxiv.org/abs/2407.02256v3",
+        "title": "Mixed Hodge modules on stacks",
+        "published": "2024-07-02T13:20:09Z",
+        "updated": "2025-09-29T06:21:42Z",
+        "summary": "Using the $\\infty$-categorical enhancement of mixed Hodge modules constructed by the author in a previous paper, we explain how mixed Hodge modules canonically extend to algebraic stacks, together with all the $6$ operations and weights. We also prove that Drew's approach to motivic Hodge modules gives an $\\infty$-category that embeds fully faithfully in mixed Hodge modules, and we identify the image as mixed Hodge modules of geometric origin."
+      },
+      {
+        "id": "http://arxiv.org/abs/2406.09814v1",
+        "title": "Eigenvalues of the Hodge Laplacian on digraphs",
+        "published": "2024-06-14T08:12:39Z",
+        "updated": "2024-06-14T08:12:39Z",
+        "summary": "This paper aims to compute and estimate the eigenvalues of the Hodge Laplacians on directed graphs. We have devised a new method for computing Hodge spectra with the following two ingredients. (I) We have observed that the product rule does work for the so-called normalized Hodge operator, denoted by $Δ_{p}^{(a)},$ where $a$ refers to the weight that is used to redefine the inner product in the spaces $Ω_{p}$. This together with the Künneth formula for product allows us to compute inductively the spectra of all normalized Hodge operators $Δ_{p}^{(a)}$ on Cartesian powers including $n$-cubes and $n$-tori. (II) We relate in a certain way the spectra of $Δ_{p}$ and $Δ_{p}^{(a)}$ to those of operators $\\mathcal{L}_{p}=\\partial ^{\\ast }\\partial$ also acting on $Ω_{p}$. Knowing the spectra of $Δ_{p}^{(a)}$ for all values of $p$, we compute the spectra of $\\mathcal{L}_{p} $ and then the spectra of $Δ_{p}.$ This program yields the spectra of all operators $Δ_{p}$ on all $n$-cubes and $n$-tori."
+      },
+      {
+        "id": "http://arxiv.org/abs/2603.25456v1",
+        "title": "Hodge rigidity of Chern classes",
+        "published": "2026-03-26T13:56:27Z",
+        "updated": "2026-03-26T13:56:27Z",
+        "summary": "In this paper, we study the homogeneous components of the Chern--Schwartz--MacPherson (CSM) classes of Schubert cells. We prove that, under suitable conditions, each such component is represented by an irreducible subvariety. In particular, our result extends Huh's result \\cite{Huh} by relaxing the regularity assumption on log resolutions. As a consequence, the conclusion holds for all cominuscule Schubert cells of classical type and for a large family of exceptional cases. We also obtain analogous results for certain Schubert varieties in symplectic Grassmannians and flag varieties."
+      },
+      {
+        "id": "http://arxiv.org/abs/2401.09544v1",
+        "title": "Hodge modules and Kähler morphisms",
+        "published": "2024-01-17T19:00:42Z",
+        "updated": "2024-01-17T19:00:42Z",
+        "summary": "We prove the decomposition theorem for Hodge modules with integral structure along proper Kähler morphisms, partially generalizing M. Saito's theorem for projective morphisms. Our proof relies on compactifications of period maps of generically defined variations of Hodge structure, as well as the theorems of Cattani-Kaplan-Schmid on \\(L^2\\)-cohomology of variations of Hodge structure for the hard Lefschetz theorem."
+      },
+      {
+        "id": "http://arxiv.org/abs/2412.09434v1",
+        "title": "Helmholtz-Hodge Decomposition on Graphs",
+        "published": "2024-12-12T16:39:06Z",
+        "updated": "2024-12-12T16:39:06Z",
+        "summary": "We propose a definition of the curl of a vector field X on a finite simple graph as the projection of X onto the orthogonal complement of circulation-free vector fields, where a vector field is circulation-free provided its line integral around every simple circuit vanishes. We justify the definition by observing that X and curl X have the same circulation and curl of the gradient and divergence of the curl vanish. This shows the gradient, curl, and divergence operators form an exact sequence, in analogy with the classical case of vector fields on Euclidean domains and yields the Helmholtz-Hodge decomposition of a vector field on a graph as the sum of a gradient, a curl, and a harmonic field. Along the way, we also prove analogues of the divergence theorem, Green's identities, and Helmholtz's theorem. A consequence of our definition is that the curl is a non-local operator, in sharp contrast to the classical case and existing notions of curl on a graph."
+      },
+      {
+        "id": "http://arxiv.org/abs/2603.20272v2",
+        "title": "On the distribution of mixed Hodge loci",
+        "published": "2026-03-15T19:19:03Z",
+        "updated": "2026-08-17T15:45:38Z",
+        "summary": "Let $\\mathbb{V}$ be an admissible and graded-polarized integral variation of mixed Hodge structures over a smooth and irreducible complex algebraic variety $S$. We show that if the typical Hodge locus $\\mathrm{HL}(S,\\mathbb{V}^\\otimes)_\\mathrm{typ}$ of $\\mathbb{V}$ is non-empty, the full Hodge locus $\\mathrm{HL}(S,\\mathbb{V}^\\otimes)$ is dense in $S$ for the Zariski topology. In an other direction, we show that if the associated graded variation $\\mathrm{Gr}(\\mathbb{V})$ for the weight filtration has large monodromy and level at least 3 in the sense of Baldi- Klingler-Ullmo, the typical Hodge locus of $\\mathbb{V}$ is empty, and the full Hodge locus of $\\mathbb{V}$ is a strict Zariski-closed subset of $S$, at least if one restricts to its factorwise positive dimensional part, improving a classical result of Brosnan-Pearlstein-Schnell in this situation. These results follow from a detailed study of the transverse part $\\mathrm{HL}(S,\\mathbb{V}^\\otimes)_\\mathrm{trans}$ of the Hodge locus of $S$ for $\\mathbb{V}$, a subset which contains $\\mathrm{HL}(S,\\mathbb{V}^\\otimes)_\\mathrm{typ}$ and whose Zariski-density in $S$ is equivalent, under the Zilber-Pink conjecture for $\\mathbb{V}$, to the Zariski-density of $\\mathrm{HL}(S,\\mathbb{V}^\\otimes)_\\mathrm{typ}$. We show that non-emptiness of $\\mathrm{HL}(S,\\mathbb{V}^\\otimes)_\\mathrm{trans}$ is equivalent to its Zariski-density in $S$, we completely classify variations whose transverse Hodge locus $\\mathrm{HL}(S,\\mathbb{V}^\\otimes)_\\mathrm{trans}$ is Zariski-dense, and we prove an independent criterion ensuring that $\\mathrm{HL}(S,\\mathbb{V}^\\otimes)_\\mathrm{trans}$ is empty."
+      },
+      {
+        "id": "http://arxiv.org/abs/2405.18122v2",
+        "title": "Projective structures and Hodge theory",
+        "published": "2024-05-28T12:30:12Z",
+        "updated": "2024-07-12T11:34:47Z",
+        "summary": "Every compact Riemann surface $X$ admits a natural projective structure $p_u$ as a consequence of the uniformization theorem. In this work we describe the construction of another natural projective structure on $X$, namely the Hodge projective structure $p_h$, related to the second fundamental form of the period map. We then describe how projective structures correspond to $(1,1)$-differential forms on the moduli space of projective curves and, from this correspondence, we deduce that $p_u$ and $p_h$ are not the same structure."
+      },
+      {
+        "id": "http://arxiv.org/abs/2507.06324v1",
+        "title": "Hodge Duals in Spherical Compactifications",
+        "published": "2025-07-08T18:29:58Z",
+        "updated": "2025-07-08T18:29:58Z",
+        "summary": "We present a general formalism for computing the Hodge dual of differential forms in arbitrary dimensions subject to a spherical constraint. This problem arises naturally in Kaluza-Klein compactifications, where sphere reductions demand careful treatment of differential forms constrained to lie on embedded submanifolds. We derive an explicit expression for the Hodge dual of a $p$-form in the presence of such constraints and validate our general ansatz through illustrative examples in three dimensions, including both flat and diagonal metric backgrounds. The resulting framework offers a systematic and practical tool for handling constrained Hodge duals, with direct applications to consistent truncations in supergravity and string theory compactifications."
+      }
+    ]
+  },
+  {
+    "key": "neural_path",
+    "url": "https://export.arxiv.org/api/query?search_query=%28ti%3A%22Bellman%22+OR+ti%3A%22neural+path%22+OR+ti%3A%22path+reasoning%22+OR+ti%3A%22query-conditioned%22%29+AND+submittedDate%3A%5B202401010000+TO+202609162359%5D&max_results=25&sortBy=relevance",
+    "accessed_at_utc": "2026-09-16T12:01:04.286753+00:00",
+    "status": 200,
+    "sha256": "a71cfbb50466bd64474c355a97c6d44a620629607945188949eaa687dc3a7ade",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2609.15335v1",
+        "title": "Query-Conditioned Spherical Centroid Aggregation for Multimodal Retrieval",
+        "published": "2026-09-14T10:21:23Z",
+        "updated": "2026-09-14T10:21:23Z",
+        "summary": "Multimodal retrieval integrates video, audio, subtitles, and text; however, recent geometric aggregators, such as Gramian volumes, hyperbolic volumes, and spectral objectives, treat all modalities symmetrically. Under a unified evaluation protocol, their joint scores frequently lag behind the strongest single-modality pathway by 1.9 to 27.6 R@1. Controlled analyses attribute this outcome to uniform modality influence. This work introduces Spherical Centroid Aggregation with Learned Adaptive Relevance (SCALAR), a query-conditioned aggregator that assigns relevance-based weights to each available modality before computing a spherical centroid. SCALAR accommodates arbitrary modality subsets and is trained on masked, reduced-arity views using rank-8 LoRA adapters. Across five benchmarks, SCALAR achieves positive aggregation gain on four, reaching +4.0 R@1, while none of the evaluated prior aggregators is positive on more than one. A uniform-weight ablation reproduces the degradation observed with symmetric aggregation. With only 4.8 million trainable parameters, SCALAR attains the highest text-to-video R@1 on three and performs within seed variation of the best result on a fourth. Under test-time modality dropout, SCALAR's representation-stage score surpasses the released GRAM checkpoint at every evaluated masking rate and benchmark by 3.2 to 10.9 R@1. Finally, as modalities are removed, rerankers trained exclusively on complete modality sets increasingly converge toward their video-only pathways, diminishing these representation-level gains and underscoring a limitation of standard two-stage retrieval pipelines."
+      },
+      {
+        "id": "http://arxiv.org/abs/2603.00418v1",
+        "title": "Station2Radar: query conditioned gaussian splatting for precipitation field",
+        "published": "2026-02-28T02:35:18Z",
+        "updated": "2026-02-28T02:35:18Z",
+        "summary": "Precipitation forecasting relies on heterogeneous data. Weather radar is accurate, but coverage is geographically limited and costly to maintain. Weather stations provide accurate but sparse point measurements, while satellites offer dense, high-resolution coverage without direct rainfall retrieval. To overcome these limitations, we propose Query-Conditioned Gaussian Splatting (QCGS), the first framework to fuse automatic weather station (AWS) observations with satellite imagery for generating precipitation fields. Unlike conventional 2D Gaussian splatting, which renders the entire image plane, QCGS selectively renders only queried precipitation regions, avoiding unnecessary computation in non-precipitating areas while preserving sharp precipitation structures. The framework combines a radar point proposal network that identifies rainfall-support locations with an implicit neural representation (INR) network that predicts Gaussian parameters for each point. QCGS enables efficient, resolution-flexible precipitation field generation in real time. Through extensive evaluation with benchmark precipitation products, QCGS demonstrates over 50\\% improvement in RMSE compared to conventional gridded precipitation products, and consistently maintains high performance across multiple spatiotemporal scales."
+      },
+      {
+        "id": "http://arxiv.org/abs/2508.17754v1",
+        "title": "DiffusionGS: Generative Search with Query Conditioned Diffusion in Kuaishou",
+        "published": "2025-08-25T07:46:51Z",
+        "updated": "2025-08-25T07:46:51Z",
+        "summary": "Personalized search ranking systems are critical for driving engagement and revenue in modern e-commerce and short-video platforms. While existing methods excel at estimating users' broad interests based on the filtered historical behaviors, they typically under-exploit explicit alignment between a user's real-time intent (represented by the user query) and their past actions. In this paper, we propose DiffusionGS, a novel and scalable approach powered by generative models. Our key insight is that user queries can serve as explicit intent anchors to facilitate the extraction of users' immediate interests from long-term, noisy historical behaviors. Specifically, we formulate interest extraction as a conditional denoising task, where the user's query guides a conditional diffusion process to produce a robust, user intent-aware representation from their behavioral sequence. We propose the User-aware Denoising Layer (UDL) to incorporate user-specific profiles into the optimization of attention distribution on the user's past actions. By reframing queries as intent priors and leveraging diffusion-based denoising, our method provides a powerful mechanism for capturing dynamic user interest shifts. Extensive offline and online experiments demonstrate the superiority of DiffusionGS over state-of-the-art methods."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.04559v1",
+        "title": "QSVideo: Query-Conditioned Semantic Temporal Retrieval for Video Understanding",
+        "published": "2026-07-06T00:19:42Z",
+        "updated": "2026-07-06T00:19:42Z",
+        "summary": "The performance of vision-language models (VLMs) in video understanding declines with increasing video duration, as video moments unrelated to the query confuse their language components. Multimodal retrieval has emerged as a critical component of video understanding, addressing this challenge by localizing key visual evidence. However, existing multimodal retrieval methods suffer from biased relevance estimation, limited diversity, and temporal collapse. In this paper, we propose QSVideo, a unified framework that systematically addresses relevance, diversity, and temporal modeling in video retrieval. We first introduce a query-conditioned semantic ranker, QSRanker, which reformulates arbitrary questions into retrieval-friendly queries and estimates structured relevance along object, action, and location dimensions. Building upon this, we design QSRetrieval to jointly optimize relevance and diversity for more informative frame selection. Moreover, we propose temporal alignment strategies tailored for both long and streaming videos to improve evidence recall. Extensive experiments on long and streaming video benchmarks demonstrate that QSVideo greatly enhances video VLM performance under strict frame limit constraints. The code is available at https://github.com/human-analysis/QSVideo."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.09458v1",
+        "title": "ContractEval: Query-Conditioned Execution Matching for Procedural Instruction Conformance",
+        "published": "2026-09-08T21:21:16Z",
+        "updated": "2026-09-08T21:21:16Z",
+        "summary": "As LLM agents move from answering questions to carrying out procedures, failures can be unwarranted rather than visibly wrong: the final response looks acceptable even though the system skipped the check, branch, dependency, or invariant that made the answer justified. Output-only evaluation sees the answer, and trace-aware judging sees activity, but neither identifies which obligations were active for the query. We introduce CONTRACTEVAL, a diagnostic framework for making those active obligations explicit. It represents procedural instructions as query-active obligations and matches them against response or trace evidence, turning omissions, wrong branches, ordering errors, extra actions, invariant breaches, and output-contract violations into distinct conformance failures. On a controlled suite of audited procedural contracts, output-only and trace-aware LLM judges miss many injected structural failures; under gold expected and observed graphs, ContractEval detects and localizes all of them. LLM-backed extraction preserves much of this signal but remains calibration-sensitive. ContractEval is therefore not a compliance guarantee; it makes procedural conformance auditable rather than implicit in final-answer quality."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.13369v2",
+        "title": "Query-Conditioned Test-Time Self-Training for Large Language Models",
+        "published": "2026-05-13T11:27:40Z",
+        "updated": "2026-05-14T02:40:02Z",
+        "summary": "Large language models (LLMs) are typically deployed with fixed parameters, and their performance is often improved by allocating more computation at inference time. While such test-time scaling can be effective, it cannot correct model misconceptions or adapt the model to the specific structure of an individual query. Test-time optimization addresses this limitation by enabling parameter updates during inference, but existing approaches either rely on external data or optimize generic self-supervised objectives that lack query-specific alignment. In this work, we propose Query-Conditioned Test-Time Self-Training (QueST), a framework that adapts model parameters during inference using supervision derived directly from the input query. Our key insight is that the input query itself encodes latent signals sufficient for constructing structurally related problem--solution pairs. Based on this, QueST generates such query-conditioned pairs and uses them as supervision for parameter-efficient fine-tuning at test time. The adapted model is then used to produce the final answer, enabling query-specific adaptation without any external data. Across seven mathematical reasoning benchmarks and the GPQA-Diamond scientific reasoning benchmark, QueST consistently outperforms strong test-time optimization baselines. These results demonstrate that query-conditioned self-training is an effective and practical paradigm for test-time adaptation in LLMs. Code is available at https://chssong.github.io/Query-Conditioned-TTST/."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.12847v1",
+        "title": "Beyond Retrieval: Query-Conditioned Reuse of Long-Horizon Agent Trajectories",
+        "published": "2026-08-13T05:39:49Z",
+        "updated": "2026-08-13T05:39:49Z",
+        "summary": "Retrieval can identify a past trajectory that may matter, yet it does not specify how an acting agent should use that trajectory after users, entities, constraints, or environment state have changed. We identify this post-retrieval reuse step as a distinct bottleneck for long-horizon trajectory memory and formulate an evaluation framework that holds candidate retrieval, target state, model, decoding, and tool budget fixed while varying the support delivered to the agent. We instantiate the framework with query-conditioned reuse (QCR), a deliberately simple target-bound note that records a reusable procedure, bindings to recover, applicability conditions, and verification requirements. QCR serves to test the reuse hypothesis rather than to claim a universally preferred memory format. Across 2,391 target instances in WebArena, WorkArena, and AppWorld, QCR reaches 62.3% average Success, 10.7 points above Full Trajectory, while using 48.9% fewer online tokens. Summary reranking selects a reusable memory for 94.8% of targets, placing end-task Success within 1.8 points of an oracle reusable selector. Analyses by trajectory length and source--target binding shift show that direct trajectory injection loses much of its utility as traces grow longer or source-specific values change, whereas target-bound support preserves a larger share of the measured gain. The resulting framework separates retrieval quality from the problem of turning retrieved experience into safe, useful support for a new task."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.18570v1",
+        "title": "Query-Conditioned Knowledge Alignment for Reliable Cross-System Medical Reasoning",
+        "published": "2026-05-18T15:49:46Z",
+        "updated": "2026-05-18T15:49:46Z",
+        "summary": "Cross-domain knowledge alignment is essential for integrating heterogeneous medical systems, yet existing approaches typically treat entity alignment as a static matching problem, ignoring query context and cross-system asymmetry. This limitation is particularly critical in integrative medical settings, where correspondence between concepts is inherently context-dependent, non-bijective, and direction-sensitive. In this paper, we propose Query-Conditioned Entity Alignment (QCEA), which reformulates entity alignment as a query-conditioned correspondence problem. Instead of learning a fixed mapping between entity representations, QCEA treats the textual description of a source entity as a query and ranks candidate entities in the target graph, enabling context-dependent alignment. The framework integrates semantic encoding, graph-based representation learning, and a direction-aware transformation module to capture asymmetric and many-to-many correspondence across heterogeneous knowledge systems. We evaluate QCEA on TCM--WM knowledge graphs derived from SymMap, covering both symptom alignment and herb--molecule alignment tasks. Experimental results show consistent improvements over representative baselines, particularly on rank-sensitive metrics such as Hit@K and MRR. Furthermore, downstream retrieval-augmented generation (RAG) experiments demonstrate that improved alignment leads to better evidence retrieval, stronger grounding, and higher answer accuracy. These findings highlight that alignment is not merely a data integration step, but a key factor that shapes knowledge accessibility and reliability in cross-system medical reasoning."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.04452v1",
+        "title": "Q-CueGraph: Query-Conditioned Visual Evidence Graphs for Multimodal Reasoning",
+        "published": "2026-08-05T05:03:35Z",
+        "updated": "2026-08-05T05:03:35Z",
+        "summary": "High-resolution pixels and crop or zoom tools give multimodal large language models the ability to inspect an image, but they do not provide a reliable task-conditioned policy for deciding where to inspect. Q-CueGraph makes this decision explicit. It maps a question and an image representation to budgeted, coordinate-level observations for a frozen reader. Text-rich images use a reusable OCR/layout graph; natural-image search instantiates query-conditioned visual nodes behind the same selection, composition, and budgeting interface. Optional utility refinement learns which candidate crops the frozen reader can use from training-answer correctness, without region-box supervision. With a frozen Qwen2.5-VL-7B reader, Q-CueGraph reaches 0.833 accuracy on V*Bench versus 0.696 for full-image inference from a 19% image-area budget, and reaches 92% of full-image ANLS on InfographicVQA from about half the image area. Across six benchmarks, explicit observation is most valuable when evidence is localizable, the question discriminates its location, and resolution limits full-image reading."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.30542v1",
+        "title": "Physically Viable World Models: A Case for Query-Conditioned Embodied AI",
+        "published": "2026-05-28T20:18:22Z",
+        "updated": "2026-05-28T20:18:22Z",
+        "summary": "World models for embodied AI must be physically viable: constructed to answer intervention queries by representing the physical structure governing action outcomes, rather than merely predicting future observations. Existing observation-predictive world models can produce visually plausible but physically wrong rollouts. This failure is structural; distinct physical systems can look identical yet diverge under intervention. We expose this problem with controlled benchmarks that fix the visible scene while varying latent physics. We show that such models may recommend infeasible actions, mispredict interaction outcomes, or certify unsafe behavior. We argue that embodied AI requires world models that identify the simplest physical abstraction sufficient to answer an intervention query. Such a model comprises modular components, including environment representation, latent state and parameter estimation, action specification, interventional dynamics, and query-level response. An autonomous orchestrator should identify the relevant abstraction and compose compatible learned and structured components per query. When closed-form physics is unavailable, uncertain, or costly, the transition model may be analytic, simulated, learned, or hybrid, but it must preserve the structure that determines interventional outcomes. This decomposition makes the model interpretable, its components verifiable, and its outputs auditable against the query. It also provides a design principle for new world models and a feasibility test for existing ones: the right abstraction is not the most detailed model of the world, but the simplest model that preserves the distinctions relevant to the query. We demonstrate this approach on queries that existing systems fail to answer correctly, and outline how an orchestrator can dynamically assemble and adapt physically viable models for planning, control, and verification."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.18763v1",
+        "title": "Query-Conditioned Graph Retrieval for Contextualized LLM Reasoning in Personalized Wearable Data",
+        "published": "2026-04-10T13:13:17Z",
+        "updated": "2026-04-10T13:13:17Z",
+        "summary": "Large language models (LLMs) are increasingly applied to analyzing wearable sensing data, which are long-term, multimodal, and highly personalized. A key challenge is context selection: providing insufficient context limits reasoning, while including all available data leads to inefficiency and degraded generation quality. We propose Wearable As Graph (WAG), a graph-based context retrieval framework that enables query-adaptive reasoning over wearable data with LLMs. WAG organizes wearable metrics and user-specific signals into a personalized knowledge graph, and retrieves a query-conditioned subgraph to support downstream generation. The retrieval process integrates global relationships, capturing prior knowledge and population- and individual-level patterns via hierarchical Bayesian modeling, with local relationships that reflect short-term signal deviations. A query openness signal further controls retrieval breadth. We evaluate WAG on over 10,000 data-grounded queries from real-world wearable datasets. Across LLM-based and human evaluations, WAG achieves an approximately 70% win rate over baseline and standard RAG methods, demonstrating the effectiveness of structured, query-adaptive context retrieval for LLM-driven analysis of wearable data."
+      },
+      {
+        "id": "http://arxiv.org/abs/2608.16168v1",
+        "title": "QUMem: Personalized Memory for Query-Conditioned User-State Inference in LLM Agents",
+        "published": "2026-08-17T06:34:24Z",
+        "updated": "2026-08-17T06:34:24Z",
+        "summary": "Large language model (LLM) agents increasingly use external memory systems to support personalization by drawing on long and evolving interaction histories, in which user preferences may be distributed across time, change with context, and conflict with earlier evidence. However, existing systems face three limitations: fixed-turn, fixed-token, or session-based boundaries can mix unrelated dialogue or split an event from its causes, decisions, and outcomes; storing multiple pieces of user information from the same interaction as a single memory binds together items that serve different functions and should be independently retrievable; and treating the current task as a single top-$k$ retrieval query can return fragments that are individually relevant but fail to jointly capture preference evolution, temporal validity, and contextual applicability. We introduce \\textsc{QUMem}, a structured memory framework for query-conditioned user-state inference. \\textsc{QUMem} first segments interaction histories into variable-length episodes according to semantic continuity, then decomposes each episode into independently retrievable factual, preference, and transferable insight memories while preserving temporal positions and source evidence. At inference time, three sequential agents identify task-specific information needs, plan multi-query retrieval over the typed memory stores, and jointly infer a temporally and contextually valid user state for downstream response generation. \\textsc{QUMem} achieves state-of-the-art performance on both PersonaMem and KnowU-Bench, demonstrating the effectiveness of query-conditioned user-state inference for long-term personalization."
+      },
+      {
+        "id": "http://arxiv.org/abs/2602.15856v2",
+        "title": "Rethinking Soft Compression in Retrieval-Augmented Generation: A Query-Conditioned Selector Perspective",
+        "published": "2026-01-25T09:06:24Z",
+        "updated": "2026-03-21T05:07:53Z",
+        "summary": "Retrieval-Augmented Generation (RAG) effectively grounds Large Language Models (LLMs) with external knowledge and is widely applied to Web-related tasks. However, its scalability is hindered by excessive context length and redundant retrievals. Recent research on soft context compression aims to address this by encoding long documents into compact embeddings, yet they often underperform non-compressed RAG due to their reliance on auto-encoder-like full-compression that forces the encoder to compress all document information regardless of relevance to the input query. In this work, we conduct an analysis on this paradigm and reveal two fundamental limitations: (I) Infeasibility, full-compression conflicts with the LLM's downstream generation behavior; and (II) Non-necessity: full-compression is unnecessary and dilutes task-relevant information density. Motivated by these insights, we introduce SeleCom, a selector-based soft compression framework for RAG that redefines the encoder's role as query-conditioned information selector. The selector is decoder-only and is trained with a massive, diverse and difficulty-graded synthetic QA dataset with curriculum learning. Extensive experiments show that SeleCom significantly outperforms existing soft compression approaches and achieves competitive or superior performance to non-compression baselines, while reducing computation and latency by 33.8%~84.6%."
+      },
+      {
+        "id": "http://arxiv.org/abs/2604.01002v1",
+        "title": "Query-Conditioned Evidential Keyframe Sampling for MLLM-Based Long-Form Video Understanding",
+        "published": "2026-04-01T15:02:50Z",
+        "updated": "2026-04-01T15:02:50Z",
+        "summary": "Multimodal Large Language Models (MLLMs) have shown strong performance on video question answering, but their application to long-form videos is constrained by limited context length and computational cost, making keyframe sampling essential. Existing approaches typically rely on semantic relevance or reinforcement learning, which either fail to capture evidential clues or suffer from inefficient combinatorial optimization. In this work, we propose an evidence-driven keyframe sampling framework grounded in information bottleneck theory. We formulate keyframe selection as maximizing the conditional mutual information between selected frames and the query, providing a principled objective that reflects each frame's contribution to answering the question. To make this objective tractable, we exploit its structure to derive a decomposed optimization that reduces subset selection to independent frame-level scoring. We further introduce a query-conditioned evidence scoring network trained with a contrastive objective to estimate evidential importance efficiently. Experiments on long-form video understanding benchmarks show that our method consistently outperforms prior sampling strategies under strict token budgets, while significantly improving training efficiency."
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.03565v5",
+        "title": "Skill Is Not Document: Query-Conditioned Compatibility for LLM Agent Skill Routing",
+        "published": "2026-06-02T12:30:46Z",
+        "updated": "2026-08-04T12:21:10Z",
+        "summary": "Large language model agents increasingly rely on reusable skills, making skill retrieval a critical front-end component of agent systems. Skill retrieval, however, is not ordinary document retrieval: a useful top-$K$ result must contain individually relevant skills that also form an executable set for the current query. Existing benchmarks and training pipelines largely supervise pairwise relevance and discard the rejection decisions produced when a language model judges a sampled skill combination to be implausible. We introduce R3-Skill, a Chinese--English benchmark that retains these rejections as query-conditioned compatibility supervision. R3-Skill contains 10,246 deduplicated skills, 41,592 accepted queries, and 32,828 rejected annotations across four language directions; all multi-skill test labels were independently reviewed by multiple experts, and 15,962 parseable rejections are organized into an eight-class taxonomy. We further propose a two-stage system composed of R3-Embedding, a multi-positive bi-encoder for large-pool recall, and R3-Reranker, a cross-encoder trained with graded ListNet supervision. Our analysis shows that this signal is stage-dependent, helping cross-encoder reranking while providing no benefit for the tested bi-encoder objective. On R3-Skill, the complete pipeline achieves $75.39\\%$ Hit@1, $81.97\\%$ NDCG@10, and $33.27\\%$ Set-Compat, a $36.6\\%$ relative gain over the strongest reranking baseline. It also obtains $83.87\\%$ NDCG@10 on SkillRet, demonstrating transfer beyond R3-Skill."
+      },
+      {
+        "id": "http://arxiv.org/abs/2403.00832v1",
+        "title": "Explainable Session-based Recommendation via Path Reasoning",
+        "published": "2024-02-28T12:11:08Z",
+        "updated": "2024-02-28T12:11:08Z",
+        "summary": "This paper explores providing explainability for session-based recommendation (SR) by path reasoning. Current SR models emphasize accuracy but lack explainability, while traditional path reasoning prioritizes knowledge graph exploration, ignoring sequential patterns present in the session history. Therefore, we propose a generalized hierarchical reinforcement learning framework for SR, which improves the explainability of existing SR models via Path Reasoning, namely PR4SR. Considering the different importance of items to the session, we design the session-level agent to select the items in the session as the starting point for path reasoning and the path-level agent to perform path reasoning. In particular, we design a multi-target reward mechanism to adapt to the skip behaviors of sequential patterns in SR, and introduce path midpoint reward to enhance the exploration efficiency in knowledge graphs. To improve the completeness of the knowledge graph and to diversify the paths of explanation, we incorporate extracted feature information from images into the knowledge graph. We instantiate PR4SR in five state-of-the-art SR models (i.e., GRU4REC, NARM, GCSAN, SR-GNN, SASRec) and compare it with other explainable SR frameworks, to demonstrate the effectiveness of PR4SR for recommendation and explanation tasks through extensive experiments with these approaches on four datasets."
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.25514v1",
+        "title": "From Item-Only to Query-Item: Query-Conditioned Generative Search with QGS in Quark",
+        "published": "2026-05-25T07:18:51Z",
+        "updated": "2026-05-25T07:18:51Z",
+        "summary": "Generative sequence models have shown strong results in recommendation. Applying them to search ranking is more challenging. Search behavior is inherently query-driven. Each query switch introduces a sharp topic shift in the user's interaction history. Existing generative methods flatten queries and items into a single token sequence. They do not distinguish query boundaries. This causes the model to mix different query intents into one prediction target, resulting in noisy supervision. We present Query-Conditioned Generative Search (QGS). QGS encodes each interaction as a (query, item) pair token. It trains with a query-conditioned next-item objective. The prediction target changes from a noisy marginal P(item_{t+1}|context_{<=t}) to a clean conditional P(item_{t+1}|context_{<=t}, query_{t+1}). This directly removes the semantic discontinuity caused by query switches. Encoding long interaction histories with standard attention has quadratic cost. This is impractical under strict online latency budgets. We introduce a Linear HSTU encoder. It replaces full attention with causal linear recurrence. Per-layer complexity drops from O(L^2) to O(L) with no loss in ranking quality. Traditional search ranking depends on hand-crafted features like text-matching scores, statistical signals, and behavioral features. We propose HFG-Attention to preserve them in the generative framework. It organizes heterogeneous features into semantic groups and fuses them through a dedicated attention block. This bridges sparse engineered signals with dense sequential representations. QGS is deployed in the ranking module of Quark Search, a major commercial search engine in China. Online A/B tests show statistically significant gains: +0.62% CTR, +0.38% Click-Search Ratio, and +3.55% PV Duration over the production deep learning baseline."
+      },
+      {
+        "id": "http://arxiv.org/abs/2402.17455v5",
+        "title": "CLAPSep: Leveraging Contrastive Pre-trained Model for Multi-Modal Query-Conditioned Target Sound Extraction",
+        "published": "2024-02-27T12:27:18Z",
+        "updated": "2025-03-21T12:55:53Z",
+        "summary": "Universal sound separation (USS) aims to extract arbitrary types of sounds from real-world recordings. This can be achieved by language-queried target sound extraction (TSE), which typically consists of two components: a query network that converts user queries into conditional embeddings, and a separation network that extracts the target sound accordingly. Existing methods commonly train models from scratch. As a consequence, substantial data and computational resources are required to make the randomly initialized model comprehend sound events and perform separation accordingly. In this paper, we propose to integrate pre-trained models into TSE models to address the above issue. To be specific, we tailor and adapt the powerful contrastive language-audio pre-trained model (CLAP) for USS, denoted as CLAPSep. CLAPSep also accepts flexible user inputs, taking both positive and negative user prompts of uni- and/or multi-modalities for target sound extraction. These key features of CLAPSep can not only enhance the extraction performance but also improve the versatility of its application. We provide extensive experiments on 5 diverse datasets to demonstrate the superior performance and zero- and few-shot generalizability of our proposed CLAPSep with fast training convergence, surpassing previous methods by a significant margin. Full codes and some audio examples are released for reproduction and evaluation."
+      },
+      {
+        "id": "http://arxiv.org/abs/2512.01949v1",
+        "title": "Script: Graph-Structured and Query-Conditioned Semantic Token Pruning for Multimodal Large Language Models",
+        "published": "2025-12-01T17:59:11Z",
+        "updated": "2025-12-01T17:59:11Z",
+        "summary": "The rapid growth of visual tokens in multimodal large language models (MLLMs) leads to excessive memory consumption and inference latency, especially when handling high-resolution images and videos. Token pruning is a technique used to mitigate this issue by removing redundancy, but existing methods often ignore relevance to the user query or suffer from the limitations of attention mechanisms, reducing their adaptability and effectiveness. To address these challenges, we propose Script, a plug-and-play pruning method that requires no retraining and generalizes across diverse MLLMs. Script comprises two modules: a graph-structured pruning module that removes visually redundant tokens, and a query-conditioned semantic pruning module that preserves query-relevant visual information. Together, they enhance performance on multimodal tasks. Experiments on fourteen benchmarks across image and video understanding tasks show that Script consistently achieves higher model efficiency and predictive accuracy compared to existing pruning methods. On LLaVA-NeXT-7B, it achieves up to 6.8x prefill speedup and 10x FLOP reduction, while retaining 96.88% of the original performance."
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.05639v1",
+        "title": "Q-GNN: Query-Conditioned Graph Neural Networks with Type Awareness for Knowledge Graph Completion",
+        "published": "2026-06-04T03:07:22Z",
+        "updated": "2026-06-04T03:07:22Z",
+        "summary": "Knowledge Graph Completion (KGC) aims at predicting missing triplets from incomplete knowledge graphs, which is crucial for downstream applications. Recently, Graph Neural Network (GNN)-based methods have achieved remarkable success by performing message passing over query-centered local subgraphs. However, in practice, a query is jointly defined by both the entity and the relation, with both carrying information indispensable for reasoning, yet these methods rely solely on the query relation as the guiding signal, while the information inherent in the query entity is not leveraged to guide inference - the entity serves merely as a structural anchor for subgraph extraction. To this end, we incorporate query entity information into the reasoning process from two perspectives: the first is structural context, i.e., the neighboring structure and relation patterns around the entity, which is encoded by a dedicated context encoder and used to modulate messages; the second is semantic type of the entity, inferred by a large language model, which is incorporated into attention computation and final scoring to provide type-level prior constraints. Together, these two sources of information enable the reasoning process to be guided by both the query relation and the query entity. Experimental results on standard benchmarks demonstrate the effectiveness of the proposed Q-GNN."
+      },
+      {
+        "id": "http://arxiv.org/abs/2609.15987v1",
+        "title": "Bellman Policy Optimization",
+        "published": "2026-09-14T17:59:47Z",
+        "updated": "2026-09-14T17:59:47Z",
+        "summary": "Reinforcement learning with verifiable rewards (RLVR) improves the reasoning capabilities of large language models (LLMs). We introduce Bellman Policy Optimization (BPO), a critic-free method derived from Policy Mirror Descent (PMD). For autoregressive generation with terminal rewards, BPO uses the Bellman equations to reformulate PMD as a trajectory-level objective. The reformulation avoids estimating state values at intermediate states. We prove that it has the same unique optimal solution as the original PMD objective. We derive the practical BPO loss by approximating this objective. Its mismatch-correction weight is a smoothed ratio of complementary token probabilities. Experiments on mathematical reasoning benchmarks demonstrate the effectiveness of BPO."
+      },
+      {
+        "id": "http://arxiv.org/abs/2502.03104v1",
+        "title": "Bellman Error Centering",
+        "published": "2025-02-05T12:03:03Z",
+        "updated": "2025-02-05T12:03:03Z",
+        "summary": "This paper revisits the recently proposed reward centering algorithms including simple reward centering (SRC) and value-based reward centering (VRC), and points out that SRC is indeed the reward centering, while VRC is essentially Bellman error centering (BEC). Based on BEC, we provide the centered fixpoint for tabular value functions, as well as the centered TD fixpoint for linear value function approximation. We design the on-policy CTD algorithm and the off-policy CTDC algorithm, and prove the convergence of both algorithms. Finally, we experimentally validate the stability of our proposed algorithms. Bellman error centering facilitates the extension to various reinforcement learning algorithms."
+      },
+      {
+        "id": "http://arxiv.org/abs/2407.12163v2",
+        "title": "Bellman Diffusion Models",
+        "published": "2024-07-16T20:40:08Z",
+        "updated": "2025-11-03T08:42:18Z",
+        "summary": "Diffusion models have seen tremendous success as generative architectures. Recently, they have been shown to be effective at modelling policies for offline reinforcement learning and imitation learning. We explore using diffusion as a model class for the successor state measure (SSM) of a policy. We find that enforcing the Bellman flow constraints leads to a simple Bellman update on the diffusion step distribution."
+      },
+      {
+        "id": "http://arxiv.org/abs/2506.00839v2",
+        "title": "Neural Path Guiding with Distribution Factorization",
+        "published": "2025-06-01T05:04:56Z",
+        "updated": "2025-06-04T18:10:39Z",
+        "summary": "In this paper, we present a neural path guiding method to aid with Monte Carlo (MC) integration in rendering. Existing neural methods utilize distribution representations that are either fast or expressive, but not both. We propose a simple, but effective, representation that is sufficiently expressive and reasonably fast. Specifically, we break down the 2D distribution over the directional domain into two 1D probability distribution functions (PDF). We propose to model each 1D PDF using a neural network that estimates the distribution at a set of discrete coordinates. The PDF at an arbitrary location can then be evaluated and sampled through interpolation. To train the network, we maximize the similarity of the learned and target distributions. To reduce the variance of the gradient during optimizations and estimate the normalization factor, we propose to cache the incoming radiance using an additional network. Through extensive experiments, we demonstrate that our approach is better than the existing methods, particularly in challenging scenes with complex light transport."
+      },
+      {
+        "id": "http://arxiv.org/abs/2607.25718v2",
+        "title": "Tools Are Not Islands: Set-Level Tool Retrieval for LLM Agents via Query-Conditioned Hyperedge Prediction",
+        "published": "2026-07-28T13:45:08Z",
+        "updated": "2026-07-29T16:33:21Z",
+        "summary": "Large language model (LLM) agents increasingly rely on invoking external tools to complete real-world tasks. Tool retrieval, which selects a small task-relevant subset from a library of thousands of tools before the agent acts, has therefore become a critical component of LLM agent pipelines. However, existing retrievers either score each tool in isolation or assemble the tool set sequentially, so the joint utility of a candidate set is never evaluated as a whole. In this paper, we propose HYSET, short for HYperedge-based SEt-level Tool retrieval. Our contributions are threefold: (i) we formulate tool retrieval as query-conditioned hyperedge prediction on a tool co-invocation hypergraph, under which the tool set itself becomes the unit of scoring and most existing retrieval paradigms reduce to restricted instances; (ii) we capture size-dependent tool compatibility through cardinality-specific interactions; and (iii) we design HYSET as a pre-selection module requiring no modification to the downstream agent. Experiments on ToolBench demonstrate that HYSET consistently outperforms state-of-the-art baselines in both tool retrieval performance and end-to-end task success. Beyond the in-domain setting, HYSET further supports zero-shot/few-shot transfer, generalizing to held-out tools/categories and unseen domains with minimal supervision."
+      }
+    ]
+  }
+]

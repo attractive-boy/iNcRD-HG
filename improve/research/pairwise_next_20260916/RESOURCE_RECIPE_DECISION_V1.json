@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-09-15T17:51:57.353277+00:00",
+  "observed_performance_metrics": false,
+  "decision": "one exact triangular layer, width 32, heads 4; evaluate only requested final pairs, retaining all intermediate nodes",
+  "reason": "Dense two-layer width-16 resource smoke requires 28.3 seconds per LncDrug optimizer step; exact compiled block reduction gives only modest warm speedup at the larger graph size. Query-only final computation makes a full 400-step prospective protocol feasible.",
+  "budgets": "Same frozen 400 steps, check interval 20, learning rates 0.001 and 0.003 as the existing strong-reference executor",
+  "classification": "One prospective triangular mechanism; runtime versions and architecture resource selection do not count as separate innovations.",
+  "dense_reference_retained": true,
+  "compiled_probe_retained": true,
+  "formal_fits_started": false
+}

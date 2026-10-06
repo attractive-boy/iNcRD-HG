@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/3mvb75c0UvPYCHkm4BPVVAg1vNQ</id>
+  <title>arXiv Query: search_query=ti:"graph" AND (ti:"Gaussian process" OR ti:"neural tangent" OR ti:"kernel learning")&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-09-16T01:29:08Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22graph%22+AND+(ti:%22Gaussian+process%22+OR+(ti:%22neural+tangent%22+OR+ti:%22kernel+learning%22))&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>55</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.01435v1</id>
+    <title>Gaussian Processes on Directed Metric Graphs</title>
+    <updated>2026-09-01T15:45:21Z</updated>
+    <link href="https://arxiv.org/abs/2609.01435v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.01435v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a statistical framework for Gaussian fields indexed at arbitrary edge locations on general compact directed metric graphs. The construction is based on a stochastic differential equation with a first-order operator and conditions at the vertices. We characterise well-posedness and identify the covariance reproducing kernel Hilbert space. We also connect the proposed framework to earlier stream-network models, showing that these arise from the same system under particular boundary conditions, and introduce new boundary conditions that yield more physically realistic processes. The differential-equation representation enables computationally efficient inference and prediction. This makes the method applicable to large data sets without approximation. Applications to temperature modelling on river networks and traffic speeds on road networks illustrate the framework, including the computational efficiency and improved performance under physically informed vertex conditions.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T15:45:21Z</published>
+    <arxiv:comment>29 pages, 5 figures; includes supplementary material</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>David Bolin</name>
+    </author>
+    <author>
+      <name>Alexandre de Bustamante Simas</name>
+    </author>
+    <author>
+      <name>Erik Karlsson Strandh</name>
+    </author>
+    <author>
+      <name>Jonas Wallin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11917v2</id>
+    <title>A Factor Graph Approach to Scalable Multi-Output Gaussian Process Regression</title>
+    <updated>2026-08-19T07:26:51Z</updated>
+    <link href="https://arxiv.org/abs/2608.11917v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11917v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multi-output Gaussian process regression scales cubically in the number of observations times outputs, and dense kernel-matrix methods need bespoke handling whenever different outputs are observed at different inputs. We express multi-output Gaussian process regression as a Forney-style factor graph in which a nearest-neighbor chain orders a fixed candidate set of $C$ inputs into a one-dimensional sequence. Along this chain, latent Matérn processes evolve through linear-Gaussian transition factors, while the linear model of coregionalization mixes $L$ latent processes into $D$ outputs through a deterministic mixing factor and per-output scalar observation factors. Posterior computation reduces to exact Gaussian message passing on the chain at cost $\mathcal{O}(C(DL^2 + L^3))$ after chain construction, and missing observations omit their local factor without any covariance-matrix restructuring. The formulation therefore scales in the number of data samples and in the rate of missing observations, while remaining best suited to candidate sets in low input dimension. We compare the factor-graph formulation against an exact kernel-matrix baseline, a sparse-variational inducing-point baseline, and a nearest-neighbor baseline on a synthetic input-dimension sweep and on electricity time series forecasting. At low input dimension the factor-graph posterior tracks the exact kernel-matrix posterior closely, and the gap grows gradually as input dimension increases while staying competitive with both approximate baselines. On the electricity time series our factor-graph formulation matches all three baselines in forecast accuracy while scaling linearly in the number of data points, where the exact kernel-matrix method becomes infeasible and the inducing-point baseline remains substantially slower.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T10:52:13Z</published>
+    <arxiv:comment>20 pages, 8 figures, 1 Table. International Conference on Probabilistic Graphical Models 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Wouter W. L. Nuijten</name>
+    </author>
+    <author>
+      <name>Esther G. van Pelt</name>
+    </author>
+    <author>
+      <name>Albert Podusenko</name>
+    </author>
+    <author>
+      <name>İsmail Şenöz</name>
+    </author>
+    <author>
+      <name>Wouter M. Kouw</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.09645v1</id>
+    <title>Deep Gaussian Processes on Directed Acyclic Graphs</title>
+    <updated>2026-07-10T17:41:11Z</updated>
+    <link href="https://arxiv.org/abs/2607.09645v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.09645v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG). In causal modelling, these correspond to the underlying mechanisms; in engineering, to multiple fidelity levels; and in gene-regulatory networks, to transcription factors. These functions are partially observed across the DAG, with noisy and heterogeneously sampled measurements, posing significant challenges for reconstruction, uncertainty propagation, and inference. To tackle these challenges, we place priors over functions and naturally arrive at Deep Gaussian Processes over DAGs. We theoretically study their prior-collapse behaviour, and the effect of graph topology and intermediate observations on the preservation of information. We obtain almost-sure lower bounds on the asymptotic frequency of depths at which the distinction between inputs is preserved, identify broad kernel classes for which these hold, and prove an observation by \cite{dunlop2018} on the role of input connections. We offer a structured variational approximation that retains graph dependencies, preserves compositional uncertainty, and captures the explaining-away behaviour of colliders. Finally, we empirically validate our theoretical results and our methodology, and model a latent-collider DAG, a protein signalling network, and a multi-fidelity heavy-ion collision emulation task, attaining state-of-the-art performance while recovering low-fidelity contributions and yielding interpretability of the simulator hierarchy.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-10T17:41:11Z</published>
+    <arxiv:comment>75 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Federico L. Perlino</name>
+    </author>
+    <author>
+      <name>Oliver Hamelijnck</name>
+    </author>
+    <author>
+      <name>Adam M. Johansen</name>
+    </author>
+    <author>
+      <name>Theodoros Damoulas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.09073v1</id>
+    <title>Smoothing Out the Edges: Continuous-Time Estimation with Gaussian Process Motion Priors on Factor Graphs</title>
+    <updated>2026-05-09T17:30:22Z</updated>
+    <link href="https://arxiv.org/abs/2605.09073v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.09073v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continuous-time state estimation is gaining in popularity due to its abilities to provide smooth solutions, handle asynchronous sensors, and interpolate between data points. While there are two main paradigms, parametric (e.g., temporal basis functions, splines) and nonparametric (Gaussian processes), the latter has seen less adoption despite its technical advantages and relative ease of implementation. In this article, we seek to rectify this situation by providing a new simplified explanation of GP continuous-time estimation rooted in the language of factor graphs, which have become the de facto estimation paradigm in much of robotics. To simplify onboarding, we also provide three working examples implemented in the popular GTSAM estimation framework.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-09T17:30:22Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Connor Holmes</name>
+    </author>
+    <author>
+      <name>Sven Lilge</name>
+    </author>
+    <author>
+      <name>Zi Cong Guo</name>
+    </author>
+    <author>
+      <name>Frank Dellaert</name>
+    </author>
+    <author>
+      <name>Timothy D. Barfoot</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.20962v1</id>
+    <title>Integrative Learning of Dynamically Evolving Multiplex Graphs and Nodal Attributes Using Neural Network Gaussian Processes with an Application to Dynamic Terrorism Graphs</title>
+    <updated>2026-03-21T22:01:29Z</updated>
+    <link href="https://arxiv.org/abs/2603.20962v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.20962v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Exploring the dynamic co-evolution of multiplex graphs and nodal attributes is a compelling question in criminal and terrorism networks. This article is motivated by the study of dynamically evolving interactions among prominent terrorist organizations, considering various organizational attributes like size, ideology, leadership, and operational capacity. Statistically principled integration of multiplex graphs with nodal attributes is significantly challenging due to the need to leverage shared information within and across layers, account for uncertainty in predicting unobserved links, and capture temporal evolution of node attributes. These difficulties increase when layers are partially observed, as in terrorism networks where connections are deliberately hidden to obscure key relationships. To address these challenges, we present a principled methodological framework to integrate the multiplex graph layers and nodal attributes. The approach employs time-varying stochastic latent factor models, leveraging shared latent factors to capture graph structure and its co-evolution with node attributes. Latent factors are modeled using Gaussian processes with an infinitely wide deep neural network-based covariance function, termed neural network Gaussian processes (NN-GP). The NN-GP framework on latent factors exploits the predictive power of Bayesian deep neural network architecture while propagating uncertainty for reliability. Simulation studies highlight superior performance of the proposed approach in achieving inferential objectives. The approach, termed as dynamic joint learner, enables predictive inference (with uncertainty) of diverse unobserved dynamic relationships among prominent terrorist organizations and their organization-specific attributes, as well as clustering behavior in terms of friend-and-foe relationships, which could be informative in counter-terrorism research.</summary>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-21T22:01:29Z</published>
+    <arxiv:comment>59 pages</arxiv:comment>
+    <arxiv:primary_category term="stat.AP"/>
+    <author>
+      <name>Jose Rodriguez-Acosta</name>
+    </author>
+    <author>
+      <name>Sharmistha Guha</name>
+    </author>
+    <author>
+      <name>Lekha Patel</name>
+    </author>
+    <author>
+      <name>Kurtis Shuler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.17569v1</id>
+    <title>Gaussian Process Limit Reveals Structural Benefits of Graph Transformers</title>
+    <updated>2026-03-18T10:18:21Z</updated>
+    <link href="https://arxiv.org/abs/2603.17569v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.17569v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph transformers are the state-of-the-art for learning from graph-structured data and are empirically known to avoid several pitfalls of message-passing architectures. However, there is limited theoretical analysis on why these models perform well in practice. In this work, we prove that attention-based architectures have structural benefits over graph convolutional networks in the context of node-level prediction tasks. Specifically, we study the neural network gaussian process limits of graph transformers (GAT, Graphormer, Specformer) with infinite width and infinite heads, and derive the node-level and edge-level kernels across the layers. Our results characterise how the node features and the graph structure propagate through the graph attention layers. As a specific example, we prove that graph transformers structurally preserve community information and maintain discriminative node representations even in deep layers, thereby preventing oversmoothing. We provide empirical evidence on synthetic and real-world graphs that validate our theoretical insights, such as integrating informative priors and positional encoding can improve performance of deep graph transformers.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-18T10:18:21Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Nil Ayday</name>
+    </author>
+    <author>
+      <name>Lingchu Yang</name>
+    </author>
+    <author>
+      <name>Debarghya Ghoshdastidar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.07734v1</id>
+    <title>Global Optimization on Graph-Structured Data via Gaussian Processes with Spectral Representations</title>
+    <updated>2025-11-11T01:37:13Z</updated>
+    <link href="https://arxiv.org/abs/2511.07734v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.07734v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bayesian optimization (BO) is a powerful framework for optimizing expensive black-box objectives, yet extending it to graph-structured domains remains challenging due to the discrete and combinatorial nature of graphs. Existing approaches often rely on either full graph topology-impractical for large or partially observed graphs-or incremental exploration, which can lead to slow convergence. We introduce a scalable framework for global optimization over graphs that employs low-rank spectral representations to build Gaussian process (GP) surrogates from sparse structural observations. The method jointly infers graph structure and node representations through learnable embeddings, enabling efficient global search and principled uncertainty estimation even with limited data. We also provide theoretical analysis establishing conditions for accurate recovery of underlying graph structure under different sampling regimes. Experiments on synthetic and real-world datasets demonstrate that our approach achieves faster convergence and improved optimization performance compared to prior methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-11T01:37:13Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Shu Hong</name>
+    </author>
+    <author>
+      <name>Yongsheng Mei</name>
+    </author>
+    <author>
+      <name>Mahdi Imani</name>
+    </author>
+    <author>
+      <name>Tian Lan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.06181v1</id>
+    <title>Conformalized Gaussian processes for online uncertainty quantification over graphs</title>
+    <updated>2025-10-07T17:44:13Z</updated>
+    <link href="https://arxiv.org/abs/2510.06181v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.06181v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Uncertainty quantification (UQ) over graphs arises in a number of safety-critical applications in network science. The Gaussian process (GP), as a classical Bayesian framework for UQ, has been developed to handle graph-structured data by devising topology-aware kernel functions. However, such GP-based approaches are limited not only by the prohibitive computational complexity, but also the strict modeling assumptions that might yield poor coverage, especially with labels arriving on the fly. To effect scalability, we devise a novel graph-aware parametric GP model by leveraging the random feature (RF)-based kernel approximation, which is amenable to efficient recursive Bayesian model updates. To further allow for adaptivity, an ensemble of graph-aware RF-based scalable GPs have been leveraged, with per-GP weight adapted to data arriving incrementally. To ensure valid coverage with robustness to model mis-specification, we wed the GP-based set predictors with the online conformal prediction framework, which post-processes the prediction sets using adaptive thresholds. Experimental results the proposed method yields improved coverage and efficient prediction sets over existing baselines by adaptively ensembling the GP models and setting the key threshold parameters in CP.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-07T17:44:13Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jinwen Xu</name>
+    </author>
+    <author>
+      <name>Qin Lu</name>
+    </author>
+    <author>
+      <name>Georgios B. Giannakis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.03691v2</id>
+    <title>Graph Random Features for Scalable Gaussian Processes</title>
+    <updated>2025-09-25T22:24:05Z</updated>
+    <link href="https://arxiv.org/abs/2509.03691v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.03691v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the application of graph random features (GRFs) - a recently introduced stochastic estimator of graph node kernels - to scalable Gaussian processes on discrete input spaces. We prove that (under mild assumptions) Bayesian inference with GRFs enjoys $O(N^{3/2})$ time complexity with respect to the number of nodes $N$, compared to $O(N^3)$ for exact kernels. Substantial wall-clock speedups and memory savings unlock Bayesian optimisation on graphs with over $10^6$ nodes on a single computer chip, whilst preserving competitive performance.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-03T20:13:23Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Matthew Zhang</name>
+    </author>
+    <author>
+      <name>Jihao Andreas Lin</name>
+    </author>
+    <author>
+      <name>Krzysztof Choromanski</name>
+    </author>
+    <author>
+      <name>Adrian Weller</name>
+    </author>
+    <author>
+      <name>Richard E. Turner</name>
+    </author>
+    <author>
+      <name>Isaac Reid</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.16755v1</id>
+    <title>Multi-Output Gaussian Processes for Graph-Structured Data</title>
+    <updated>2025-05-22T14:59:21Z</updated>
+    <link href="https://arxiv.org/abs/2505.16755v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.16755v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph-structured data is a type of data to be obtained associated with a graph structure where vertices and edges describe some kind of data correlation. This paper proposes a regression method on graph-structured data, which is based on multi-output Gaussian processes (MOGP), to capture both the correlation between vertices and the correlation between associated data. The proposed formulation is built on the definition of MOGP. This allows it to be applied to a wide range of data configurations and scenarios. Moreover, it has high expressive capability due to its flexibility in kernel design. It includes existing methods of Gaussian processes for graph-structured data as special cases and is possible to remove restrictions on data configurations, model selection, and inference scenarios in the existing methods. The performance of extensions achievable by the proposed formulation is evaluated through computer experiments with synthetic and real data.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-22T14:59:21Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ayano Nakai-Kasai</name>
+    </author>
+    <author>
+      <name>Tadashi Wadayama</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.10877v1</id>
+    <title>Graph and Simplicial Complex Prediction Gaussian Process via the Hodgelet Representations</title>
+    <updated>2025-05-16T05:33:42Z</updated>
+    <link href="https://arxiv.org/abs/2505.10877v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.10877v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Predicting the labels of graph-structured data is crucial in scientific applications and is often achieved using graph neural networks (GNNs). However, when data is scarce, GNNs suffer from overfitting, leading to poor performance. Recently, Gaussian processes (GPs) with graph-level inputs have been proposed as an alternative. In this work, we extend the Gaussian process framework to simplicial complexes (SCs), enabling the handling of edge-level attributes and attributes supported on higher-order simplices. We further augment the resulting SC representations by considering their Hodge decompositions, allowing us to account for homological information, such as the number of holes, in the SC. We demonstrate that our framework enhances the predictions across various applications, paving the way for GPs to be more widely used for graph and SC-level predictions.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-16T05:33:42Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mathieu Alain</name>
+    </author>
+    <author>
+      <name>So Takao</name>
+    </author>
+    <author>
+      <name>Xiaowen Dong</name>
+    </author>
+    <author>
+      <name>Bastian Rieck</name>
+    </author>
+    <author>
+      <name>Emmanuel Noutahi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.10208v1</id>
+    <title>Vector-Valued Gaussian Processes and their Kernels on a Class of Metric Graphs</title>
+    <updated>2025-01-17T14:05:20Z</updated>
+    <link href="https://arxiv.org/abs/2501.10208v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.10208v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Despite the increasing importance of stochastic processes on linear networks and graphs, current literature on multivariate (vector-valued) Gaussian random fields on metric graphs is elusive. This paper challenges several aspects related to the construction of proper matrix-valued kernels structures. We start by considering matrix-valued metrics that can be composed with scalar- or matrix-valued functions to implement valid kernels associated with vector-valued Gaussian fields. We then provide conditions for certain classes of matrix-valued functions to be composed with the univariate resistance metric and ensure positive semidefiniteness. Special attention is then devoted to Euclidean trees, where a substantial effort is required given the absence of literature related to multivariate kernels depending on the $\ell_1$ metric. Hence, we provide a foundational contribution to certain classes of matrix-valued positive semidefinite functions depending on the $\ell_1$ metric. This fact is then used to characterise kernels on Euclidean trees with a finite number of leaves. Amongst those, we provide classes of matrix-valued covariance functions that are compactly supported.</summary>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-17T14:05:20Z</published>
+    <arxiv:primary_category term="math.ST"/>
+    <author>
+      <name>Tobia Filosi</name>
+    </author>
+    <author>
+      <name>Emilio Porcu</name>
+    </author>
+    <author>
+      <name>Xavier Emery</name>
+    </author>
+    <author>
+      <name>Claudio Agostinelli</name>
+    </author>
+    <author>
+      <name>Alfredo Alegrìa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.02565v2</id>
+    <title>Efficient Graph Condensation via Gaussian Process</title>
+    <updated>2025-10-09T17:45:06Z</updated>
+    <link href="https://arxiv.org/abs/2501.02565v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.02565v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph condensation reduces the size of large graphs while preserving performance, addressing the scalability challenges of Graph Neural Networks caused by computational inefficiencies on large datasets. Existing methods often rely on bi-level optimization, requiring extensive GNN training and limiting their scalability. To address these issues, this paper proposes Graph Condensation via Gaussian Process (GCGP), a novel and computationally efficient approach to graph condensation. GCGP utilizes a Gaussian Process (GP), with the condensed graph serving as observations, to estimate the posterior distribution of predictions. This approach eliminates the need for the iterative and resource-intensive training typically required by GNNs. To enhance the capability of the GCGP in capturing dependencies between function values, we derive a specialized covariance function that incorporates structural information. This covariance function broadens the receptive field of input nodes by local neighborhood aggregation, thereby facilitating the representation of intricate dependencies within the nodes. To address the challenge of optimizing binary structural information in condensed graphs, Concrete random variables are utilized to approximate the binary adjacency matrix in a continuous counterpart. This relaxation process allows the adjacency matrix to be represented in a differentiable form, enabling the application of gradient-based optimization techniques to discrete graph structures. Experimental results show that the proposed GCGP method efficiently condenses large-scale graph data while preserving predictive performance, addressing the scalability and efficiency challenges. The implementation of our method is publicly available at https://github.com/WANGLin0126/GCGP.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-05T14:43:07Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lin Wang</name>
+    </author>
+    <author>
+      <name>Qing Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.18424v3</id>
+    <title>A Causal Graph-Enhanced Gaussian Process Regression for Modeling Engine-out NOx</title>
+    <updated>2026-02-24T19:01:40Z</updated>
+    <link href="https://arxiv.org/abs/2410.18424v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.18424v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The stringent regulatory requirements on nitrogen oxides (NOx) emissions from diesel compression ignition engines require accurate and reliable models for real time monitoring and diagnostics. Although traditional methods such as physical sensors and virtual engine control module (ECM) sensors provide essential data, they are only used for estimation. Ubiquitous literature primarily focuses on deterministic models with little emphasis on capturing the various uncertainties. The lack of probabilistic frameworks restricts the applicability of these models for robust diagnostics. The objective of this paper is to develop and validate a probabilistic model to predict engine-out NOx emissions using Gaussian process regression. Our approach is as follows. We employ three variants of Gaussian process models: the first with a standard radial basis function kernel with input window, the second incorporating a deep kernel using convolutional neural networks to capture temporal dependencies, and the third enriching the deep kernel with a causal graph derived via graph convolutional networks. The causal graph embeds physics knowledge into the learning process. All models are compared against a virtual ECM sensor using both quantitative and qualitative metrics. We conclude that our model provides an improvement in predictive performance when using an input window and a deep kernel structure. Even more compelling is the further enhancement achieved by the incorporation of a causal graph into the deep kernel. These findings are corroborated across different verification and validation datasets.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-24T04:23:57Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>International Journal of Engine Research 2025</arxiv:journal_ref>
+    <author>
+      <name>Shrenik Zinage</name>
+    </author>
+    <author>
+      <name>Ilias Bilionis</name>
+    </author>
+    <author>
+      <name>Peter Meckl</name>
+    </author>
+    <arxiv:doi>10.1177/14680874251381460</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1177/14680874251381460" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.15721v2</id>
+    <title>Learning signals defined on graphs with optimal transport and Gaussian process regression</title>
+    <updated>2025-03-10T10:11:26Z</updated>
+    <link href="https://arxiv.org/abs/2410.15721v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.15721v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In computational physics, machine learning has now emerged as a powerful complementary tool to explore efficiently candidate designs in engineering studies. Outputs in such supervised problems are signals defined on meshes, and a natural question is the extension of general scalar output regression models to such complex outputs. Changes between input geometries in terms of both size and adjacency structure in particular make this transition non-trivial. In this work, we propose an innovative strategy for Gaussian process regression where inputs are large and sparse graphs with continuous node attributes and outputs are signals defined on the nodes of the associated inputs. The methodology relies on the combination of regularized optimal transport, dimension reduction techniques, and the use of Gaussian processes indexed by graphs. In addition to enabling signal prediction, the main point of our proposal is to come with confidence intervals on node values, which is crucial for uncertainty quantification and active learning. Numerical experiments highlight the efficiency of the method to solve real problems in fluid dynamics and solid mechanics.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-21T07:39:44Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Raphaël Carpintero Perez</name>
+      <arxiv:affiliation>CMAP</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sébastien da Veiga</name>
+      <arxiv:affiliation>ENSAI, CREST</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Josselin Garnier</name>
+      <arxiv:affiliation>CMAP, ASCII</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Brian Staber</name>
+    </author>
+  </entry>
+</feed>

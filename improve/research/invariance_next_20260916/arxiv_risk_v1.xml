@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/MJWSsnvCvw0MsNWAhBSS7i4eI+s</id>
+  <title>arXiv Query: search_query=all:"risk distribution matching" OR ti:Fishr&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-09-15T23:31:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22risk+distribution+matching%22+OR+ti:Fishr&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2310.18598v1</id>
+    <title>Domain Generalisation via Risk Distribution Matching</title>
+    <updated>2023-10-28T05:23:55Z</updated>
+    <link href="https://arxiv.org/abs/2310.18598v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.18598v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a novel approach for domain generalisation (DG) leveraging risk distributions to characterise domains, thereby achieving domain invariance. In our findings, risk distributions effectively highlight differences between training domains and reveal their inherent complexities. In testing, we may observe similar, or potentially intensifying in magnitude, divergences between risk distributions. Hence, we propose a compelling proposition: Minimising the divergences between risk distributions across training domains leads to robust invariance for DG. The key rationale behind this concept is that a model, trained on domain-invariant or stable features, may consistently produce similar risk distributions across various domains. Building upon this idea, we propose Risk Distribution Matching (RDM). Using the maximum mean discrepancy (MMD) distance, RDM aims to minimise the variance of risk distributions across training domains. However, when the number of domains increases, the direct optimisation of variance leads to linear growth in MMD computations, resulting in inefficiency. Instead, we propose an approximation that requires only one MMD computation, by aligning just two distributions: that of the worst-case domain and the aggregated distribution from all domains. Notably, this method empirically outperforms optimising distributional variance while being computationally more efficient. Unlike conventional DG matching algorithms, RDM stands out for its enhanced efficacy by concentrating on scalar risk distributions, sidestepping the pitfalls of high-dimensional challenges seen in feature or gradient matching. Our extensive experiments on standard benchmark datasets demonstrate that RDM shows superior generalisation capability over state-of-the-art DG methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-28T05:23:55Z</published>
+    <arxiv:comment>Accepted at 2024 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Toan Nguyen</name>
+    </author>
+    <author>
+      <name>Kien Do</name>
+    </author>
+    <author>
+      <name>Bao Duong</name>
+    </author>
+    <author>
+      <name>Thin Nguyen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.02934v3</id>
+    <title>Fishr: Invariant Gradient Variances for Out-of-Distribution Generalization</title>
+    <updated>2022-06-01T14:37:01Z</updated>
+    <link href="https://arxiv.org/abs/2109.02934v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.02934v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning robust models that generalize well under changes in the data distribution is critical for real-world applications. To this end, there has been a growing surge of interest to learn simultaneously from multiple training domains - while enforcing different types of invariance across those domains. Yet, all existing approaches fail to show systematic benefits under controlled evaluation protocols. In this paper, we introduce a new regularization - named Fishr - that enforces domain invariance in the space of the gradients of the loss: specifically, the domain-level variances of gradients are matched across training domains. Our approach is based on the close relations between the gradient covariance, the Fisher Information and the Hessian of the loss: in particular, we show that Fishr eventually aligns the domain-level loss landscapes locally around the final weights. Extensive experiments demonstrate the effectiveness of Fishr for out-of-distribution generalization. Notably, Fishr improves the state of the art on the DomainBed benchmark and performs consistently better than Empirical Risk Minimization. Our code is available at https://github.com/alexrame/fishr.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-07T08:36:09Z</published>
+    <arxiv:comment>31 pages, 14 tables, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>ICML 2022</arxiv:journal_ref>
+    <author>
+      <name>Alexandre Rame</name>
+    </author>
+    <author>
+      <name>Corentin Dancette</name>
+    </author>
+    <author>
+      <name>Matthieu Cord</name>
+    </author>
+  </entry>
+</feed>

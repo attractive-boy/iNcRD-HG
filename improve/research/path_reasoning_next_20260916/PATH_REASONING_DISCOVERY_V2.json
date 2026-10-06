@@ -1,0 +1,377 @@
+{
+  "created_at_utc": "2026-09-16T02:36:02.567203+00:00",
+  "queries": [
+    {
+      "source": "arxiv_nbf",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22NBFNet%22+OR+all%3A%22A%2ANet%22+OR+ti%3A%22Self-Explaining+Graph+Neural+Network%22&sortBy=submittedDate&sortOrder=descending&max_results=15",
+      "status": 200,
+      "file": "improve/research/path_reasoning_next_20260916/arxiv_nbf_v2.xml",
+      "results": [
+        {
+          "title": "Imprints of the nuclear liquid-gas phase transition on net-baryon number fluctuations",
+          "id": "http://arxiv.org/abs/2609.17328v1",
+          "published": "2026-09-15T15:34:55Z",
+          "summary": "We investigate net-baryon number fluctuations in the high-density, low-temperature region of the QCD phase diagram using the parity-doublet model (PDM) under the mean-field approximation. We compute the fluctuation ratios up to sixth order around the nuclear liquid-gas (LG) phase transition, where the high-order ratios are particularly sensitive. To connect the results with heavy-ion experiments, we test several different scenarios of chemical freeze-out. We find that near the LG transition the extracted fluctuations depend strongly on the choice of freeze-out curve. We self-consistently determine four freeze-out points from preliminary results of the STAR Collaboration. Comparing the experimental data with the PDM results along these four points, we find that the model describes the low energy ($\\sqrt{s_{NN}}\\lesssim$ 4 GeV) data well. This suggests that nucleon interactions and the LG phase transition may contribute significantly to the fluctuations in low energy heavy-ion collisions."
+        },
+        {
+          "title": "Universal Properties of Petri Net Unfoldings",
+          "id": "http://arxiv.org/abs/2609.17324v1",
+          "published": "2026-09-15T15:29:00Z",
+          "summary": "It is an established idea in concurrency theory that every Petri net admits an unfolding semantics. This is a denotational object that represents its domain of possible executions. Unfoldings play an important role in practical analysis and verification. This paper is concerned with the following well-known problem: while the unfolding resembles a universal construction in the category of Petri nets, it generally fails to satisfy the expected universal property. This is because the unfolding construction overlooks the net's internal symmetries. There are two solutions: make these symmetries explicit to obtain a weak universal property (one that holds only ''up to symmetry''); or break the symmetries by assigning individual identities to components of the net. We review these two solutions and establish, in each case, a universal unfolding of Petri nets to event structures. This paper demonstrates a 2-categorical approach to Petri net unfoldings. We show that each unfolding semantics determines a 2-categorical relative adjunction involving Petri nets and event structures. Viewed in this way, the above two constructions can be related formally via an appropriate morphism of adjunctions. We exhibit a 2-density property of event structures which implies that unfolding functors are essentially unique."
+        },
+        {
+          "title": "Beyond In-Distribution Metrics: A Systematic Out-of-Distribution Evaluation of Congenital Heart Disease Segmentation",
+          "id": "http://arxiv.org/abs/2609.17068v1",
+          "published": "2026-09-15T12:10:52Z",
+          "summary": "Congenital heart disease (CHD) diagnosis and surgical planning often require patient-specific 3D anatomical models, but manual segmentation is labor-intensive, particularly in complex anatomies. Although deep-learning methods can automate this process, they are typically evaluated in-distribution, despite clinically relevant shifts in scanner, protocol, institution, population, and imaging modality. We present, to our knowledge, the first systematic evaluation of out-of-distribution (OOD) generalization in CHD segmentation, using ImageCHD as a held-out target cohort. We compare representative segmentation architectures under combined CT and CMR training, CT-only training, self-supervised pretraining, and limited target-domain adaptation. In-distribution performance proves to be a poor indicator of cross-cohort robustness: nnU-Net achieves the highest validation Dice (0.77) but falls to 0.51 on ImageCHD, while SwinUNETR generalizes substantially better, reaching 0.67 Dice. MAE and JEPA pretraining provide only modest additional benefit, suggesting that architecture contributes more to robustness than the tested pretraining strategies in this setting. When limited target-domain supervision is introduced, all SwinUNETR variants exceed 0.76 Dice with only 11 labeled ImageCHD cases. These findings demonstrate that conventional in-distribution evaluation can obscure clinically important generalization failures and support explicit cross-dataset testing as a key component of CHD segmentation evaluation."
+        },
+        {
+          "title": "NeuroTS-Net: Multi-Class Semantic Segmentation of Pediatric Brain Tumors in Multi-Modal MRI",
+          "id": "http://arxiv.org/abs/2609.16873v1",
+          "published": "2026-09-15T09:05:03Z",
+          "summary": "Pediatric brain tumors are a leading cause of cancer-related mortality in children, and their small, rare, and often low-contrast subregions make accurate manual delineation challenging. Reliable automated segmentation is therefore needed to support diagnosis, treatment planning, and response assessment. Accordingly, we introduce NeuroTS-Net, a three-dimensional encoder-decoder convolutional neural network architecture for multi-class semantic segmentation that incorporates a dual-scale raw-detail stream, adaptive low-resolution context selection, and detail-preserving multipath downsampling. These components preserve fine intensity and boundary information while efficiently modeling broader tumor context. NeuroTS-Net was trained on the BraTS 2026 pediatric dataset without external data or pretrained weights and evaluated against nnU-Net and MedNeXt under the same experimental protocol. NeuroTS-Net outperformed the baseline methods, achieving whole-tumor and tumor-core Dice scores of 0.938 and 0.937 on the internal validation set and 0.927 and 0.926 on the official challenge validation set. The code is open-sourced at: https://github.com/maenstru56/NeuroTS."
+        },
+        {
+          "title": "FAHCD-Net: Frequency-Adaptive Heatmap-Conditional Diffusion Networks for Robust Facial Landmark Detection",
+          "id": "http://arxiv.org/abs/2609.16842v1",
+          "published": "2026-09-15T08:36:20Z",
+          "summary": "Facial Landmark Detection(FLD) is a crucial task in various applications and has achieved significant advancements in recent years. However, current FLD methods still struggle under challenging conditions, where facial structural variations, information loss, and noise interference severely compromise the integrity and accuracy of learned facial features. To address these issues, we propose Frequency-Adaptive Heatmap-Conditional Diffusion Network (FAHCD-Net), which integrates a Frequency-Adaptive Heatmap-Conditional Diffusion (FAHCD) model with a Smoothness Regularization (SR) loss in a cascaded framework. Specifically, the FAHCD model incorporates a Hierarchical Frequency Adaptation (HFA) module designed to suppress redundant high-frequency noise through multi-layer frequency decomposition and adaptive reconstruction, thereby preserving essential facial structures. Additionally, the SR loss is proposed to further mitigate the interference of high-frequency noise and enhance the smoothness of the generated landmark heatmaps. By cascading the FAHCD model with the SR loss, FAHCD-Net effectively leverages both statistical and frequency-based distribution characteristics of the data to progressively generate more accurate landmark heatmaps from noisy inputs. Extensive experiments on popular benchmarks demonstrate the effectiveness and robustness of the proposed method, achieving state-of-the-art performance in FLD tasks under challenging scenarios. The source code is available at https://github.com/HJWKryptonite/FAHCD-Net."
+        },
+        {
+          "title": "Generation of pure spin currents via nonadiabatic quantum pumping in an antiferromagnetic chain",
+          "id": "http://arxiv.org/abs/2609.16819v1",
+          "published": "2026-09-15T08:23:17Z",
+          "summary": "In this study, quantum spin pumping in an antiferromagnetic chain driven by time-dependent potential is investigated. The aim is to explore the possibility of generating and controlling spin currents in the absence of external bias and to examine the role of exchange field and periodic driving in the separation of spin-up and spin-down currents. The system is described using a tight-binding model, and spin-resolved currents are calculated employing the Keldysh non-equilibrium Green's function formalism. Two time-dependent potentials with a specific phase difference are applied to the two ends of the chain, while the chemical potentials of both electrodes are set equal. The results demonstrate that in the adiabatic regime (low frequencies), the response of the two spin channels is nearly identical. However, as the driving frequency increases and the system enters the nonadiabatic regime, absorption and emission processes of energy quanta become activated, leading to significant differences between spin-up and spin-down currents. The pumped current exhibits strong dependence on the chemical potential, allowing for the control of both magnitude and direction of the spin current through its adjustment. With increasing frequency, the spin current enhances, and parameters can be tuned such that the charge current nearly vanishes while a considerable spin current persists. This finding indicates the feasibility of achieving nearly pure spin pumping without net charge transfer in the antiferromagnetic chain. The results provide a promising perspective for designing spin-pumping devices based on antiferromagnetic systems."
+        },
+        {
+          "title": "De-GAN - Dynamic Parameter Tuned GAN for 3D Medical Image Segmentation: A Step Towards Generalisation",
+          "id": "http://arxiv.org/abs/2609.16755v1",
+          "published": "2026-09-15T07:32:48Z",
+          "summary": "Brain tumor segmentation remains difficult because enhancing tumor (ET) has low contrast and overlaps surrounding tissue, while scanner and site variation causes domain shift. We propose DE-GAN, a contrast-enhancing conditional GAN that combines input-adaptive dynamic convolutions, style-aware feature mixing, and coordinate encoding to synthesize slice-adaptive FLAIR images. A label-guided, class-conditional target separates tumor-core (TC) and ET intensities while preserving anatomy. The generated FLAIR is concatenated with the original MR modalities and used to train a 3D U-Net. Across BraTS 2015, 2018, and 2019, DE-GAN improves segmentation over the baseline and static EnhGAN replacement on most reported TC/ET metrics, with the largest gains from retaining both original and enhanced FLAIR. Code and pretrained models are available at https://github.com/zkhansuri-ui/DE-GAN."
+        },
+        {
+          "title": "Electric-Field-Switchable Altermagnetism via Ligand Rotation in a d0 Metal-Organic Framework",
+          "id": "http://arxiv.org/abs/2609.16749v1",
+          "published": "2026-09-15T07:24:07Z",
+          "summary": "Altermagnetism combines vanishing net magnetization with momentum-dependent spin splitting. While altermagnetic signatures have been identified in metal-organic frameworks (MOFs), non-invasive reversible control remains challenging. Here we report a route to electric-field-switchable altermagnetism in a flexible d0-MOF, in which polar substituents couple the external field to ligand rotation. In the planar ground state, pz orbitals mediate 180-degree ligand-metal-ligand superexchange (J2), stabilizing antiferromagnetic order. Rotating ligands out of plane activates px/py orbitals, enhances 90-degree pathways (J1), and reverses J1/J2 competition. The antiferromagnetic-to-altermagnetic crossover occurs at approx. 34 degrees, with spin splitting of 84 meV at 90 degrees. The 90-degree altermagnetic state is switched on by the electric field and switched off upon field removal, as the constrained-rotation landscape decreases monotonically back toward 0 degrees, enabling barrierless relaxation to the antiferromagnetic state and reversible on/off operation. Ab initio molecular dynamics at 300 K shows thermal fluctuations alone cannot synchronize ligand rotation. Polar substituents provide the required coupling for electric-field control; for fluorinated substituents, the critical field is approx. 0.22 V/Angstrom, comparable to field-effect devices. This work establishes ligand p orbitals, rather than transition-metal d orbitals, as the origin of altermagnetic order and shows that polar substituents enable electric-field control for organic spintronics."
+        },
+        {
+          "title": "Electrical Probing of Sub-Néel Spin Dynamics in Two-Dimensional Antiferromagnets Using Graphene Heterostructures",
+          "id": "http://arxiv.org/abs/2609.16725v1",
+          "published": "2026-09-15T06:56:23Z",
+          "summary": "Low-dimensional antiferromagnetic van der Waals materials have emerged as a versatile platform for exploring exotic spin dynamics and magnetic phases, yet electrically accessing these phenomena remains a major challenge because of their vanishing net magnetization and highly insulating nature. Here, we demonstrate that graphene can act as an ultrasensitive electrical transducer of hidden spin dynamics in two-dimensional antiferromagnets. By integrating graphene with the van der Waals antiferromagnet FePS$_3$, low-temperature transport measurements combined with magnetic-field and gate-voltage control reveal multiple resistance anomalies well below the Néel temperature. Their distinct temperature, magnetic-field, and carrier-density dependences enable us to associate these anomalies with magnon excitations and with a low-temperature magnetic reconfiguration of the antiferromagnetic state, both of which remain largely inaccessible to conventional magnetometry. Density functional theory calculations further show that competing antiferromagnetic spin configurations in FePS$_3$ are nearly degenerate in energy while producing markedly different electronic responses in the adjacent graphene layer. The pronounced electrostatic tunability of these signatures demonstrates that graphene directly transduces interfacial magnetic dynamics into an electrical signal. Our work establishes graphene/antiferromagnetic van der Waals heterostructures as a versatile platform for the electrical readout of spin dynamics in two-dimensional magnets."
+        },
+        {
+          "title": "Weak ferromagnetism in the square-lattice Heisenberg $J_1$-$J_2$-$J_2^\\prime$ model with easy-axis single-ion anisotropy",
+          "id": "http://arxiv.org/abs/2609.16593v1",
+          "published": "2026-09-15T03:37:16Z",
+          "summary": "Motivated by recent experimental realizations of the Heisenberg model and two-dimensional altermagnetism using ultracold atoms in optical lattices, we systematically investigate the magnetic properties of the square-lattice Heisenberg $J_1$-$J_2$-$J_2^\\prime$ model in the presence of easy-axis single-ion anisotropy $D$. Here, $J_1 (>0)$ is the nearest-neighbor antiferromagnetic exchange parameter, while $J_2$ and $J_2^\\prime$ are two distinct next-nearest-neighbor superexchange parameters that alternate on the lattice. We perform numerical calculations of the sublattice magnetization, net magnetization, and critical temperature. Interestingly, the net magnetization is not identically zero at finite temperatures; its absolute value first increases and then decreases with increasing temperature, revealing a temperature-dependent weak ferromagnetism. We find that $J_2\\not=J_2^\\prime$ is the primary factor responsible for weak ferromagnetism at finite temperatures, while $D$ provides the necessary background for two-dimensional long-range magnetic ordering. Moreover, for a fixed $J_2+J_2^\\prime$, we observe that a larger $|J_2-J_2^\\prime|$ leads to a greater maximum net magnetization and critical temperature, as well as a broader temperature range for weak ferromagnetism. The difference between $J_2$ and $J_2^\\prime$ originates from the distinct superexchange pathways between magnetic atoms, with these pathways mediated by two different types of nonmagnetic atoms. This mechanism, which differs from conventional ones such as the Dzyaloshinskii-Moriya interaction, may be detectable in real materials."
+        },
+        {
+          "title": "Decoder Design Matters for ECG Delineation",
+          "id": "http://arxiv.org/abs/2609.16489v1",
+          "published": "2026-09-15T01:24:58Z",
+          "summary": "Electrocardiogram (ECG) delineation identifies the boundaries of P waves, QRS complexes, and T waves, providing structural annotations that can guide AI models in learning to interpret ECGs. However, training accurate delineation models requires manual annotations that are scarce and time-consuming to obtain. Recent work addresses this limitation through semi-supervised learning (SSL), but the design of the architecture, particularly the decoder, has received less attention. To this end, we propose R-U-Net, an ECG delineation model that pairs a ResNet-18 encoder with a U-Net decoder. On SemiSegECG, R-U-Net outperforms the strongest evaluated ResNet-18 + fully convolutional network (FCN) head baseline in each of the 16 in-domain settings by 3.3-13.0 mIoU and achieves 82.6 mIoU in the cross-domain setting, an improvement of 8.1 mIoU. Controlled ablations show that decoder design contributes more to performance gains than the evaluated SSL methods, motivating further exploration of architectures for ECG delineation. All code is open-source at github.com/ELM-Research/ECG-Delineation."
+        },
+        {
+          "title": "Observational constraints on net radiative forcing confirm aviation contrail warming",
+          "id": "http://arxiv.org/abs/2609.16451v1",
+          "published": "2026-09-15T00:13:22Z",
+          "summary": "Contrail cirrus represents a critical component of aviation's non-CO2 climate impact, but its net radiative forcing, the balance between longwave warming and shortwave cooling, remains poorly constrained by direct observations. As a result, current assessments rely almost exclusively on microphysical models such as CoCiP and global climate simulations. Existing empirical estimates are largely restricted to young, linear tracks, because satellite detection masks have a poor recall of contrails once they spread and merge with natural cirrus, leaving a structural gap in our understanding of long-lived, non-linear contrail cirrus. To address this we use a causal framework that isolates the net radiative contrail effect of flight traffic over the Americas. Building on recent progress that quantified the longwave warming contrail effect using advected flight paths as a proxy for contrails, we expand this continuous treatment approach to capture the highly skewed shortwave cooling impact, delivering a 12-hour lifespan net observational radiative forcing. Our analysis reveals a statistically significant net warming energy forcing of 33.7 (95% CI: 20.8, 47.8) GJ per km flown from April 2019 to April 2020, providing a large-scale empirical quantification of long contrail lifespan impact of the same order as, though somewhat larger than, previous bottom-up simulation estimates. This observational benchmark offers an independent line of evidence on the sign and magnitude of the climate impact of contrails."
+        },
+        {
+          "title": "Drift Field Net: Learning Ocean Lagrangian advection fields from in-situ and satellite observations",
+          "id": "http://arxiv.org/abs/2609.16288v1",
+          "published": "2026-09-14T19:43:14Z",
+          "summary": "The North Pacific Subtropical Gyre (NPSG) is a major accumulation zone for floating plastic debris, resulting from basin-scale convergent ocean circulation. Effective cleanup strategies in this region rely on accurate forecasts of Lagrangian particle drift. Here, we introduce Drift Field Net (DFN), a deep neural network that predicts ocean surface flow fields from operational satellite observations. DFN is trained using a novel two-stage strategy that combines pretraining on simulated data with Lagrangian fine-tuning based on an advection-consistent loss function. This physics-informed optimization directly improves the accuracy of particle trajectory predictions. We evaluate DFN against an operational physics-based forecasting system and demonstrate the potential of deep learning for ocean surface flow prediction. On in situ drifter trajectories, DFN reduces the mean positioning error by 20 km after a 7-day forecast compared with the operational model. Furthermore, Lagrangian fine-tuning with the proposed advection loss further reduces the positioning error by 10 km, highlighting the benefits of incorporating Lagrangian constraints into the training process."
+        },
+        {
+          "title": "A Sentinel-2 benchmark dataset for deep-learning active-fire segmentation across 25 California wildfires",
+          "id": "http://arxiv.org/abs/2609.16199v1",
+          "published": "2026-09-14T18:31:35Z",
+          "summary": "This article describes an open image dataset for developing and evaluating active-fire segmentation methods in satellite imagery. The dataset contains 2,148 image-mask pairs from 25 California wildfires, with acquisitions spanning July 2020 to August 2026. Each image is a 512x512-pixel, three-channel composite derived from Sentinel-2 Level-2A bands B12, B11 and B8A at 20 m spatial sampling. A fixed linear rendering is applied throughout the dataset. Corresponding masks distinguish background, SWIR-rule active fire and invalid observations. The masks were generated from shortwave-infrared brightness and near-infrared contrast, followed by constrained neighborhood growth. The release includes chip-level metadata and an incident-disjoint partition containing 18 training, three validation and four test fires. Among the image pairs, 841 contain active-fire labels; these labels occupy 0.0766% of all grid cells. A mask-blind analyst review covers 233 test chips and provides a separate assessment of the rule-generated labels at chip and connected-component levels. Reference training and evaluation code accompanies the data, including a ResNet-34 U-Net implementation with validation-based checkpoint and threshold selection. The archived images, masks, metadata and review annotations support research on rare-class segmentation, learning from algorithmic labels and transfer across fire incidents. The versioned dataset is deposited on Zenodo, with preparation and reuse software maintained in a public GitHub repository."
+        },
+        {
+          "title": "Common Excitation Patterns of Star Formation, Active Galactic Nuclei, and Shocks in Seyfert Galaxies",
+          "id": "http://arxiv.org/abs/2609.15913v1",
+          "published": "2026-09-14T17:25:15Z",
+          "summary": "The growth of galaxies and their central supermassive black holes is closely connected, yet the net effect of active galactic nuclei (AGN) feedback on host-galaxy star formation remains uncertain. AGN may enhance, suppress, or have little measurable impact on star formation, but distinguishing among these outcomes requires separating star-formation and AGN photoionization from shock excitation, which is expected in AGN-driven outflows but has been difficult to isolate. Here we apply a recently developed theoretical three-dimensional diagnostic diagram, designed to separate star formation, AGN, and shock excitation, to VLT/MUSE IFU observations of nine nearby (z < 0.026) Type 2 Seyfert galaxies. We find a common excitation pattern across the sample: star-forming rings or arcs at projected radii of r~0.8-6 kpc, AGN-photoionized bicones extending to kpc scales, central fast-shock-dominated regions that often extend perpendicular to the AGN bicone, and pure-shock- dominated regions surrounding the central fast shocks and appearing locally within the star-forming rings. Deep Chandra X-ray morphology independently supports this decomposition. The circumnuclear star-forming rings are consistent with bar-driven resonances, although positive AGN feedback may also contribute. The central fast shocks are broadly consistent with AGN jet-ISM interactions, while AGN wind-ISM interactions may also play an important role in galaxies with low-power jets. These results establish central shocks as a common feature of Seyfert galaxies and demonstrate the importance of accounting for shock excitation in AGN feedback studies."
+        }
+      ]
+    },
+    {
+      "source": "prototype_crossref",
+      "url": "https://api.crossref.org/works/10.1109/TKDE.2026.3731869",
+      "status": 200,
+      "file": "improve/research/path_reasoning_next_20260916/prototype_crossref_v2.json",
+      "results": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                8
+              ]
+            ],
+            "date-time": "2026-09-08T19:10:00Z",
+            "timestamp": 1788894600803,
+            "version": "build-2803163510"
+          },
+          "reference-count": 0,
+          "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-029"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-037"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "IEEE Trans. Knowl. Data Eng."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "DOI": "10.1109/tkde.2026.3731869",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                7
+              ]
+            ],
+            "date-time": "2026-09-07T19:03:03Z",
+            "timestamp": 1788807783000
+          },
+          "page": "1-13",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Self-Explaining Graph Neural Network for Link Prediction Based on Path-Aware Prototype Learning"
+          ],
+          "prefix": "10.1109",
+          "author": [
+            {
+              "given": "Zhiyang",
+              "family": "Li",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Sun Yat-sen University",
+                  "place": [
+                    "Guangzhou, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yancan",
+              "family": "Yi",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Sun Yat-sen University",
+                  "place": [
+                    "Guangzhou, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Guannan",
+              "family": "Du",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Sun Yat-sen University",
+                  "place": [
+                    "Guangzhou, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yuxing",
+              "family": "Wang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Sun Yat-sen University",
+                  "place": [
+                    "Guangzhou, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Zhiming",
+              "family": "Dai",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Sun Yat-sen University",
+                  "place": [
+                    "Guangzhou, China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "263",
+          "container-title": [
+            "IEEE Transactions on Knowledge and Data Engineering"
+          ],
+          "original-title": [],
+          "link": [
+            {
+              "URL": "http://xplorestaging.ieee.org/ielx8/69/4358933/11683389.pdf?arnumber=11683389",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                8
+              ]
+            ],
+            "date-time": "2026-09-08T19:03:38Z",
+            "timestamp": 1788894218000
+          },
+          "score": 1,
+          "resource": {
+            "primary": {
+              "URL": "https://ieeexplore.ieee.org/document/11683389/"
+            }
+          },
+          "subtitle": [],
+          "short-title": [],
+          "issued": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1109/tkde.2026.3731869",
+          "relation": {},
+          "ISSN": [
+            "1041-4347",
+            "1558-2191",
+            "2326-3865"
+          ],
+          "issn-type": [
+            {
+              "value": "1041-4347",
+              "type": "print"
+            },
+            {
+              "value": "1558-2191",
+              "type": "electronic"
+            },
+            {
+              "value": "2326-3865",
+              "type": "electronic"
+            }
+          ],
+          "subject": [],
+          "published": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

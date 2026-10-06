@@ -1,0 +1,288 @@
+{
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fbioinformatics%2Fbtag272%22&format=json&resultType=core&pageSize=5",
+  "as_of": "2026-09-13",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1093/bioinformatics/btag272\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 5,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "42412793",
+          "source": "MED",
+          "pmid": "42412793",
+          "pmcid": "PMC13340222",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13340222"
+            ]
+          },
+          "doi": "10.1093/bioinformatics/btag272",
+          "title": "DiSPA: differential substructure-pathway attention for drug response prediction.",
+          "authorString": "Han Y, Kim S, Jeong E, Lee S, Yun S, Lim S.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Han Y",
+                "firstName": "Yewon",
+                "lastName": "Han",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Computer Science and Engineering, Dongguk University, Seoul 04620, South Korea."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Kim S",
+                "firstName": "Sunghyun",
+                "lastName": "Kim",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of AI Convergence, Dongguk University, Seoul 04620, South Korea."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Jeong E",
+                "firstName": "Eunyi",
+                "lastName": "Jeong",
+                "initials": "E",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Computer Science and Artificial Intelligence, Dongguk University, Seoul 04620, South Korea."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lee S",
+                "firstName": "Sungkyung",
+                "lastName": "Lee",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Computer Science and Artificial Intelligence, Dongguk University, Seoul 04620, South Korea."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Yun S",
+                "firstName": "Seokwoo",
+                "lastName": "Yun",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "AI Research Team, Ar-ge Inc., Seoul 08757, South Korea."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lim S",
+                "firstName": "Sangsoo",
+                "lastName": "Lim",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-1737-6242"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Computer Science and Artificial Intelligence, Dongguk University, Seoul 04620, South Korea."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-1737-6242"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "42",
+            "journalIssueId": 4259227,
+            "dateOfPublication": "2026 Jul",
+            "monthOfPublication": 7,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-07-01",
+            "journal": {
+              "title": "Bioinformatics (Oxford, England)",
+              "medlineAbbreviation": "Bioinformatics",
+              "issn": "1367-4803",
+              "essn": "1367-4811",
+              "isoabbreviation": "Bioinformatics",
+              "nlmid": "9808944"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "btag272",
+          "abstractText": "<h4>Motivation</h4>Accurate prediction of drug response in precision medicine requires models that capture how specific chemical substructures interact with cellular pathway states. However, most existing deep learning approaches treat chemical and transcriptomic modalities independently or combine them only at late stages, limiting their ability to model fine-grained, context-dependent mechanisms of drug action. In addition, vanilla attention mechanisms are often sensitive to noise and sparsity in high-dimensional biological networks, hindering both generalization and interpretability.<h4>Results</h4>We present Differential Substructure-Pathway Attention (DiSPA), a framework that models bidirectional interactions between chemical substructures and pathway-level gene expression. DiSPA introduces differential cross-attention to suppress spurious associations while enhancing context-relevant interactions. On the GDSC benchmark, DiSPA achieves state-of-the-art performance, with strong improvements in the disjoint setting. These gains are consistent across random and drug-blind splits, suggesting improved robustness. Analyses of attention patterns indicate more selective and concentrated interactions compared to standard cross-attention. Exploratory evaluation shows that differential attention better prioritizes predefined target-related pathways, although this does not constitute mechanistic validation. DiSPA also shows promising generalization on external datasets (CTRP) and cross-dataset settings, although further validation is needed. It further enables zero-shot application to spatial transcriptomics, providing exploratory insights into region-specific drug sensitivity patterns without ground-truth validation.<h4>Availability and implementation</h4>Source code and data are available at https://github.com/sslim-aidrug/DiSPA.",
+          "affiliation": "Department of Computer Science and Engineering, Dongguk University, Seoul 04620, South Korea.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "RS-2025-18732993",
+                "agency": "National Research Foundation of Korea",
+                "orderIn": 0
+              },
+              {
+                "grantId": "RS-2022-NR067309",
+                "agency": "National Research Foundation of Korea",
+                "orderIn": 0
+              },
+              {
+                "grantId": "IITP-2025-RS-2020-11201789",
+                "agency": "Information Technology Research Center",
+                "orderIn": 0
+              },
+              {
+                "agency": "Institute of Information &amp; Communications Technology Planning &amp; Evaluation",
+                "orderIn": 0
+              },
+              {
+                "grantId": "IITP-2025-RS-2023-00254592",
+                "agency": "Artificial Intelligence Convergence Innovation Human Resources Development",
+                "orderIn": 0
+              },
+              {
+                "grantId": "RS-2025-00560523",
+                "agency": "National Research Foundation of Korea",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computational Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Software"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Deep Learning"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/bioinformatics/btag272"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13340222"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13340222?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "citedByCount": 0,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-07-07",
+          "dateOfCreation": "2026-07-07",
+          "firstIndexDate": "2026-07-08",
+          "fullTextReceivedDate": "2026-09-03",
+          "dateOfRevision": "2026-09-08",
+          "firstPublicationDate": "2026-07-01"
+        }
+      ]
+    }
+  }
+}

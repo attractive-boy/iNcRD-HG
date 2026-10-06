@@ -1,0 +1,48 @@
+{
+  "scope": "Identity crosswalk and endpoint probes only; not a dataset-wide target mapping or performance result.",
+  "entity_order_verified": {
+    "MiDrug": true,
+    "LncDrug": true
+  },
+  "identity_counts": {
+    "MiDrug": {
+      "total": 605,
+      "stable_id_available": 605,
+      "status_counts": {
+        "current_exact": 417,
+        "historical_exact_accession_current_sequence": 178,
+        "historical_exact_absent_current": 10
+      }
+    },
+    "LncDrug": {
+      "total": 1322,
+      "stable_id_available": 1292,
+      "status_counts": {
+        "annotated_full_transcript": 1292,
+        "legacy_partial_fallback": 15,
+        "unresolved": 15
+      }
+    }
+  },
+  "sources": {
+    "improve/results/tabicl_reli_inputs_20260912/MiDrug_sequences.json": {
+      "sha256": "2d7c006be19b97c6e26bdd8496151cefd6dd8fb88325403bc8a47a0fe57898fb"
+    },
+    "improve/results/tabicl_reli_inputs_20260912/LncDrug_sequences.json": {
+      "sha256": "3b0389e7953a1d491291584b0b1a5387d75583c0fc515f9468a1b164696ebc1f"
+    }
+  },
+  "encori_mir21_probe": {
+    "complete_response": true,
+    "raw_rows": 1820,
+    "client_filter": "miRNAid == MIMAT0000076 AND geneType == protein_coding AND clipExpNum >= 1",
+    "filtered_site_rows": 1289,
+    "unique_target_genes": 1098,
+    "returned_clip_zero_rows": 531,
+    "interpretation": "CLIP-supported candidate binding targets; not all functionally verified regulation. Single-RNA example, not dataset coverage."
+  },
+  "encori_neat1_probe": {
+    "complete_response": false,
+    "reason": "Stopped at approximately 2 MB; raw preview only, excluded from coverage calculations."
+  }
+}

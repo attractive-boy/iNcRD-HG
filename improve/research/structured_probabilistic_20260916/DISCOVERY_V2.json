@@ -1,0 +1,361 @@
+[
+  {
+    "url": "https://export.arxiv.org/api/query?search_query=%28au%3ALoconte+AND+%28ti%3Aknowledge+OR+abs%3A%22knowledge+graph%22%29%29+OR+%28ti%3Atractable+AND+abs%3A%22knowledge+graph%22%29&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+    "accessed_at_utc": "2026-09-16T10:13:39.034515+00:00",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/arxiv_circuits_exact_v2.xml",
+    "status": 200,
+    "content_type": "application/atom+xml; charset=utf-8",
+    "bytes": 9215,
+    "sha256": "60e958ce308ee1e2374af5c22a9819c53bddf5cd9a5a39ebf9ff8ad34b8d79da",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2608.24892v1",
+        "title": "Natural Language Input, Semantic Track Representation, and LLM Inference: Making the Maritime Information Exchange Model Tractable",
+        "published": "2026-06-03T15:12:43Z",
+        "updated": "2026-06-03T15:12:43Z",
+        "abstract": "We describe a practical architecture for making the Maritime Information Exchange Model (MIEM) and the broader Rich Semantic Track model tractable using current large language model (LLM) technology. The barrier to adoption of semantic track models in defense and law enforcement has been the requirement that operators learn formal ontology languages and manually encode observations as typed logical assertions. We propose eliminating this barrier entirely: operators contribute observations in natural language; an LLM translates these into typed Semantic Assertion Records (SARs), which are named case frames that capture n-ary relations in a single compact structure; a knowledge graph accumulates the SARs; and a second LLM pass performs inference, anomaly detection, and hypothesis ranking over the graph. We work through two detailed examples (a 9/11-era pre-attack indicator scenario and a maritime cargo inspection scenario) showing the full pipeline from natural language input to SAR representation to inference output. We argue that this architecture makes the Track Model and MIEM immediately deployable with current technology, establishes prior art against proprietary enclosure of the approach, and grounds the method in a theoretical framework connecting semantic track representations to neural manifold geometry.",
+        "authors": [
+          "Frederick Roth"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2605.29168v2",
+        "title": "Better Later Than Sooner: Neuro-Symbolic Knowledge Graph Construction via Ontology-grounded Post-extraction Correction",
+        "published": "2026-05-27T23:09:10Z",
+        "updated": "2026-09-06T07:37:22Z",
+        "abstract": "Question answering (QA) is a core challenge in AI, particularly for complex queries requiring multi-hop reasoning across documents, or symbolic operations like aggregation or exhaustive listing. Retrieval-augmented generation has become the dominant approach to QA, with recent graph-based variants addressing part of these issues by organizing knowledge to better support compositional questions. However, most textual graph-based RAG methods still lack the structure needed for symbolic operations useful to answer complex questions reliably. This motivates symbolic graph-based approaches, which extract knowledge graphs (KGs) whose relations are logic predicates that enable SQL-like querying. Yet these pipelines typically use LLMs for KG extraction, which can introduce consistency issues, where extracted facts may violate commonsense ontology constraints. We propose a neuro-symbolic framework for ontology-grounded KG construction combining open-domain extraction, embedding-based canonicalization of types and predicates, and targeted LLM-based correction of ontology violations. By deferring corrections to a post-extraction stage, our method avoids repeated LLM calls, substantially reducing token usage while improving KG consistency and preserving downstream QA quality. Finally, we show that the extracted KGs are well suited for symbolic querying by measuring the occurrence of SPARQL graph patterns.",
+        "authors": [
+          "Lorenzo Loconte",
+          "Timothy Hospedales",
+          "Cristina Cornelio"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2410.12537v3",
+        "title": "Is Complex Query Answering Really Complex?",
+        "published": "2024-10-16T13:19:03Z",
+        "updated": "2025-07-03T08:36:22Z",
+        "abstract": "Complex query answering (CQA) on knowledge graphs (KGs) is gaining momentum as a challenging reasoning task. In this paper, we show that the current benchmarks for CQA might not be as complex as we think, as the way they are built distorts our perception of progress in this field. For example, we find that in these benchmarks, most queries (up to 98% for some query types) can be reduced to simpler problems, e.g., link prediction, where only one link needs to be predicted. The performance of state-of-the-art CQA models decreases significantly when such models are evaluated on queries that cannot be reduced to easier types. Thus, we propose a set of more challenging benchmarks composed of queries that require models to reason over multiple hops and better reflect the construction of real-world KGs. In a systematic empirical investigation, the new benchmarks show that current methods leave much to be desired from current CQA methods.",
+        "authors": [
+          "Cosimo Gregucci",
+          "Bo Xiong",
+          "Daniel Hernandez",
+          "Lorenzo Loconte",
+          "Pasquale Minervini",
+          "Steffen Staab",
+          "Antonio Vergari"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2305.15944v3",
+        "title": "How to Turn Your Knowledge Graph Embeddings into Generative Models",
+        "published": "2023-05-25T11:30:27Z",
+        "updated": "2024-01-16T10:53:05Z",
+        "abstract": "Some of the most successful knowledge graph embedding (KGE) models for link prediction -- CP, RESCAL, TuckER, ComplEx -- can be interpreted as energy-based models. Under this perspective they are not amenable for exact maximum-likelihood estimation (MLE), sampling and struggle to integrate logical constraints. This work re-interprets the score functions of these KGEs as circuits -- constrained computational graphs allowing efficient marginalisation. Then, we design two recipes to obtain efficient generative circuit models by either restricting their activations to be non-negative or squaring their outputs. Our interpretation comes with little or no loss of performance for link prediction, while the circuits framework unlocks exact learning by MLE, efficient sampling of new triples, and guarantee that logical constraints are satisfied by design. Furthermore, our models scale more gracefully than the original KGEs on graphs with millions of entities.",
+        "authors": [
+          "Lorenzo Loconte",
+          "Nicola Di Mauro",
+          "Robert Peharz",
+          "Antonio Vergari"
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://api.crossref.org/works?query.bibliographic=knowledge+graph+embeddings+tractable+probabilistic+Loconte+Vergari&rows=6",
+    "accessed_at_utc": "2026-09-16T10:13:39.036367+00:00",
+    "file": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/structured_probabilistic_20260916/crossref_circuit_v2.json",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 29526,
+    "sha256": "ed2bb09723b2dbe1c907957ebc1586e2bea7df6f3ada3f3890eba847b7c9f086",
+    "records": [
+      {
+        "title": [
+          "How to Turn Your Knowledge Graph Embeddings into Generative Models"
+        ],
+        "doi": "10.52202/075280-3395",
+        "published": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Lorenzo",
+            "family": "Loconte",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nicola Di",
+            "family": "Mauro",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Robert",
+            "family": "Peharz",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Antonio",
+            "family": "Vergari",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": [
+          "Advances in Neural Information Processing Systems 36"
+        ]
+      },
+      {
+        "title": [
+          "Probabilistic Coarsening for Knowledge Graph Embeddings"
+        ],
+        "doi": "10.3390/axioms12030275",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              3,
+              6
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-7559-8658",
+            "authenticated-orcid": false,
+            "given": "Marcin",
+            "family": "Pietrasik",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Electrical and Computer Engineering, University of Alberta, Edmonton, AB T6G 2R3, Canada"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4783-0717",
+            "authenticated-orcid": false,
+            "given": "Marek Z.",
+            "family": "Reformat",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Electrical and Computer Engineering, University of Alberta, Edmonton, AB T6G 2R3, Canada"
+              },
+              {
+                "name": "Information Technology Institute, University of Social Sciences, 90-113 \u0141\u00f3d\u017a, Poland"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": "<jats:p>Knowledge graphs have risen in popularity in recent years, demonstrating their utility in applications across the spectrum of computer science. Finding their embedded representations is thus highly desirable as it makes them easily operated on and reasoned with by machines. With this in mind, we propose a simple meta-strategy for embedding knowledge graphs using probabilistic coarsening. In this approach, a knowledge graph is first coarsened before being embedded by an arbitrary embedding method. The resulting coarse embeddings are then extended down as those of the initial knowledge graph. Although straightforward, this allows for faster training by reducing knowledge graph complexity while revealing its higher-order structures. We demonstrate this empirically on four real-world datasets, which show that coarse embeddings are learned faster and are often of higher quality. We conclude that coarsening is a recommended prepossessing step regardless of the underlying embedding method used.</jats:p>",
+        "venue": [
+          "Axioms"
+        ]
+      },
+      {
+        "title": [
+          "Tractable Cases"
+        ],
+        "doi": "10.1007/978-1-84800-286-9_7",
+        "published": null,
+        "authors": [],
+        "abstract": null,
+        "venue": [
+          "Graph-based Knowledge Representation"
+        ]
+      },
+      {
+        "title": [
+          "Improving Dialog Systems Using Knowledge Graph Embeddings"
+        ],
+        "doi": "10.22215/etd/2018-12640",
+        "published": null,
+        "authors": [
+          {
+            "given": "Brian",
+            "family": "Carignan",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": []
+      },
+      {
+        "title": [
+          "Unsupervised Irony Detection: A Probabilistic Model with Word Embeddings"
+        ],
+        "doi": "10.5220/0006052000680076",
+        "published": {
+          "date-parts": [
+            [
+              2016
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "given": "Debora",
+            "family": "Nozza",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Milano-Bicocca, Italy"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Elisabetta",
+            "family": "Fersini",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Milano-Bicocca, Italy"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Enza",
+            "family": "Messina",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Milano-Bicocca, Italy"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": [
+          "Proceedings of the 8th International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management"
+        ]
+      },
+      {
+        "title": [
+          "Stat-n-Ball: Enhancing Probabilistic Knowledge Graph Embeddings with Geometric and Confidence-Aware Models"
+        ],
+        "doi": "10.1145/3701716.3715487",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              8
+            ]
+          ]
+        },
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0007-6343-3830",
+            "authenticated-orcid": false,
+            "given": "Aniket",
+            "family": "Mitra",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "International Institute of Information Technology, Bangalore, Bengaluru, India"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4429-9932",
+            "authenticated-orcid": false,
+            "given": "Vinu E.",
+            "family": "Venugopal",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "International Institute of Information Technology, Bangalore, Bengaluru, India"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "abstract": null,
+        "venue": [
+          "Companion Proceedings of the ACM on Web Conference 2025"
+        ]
+      }
+    ]
+  }
+]

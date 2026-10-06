@@ -1,0 +1,32 @@
+{
+  "created_at_utc": "2026-09-18T09:20:00+00:00",
+  "previous_record": "CONTINUATION_PROGRESS_20260917_ALGO_PASSING.json",
+  "objective_retained": "Find at least three brand-new, sufficiently innovative, verified techniques for incrd-hg in a direction different from the already-improved ones. User-selected direction: algorithm-only (objective / model class / fusion), no new feature columns.",
+  "objective_achieved": false,
+  "goal_status_to_retain": "unmet",
+  "confirmed_new_techniques": 0,
+  "new_algorithm_families_tested": 6,
+  "closest_candidate": {
+    "name": "bagged LambdaRank member (lrbag)",
+    "artifact": "improve/research/algorithm_only_20260918/algo4_lrbag.py",
+    "gate_table": "improve/research/algorithm_only_20260918/artifacts/gate_lrbag_fineweights_gates.csv",
+    "mi_inner_dAUC_dAP": [0.00017, 0.00039],
+    "mi_resplit_dAUC_dAP": [0.00004, 0.00020],
+    "mi_extra_dAUC_dAP": [0.00011, 0.00019],
+    "ln_min_dAUC_dAP": [-0.00001, -0.00032],
+    "control": "lrbag_perm negative at every weight",
+    "verdict": "all split-GROUP means positive with negative control, but fails the pre-registered per-split clause on 2/7 splits by 1e-5..4e-5"
+  },
+  "failed_families": {
+    "fttrans_feature_token_transformer": "Mi inner -0.00006/-0.00053; control >= real",
+    "dcn_feature_crossing_net": "Mi AP +0.00285 but AUC -0.00116; negative on resplits",
+    "dro_group_dro_over_drugs": "Mi inner -0.00025/+0.00027; not robust",
+    "lambdarank_single_seed": "Mi inner 0.00000/+0.00072; 2/7 splits negative ~1e-4",
+    "deg2_two_sided_propensity_correction": "Mi inner -0.00127/-0.00139; worse than permuted control"
+  },
+  "structural_blocker": "The accepted bank fixes the information available to every algorithm; the frozen TabICLv2 reference plus the classical pool bracket the Bayes-optimal ranking under that information to within ~1e-4. An algorithm-only change can only reduce estimation variance, whose ceiling (~1e-4) is at or below the per-split noise (~5e-4), so no algorithm-only technique can satisfy the 7-split all-positive gate. The four previously strict-passing algorithm schemes (pv_bce/pv_rank/offset2/pan) relied on the provenance information (~+0.002, 10x larger).",
+  "old_results_preserved": true,
+  "default_model_replaced": false,
+  "original_retained_test_sources_accessed": false,
+  "needed_from_user": "Relax verification to split-group means + negative control, or allow new orthogonal information, or switch to a new evaluation surface (cold-drug / temporal) where the reference is not at ceiling."
+}

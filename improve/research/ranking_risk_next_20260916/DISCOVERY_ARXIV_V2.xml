@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/s+fREsQgsbZAAuNxQNgWa1JOjcE</id>
+  <title>arXiv Query: search_query=(all:AUPRC OR ti:"precision-recall" OR ti:"average precision") AND (all:optimization OR all:loss OR all:maximization) AND submittedDate:"202401010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=16</title>
+  <updated>2026-09-15T20:01:42Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:AUPRC+OR+(ti:%22precision-recall%22+OR+ti:%22average+precision%22))+AND+((all:optimization+OR+(all:loss+OR+all:maximization))+AND+submittedDate:%22202401010000+TO+202609162359%22)&amp;start=0&amp;max_results=16&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>16</opensearch:itemsPerPage>
+  <opensearch:totalResults>45</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.20268v1</id>
+    <title>Opportunistic Bone-Loss Screening from Routine Knee Radiographs Using a Multi-Task Deep Learning Framework with Sensitivity-Constrained Threshold Optimization</title>
+    <updated>2026-04-22T07:12:04Z</updated>
+    <link href="https://arxiv.org/abs/2604.20268v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.20268v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Background: Osteoporosis and osteopenia are often undiagnosed until fragility fractures occur. Dual-energy X-ray absorptiometry (DXA) is the reference standard for bone mineral density (BMD) assessment, but access remains limited. Knee radiographs are obtained at high volume for osteoarthritis evaluation and may offer an opportunity for opportunistic bone-loss screening.
+  Objective: To develop and evaluate a multi-task deep learning system for opportunistic bone-loss screening from routine knee radiographs without additional imaging or patient visits.
+  Methods: We developed STR-Net, a multi-task framework for single-channel grayscale knee radiographs. The model includes a shared backbone, global average pooling feature aggregation, a shared neck, and a task-aware representation routing module connected to three task-specific heads: binary screening (Normal vs. Bone Loss), severity sub-classification (Osteopenia vs. Osteoporosis), and weakly coupled T-score regression with optional clinical variables. A sensitivity-constrained threshold optimization strategy (minimum sensitivity &gt;= 0.86) was applied. The dataset included 1,570 knee radiographs, split at the patient level into training (n=1,120), validation (n=226), and test (n=224) sets.
+  Results: On the held-out test set, STR-Net achieved an AUROC of 0.933, sensitivity of 0.904, specificity of 0.773, and AUPRC of 0.956 for binary screening. Severity sub-classification achieved an AUROC of 0.898. The T-score regression branch showed a Pearson correlation of 0.801 with DXA-measured T-scores in a pilot subset (n=31), with MAE of 0.279 and RMSE of 0.347.
+  Conclusions: STR-Net enables single-pass bone-loss screening, severity stratification, and quantitative T-score estimation from routine knee radiographs. Prospective clinical validation is needed before deployment.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-22T07:12:04Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Zhaochen Li</name>
+    </author>
+    <author>
+      <name>Xinghao Yan</name>
+    </author>
+    <author>
+      <name>Runni Zhou</name>
+    </author>
+    <author>
+      <name>Xiaoyang Li</name>
+    </author>
+    <author>
+      <name>Chenjie Zhu</name>
+    </author>
+    <author>
+      <name>Gege Wang</name>
+    </author>
+    <author>
+      <name>Yu Shi</name>
+    </author>
+    <author>
+      <name>Lixin Zhang</name>
+    </author>
+    <author>
+      <name>Rongrong Fu</name>
+    </author>
+    <author>
+      <name>Liehao Yan</name>
+    </author>
+    <author>
+      <name>Yuan Chai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.02917v1</id>
+    <title>Weighted Temporal Decay Loss for Learning Wearable PPG Data with Sparse Clinical Labels</title>
+    <updated>2026-02-02T23:43:40Z</updated>
+    <link href="https://arxiv.org/abs/2602.02917v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.02917v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Advances in wearable computing and AI have increased interest in leveraging PPG for health monitoring over the past decade. One of the biggest challenges in developing health algorithms based on such biosignals is the sparsity of clinical labels, which makes biosignals temporally distant from lab draws less reliable for supervision. To address this problem, we introduce a simple training strategy that learns a biomarker-specific decay of sample weight over the time gap between a segment and its ground truth label and uses this weight in the loss with a regularizer to prevent trivial solutions. On smartwatch PPG from 450 participants across 10 biomarkers, the approach improves over baselines. In the subject-wise setting, the proposed approach averages 0.715 AUPRC, compared to 0.674 for a fine-tuned self-supervised baseline and 0.626 for a feature-based Random Forest. A comparison of four decay families shows that a simple linear decay function is most robust on average. Beyond accuracy, the learned decay rates summarize how quickly each biomarker's PPG evidence becomes stale, providing an interpretable view of temporal sensitivity.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-02T23:43:40Z</published>
+    <arxiv:comment>ICASSP 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yunsung Chung</name>
+    </author>
+    <author>
+      <name>Keum San Chun</name>
+    </author>
+    <author>
+      <name>Migyeong Gwak</name>
+    </author>
+    <author>
+      <name>Han Feng</name>
+    </author>
+    <author>
+      <name>Yingshuo Liu</name>
+    </author>
+    <author>
+      <name>Chanho Lim</name>
+    </author>
+    <author>
+      <name>Viswam Nathan</name>
+    </author>
+    <author>
+      <name>Nassir Marrouche</name>
+    </author>
+    <author>
+      <name>Sharanya Arcot Desai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.07249v1</id>
+    <title>LF2L: Loss Fusion Horizontal Federated Learning Across Heterogeneous Feature Spaces Using External Datasets Effectively: A Case Study in Second Primary Cancer Prediction</title>
+    <updated>2026-03-07T15:01:52Z</updated>
+    <link href="https://arxiv.org/abs/2603.07249v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.07249v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Second primary cancer (SPC), a new cancer in patients different from previously diagnosed, is a growing concern due to improved cancer survival rates. Early prediction of SPC is essential to enable timely clinical interventions. This study focuses on lung cancer survivors treated in Taiwanese hospitals, where the limited size and geographic scope of local datasets restrict the effectiveness and generalizability of traditional machine learning approaches. To address this, we incorporate external data from the publicly available US-based Surveillance, Epidemiology, and End Results (SEER) program, significantly increasing data diversity and scale. However, the integration of multi-source datasets presents challenges such as feature inconsistency and privacy constraints. Rather than naively merging data, we proposed a loss fusion horizontal federated learning (LF2L) framework that can enable effective cross-institutional collaboration while preserving institutional privacy by avoiding data sharing. Using both common and unique features and balancing their contributions through a shared loss mechanism, our method demonstrates substantial improvements in the prediction performance of SPC. Experiment results show statistically significant improvements in AUROC and AUPRC when compared to localized, horizontal federated, and centralized learning baselines. This highlights the importance of not only acquiring external data but also leveraging it effectively to enhance model performance in real-world clinical model development.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-07T15:01:52Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Chia-Fu Lin</name>
+    </author>
+    <author>
+      <name>Yi-Ju Tseng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.10119v2</id>
+    <title>A Progressive Risk Formulation for Enhanced Deep Learning based Total Knee Replacement Prediction in Knee Osteoarthritis</title>
+    <updated>2025-03-28T17:00:51Z</updated>
+    <link href="https://arxiv.org/abs/2406.10119v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.10119v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We developed deep learning models for predicting Total Knee Replacement (TKR) need within various time horizons in knee osteoarthritis patients, with a novel capability: the models can perform TKR prediction using a single scan, and furthermore when a previous scan is available, they leverage a progressive risk formulation to improve their predictions. Unlike conventional approaches that treat each scan of a patient independently, our method incorporates a constraint based on disease's progressive nature, ensuring that predicted TKR risk either increases or remains stable over time when multiple scans of a knee are available. This was achieved by enforcing a progressive risk formulation constraint during training with patients who have more than one available scan in the studies. Knee radiographs and MRIs from the Osteoarthritis Initiative (OAI) and Multicenter Osteoarthritis Study (MOST) were used in this work and deep learning models were trained to predict TKR within 1, 2, and 4-year time periods. The proposed approach, utilizing a dual-model risk constraint architecture, demonstrated superior performance compared to baseline - conventional models trained with standard binary cross entropy loss. It achieved an AUROC of 0.87 and AUPRC of 0.47 for 1-year TKR prediction on the OAI radiograph test set, considerably improving over the baseline AUROC of 0.79 and AUPRC of 0.34. For the MOST radiograph test set, the proposed approach achieved an AUROC of 0.77 and AUPRC of 0.25 for 1-year predictions, outperforming the baseline AUROC of 0.71 and AUPRC of 0.19. Similar trends were observed in the MRI testsets</summary>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-14T15:24:49Z</published>
+    <arxiv:primary_category term="eess.IV"/>
+    <author>
+      <name>Haresh Rengaraj Rajamohan</name>
+    </author>
+    <author>
+      <name>Richard Kijowski</name>
+    </author>
+    <author>
+      <name>Kyunghyun Cho</name>
+    </author>
+    <author>
+      <name>Cem M. Deniz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12450v1</id>
+    <title>Bridging the Gap Between Security Metrics and Key Risk Indicators: An Empirical Framework for Vulnerability Prioritization</title>
+    <updated>2026-03-12T21:05:22Z</updated>
+    <link href="https://arxiv.org/abs/2603.12450v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12450v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Organisations overwhelmingly prioritize vulnerability remediation using Common Vulnerability Scoring System (CVSS) severity scores, yet CVSS classifiers achieve an Area Under the Precision-Recall Curve (AUPRC) of 0.011 on real-world exploitation data, near random chance. We propose a composite Key Risk Indicator grounded in expected-loss decomposition, integrating dimensions of threat, impact, and exposure. We evaluated the KRI framework against the Known Exploited Vulnerabilities (KEV) catalog using a comprehensive dataset of 280,694 Common Vulnerabilities and Exposures (CVEs). KRI achieves Receiver Operating Characteristic Area Under the Curve (ROC-AUC) 0.927 and AUPRC 0.223 versus 0.747 and 0.011 for CVSS (24 percents, 20). Ablation analysis shows Exploit Prediction Scoring System (EPSS) alone achieves AUPRC 0.365, higher than full KRI (0.223), confirming that EPSS and KRI serve distinct objectives: EPSS maximizes raw exploit detection, while KRI re-orders by impact and exposure, capturing 92.3 percents of impact-weighted remediation value at k=500 versus 82.6 percents for EPSS, and surfacing 1.75 more Critical-severity exploited CVEs. KRI's net benefit exceeds EPSS whenever the severity premium exceeds 2. While EPSS serves as a robust baseline for exploit detection, the KRI framework is the superior choice for organizations seeking to align remediation efforts with tangible risk reduction.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T21:05:22Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Emad Sherif</name>
+    </author>
+    <author>
+      <name>Iryna Yevseyeva</name>
+    </author>
+    <author>
+      <name>Vitor Basto-Fernandes</name>
+    </author>
+    <author>
+      <name>Allan Cook</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.30141v1</id>
+    <title>Balancing Privacy, Utility, and Safety in LLM Alignment through Preference Optimization</title>
+    <updated>2026-08-31T01:46:36Z</updated>
+    <link href="https://arxiv.org/abs/2608.30141v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.30141v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Preference optimization is widely used to align large language models with human preferences, but preference-data composition may also influence privacy-relevant memorization. We examine whether adding synthetic privacy-preference pairs to Direct Preference Optimization (DPO) is associated with lower canary-based memorization signals without modifying the objective or introducing a formal privacy mechanism. We propose Privacy-Pressure Preference Mixing (P3M), a data-composition protocol that varies the amount of privacy-preference data while keeping helpfulness and harmlessness preference data fixed. We evaluate a non-privacy Baseline and privacy-mixing ratios of 0.5, 1.0, and 2.0 using Gemma 3 270M-IT across five random seeds and validate the same four conditions using 4-bit-quantized Gemma 2 2B-IT across three seeds. Overall, under the tested conditions, privacy-preference mixing is associated with lower mean canary suffix log-likelihood proxy values across both model settings and lower aggregate membership-inference attack performance relative to the Baseline in the mixed-source 2B evaluation. Specifically, across the privacy-aware 2B configurations, the mean area under the receiver operating characteristic curve (AUROC) ranges from 0.596 to 0.629, and the mean area under the precision-recall curve (AUPRC) ranges from 0.541 to 0.575, compared with 0.804 and 0.790, respectively, for the Baseline. However, the reduction in membership distinguishability does not hold uniformly across data sources. Moreover, the relationship between the privacy ratio and harmlessness preference accuracy varies by model setting, whereas helpfulness preference accuracy remains broadly stable. These findings suggest that P3M should be viewed as a lightweight empirical protocol for examining privacy-utility-safety trade-offs rather than as a formal privacy guarantee or a defense against extraction attacks.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-31T01:46:36Z</published>
+    <arxiv:comment>6 pages, accepted for presentation at PRAI 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Dishu Yang</name>
+    </author>
+    <author>
+      <name>Jingjing Liu</name>
+    </author>
+    <author>
+      <name>Jize Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.18354v1</id>
+    <title>A Single Image Is All You Need: Zero-Shot Anomaly Localization Without Training Data</title>
+    <updated>2025-09-22T19:29:20Z</updated>
+    <link href="https://arxiv.org/abs/2509.18354v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.18354v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Anomaly detection in images is typically addressed by learning from collections of training data or relying on reference samples. In many real-world scenarios, however, such training data may be unavailable, and only the test image itself is provided. We address this zero-shot setting by proposing a single-image anomaly localization method that leverages the inductive bias of convolutional neural networks, inspired by Deep Image Prior (DIP). Our method is named Single Shot Decomposition Network (SSDnet). Our key assumption is that natural images often exhibit unified textures and patterns, and that anomalies manifest as localized deviations from these repetitive or stochastic patterns. To learn the deep image prior, we design a patch-based training framework where the input image is fed directly into the network for self-reconstruction, rather than mapping random noise to the image as done in DIP. To avoid the model simply learning an identity mapping, we apply masking, patch shuffling, and small Gaussian noise. In addition, we use a perceptual loss based on inner-product similarity to capture structure beyond pixel fidelity. Our approach needs no external training data, labels, or references, and remains robust in the presence of noise or missing pixels. SSDnet achieves 0.99 AUROC and 0.60 AUPRC on MVTec-AD and 0.98 AUROC and 0.67 AUPRC on the fabric dataset, outperforming state-of-the-art methods. The implementation code will be released at https://github.com/mehrdadmoradi124/SSDnet</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-22T19:29:20Z</published>
+    <arxiv:comment>12 pages, 10 figures, 1 table. Preprint submitted to a CVF conference</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Mehrdad Moradi</name>
+    </author>
+    <author>
+      <name>Shengzhe Chen</name>
+    </author>
+    <author>
+      <name>Hao Yan</name>
+    </author>
+    <author>
+      <name>Kamran Paynabar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.21038v2</id>
+    <title>Elementary, My Dear Watson: Non-Invasive Neural Keyword Spotting in the LibriBrain Dataset</title>
+    <updated>2025-10-30T10:23:32Z</updated>
+    <link href="https://arxiv.org/abs/2510.21038v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.21038v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Non-invasive brain-computer interfaces (BCIs) are beginning to benefit from large, public benchmarks. However, current benchmarks target relatively simple, foundational tasks like Speech Detection and Phoneme Classification, while application-ready results on tasks like Brain-to-Text remain elusive. We propose Keyword Spotting (KWS) as a practically applicable, privacy-aware intermediate task. Using the deep 52-hour, within-subject LibriBrain corpus, we provide standardized train/validation/test splits for reproducible benchmarking, and adopt an evaluation protocol tailored to extreme class imbalance. Concretely, we use area under the precision-recall curve (AUPRC) as a robust evaluation metric, complemented by false alarms per hour (FA/h) at fixed recall to capture user-facing trade-offs. To simplify deployment and further experimentation within the research community, we are releasing an updated version of the pnpl library with word-level dataloaders and Colab-ready tutorials. As an initial reference model, we present a compact 1-D Conv/ResNet baseline with focal loss and top-k pooling that is trainable on a single consumer-class GPU. The reference model achieves approximately 13x the permutation baseline AUPRC on held-out sessions, demonstrating the viability of the task. Exploratory analyses reveal: (i) predictable within-subject scaling - performance improves log-linearly with more training hours - and (ii) the existence of word-level factors (frequency and duration) that systematically modulate detectability.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-23T22:44:50Z</published>
+    <arxiv:comment>16 pages, 7 figures, 6 tables; updated acknowledgments</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Gereon Elvers</name>
+    </author>
+    <author>
+      <name>Gilad Landau</name>
+    </author>
+    <author>
+      <name>Oiwi Parker Jones</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.14671v1</id>
+    <title>Generating Medically-Informed Explanations for Depression Detection using LLMs</title>
+    <updated>2025-03-18T19:23:22Z</updated>
+    <link href="https://arxiv.org/abs/2503.14671v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.14671v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Early detection of depression from social media data offers a valuable opportunity for timely intervention. However, this task poses significant challenges, requiring both professional medical knowledge and the development of accurate and explainable models. In this paper, we propose LLM-MTD (Large Language Model for Multi-Task Depression Detection), a novel approach that leverages a pre-trained large language model to simultaneously classify social media posts for depression and generate textual explanations grounded in medical diagnostic criteria. We train our model using a multi-task learning framework with a combined loss function that optimizes both classification accuracy and explanation quality. We evaluate LLM-MTD on the benchmark Reddit Self-Reported Depression Dataset (RSDD) and compare its performance against several competitive baseline methods, including traditional machine learning and fine-tuned BERT. Our experimental results demonstrate that LLM-MTD achieves state-of-the-art performance in depression detection, showing significant improvements in AUPRC and other key metrics. Furthermore, human evaluation of the generated explanations reveals their relevance, completeness, and medical accuracy, highlighting the enhanced interpretability of our approach. This work contributes a novel methodology for depression detection that combines the power of large language models with the crucial aspect of explainability.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-18T19:23:22Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Xiangyong Chen</name>
+    </author>
+    <author>
+      <name>Xiaochuan Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.09770v2</id>
+    <title>Cluster Aware Graph Anomaly Detection</title>
+    <updated>2025-02-19T01:41:40Z</updated>
+    <link href="https://arxiv.org/abs/2409.09770v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.09770v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph anomaly detection has gained significant attention across various domains, particularly in critical applications like fraud detection in e-commerce platforms and insider threat detection in cybersecurity. Usually, these data are composed of multiple types (e.g., user information and transaction records for financial data), thus exhibiting view heterogeneity. However, in the era of big data, the heterogeneity of views and the lack of label information pose substantial challenges to traditional approaches. Existing unsupervised graph anomaly detection methods often struggle with high-dimensionality issues, rely on strong assumptions about graph structures or fail to handle complex multi-view graphs. To address these challenges, we propose a cluster aware multi-view graph anomaly detection method, called CARE. Our approach captures both local and global node affinities by augmenting the graph's adjacency matrix with the pseudo-label (i.e., soft membership assignments) without any strong assumption about the graph. To mitigate potential biases from the pseudo-label, we introduce a similarity-guided loss. Theoretically, we show that the proposed similarity-guided loss is a variant of contrastive learning loss, and we present how this loss alleviates the bias introduced by pseudo-label with the connection to graph spectral clustering. Experimental results on several datasets demonstrate the effectiveness and efficiency of our proposed framework. Specifically, CARE outperforms the second-best competitors by more than 39% on the Amazon dataset with respect to AUPRC and 18.7% on the YelpChi dataset with respect to AUROC. The code of our method is available at the GitHub link: https://github.com/zhenglecheng/CARE-demo.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-15T15:41:59Z</published>
+    <arxiv:comment>Accepted by The Web Conference 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lecheng Zheng</name>
+    </author>
+    <author>
+      <name>John R. Birge</name>
+    </author>
+    <author>
+      <name>Haiyue Wu</name>
+    </author>
+    <author>
+      <name>Yifang Zhang</name>
+    </author>
+    <author>
+      <name>Jingrui He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.26409v1</id>
+    <title>Jailbreak susceptibility prediction and mitigation via the behavioral geometry of models</title>
+    <updated>2026-05-26T00:36:42Z</updated>
+    <link href="https://arxiv.org/abs/2605.26409v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.26409v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Evaluating and mitigating a generative system's susceptibility to jailbreak attacks is critical to its safe deployment. Given the number of deployable systems, full per-configuration evaluation and optimization is impractical. In this paper, we formalize the behavioral geometry of a population of models that, by leveraging previously evaluated and defended models, supports both efficient susceptibility prediction and effective defense transfer across a population. We apply the framework to 79 models spanning 24 providers and to 100 system configurations of a single base model. Simple methods that use the behavioral geometry reach an AUPRC of $0.94$ for susceptibility detection with $\approx98\%$ fewer probes relative to a full evaluation. Using the behavioral geometry to select which model to transfer an optimized defense from outperforms same-provider assignment ($+2\%$, $p = 0.03$) at no additional probe cost, with a set of three models sufficient to cover the population. Results are robust to hyperparameter selection and judge.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-26T00:36:42Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Hayden Helm</name>
+    </author>
+    <author>
+      <name>Xiaodong Liu</name>
+    </author>
+    <author>
+      <name>Weiwei Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.05009v1</id>
+    <title>ImputeECG: Deep Learning Reconstruction of Complete 12-Lead Electrocardiograms from Incomplete Recordings for Cardiac Assessment</title>
+    <updated>2026-07-06T12:51:05Z</updated>
+    <link href="https://arxiv.org/abs/2607.05009v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.05009v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Complete digital 12-lead electrocardiograms (ECGs) are essential for AI-enabled cardiovascular assessment, yet many clinical ECG records, particularly those digitized from ECG images, remain incomplete because of short display formats, incomplete waveform digitization, lead loss, or signal corruption. We developed ImputeECG, a mask-conditioned one-dimensional Transformer autoencoder that completes 12-lead, 10-s ECGs while retaining all observed samples. The model was trained on PTB-XL and evaluated on PTB-XL and CPSC2018 under simulated incomplete settings, with additional real-world validation in a 43,633-record Kailuan clinical cohort after ECG image digitization. Metrics were computed over originally missing regions, with analyses of morphology and downstream diagnostic utility. On PTB-XL, ImputeECG reduced missing-region MAE by 41.7-51.0% and MSE by 54.0-63.7% versus the strongest baseline, with lower errors in R-peak timing, RR interval, QRS duration, QT interval, and P-wave, QRS-complex, and T-wave reconstruction. On CPSC2018, ImputeECG reduced MAE by 49.7-51.9%, supporting external generalization. In downstream multi-label classification, ImputeECG restored performance to 92.28% AUROC and 33.88% AUPRC in the most incomplete PTB-XL setting, approaching complete-ECG performance. On CPSC2018, completed ECGs achieved 94.75-95.89% AUROC and 78.83-81.86% AUPRC across settings. In Kailuan, ECG completion improved zero-shot sex prediction AUROC from 82.6% to 85.8% and reduced age prediction MAE from 10.72 to 9.87 years after image-based ECG digitization. These findings support ECG completion as a practical strategy for converting incomplete ECG records into AI-ready 12-lead, 10-s digital signals and extending the usable scope of ECG archives for digital cardiac assessment.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-06T12:51:05Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xiaocheng Fang</name>
+    </author>
+    <author>
+      <name>Haoyu Wang</name>
+    </author>
+    <author>
+      <name>Jieyi Cai</name>
+    </author>
+    <author>
+      <name>Qinghao Zhao</name>
+    </author>
+    <author>
+      <name>Jun Li</name>
+    </author>
+    <author>
+      <name>Shanwei Zhang</name>
+    </author>
+    <author>
+      <name>Guangkun Nie</name>
+    </author>
+    <author>
+      <name>Yujie Xiao</name>
+    </author>
+    <author>
+      <name>Shun Huang</name>
+    </author>
+    <author>
+      <name>Jiarui Jin</name>
+    </author>
+    <author>
+      <name>Hongmin Liu</name>
+    </author>
+    <author>
+      <name>Guodong Wang</name>
+    </author>
+    <author>
+      <name>Shuohua Chen</name>
+    </author>
+    <author>
+      <name>Liming Lin</name>
+    </author>
+    <author>
+      <name>Shouling Wu</name>
+    </author>
+    <author>
+      <name>Hongyan Li</name>
+    </author>
+    <author>
+      <name>Shenda Hong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.17613v1</id>
+    <title>TarDiff: Target-Oriented Diffusion Guidance for Synthetic Electronic Health Record Time Series Generation</title>
+    <updated>2025-04-24T14:36:10Z</updated>
+    <link href="https://arxiv.org/abs/2504.17613v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.17613v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Synthetic Electronic Health Record (EHR) time-series generation is crucial for advancing clinical machine learning models, as it helps address data scarcity by providing more training data. However, most existing approaches focus primarily on replicating statistical distributions and temporal dependencies of real-world data. We argue that fidelity to observed data alone does not guarantee better model performance, as common patterns may dominate, limiting the representation of rare but important conditions. This highlights the need for generate synthetic samples to improve performance of specific clinical models to fulfill their target outcomes. To address this, we propose TarDiff, a novel target-oriented diffusion framework that integrates task-specific influence guidance into the synthetic data generation process. Unlike conventional approaches that mimic training data distributions, TarDiff optimizes synthetic samples by quantifying their expected contribution to improving downstream model performance through influence functions. Specifically, we measure the reduction in task-specific loss induced by synthetic samples and embed this influence gradient into the reverse diffusion process, thereby steering the generation towards utility-optimized data. Evaluated on six publicly available EHR datasets, TarDiff achieves state-of-the-art performance, outperforming existing methods by up to 20.4% in AUPRC and 18.4% in AUROC. Our results demonstrate that TarDiff not only preserves temporal fidelity but also enhances downstream model performance, offering a robust solution to data scarcity and class imbalance in healthcare analytics.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-24T14:36:10Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Bowen Deng</name>
+    </author>
+    <author>
+      <name>Chang Xu</name>
+    </author>
+    <author>
+      <name>Hao Li</name>
+    </author>
+    <author>
+      <name>Yuhao Huang</name>
+    </author>
+    <author>
+      <name>Min Hou</name>
+    </author>
+    <author>
+      <name>Jiang Bian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.20978v1</id>
+    <title>FracAug: Fractional Augmentation boost Graph-level Anomaly Detection under Limited Supervision</title>
+    <updated>2025-09-25T10:23:21Z</updated>
+    <link href="https://arxiv.org/abs/2509.20978v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.20978v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph-level anomaly detection (GAD) is critical in diverse domains such as drug discovery, yet high labeling costs and dataset imbalance hamper the performance of Graph Neural Networks (GNNs). To address these issues, we propose FracAug, an innovative plug-in augmentation framework that enhances GNNs by generating semantically consistent graph variants and pseudo-labeling with mutual verification. Unlike previous heuristic methods, FracAug learns semantics within given graphs and synthesizes fractional variants, guided by a novel weighted distance-aware margin loss. This captures multi-scale topology to generate diverse, semantic-preserving graphs unaffected by data imbalance. Then, FracAug utilizes predictions from both original and augmented graphs to pseudo-label unlabeled data, iteratively expanding the training set. As a model-agnostic module compatible with various GNNs, FracAug demonstrates remarkable universality and efficacy: experiments across 14 GNNs on 12 real-world datasets show consistent gains, boosting average AUROC, AUPRC, and F1-score by up to 5.72%, 7.23%, and 4.18%, respectively.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-25T10:23:21Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xiangyu Dong</name>
+    </author>
+    <author>
+      <name>Xingyi Zhang</name>
+    </author>
+    <author>
+      <name>Sibo Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.19716v1</id>
+    <title>Development and external validation of a multimodal artificial intelligence mortality prediction model of critically ill patients using multicenter data</title>
+    <updated>2025-12-15T23:43:19Z</updated>
+    <link href="https://arxiv.org/abs/2512.19716v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.19716v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Early prediction of in-hospital mortality in critically ill patients can aid clinicians in optimizing treatment. The objective was to develop a multimodal deep learning model, using structured and unstructured clinical data, to predict in-hospital mortality risk among critically ill patients after their initial 24 hour intensive care unit (ICU) admission. We used data from MIMIC-III, MIMIC-IV, eICU, and HiRID. A multimodal model was developed on the MIMIC datasets, featuring time series components occurring within the first 24 hours of ICU admission and predicting risk of subsequent inpatient mortality. Inputs included time-invariant variables, time-variant variables, clinical notes, and chest X-ray images. External validation occurred in a temporally separated MIMIC population, HiRID, and eICU datasets. A total of 203,434 ICU admissions from more than 200 hospitals between 2001 to 2022 were included, in which mortality rate ranged from 5.2% to 7.9% across the four datasets. The model integrating structured data points had AUROC, AUPRC, and Brier scores of 0.92, 0.53, and 0.19, respectively. We externally validated the model on eight different institutions within the eICU dataset, demonstrating AUROCs ranging from 0.84-0.92. When including only patients with available clinical notes and imaging data, inclusion of notes and imaging into the model, the AUROC, AUPRC, and Brier score improved from 0.87 to 0.89, 0.43 to 0.48, and 0.37 to 0.17, respectively. Our findings highlight the importance of incorporating multiple sources of patient information for mortality prediction and the importance of external validation.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-15T23:43:19Z</published>
+    <arxiv:comment>75 pages (33 main text + references, 35 supplementary materials), 5 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Behrooz Mamandipoor</name>
+    </author>
+    <author>
+      <name>Chun-Nan Hsu</name>
+    </author>
+    <author>
+      <name>Martin Krause</name>
+    </author>
+    <author>
+      <name>Ulrich H. Schmidt</name>
+    </author>
+    <author>
+      <name>Rodney A. Gabriel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.10350v1</id>
+    <title>Cyber-Financial Contagion: Modeling the Propagation of an AI Vendor Compromise Through the Banking System</title>
+    <updated>2026-09-09T15:46:16Z</updated>
+    <link href="https://arxiv.org/abs/2609.10350v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.10350v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The banking system now depends on a small set of shared artificial intelligence vendors for fraud screening, credit decisioning, anti-money-laundering triage, customer analytics, and internal decision support. This paper studies how a compromise inside one of those vendors can propagate along a chain of operational, informational, and financial linkages until it triggers losses that look, from the outside, like a classical banking crisis. We build a four-layer heterogeneous network that couples AI vendors, financial institutions, interbank exposures, and customer accounts, and we propose CFC-Prop, a stochastic epidemic-and-clearing model that runs on that network. On a synthetic dataset with 60 vendors, 220 banks, roughly 2,500 vendor-bank service edges, and 1,400 interbank exposures, CFC-Prop reproduces the heavy-tailed loss distributions and the sharp dependence on patch latency that are consistent with prior cyber-financial evidence. We also train an early-warning model, CFC-GNN, that uses vendor-side incident telemetry and graph structure to flag high-cascade-risk vendors before impact. Across four baselines the proposed model reaches AUROC 0.82 and AUPRC 0.60 while keeping calibration errors bounded. We release the full code, synthetic data, and reproducible scripts. The results argue that cyber concentration among AI vendors is a first-order financial-stability problem and give supervisors a concrete quantitative tool for reasoning about it.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T15:46:16Z</published>
+    <arxiv:comment>11 fig and 10 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Alex Leytes</name>
+    </author>
+  </entry>
+</feed>

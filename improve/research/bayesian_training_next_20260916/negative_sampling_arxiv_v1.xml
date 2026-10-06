@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/x+0iekA2pDnVjOKEqbCt0zL24e8</id>
+  <title>arXiv Query: search_query=(all:"hard negative sampling" OR all:"adaptive negative sampling") AND (all:"graph" OR all:"recommendation") AND submittedDate:"202401010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-15T22:33:31Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22hard+negative+sampling%22+OR+all:%22adaptive+negative+sampling%22)+AND+((all:%22graph%22+OR+all:%22recommendation%22)+AND+submittedDate:%22202401010000+TO+202609162359%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>36</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2504.04726v2</id>
+    <title>Hard Negative Sampling via Large Language Models for Recommendation</title>
+    <updated>2026-01-17T14:59:38Z</updated>
+    <link href="https://arxiv.org/abs/2504.04726v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.04726v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hard negative sampling improves recommendation performance by accelerating convergence and sharpening the decision boundary. However, most existing methods rely on heuristic strategies, selecting negatives from a fixed candidate pool. Lacking semantic awareness, these methods often misclassify items that align with users' semantic interests as negatives, resulting in False Hard Negative Samples (FHNS). Such FHNS inject noisy supervision and hinder the model's optimal performance. To address this challenge, we propose HNLMRec, a generative semantic negative sampling framework. Leveraging the semantic reasoning capabilities of Large Language Models (LLMs), HNLMRec directly generates negative samples that are behaviorally distinct yet semantically relevant with respect to user preferences. Furthermore, we integrate collaborative filtering signals into the LLM via supervised fine-tuning, guiding the model to synthesize more reliable and informative hard negatives. Extensive experiments on multiple real-world datasets demonstrate that HNLMRec significantly outperforms traditional methods and LLM-enhanced baselines, while effectively mitigating popularity bias and data sparsity, thereby improving generalization.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-07T04:39:45Z</published>
+    <arxiv:comment>19 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Chu Zhao</name>
+    </author>
+    <author>
+      <name>Enneng Yang</name>
+    </author>
+    <author>
+      <name>Yuting Liu</name>
+    </author>
+    <author>
+      <name>Jianzhe Zhao</name>
+    </author>
+    <author>
+      <name>Guibing Guo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.19276v1</id>
+    <title>Enhanced Bayesian Personalized Ranking for Robust Hard Negative Sampling in Recommender Systems</title>
+    <updated>2024-03-28T10:01:35Z</updated>
+    <link href="https://arxiv.org/abs/2403.19276v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.19276v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In implicit collaborative filtering, hard negative mining techniques are developed to accelerate and enhance the recommendation model learning. However, the inadvertent selection of false negatives remains a major concern in hard negative sampling, as these false negatives can provide incorrect information and mislead the model learning. To date, only a small number of studies have been committed to solve the false negative problem, primarily focusing on designing sophisticated sampling algorithms to filter false negatives. In contrast, this paper shifts its focus to refining the loss function. We find that the original Bayesian Personalized Ranking (BPR), initially designed for uniform negative sampling, is inadequate in adapting to hard sampling scenarios. Hence, we introduce an enhanced Bayesian Personalized Ranking objective, named as Hard-BPR, which is specifically crafted for dynamic hard negative sampling to mitigate the influence of false negatives. This method is simple yet efficient for real-world deployment. Extensive experiments conducted on three real-world datasets demonstrate the effectiveness and robustness of our approach, along with the enhanced ability to distinguish false negatives.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-28T10:01:35Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Kexin Shi</name>
+    </author>
+    <author>
+      <name>Jing Zhang</name>
+    </author>
+    <author>
+      <name>Linjiajie Fang</name>
+    </author>
+    <author>
+      <name>Wenjia Wang</name>
+    </author>
+    <author>
+      <name>Bingyi Jing</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.07901v1</id>
+    <title>DANS-KGC: Diffusion Based Adaptive Negative Sampling for Knowledge Graph Completion</title>
+    <updated>2025-11-11T06:56:57Z</updated>
+    <link href="https://arxiv.org/abs/2511.07901v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.07901v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Negative sampling (NS) strategies play a crucial role in knowledge graph representation. In order to overcome the limitations of existing negative sampling strategies, such as vulnerability to false negatives, limited generalization, and lack of control over sample hardness, we propose DANS-KGC (Diffusion-based Adaptive Negative Sampling for Knowledge Graph Completion). DANS-KGC comprises three key components: the Difficulty Assessment Module (DAM), the Adaptive Negative Sampling Module (ANS), and the Dynamic Training Mechanism (DTM). DAM evaluates the learning difficulty of entities by integrating semantic and structural features. Based on this assessment, ANS employs a conditional diffusion model with difficulty-aware noise scheduling, leveraging semantic and neighborhood information during the denoising phase to generate negative samples of diverse hardness. DTM further enhances learning by dynamically adjusting the hardness distribution of negative samples throughout training, enabling a curriculum-style progression from easy to hard examples. Extensive experiments on six benchmark datasets demonstrate the effectiveness and generalization ability of DANS-KGC, with the method achieving state-of-the-art results on all three evaluation metrics for the UMLS and YAGO3-10 datasets.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-11T06:56:57Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Haoning Li</name>
+    </author>
+    <author>
+      <name>Qinghua Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.07592v2</id>
+    <title>Diversified and Adaptive Negative Sampling on Knowledge Graphs</title>
+    <updated>2025-10-26T01:30:38Z</updated>
+    <link href="https://arxiv.org/abs/2410.07592v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.07592v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In knowledge graph embedding, aside from positive triplets (ie: facts in the knowledge graph), the negative triplets used for training also have a direct influence on the model performance. In reality, since knowledge graphs are sparse and incomplete, negative triplets often lack explicit labels, and thus they are often obtained from various sampling strategies (eg: randomly replacing an entity in a positive triplet). An ideal sampled negative triplet should be informative enough to help the model train better. However, existing methods often ignore diversity and adaptiveness in their sampling process, which harms the informativeness of negative triplets. As such, we propose a generative adversarial approach called Diversified and Adaptive Negative Sampling DANS on knowledge graphs. DANS is equipped with a two-way generator that generates more diverse negative triplets through two pathways, and an adaptive mechanism that produces more fine-grained examples by localizing the global generator for different entities and relations. On the one hand, the two-way generator increase the overall informativeness with more diverse negative examples; on the other hand, the adaptive mechanism increases the individual sample-wise informativeness with more fine-grained sampling. Finally, we evaluate the performance of DANS on three benchmark knowledge graphs to demonstrate its effectiveness through quantitative and qualitative experiments.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-10T03:53:49Z</published>
+    <arxiv:comment>30 pages, 7 figures, Journal</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Ran Liu</name>
+    </author>
+    <author>
+      <name>Zhongzhou Liu</name>
+    </author>
+    <author>
+      <name>Xiaoli Li</name>
+    </author>
+    <author>
+      <name>Hao Wu</name>
+    </author>
+    <author>
+      <name>Yuan Fang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.00287v2</id>
+    <title>SCONE: A Novel Stochastic Sampling to Generate Contrastive Views and Hard Negative Samples for Recommendation</title>
+    <updated>2024-12-19T05:48:08Z</updated>
+    <link href="https://arxiv.org/abs/2405.00287v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.00287v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph-based collaborative filtering (CF) has emerged as a promising approach in recommender systems. Despite its achievements, graph-based CF models face challenges due to data sparsity and negative sampling. In this paper, we propose a novel Stochastic sampling for i) COntrastive views and ii) hard NEgative samples (SCONE) to overcome these issues. SCONE generates dynamic augmented views and diverse hard negative samples via a unified stochastic sampling approach based on score-based generative models. Our extensive experiments on 6 benchmark datasets show that SCONE consistently outperforms state-of-the-art baselines. SCONE shows efficacy in addressing user sparsity and item popularity issues, while enhancing performance for both cold-start users and long-tail items. Furthermore, our approach improves the diversity of the recommendation and the uniformity of the representations. The code is available at https://github.com/jeongwhanchoi/SCONE.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-01T02:27:59Z</published>
+    <arxiv:comment>Accepted to WSDM 2025. Chaejeong Lee and Jeongwhan Choi are co-first authors with equal contributions</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Chaejeong Lee</name>
+    </author>
+    <author>
+      <name>Jeongwhan Choi</name>
+    </author>
+    <author>
+      <name>Hyowon Wi</name>
+    </author>
+    <author>
+      <name>Sung-Bae Cho</name>
+    </author>
+    <author>
+      <name>Noseong Park</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.08743v1</id>
+    <title>Hard negative sampling in hyperedge prediction</title>
+    <updated>2025-03-11T09:21:56Z</updated>
+    <link href="https://arxiv.org/abs/2503.08743v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.08743v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hypergraph, which allows each hyperedge to encompass an arbitrary number of nodes, is a powerful tool for modeling multi-entity interactions. Hyperedge prediction is a fundamental task that aims to predict future hyperedges or identify existent but unobserved hyperedges based on those observed. In link prediction for simple graphs, most observed links are treated as positive samples, while all unobserved links are considered as negative samples. However, this full-sampling strategy is impractical for hyperedge prediction, due to the number of unobserved hyperedges in a hypergraph significantly exceeds the number of observed ones. Therefore, one has to utilize some negative sampling methods to generate negative samples, ensuring their quantity is comparable to that of positive samples. In current hyperedge prediction, randomly selecting negative samples is a routine practice. But through experimental analysis, we discover a critical limitation of random selecting that the generated negative samples are too easily distinguishable from positive samples. This leads to premature convergence of the model and reduces the accuracy of prediction. To overcome this issue, we propose a novel method to generate negative samples, named as hard negative sampling (HNS). Unlike traditional methods that construct negative hyperedges by selecting node sets from the original hypergraph, HNS directly synthesizes negative samples in the hyperedge embedding space, thereby generating more challenging and informative negative samples. Our results demonstrate that HNS significantly enhances both accuracy and robustness of the prediction. Moreover, as a plug-and-play technique, HNS can be easily applied in the training of various hyperedge prediction models based on representation learning.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.OT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-11T09:21:56Z</published>
+    <arxiv:comment>24 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Zhenyu Deng</name>
+    </author>
+    <author>
+      <name>Tao Zhou</name>
+    </author>
+    <author>
+      <name>Yilin Bi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.00448v2</id>
+    <title>Real-Time Hard Negative Sampling via LLM-based Clustering for Large-Scale Two-Tower Retrieval</title>
+    <updated>2026-07-06T17:02:14Z</updated>
+    <link href="https://arxiv.org/abs/2607.00448v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.00448v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The two-tower model has been widely used for large-scale recommendation systems, particularly in the retrieval stage. Industry standards for training two-tower models typically involve in-batch and/or out-of-batch negative sampling. However, these methods often produce easy negatives that models can quickly learn, failing to sufficiently challenge the model. To address this issue, a novel self-supervised hard negative sampling technique is proposed that leverages a large language model (LLM) to generate hard negatives from the same cluster during model training. By utilizing the LLM to learn media representations, the proposed approach ensures that the generated negatives are more challenging and informative. This real-time sampling framework is designed for seamless integration into production models, capable of handling billions of training data points with minimal computational complexity. Experiments on public datasets, along with deployment to a large-scale online system, demonstrate that the proposed negative sampling technique outperforms widely used industry methods. Furthermore, analysis in industrial applications reveals that this sampling method can help break inherent feedback loops in recommendations and significantly reduce popularity bias.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-01T05:07:32Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Ivan Ji</name>
+      <arxiv:affiliation>Zihao</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Liuyi Hu</name>
+      <arxiv:affiliation>Zihao</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Harrison</name>
+      <arxiv:affiliation>Zihao</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Zhao</name>
+      <arxiv:affiliation>Xiangjun</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lei Huang</name>
+      <arxiv:affiliation>Xiangjun</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Qunshu Zhang</name>
+      <arxiv:affiliation>Xiangjun</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Max</name>
+      <arxiv:affiliation>Xiangjun</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Fan</name>
+    </author>
+    <author>
+      <name>Aameek Singh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.05238v1</id>
+    <title>Dynamic Graph with Similarity-Aware Attention Graph Neural Network for Recommender Systems</title>
+    <updated>2026-05-02T16:33:39Z</updated>
+    <link href="https://arxiv.org/abs/2605.05238v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.05238v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recommender systems are essential components of modern online platforms which presents personalized content in various domain. The traditional collaborative filtering methods depends on static user-item interaction graphs and a limited subset of similarity measures which fail to capture the changing nature of preferences of an individual. Recent graph neural network (GNN) based approaches focus on user-item bipartite graphs which do not use explicit user-user relational modelling and dynamic graph evolution during training. To address these limitations, this paper proposes a Dynamic Graph SimilarityAware Attention Graph Neural Network (DG-SA-GNN) framework that integrates dynamic user similarity graph construction with multi-similarity propagation and attention-based aggregation. The proposed architecture constructs four parallel user similarity graphs using Cosine, Jaccard, Discounted Pearson Correlation Coefficient (Discount PCC), and IPIJ similarity functions, each processed by a dedicated UserGNN module. A Graph Transformer fuses the four graph views, and a CrossAttention module refines user embeddings through interaction with item embeddings. Crucially, the graphs are reconstructed at scheduled epochs during training, enabling the model to adapt to the learned embedding space constituting the dynamic graph component. Mini-batch training with hard negative sampling improves scalability and convergence. Experiments on the MovieLens100K benchmark demonstrate that DG-SA-GNN achieves a Recall@20 of 0.162 and NDCG@20 of 0.065 which is better than the LightGCN baseline in recall. The results validate that dynamic multi-similarity graph construction coupled with attention-based fusion which produce recommendation performance</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-02T16:33:39Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Aadarsh Senapati</name>
+    </author>
+    <author>
+      <name>Neha Kujur</name>
+    </author>
+    <author>
+      <name>Vivek Yelleti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.15103v2</id>
+    <title>Khan-GCL: Kolmogorov-Arnold Network Based Graph Contrastive Learning with Hard Negatives</title>
+    <updated>2025-08-08T06:14:32Z</updated>
+    <link href="https://arxiv.org/abs/2505.15103v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.15103v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph contrastive learning (GCL) has demonstrated great promise for learning generalizable graph representations from unlabeled data. However, conventional GCL approaches face two critical limitations: (1) the restricted expressive capacity of multilayer perceptron (MLP) based encoders, and (2) suboptimal negative samples that either from random augmentations-failing to provide effective 'hard negatives'-or generated hard negatives without addressing the semantic distinctions crucial for discriminating graph data. To this end, we propose Khan-GCL, a novel framework that integrates the Kolmogorov-Arnold Network (KAN) into the GCL encoder architecture, substantially enhancing its representational capacity. Furthermore, we exploit the rich information embedded within KAN coefficient parameters to develop two novel critical feature identification techniques that enable the generation of semantically meaningful hard negative samples for each graph representation. These strategically constructed hard negatives guide the encoder to learn more discriminative features by emphasizing critical semantic differences between graphs. Extensive experiments demonstrate that our approach achieves state-of-the-art performance compared to existing GCL methods across a variety of datasets and tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-21T04:54:18Z</published>
+    <arxiv:comment>Graph Contrastive Learning, Self-supervised Learning, Kolmogorov-Arnold Network, Representation Learning</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zihu Wang</name>
+    </author>
+    <author>
+      <name>Boxun Xu</name>
+    </author>
+    <author>
+      <name>Hejia Geng</name>
+    </author>
+    <author>
+      <name>Peng Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.11866v2</id>
+    <title>SimDiffRec: Semantic Similarity-Guided Diffusion for Contrastive Sequential Recommendation</title>
+    <updated>2026-07-03T12:41:05Z</updated>
+    <link href="https://arxiv.org/abs/2507.11866v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.11866v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In sequential recommendation systems, data augmentation and contrastive learning techniques have recently been introduced using diffusion models to achieve robust representation learning. However, most of the existing approaches use random augmentation, which risks damaging the contextual information of the original sequence. Accordingly, we propose SimDiffRec: a Semantic Similarity-Guided Diffusion for Contrastive Sequential Recommendation. Our framework leverages the similarity between item embedding vectors to generate semantically consistent noise. Moreover, we utilize high confidence scores in the denoising process to select our augmentation positions. This approach more effectively reflects contextual and structural information compared to augmentation at random positions. From a contrastive learning perspective, the proposed augmentation technique, combined with hard negative sampling, provides more discriminative positive and negative samples, simultaneously improving training efficiency and recommendation performance. Experimental results on five benchmark datasets show that SimDiffRec outperforms the existing baseline models. The code of our framework is available at https://github.com/zingyon/SimDiffRec.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-16T03:26:24Z</published>
+    <arxiv:comment>To appear in Proceedings of the 19th ACM International Conference on Web Search and Data Mining (WSDM 2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Jinkyeong Choi</name>
+    </author>
+    <author>
+      <name>Yejin Noh</name>
+    </author>
+    <author>
+      <name>Donghyeon Park</name>
+    </author>
+    <arxiv:doi>10.1145/3773966.3777978</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3773966.3777978" title="doi"/>
+  </entry>
+</feed>

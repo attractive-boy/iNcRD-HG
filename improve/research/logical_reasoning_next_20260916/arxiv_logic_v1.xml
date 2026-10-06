@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/OkDStFlV80SCKJee86qpSueHtrI</id>
+  <title>arXiv Query: search_query=(ti:"link prediction" AND (all:"logical" OR all:"rule") ) AND submittedDate:"202401010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=12</title>
+  <updated>2026-09-15T21:23:52Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(ti:%22link+prediction%22+AND+(all:%22logical%22+OR+all:%22rule%22))+AND+submittedDate:%22202401010000+TO+202609162359%22&amp;start=0&amp;max_results=12&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>12</opensearch:itemsPerPage>
+  <opensearch:totalResults>12</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2602.05424v2</id>
+    <title>THOR: Inductive Link Prediction over Hyper-Relational Knowledge Graphs</title>
+    <updated>2026-02-06T01:44:41Z</updated>
+    <link href="https://arxiv.org/abs/2602.05424v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.05424v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs (KGs) have become a key ingredient supporting a variety of applications. Beyond the traditional triplet representation of facts where a relation connects two entities, modern KGs observe an increasing number of hyper-relational facts, where an arbitrary number of qualifiers associated with a triplet provide auxiliary information to further describe the rich semantics of the triplet, which can effectively boost the reasoning performance in link prediction tasks. However, existing link prediction techniques over such hyper-relational KGs (HKGs) mostly focus on a transductive setting, where KG embedding models are learned from the specific vocabulary of a given KG and subsequently can only make predictions within the same vocabulary, limiting their generalizability to previously unseen vocabularies. Against this background, we propose THOR, an inducTive link prediction technique for Hyper-relational knOwledge gRaphs. Specifically, we first introduce both relation and entity foundation graphs, modeling their fundamental inter- and intra-fact interactions in HKGs, which are agnostic to any specific relations and entities. Afterward, THOR is designed to learn from the two foundation graphs with two parallel graph encoders followed by a transformer decoder, which supports efficient masked training and fully-inductive inference. We conduct a thorough evaluation of THOR in hyper-relational link prediction tasks on 12 datasets with different settings. Results show that THOR outperforms a sizable collection of baselines, yielding 66.1%, 55.9%, and 20.4% improvement over the best-performing rule-based, semi-inductive, and fully-inductive techniques, respectively. A series of ablation studies also reveals our key design factors capturing the structural invariance transferable across HKGs for inductive tasks.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-05T08:15:49Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Weijian Yu</name>
+    </author>
+    <author>
+      <name>Yuhuan Lu</name>
+    </author>
+    <author>
+      <name>Dingqi Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.06982v1</id>
+    <title>CGLE: Class-label Graph Link Estimator for Link Prediction</title>
+    <updated>2025-11-10T11:34:36Z</updated>
+    <link href="https://arxiv.org/abs/2511.06982v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.06982v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction is a pivotal task in graph mining with wide-ranging applications in social networks, recommendation systems, and knowledge graph completion. However, many leading Graph Neural Network (GNN) models often neglect the valuable semantic information aggregated at the class level. To address this limitation, this paper introduces CGLE (Class-label Graph Link Estimator), a novel framework designed to augment GNN-based link prediction models. CGLE operates by constructing a class-conditioned link probability matrix, where each entry represents the probability of a link forming between two node classes. This matrix is derived from either available ground-truth labels or from pseudo-labels obtained through clustering. The resulting class-based prior is then concatenated with the structural link embedding from a backbone GNN, and the combined representation is processed by a Multi-Layer Perceptron (MLP) for the final prediction. Crucially, CGLE's logic is encapsulated in an efficient preprocessing stage, leaving the computational complexity of the underlying GNN model unaffected. We validate our approach through extensive experiments on a broad suite of benchmark datasets, covering both homophilous and sparse heterophilous graphs. The results show that CGLE yields substantial performance gains over strong baselines such as NCN and NCNC, with improvements in HR@100 of over 10 percentage points on homophilous datasets like Pubmed and DBLP. On sparse heterophilous graphs, CGLE delivers an MRR improvement of over 4% on the Chameleon dataset. Our work underscores the efficacy of integrating global, data-driven semantic priors, presenting a compelling alternative to the pursuit of increasingly complex model architectures. Code to reproduce our findings is available at: https://github.com/data-iitd/cgle-icdm2025.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-10T11:34:36Z</published>
+    <arxiv:comment>Paper accepted at the IEEE International Conference on Data Mining (ICDM 2025)</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Ankit Mazumder</name>
+    </author>
+    <author>
+      <name>Srikanta Bedathur</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.24240v1</id>
+    <title>Temporal Knowledge Graph Hyperedge Forecasting: Exploring Entity-to-Category Link Prediction</title>
+    <updated>2025-10-28T09:47:38Z</updated>
+    <link href="https://arxiv.org/abs/2510.24240v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.24240v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Temporal Knowledge Graphs have emerged as a powerful way of not only modeling static relationships between entities but also the dynamics of how relations evolve over time. As these informational structures can be used to store information from a real-world setting, such as a news flow, predicting future graph components to a certain extent equates predicting real-world events. Most of the research in this field focuses on embedding-based methods, often leveraging convolutional neural net architectures. These solutions act as black boxes, limiting insight. In this paper, we explore an extension to an established rule-based framework, TLogic, that yields a high accuracy in combination with explainable predictions. This offers transparency and allows the end-user to critically evaluate the rules applied at the end of the prediction stage. The new rule format incorporates entity category as a key component with the purpose of limiting rule application only to relevant entities. When categories are unknown for building the graph, we propose a data-driven method to generate them with an LLM-based approach. Additionally, we investigate the choice of aggregation method for scores of retrieved entities when performing category prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-28T09:47:38Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Edward Markai</name>
+    </author>
+    <author>
+      <name>Sina Molavipour</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07595v1</id>
+    <title>Context Pooling: Query-specific Graph Pooling for Generic Inductive Link Prediction in Knowledge Graphs</title>
+    <updated>2025-07-10T09:54:37Z</updated>
+    <link href="https://arxiv.org/abs/2507.07595v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.07595v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent investigations on the effectiveness of Graph Neural Network (GNN)-based models for link prediction in Knowledge Graphs (KGs) show that vanilla aggregation does not significantly impact the model performance. In this paper, we introduce a novel method, named Context Pooling, to enhance GNN-based models' efficacy for link predictions in KGs. To our best of knowledge, Context Pooling is the first methodology that applies graph pooling in KGs. Additionally, Context Pooling is first-of-its-kind to enable the generation of query-specific graphs for inductive settings, where testing entities are unseen during training. Specifically, we devise two metrics, namely neighborhood precision and neighborhood recall, to assess the neighbors' logical relevance regarding the given queries, thereby enabling the subsequent comprehensive identification of only the logically relevant neighbors for link prediction. Our method is generic and assessed by being applied to two state-of-the-art (SOTA) models on three public transductive and inductive datasets, achieving SOTA performance in 42 out of 48 settings.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-10T09:54:37Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Zhixiang Su</name>
+    </author>
+    <author>
+      <name>Di Wang</name>
+    </author>
+    <author>
+      <name>Chunyan Miao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.03947v2</id>
+    <title>Graph Collaborative Attention Network for Link Prediction in Knowledge Graphs</title>
+    <updated>2025-07-30T12:47:25Z</updated>
+    <link href="https://arxiv.org/abs/2507.03947v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.03947v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs offer a structured representation of real-world entities and their relationships, enabling a wide range of applications from information retrieval to automated reasoning. In this paper, we conduct a systematic comparison between traditional rule-based approaches and modern deep learning methods for link prediction. We focus on KBGAT, a graph neural network model that leverages multi-head attention to jointly encode both entity and relation features within local neighborhood structures. To advance this line of research, we introduce \textbf{GCAT} (Graph Collaborative Attention Network), a refined model that enhances context aggregation and interaction between heterogeneous nodes. Experimental results on four widely-used benchmark datasets demonstrate that GCAT not only consistently outperforms rule-based methods but also achieves competitive or superior performance compared to existing neural embedding models. Our findings highlight the advantages of attention-based architectures in capturing complex relational patterns for knowledge graph completion tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-05T08:13:09Z</published>
+    <arxiv:comment>Homepage: https://graphattentionnetwork.github.io</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Thanh Hoang-Minh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.20676v1</id>
+    <title>Inductive Link Prediction on N-ary Relational Facts via Semantic Hypergraph Reasoning</title>
+    <updated>2025-03-26T16:09:54Z</updated>
+    <link href="https://arxiv.org/abs/2503.20676v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.20676v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>N-ary relational facts represent semantic correlations among more than two entities. While recent studies have developed link prediction (LP) methods to infer missing relations for knowledge graphs (KGs) containing n-ary relational facts, they are generally limited to transductive settings. Fully inductive settings, where predictions are made on previously unseen entities, remain a significant challenge. As existing methods are mainly entity embedding-based, they struggle to capture entity-independent logical rules. To fill in this gap, we propose an n-ary subgraph reasoning framework for fully inductive link prediction (ILP) on n-ary relational facts. This framework reasons over local subgraphs and has a strong inductive inference ability to capture n-ary patterns. Specifically, we introduce a novel graph structure, the n-ary semantic hypergraph, to facilitate subgraph extraction. Moreover, we develop a subgraph aggregating network, NS-HART, to effectively mine complex semantic correlations within subgraphs. Theoretically, we provide a thorough analysis from the score function optimization perspective to shed light on NS-HART's effectiveness for n-ary ILP tasks. Empirically, we conduct extensive experiments on a series of inductive benchmarks, including transfer reasoning (with and without entity features) and pairwise subgraph reasoning. The results highlight the superiority of the n-ary subgraph reasoning framework and the exceptional inductive ability of NS-HART. The source code of this paper has been made publicly available at https://github.com/yin-gz/Nary-Inductive-SubGraph.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-26T16:09:54Z</published>
+    <arxiv:comment>To be published in Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.1 (KDD'25)</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Gongzhu Yin</name>
+    </author>
+    <author>
+      <name>Hongli Zhang</name>
+    </author>
+    <author>
+      <name>Yuchen Yang</name>
+    </author>
+    <author>
+      <name>Yi Luo</name>
+    </author>
+    <arxiv:doi>10.1145/3690624.3709195</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3690624.3709195" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.04846v1</id>
+    <title>eXpath: Explaining Knowledge Graph Link Prediction with Ontological Closed Path Rules</title>
+    <updated>2024-12-06T08:33:49Z</updated>
+    <link href="https://arxiv.org/abs/2412.04846v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.04846v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction (LP) is crucial for Knowledge Graphs (KG) completion but commonly suffers from interpretability issues. While several methods have been proposed to explain embedding-based LP models, they are generally limited to local explanations on KG and are deficient in providing human interpretable semantics. Based on real-world observations of the characteristics of KGs from multiple domains, we propose to explain LP models in KG with path-based explanations. An integrated framework, namely eXpath, is introduced which incorporates the concept of relation path with ontological closed path rules to enhance both the efficiency and effectiveness of LP interpretation. Notably, the eXpath explanations can be fused with other single-link explanation approaches to achieve a better overall solution. Extensive experiments across benchmark datasets and LP models demonstrate that introducing eXpath can boost the quality of resulting explanations by about 20% on two key metrics and reduce the required explanation time by 61.4%, in comparison to the best existing method. Case studies further highlight eXpath's ability to provide more semantically meaningful explanations through path-based evidence.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-06T08:33:49Z</published>
+    <arxiv:comment>13 pages, 5 figures. Submitted to PVLDB volumn 18 on 20241201</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Ye Sun</name>
+    </author>
+    <author>
+      <name>Lei Shi</name>
+    </author>
+    <author>
+      <name>Yongxin Tong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.20130v1</id>
+    <title>Reevaluation of Inductive Link Prediction</title>
+    <updated>2024-09-30T09:32:10Z</updated>
+    <link href="https://arxiv.org/abs/2409.20130v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.20130v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Within this paper, we show that the evaluation protocol currently used for inductive link prediction is heavily flawed as it relies on ranking the true entity in a small set of randomly sampled negative entities. Due to the limited size of the set of negatives, a simple rule-based baseline can achieve state-of-the-art results, which simply ranks entities higher based on the validity of their type. As a consequence of these insights, we reevaluate current approaches for inductive link prediction on several benchmarks using the link prediction protocol usually applied to the transductive setting. As some inductive methods suffer from scalability issues when evaluated in this setting, we propose and apply additionally an improved sampling protocol, which does not suffer from the problem mentioned above. The results of our evaluation differ drastically from the results reported in so far.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-30T09:32:10Z</published>
+    <arxiv:comment>Published in RuleML+RR 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>In: Rules and Reasoning. RuleML+RR 2024. Lecture Notes in Computer Science, vol 15183. Springer, Cham (2024)</arxiv:journal_ref>
+    <author>
+      <name>Simon Ott</name>
+    </author>
+    <author>
+      <name>Christian Meilicke</name>
+    </author>
+    <author>
+      <name>Heiner Stuckenschmidt</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-031-72407-7_7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-031-72407-7_7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.10144v1</id>
+    <title>Improving rule mining via embedding-based link prediction</title>
+    <updated>2024-06-14T15:53:30Z</updated>
+    <link href="https://arxiv.org/abs/2406.10144v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.10144v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Rule mining on knowledge graphs allows for explainable link prediction. Contrarily, embedding-based methods for link prediction are well known for their generalization capabilities, but their predictions are not interpretable. Several approaches combining the two families have been proposed in recent years. The majority of the resulting hybrid approaches are usually trained within a unified learning framework, which often leads to convergence issues due to the complexity of the learning task. In this work, we propose a new way to combine the two families of approaches. Specifically, we enrich a given knowledge graph by means of its pre-trained entity and relation embeddings before applying rule mining systems on the enriched knowledge graph. To validate our approach, we conduct extensive experiments on seven benchmark datasets. An analysis of the results generated by our approach suggests that we discover new valuable rules on the enriched graphs. We provide an open source implementation of our approach as well as pretrained models and datasets at https://github.com/Jean-KOUAGOU/EnhancedRuleLearning</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-14T15:53:30Z</published>
+    <arxiv:comment>13 pages, 2 figures, 11 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>N'Dah Jean Kouagou</name>
+    </author>
+    <author>
+      <name>Arif Yilmaz</name>
+    </author>
+    <author>
+      <name>Michel Dumontier</name>
+    </author>
+    <author>
+      <name>Axel-Cyrille Ngonga Ngomo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.04062v3</id>
+    <title>Link Prediction with Relational Hypergraphs</title>
+    <updated>2025-06-09T10:08:14Z</updated>
+    <link href="https://arxiv.org/abs/2402.04062v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.04062v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction with knowledge graphs has been thoroughly studied in graph machine learning, leading to a rich landscape of graph neural network architectures with successful applications. Nonetheless, it remains challenging to transfer the success of these architectures to relational hypergraphs, where the task of link prediction is over $k$-ary relations, which is substantially harder than link prediction with knowledge graphs. In this paper, we propose a framework for link prediction with relational hypergraphs, unlocking applications of graph neural networks to fully relational structures. Theoretically, we conduct a thorough analysis of the expressive power of the resulting model architectures via corresponding relational Weisfeiler-Leman algorithms and also via logical expressiveness. Empirically, we validate the power of the proposed model architectures on various relational hypergraph benchmarks. The resulting model architectures substantially outperform every baseline for inductive link prediction, and lead to state-of-the-art results for transductive link prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-06T15:05:40Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xingyue Huang</name>
+    </author>
+    <author>
+      <name>Miguel Romero Orth</name>
+    </author>
+    <author>
+      <name>Pablo Barceló</name>
+    </author>
+    <author>
+      <name>Michael M. Bronstein</name>
+    </author>
+    <author>
+      <name>İsmail İlkan Ceylan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.16045v1</id>
+    <title>Type-based Neural Link Prediction Adapter for Complex Query Answering</title>
+    <updated>2024-01-29T10:54:28Z</updated>
+    <link href="https://arxiv.org/abs/2401.16045v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.16045v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Answering complex logical queries on incomplete knowledge graphs (KGs) is a fundamental and challenging task in multi-hop reasoning. Recent work defines this task as an end-to-end optimization problem, which significantly reduces the training cost and enhances the generalization of the model by a pretrained link predictors for query answering. However, most existing proposals ignore the critical semantic knowledge inherently available in KGs, such as type information, which could help answer complex logical queries. To this end, we propose TypE-based Neural Link Prediction Adapter (TENLPA), a novel model that constructs type-based entity-relation graphs to discover the latent relationships between entities and relations by leveraging type information in KGs. Meanwhile, in order to effectively combine type information with complex logical queries, an adaptive learning mechanism is introduced, which is trained by back-propagating during the complex query answering process to achieve adaptive adjustment of neural link predictors. Experiments on 3 standard datasets show that TENLPA model achieves state-of-the-art performance on complex query answering with good generalization and robustness.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-29T10:54:28Z</published>
+    <arxiv:comment>11 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Lingning Song</name>
+    </author>
+    <author>
+      <name>Yi Zu</name>
+    </author>
+    <author>
+      <name>Shan Lu</name>
+    </author>
+    <author>
+      <name>Jieyue He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.11800v1</id>
+    <title>Revisiting Document-Level Relation Extraction with Context-Guided Link Prediction</title>
+    <updated>2024-01-22T10:01:06Z</updated>
+    <link href="https://arxiv.org/abs/2401.11800v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.11800v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Document-level relation extraction (DocRE) poses the challenge of identifying relationships between entities within a document as opposed to the traditional RE setting where a single sentence is input. Existing approaches rely on logical reasoning or contextual cues from entities. This paper reframes document-level RE as link prediction over a knowledge graph with distinct benefits: 1) Our approach combines entity context with document-derived logical reasoning, enhancing link prediction quality. 2) Predicted links between entities offer interpretability, elucidating employed reasoning. We evaluate our approach on three benchmark datasets: DocRED, ReDocRED, and DWIE. The results indicate that our proposed method outperforms the state-of-the-art models and suggests that incorporating context-based link prediction techniques can enhance the performance of document-level relation extraction models.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-22T10:01:06Z</published>
+    <arxiv:comment>Accepted in AAAI 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Monika Jain</name>
+    </author>
+    <author>
+      <name>Raghava Mutharaju</name>
+    </author>
+    <author>
+      <name>Ramakanth Kavuluru</name>
+    </author>
+    <author>
+      <name>Kuldeep Singh</name>
+    </author>
+  </entry>
+</feed>

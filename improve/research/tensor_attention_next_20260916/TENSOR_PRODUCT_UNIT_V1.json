@@ -1,0 +1,95 @@
+{
+  "created_at_utc": "2026-09-16T08:39:20.576632+00:00",
+  "tests": 7,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "evidence": {
+    "author": {
+      "commit": "c276c80d5ad807881dedb4707d8d3c20b4e97ec6",
+      "source_sha256": "dd0d7a641d4b0e68b41b785a334df41afee59bc2013d66169498379d69e7e682",
+      "selected_bodies": [
+        "CPLinear",
+        "apply_rotary_emb"
+      ],
+      "selected_bodies_modified": false,
+      "rotary_provider": "all-zero positions; identity rotation",
+      "full_T6_executed": false,
+      "initialization_and_random_stream_exact": true,
+      "maximum_forward_error": 0.0,
+      "maximum_gradient_error": 8.881784197001252e-16
+    },
+    "controls": {
+      "initial_stored_parameters_and_rng_equal": true,
+      "static_dense_initial_function_and_input_gradient_equal": true,
+      "full_static_initial_function_equality_claimed": false,
+      "static_and_dense_hessian_zero": true,
+      "contextual_rank_bounds_verified": true,
+      "active_parameter_counts": {
+        "full": 280,
+        "noncontextual_a": 168,
+        "dense_qkv": 240
+      },
+      "equal_effective_capacity_claimed": false
+    },
+    "executor": {
+      "training_only_inputs": true,
+      "formal_cuda0_rejected": true,
+      "all_active_gradients_finite": true,
+      "frozen_parameters_unchanged": true,
+      "random_streams_equal": true,
+      "forward_operation_counts_equal": true,
+      "counts": {
+        "calls": 5,
+        "attention_layers": 10,
+        "node_rows": 230,
+        "contextual_product_terms": 7360,
+        "static_product_terms": 7360,
+        "dense_projection_outputs": 5520,
+        "scored_edge_heads": 2668,
+        "value_message_entries": 10672
+      },
+      "lnc_exact_identity_without_training": true,
+      "evaluation_labels_read": false,
+      "formal_neural_fits": 0
+    },
+    "failure": {
+      "exact_completed_steps": 2,
+      "current_step": 3,
+      "operation": "forward",
+      "partial_model_optimizer_rng_preserved": true,
+      "formal_neural_fit": false
+    },
+    "graph": {
+      "query_edges_and_reverse_absent": true,
+      "omitted_labels_cannot_change_support": true,
+      "node_permutation_max_error": 0.0,
+      "query_order_max_error": 1.4901161193847656e-08
+    },
+    "polynomial": {
+      "independent_tensor_max_error": 2.220446049250313e-16,
+      "input_and_all_active_parameter_gradcheck": true,
+      "analytic_quadratic_hessian": true,
+      "evenness_and_degree_two_homogeneity": true
+    },
+    "attention": {
+      "independent_numpy_max_error": 1.1102230246251565e-16,
+      "incidence_softmax_scope_verified": true,
+      "qkv_attention_gradcheck": true
+    }
+  },
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_tensor_product_attention_graph_v1.py": "3120faa6a32f0ff72dd80fb1236b97b6637486805f3f2833d898bc3f4003ea9a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/tensor_product_attention_graph_v1.py": "147f67e65b6fb50dd56821218ee4ca2aa10b75c889c489c21a5764232ea56363",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_tensor_product_experiment_v1.py": "fb9b7093d24bb3f1da56627dd1bd4a0d7017889fdc659d9a1bd845f7186f1af6",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_nested_anchor_v2.py": "31b81bb2a0cfd1978b9fdf467b2dd5354b1fc748081b7b9522c6603e9d9015f0",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/overlap_block_models.py": "8cd9369ecab95c93889ae2bfa2d1e9e0809f4bc260dd70d7bad74ac440182791",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/sharpness_graph_v1.py": "49f346bb2d84281082c9cd38f65254abacdfe6b0d78fa0dd238320451d347982",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/tensor_attention_next_20260916/TPA_AUTHOR_SOURCE_V1.json": "d06e5291476b73eded8a75806741b0ee6a7e1351feab09f0b3ff15f3b6454448",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/tensor_attention_next_20260916/tpa_author_v1_model__T6.py": "dd0d7a641d4b0e68b41b785a334df41afee59bc2013d66169498379d69e7e682",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/tensor_attention_next_20260916/tpa_author_v1_LICENSE": "06cb4c182d4482e72de33efead51c3821c147b4b5915eae03548ff5cbb47e93a"
+  },
+  "formal_neural_fits": 0,
+  "evaluation_labels_read": false,
+  "sha256": "603c91734685a5e35ac54e406f3478917c642771835170e98c797b9f0309f866"
+}

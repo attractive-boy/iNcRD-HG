@@ -1,0 +1,587 @@
+{
+  "created_at_utc": "2026-09-16T00:52:31.420898+00:00",
+  "device": "cuda:1",
+  "core_parameters": {
+    "width": 64,
+    "hidden": 128,
+    "dropout": 0.1,
+    "folds": 5,
+    "temperature": 0.1,
+    "alignment_weight": 0.1,
+    "dti_batch": 256,
+    "residual_bound": 2.0,
+    "lnc_policy": "identity_strong_reference",
+    "input_dir": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/morphology_inputs_v1_20260916",
+    "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+  },
+  "new_short_neural_fits": 3,
+  "identity_replays": 3,
+  "formal_fits": 0,
+  "performance_metrics_computed": false,
+  "records": [
+    {
+      "task": "MiDrug",
+      "kind": "full",
+      "epoch": 10,
+      "seconds": 1.2046023271977901,
+      "parameters": 169857,
+      "trainable_parameters": 169857,
+      "fixed_step_training": true,
+      "trained_neural_model": true,
+      "training_steps": 10,
+      "gradient_evaluations": 10,
+      "optimizer_steps": 10,
+      "dti_pairs_per_update": 256,
+      "final_optimizer_state_epoch": 10,
+      "identity_preserves_anchor": false,
+      "all_device_seeding_used": false,
+      "mean_raw_residual": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "association_graph_used": false,
+      "external_positive_dti_pairs": 10444,
+      "covered_training_queries": 1257,
+      "uncovered_pairs_exactly_preserve_anchor": true,
+      "dropout_rng_sha256": "a7f92ed26003927418748aaa7960014851369ba5f9d439692eea5a7bc9eb4ed0",
+      "private_rng_sha256": "80d38838f6a3ec0075ca7bb825f5e7e50e21f3520f34dbf4845764eafcf23c27",
+      "replay_max_abs": 7.450580596923828e-09,
+      "peak_allocated_gib": 0.15137767791748047,
+      "files": {
+        "model.pt": "dcd5c0376e2a5e3dc092301494cff8a2c201cae798256c4d9ec32d58fc832045",
+        "training_final.pt": "563f146082b66521ec34654070e3900006a1546bf94be4a5504a2278f570b223",
+        "trace.json": "88b308d4220b155b647d3a493c17e485e1c09a13f4d7eb62fab1f0b5da6de15d"
+      },
+      "sha256": "a79a22f829cdb4f17591d8ae5b41ba417f02b9176c374bf702e8d8a2bfefde7d"
+    },
+    {
+      "task": "MiDrug",
+      "kind": "no_alignment",
+      "epoch": 10,
+      "seconds": 0.2661688681691885,
+      "parameters": 169857,
+      "trainable_parameters": 169857,
+      "fixed_step_training": true,
+      "trained_neural_model": true,
+      "training_steps": 10,
+      "gradient_evaluations": 10,
+      "optimizer_steps": 10,
+      "dti_pairs_per_update": 256,
+      "final_optimizer_state_epoch": 10,
+      "identity_preserves_anchor": false,
+      "all_device_seeding_used": false,
+      "mean_raw_residual": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "association_graph_used": false,
+      "external_positive_dti_pairs": 10444,
+      "covered_training_queries": 1257,
+      "uncovered_pairs_exactly_preserve_anchor": true,
+      "dropout_rng_sha256": "a7f92ed26003927418748aaa7960014851369ba5f9d439692eea5a7bc9eb4ed0",
+      "private_rng_sha256": "80d38838f6a3ec0075ca7bb825f5e7e50e21f3520f34dbf4845764eafcf23c27",
+      "replay_max_abs": 1.4901161193847656e-08,
+      "peak_allocated_gib": 0.15143728256225586,
+      "files": {
+        "model.pt": "2d506429d6741c772f2e01678aee68078840dafc768a997e686266a4da18e1e2",
+        "training_final.pt": "78cf501e5df431424282971bf8ec5471998dea58909673a4b1cfd2961c9eb409",
+        "trace.json": "67617026d8795d0a59eadbb7812669e9ceeef6218c9603793d67ba9ade7c0001"
+      },
+      "sha256": "89e3ba423e041bec8b053ab2ade4ac00e0137ac2740156de52d9401fad5de20b"
+    },
+    {
+      "task": "MiDrug",
+      "kind": "shuffled_rna_targets",
+      "epoch": 10,
+      "seconds": 0.25748953968286514,
+      "parameters": 169857,
+      "trainable_parameters": 169857,
+      "fixed_step_training": true,
+      "trained_neural_model": true,
+      "training_steps": 10,
+      "gradient_evaluations": 10,
+      "optimizer_steps": 10,
+      "dti_pairs_per_update": 256,
+      "final_optimizer_state_epoch": 10,
+      "identity_preserves_anchor": false,
+      "all_device_seeding_used": false,
+      "mean_raw_residual": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "association_graph_used": false,
+      "external_positive_dti_pairs": 10444,
+      "covered_training_queries": 1257,
+      "uncovered_pairs_exactly_preserve_anchor": true,
+      "dropout_rng_sha256": "a7f92ed26003927418748aaa7960014851369ba5f9d439692eea5a7bc9eb4ed0",
+      "private_rng_sha256": "80d38838f6a3ec0075ca7bb825f5e7e50e21f3520f34dbf4845764eafcf23c27",
+      "replay_max_abs": 1.4901161193847656e-08,
+      "peak_allocated_gib": 0.15143728256225586,
+      "files": {
+        "model.pt": "bbcbbbb6dc2fc06c6bb8f9f4433732bce735f5279f127b4a130e76da923fd120",
+        "training_final.pt": "40624085665d61d9c740c88714f50bb780a16c46263c9fe64a2eb385a91dc468",
+        "trace.json": "e10875bb999a9d5506491371f97aea295cb22c96df1e23a880bb175c5db80985"
+      },
+      "sha256": "5e8a9d083d25928ba59c557866b9dd466f1b5eefd5c97e6448a96e5d89674ddf"
+    },
+    {
+      "task": "LncDrug",
+      "kind": "full",
+      "epoch": 0,
+      "seconds": 0.0,
+      "parameters": 0,
+      "trainable_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": false,
+      "training_steps": 0,
+      "gradient_evaluations": 0,
+      "optimizer_steps": 0,
+      "dti_pairs_per_update": 0,
+      "identity_preserves_anchor": true,
+      "no_new_lnc_training": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "dropout_rng_sha256": "c8d7c92bd1f592ff5016d522668d67357e9d83d44d1f8f7d9c7695062280b945",
+      "private_rng_sha256": null,
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.06255006790161133,
+      "files": {
+        "model.pt": "d0fb79e98f887337d82426499bc2b735d0b90a81924380932507ec0ff78bd7a6",
+        "training_final.pt": "ce0ee1ad522e2a8aec2eac913f6e3f02183ba289368ec0b9feca97716c211fe9",
+        "trace.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "sha256": "35bd5767fcf35a9bd34f089dba91296ae5c52b00bd970d72307f9044e5fe6ce5"
+    },
+    {
+      "task": "LncDrug",
+      "kind": "no_alignment",
+      "epoch": 0,
+      "seconds": 0.0,
+      "parameters": 0,
+      "trainable_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": false,
+      "training_steps": 0,
+      "gradient_evaluations": 0,
+      "optimizer_steps": 0,
+      "dti_pairs_per_update": 0,
+      "identity_preserves_anchor": true,
+      "no_new_lnc_training": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "dropout_rng_sha256": "c8d7c92bd1f592ff5016d522668d67357e9d83d44d1f8f7d9c7695062280b945",
+      "private_rng_sha256": null,
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.06255102157592773,
+      "files": {
+        "model.pt": "d0fb79e98f887337d82426499bc2b735d0b90a81924380932507ec0ff78bd7a6",
+        "training_final.pt": "ce0ee1ad522e2a8aec2eac913f6e3f02183ba289368ec0b9feca97716c211fe9",
+        "trace.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "sha256": "8af94deebc5daeb6497eca811a0fa98f8208d727237fd90e287703cb16074a08"
+    },
+    {
+      "task": "LncDrug",
+      "kind": "shuffled_rna_targets",
+      "epoch": 0,
+      "seconds": 0.0,
+      "parameters": 0,
+      "trainable_parameters": 0,
+      "fixed_step_training": true,
+      "trained_neural_model": false,
+      "training_steps": 0,
+      "gradient_evaluations": 0,
+      "optimizer_steps": 0,
+      "dti_pairs_per_update": 0,
+      "identity_preserves_anchor": true,
+      "no_new_lnc_training": true,
+      "query_outcomes_used_for_offset_fitting": false,
+      "dropout_rng_sha256": "c8d7c92bd1f592ff5016d522668d67357e9d83d44d1f8f7d9c7695062280b945",
+      "private_rng_sha256": null,
+      "replay_max_abs": 0.0,
+      "peak_allocated_gib": 0.06255102157592773,
+      "files": {
+        "model.pt": "d0fb79e98f887337d82426499bc2b735d0b90a81924380932507ec0ff78bd7a6",
+        "training_final.pt": "ce0ee1ad522e2a8aec2eac913f6e3f02183ba289368ec0b9feca97716c211fe9",
+        "trace.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "sha256": "24e0dc4b84ac0031d0a5ea1557372e775b1de0c93e447fd00305fd914cf627d2"
+    }
+  ],
+  "fold_audits": [
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 0,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 1,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 2,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 3,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": "historical",
+      "fold": 4,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "fold": 0,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "fold": 1,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "fold": 2,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "fold": 3,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "fold": 4,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "fold": 0,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "fold": 1,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "fold": 2,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "fold": 3,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "fold": 4,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "fold": 0,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "fold": 1,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "fold": 2,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "fold": 3,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "fold": 4,
+      "identity": false,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6"
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 0,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 1,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 2,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 3,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": "historical",
+      "fold": 4,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "fold": 0,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "fold": 1,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "fold": 2,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "fold": 3,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "fold": 4,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "fold": 0,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "fold": 1,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "fold": 2,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "fold": 3,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "fold": 4,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "fold": 0,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "fold": 1,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "fold": 2,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "fold": 3,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "fold": 4,
+      "identity": true,
+      "new_association_graph_constructed": false,
+      "external_inputs_invariant_to_query_fold_outcomes": true,
+      "input_manifest_sha256": null
+    }
+  ],
+  "input_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_residual_energy_v2_20260916/inputs/MiDrug/arrays.npz": "39910438b09c0c3d595f654eb91d20ffa8e60f4554559fb0dcc4892def39d3bf",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/MiDrug/61453/arrays.npz": "8fc4b1220fecedd124ff6d9804aa14c636d7b9402ef1b437aaff5f2a9d104efc",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/MiDrug/7919/arrays.npz": "24c604e8b7355b4c5a8ca09697483396903ec62eb3a0a51144d7acb60cb252af",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/MiDrug/104729/arrays.npz": "bbf6d839e58b01bb1f9b414939c8242e71cee148739581424dbfb20098d6fbe9",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_residual_energy_v2_20260916/inputs/LncDrug/arrays.npz": "8ba53521ba808917710731737bade787debf58d0326b00eb10914e80a389e7b9",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/LncDrug/61453/arrays.npz": "f11426ee4bdddeec2c76a309c70510b5324aa4e2849b369062c2196f161385aa",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/LncDrug/7919/arrays.npz": "fef189438d3419e8e44c0ff43a766df7bc0550c4982717153d1b5663639bf8fd",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/inputs/LncDrug/104729/arrays.npz": "b77a7375b35c412745a1b6d1e8e109c6cfe794567f621d5cf7f6491ca2cb2bd8",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/morphology_inputs_v1_20260916/INPUTS.json": "f024e88ab766f36864148e9b42b3256b1d92cc3f597bcdd9dd8758e0edc181d6",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/morphology_inputs_v1_20260916/arrays.npz": "fac6f6196e02eee539973774fb96b6f9d9f69661cf9ab7e81a20a79258f6a0e3"
+  },
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/morphology_next_20260916/morphology_study_v1.py": "5e09fee843efa9e479e79edc117b874b02b6a97a37aca7268bfc517061f31a73",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/morphological_alignment_v1.py": "fe5892006d387fe031004eb7b000fcae971698bcba9e432e1fcce7c0e9cc7787",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_morphological_alignment_v1.py": "491a4388ba35b20e089321066004588bc94d9a57e53ec62b0dd629b6d77efcd8",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/morphology_inputs_v1.py": "e5338e2c8e9f03e21454bc4d51a379c0e67644ef952a997c9e9c7ff5be224a15",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/morphology_next_20260916/MORPHOLOGY_UNIT_V1.json": "fdf3064acf540982dc2e25bc66e8151dbce855ba7b7b9fe3d30aebc0d8c0a392"
+  },
+  "original_test_source_access": false,
+  "confirmed_final_innovations": 0,
+  "sha256": "cebe1c4ea2296ff0a2341559f427603f105a8fc58bbdcee4007393372dfde581"
+}

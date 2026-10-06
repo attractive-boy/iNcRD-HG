@@ -1,0 +1,63 @@
+{
+  "checked_at_utc": "2026-09-13T05:07:19.032618+00:00",
+  "input_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/tabicl_pathway_inputs_20260913/sources/encori_lnc.txt.gz": "d8c8c9e1e5c2c5b6c448188ce1717e2c907d1ef0a3da74608d5204e5d5daa218",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/tabicl_pathway_inputs_20260913/rna_identity.tsv": "5f08aff4f417cc6f6f3efbf32c87aba6237721bc8dc5304caf45149db236a3ca",
+    "/data1/licheng/incrd-hg/incrd-run/2.construct_network/LncExp.csv": "6d5275d2fcff8bbc2242edd7d5209117fcde74ece8497e319c7e8994d5c66ff0",
+    "/data1/licheng/incrd-hg/incrd-run/2.construct_network/MiExp.csv": "9f49c9bdf3476c84d59de0f76a4bb8a2fb686d3d762bbb669474944e05e7d566"
+  },
+  "support_coverage": [
+    {
+      "min_interactions": 1,
+      "min_experiments": 1,
+      "covered_project_RNAs": 858,
+      "RNA_gene_pairs": 43102,
+      "source_rows": 78012,
+      "coverage_fraction": 0.649016641452345,
+      "incomplete_below_retrieval_threshold_for": [
+        "NEAT1",
+        "MALAT1"
+      ]
+    },
+    {
+      "min_interactions": 2,
+      "min_experiments": 2,
+      "covered_project_RNAs": 163,
+      "RNA_gene_pairs": 7651,
+      "source_rows": 41115,
+      "coverage_fraction": 0.12329803328290469,
+      "incomplete_below_retrieval_threshold_for": [
+        "MALAT1"
+      ]
+    },
+    {
+      "min_interactions": 3,
+      "min_experiments": 3,
+      "covered_project_RNAs": 64,
+      "RNA_gene_pairs": 2886,
+      "source_rows": 26644,
+      "coverage_fraction": 0.048411497730711045,
+      "incomplete_below_retrieval_threshold_for": []
+    }
+  ],
+  "filter": "Match frozen project stable IDs, source geneType=lncRNA, pairGeneType=protein_coding, target ENSG; node-index-specific deduplication. Both support columns must meet cutoff.",
+  "cells": {
+    "LncExp.csv": {
+      "cell_count": 938,
+      "unique_cells": 938,
+      "RNA_columns": 1322
+    },
+    "MiExp.csv": {
+      "cell_count": 938,
+      "unique_cells": 938,
+      "RNA_columns": 605
+    }
+  },
+  "same_cell_set": true,
+  "same_cell_order": false,
+  "ACH_file": "ACH938.txt",
+  "labels_read": false,
+  "model_run": false,
+  "frozen_inputs_modified": false,
+  "interpretation": "Lower-support counts are bounds from existing completed responses. Binding evidence does not prove regulatory direction. This is a coverage audit, not evidence that reducing the threshold improves prediction."
+}

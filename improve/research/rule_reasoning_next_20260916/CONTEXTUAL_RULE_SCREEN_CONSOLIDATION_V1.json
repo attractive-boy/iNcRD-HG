@@ -1,0 +1,176 @@
+{
+  "created_at_utc": "2026-09-16T00:13:28.030487+00:00",
+  "consolidation_source_sha256": "1d28eab1dc48150f5d875270d139661392c26e9e6ae37d72346c8e24ca33f3d3",
+  "family": "contextual_rule",
+  "stage": "screen",
+  "protocol_sha256": "0bdec8a6fec47daad8bb1d5525515b1479dff5d9c34cefce71f4e852ce7ea337",
+  "assessment_sha256": "1ad77fb5c2d80ad8ba4c241fa14c7b2ae1cb28eee6516b57cdcac9930560e7d2",
+  "all_stored_metrics_recomputed": true,
+  "source_assessment_unchanged": true,
+  "metrics": {
+    "MiDrug": {
+      "full": {
+        "mean": {
+          "auc": 5.008872860490232e-05,
+          "ap": 0.00012629045235079683
+        },
+        "minimum": {
+          "auc": 5.008872860490232e-05,
+          "ap": 0.00012629045235079683
+        },
+        "positive_count": {
+          "auc": 1,
+          "ap": 1
+        },
+        "metrics": {
+          "auc": 0.9627757265250825,
+          "ap": 0.9279854883973677
+        }
+      },
+      "global_rules": {
+        "mean": {
+          "auc": 5.6051672486456816e-05,
+          "ap": 0.00013111843102853182
+        },
+        "minimum": {
+          "auc": 5.6051672486456816e-05,
+          "ap": 0.00013111843102853182
+        },
+        "positive_count": {
+          "auc": 1,
+          "ap": 1
+        },
+        "metrics": {
+          "auc": 0.962781689468964,
+          "ap": 0.9279903163760455
+        }
+      }
+    },
+    "LncDrug": {
+      "full": {
+        "mean": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "minimum": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "positive_count": {
+          "auc": 0,
+          "ap": 0
+        },
+        "metrics": {
+          "auc": 0.9942543521138839,
+          "ap": 0.988187475938475
+        }
+      },
+      "global_rules": {
+        "mean": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "minimum": {
+          "auc": 0.0,
+          "ap": 0.0
+        },
+        "positive_count": {
+          "auc": 0,
+          "ap": 0
+        },
+        "metrics": {
+          "auc": 0.9942543521138839,
+          "ap": 0.988187475938475
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "MiDrug": {
+      "global_rules": {
+        "auc": -5.962943881554494e-06,
+        "ap": -4.82797867773499e-06
+      },
+      "offset_composed": {
+        "auc": 5.008872860490232e-05,
+        "ap": 0.00012629045235079683
+      }
+    },
+    "LncDrug": {
+      "global_rules": {
+        "auc": 0.0,
+        "ap": 0.0
+      },
+      "offset_composed": {
+        "auc": 0.0,
+        "ap": 0.0
+      }
+    }
+  },
+  "selected_learning_rates": {
+    "full": 0.001,
+    "global_rules": 0.003
+  },
+  "new_neural_fits": 4,
+  "adopted_neural_fits": 0,
+  "identity_scoring_records": 4,
+  "adopted_identity_records": 0,
+  "performance_gate": true,
+  "mechanism_gate": false,
+  "offset_gate": true,
+  "declared_gate": false,
+  "records": [
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_contextual_rule_v1_20260916/runs/LncDrug/full/lr0.001/s666/result.json",
+      "sha256": "703ba68a2bf4c1f0a7e999316a25a320348f932b8dda77a7a8ffcc9b94409dc6",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_contextual_rule_v1_20260916/runs/LncDrug/full/lr0.003/s666/result.json",
+      "sha256": "749f76cf6cf2b35a5ad2af38df278bd22a4cff52373dc1770cf7aab6f345599e",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_contextual_rule_v1_20260916/runs/LncDrug/global_rules/lr0.001/s666/result.json",
+      "sha256": "cc86571922ee272e7743b0238925766a1de38ec95888831b1e7bbed4531f5a4f",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_contextual_rule_v1_20260916/runs/LncDrug/global_rules/lr0.003/s666/result.json",
+      "sha256": "3d6df0ebcfbdf1357597acdb2194b85c48ee661dc881a7c521a1e5ebe938f62f",
+      "trained_neural_model": false,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_contextual_rule_v1_20260916/runs/MiDrug/full/lr0.001/s666/result.json",
+      "sha256": "e38b7786b290f22c43345ae589413fbc5aef61f426a164bd292c77f33e43926a",
+      "trained_neural_model": true,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_contextual_rule_v1_20260916/runs/MiDrug/full/lr0.003/s666/result.json",
+      "sha256": "f8af04ddc3c940c4e034687a206248b9336e61f36e0f8ca1acff40c61321bd8e",
+      "trained_neural_model": true,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_contextual_rule_v1_20260916/runs/MiDrug/global_rules/lr0.001/s666/result.json",
+      "sha256": "48e7936e09aaea85cdc2675782b89cb6b0616c1204753f5ada070547cd477575",
+      "trained_neural_model": true,
+      "adopted": false
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_priority_contextual_rule_v1_20260916/runs/MiDrug/global_rules/lr0.003/s666/result.json",
+      "sha256": "9b731ee58498760a1f414a73c2ed14bf33120ae50f3ea529cf2865133ac187dd",
+      "trained_neural_model": true,
+      "adopted": false
+    }
+  ],
+  "next_stage_eligible": false,
+  "confirmed_final_innovations": 0,
+  "existing_default_replaced": false,
+  "sha256": "fa6fda428421fff9b08f0d3025ca936ce6ea1b6375a7c9f46649c57c2d95195d"
+}

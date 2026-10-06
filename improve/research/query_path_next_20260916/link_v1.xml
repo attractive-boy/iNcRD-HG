@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/W0zgc2yjt0YIN1lffHe+9giTP7k</id>
+  <title>arXiv Query: search_query=ti:"link prediction" AND submittedDate:"202501010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T11:59:35Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22link+prediction%22+AND+submittedDate:%22202501010000+TO+202609162359%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>125</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.11347v1</id>
+    <title>Reification as a Transferable Vocabulary: Zero-Shot Link Prediction with Vanilla GNNs</title>
+    <updated>2026-09-10T10:26:09Z</updated>
+    <link href="https://arxiv.org/abs/2609.11347v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.11347v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graph foundation models such as ULTRA achieve zero-shot link prediction on unseen graphs through dedicated architectures that hard-code a transfer mechanism. In this work we move that mechanism out of the architecture and into the representation, by \emph{reifying} the input graph: every fact becomes a node, connected to its subject, object, and relation type through a fixed vocabulary of six meta-relations, with relation types as anonymous shared nodes rather than model parameters. On this representation, five textbook GNNs (GAT, GINE with sum and with mean+max aggregation, GraphSAGE, R-GCN), each trained on a single knowledge graph of 4,245 triples for 30 minutes on one NVIDIA A100, transfer zero-shot to 40 inductive link-prediction benchmarks. The best of them, an off-the-shelf GAT, matches ULTRA, a dedicated foundation model pretrained on three graphs, across ULTRA's own evaluation suite. The same fixed vocabulary extends to relational databases, a row becoming an entity and a foreign-key column a relation type; a preliminary probe on two unseen databases, with no cell values, schema text or in-context labels, shows a model of this family pretrained on three knowledge graphs ranking foreign-key targets far above random-initialization and degree controls. We release the code, the checkpoints, and the evaluation pipeline for all 40 benchmarks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T10:26:09Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Camille Pradel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.09658v1</id>
+    <title>Link prediction in complex networks via fusing node centrality and local similarity indices</title>
+    <updated>2026-09-09T03:15:51Z</updated>
+    <link href="https://arxiv.org/abs/2609.09658v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.09658v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Local similarity indices are widely used in link prediction on complex networks owing to their low computational cost; however, in sparse networks they assign a zero score to every node pair lacking common neighbors, which severely limits their predictive power. A natural remedy is to fuse node centrality indices with local similarity indices: the former provide global importance for the node pair, while the latter capture fine-grained local topology, and the two can be combined into complementary scores within a unified framework. This paper uses PageRank and DomiRank as two representative centrality measures and constructs a centrality--local-similarity fusion framework. The PageRank-based fusion proposed by Charikhi is first generalized to seven classical local similarity indices, and the universality of its improvement is systematically verified on nine real-world network datasets. Furthermore, the DomiRank centrality is introduced to build the DR-MD series of fused indices under a unified weighting coefficient, which overcomes the drawback that the PageRank-based fusion requires index-by-index weight tuning. Results of five-fold cross-validation together with Wilcoxon signed-rank tests show that, under the unified experimental protocol, all DR-MD indices consistently outperform the corresponding local baselines and their PR-MD counterparts on all nine datasets ($p=0.002$), and that the improvements remain robust against perturbations of $σ$ and the weighting coefficients within the near-critical parameter plateau; in particular, DR-RA achieves an average AUC of 0.7084, surpassing global methods such as Katz and RWR as well as several advanced similarity indices. The framework is inherently extensible, and its fusion paradigm can be straightforwardly generalized to couple other node centrality indices with local similarity indices.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T03:15:51Z</published>
+    <arxiv:comment>link prediction; complex networks; node centrality; local similarity; PageRank; DomiRank</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Yingying Zhang</name>
+    </author>
+    <author>
+      <name>Chengye Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.02638v1</id>
+    <title>Oracle, will I ever learn? A study of prediction convergence and complementarity across link prediction models</title>
+    <updated>2026-09-02T14:14:36Z</updated>
+    <link href="https://arxiv.org/abs/2609.02638v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.02638v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs have become an important source of structured knowledge for Web applications, including search, question answering, and recommender systems. In these applications, link prediction can serve either as a prediction task itself or as a means to enrich incomplete knowledge graphs for downstream tasks. Interestingly, different link prediction models, or even different training runs of the same model, can produce substantially different predictions for the same query. This suggests a variability in the capture of the underlying knowledge by models, thus raising a fundamental question: to what extent do different models capture complementary knowledge, and how much of this knowledge could be recovered by combining them? We propose to measure model complementarity through the performance of an oracle that, for each query, selects the best prediction among a considered set of models, hence providing an upper bound on the performance achievable through model combination. Across several architectures and benchmarks, we find a substantial gap between individual models and their oracle, revealing that different models capture complementary knowledge. Yet, this complementarity rapidly saturates as more models are added, leaving a persistent subset of queries unsolved even by a large number of models. These findings reveal both the potential of model complementarity and a fundamental limit to what current link prediction models can collectively recover; thereby highlighting the need for further research to build robust Web applications.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-02T14:14:36Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Guillaume Méroué</name>
+    </author>
+    <author>
+      <name>Fabien Gandon</name>
+    </author>
+    <author>
+      <name>Pierre Monnin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.22981v1</id>
+    <title>Hierarchy-Aware Semantic Losses for Knowledge Graph Link Prediction</title>
+    <updated>2026-08-24T08:40:50Z</updated>
+    <link href="https://arxiv.org/abs/2608.22981v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.22981v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs are often accompanied by ontological class hierarchies that encode valuable semantic information, yet many link prediction methods either ignore such hierarchies or incorporate them indirectly through additional graph edges. Recent work introduced hierarchy-aware graph neural networks (GNNs), which use semantic losses derived from box embeddings to encourage satisfaction of subclass relationships during GNN-based representation learning. While this approach has shown promise for biological regression tasks, its effectiveness for knowledge graph link prediction has not been investigated.
+  In this paper we evaluate hierarchy-aware semantic losses on link prediction across three benchmark datasets: AIFB, CoDEx, and BioKG. We combine graph neural network encoders with box-embedding-based semantic losses that encourage learned representations to better satisfy ontology-derived class hierarchies, and compare this approach to both standard link prediction models and models incorporating subclass relations as graph edges. Across all datasets, hierarchy-aware semantic losses significantly improve mean reciprocal rank (MRR) and consistently outperform models that incorporate hierarchy information through additional subclass edges. Relative to the baseline GNN models, MRR improved by 7.6%, 2.4%, and 15.5% on AIFB, CoDEx, and BioKG, respectively. Furthermore, semantic losses consistently outperform the alternative of augmenting the graph with subclass edges.
+  These results are consistent with ontology-derived class hierarchies providing complementary information to graph structure, and suggest that encouraging hierarchical consistency through semantic losses is an effective and comparatively parameter-efficient mechanism for improving knowledge graph link prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-24T08:40:50Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Filip Kronström</name>
+    </author>
+    <author>
+      <name>Ross D. King</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.22727v1</id>
+    <title>HAWKEYE: Seeing One Layer Deeper -- A Cohesion-Aware Structural Channel for Temporal Link Prediction</title>
+    <updated>2026-08-24T02:31:24Z</updated>
+    <link href="https://arxiv.org/abs/2608.22727v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.22727v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>State-of-the-art temporal-link-prediction (TLP) models are, in essence, multi-channel information aggregators: they combine an interaction-history channel, a time-encoding channel, and a structure channel. The first two have been refined relentlessly; the structure channel remains a crude afterthought -- DyGFormer encodes it as a 1--2-bit neighbour-cooccurrence count. We begin with a measurement: on sparse temporal graphs the classical 1-hop common-neighbour signal is near-random (discriminative AUC $\approx 0.50$), because two nodes almost never share a direct neighbour; the genuinely discriminative signal lies one hop deeper -- the 2-hop cohesive bridge, whose discAUC reaches 0.73--0.98, on both bipartite and non-bipartite graphs. Motivated by this, we propose HAWKEYE, a cohesion-aware structural channel that incrementally maintains the classical k-family of cohesiveness indicators (degree $\to$ k-core $\to$ k-truss) and forms 2-hop cohesive-bridge features. HAWKEYE is a drop-in replacement for a temporal-graph model's native structure channel, with no change to the backbone. Swapping HAWKEYE into DyGFormer improves test AP/MRR over the cooccurrence channel by +0.6 to +10.8 points across six multi-seed-validated datasets (uci, enron, USLegis, CanParl, reddit, mooc). On the bipartite recommendation benchmark tgbl-subreddit, a 3-seed single-pass struct-only ablation shows HAWKEYE nearly doubling the baseline test MRR (0.103$\pm$0.003 $\to$ 0.204$\pm$0.005, +10.1 points across all three seeds); the streaming pipeline scales to the 67M-edge tgbl-flight in five minutes per pass. We further characterise when it helps: the gain tracks a graph's training-free 2-hop discAUC and vanishes on degenerate or saturated graphs -- a predictable boundary. All code, data, and figure-generation scripts are released.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-24T02:31:24Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Jiacheng Ding</name>
+    </author>
+    <author>
+      <name>Xiaofei Zhang</name>
+    </author>
+    <arxiv:doi>10.1145/3799682.3841168</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3799682.3841168" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.09899v1</id>
+    <title>Fairness in Link Prediction Beyond Demographic Parity: A Reproducibility Study</title>
+    <updated>2026-08-10T17:47:19Z</updated>
+    <link href="https://arxiv.org/abs/2608.09899v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.09899v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In fair ranked link prediction, demographic parity ($Δ_\mathrm{DP}$) is a common fairness metric. Yet, Mattos et al. (2025) argue that it fails to detect exposure bias because it ignores where links appear in the ranking. In this study, we reproduce this claim by showing that $Δ_\mathrm{DP}$ can indicate aggregate parity even when some subgroup-pair links are systematically ranked lower than others. The proposed rank-aware Normalized Discounted KL-divergence (NDKL), however, does detect such disparities. We also reproduce the effectiveness of MORAL, a post-processing method that improves exposure-based fairness while maintaining competitive utility. Beyond reproduction, we assess robustness using synthetic homophily settings, categorical sensitive attributes, and additional fairness and utility metrics, including subgroup-pair-adapted Attention-Weighted Rank Fairness (AWRF). Overall, our results show that exposure-based metrics uncover biases hidden by $Δ_\mathrm{DP}$ and that MORAL reduces these biases with minimal utility loss across diverse settings and datasets. We release a corrected, reproducible implementation at https://github.com/Floris93100/reproducing-MORAL.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-10T17:47:19Z</published>
+    <arxiv:comment>Published in Transactions on Machine Learning Research (05/2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Transactions on Machine Learning Research, 2026</arxiv:journal_ref>
+    <author>
+      <name>Valentijn Oldenburg</name>
+    </author>
+    <author>
+      <name>Floris de Kam</name>
+    </author>
+    <author>
+      <name>Stef de Wildt</name>
+    </author>
+    <author>
+      <name>Jarno Nilson Balk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07029v1</id>
+    <title>Hyperbolic Graph Embedders for Link Prediction and Topology Reconstruction</title>
+    <updated>2026-08-07T09:42:26Z</updated>
+    <link href="https://arxiv.org/abs/2608.07029v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07029v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hyperbolic embeddings provide compact geometric representations of complex networks in hyperbolic spaces, but systematic comparisons of methods developed in machine learning, network science, and algorithmics remain rare. We benchmark 13 unsupervised hyperbolic graph embedders under a unified protocol for link prediction and topology reconstruction on synthetic and empirical networks. The protocol captures both missing-link recovery and the preservation of local and global network structure. Maximum-likelihood and representation-learning-based approaches, including hybrid variants, achieve the strongest overall performance, although no method dominates across all tasks and structural regimes. Performance is more strongly associated with embedding paradigm than with disciplinary origin. We identify the network regimes in which different paradigms succeed or fail and provide practical guidance for method selection in downstream applications.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T09:42:26Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Robert Jankowski</name>
+    </author>
+    <author>
+      <name>Maksim Kitsak</name>
+    </author>
+    <author>
+      <name>Dorota Celińska-Kopczyńska</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.05016v1</id>
+    <title>Link prediction on multi-relational graphs from an influence propagation perspective</title>
+    <updated>2026-08-05T16:21:46Z</updated>
+    <link href="https://arxiv.org/abs/2608.05016v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.05016v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Predicting the existence and type of links (edges) between nodes in a multi-relational graph is key for applications from social interaction prediction to knowledge relationship identification. Enhancing local features with relevant global information is crucial for accurate link prediction, yet it remains challenging. We address this by modeling the relationship between node pairs as node influence. That is, whether the node influence can be propagated and what type of influence is propagated indicates where and what type the edge is, which will be the most relevant local and global information to predict the edges. To this end, we extend the Susceptible-Infectious-Recovered (SIR) epidemic model to capture the influence propagation of nodes on a large scale through sub-graph structures. Subsequently, these sub-graphs are compressed using virtual edges, thereby substantially reducing the computation associated with utilizing the global graph structure. Finally, we propose the Influential Graph Neural Predictor, referred to as IGNP, a link prediction framework guided by influence propagation. Extensive experiments demonstrate the superiority of the proposed method, which outperforms strong baselines by a large margin on the widely used and real-world datasets.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-05T16:21:46Z</published>
+    <arxiv:comment>Accepted for publication in Pattern Recognition</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <arxiv:journal_ref>Pattern Recognition 180 (2026) 114039</arxiv:journal_ref>
+    <author>
+      <name>Zidu Yin</name>
+    </author>
+    <author>
+      <name>Yuankai Qi</name>
+    </author>
+    <author>
+      <name>Dong Gong</name>
+    </author>
+    <author>
+      <name>Ehsan Abbasnejad</name>
+    </author>
+    <author>
+      <name>Kun Yue</name>
+    </author>
+    <author>
+      <name>Javen Qinfeng Shi</name>
+    </author>
+    <arxiv:doi>10.1016/j.patcog.2026.114039</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.patcog.2026.114039" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.29115v1</id>
+    <title>Multi-Granularity Position Embedding of Graphs via Granular-Ball for Link Prediction</title>
+    <updated>2026-07-31T07:44:11Z</updated>
+    <link href="https://arxiv.org/abs/2607.29115v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.29115v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction aims to identify potential or future connections within a given graph structure. Position information is essential for link prediction, as it distinguishes homogeneous nodes through their relative relationships, facilitating the accurate capture of structural patterns and implicit connections. Previous studies derive node positional information as distances to single-granularity landmarks, defined as the centers of homophilic regions, while neglecting the multi-granularity nature of homophilic structures and their hierarchical interrelations. We propose the Multi-Granularity Position Embedding of Graphs via Granular-Ball for Link Prediction (MGLP) method to obtain multi-granularity position embedding of graphs. Specifically, MGLP introduces an Adaptive Granular-Ball Graph Refinement mechanism to adaptively refine the graph into homophilic subdomains with optimal levels of granularity. The central nodes within subdomains are treated as landmarks, which form a Hierarchical Central Graph. Moreover, a novel Multi-granularity Hierarchical Distance encoding mechanism is proposed to capture both the homophilic structures within a graph and their hierarchical correlations, improving the discriminative power of nodes. Experimental results demonstrate that the multi-granularity position embedding generated by our method exhibits excellent performance and strong competitiveness compared to baseline algorithms for link prediction. Our codes are available in https://anonymous.4open.science/r/MGLP-D3C5/.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-31T07:44:11Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Sen Zhao</name>
+    </author>
+    <author>
+      <name>Cheng Liu</name>
+    </author>
+    <author>
+      <name>Shuyin Xia</name>
+    </author>
+    <author>
+      <name>Zhiyuan Liu</name>
+    </author>
+    <author>
+      <name>Yi Liu</name>
+    </author>
+    <author>
+      <name>Yi Wang</name>
+    </author>
+    <author>
+      <name>Wei Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.22167v1</id>
+    <title>Early-Exit Graph Neural Networks for Link Prediction</title>
+    <updated>2026-06-20T17:56:36Z</updated>
+    <link href="https://arxiv.org/abs/2606.22167v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.22167v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph Neural Networks are great for link prediction in various network-like structures; however, the question of their speed/quality tradeoff has been barely studied. While in practice the time it takes to do inference matters little for small benchmarks, the latency does limit applicability in large-scale domains. In this work, we explore early-exiting strategies that can be applied to Graph Neural Networks to solve the problem of link-prediction faster. We use no auxiliary losses to enforce early exiting, allowing it to emerge as an implicit property of the architecture. We show that our method enables early exiting in several setups, moving the Pareto frontier on the HeaRT benchmark for GCN and SAS-GNN backbones. Our findings show that inference speed of GNNs on many link-prediction problems can be improved, while losing little, or even winning in terms of prediction quality. The code is available in our repository: https://github.com/knyazer/link_prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-20T17:56:36Z</published>
+    <arxiv:comment>Accepted at LoG@Pisa 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Roman Knyazhitskiy</name>
+    </author>
+    <author>
+      <name>Andrea Giuseppe Di Francesco</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.26132v1</id>
+    <title>Code evolution for link prediction in complex networks</title>
+    <updated>2026-06-18T05:46:19Z</updated>
+    <link href="https://arxiv.org/abs/2606.26132v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.26132v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The problem of predicting links in complex networks appears in different disciplines and has led to a variety of ingenious human-designed methods. We use this rich program space to explore the performance and behavior of automated code-evolution systems tasked to obtain machine-designed methods for link prediction. Despite being trained on limited data, algorithms evolved through code evolution outperform human-designed methods (with an average AUC score of 0.915 vs. 0.783, computed over 580 networks) and show improved computational efficiency, allowing them to be applied to networks with millions of links. The discovered methods follow approaches that have been employed in human-designed methods, but contain key innovations in the selection and combination of node- and link-features. This illustrates the role modern large language models and genetic algorithms can play in algorithmic innovation and scientific discovery more generally.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T05:46:19Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Alexey Vlaskin</name>
+    </author>
+    <author>
+      <name>Eduardo G. Altmann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.19775v1</id>
+    <title>Rethinking Sampling Strategy in Link Prediction</title>
+    <updated>2026-06-18T04:19:22Z</updated>
+    <link href="https://arxiv.org/abs/2606.19775v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.19775v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many real-world networks are incomplete, making link prediction a fundamental challenge in network science. To train parameters and evaluate algorithms, observed links are usually divided into three subsets, namely training, validation, and probe sets. This division implicitly involves two sampling processes: first-stage sampling yields the probe set and second-stage sampling obtains the variation set. To date, our understanding of how these two sampling processes affect algorithm performance remains quite limited. To address this issue, we propose a sampling scheme called $β$-sampling, where the sampling probability of a link is proportional to the product of the degrees of its two endpoints raised to the power of $β$. Experiments on 45 real-world networks reveal that the structural characteristics of missing links, as simulated via varying probe sets, substantially impact prediction accuracy. When missing links tend to connect high-degree nodes, such links can be predicted accurately with ease. Furthermore, even with a fixed probe set, second-stage sampling still exerts a significant influence on prediction accuracy. Notably, the optimal second-stage sampling strategy differs from \textit{random sampling} (which randomly selects links to form the validation set) and \textit{consistent sampling} (which guarantees that links in the validation and probe sets share identical structural characteristics).</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.OT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T04:19:22Z</published>
+    <arxiv:comment>19 pages, 5 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Yilin Bi</name>
+    </author>
+    <author>
+      <name>Zhenyu Deng</name>
+    </author>
+    <author>
+      <name>Xinshan Jiao</name>
+    </author>
+    <author>
+      <name>Tao Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.03365v1</id>
+    <title>Link Prediction or Perdition: the Seeds of Instability in Knowledge Graph Embeddings</title>
+    <updated>2026-06-02T09:13:50Z</updated>
+    <link href="https://arxiv.org/abs/2606.03365v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.03365v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Embedding models (KGEMs) constitute the main link prediction approach to complete knowledge graphs. Standard evaluation protocols emphasize rank-based metrics such as MRR or Hits@$K$, but usually overlook the influence of random seeds on result stability. Moreover, these metrics conceal potential instabilities in individual predictions and in the organization of embedding spaces. In this work, we conduct a systematic stability analysis of multiple KGEMs across several datasets. We find that high-performance models actually produce divergent predictions at the triple level and highly variable embedding spaces. By isolating stochastic factors (i.e., initialization, triple ordering, negative sampling, dropout, hardware), we show that each independently induces instability of comparable magnitude. Furthermore, for a given model, hyperparameter configurations with better MRR are not guaranteed to be more stable. Moreover, voting, albeit a known remediation mechanism, only provides a limited enhancement of stability. These findings highlight critical limitations of current benchmarking protocols, and raise concerns about the reliability of KGEMs for knowledge graph completion.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-02T09:13:50Z</published>
+    <arxiv:comment>Paper accepted at ESWC 2026 (https://2026.eswc-conferences.org)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Guillaume Méroué</name>
+    </author>
+    <author>
+      <name>Fabien Gandon</name>
+    </author>
+    <author>
+      <name>Pierre Monnin</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-032-25156-5_11</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-032-25156-5_11" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.26290v3</id>
+    <title>Dynamic Link Prediction with Temporally Enhanced Signed Graph Neural Networks</title>
+    <updated>2026-09-12T06:12:08Z</updated>
+    <link href="https://arxiv.org/abs/2605.26290v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.26290v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Temporal signed networks (TSNs) model the time evolution of cooperative and adversarial relationships that arise in applications such as social media analysis, trust and reputation systems, and financial transaction networks. While graph neural networks (GNNs) perform well for static or unsigned link prediction, effective learning in temporal signed graphs remains challenging due to the interaction of signed relations, evolving structure, and balance-theoretic constraints. To address this gap, we propose a \emph{modular} temporal enhancement framework for signed GNNs that integrates historical context into otherwise static architectures. The framework introduces a Historical Context Integration Module (HCIM) that combines learnable recency-aware temporal weighting, LSTM-based embedding trajectory modeling, and multi-head temporal attention to capture both short- and long-term signed interaction dynamics. Historical information is fused with current node representations using either global or node-adaptive weighting, allowing the architecture-agnostic framework to accommodate heterogeneous temporal behaviors. We instantiate the approach on the Self-Explainable Signed Graph Transformer (SE-SGformer), preserving interpretability while extending it with temporal awareness. Experiments on real-world and synthetic TSNs, including Bitcoin OTC, Bitcoin Alpha, Reddit, and small-world network models, demonstrate consistent and statistically significant improvements over the static baseline.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-25T19:28:01Z</published>
+    <arxiv:comment>The simulation results are incorrect and could be misleading to the readers</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Derek Regier</name>
+    </author>
+    <author>
+      <name>Andrew Polyak</name>
+    </author>
+    <author>
+      <name>Aresh Dadlani</name>
+    </author>
+    <author>
+      <name>Khosro Salmani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.22606v2</id>
+    <title>Missing Links in Public Email and Covert Networks: A Comparative Evaluation of Link Prediction, Hyperlink Prediction, and ERGM Estimation</title>
+    <updated>2026-06-04T19:18:23Z</updated>
+    <link href="https://arxiv.org/abs/2605.22606v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.22606v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study missing-link inference in partially observed networks by systematically comparing dyadic link prediction (LP) with hyperlink prediction (HP) and an estimation-based ERGM comparator. LP serves as the primary baseline, using classical heuristics computed on the observed graph. HP extends this framework by scoring candidate higher-order structures (cliques) via lifted dyadic scores and via the CHEbyshev Spectral HyperlInk pREdictor (CHESHIRE). All methods are evaluated under a common masking protocol that removes dyadic evidence induced by held-out hyperlinks to ensure comparability. Across public email and covert-network datasets, LP remains strong for dyadic recovery, while HP -- particularly CHESHIRE -- provides gains when the inferential target is higher-order group structure. ERGMs offer an interpretable dependence-based complement through conditional tie probabilities. The contribution is a comparative, reproducible evaluation clarifying when LP, HP, and ERGM estimation are most appropriate under network missingness.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-21T15:19:32Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Moses Boudourides</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.21916v2</id>
+    <title>A2QTGN: Adaptive Amplitude Quantum-Integrated Temporal Graph Network for Dynamic Link Prediction</title>
+    <updated>2026-07-26T17:26:27Z</updated>
+    <link href="https://arxiv.org/abs/2605.21916v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.21916v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dynamic link prediction is important for modeling evolving interactions in social, communication, financial, and transportation networks. Classical temporal graph models capture changes over time, but they may struggle to represent rapidly evolving node-edge interactions in large dynamic graphs. We propose A2QTGN (Adaptive Amplitude Quantum-Integrated Temporal Graph Network), a hybrid quantum-classical framework that introduces adaptive amplitude encoding as a temporal embedding layer within a Temporal Graph Network. Unlike fixed quantum embeddings, the proposed module maps temporally varying node features into quantum states and selectively refreshes their amplitude representations according to the magnitude of feature change. This allows the framework to preserve stable node information, emphasize meaningful temporal variations, and reduce redundant quantum re-encoding. Across five Temporal Graph Benchmark datasets, A2QTGN achieves test area under the curve (AUC) values of up to 0.9957 and mean reciprocal rank (MRR) values of up to 0.7832, including the highest MRR among the compared baselines on tgbl-review and tgbl-flight. Ablation results further show that the adaptive quantum embedding is central to the model performance: on a 25k-event subset of tgbl-wiki, it improves test accuracy by 13.36 percentage points over always updating and by 22.44 percentage points over using no updates. The trained model is also evaluated using noisy simulations based on an IBM quantum device, followed by a smaller real-device experiment. The results show that adaptive quantum embeddings can provide effective temporal representations for dynamic link prediction while remaining executable under current quantum hardware constraints.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-21T02:38:29Z</published>
+    <arxiv:comment>9 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Nouhaila Innan</name>
+    </author>
+    <author>
+      <name>M. Murali Karthick</name>
+    </author>
+    <author>
+      <name>Simeon Kandan Sonar</name>
+    </author>
+    <author>
+      <name>Vivek Chaturvedi</name>
+    </author>
+    <author>
+      <name>Muhammad Shafique</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.20257v1</id>
+    <title>Instance Discrimination for Link Prediction</title>
+    <updated>2026-05-18T13:27:41Z</updated>
+    <link href="https://arxiv.org/abs/2605.20257v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.20257v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, instance discrimination models have emerged as a major solution for self-supervised learning. Having already demonstrated its effectiveness in the image domain, instance discrimination learning is now proving equally convincing in the graph domain, in particular for node classification. However, fewer contributions have tackled the link prediction task. In this contribution, we propose to adapt existing methods to this context. We first provide a rigorous evaluation of existing self-supervised models in the field of link prediction, showing that the main performance depends on the augmentation process (like in computer vision). We then propose a new structural augmentation based on the community structure that is relevant for link prediction. Our main contribution introduces two new models, L-GRACE and L-BGRL, based on link representations instead of node representations, which improve the performance of the existing methods, especially on unattributed graphs, and we show that they perform on par with the state of the art, both in supervised and self-supervised contexts.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-18T13:27:41Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Valentin Cuzin-Rambaud</name>
+      <arxiv:affiliation>SyCoSMA, DM2L, LIRIS, UCBL</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mathieu Lefort</name>
+      <arxiv:affiliation>LIRIS, SyCoSMA, IRISA, MALT, UR</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rémy Cazabet</name>
+      <arxiv:affiliation>DM2L, LIRIS, UCBL, IXXI</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.18211v1</id>
+    <title>Leveraging Graph Structure in Seq2Seq Models for Knowledge Graph Link Prediction</title>
+    <updated>2026-05-18T10:56:14Z</updated>
+    <link href="https://arxiv.org/abs/2605.18211v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.18211v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Graph-Augmented Sequence-to-Sequence (GA-S2S), a novel framework that integrates a T5-small encoder-decoder with a Relational Graph Attention Network (RGAT) to improve link prediction in knowledge graphs. While existing Seq2Seq models rely solely on surface-level textual descriptions of entities and relations and at best, flatten the neighborhoods of a query entity into a single linear sequence, thereby discarding the inherent graph structure, GA-S2S jointly encodes both textual features and the full $k$-hop subgraph topology surrounding the query entity. By integrating raw encoder outputs with RGAT's relation-aware embeddings, our model captures and leverages richer multi-hop relational patterns and textual information. Our preliminary experiments on the CoDEx dataset demonstrate that GA-S2S outperforms competitive Seq2Seq-based baseline models, achieving up to a 19\% relative gain in link prediction accuracy.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-18T10:56:14Z</published>
+    <arxiv:comment>9 pages, 1 figure, 2 tables. Preprint of a paper accepted at the 5th Workshop on LLM-Integrated Knowledge Graph Generation from Text (TEXT2KG), co-located with ESWC 2026, May 10--14, 2026, Dubrovnik, Croatia</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Luu Huu Phuc</name>
+    </author>
+    <author>
+      <name>Ratan Bahadur Thapa</name>
+    </author>
+    <author>
+      <name>Mojtaba Nayyeri</name>
+    </author>
+    <author>
+      <name>Jingcheng Wu</name>
+    </author>
+    <author>
+      <name>Evgeny Kharlamov</name>
+    </author>
+    <author>
+      <name>Steffen Staab</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.09408v1</id>
+    <title>GravityGraphSAGE: Link Prediction in Directed Attributed Graphs</title>
+    <updated>2026-05-10T08:19:20Z</updated>
+    <link href="https://arxiv.org/abs/2605.09408v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.09408v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction (inferring missing or future connections between nodes in a graph) is a fundamental problem in network science with widespread applications in, e.g., biological systems, recommender systems, finance and cybersecurity. The ability to accurately predict links has significant real-world applications, such as detecting fraudulent financial transactions or identifying drug-target interactions in biomedicine. Despite a rich literature, link prediction is still challenging, especially for graphs enriched with information on edges (direction) and nodes (attributes). In fact, research on link prediction, especially the one based on Graph Deep Learning (GDL), has mostly focused on undirected graphs, without fully leveraging node attributes. Here, we fill this gap by proposing Gravity-GraphSAGE (GG-SAGE), a modified version of GraphSAGE, a GDL model for node embeddings, composed of a gravity-inspired decoder. This implementation is the first example in the literature of a GraphSAGE backbone adopted for directed link prediction. Using the benchmark datasets Cora, Citeseer, PubMed and 16 real-world graphs from the online Netzschleuder repository, we show that our proposed model outperforms state-of-the-art GDL link prediction techniques. Using further experimental evidence, we relate the quality of the output of our model with various characteristics of the graph, suggesting that our framework scales well when applied to data of increasing complexity.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-10T08:19:20Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Riccardo Porcedda</name>
+    </author>
+    <author>
+      <name>Francesca Chiaromonte</name>
+    </author>
+    <author>
+      <name>Fabrizio Lillo</name>
+    </author>
+    <author>
+      <name>Andrea Vandin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.16198v1</id>
+    <title>A Survey on GNN-based Link Prediction: Techniques, Applications, and Challenges</title>
+    <updated>2026-04-29T01:34:00Z</updated>
+    <link href="https://arxiv.org/abs/2607.16198v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.16198v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph Neural Networks (GNNs) have emerged as the leading paradigm for link prediction, enabling the inference of missing connections and the anticipation of potential future links. However, existing reviews lack systematic exploration specifically targeting underlying GNN architectures and diverse graph structures. To address this critical gap, this paper provides a comprehensive review of GNN-based link prediction from a novel and dedicated GNN perspective. We propose an innovative taxonomy that categorizes recent advancements based on techniques and applications. From a technique perspective, we focus on key GNN encoder architectures, including GCN-based, GAE-based, GAT-based, and GFormer-based methods, discussing their strengths and limitations. From an application perspective, we highlight prominent use cases of link prediction in knowledge graphs and recommendation systems, demonstrating their real-world impact. In addition, we examine the current challenges and discuss promising future directions.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-29T01:34:00Z</published>
+    <arxiv:comment>Submmit to WIREs: Data Mining and Knowledge Discovery. This version of the article has been accepted, after peer review but is not the version of record. The final version will be available at: https://doi.org/10.1002/widm.70093. Paper list at Github: https://github.com/sunxiaobei/awesome-gnn-based-link-prediction</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Chengcheng Sun</name>
+    </author>
+    <author>
+      <name>Yajie Song</name>
+    </author>
+    <author>
+      <name>Cheng Zhai</name>
+    </author>
+    <author>
+      <name>Jiayun Tian</name>
+    </author>
+    <author>
+      <name>Jia Yang</name>
+    </author>
+    <author>
+      <name>Xiaobin Rui</name>
+    </author>
+    <author>
+      <name>Jian Zhang</name>
+    </author>
+    <author>
+      <name>Zhixiao Wang</name>
+    </author>
+    <author>
+      <name>Philip S. Yu</name>
+    </author>
+    <arxiv:doi>10.1002/widm.70093</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/widm.70093" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.25978v1</id>
+    <title>Mini-Batch Class Composition Bias in Link Prediction</title>
+    <updated>2026-04-28T14:03:50Z</updated>
+    <link href="https://arxiv.org/abs/2604.25978v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.25978v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prior work on node classification has shown that Graph Neural Networks (GNNs) can learn representations that transfer across graphs, when underlying graph properties are shared. For a fixed graph, one would then expect GNNs trained for link prediction to learn a representation consistent with that learnt for node classification. We show this intuition does not hold in the general case. Instead, we find popular link prediction models can learn a trivial mini-batch dependent heuristic, enabled by batch-normalisation layers, to solve the edge classification task. When correcting for this, we observe increased alignment of the network representation with node-class relevant features, suggesting the network has learnt a graph representation that better aligns with the underlying graph's properties. Our findings suggest that standard link prediction training may be leading us to overestimate link predictors' ability to learn a generalised representation of a graph that is consistent across tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-28T14:03:50Z</published>
+    <arxiv:comment>Accepted at GCLR 2026: the 5th Workshop on Graphs and more Complex Structures For Learning and Reasoning, colocated with AAAI 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Kieran Maguire</name>
+    </author>
+    <author>
+      <name>Srinandan Dasmahapatra</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.10947v2</id>
+    <title>Multi-Faceted Continual Knowledge Graph Embedding for Semantic-Aware Link Prediction</title>
+    <updated>2026-04-20T06:23:28Z</updated>
+    <link href="https://arxiv.org/abs/2604.10947v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.10947v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continual Knowledge Graph Embedding (CKGE) aims to continually learn embeddings for new knowledge, i.e., entities and relations, while retaining previously acquired knowledge. Most existing CKGE methods mitigate catastrophic forgetting via regularization or replaying old knowledge. They conflate new and old knowledge of an entity within the same embedding space to seek a balance between them. However, entities inherently exhibit multi-faceted semantics that evolve dynamically as their relational contexts change over time. A shared embedding fails to capture and distinguish these temporal semantic variations, degrading lifelong link prediction accuracy across snapshots. To address this, we propose a Multi-Faceted CKGE framework (MF-CKGE) for semantic-aware link prediction. During offline learning, MF-CKGE separates temporal old and new knowledge into distinct embedding spaces to prevent knowledge entanglement and employs semantic decoupling to reduce semantic redundancy, thereby improving space efficiency. During online inference, MF-CKGE adaptively identifies semantically query-relevant entity embeddings by quantifying their semantic importance, reducing interference from query-irrelevant noise. Experiments on eight datasets show that MF-CKGE achieves an average (maximum) improvement of 1.7% (2.7%) and 1.4% (3.8%) in MRR and Hits@10, respectively, over the best baseline. Our source code and datasets are available at: https://anonymous.4open.science/r/MF-CKGE-04E5.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-13T03:41:01Z</published>
+    <arxiv:comment>11 pages, accepted by SIGIR 2026(full paper)</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Jing Qi</name>
+    </author>
+    <author>
+      <name>Yuxiang Wang</name>
+    </author>
+    <author>
+      <name>Zhiyuan Yu</name>
+    </author>
+    <author>
+      <name>Xiaoliang Xu</name>
+    </author>
+    <author>
+      <name>Yuanshi Zheng</name>
+    </author>
+    <author>
+      <name>Tianxing Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.01379v1</id>
+    <title>Can LLMs Predict Academic Collaboration? Topology Heuristics vs. LLM-Based Link Prediction on Real Co-authorship Networks</title>
+    <updated>2026-04-01T20:39:12Z</updated>
+    <link href="https://arxiv.org/abs/2604.01379v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.01379v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Can large language models (LLMs) predict which researchers will collaborate? We study this question through link prediction on real-world co-authorship networks from OpenAlex (9.96M authors, 108.7M edges), evaluating whether LLMs can predict future scientific collaborations using only author profiles, without access to graph structure. Using Qwen2.5-72B-Instruct across three historical eras of AI research, we find that LLMs and topology heuristics capture distinct signals and are strongest in complementary settings. On new-edge prediction under natural class imbalance, the LLM achieves AUROC 0.714--0.789, outperforming Common Neighbors, Jaccard, and Preferential Attachment, with recall up to 92.9\%; under balanced evaluation, the LLM outperforms \emph{all} topology heuristics in every era (AUROC 0.601--0.658 vs.\ best-heuristic 0.525--0.538); on continued edges, the LLM (0.687) is competitive with Adamic-Adar (0.684). Critically, 78.6--82.7\% of new collaborations occur between authors with no common neighbor -- a blind spot where all topology heuristics score zero but the LLM still achieves AUROC 0.652 by reasoning from author metadata alone. A temporal metadata ablation reveals that research concepts are the dominant signal (removing concepts drops AUROC by 0.047--0.084). Providing pre-computed graph features to the LLM \emph{degrades} performance due to anchoring effects, confirming that LLMs and topology methods should operate as separate, complementary channels. A socio-cultural ablation finds that name-inferred ethnicity and institutional country do not predict collaboration beyond topology, reflecting the demographic homogeneity of AI research. A node2vec baseline achieves AUROC comparable to Adamic-Adar, establishing that LLMs access a fundamentally different information channel -- author metadata -- rather than encoding the same structural signal differently.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-01T20:39:12Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Fan Huang</name>
+    </author>
+    <author>
+      <name>Munjung Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.03963v1</id>
+    <title>TFWaveFormer: Temporal-Frequency Collaborative Multi-level Wavelet Transformer for Dynamic Link Prediction</title>
+    <updated>2026-03-04T11:47:57Z</updated>
+    <link href="https://arxiv.org/abs/2603.03963v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.03963v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dynamic link prediction plays a crucial role in diverse applications including social network analysis, communication forecasting, and financial modeling. While recent Transformer-based approaches have demonstrated promising results in temporal graph learning, their performance remains limited when capturing complex multi-scale temporal dynamics. In this paper, we propose TFWaveFormer, a novel Transformer architecture that integrates temporal-frequency analysis with multi-resolution wavelet decomposition to enhance dynamic link prediction. Our framework comprises three key components: (i) a temporal-frequency coordination mechanism that jointly models temporal and spectral representations, (ii) a learnable multi-resolution wavelet decomposition module that adaptively extracts multi-scale temporal patterns through parallel convolutions, replacing traditional iterative wavelet transforms, and (iii) a hybrid Transformer module that effectively fuses local wavelet features with global temporal dependencies. Extensive experiments on benchmark datasets demonstrate that TFWaveFormer achieves state-of-the-art performance, outperforming existing Transformer-based and hybrid models by significant margins across multiple metrics. The superior performance of TFWaveFormer validates the effectiveness of combining temporal-frequency analysis with wavelet decomposition in capturing complex temporal dynamics for dynamic link prediction tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-04T11:47:57Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hantong Feng</name>
+    </author>
+    <author>
+      <name>Yonggang Wu</name>
+    </author>
+    <author>
+      <name>Duxin Chen</name>
+    </author>
+    <author>
+      <name>Wenwu Yu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.03867v1</id>
+    <title>k-hop Fairness: Addressing Disparities in Graph Link Prediction Beyond First-Order Neighborhoods</title>
+    <updated>2026-03-04T09:20:06Z</updated>
+    <link href="https://arxiv.org/abs/2603.03867v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.03867v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction (LP) plays a central role in graph-based applications, particularly in social recommendation. However, real-world graphs often reflect structural biases, most notably homophily, the tendency of nodes with similar attributes to connect. While this property can improve predictive performance, it also risks reinforcing existing social disparities. In response, fairness-aware LP methods have emerged, often seeking to mitigate these effects by promoting inter-group connections, that is, links between nodes with differing sensitive attributes (e.g., gender), following the principle of dyadic fairness. However, dyadic fairness overlooks potential disparities within the sensitive groups themselves. To overcome this issue, we propose $k$-hop fairness, a structural notion of fairness for LP, that assesses disparities conditioned on the distance between nodes in the graph. We formalize this notion through predictive fairness and structural bias metrics, and propose pre- and post-processing mitigation strategies. Experiments across standard LP benchmarks reveal: (1) a strong tendency of models to reproduce structural biases at different $k$-hops; (2) interdependence between structural biases at different hops when rewiring graphs; and (3) that our post-processing method achieves favorable $k$-hop performance-fairness trade-offs compared to existing fair LP baselines.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-04T09:20:06Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lilian Marey</name>
+    </author>
+    <author>
+      <name>Tiphaine Viard</name>
+    </author>
+    <author>
+      <name>Charlotte Laclau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.14239v3</id>
+    <title>A Hybrid TGN-SEAL Model for Dynamic Graph Link Prediction</title>
+    <updated>2026-06-24T15:55:42Z</updated>
+    <link href="https://arxiv.org/abs/2602.14239v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.14239v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Predicting links in sparse, continuously evolving networks is a central challenge in network science. Conventional heuristic methods and deep learning models, including Graph Neural Networks (GNNs), are typically designed for static graphs and thus struggle to capture temporal dependencies. Snapshot-based techniques partially address this issue but often encounter data sparsity and class imbalance, particularly in networks with transient interactions such as telecommunication call detail records (CDRs). Temporal Graph Networks (TGNs) model dynamic graphs by updating node embeddings over time; however, their predictive accuracy under sparse conditions remains limited. In this study, we improve the TGN framework by extracting enclosing subgraphs around candidate links, enabling the model to jointly learn structural and temporal information. Experiments on a sparse CDR, email, message dataset show that our approach increases average precision by at least 2% over standard TGNs, demonstrating the advantages of integrating local topology for robust link prediction in dynamic networks.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-15T17:16:47Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <arxiv:journal_ref>EPJ Data Science 15, 69 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Nafiseh Sadat Sajadi</name>
+    </author>
+    <author>
+      <name>Behnam Bahrak</name>
+    </author>
+    <author>
+      <name>Mahdi Jafari Siavoshani</name>
+    </author>
+    <arxiv:doi>10.1140/epjds/s13688-026-00670-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1140/epjds/s13688-026-00670-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.11802v2</id>
+    <title>Structural Bias Beyond Homophily: A Study of Fairness in Link Prediction</title>
+    <updated>2026-05-29T13:06:09Z</updated>
+    <link href="https://arxiv.org/abs/2602.11802v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.11802v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph link prediction (LP) plays a critical role in socially impactful applications such as job recommendation and friendship formation, making fairness a critical concern in this task. While many fairness-aware methods manipulate graph structures to mitigate prediction disparities, the topological biases inherent to social graphs remain poorly understood and are consistently conflated with homophily alone. In this work, we study the relationship between structural biases and fairness outcomes in LP. To this end, we formalize a taxonomy of topological bias measures and introduce a graph generation method producing a diverse corpus of synthetic graphs with controlled structural properties. Using this corpus, we show empirically that fairness outcomes are strongly correlated with graph topology, and that current fairness-aware methods remain sensitive to structural biases beyond homophily. These findings highlight the need for structurally grounded evaluations in fair graph learning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-12T10:29:44Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lilian Marey</name>
+    </author>
+    <author>
+      <name>Mathilde Perez</name>
+    </author>
+    <author>
+      <name>Tiphaine Viard</name>
+    </author>
+    <author>
+      <name>Charlotte Laclau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.05424v2</id>
+    <title>THOR: Inductive Link Prediction over Hyper-Relational Knowledge Graphs</title>
+    <updated>2026-02-06T01:44:41Z</updated>
+    <link href="https://arxiv.org/abs/2602.05424v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.05424v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs (KGs) have become a key ingredient supporting a variety of applications. Beyond the traditional triplet representation of facts where a relation connects two entities, modern KGs observe an increasing number of hyper-relational facts, where an arbitrary number of qualifiers associated with a triplet provide auxiliary information to further describe the rich semantics of the triplet, which can effectively boost the reasoning performance in link prediction tasks. However, existing link prediction techniques over such hyper-relational KGs (HKGs) mostly focus on a transductive setting, where KG embedding models are learned from the specific vocabulary of a given KG and subsequently can only make predictions within the same vocabulary, limiting their generalizability to previously unseen vocabularies. Against this background, we propose THOR, an inducTive link prediction technique for Hyper-relational knOwledge gRaphs. Specifically, we first introduce both relation and entity foundation graphs, modeling their fundamental inter- and intra-fact interactions in HKGs, which are agnostic to any specific relations and entities. Afterward, THOR is designed to learn from the two foundation graphs with two parallel graph encoders followed by a transformer decoder, which supports efficient masked training and fully-inductive inference. We conduct a thorough evaluation of THOR in hyper-relational link prediction tasks on 12 datasets with different settings. Results show that THOR outperforms a sizable collection of baselines, yielding 66.1%, 55.9%, and 20.4% improvement over the best-performing rule-based, semi-inductive, and fully-inductive techniques, respectively. A series of ablation studies also reveals our key design factors capturing the structural invariance transferable across HKGs for inductive tasks.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-05T08:15:49Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Weijian Yu</name>
+    </author>
+    <author>
+      <name>Yuhuan Lu</name>
+    </author>
+    <author>
+      <name>Dingqi Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.04812v1</id>
+    <title>Robust Generalizable Heterogeneous Legal Link Prediction</title>
+    <updated>2026-02-04T17:59:13Z</updated>
+    <link href="https://arxiv.org/abs/2602.04812v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04812v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent work has applied link prediction to large heterogeneous legal citation networks \new{with rich meta-features}. We find that this approach can be improved by including edge dropout and feature concatenation for the learning of more robust representations, which reduces error rates by up to 45%. We also propose an approach based on multilingual node features with an improved asymmetric decoder for compatibility, which allows us to generalize and extend the prediction to more, geographically and linguistically disjoint, data from New Zealand. Our adaptations also improve inductive transferability between these disjoint legal systems.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T17:59:13Z</published>
+    <arxiv:comment>9 Pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lorenz Wendlinger</name>
+    </author>
+    <author>
+      <name>Simon Alexander Nonn</name>
+    </author>
+    <author>
+      <name>Abdullah Al Zubaer</name>
+    </author>
+    <author>
+      <name>Michael Granitzer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.02161v1</id>
+    <title>Generating Causal Temporal Interaction Graphs for Counterfactual Validation of Temporal Link Prediction</title>
+    <updated>2026-02-02T14:36:18Z</updated>
+    <link href="https://arxiv.org/abs/2602.02161v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.02161v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Temporal link prediction (TLP) models are commonly evaluated based on predictive accuracy, yet such evaluations do not assess whether these models capture the causal mechanisms that govern temporal interactions. In this work, we propose a framework for counterfactual validation of TLP models by generating causal temporal interaction graphs (CTIGs) with known ground-truth causal structure. We first introduce a structural equation model for continuous-time event sequences that supports both excitatory and inhibitory effects, and then extend this mechanism to temporal interaction graphs. To compare causal models, we propose a distance metric based on cross-model predictive error, and empirically validate the hypothesis that predictors trained on one causal model degrade when evaluated on sufficiently distant models. Finally, we instantiate counterfactual evaluation under (i) controlled causal shifts between generating models and (ii) timestamp shuffling as a stochastic distortion with measurable causal distance. Our framework provides a foundation for causality-aware benchmarking.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-02T14:36:18Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Aniq Ur Rahman</name>
+    </author>
+    <author>
+      <name>Justin P. Coon</name>
+    </author>
+  </entry>
+</feed>

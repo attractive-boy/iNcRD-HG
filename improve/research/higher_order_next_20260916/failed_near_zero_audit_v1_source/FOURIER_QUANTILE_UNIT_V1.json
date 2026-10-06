@@ -1,0 +1,97 @@
+{
+  "created_at_utc": "2026-09-16T07:13:57.475879+00:00",
+  "success": false,
+  "tests": 5,
+  "failures": 1,
+  "errors": 0,
+  "evidence": {
+    "controls": {
+      "equal_mean_and_variance_distributions_separated": true,
+      "permutation_and_ties": true,
+      "empty_exact_zero": true,
+      "uniform_replication_invariant": true,
+      "cardinality_encoded_separately_in_graph": true
+    },
+    "training": {
+      "initial_states_equal": true,
+      "zero_initial_residual": true,
+      "final_cpu_random_state_equal": true,
+      "synthetic_steps_per_arm": 3,
+      "every_parameter_gradient_finite": true,
+      "replay_uses_omitted_fold_only": true,
+      "records": [
+        {
+          "kind": "full",
+          "replay_max_abs": 4.656612873077393e-10,
+          "diagnostics": {
+            "calls": 10,
+            "layer_calls": 20,
+            "sort_calls": 60,
+            "nonempty_neighborhoods": 262,
+            "empty_neighborhoods": 18,
+            "messages": 496,
+            "padded_slots": 520,
+            "maximum_degree": 4,
+            "maximum_absolute_embedding": 3.6300081926389556,
+            "minimum_frequency": 0.04343910288039003,
+            "maximum_frequency": 23.001266479492188
+          }
+        },
+        {
+          "kind": "mean_only",
+          "replay_max_abs": 4.656612873077393e-10,
+          "diagnostics": {
+            "calls": 10,
+            "layer_calls": 20,
+            "sort_calls": 60,
+            "nonempty_neighborhoods": 262,
+            "empty_neighborhoods": 18,
+            "messages": 496,
+            "padded_slots": 520,
+            "maximum_degree": 4,
+            "maximum_absolute_embedding": 5.323881418180663,
+            "minimum_frequency": 0.043478261387961854,
+            "maximum_frequency": 23.0
+          }
+        },
+        {
+          "kind": "mean_std",
+          "replay_max_abs": 4.656612873077393e-10,
+          "diagnostics": {
+            "calls": 10,
+            "layer_calls": 20,
+            "sort_calls": 60,
+            "nonempty_neighborhoods": 262,
+            "empty_neighborhoods": 18,
+            "messages": 496,
+            "padded_slots": 520,
+            "maximum_degree": 4,
+            "maximum_absolute_embedding": 5.250992282595987,
+            "minimum_frequency": 0.043478261387961854,
+            "maximum_frequency": 23.0
+          }
+        }
+      ],
+      "formal_fits": 0
+    },
+    "independent_integral": {
+      "quadrature_max_error": 1.700029006457271e-15,
+      "active_feature_and_frequency_gradcheck": true,
+      "padding_has_zero_mass": true
+    },
+    "graph": {
+      "all_messages_retained_once": true,
+      "forbidden_target_overlap": 0,
+      "training_only_entry": true,
+      "node_permutation_max_error": 0.0
+    }
+  },
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_fourier_quantile_graph_v1.py": "3653cf3423890ac141dd318d2b84f79b2d613757c44502303d6ff5855eadd84f",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/fourier_quantile_graph_v1.py": "7bb8ef81a64815e353c18d7d4a5b1c79b0eeefd855e8f0b46df94f8d6f8f92d8"
+  },
+  "performance_metrics_computed": false,
+  "evaluation_labels_read": false,
+  "formal_fits": 0,
+  "sha256": "8310a2fe492856821779fdfb8fe1ff7adce3a67cdf931f2972999a11cef820dd"
+}

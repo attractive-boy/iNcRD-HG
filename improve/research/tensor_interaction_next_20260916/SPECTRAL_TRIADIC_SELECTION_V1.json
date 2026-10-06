@@ -1,0 +1,47 @@
+{
+  "created_at_utc": "2026-09-16T07:45:32.967920+00:00",
+  "family": "spectral_triadic",
+  "primary_kind": "full",
+  "primary_controls": [
+    "linear_only",
+    "direct_quadratic"
+  ],
+  "core_parameters": {
+    "width": 64,
+    "heads": 4,
+    "depth": 2,
+    "dropout": 0.1,
+    "folds": 5,
+    "pair_depth": 2,
+    "pair_inputs": "concatenated RNA and drug states",
+    "pair_normalization": "LayerNorm after each spectral layer",
+    "pair_activation": "GELU after each normalized spectral layer",
+    "quadratic_bias": false,
+    "quadratic_pairs": "all i <= j, including squares",
+    "spectral_initialization": "author Xavier uniform bases and uniform[-1,1] eigenvalues",
+    "spectral_linear_basis_trainable": true,
+    "spectral_quadratic_basis_trainable": false,
+    "lnc_policy": "identity_strong_reference"
+  },
+  "lrs": [
+    0.001,
+    0.003
+  ],
+  "epochs": 400,
+  "check_interval": 20,
+  "screen_seed": 666,
+  "confirm_seeds": [
+    0,
+    1
+  ],
+  "strong_weight": 0.1,
+  "weight_decay": 0.001,
+  "lnc_policy": "identity_strong_reference",
+  "new_performance_observed": false,
+  "prior_failed_polynormer_seen": true,
+  "one_broader_feature_interaction_family_only": true,
+  "adaptation_sha256": "d82872b2d1728de2612367ab4871d780ffc6302fd3335e6ab327eed9b3d32c5a",
+  "unit_sha256": "03decdcc814caf9e384ae53085797b89ed83ed9fb795f18bf66e664e65dfc71b",
+  "smoke_sha256": "435e5a9921051e34a0d9b1bfefb1ce001f0e30cb566f2e63eee0603c7ef983d4",
+  "sha256": "cf6f8f2765268a49da12bcb6401b889233c8922c714a76c93432b4537795347e"
+}

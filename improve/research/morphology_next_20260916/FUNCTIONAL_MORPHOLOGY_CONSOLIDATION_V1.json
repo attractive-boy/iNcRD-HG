@@ -1,0 +1,133 @@
+{
+  "scope": "Historical confirmation and three previously exposed development partitions",
+  "historical_gate": true,
+  "partition_gate": false,
+  "new_history_neural_fits": 6,
+  "adopted_history_neural_fits": 2,
+  "new_partition_neural_fits": 6,
+  "identity_records_not_training": true,
+  "partition_metrics": [
+    {
+      "task": "MiDrug",
+      "split": 61453,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9599504837140076,
+      "ap": 0.9268934533650228,
+      "macro_drug_ap": 0.8058625529688367,
+      "macro_drug_count": 83
+    },
+    {
+      "task": "MiDrug",
+      "split": 7919,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9562820806380828,
+      "ap": 0.9165092025109064,
+      "macro_drug_ap": 0.80673227302844,
+      "macro_drug_count": 90
+    },
+    {
+      "task": "MiDrug",
+      "split": 104729,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9529046692235772,
+      "ap": 0.9139851611734912,
+      "macro_drug_ap": 0.7730620862163549,
+      "macro_drug_count": 84
+    },
+    {
+      "task": "LncDrug",
+      "split": 61453,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9902004350164886,
+      "ap": 0.9798782865466856,
+      "macro_drug_ap": 0.9685414157777856,
+      "macro_drug_count": 25
+    },
+    {
+      "task": "LncDrug",
+      "split": 7919,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9918297978498648,
+      "ap": 0.9831467965498568,
+      "macro_drug_ap": 0.9319583949060922,
+      "macro_drug_count": 23
+    },
+    {
+      "task": "LncDrug",
+      "split": 104729,
+      "kind": "full",
+      "score": "anchor_composed",
+      "auc": 0.9897638593290768,
+      "ap": 0.980556713993804,
+      "macro_drug_ap": 0.9373743633927644,
+      "macro_drug_count": 20
+    }
+  ],
+  "partition_means": {
+    "LncDrug": {
+      "auc": 0.99059803073181,
+      "ap": 0.9811939323634489
+    },
+    "MiDrug": {
+      "auc": 0.9563790778585558,
+      "ap": 0.9191292723498069
+    }
+  },
+  "contrasts": [
+    {
+      "task": "LncDrug",
+      "control": "anchor",
+      "auc": 0.0,
+      "ap": 0.0,
+      "macro_drug_ap": 0.0
+    },
+    {
+      "task": "LncDrug",
+      "control": "offset_composed",
+      "auc": 0.0,
+      "ap": 0.0,
+      "macro_drug_ap": 0.0
+    },
+    {
+      "task": "LncDrug",
+      "control": "shuffled_rna_targets",
+      "auc": 0.0,
+      "ap": 0.0,
+      "macro_drug_ap": 0.0
+    },
+    {
+      "task": "MiDrug",
+      "control": "anchor",
+      "auc": -0.0001554340705122,
+      "ap": -0.0004293215528444,
+      "macro_drug_ap": 0.0009229366496938
+    },
+    {
+      "task": "MiDrug",
+      "control": "offset_composed",
+      "auc": -0.0001554340705122,
+      "ap": -0.0004293215528444,
+      "macro_drug_ap": 0.0009229366496938
+    },
+    {
+      "task": "MiDrug",
+      "control": "shuffled_rna_targets",
+      "auc": -0.0001248242919202,
+      "ap": -0.0003716885115512,
+      "macro_drug_ap": -0.001038270470326
+    }
+  ],
+  "source_sha256": {
+    "improve/results/anchor_priority_functional_morphology_v1_20260916/HISTORICAL_ASSESSMENT.json": "ec54af961c19cf7c00412aa386ac7392f1708fc1f9b8318f5f9f384464619d79",
+    "improve/results/mechanism_validation_20260915/reports/anchor_priority_functional_morphology_v1/ASSESSMENT.json": "a8d809066108c1d3c0925711c139b75400b887111a91f805fefecfaeed09602d"
+  },
+  "new_outer_fits": 0,
+  "confirmed_final_innovations": 0,
+  "decision": "Stop the frozen functional morphology revision after failed partition performance and mechanism gates",
+  "sha256": "65ef7b9056cecde047be0f0d20d9bff8cd5dd105cd36268a79b143d6b2cb0f47"
+}

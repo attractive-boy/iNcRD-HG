@@ -1,0 +1,14 @@
+{
+  "stage": "pre-seal unit checks",
+  "tests_run": 4,
+  "failed_tests": [
+    "test_private_noise_and_eval_batch_invariance",
+    "test_reverse_messages_share_one_mask_and_query_fact_is_absent"
+  ],
+  "cause": "The inherited induced sparse graph does not guarantee sorted COO columns. Searchsorted was incorrectly applied before sorting undirected edge codes.",
+  "formal_fits": 0,
+  "files": {
+    "information_bottleneck_graph_v1.py": "959719cde3a47eea89ed625ebaaa94bbf1f6807ef752363c0d730938cea89add",
+    "test_information_bottleneck_graph_v1.py": "1d51bd45bc93fe48a90e09b9da8758ca36e629aaa62b8b54836b4c1711d9775d"
+  }
+}

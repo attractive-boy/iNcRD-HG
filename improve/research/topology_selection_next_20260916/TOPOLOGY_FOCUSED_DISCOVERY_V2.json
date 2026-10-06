@@ -1,0 +1,5086 @@
+[
+  {
+    "name": "arxiv_persistence_v2",
+    "url": "https://export.arxiv.org/api/query",
+    "params": {
+      "search_query": "all:\"link prediction\" AND all:\"persistent homology\"",
+      "max_results": 15,
+      "sortBy": "relevance"
+    },
+    "utc": "2026-09-15T21:52:09.076277+00:00",
+    "status": 200,
+    "file": "improve/research/topology_selection_next_20260916/arxiv_persistence_v2.xml",
+    "sha256": "a4e9986381a350a91ef2efb49ea10c2dbbd8697e4db9d4ea16e827c3607753ba",
+    "items": [
+      {
+        "title": "Link Prediction with Persistent Homology: An Interactive View",
+        "id": "http://arxiv.org/abs/2102.10255v2",
+        "published": "2021-02-20T04:33:59Z",
+        "abstract": "Link prediction is an important learning task for graph-structured data. In this paper, we propose a novel topological approach to characterize interactions between two nodes. Our topological feature, based on the extended persistent homology, encodes rich structural information regarding the multi-hop paths connecting nodes. Based on this feature, we propose a graph neural network method that outperforms state-of-the-arts on different benchmarks. As another contribution, we propose a novel algorithm to more efficiently compute the extended persistence diagrams for graphs. This algorithm can be generally applied to accelerate many other topological methods for graph learning tasks."
+      },
+      {
+        "title": "PHLP: Sole Persistent Homology for Link Prediction - Interpretable Feature Extraction",
+        "id": "http://arxiv.org/abs/2404.15225v2",
+        "published": "2024-04-23T16:54:56Z",
+        "abstract": "Link prediction (LP), inferring the connectivity between nodes, is a significant research area in graph data, where a link represents essential information on relationships between nodes. Although graph neural network (GNN)-based models have achieved high performance in LP, understanding why they perform well is challenging because most comprise complex neural networks. We employ persistent homology (PH), a topological data analysis method that helps analyze the topological information of graphs, to interpret the features used for prediction. We propose a novel method that employs PH for LP (PHLP) focusing on how the presence or absence of target links influences the overall topology. The PHLP utilizes the angle hop subgraph and new node labeling called degree double radius node labeling (Degree DRNL), distinguishing the information of graphs better than DRNL. Using only a classifier, PHLP performs similarly to state-of-the-art (SOTA) models on most benchmark datasets. Incorporating the outputs calculated using PHLP into the existing GNN-based SOTA models improves performance across all benchmark datasets. To the best of our knowledge, PHLP is the first method of applying PH to LP without GNNs. The proposed approach, employing PH while not relying on neural networks, enables the identification of crucial factors for improving performance."
+      },
+      {
+        "title": "Understanding and Predicting Links in Graphs: A Persistent Homology Perspective",
+        "id": "http://arxiv.org/abs/1811.04049v1",
+        "published": "2018-11-09T18:06:48Z",
+        "abstract": "Persistent Homology is a powerful tool in Topological Data Analysis (TDA) to capture topological properties of data succinctly at different spatial resolutions. For graphical data, shape, and structure of the neighborhood of individual data items (nodes) is an essential means of characterizing their properties. In this paper, we propose the use of persistent homology methods to capture structural and topological properties of graphs and use it to address the problem of link prediction. We evaluate our approach on seven different real-world datasets and offer directions for future work."
+      },
+      {
+        "title": "TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction",
+        "id": "http://arxiv.org/abs/2506.00453v1",
+        "published": "2025-05-31T08:15:23Z",
+        "abstract": "Dynamic graphs evolve continuously, presenting challenges for traditional graph learning due to their changing structures and temporal dependencies. Recent advancements have shown potential in addressing these challenges by developing suitable meta-learning-based dynamic graph neural network models. However, most meta-learning approaches for dynamic graphs rely on fixed weight update parameters, neglecting the essential intrinsic complex high-order topological information of dynamically evolving graphs. We have designed Dowker Zigzag Persistence (DZP), an efficient and stable dynamic graph persistent homology representation method based on Dowker complex and zigzag persistence, to capture the high-order features of dynamic graphs. Armed with the DZP ideas, we propose TMetaNet, a new meta-learning parameter update model based on dynamic topological features. By utilizing the distances between high-order topological features, TMetaNet enables more effective adaptation across snapshots. Experiments on real-world datasets demonstrate TMetaNet's state-of-the-art performance and resilience to graph noise, illustrating its high potential for meta-learning and dynamic graph analysis. Our code is available at https://github.com/Lihaogx/TMetaNet."
+      },
+      {
+        "title": "Enhancing Graph Representation Learning with Localized Topological Features",
+        "id": "http://arxiv.org/abs/2501.09178v1",
+        "published": "2025-01-15T22:12:27Z",
+        "abstract": "Representation learning on graphs is a fundamental problem that can be crucial in various tasks. Graph neural networks, the dominant approach for graph representation learning, are limited in their representation power. Therefore, it can be beneficial to explicitly extract and incorporate high-order topological and geometric information into these models. In this paper, we propose a principled approach to extract the rich connectivity information of graphs based on the theory of persistent homology. Our method utilizes the topological features to enhance the representation learning of graph neural networks and achieve state-of-the-art performance on various node classification and link prediction benchmarks. We also explore the option of end-to-end learning of the topological features, i.e., treating topological computation as a differentiable operator during learning. Our theoretical analysis and empirical study provide insights and potential guidelines for employing topological features in graph learning tasks."
+      },
+      {
+        "title": "Topological estimation of the latent geometry of a complex network",
+        "id": "http://arxiv.org/abs/2008.10204v3",
+        "published": "2020-08-24T06:00:20Z",
+        "abstract": "Most real-world networks are embedded in latent geometries. If a node in a network is found in the vicinity of another node in the latent geometry, the two nodes have a disproportionately high probability of being connected by a link. The latent geometry of a complex network is a central topic of research in network science, which has an expansive range of practical applications such as efficient navigation, missing link prediction, and brain mapping. Despite the important role of topology in the structures and functions of complex systems, little to no study has been conducted to develop a method to estimate the general unknown latent geometry of complex networks. Topological data analysis, which has attracted extensive attention in the research community owing to its convincing performance, can be directly implemented into complex networks; however, even a small fraction (0.1%) of long-range links can completely erase the topological signature of the latent geometry. Inspired by the fact that long-range links in a network have disproportionately high loads, we develop a set of methods that can analyze the latent geometry of a complex network: the modified persistent homology diagram and the map of the latent geometry. These methods successfully reveal the topological properties of the synthetic and empirical networks used to validate the proposed methods."
+      }
+    ]
+  },
+  {
+    "name": "openalex_topology_v2",
+    "url": "https://api.openalex.org/works",
+    "params": {
+      "search": "link prediction persistent homology",
+      "filter": "from_publication_date:2023-01-01,to_publication_date:2026-09-16",
+      "per_page": 12
+    },
+    "utc": "2026-09-15T21:52:09.076985+00:00",
+    "status": 200,
+    "file": "improve/research/topology_selection_next_20260916/openalex_topology_v2.json",
+    "sha256": "fb4cf423e24b7d6029fec658cf390c1a5c36926728081124bc410e1aa36f458e",
+    "items": [
+      {
+        "title": "PHLP: Sole Persistent Homology for Link Prediction - Interpretable Feature Extraction",
+        "doi": "https://doi.org/10.48550/arxiv.2404.15225",
+        "date": "2024-04-23",
+        "location": {
+          "id": "pmh:oai:arXiv.org:2404.15225",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2404.15225",
+          "pdf_url": "https://arxiv.org/pdf/2404.15225",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        "abstract_index": {
+          "Link": [
+            0
+          ],
+          "prediction": [
+            1
+          ],
+          "(LP),": [
+            2
+          ],
+          "inferring": [
+            3
+          ],
+          "the": [
+            4,
+            64,
+            71,
+            90,
+            98,
+            104,
+            121,
+            144,
+            150,
+            162,
+            169,
+            191
+          ],
+          "connectivity": [
+            5
+          ],
+          "between": [
+            6,
+            24
+          ],
+          "nodes,": [
+            7
+          ],
+          "is": [
+            8,
+            43,
+            168
+          ],
+          "a": [
+            9,
+            17,
+            56,
+            78,
+            130
+          ],
+          "significant": [
+            10
+          ],
+          "research": [
+            11
+          ],
+          "area": [
+            12
+          ],
+          "in": [
+            13,
+            36
+          ],
+          "graph": [
+            14,
+            27
+          ],
+          "data,": [
+            15
+          ],
+          "where": [
+            16
+          ],
+          "link": [
+            18
+          ],
+          "represents": [
+            19
+          ],
+          "essential": [
+            20
+          ],
+          "information": [
+            21,
+            66,
+            122
+          ],
+          "on": [
+            22,
+            88,
+            139,
+            187
+          ],
+          "relationships": [
+            23
+          ],
+          "nodes.": [
+            25
+          ],
+          "Although": [
+            26
+          ],
+          "neural": [
+            28,
+            49,
+            188
+          ],
+          "network": [
+            29
+          ],
+          "(GNN)-based": [
+            30
+          ],
+          "models": [
+            31,
+            138,
+            154
+          ],
+          "have": [
+            32
+          ],
+          "achieved": [
+            33
+          ],
+          "high": [
+            34
+          ],
+          "performance": [
+            35,
+            156
+          ],
+          "LP,": [
+            37
+          ],
+          "understanding": [
+            38
+          ],
+          "why": [
+            39
+          ],
+          "they": [
+            40
+          ],
+          "perform": [
+            41
+          ],
+          "well": [
+            42
+          ],
+          "challenging": [
+            44
+          ],
+          "because": [
+            45
+          ],
+          "most": [
+            46,
+            140
+          ],
+          "comprise": [
+            47
+          ],
+          "complex": [
+            48
+          ],
+          "networks.": [
+            50
+          ],
+          "We": [
+            51,
+            76
+          ],
+          "employ": [
+            52
+          ],
+          "persistent": [
+            53
+          ],
+          "homology": [
+            54
+          ],
+          "(PH),": [
+            55
+          ],
+          "topological": [
+            57,
+            65
+          ],
+          "data": [
+            58
+          ],
+          "analysis": [
+            59
+          ],
+          "method": [
+            60,
+            80,
+            171
+          ],
+          "that": [
+            61,
+            81
+          ],
+          "helps": [
+            62
+          ],
+          "analyze": [
+            63
+          ],
+          "of": [
+            67,
+            94,
+            123,
+            164,
+            172,
+            193
+          ],
+          "graphs,": [
+            68
+          ],
+          "to": [
+            69,
+            135,
+            175
+          ],
+          "interpret": [
+            70
+          ],
+          "features": [
+            72
+          ],
+          "used": [
+            73
+          ],
+          "for": [
+            74,
+            84,
+            196
+          ],
+          "prediction.": [
+            75
+          ],
+          "propose": [
+            77
+          ],
+          "novel": [
+            79
+          ],
+          "employs": [
+            82
+          ],
+          "PH": [
+            83,
+            174,
+            183
+          ],
+          "LP": [
+            85,
+            176
+          ],
+          "(PHLP)": [
+            86
+          ],
+          "focusing": [
+            87
+          ],
+          "how": [
+            89
+          ],
+          "presence": [
+            91
+          ],
+          "or": [
+            92
+          ],
+          "absence": [
+            93
+          ],
+          "target": [
+            95
+          ],
+          "links": [
+            96
+          ],
+          "influences": [
+            97
+          ],
+          "overall": [
+            99
+          ],
+          "topology.": [
+            100
+          ],
+          "The": [
+            101,
+            179
+          ],
+          "PHLP": [
+            102,
+            132,
+            148,
+            167
+          ],
+          "utilizes": [
+            103
+          ],
+          "angle": [
+            105
+          ],
+          "hop": [
+            106
+          ],
+          "subgraph": [
+            107
+          ],
+          "and": [
+            108
+          ],
+          "new": [
+            109
+          ],
+          "node": [
+            110,
+            116
+          ],
+          "labeling": [
+            111,
+            117
+          ],
+          "called": [
+            112
+          ],
+          "degree": [
+            113
+          ],
+          "double": [
+            114
+          ],
+          "radius": [
+            115
+          ],
+          "(Degree": [
+            118
+          ],
+          "DRNL),": [
+            119
+          ],
+          "distinguishing": [
+            120
+          ],
+          "graphs": [
+            124
+          ],
+          "better": [
+            125
+          ],
+          "than": [
+            126
+          ],
+          "DRNL.": [
+            127
+          ],
+          "Using": [
+            128
+          ],
+          "only": [
+            129
+          ],
+          "classifier,": [
+            131
+          ],
+          "performs": [
+            133
+          ],
+          "similarly": [
+            134
+          ],
+          "state-of-the-art": [
+            136
+          ],
+          "(SOTA)": [
+            137
+          ],
+          "benchmark": [
+            141,
+            159
+          ],
+          "datasets.": [
+            142,
+            160
+          ],
+          "Incorporating": [
+            143
+          ],
+          "outputs": [
+            145
+          ],
+          "calculated": [
+            146
+          ],
+          "using": [
+            147
+          ],
+          "into": [
+            149
+          ],
+          "existing": [
+            151
+          ],
+          "GNN-based": [
+            152
+          ],
+          "SOTA": [
+            153
+          ],
+          "improves": [
+            155
+          ],
+          "across": [
+            157
+          ],
+          "all": [
+            158
+          ],
+          "To": [
+            161
+          ],
+          "best": [
+            163
+          ],
+          "our": [
+            165
+          ],
+          "knowledge,": [
+            166
+          ],
+          "first": [
+            170
+          ],
+          "applying": [
+            173
+          ],
+          "without": [
+            177
+          ],
+          "GNNs.": [
+            178
+          ],
+          "proposed": [
+            180
+          ],
+          "approach,": [
+            181
+          ],
+          "employing": [
+            182
+          ],
+          "while": [
+            184
+          ],
+          "not": [
+            185
+          ],
+          "relying": [
+            186
+          ],
+          "networks,": [
+            189
+          ],
+          "enables": [
+            190
+          ],
+          "identification": [
+            192
+          ],
+          "crucial": [
+            194
+          ],
+          "factors": [
+            195
+          ],
+          "improving": [
+            197
+          ],
+          "performance.": [
+            198
+          ]
+        }
+      },
+      {
+        "title": "DyDoGNN: A Dynamic Graph Neural Network with Dowker Persistent Homology for Link Prediction",
+        "doi": "https://doi.org/10.1109/icaid65275.2025.11034423",
+        "date": "2025-04-25",
+        "location": null,
+        "abstract_index": {
+          "Blockchain": [
+            0
+          ],
+          "technology": [
+            1
+          ],
+          "is": [
+            2,
+            17,
+            28,
+            111
+          ],
+          "a": [
+            3,
+            79,
+            156,
+            166,
+            220
+          ],
+          "significant": [
+            4,
+            177
+          ],
+          "part": [
+            5
+          ],
+          "of": [
+            6,
+            61,
+            100,
+            224
+          ],
+          "the": [
+            7,
+            58,
+            97,
+            104
+          ],
+          "digital": [
+            8
+          ],
+          "economy.": [
+            9
+          ],
+          "Link": [
+            10
+          ],
+          "prediction": [
+            11,
+            125,
+            184,
+            205
+          ],
+          "based": [
+            12,
+            39
+          ],
+          "on": [
+            13,
+            40,
+            215
+          ],
+          "dynamic": [
+            14,
+            73,
+            83,
+            91,
+            121,
+            157,
+            180,
+            199,
+            208
+          ],
+          "transaction": [
+            15,
+            62,
+            122,
+            181,
+            209
+          ],
+          "networks": [
+            16,
+            128,
+            202
+          ],
+          "crucial": [
+            18
+          ],
+          "for": [
+            19,
+            32,
+            72,
+            120,
+            168,
+            203
+          ],
+          "understanding": [
+            20
+          ],
+          "cryptocurrency": [
+            21
+          ],
+          "price": [
+            22
+          ],
+          "changes.": [
+            23
+          ],
+          "Graph": [
+            24,
+            107
+          ],
+          "Neural": [
+            25,
+            108
+          ],
+          "Networks": [
+            26
+          ],
+          "(GNN)": [
+            27
+          ],
+          "an": [
+            29
+          ],
+          "important": [
+            30
+          ],
+          "method": [
+            31,
+            80
+          ],
+          "link": [
+            33,
+            74,
+            124,
+            170,
+            183,
+            204
+          ],
+          "prediction,": [
+            34
+          ],
+          "but": [
+            35
+          ],
+          "designing": [
+            36
+          ],
+          "them": [
+            37,
+            89
+          ],
+          "only": [
+            38
+          ],
+          "lower-order": [
+            41
+          ],
+          "features": [
+            42,
+            152
+          ],
+          "may": [
+            43
+          ],
+          "lead": [
+            44
+          ],
+          "to": [
+            45,
+            69,
+            81,
+            113,
+            141
+          ],
+          "information": [
+            46,
+            145
+          ],
+          "loss.": [
+            47
+          ],
+          "Persistent": [
+            48
+          ],
+          "Homology": [
+            49
+          ],
+          "(PH),": [
+            50
+          ],
+          "which": [
+            51
+          ],
+          "analyzes": [
+            52
+          ],
+          "higher-order": [
+            53
+          ],
+          "topological": [
+            54,
+            59,
+            135
+          ],
+          "features,": [
+            55
+          ],
+          "can": [
+            56
+          ],
+          "reveal": [
+            57
+          ],
+          "structure": [
+            60
+          ],
+          "networks,": [
+            63,
+            210
+          ],
+          "yet": [
+            64
+          ],
+          "its": [
+            65,
+            213
+          ],
+          "computational": [
+            66
+          ],
+          "complexity": [
+            67
+          ],
+          "needs": [
+            68
+          ],
+          "be": [
+            70
+          ],
+          "addressed": [
+            71
+          ],
+          "prediction.": [
+            75,
+            171
+          ],
+          "This": [
+            76
+          ],
+          "paper": [
+            77
+          ],
+          "proposes": [
+            78
+          ],
+          "extract": [
+            82
+          ],
+          "network": [
+            84,
+            94,
+            123,
+            160,
+            182
+          ],
+          "Dowker": [
+            85,
+            106,
+            143,
+            195
+          ],
+          "complexes": [
+            86
+          ],
+          "and": [
+            87,
+            117,
+            134,
+            146,
+            163,
+            185,
+            211
+          ],
+          "integrate": [
+            88
+          ],
+          "into": [
+            90,
+            155
+          ],
+          "graph": [
+            92,
+            151,
+            158,
+            200
+          ],
+          "neural": [
+            93,
+            159,
+            201
+          ],
+          "computations,": [
+            95
+          ],
+          "enhancing": [
+            96
+          ],
+          "representational": [
+            98
+          ],
+          "ability": [
+            99
+          ],
+          "these": [
+            101
+          ],
+          "networks.": [
+            102
+          ],
+          "Specifically,": [
+            103
+          ],
+          "Dynamic": [
+            105
+          ],
+          "Network": [
+            109
+          ],
+          "(DyDoGNN)": [
+            110
+          ],
+          "introduced": [
+            112
+          ],
+          "capture": [
+            114
+          ],
+          "both": [
+            115
+          ],
+          "low-order": [
+            116
+          ],
+          "high-order": [
+            118
+          ],
+          "structures": [
+            119
+          ],
+          "tasks.": [
+            126
+          ],
+          "Transaction": [
+            127
+          ],
+          "are": [
+            129,
+            139,
+            153,
+            190
+          ],
+          "treated": [
+            130
+          ],
+          "as": [
+            131
+          ],
+          "temporal": [
+            132
+          ],
+          "snapshots,": [
+            133
+          ],
+          "data": [
+            136
+          ],
+          "analysis": [
+            137
+          ],
+          "methods": [
+            138
+          ],
+          "used": [
+            140
+          ],
+          "compute": [
+            142
+          ],
+          "complex": [
+            144
+          ],
+          "persistent": [
+            147,
+            196
+          ],
+          "homology": [
+            148,
+            197
+          ],
+          "results.": [
+            149
+          ],
+          "High-order": [
+            150
+          ],
+          "embedded": [
+            154
+          ],
+          "with": [
+            161,
+            198,
+            219
+          ],
+          "GNNs": [
+            162
+          ],
+          "GRUs,": [
+            164
+          ],
+          "training": [
+            165
+          ],
+          "model": [
+            167
+          ],
+          "future": [
+            169
+          ],
+          "Experiments": [
+            172
+          ],
+          "show": [
+            173
+          ],
+          "that": [
+            174,
+            193
+          ],
+          "DyDoGNN": [
+            175,
+            192
+          ],
+          "achieves": [
+            176
+          ],
+          "improvements": [
+            178
+          ],
+          "in": [
+            179,
+            206
+          ],
+          "robustness.": [
+            186
+          ],
+          "The": [
+            187
+          ],
+          "key": [
+            188
+          ],
+          "contributions": [
+            189
+          ],
+          "proposing": [
+            191
+          ],
+          "combines": [
+            194
+          ],
+          "blockchain": [
+            207
+          ],
+          "validating": [
+            212
+          ],
+          "effectiveness": [
+            214
+          ],
+          "six": [
+            216
+          ],
+          "Ethereum": [
+            217
+          ],
+          "datasets": [
+            218
+          ],
+          "maximum": [
+            221
+          ],
+          "performance": [
+            222
+          ],
+          "improvement": [
+            223
+          ],
+          "25.10%": [
+            225
+          ],
+          "over": [
+            226
+          ],
+          "baselines.": [
+            227
+          ]
+        }
+      },
+      {
+        "title": "Persistent homology centrality improves link prediction performance in Pubmed co-occurrence networks",
+        "doi": "https://doi.org/10.1101/2024.03.19.585668",
+        "date": "2024-03-21",
+        "location": {
+          "id": "doi:10.1101/2024.03.19.585668",
+          "is_oa": true,
+          "landing_page_url": "http://dx.doi.org/10.1101/2024.03.19.585668",
+          "pdf_url": "https://www.biorxiv.org/content/biorxiv/early/2024/03/21/2024.03.19.585668.full.pdf",
+          "source": {
+            "id": "https://openalex.org/S4306402567",
+            "display_name": "bioRxiv (Cold Spring Harbor Laboratory)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I2750212522",
+            "host_organization_name": "Cold Spring Harbor Laboratory",
+            "host_organization_lineage": [
+              "https://openalex.org/I2750212522"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "acceptedVersion",
+          "is_accepted": true,
+          "is_published": false,
+          "raw_source_name": "bioRxiv",
+          "raw_type": "posted-content"
+        },
+        "abstract_index": {
+          "A": [
+            0,
+            24
+          ],
+          "bstract": [
+            1
+          ],
+          "This": [
+            2,
+            89
+          ],
+          "paper": [
+            3
+          ],
+          "provides": [
+            4,
+            265
+          ],
+          "a": [
+            5,
+            33,
+            49,
+            77,
+            111,
+            116,
+            124,
+            137,
+            225,
+            249
+          ],
+          "novel": [
+            6
+          ],
+          "approach": [
+            7
+          ],
+          "to": [
+            8,
+            69,
+            75,
+            159,
+            193,
+            224
+          ],
+          "understanding": [
+            9,
+            58
+          ],
+          "the": [
+            10,
+            42,
+            64,
+            94,
+            157,
+            162,
+            167,
+            191,
+            197,
+            212,
+            214,
+            219,
+            229,
+            232,
+            269
+          ],
+          "nature": [
+            11
+          ],
+          "of": [
+            12,
+            21,
+            27,
+            35,
+            45,
+            67,
+            79,
+            118,
+            120,
+            140,
+            144,
+            166,
+            181,
+            205,
+            221,
+            231
+          ],
+          "innovation": [
+            13
+          ],
+          "and": [
+            14,
+            81,
+            106,
+            149,
+            178,
+            274
+          ],
+          "scientific": [
+            15,
+            22,
+            36,
+            97,
+            168,
+            199,
+            270,
+            278
+          ],
+          "progress": [
+            16
+          ],
+          "by": [
+            17,
+            93
+          ],
+          "analyzing": [
+            18
+          ],
+          "large-scale": [
+            19
+          ],
+          "datasets": [
+            20
+          ],
+          "literature.": [
+            23
+          ],
+          "new": [
+            25
+          ],
+          "measure": [
+            26
+          ],
+          "novelty": [
+            28
+          ],
+          "potential": [
+            29,
+            83
+          ],
+          "or": [
+            30,
+            188
+          ],
+          "disruptiveness": [
+            31
+          ],
+          "for": [
+            32,
+            84,
+            268,
+            277
+          ],
+          "set": [
+            34,
+            78
+          ],
+          "entities": [
+            37,
+            80
+          ],
+          "is": [
+            38,
+            73,
+            91,
+            115
+          ],
+          "proposed,": [
+            39
+          ],
+          "based": [
+            40
+          ],
+          "in": [
+            41,
+            211,
+            255,
+            272
+          ],
+          "mathematical": [
+            43,
+            250
+          ],
+          "formalism": [
+            44
+          ],
+          "algebraic": [
+            46
+          ],
+          "topology": [
+            47
+          ],
+          "via": [
+            48
+          ],
+          "method": [
+            50,
+            109,
+            215
+          ],
+          "called": [
+            51
+          ],
+          "persistent": [
+            52
+          ],
+          "homology": [
+            53
+          ],
+          ".": [
+            54
+          ],
+          "In": [
+            55,
+            127
+          ],
+          "this": [
+            56,
+            128,
+            185
+          ],
+          "framework,": [
+            57
+          ],
+          "where": [
+            59
+          ],
+          "academic": [
+            60
+          ],
+          "ideas": [
+            61
+          ],
+          "depart": [
+            62
+          ],
+          "from": [
+            63,
+            184
+          ],
+          "existing": [
+            65
+          ],
+          "body": [
+            66
+          ],
+          "knowledge": [
+            68,
+            71,
+            87,
+            147,
+            233
+          ],
+          "fill": [
+            70
+          ],
+          "gaps": [
+            72
+          ],
+          "key": [
+            74
+          ],
+          "scoring": [
+            76
+          ],
+          "their": [
+            82
+          ],
+          "filling": [
+            85
+          ],
+          "future": [
+            86
+          ],
+          "gaps.": [
+            88
+          ],
+          "framework": [
+            90
+          ],
+          "motivated": [
+            92
+          ],
+          "assumption": [
+            95
+          ],
+          "that": [
+            96,
+            102,
+            174
+          ],
+          "discovery": [
+            98
+          ],
+          "has": [
+            99
+          ],
+          "underlying": [
+            100
+          ],
+          "regularities": [
+            101
+          ],
+          "can": [
+            103
+          ],
+          "be": [
+            104,
+            236
+          ],
+          "modeled": [
+            105
+          ],
+          "predicted.": [
+            107
+          ],
+          "Our": [
+            108
+          ],
+          "uses": [
+            110
+          ],
+          "filtration": [
+            112
+          ],
+          ",": [
+            113
+          ],
+          "which": [
+            114,
+            135
+          ],
+          "type": [
+            117
+          ],
+          "ranking": [
+            119,
+            275
+          ],
+          "hypergraph": [
+            121
+          ],
+          "components": [
+            122
+          ],
+          "along": [
+            123
+          ],
+          "chosen": [
+            125
+          ],
+          "parameter.": [
+            126
+          ],
+          "work": [
+            129
+          ],
+          "two": [
+            130
+          ],
+          "different": [
+            131,
+            203
+          ],
+          "axes": [
+            132,
+            143
+          ],
+          "are": [
+            133
+          ],
+          "used,": [
+            134
+          ],
+          "constructs": [
+            136
+          ],
+          "growing": [
+            138
+          ],
+          "grid": [
+            139
+          ],
+          "sub-hypergraphs.": [
+            141
+          ],
+          "The": [
+            142,
+            242
+          ],
+          "time": [
+            145
+          ],
+          "(scientific": [
+            146
+          ],
+          "evolution)": [
+            148
+          ],
+          "normalized": [
+            150
+          ],
+          "point-wise": [
+            151
+          ],
+          "mutual": [
+            152
+          ],
+          "information": [
+            153
+          ],
+          "(network": [
+            154
+          ],
+          "structure)": [
+            155
+          ],
+          "affords": [
+            156,
+            190
+          ],
+          "ability": [
+            158,
+            192
+          ],
+          "succinctly": [
+            160
+          ],
+          "represent": [
+            161
+          ],
+          "entire": [
+            163
+          ],
+          "dynamic": [
+            164,
+            198
+          ],
+          "structure": [
+            165
+          ],
+          "literature": [
+            169
+          ],
+          "network.": [
+            170,
+            200
+          ],
+          "We": [
+            171
+          ],
+          "then": [
+            172
+          ],
+          "find": [
+            173
+          ],
+          "using": [
+            175
+          ],
+          "very": [
+            176
+          ],
+          "simple": [
+            177
+          ],
+          "interpretable": [
+            179
+          ],
+          "measures": [
+            180
+          ],
+          "centrality": [
+            182
+          ],
+          "derived": [
+            183
+          ],
+          "crude": [
+            186
+          ],
+          "bifiltration": [
+            187
+          ],
+          "vineyard": [
+            189
+          ],
+          "predict": [
+            194
+          ],
+          "links": [
+            195
+          ],
+          "within": [
+            196
+          ],
+          "While": [
+            201
+          ],
+          "several": [
+            202
+          ],
+          "methods": [
+            204
+          ],
+          "link": [
+            206,
+            222
+          ],
+          "prediction": [
+            207,
+            223
+          ],
+          "have": [
+            208
+          ],
+          "been": [
+            209
+          ],
+          "proposed": [
+            210
+          ],
+          "past,": [
+            213
+          ],
+          "presented": [
+            216,
+            244
+          ],
+          "here": [
+            217,
+            245
+          ],
+          "extends": [
+            218
+          ],
+          "notion": [
+            220
+          ],
+          "higher": [
+            226
+          ],
+          "dimension,": [
+            227
+          ],
+          "as": [
+            228
+          ],
+          "boundary": [
+            230
+          ],
+          "gap": [
+            234
+          ],
+          "may": [
+            235
+          ],
+          "more": [
+            237
+          ],
+          "than": [
+            238
+          ],
+          "just": [
+            239
+          ],
+          "0-dimensional": [
+            240
+          ],
+          "nodes.": [
+            241
+          ],
+          "system": [
+            243
+          ],
+          "not": [
+            246
+          ],
+          "only": [
+            247
+          ],
+          "suggests": [
+            248
+          ],
+          "basis,": [
+            251
+          ],
+          "consistent": [
+            252
+          ],
+          "with": [
+            253
+          ],
+          "observations": [
+            254
+          ],
+          "cognitive": [
+            256
+          ],
+          "neurosciences": [
+            257
+          ],
+          "regarding": [
+            258
+          ],
+          "early": [
+            259
+          ],
+          "childhood": [
+            260
+          ],
+          "language": [
+            261
+          ],
+          "acquisition,": [
+            262
+          ],
+          "but": [
+            263
+          ],
+          "additionally": [
+            264
+          ],
+          "useful": [
+            266
+          ],
+          "applications": [
+            267
+          ],
+          "community": [
+            271
+          ],
+          "predicting": [
+            273
+          ],
+          "hypothesis": [
+            276
+          ],
+          "discovery.": [
+            279
+          ]
+        }
+      },
+      {
+        "title": "The Gene Ontology knowledgebase in 2023",
+        "doi": "https://doi.org/10.1093/genetics/iyad031",
+        "date": "2023-03-03",
+        "location": {
+          "id": "doi:10.1093/genetics/iyad031",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1093/genetics/iyad031",
+          "pdf_url": "https://academic.oup.com/genetics/advance-article-pdf/doi/10.1093/genetics/iyad031/49407834/iyad031.pdf",
+          "source": {
+            "id": "https://openalex.org/S65932378",
+            "display_name": "Genetics",
+            "issn_l": "0016-6731",
+            "issn": [
+              "0016-6731",
+              "1943-2631"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310311648",
+            "host_organization_name": "Oxford University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311648",
+              "https://openalex.org/P4310311647"
+            ],
+            "host_organization_lineage_names": [
+              "Oxford University Press",
+              "University of Oxford"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "GENETICS",
+          "raw_type": "journal-article"
+        },
+        "abstract_index": {
+          "The": [
+            0,
+            86
+          ],
+          "Gene": [
+            1
+          ],
+          "Ontology": [
+            2
+          ],
+          "(GO)": [
+            3
+          ],
+          "knowledgebase": [
+            4,
+            88,
+            186
+          ],
+          "(http://geneontology.org)": [
+            5
+          ],
+          "is": [
+            6,
+            147
+          ],
+          "a": [
+            7,
+            49,
+            111,
+            116,
+            175
+          ],
+          "comprehensive": [
+            8
+          ],
+          "resource": [
+            9
+          ],
+          "concerning": [
+            10
+          ],
+          "the": [
+            11,
+            29,
+            63,
+            69,
+            72,
+            83,
+            94,
+            100,
+            178,
+            185,
+            203,
+            214
+          ],
+          "functions": [
+            12
+          ],
+          "of": [
+            13,
+            31,
+            53,
+            62,
+            71,
+            76,
+            90,
+            103,
+            128,
+            144,
+            170,
+            177,
+            202
+          ],
+          "genes": [
+            14,
+            25
+          ],
+          "and": [
+            15,
+            19,
+            81,
+            120,
+            151,
+            159,
+            165,
+            193
+          ],
+          "gene": [
+            16,
+            39,
+            113
+          ],
+          "products": [
+            17
+          ],
+          "(proteins": [
+            18
+          ],
+          "noncoding": [
+            20
+          ],
+          "RNAs).": [
+            21
+          ],
+          "GO": [
+            22,
+            64,
+            84,
+            87,
+            106,
+            122,
+            138
+          ],
+          "annotations": [
+            23,
+            139
+          ],
+          "cover": [
+            24
+          ],
+          "from": [
+            26,
+            44
+          ],
+          "organisms": [
+            27
+          ],
+          "across": [
+            28
+          ],
+          "tree": [
+            30
+          ],
+          "life": [
+            32
+          ],
+          "as": [
+            33,
+            35,
+            66,
+            68
+          ],
+          "well": [
+            34,
+            67
+          ],
+          "viruses,": [
+            36
+          ],
+          "though": [
+            37
+          ],
+          "most": [
+            38
+          ],
+          "function": [
+            40
+          ],
+          "knowledge": [
+            41,
+            97
+          ],
+          "currently": [
+            42
+          ],
+          "derives": [
+            43
+          ],
+          "experiments": [
+            45
+          ],
+          "carried": [
+            46
+          ],
+          "out": [
+            47
+          ],
+          "in": [
+            48,
+            153
+          ],
+          "relatively": [
+            50
+          ],
+          "small": [
+            51
+          ],
+          "number": [
+            52
+          ],
+          "model": [
+            54
+          ],
+          "organisms.": [
+            55
+          ],
+          "Here,": [
+            56
+          ],
+          "we": [
+            57,
+            173,
+            206
+          ],
+          "provide": [
+            58,
+            174
+          ],
+          "an": [
+            59
+          ],
+          "updated": [
+            60,
+            152
+          ],
+          "overview": [
+            61
+          ],
+          "knowledgebase,": [
+            65
+          ],
+          "efforts": [
+            70
+          ],
+          "broad,": [
+            73
+          ],
+          "international": [
+            74
+          ],
+          "consortium": [
+            75
+          ],
+          "scientists": [
+            77
+          ],
+          "that": [
+            78,
+            110,
+            205
+          ],
+          "develops,": [
+            79
+          ],
+          "maintains,": [
+            80
+          ],
+          "updates": [
+            82
+          ],
+          "knowledgebase.": [
+            85
+          ],
+          "consists": [
+            89
+          ],
+          "three": [
+            91
+          ],
+          "components:": [
+            92
+          ],
+          "(1)": [
+            93
+          ],
+          "GO-a": [
+            95
+          ],
+          "computational": [
+            96
+          ],
+          "structure": [
+            98
+          ],
+          "describing": [
+            99
+          ],
+          "functional": [
+            101,
+            118
+          ],
+          "characteristics": [
+            102
+          ],
+          "genes;": [
+            104
+          ],
+          "(2)": [
+            105
+          ],
+          "annotations-evidence-supported": [
+            107
+          ],
+          "statements": [
+            108
+          ],
+          "asserting": [
+            109
+          ],
+          "specific": [
+            112
+          ],
+          "product": [
+            114
+          ],
+          "has": [
+            115
+          ],
+          "particular": [
+            117
+          ],
+          "characteristic;": [
+            119
+          ],
+          "(3)": [
+            121
+          ],
+          "Causal": [
+            123
+          ],
+          "Activity": [
+            124
+          ],
+          "Models": [
+            125
+          ],
+          "(GO-CAMs)-mechanistic": [
+            126
+          ],
+          "models": [
+            127
+          ],
+          "molecular": [
+            129
+          ],
+          "\"pathways\"": [
+            130
+          ],
+          "(GO": [
+            131
+          ],
+          "biological": [
+            132
+          ],
+          "processes)": [
+            133
+          ],
+          "created": [
+            134
+          ],
+          "by": [
+            135
+          ],
+          "linking": [
+            136
+          ],
+          "multiple": [
+            137
+          ],
+          "using": [
+            140
+          ],
+          "defined": [
+            141
+          ],
+          "relations.": [
+            142
+          ],
+          "Each": [
+            143
+          ],
+          "these": [
+            145,
+            171
+          ],
+          "components": [
+            146
+          ],
+          "continually": [
+            148
+          ],
+          "expanded,": [
+            149
+          ],
+          "revised,": [
+            150
+          ],
+          "response": [
+            154
+          ],
+          "to": [
+            155,
+            183,
+            188
+          ],
+          "newly": [
+            156
+          ],
+          "published": [
+            157
+          ],
+          "discoveries": [
+            158
+          ],
+          "receives": [
+            160
+          ],
+          "extensive": [
+            161
+          ],
+          "QA": [
+            162
+          ],
+          "checks,": [
+            163
+          ],
+          "reviews,": [
+            164
+          ],
+          "user": [
+            166
+          ],
+          "feedback.": [
+            167
+          ],
+          "For": [
+            168
+          ],
+          "each": [
+            169
+          ],
+          "components,": [
+            172
+          ],
+          "description": [
+            176
+          ],
+          "current": [
+            179
+          ],
+          "contents,": [
+            180
+          ],
+          "recent": [
+            181
+          ],
+          "developments": [
+            182
+          ],
+          "keep": [
+            184
+          ],
+          "up": [
+            187
+          ],
+          "date": [
+            189
+          ],
+          "with": [
+            190,
+            210
+          ],
+          "new": [
+            191
+          ],
+          "discoveries,": [
+            192
+          ],
+          "guidance": [
+            194
+          ],
+          "on": [
+            195
+          ],
+          "how": [
+            196
+          ],
+          "users": [
+            197
+          ],
+          "can": [
+            198
+          ],
+          "best": [
+            199
+          ],
+          "make": [
+            200
+          ],
+          "use": [
+            201
+          ],
+          "data": [
+            204
+          ],
+          "provide.": [
+            207
+          ],
+          "We": [
+            208
+          ],
+          "conclude": [
+            209
+          ],
+          "future": [
+            211
+          ],
+          "directions": [
+            212
+          ],
+          "for": [
+            213
+          ],
+          "project.": [
+            215
+          ]
+        }
+      },
+      {
+        "title": "Prediction of effector protein structures from fungal phytopathogens enables evolutionary analyses",
+        "doi": "https://doi.org/10.1038/s41564-022-01287-6",
+        "date": "2023-01-05",
+        "location": {
+          "id": "doi:10.1038/s41564-022-01287-6",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1038/s41564-022-01287-6",
+          "pdf_url": "https://www.nature.com/articles/s41564-022-01287-6.pdf",
+          "source": {
+            "id": "https://openalex.org/S2764926557",
+            "display_name": "Nature Microbiology",
+            "issn_l": "2058-5276",
+            "issn": [
+              "2058-5276"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319908",
+            "host_organization_name": "Nature Portfolio",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319908",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Nature Portfolio",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Nature Microbiology",
+          "raw_type": "journal-article"
+        },
+        "abstract_index": {
+          "Elucidating": [
+            0
+          ],
+          "the": [
+            1,
+            31,
+            39,
+            89,
+            117,
+            125,
+            151,
+            176,
+            182
+          ],
+          "similarity": [
+            2
+          ],
+          "and": [
+            3,
+            54,
+            84,
+            108,
+            145,
+            160,
+            167,
+            211
+          ],
+          "diversity": [
+            4
+          ],
+          "of": [
+            5,
+            33,
+            41,
+            73,
+            94,
+            119,
+            132,
+            179
+          ],
+          "pathogen": [
+            6,
+            183
+          ],
+          "effectors": [
+            7,
+            27,
+            170,
+            180
+          ],
+          "is": [
+            8
+          ],
+          "critical": [
+            9
+          ],
+          "to": [
+            10
+          ],
+          "understand": [
+            11
+          ],
+          "their": [
+            12
+          ],
+          "evolution": [
+            13,
+            209,
+            214,
+            223
+          ],
+          "across": [
+            14,
+            88,
+            201
+          ],
+          "fungal": [
+            15,
+            49,
+            90
+          ],
+          "phytopathogens.": [
+            16
+          ],
+          "However,": [
+            17
+          ],
+          "rapid": [
+            18
+          ],
+          "divergence": [
+            19
+          ],
+          "that": [
+            20,
+            136,
+            150,
+            190
+          ],
+          "diminishes": [
+            21
+          ],
+          "sequence": [
+            22,
+            121
+          ],
+          "similarities": [
+            23
+          ],
+          "between": [
+            24
+          ],
+          "putatively": [
+            25
+          ],
+          "homologous": [
+            26
+          ],
+          "has": [
+            28
+          ],
+          "largely": [
+            29
+          ],
+          "concealed": [
+            30
+          ],
+          "roots": [
+            32
+          ],
+          "effector": [
+            34,
+            74,
+            82,
+            97,
+            114,
+            134,
+            192,
+            208,
+            222
+          ],
+          "evolution.": [
+            35
+          ],
+          "Here": [
+            36
+          ],
+          "we": [
+            37,
+            65
+          ],
+          "modelled": [
+            38
+          ],
+          "structures": [
+            40
+          ],
+          "26,653": [
+            42
+          ],
+          "secreted": [
+            43
+          ],
+          "proteins": [
+            44
+          ],
+          "from": [
+            45,
+            197,
+            224
+          ],
+          "14": [
+            46
+          ],
+          "agriculturally": [
+            47
+          ],
+          "important": [
+            48
+          ],
+          "phytopathogens,": [
+            50
+          ],
+          "six": [
+            51
+          ],
+          "non-pathogenic": [
+            52
+          ],
+          "fungi": [
+            53
+          ],
+          "one": [
+            55
+          ],
+          "oomycete": [
+            56
+          ],
+          "with": [
+            57,
+            162
+          ],
+          "AlphaFold": [
+            58
+          ],
+          "2.": [
+            59
+          ],
+          "With": [
+            60
+          ],
+          "18,000": [
+            61
+          ],
+          "successfully": [
+            62
+          ],
+          "predicted": [
+            63
+          ],
+          "folds,": [
+            64
+          ],
+          "performed": [
+            66
+          ],
+          "structure-guided": [
+            67
+          ],
+          "comparative": [
+            68
+          ],
+          "analyses": [
+            69
+          ],
+          "on": [
+            70,
+            173
+          ],
+          "two": [
+            71
+          ],
+          "aspects": [
+            72
+          ],
+          "evolution:": [
+            75
+          ],
+          "uniquely": [
+            76
+          ],
+          "expanded": [
+            77,
+            113,
+            152
+          ],
+          "sequence-unrelated": [
+            78
+          ],
+          "structurally": [
+            79
+          ],
+          "similar": [
+            80
+          ],
+          "(SUSS)": [
+            81
+          ],
+          "families": [
+            83,
+            98,
+            115,
+            135,
+            193
+          ],
+          "common": [
+            85
+          ],
+          "folds": [
+            86,
+            154,
+            199
+          ],
+          "present": [
+            87
+          ],
+          "species.": [
+            91
+          ],
+          "Extreme": [
+            92
+          ],
+          "expansion": [
+            93
+          ],
+          "lineage-specific": [
+            95
+          ],
+          "SUSS": [
+            96,
+            133,
+            169,
+            221
+          ],
+          "was": [
+            99
+          ],
+          "found": [
+            100,
+            188
+          ],
+          "only": [
+            101
+          ],
+          "in": [
+            102,
+            181,
+            219
+          ],
+          "several": [
+            103
+          ],
+          "obligate": [
+            104
+          ],
+          "biotrophs,": [
+            105
+          ],
+          "Blumeria": [
+            106
+          ],
+          "graminis": [
+            107
+          ],
+          "Puccinia": [
+            109
+          ],
+          "graminis.": [
+            110
+          ],
+          "The": [
+            111
+          ],
+          "highly": [
+            112
+          ],
+          "were": [
+            116
+          ],
+          "source": [
+            118
+          ],
+          "conserved": [
+            120,
+            200
+          ],
+          "motifs,": [
+            122
+          ],
+          "such": [
+            123,
+            141
+          ],
+          "as": [
+            124,
+            142,
+            215
+          ],
+          "Y/F/WxC": [
+            126
+          ],
+          "motif.": [
+            127
+          ],
+          "We": [
+            128,
+            186
+          ],
+          "identified": [
+            129
+          ],
+          "new": [
+            130
+          ],
+          "classes": [
+            131
+          ],
+          "include": [
+            137
+          ],
+          "known": [
+            138
+          ],
+          "virulence": [
+            139
+          ],
+          "factors,": [
+            140
+          ],
+          "AvrSr35,": [
+            143
+          ],
+          "AvrSr50": [
+            144
+          ],
+          "Tin2.": [
+            146
+          ],
+          "Structural": [
+            147
+          ],
+          "comparisons": [
+            148
+          ],
+          "revealed": [
+            149
+          ],
+          "structural": [
+            153
+          ],
+          "further": [
+            155
+          ],
+          "diversify": [
+            156
+          ],
+          "through": [
+            157
+          ],
+          "domain": [
+            158
+          ],
+          "duplications": [
+            159
+          ],
+          "fusion": [
+            161
+          ],
+          "disordered": [
+            163
+          ],
+          "stretches.": [
+            164
+          ],
+          "Putatively": [
+            165
+          ],
+          "sub-": [
+            166
+          ],
+          "neo-functionalized": [
+            168
+          ],
+          "could": [
+            171,
+            194
+          ],
+          "reconverge": [
+            172
+          ],
+          "regulation,": [
+            174
+          ],
+          "expanding": [
+            175
+          ],
+          "functional": [
+            177
+          ],
+          "pools": [
+            178
+          ],
+          "infection": [
+            184
+          ],
+          "cycle.": [
+            185
+          ],
+          "also": [
+            187
+          ],
+          "evidence": [
+            189
+          ],
+          "many": [
+            191
+          ],
+          "have": [
+            195
+          ],
+          "originated": [
+            196
+          ],
+          "ancestral": [
+            198,
+            225
+          ],
+          "fungi.": [
+            202
+          ],
+          "Collectively,": [
+            203
+          ],
+          "our": [
+            204
+          ],
+          "study": [
+            205
+          ],
+          "highlights": [
+            206
+          ],
+          "diverse": [
+            207
+          ],
+          "mechanisms": [
+            210
+          ],
+          "supports": [
+            212
+          ],
+          "divergent": [
+            213
+          ],
+          "a": [
+            216
+          ],
+          "major": [
+            217
+          ],
+          "force": [
+            218
+          ],
+          "driving": [
+            220
+          ],
+          "proteins.": [
+            226
+          ]
+        }
+      },
+      {
+        "title": "GPU-accelerated homology search with MMseqs2",
+        "doi": "https://doi.org/10.1038/s41592-025-02819-8",
+        "date": "2025-09-18",
+        "location": {
+          "id": "doi:10.1038/s41592-025-02819-8",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1038/s41592-025-02819-8",
+          "pdf_url": "https://www.nature.com/articles/s41592-025-02819-8.pdf",
+          "source": {
+            "id": "https://openalex.org/S127827428",
+            "display_name": "Nature Methods",
+            "issn_l": "1548-7091",
+            "issn": [
+              "1548-7091",
+              "1548-7105"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319908",
+            "host_organization_name": "Nature Portfolio",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319908",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Nature Portfolio",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Nature Methods",
+          "raw_type": "journal-article"
+        },
+        "abstract_index": {
+          "Rapidly": [
+            0
+          ],
+          "growing": [
+            1
+          ],
+          "protein": [
+            2,
+            33,
+            57,
+            69
+          ],
+          "databases": [
+            3
+          ],
+          "demand": [
+            4
+          ],
+          "faster": [
+            5,
+            18
+          ],
+          "sensitive": [
+            6
+          ],
+          "search": [
+            7,
+            71
+          ],
+          "tools.": [
+            8
+          ],
+          "Here": [
+            9
+          ],
+          "the": [
+            10,
+            41,
+            46,
+            64
+          ],
+          "graphics": [
+            11
+          ],
+          "processing": [
+            12
+          ],
+          "unit": [
+            13
+          ],
+          "(GPU)-accelerated": [
+            14
+          ],
+          "MMseqs2": [
+            15
+          ],
+          "delivers": [
+            16
+          ],
+          "6×": [
+            17
+          ],
+          "single-protein": [
+            19
+          ],
+          "searches": [
+            20
+          ],
+          "than": [
+            21
+          ],
+          "CPU": [
+            22
+          ],
+          "methods": [
+            23
+          ],
+          "on": [
+            24
+          ],
+          "2": [
+            25
+          ],
+          "×": [
+            26
+          ],
+          "64": [
+            27
+          ],
+          "cores,": [
+            28
+          ],
+          "speeds": [
+            29
+          ],
+          "previously": [
+            30
+          ],
+          "requiring": [
+            31
+          ],
+          "large": [
+            32
+          ],
+          "batches.": [
+            34
+          ],
+          "For": [
+            35
+          ],
+          "larger": [
+            36
+          ],
+          "query": [
+            37
+          ],
+          "batches,": [
+            38
+          ],
+          "it": [
+            39
+          ],
+          "is": [
+            40,
+            77
+          ],
+          "most": [
+            42
+          ],
+          "cost-effective": [
+            43
+          ],
+          "solution,": [
+            44
+          ],
+          "outperforming": [
+            45
+          ],
+          "fastest": [
+            47
+          ],
+          "alternative": [
+            48
+          ],
+          "method": [
+            49
+          ],
+          "by": [
+            50,
+            74
+          ],
+          "2.4-fold": [
+            51
+          ],
+          "with": [
+            52,
+            60,
+            72
+          ],
+          "eight": [
+            53
+          ],
+          "GPUs.": [
+            54
+          ],
+          "It": [
+            55
+          ],
+          "accelerates": [
+            56
+          ],
+          "structure": [
+            58,
+            70
+          ],
+          "prediction": [
+            59
+          ],
+          "ColabFold": [
+            61
+          ],
+          "31.8×": [
+            62
+          ],
+          "over": [
+            63
+          ],
+          "standard": [
+            65
+          ],
+          "AlphaFold2": [
+            66
+          ],
+          "pipeline": [
+            67
+          ],
+          "and": [
+            68
+          ],
+          "Foldseek": [
+            73
+          ],
+          "4-27×.": [
+            75
+          ],
+          "MMseqs2-GPU": [
+            76
+          ],
+          "available": [
+            78
+          ],
+          "under": [
+            79
+          ],
+          "an": [
+            80
+          ],
+          "open-source": [
+            81
+          ],
+          "license": [
+            82
+          ],
+          "at": [
+            83
+          ],
+          "https://mmseqs.com/": [
+            84
+          ],
+          ".": [
+            85
+          ]
+        }
+      },
+      {
+        "title": "The mechanisms and management of persistent postsurgical pain",
+        "doi": "https://doi.org/10.3389/fpain.2023.1154597",
+        "date": "2023-07-06",
+        "location": {
+          "id": "doi:10.3389/fpain.2023.1154597",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.3389/fpain.2023.1154597",
+          "pdf_url": "https://www.frontiersin.org/articles/10.3389/fpain.2023.1154597/pdf",
+          "source": {
+            "id": "https://openalex.org/S4210211842",
+            "display_name": "Frontiers in Pain Research",
+            "issn_l": "2673-561X",
+            "issn": [
+              "2673-561X"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320527",
+            "host_organization_name": "Frontiers Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320527"
+            ],
+            "host_organization_lineage_names": [
+              "Frontiers Media"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Frontiers in Pain Research",
+          "raw_type": "journal-article"
+        },
+        "abstract_index": {
+          "An": [
+            0
+          ],
+          "estimated": [
+            1
+          ],
+          "10%-50%": [
+            2
+          ],
+          "of": [
+            3,
+            28,
+            55,
+            72,
+            78,
+            90,
+            139,
+            143
+          ],
+          "patients": [
+            4,
+            45
+          ],
+          "undergoing": [
+            5
+          ],
+          "a": [
+            6,
+            56,
+            60
+          ],
+          "surgical": [
+            7,
+            41,
+            57
+          ],
+          "intervention": [
+            8,
+            67
+          ],
+          "will": [
+            9
+          ],
+          "develop": [
+            10,
+            49
+          ],
+          "persistent": [
+            11,
+            50
+          ],
+          "postsurgical": [
+            12,
+            132
+          ],
+          "pain": [
+            13,
+            23,
+            38,
+            97
+          ],
+          "(PPP)": [
+            14
+          ],
+          "lasting": [
+            15
+          ],
+          "more": [
+            16
+          ],
+          "than": [
+            17
+          ],
+          "3": [
+            18
+          ],
+          "months": [
+            19
+          ],
+          "despite": [
+            20
+          ],
+          "adequate": [
+            21
+          ],
+          "acute": [
+            22,
+            92,
+            127
+          ],
+          "management": [
+            24,
+            98
+          ],
+          "and": [
+            25,
+            36,
+            74,
+            87,
+            113,
+            153
+          ],
+          "the": [
+            26,
+            70,
+            88,
+            118,
+            124,
+            149,
+            157
+          ],
+          "availability": [
+            27
+          ],
+          "minimally": [
+            29
+          ],
+          "invasive": [
+            30
+          ],
+          "procedures.": [
+            31
+          ],
+          "The": [
+            32,
+            52
+          ],
+          "link": [
+            33
+          ],
+          "between": [
+            34
+          ],
+          "early": [
+            35,
+            66
+          ],
+          "late": [
+            37
+          ],
+          "outcomes": [
+            39
+          ],
+          "for": [
+            40,
+            63
+          ],
+          "procedures": [
+            42
+          ],
+          "remains": [
+            43
+          ],
+          "unclear-some": [
+            44
+          ],
+          "improve": [
+            46,
+            75
+          ],
+          "while": [
+            47
+          ],
+          "others": [
+            48
+          ],
+          "pain.": [
+            51,
+            94,
+            133
+          ],
+          "elective": [
+            53
+          ],
+          "nature": [
+            54
+          ],
+          "procedure": [
+            58
+          ],
+          "offers": [
+            59
+          ],
+          "unique": [
+            61
+          ],
+          "opportunity": [
+            62,
+            119
+          ],
+          "prophylactic": [
+            64
+          ],
+          "or": [
+            65,
+            130
+          ],
+          "to": [
+            68,
+            108,
+            120,
+            128
+          ],
+          "prevent": [
+            69
+          ],
+          "development": [
+            71
+          ],
+          "PPP": [
+            73
+          ],
+          "our": [
+            76
+          ],
+          "understanding": [
+            77
+          ],
+          "its": [
+            79
+          ],
+          "associated": [
+            80
+          ],
+          "risk": [
+            81
+          ],
+          "factors,": [
+            82
+          ],
+          "such": [
+            83
+          ],
+          "as": [
+            84
+          ],
+          "pre-operative": [
+            85
+          ],
+          "anxiety": [
+            86
+          ],
+          "duration": [
+            89
+          ],
+          "severe": [
+            91
+          ],
+          "postoperative": [
+            93
+          ],
+          "Current": [
+            95
+          ],
+          "perioperative": [
+            96
+          ],
+          "strategies": [
+            99
+          ],
+          "often": [
+            100
+          ],
+          "include": [
+            101
+          ],
+          "opioids,": [
+            102
+          ],
+          "but": [
+            103
+          ],
+          "long-term": [
+            104
+          ],
+          "consumption": [
+            105
+          ],
+          "can": [
+            106
+          ],
+          "lead": [
+            107
+          ],
+          "tolerance,": [
+            109
+          ],
+          "addiction,": [
+            110
+          ],
+          "opioid-induced": [
+            111
+          ],
+          "hyperalgesia,": [
+            112
+          ],
+          "death.": [
+            114
+          ],
+          "Pre-clinical": [
+            115
+          ],
+          "models": [
+            116
+          ],
+          "provide": [
+            117
+          ],
+          "dissect": [
+            121
+          ],
+          "mechanisms": [
+            122,
+            138
+          ],
+          "underpinning": [
+            123
+          ],
+          "transition": [
+            125
+          ],
+          "from": [
+            126
+          ],
+          "chronic,": [
+            129
+          ],
+          "persistent,": [
+            131
+          ],
+          "This": [
+            134
+          ],
+          "review": [
+            135
+          ],
+          "highlights": [
+            136
+          ],
+          "putative": [
+            137
+          ],
+          "PPP,": [
+            140
+          ],
+          "including": [
+            141
+          ],
+          "sensitisation": [
+            142
+          ],
+          "peripheral": [
+            144
+          ],
+          "sensory": [
+            145
+          ],
+          "neurons,": [
+            146
+          ],
+          "neuroplasticity": [
+            147
+          ],
+          "in": [
+            148
+          ],
+          "central": [
+            150
+          ],
+          "nervous": [
+            151
+          ],
+          "system": [
+            152
+          ],
+          "nociceptive": [
+            154
+          ],
+          "signalling": [
+            155
+          ],
+          "along": [
+            156
+          ],
+          "neuro-immune": [
+            158
+          ],
+          "axis.": [
+            159
+          ]
+        }
+      },
+      {
+        "title": "Persistent spectral theory-guided protein engineering",
+        "doi": "https://doi.org/10.1038/s43588-022-00394-y",
+        "date": "2023-02-20",
+        "location": {
+          "id": "pmh:oai:pubmedcentral.nih.gov:10456983",
+          "is_oa": true,
+          "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/10456983",
+          "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10456983/pdf/nihms-1865717.pdf",
+          "source": {
+            "id": "https://openalex.org/S2764455111",
+            "display_name": "PubMed Central",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Nat Comput Sci",
+          "raw_type": "Text"
+        },
+        "abstract_index": null
+      },
+      {
+        "title": "eIF3d controls the persistent integrated stress response",
+        "doi": "https://doi.org/10.1016/j.molcel.2023.08.008",
+        "date": "2023-09-01",
+        "location": {
+          "id": "doi:10.1016/j.molcel.2023.08.008",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1016/j.molcel.2023.08.008",
+          "pdf_url": "http://www.cell.com/article/S1097276523006433/pdf",
+          "source": {
+            "id": "https://openalex.org/S156208185",
+            "display_name": "Molecular Cell",
+            "issn_l": "1097-2765",
+            "issn": [
+              "1097-2765",
+              "1097-4164"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Molecular Cell",
+          "raw_type": "journal-article"
+        },
+        "abstract_index": null
+      },
+      {
+        "title": "k-means clustering for persistent homology",
+        "doi": "https://doi.org/10.1007/s11634-023-00578-y",
+        "date": "2024-01-31",
+        "location": {
+          "id": "doi:10.1007/s11634-023-00578-y",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/s11634-023-00578-y",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11634-023-00578-y.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210175730",
+            "display_name": "Advances in Data Analysis and Classification",
+            "issn_l": "1862-5355",
+            "issn": [
+              "1862-5355",
+              "1862-5347"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319900",
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319900",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Advances in Data Analysis and Classification",
+          "raw_type": "journal-article"
+        },
+        "abstract_index": {
+          "Abstract": [
+            0
+          ],
+          "Persistent": [
+            1
+          ],
+          "homology": [
+            2
+          ],
+          "is": [
+            3
+          ],
+          "a": [
+            4,
+            19,
+            22,
+            44,
+            51
+          ],
+          "methodology": [
+            5
+          ],
+          "central": [
+            6
+          ],
+          "to": [
+            7,
+            36,
+            78
+          ],
+          "topological": [
+            8,
+            16
+          ],
+          "data": [
+            9,
+            96
+          ],
+          "analysis": [
+            10
+          ],
+          "that": [
+            11,
+            121
+          ],
+          "extracts": [
+            12
+          ],
+          "and": [
+            13,
+            71,
+            94,
+            113,
+            130
+          ],
+          "summarizes": [
+            14
+          ],
+          "the": [
+            15,
+            62,
+            76,
+            79,
+            83
+          ],
+          "features": [
+            17
+          ],
+          "within": [
+            18
+          ],
+          "dataset": [
+            20
+          ],
+          "as": [
+            21,
+            108,
+            110,
+            116
+          ],
+          "persistence": [
+            23,
+            48,
+            68,
+            106,
+            117,
+            128
+          ],
+          "diagram.": [
+            24
+          ],
+          "It": [
+            25
+          ],
+          "has": [
+            26
+          ],
+          "recently": [
+            27
+          ],
+          "gained": [
+            28
+          ],
+          "much": [
+            29
+          ],
+          "popularity": [
+            30
+          ],
+          "from": [
+            31
+          ],
+          "its": [
+            32,
+            40
+          ],
+          "myriad": [
+            33
+          ],
+          "successful": [
+            34
+          ],
+          "applications": [
+            35
+          ],
+          "many": [
+            37
+          ],
+          "domains,": [
+            38
+          ],
+          "however,": [
+            39
+          ],
+          "algebraic": [
+            41
+          ],
+          "construction": [
+            42
+          ],
+          "induces": [
+            43
+          ],
+          "metric": [
+            45
+          ],
+          "space": [
+            46,
+            70
+          ],
+          "of": [
+            47,
+            61,
+            75,
+            97,
+            100,
+            105
+          ],
+          "diagrams": [
+            49,
+            107,
+            111,
+            129
+          ],
+          "with": [
+            50
+          ],
+          "highly": [
+            52
+          ],
+          "complex": [
+            53
+          ],
+          "geometry.": [
+            54
+          ],
+          "In": [
+            55
+          ],
+          "this": [
+            56
+          ],
+          "paper,": [
+            57
+          ],
+          "we": [
+            58,
+            87
+          ],
+          "prove": [
+            59
+          ],
+          "convergence": [
+            60
+          ],
+          "k": [
+            63,
+            122
+          ],
+          "-means": [
+            64,
+            123
+          ],
+          "clustering": [
+            65,
+            124
+          ],
+          "algorithm": [
+            66
+          ],
+          "on": [
+            67,
+            91,
+            127
+          ],
+          "diagram": [
+            69
+          ],
+          "establish": [
+            72
+          ],
+          "theoretical": [
+            73
+          ],
+          "properties": [
+            74
+          ],
+          "solution": [
+            77
+          ],
+          "optimization": [
+            80
+          ],
+          "problem": [
+            81
+          ],
+          "in": [
+            82
+          ],
+          "Karush–Kuhn–Tucker": [
+            84
+          ],
+          "framework.": [
+            85
+          ],
+          "Additionally,": [
+            86
+          ],
+          "perform": [
+            88
+          ],
+          "numerical": [
+            89
+          ],
+          "experiments": [
+            90
+          ],
+          "both": [
+            92
+          ],
+          "simulated": [
+            93
+          ],
+          "real": [
+            95
+          ],
+          "various": [
+            98
+          ],
+          "representations": [
+            99
+          ],
+          "persistent": [
+            101
+          ],
+          "homology,": [
+            102
+          ],
+          "including": [
+            103
+          ],
+          "embeddings": [
+            104
+          ],
+          "well": [
+            109
+          ],
+          "themselves": [
+            112
+          ],
+          "their": [
+            114,
+            133
+          ],
+          "generalizations": [
+            115
+          ],
+          "measures.": [
+            118
+          ],
+          "We": [
+            119
+          ],
+          "find": [
+            120
+          ],
+          "performance": [
+            125
+          ],
+          "directly": [
+            126
+          ],
+          "measures": [
+            131
+          ],
+          "outperform": [
+            132
+          ],
+          "vectorized": [
+            134
+          ],
+          "representations.": [
+            135
+          ]
+        }
+      },
+      {
+        "title": "Improving deep learning protein monomer and complex structure prediction using DeepMSA2 with huge metagenomics data",
+        "doi": "https://doi.org/10.1038/s41592-023-02130-4",
+        "date": "2024-01-02",
+        "location": {
+          "id": "doi:10.1038/s41592-023-02130-4",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1038/s41592-023-02130-4",
+          "pdf_url": "https://www.nature.com/articles/s41592-023-02130-4.pdf",
+          "source": {
+            "id": "https://openalex.org/S127827428",
+            "display_name": "Nature Methods",
+            "issn_l": "1548-7091",
+            "issn": [
+              "1548-7091",
+              "1548-7105"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319908",
+            "host_organization_name": "Nature Portfolio",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319908",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Nature Portfolio",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Nature Methods",
+          "raw_type": "journal-article"
+        },
+        "abstract_index": {
+          "Leveraging": [
+            0
+          ],
+          "iterative": [
+            1
+          ],
+          "alignment": [
+            2,
+            22,
+            88
+          ],
+          "search": [
+            3,
+            89
+          ],
+          "through": [
+            4,
+            116
+          ],
+          "genomic": [
+            5
+          ],
+          "and": [
+            6,
+            19,
+            39,
+            60,
+            90,
+            94,
+            120
+          ],
+          "metagenome": [
+            7
+          ],
+          "sequence": [
+            8
+          ],
+          "databases,": [
+            9
+          ],
+          "we": [
+            10
+          ],
+          "report": [
+            11
+          ],
+          "the": [
+            12,
+            34,
+            55,
+            70,
+            79,
+            96,
+            143,
+            146
+          ],
+          "DeepMSA2": [
+            13,
+            29,
+            52,
+            83
+          ],
+          "pipeline": [
+            14,
+            50
+          ],
+          "for": [
+            15
+          ],
+          "uniform": [
+            16
+          ],
+          "protein": [
+            17,
+            37,
+            113
+          ],
+          "single-": [
+            18
+          ],
+          "multichain": [
+            20
+          ],
+          "multiple-sequence": [
+            21
+          ],
+          "(MSA)": [
+            23
+          ],
+          "construction.": [
+            24
+          ],
+          "Large-scale": [
+            25
+          ],
+          "benchmarks": [
+            26
+          ],
+          "show": [
+            27,
+            77
+          ],
+          "that": [
+            28,
+            78,
+            124
+          ],
+          "MSAs": [
+            30
+          ],
+          "can": [
+            31
+          ],
+          "remarkably": [
+            32
+          ],
+          "increase": [
+            33
+          ],
+          "accuracy": [
+            35
+          ],
+          "of": [
+            36,
+            82,
+            98,
+            126,
+            145
+          ],
+          "tertiary": [
+            38
+          ],
+          "quaternary": [
+            40
+          ],
+          "structure": [
+            41,
+            114,
+            132
+          ],
+          "predictions": [
+            42
+          ],
+          "compared": [
+            43
+          ],
+          "with": [
+            44,
+            51,
+            65,
+            138
+          ],
+          "current": [
+            45
+          ],
+          "state-of-the-art": [
+            46
+          ],
+          "methods.": [
+            47
+          ],
+          "An": [
+            48
+          ],
+          "integrated": [
+            49
+          ],
+          "participated": [
+            53
+          ],
+          "in": [
+            54,
+            85,
+            95
+          ],
+          "most": [
+            56
+          ],
+          "recent": [
+            57
+          ],
+          "CASP15": [
+            58
+          ],
+          "experiment": [
+            59
+          ],
+          "created": [
+            61
+          ],
+          "complex": [
+            62
+          ],
+          "structural": [
+            63
+          ],
+          "models": [
+            64
+          ],
+          "considerably": [
+            66
+          ],
+          "higher": [
+            67
+          ],
+          "quality": [
+            68
+          ],
+          "than": [
+            69
+          ],
+          "AlphaFold2-Multimer": [
+            71
+          ],
+          "server": [
+            72
+          ],
+          "(v.2.2.0).": [
+            73
+          ],
+          "Detailed": [
+            74
+          ],
+          "data": [
+            75
+          ],
+          "analyses": [
+            76
+          ],
+          "major": [
+            80
+          ],
+          "advantage": [
+            81
+          ],
+          "lies": [
+            84
+          ],
+          "its": [
+            86
+          ],
+          "balanced": [
+            87
+          ],
+          "effective": [
+            91
+          ],
+          "model": [
+            92
+          ],
+          "selection,": [
+            93
+          ],
+          "power": [
+            97
+          ],
+          "integrating": [
+            99
+          ],
+          "huge": [
+            100
+          ],
+          "metagenomics": [
+            101
+          ],
+          "databases.": [
+            102
+          ],
+          "These": [
+            103
+          ],
+          "results": [
+            104
+          ],
+          "demonstrate": [
+            105
+          ],
+          "a": [
+            106
+          ],
+          "new": [
+            107
+          ],
+          "avenue": [
+            108
+          ],
+          "to": [
+            109,
+            129
+          ],
+          "improve": [
+            110
+          ],
+          "deep": [
+            111,
+            130
+          ],
+          "learning": [
+            112
+          ],
+          "prediction": [
+            115,
+            133
+          ],
+          "advanced": [
+            117
+          ],
+          "MSA": [
+            118
+          ],
+          "construction": [
+            119
+          ],
+          "provide": [
+            121
+          ],
+          "additional": [
+            122
+          ],
+          "evidence": [
+            123
+          ],
+          "optimization": [
+            125
+          ],
+          "input": [
+            127
+          ],
+          "information": [
+            128
+          ],
+          "learning-based": [
+            131
+          ],
+          "methods": [
+            134
+          ],
+          "must": [
+            135
+          ],
+          "be": [
+            136
+          ],
+          "considered": [
+            137
+          ],
+          "as": [
+            139,
+            142
+          ],
+          "much": [
+            140
+          ],
+          "care": [
+            141
+          ],
+          "design": [
+            144
+          ],
+          "predictor": [
+            147
+          ],
+          "itself.": [
+            148
+          ]
+        }
+      },
+      {
+        "title": "Topological data analysis and topological deep learning beyond persistent homology: a review",
+        "doi": "https://doi.org/10.1007/s10462-025-11462-w",
+        "date": "2025-12-21",
+        "location": {
+          "id": "doi:10.1007/s10462-025-11462-w",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/s10462-025-11462-w",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/s10462-025-11462-w.pdf",
+          "source": {
+            "id": "https://openalex.org/S122814990",
+            "display_name": "Artificial Intelligence Review",
+            "issn_l": "0269-2821",
+            "issn": [
+              "0269-2821",
+              "1573-7462"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319900",
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319900",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Artificial Intelligence Review",
+          "raw_type": "journal-article"
+        },
+        "abstract_index": {
+          "Topological": [
+            0
+          ],
+          "data": [
+            1,
+            13,
+            139,
+            206,
+            214
+          ],
+          "analysis": [
+            2
+          ],
+          "(TDA)": [
+            3
+          ],
+          "is": [
+            4,
+            33,
+            221
+          ],
+          "a": [
+            5,
+            36,
+            59,
+            94
+          ],
+          "rapidly": [
+            6
+          ],
+          "evolving": [
+            7
+          ],
+          "field": [
+            8
+          ],
+          "in": [
+            9,
+            27,
+            39,
+            58,
+            64,
+            128,
+            145,
+            167,
+            211
+          ],
+          "applied": [
+            10
+          ],
+          "mathematics": [
+            11
+          ],
+          "and": [
+            12,
+            24,
+            68,
+            85,
+            99,
+            110,
+            121,
+            135,
+            157,
+            182,
+            213,
+            230
+          ],
+          "science": [
+            14
+          ],
+          "that": [
+            15
+          ],
+          "leverages": [
+            16
+          ],
+          "tools": [
+            17,
+            195
+          ],
+          "from": [
+            18,
+            170
+          ],
+          "topology": [
+            19,
+            172
+          ],
+          "to": [
+            20,
+            77,
+            82,
+            87,
+            116
+          ],
+          "uncover": [
+            21
+          ],
+          "robust,": [
+            22
+          ],
+          "shape-driven,": [
+            23
+          ],
+          "explainable": [
+            25
+          ],
+          "insights": [
+            26
+          ],
+          "complex": [
+            28
+          ],
+          "datasets.": [
+            29
+          ],
+          "The": [
+            30
+          ],
+          "main": [
+            31
+          ],
+          "workhorse": [
+            32
+          ],
+          "persistent": [
+            34,
+            52,
+            71,
+            102,
+            107,
+            150,
+            154,
+            179,
+            183
+          ],
+          "homology,": [
+            35
+          ],
+          "technique": [
+            37
+          ],
+          "rooted": [
+            38,
+            144
+          ],
+          "algebraic": [
+            40
+          ],
+          "topology.": [
+            41,
+            137
+          ],
+          "Paired": [
+            42
+          ],
+          "with": [
+            43,
+            215,
+            238
+          ],
+          "topological": [
+            44,
+            49,
+            108,
+            119,
+            194,
+            226
+          ],
+          "deep": [
+            45
+          ],
+          "learning": [
+            46,
+            232
+          ],
+          "(TDL)": [
+            47
+          ],
+          "or": [
+            48
+          ],
+          "machine": [
+            50,
+            231
+          ],
+          "learning,": [
+            51
+          ],
+          "homology": [
+            53,
+            72
+          ],
+          "has": [
+            54,
+            73
+          ],
+          "achieved": [
+            55
+          ],
+          "tremendous": [
+            56
+          ],
+          "success": [
+            57
+          ],
+          "wide": [
+            60
+          ],
+          "variety": [
+            61
+          ],
+          "of": [
+            62,
+            97,
+            130,
+            193,
+            224
+          ],
+          "applications": [
+            63
+          ],
+          "science,": [
+            65
+          ],
+          "engineering,": [
+            66
+          ],
+          "medicine,": [
+            67
+          ],
+          "industry.": [
+            69
+          ],
+          "However,": [
+            70
+          ],
+          "many": [
+            74
+          ],
+          "limitations": [
+            75
+          ],
+          "due": [
+            76
+          ],
+          "its": [
+            78
+          ],
+          "high-level": [
+            79
+          ],
+          "abstraction,": [
+            80
+          ],
+          "insensitivity": [
+            81
+          ],
+          "non-topological": [
+            83
+          ],
+          "changes,": [
+            84
+          ],
+          "restriction": [
+            86
+          ],
+          "point": [
+            88,
+            202
+          ],
+          "cloud": [
+            89
+          ],
+          "data.": [
+            90
+          ],
+          "This": [
+            91,
+            186
+          ],
+          "paper": [
+            92,
+            187
+          ],
+          "presents": [
+            93
+          ],
+          "comprehensive": [
+            95
+          ],
+          "review": [
+            96,
+            220,
+            236
+          ],
+          "TDA": [
+            98
+          ],
+          "TDL": [
+            100
+          ],
+          "beyond": [
+            101
+          ],
+          "homology.": [
+            103,
+            185
+          ],
+          "It": [
+            104
+          ],
+          "analyzes": [
+            105
+          ],
+          "how": [
+            106
+          ],
+          "Laplacians": [
+            109
+          ],
+          "Dirac": [
+            111
+          ],
+          "operators": [
+            112
+          ],
+          "provide": [
+            113
+          ],
+          "spectral": [
+            114
+          ],
+          "representations": [
+            115
+          ],
+          "capture": [
+            117
+          ],
+          "both": [
+            118
+          ],
+          "invariants": [
+            120
+          ],
+          "homotopic": [
+            122
+          ],
+          "evolution.": [
+            123
+          ],
+          "Other": [
+            124
+          ],
+          "formulations": [
+            125
+          ],
+          "are": [
+            126,
+            160,
+            173
+          ],
+          "presented": [
+            127
+          ],
+          "terms": [
+            129
+          ],
+          "sheaf": [
+            131
+          ],
+          "theory,": [
+            132
+          ],
+          "Mayer": [
+            133
+          ],
+          "topology,": [
+            134,
+            147
+          ],
+          "interaction": [
+            136
+          ],
+          "For": [
+            138,
+            162
+          ],
+          "on": [
+            140,
+            207
+          ],
+          "differentiable": [
+            141
+          ],
+          "manifolds,": [
+            142,
+            208
+          ],
+          "techniques": [
+            143
+          ],
+          "differential": [
+            146
+          ],
+          "such": [
+            148,
+            200
+          ],
+          "as": [
+            149,
+            201
+          ],
+          "de": [
+            151
+          ],
+          "Rham": [
+            152
+          ],
+          "cohomology,": [
+            153
+          ],
+          "Hodge": [
+            155,
+            158
+          ],
+          "Laplacian,": [
+            156
+          ],
+          "decomposition,": [
+            159
+          ],
+          "reviewed.": [
+            161
+          ],
+          "one-dimensional": [
+            163
+          ],
+          "(1D)": [
+            164
+          ],
+          "curves": [
+            165,
+            209
+          ],
+          "embedded": [
+            166,
+            210
+          ],
+          "3-space,": [
+            168,
+            212
+          ],
+          "approaches": [
+            169
+          ],
+          "geometric": [
+            171
+          ],
+          "discussed,": [
+            174
+          ],
+          "including": [
+            175
+          ],
+          "multiscale": [
+            176
+          ],
+          "Gauss-link": [
+            177
+          ],
+          "integrals,": [
+            178
+          ],
+          "Jones": [
+            180
+          ],
+          "polynomials,": [
+            181
+          ],
+          "Khovanov": [
+            184
+          ],
+          "further": [
+            188
+          ],
+          "discusses": [
+            189
+          ],
+          "the": [
+            190
+          ],
+          "appropriate": [
+            191
+          ],
+          "selection": [
+            192
+          ],
+          "for": [
+            196
+          ],
+          "different": [
+            197
+          ],
+          "input": [
+            198
+          ],
+          "data,": [
+            199,
+            205
+          ],
+          "clouds,": [
+            203
+          ],
+          "sequential": [
+            204
+          ],
+          "additional": [
+            216
+          ],
+          "non-geometric": [
+            217
+          ],
+          "information.": [
+            218
+          ],
+          "A": [
+            219
+          ],
+          "also": [
+            222
+          ],
+          "given": [
+            223
+          ],
+          "various": [
+            225
+          ],
+          "representations,": [
+            227
+          ],
+          "software": [
+            228
+          ],
+          "packages,": [
+            229
+          ],
+          "vectorizations.": [
+            233
+          ],
+          "Finally,": [
+            234
+          ],
+          "this": [
+            235
+          ],
+          "ends": [
+            237
+          ],
+          "concluding": [
+            239
+          ],
+          "remarks.": [
+            240
+          ]
+        }
+      }
+    ]
+  }
+]

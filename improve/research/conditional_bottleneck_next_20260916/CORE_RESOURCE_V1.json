@@ -1,0 +1,132 @@
+{
+  "created_at_utc": "2026-09-15T21:40:00.889536+00:00",
+  "records": [
+    {
+      "training_queries": 128,
+      "construction_seconds": 3.8640565499663353,
+      "forward_backward_seconds": 1.3684980534017086,
+      "peak_allocated_gib": 1.271477222442627,
+      "mean_kl": 597.9257202148438,
+      "objective": 0.9737435579299927,
+      "undirected_edges": 378498,
+      "graphs": 128,
+      "mean_retention": 0.4955073893070221,
+      "virtual_edges": 43993,
+      "parameter_updates": 0,
+      "heldout_performance_computed": false
+    },
+    {
+      "training_queries": 1554,
+      "construction_seconds": 3.8640565499663353,
+      "forward_backward_seconds": 2.5675465166568756,
+      "peak_allocated_gib": 7.8366007804870605,
+      "mean_kl": 319.45068359375,
+      "objective": 0.5738251209259033,
+      "undirected_edges": 2464924,
+      "graphs": 1554,
+      "mean_retention": 0.4957316219806671,
+      "virtual_edges": 293203,
+      "parameter_updates": 0,
+      "heldout_performance_computed": false
+    }
+  ],
+  "graph_audits": [
+    {
+      "original_undirected_edges": 34172,
+      "eligible_same_type_proposals": 3238095,
+      "nominal_addition_budget": 3417,
+      "virtual_undirected_edges": 3417,
+      "cutoff": 0.37701450599886616,
+      "tied_cutoff_edges_retained": true,
+      "cross_type_virtual_edges": 0,
+      "target_queries_cannot_be_virtual_edges": true,
+      "virtual_edges_are_supervision": false,
+      "completion_reads_label_arrays": false,
+      "completion_uses_training_positive_graph": true,
+      "completion_input": "Current support-only physical graph; no held-out target facts."
+    },
+    {
+      "original_undirected_edges": 34172,
+      "eligible_same_type_proposals": 3239442,
+      "nominal_addition_budget": 3417,
+      "virtual_undirected_edges": 3418,
+      "cutoff": 0.37662337662337664,
+      "tied_cutoff_edges_retained": true,
+      "cross_type_virtual_edges": 0,
+      "target_queries_cannot_be_virtual_edges": true,
+      "virtual_edges_are_supervision": false,
+      "completion_reads_label_arrays": false,
+      "completion_uses_training_positive_graph": true,
+      "completion_input": "Current support-only physical graph; no held-out target facts."
+    },
+    {
+      "original_undirected_edges": 34172,
+      "eligible_same_type_proposals": 3238762,
+      "nominal_addition_budget": 3417,
+      "virtual_undirected_edges": 3417,
+      "cutoff": 0.37642211571242634,
+      "tied_cutoff_edges_retained": true,
+      "cross_type_virtual_edges": 0,
+      "target_queries_cannot_be_virtual_edges": true,
+      "virtual_edges_are_supervision": false,
+      "completion_reads_label_arrays": false,
+      "completion_uses_training_positive_graph": true,
+      "completion_input": "Current support-only physical graph; no held-out target facts."
+    },
+    {
+      "original_undirected_edges": 34172,
+      "eligible_same_type_proposals": 3239366,
+      "nominal_addition_budget": 3417,
+      "virtual_undirected_edges": 3417,
+      "cutoff": 0.37689548155151387,
+      "tied_cutoff_edges_retained": true,
+      "cross_type_virtual_edges": 0,
+      "target_queries_cannot_be_virtual_edges": true,
+      "virtual_edges_are_supervision": false,
+      "completion_reads_label_arrays": false,
+      "completion_uses_training_positive_graph": true,
+      "completion_input": "Current support-only physical graph; no held-out target facts."
+    },
+    {
+      "original_undirected_edges": 34173,
+      "eligible_same_type_proposals": 3239538,
+      "nominal_addition_budget": 3417,
+      "virtual_undirected_edges": 3418,
+      "cutoff": 0.37662337662337664,
+      "tied_cutoff_edges_retained": true,
+      "cross_type_virtual_edges": 0,
+      "target_queries_cannot_be_virtual_edges": true,
+      "virtual_edges_are_supervision": false,
+      "completion_reads_label_arrays": false,
+      "completion_uses_training_positive_graph": true,
+      "completion_input": "Current support-only physical graph; no held-out target facts."
+    }
+  ],
+  "parameters": {
+    "width": 32,
+    "depth": 2,
+    "dropout": 0.1,
+    "folds": 5,
+    "query_chunk": 128,
+    "completion_ratio": 0.1,
+    "original_prior": 0.8,
+    "virtual_prior": 0.5,
+    "information_weight": 0.001,
+    "temperature": 0.67,
+    "lnc_policy": "identity_strong_reference"
+  },
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/conditional_bottleneck_next_20260916/core_resource_v1.py": "23af22ab0564c6b60ea4c271a8442db888ffb06ab87a7c47e307f4706640da2c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/information_bottleneck_graph_v1.py": "36bc70c94eed79571cdb0dbc7367c8c91a684023012b1ba0ed9481a090c5ca4e"
+  },
+  "input_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/anchor_residual_energy_v2_20260916/inputs/MiDrug/arrays.npz": "39910438b09c0c3d595f654eb91d20ffa8e60f4554559fb0dcc4892def39d3bf"
+  },
+  "device": "cuda:1",
+  "parameter_updates": 0,
+  "new_neural_fits": 0,
+  "evaluation_labels_read": false,
+  "performance_metrics_computed": false,
+  "confirmed_final_innovations": 0,
+  "sha256": "ae73dd3c940cb68b5a9f98d7c5ba1b5d1a45c55479d2ddfaf1303d2e7499cbe2"
+}

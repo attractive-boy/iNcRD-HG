@@ -1,0 +1,1816 @@
+{
+ "created_at_utc": "2026-09-16T13:30:55.976315+00:00",
+ "source_globs": "results/**/*.json with means+primary_kind",
+ "assessment_count": 87,
+ "performance_gate_true": 84,
+ "mechanism_gate_true": 36,
+ "declared_gate_true": 36,
+ "full_residual_gain": {
+  "auc_mean": 0.0007991750889517601,
+  "auc_median": 0.000749740810705927,
+  "auc_min": 2.2947279771923235e-06,
+  "auc_max": 0.002143082031026422,
+  "ap_mean": 0.0010434210759560595,
+  "ap_median": 0.0010478214730016422,
+  "ap_min": -0.0003278881801364042,
+  "ap_max": 0.0032474348348291437
+ },
+ "mechanism_margin": {
+  "count": 87,
+  "auc_mean": -6.199742797706619e-05,
+  "auc_positive_fraction": 0.4367816091954023,
+  "ap_mean": -1.717497957694762e-05,
+  "ap_positive_fraction": 0.4942528735632184
+ },
+ "fusion_optimum": {
+  "correlation": 0.5942922446495502,
+  "residual_auc": 0.8178392199515332,
+  "residual_ap": 0.6688822363965938,
+  "anchor_auc": 0.9627256377964776,
+  "anchor_ap": 0.9278591979450169,
+  "weights": {
+   "-0.1": {
+    "auc": 0.9612837979659206,
+    "ap": 0.9261072543511091
+   },
+   "0.0": {
+    "auc": 0.9627256377964776,
+    "ap": 0.9278591979450169
+   },
+   "0.1": {
+    "auc": 0.9636331978552484,
+    "ap": 0.9286763409930788
+   },
+   "0.2": {
+    "auc": 0.9635866868929724,
+    "ap": 0.9276758572963726
+   },
+   "0.3": {
+    "auc": 0.9629999332150285,
+    "ap": 0.9257136900815208
+   },
+   "0.5": {
+    "auc": 0.9607864884462001,
+    "ap": 0.9199590255895804
+   },
+   "1.0": {
+    "auc": 0.951223119048982,
+    "ap": 0.8984165522146289
+   }
+  }
+ },
+ "rows": [
+  {
+   "path": "results/anchor_priority_equilibrium_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0003565840441162038,
+   "full_delta_ap": 0.0005294897828578282,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_two_hops": [
+    -3.100730818417219e-05,
+    -0.00024486633525888646
+   ],
+   "worst_control_auc": -3.100730818417219e-05,
+   "worst_control_ap": -0.00024486633525888646
+  },
+  {
+   "path": "results/residual_aligned_experts_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.001313040242715724,
+   "full_delta_ap": 0.0011677563619985065,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_no_alignment": [
+    0.0007382124525349143,
+    0.0006527995146511367
+   ],
+   "minus_uniform": [
+    0.000865819451599914,
+    0.0007013528641895972
+   ],
+   "minus_erm": [
+    0.0006630793596276163,
+    0.00046367276085823583
+   ],
+   "worst_control_auc": 0.0006630793596276163,
+   "worst_control_ap": 0.00046367276085823583
+  },
+  {
+   "path": "results/residual_aligned_experts_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.000816128252587108,
+   "full_delta_ap": 0.0008201780937484582,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_alignment": [
+    -7.394050413119424e-05,
+    0.00029452947753353753
+   ],
+   "minus_uniform": [
+    3.140483777612046e-05,
+    -3.790442003015482e-05
+   ],
+   "minus_erm": [
+    0.000295364486932422,
+    0.0003986677587412742
+   ],
+   "worst_control_auc": -7.394050413119424e-05,
+   "worst_control_ap": -3.790442003015482e-05
+  },
+  {
+   "path": "results/anchor_priority_nonproximal_ranking_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0007990344801267479,
+   "full_delta_ap": 0.0012841975422603902,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_bce": [
+    -0.00025640658690628815,
+    0.000705655929538751
+   ],
+   "worst_control_auc": -0.00025640658690628815,
+   "worst_control_ap": 0.000705655929538751
+  },
+  {
+   "path": "results/anchor_residual_energy_v2_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0004078653614976169,
+   "full_delta_ap": 0.0011018229705348492,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_no_repulsion": [
+    2.9814719407883494e-05,
+    0.00028775847596085313
+   ],
+   "minus_attractive": [
+    2.385177552577389e-06,
+    0.00048220979239732564
+   ],
+   "worst_control_auc": 2.385177552577389e-06,
+   "worst_control_ap": 0.00028775847596085313
+  },
+  {
+   "path": "results/anchor_residual_energy_v2_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0004949243421680238,
+   "full_delta_ap": 0.0012685596571964848,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_repulsion": [
+    0.0001876339674725669,
+    0.0006471068372497778
+   ],
+   "minus_attractive": [
+    -6.519485310485518e-05,
+    0.0006180110672143375
+   ],
+   "worst_control_auc": -6.519485310485518e-05,
+   "worst_control_ap": 0.0006180110672143375
+  },
+  {
+   "path": "results/residual_learned_structure_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0013142328314919016,
+   "full_delta_ap": 0.0003745062789699549,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_detached": [
+    0.0004341023145761902,
+    -0.0006978468493624712
+   ],
+   "minus_static": [
+    0.0007298643311007824,
+    -0.0002859440096346644
+   ],
+   "minus_no_rewire": [
+    0.0008574713301657821,
+    -0.0005743995293092663
+   ],
+   "worst_control_auc": 0.0004341023145761902,
+   "worst_control_ap": -0.0006978468493624712
+  },
+  {
+   "path": "results/anchor_priority_determinantal_selection_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.000940952544507434,
+   "full_delta_ap": 0.0010924494016337771,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_diversity": [
+    -8.467380311805162e-05,
+    -0.00020706079452470494
+   ],
+   "minus_no_condition": [
+    -0.0008336195546396752,
+    0.00032562415433701197
+   ],
+   "worst_control_auc": -0.0008336195546396752,
+   "worst_control_ap": -0.00020706079452470494
+  },
+  {
+   "path": "results/residual_geometry_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "attention_only",
+   "full_delta_auc": 0.00085031579750805,
+   "full_delta_ap": 0.0012526555817268248,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_full": [
+    0.00018485126032796728,
+    0.00046138310391075077
+   ],
+   "minus_euclidean": [
+    2.5044364302506672e-05,
+    0.00013745148001298446
+   ],
+   "minus_distance_only": [
+    9.421451332858322e-05,
+    0.00027986874067797984
+   ],
+   "worst_control_auc": 2.5044364302506672e-05,
+   "worst_control_ap": 0.00013745148001298446
+  },
+  {
+   "path": "results/residual_geometry_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "attention_only",
+   "full_delta_auc": 0.0008193084893239148,
+   "full_delta_ap": 0.0010910311125169603,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_full": [
+    3.180236736821662e-05,
+    7.956682341214716e-05
+   ],
+   "minus_euclidean": [
+    7.394050413108322e-05,
+    0.00018551831245479844
+   ],
+   "minus_distance_only": [
+    3.100730818409814e-05,
+    0.0001589742925088844
+   ],
+   "worst_control_auc": 3.100730818409814e-05,
+   "worst_control_ap": 7.956682341214716e-05
+  },
+  {
+   "path": "results/anchor_priority_fourier_quantile_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0006237239300094233,
+   "full_delta_ap": 0.000645806287635331,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_mean_only": [
+    4.7703551052435955e-05,
+    -0.00023627545449589338
+   ],
+   "minus_mean_std": [
+    -0.00022539927872211596,
+    -0.0001575577130440431
+   ],
+   "worst_control_auc": -0.00022539927872211596,
+   "worst_control_ap": -0.00023627545449589338
+  },
+  {
+   "path": "results/anchor_priority_polynormer_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0006165683973514691,
+   "full_delta_ap": 0.0007835921821340852,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_additive_update": [
+    -0.00017411796134103597,
+    0.0007612134658911973
+   ],
+   "worst_control_auc": -0.00017411796134103597,
+   "worst_control_ap": 0.0007612134658911973
+  },
+  {
+   "path": "results/anchor_priority_cooperative_static_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.001838971893067698,
+   "full_delta_ap": 0.002552492165461606,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_soft_actions": [
+    0.0011520407579140857,
+    0.0018233751814190624
+   ],
+   "minus_shared_policy": [
+    0.00034823592268207193,
+    0.001495416671137062
+   ],
+   "worst_control_auc": 0.00034823592268207193,
+   "worst_control_ap": 0.001495416671137062
+  },
+  {
+   "path": "results/anchor_priority_cooperative_static_v1_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0011591962905717808,
+   "full_delta_ap": 0.0013811164067779231,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_soft_actions": [
+    0.0003796407604581552,
+    0.0005934394116033913
+   ],
+   "minus_shared_policy": [
+    -0.00033631003491907396,
+    0.0005958877390773719
+   ],
+   "worst_control_auc": -0.00033631003491907396,
+   "worst_control_ap": 0.0005934394116033913
+  },
+  {
+   "path": "results/anchor_priority_spectral_triadic_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0009671894975861184,
+   "full_delta_ap": 0.0009869713738425157,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_linear_only": [
+    -0.00034704333390589426,
+    -0.0002598710911955182
+   ],
+   "minus_direct_quadratic": [
+    -0.0009218711240865929,
+    -0.002017516949747944
+   ],
+   "worst_control_auc": -0.0009218711240865929,
+   "worst_control_ap": -0.002017516949747944
+  },
+  {
+   "path": "results/anchor_priority_variational_lastlayer_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.001198551720190122,
+   "full_delta_ap": 0.0020610472513512557,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_diagonal": [
+    0.00020393268074880844,
+    -0.0003772353450760546
+   ],
+   "minus_map": [
+    0.0005593241360887236,
+    0.0013806769302624478
+   ],
+   "worst_control_auc": 0.00020393268074880844,
+   "worst_control_ap": -0.0003772353450760546
+  },
+  {
+   "path": "results/anchor_priority_contextual_rule_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 5.008872860490232e-05,
+   "full_delta_ap": 0.00012629045235079683,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_global_rules": [
+    -5.962943881554494e-06,
+    -4.82797867773499e-06
+   ],
+   "worst_control_auc": -5.962943881554494e-06,
+   "worst_control_ap": -4.82797867773499e-06
+  },
+  {
+   "path": "results/residual_relation_mask_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0007262865647719163,
+   "full_delta_ap": 0.00027534085530578345,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_bce": [
+    9.779227965733828e-05,
+    -0.0006554855118644509
+   ],
+   "minus_shuffled_aux": [
+    0.00035181368901104904,
+    -0.00010707498186068864
+   ],
+   "minus_visible_aux": [
+    -0.00023136222260367045,
+    -0.0016109143645879342
+   ],
+   "worst_control_auc": -0.00023136222260367045,
+   "worst_control_ap": -0.0016109143645879342
+  },
+  {
+   "path": "results/residual_equivariant_hypergraph_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0003768580533134447,
+   "full_delta_ap": 0.00011142052985346762,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_invariant": [
+    -9.302192455207248e-05,
+    -0.00014651599527359949
+   ],
+   "minus_pairwise": [
+    0.00012879958784139944,
+    0.00013975271301647219
+   ],
+   "minus_no_hypergraph": [
+    8.586639189434031e-05,
+    0.00024195828065420866
+   ],
+   "worst_control_auc": -9.302192455207248e-05,
+   "worst_control_ap": -0.00014651599527359949
+  },
+  {
+   "path": "results/residual_equivariant_hypergraph_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0003609568696293364,
+   "full_delta_ap": 4.805537881617342e-05,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_invariant": [
+    -2.7827071447476532e-06,
+    -5.0461178674539774e-05
+   ],
+   "minus_pairwise": [
+    9.540710210468689e-05,
+    7.243508808337425e-05
+   ],
+   "minus_no_hypergraph": [
+    0.00015344642255177288,
+    0.0001016178577880611
+   ],
+   "worst_control_auc": -2.7827071447476532e-06,
+   "worst_control_ap": -5.0461178674539774e-05
+  },
+  {
+   "path": "results/anchor_priority_functional_morphology_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 7.871085923649712e-05,
+   "full_delta_ap": 0.0004206627201416291,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_shuffled_rna_targets": [
+    0.00010256263476260408,
+    0.00015385446114579704
+   ],
+   "worst_control_auc": 0.00010256263476260408,
+   "worst_control_ap": 0.00015385446114579704
+  },
+  {
+   "path": "results/anchor_priority_functional_morphology_v1_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 4.810108064445817e-05,
+   "full_delta_ap": 0.00033414244848709956,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_shuffled_rna_targets": [
+    5.8039320447048994e-05,
+    0.000136729763890379
+   ],
+   "worst_control_auc": 5.8039320447048994e-05,
+   "worst_control_ap": 0.000136729763890379
+  },
+  {
+   "path": "results/anchor_priority_meta_loss_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0005807907340621421,
+   "full_delta_ap": 0.0006991768241974006,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_meta_gradient": [
+    -0.0001753105501175467,
+    -0.00014031464391761617
+   ],
+   "minus_no_outer_rescaling": [
+    -0.00012402923273624467,
+    -0.00031982030770072445
+   ],
+   "minus_uniform": [
+    -0.00132854389680781,
+    -0.001352565390358551
+   ],
+   "worst_control_auc": -0.00132854389680781,
+   "worst_control_ap": -0.001352565390358551
+  },
+  {
+   "path": "results/anchor_priority_spline_attention_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0014585360734253872,
+   "full_delta_ap": 0.0011484664999501515,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_mlp_score": [
+    -6.320720514418898e-05,
+    4.566271645367603e-05
+   ],
+   "worst_control_auc": -6.320720514418898e-05,
+   "worst_control_ap": 4.566271645367603e-05
+  },
+  {
+   "path": "results/anchor_priority_episodic_kernel_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0009278340679679253,
+   "full_delta_ap": 0.0012970044946020165,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_stop_support_gradient": [
+    0.0008491232087315392,
+    0.001102669329044903
+   ],
+   "worst_control_auc": 0.0008491232087315392,
+   "worst_control_ap": 0.001102669329044903
+  },
+  {
+   "path": "results/anchor_priority_episodic_kernel_v1_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.000705217496390372,
+   "full_delta_ap": 0.001137736808151694,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_stop_support_gradient": [
+    0.0006551287677854697,
+    0.0010234937267519228
+   ],
+   "worst_control_auc": 0.0006551287677854697,
+   "worst_control_ap": 0.0010234937267519228
+  },
+  {
+   "path": "results/anchor_priority_tensor_product_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.001328543896807699,
+   "full_delta_ap": 0.0011238314498493995,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_noncontextual_a": [
+    0.000150266185814929,
+    8.00915904934918e-05
+   ],
+   "minus_dense_qkv": [
+    0.00035777663289260353,
+    -0.0005321087594738483
+   ],
+   "worst_control_auc": 0.000150266185814929,
+   "worst_control_ap": -0.0005321087594738483
+  },
+  {
+   "path": "results/anchor_priority_cooperative_shared_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.001490735970385626,
+   "full_delta_ap": 0.0010570754943245442,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_soft_actions": [
+    -2.742954185508406e-05,
+    -0.00023969605024176666
+   ],
+   "worst_control_auc": -2.742954185508406e-05,
+   "worst_control_ap": -0.00023969605024176666
+  },
+  {
+   "path": "results/residual_cavity_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0004818058656287372,
+   "full_delta_ap": 0.00039452818033425263,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_backtracking": [
+    1.9081420420952178e-05,
+    -0.0001498451711501314
+   ],
+   "minus_edge_mlp": [
+    -0.00011329593374920233,
+    -0.00031838082171509186
+   ],
+   "worst_control_auc": -0.00011329593374920233,
+   "worst_control_ap": -0.00031838082171509186
+  },
+  {
+   "path": "results/residual_cavity_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.00039792712169498906,
+   "full_delta_ap": 0.0006014962750556796,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_backtracking": [
+    -0.00014867606744635903,
+    -0.00018258902372451458
+   ],
+   "minus_edge_mlp": [
+    -0.00016735995827517797,
+    -0.000203590483843071
+   ],
+   "worst_control_auc": -0.00016735995827517797,
+   "worst_control_ap": -0.000203590483843071
+  },
+  {
+   "path": "results/anchor_priority_sos_circuit_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 2.385177552577389e-06,
+   "full_delta_ap": 1.5514424047680109e-06,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_single_square": [
+    -5.485908371016812e-05,
+    -0.00013442026495469328
+   ],
+   "minus_monotone": [
+    -5.366649493410147e-05,
+    -0.00011127635873642294
+   ],
+   "minus_no_joint": [
+    -3.219989696034986e-05,
+    5.135215920559766e-05
+   ],
+   "worst_control_auc": -5.485908371016812e-05,
+   "worst_control_ap": -0.00013442026495469328
+  },
+  {
+   "path": "results/anchor_priority_cooperative_local_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0020262083309482426,
+   "full_delta_ap": 0.002704124531476171,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_soft_actions": [
+    0.0006428053504302644,
+    0.0018582220893814672
+   ],
+   "minus_static_policy": [
+    0.00018723643788054467,
+    0.00015163236601456465
+   ],
+   "worst_control_auc": 0.00018723643788054467,
+   "worst_control_ap": 0.00015163236601456465
+  },
+  {
+   "path": "results/anchor_priority_cooperative_local_v1_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0012796477569790115,
+   "full_delta_ap": 0.001813034356948795,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_soft_actions": [
+    4.0548018394481744e-05,
+    0.0008229241539332206
+   ],
+   "minus_static_policy": [
+    0.0001204514664072307,
+    0.00043191795017087187
+   ],
+   "worst_control_auc": 4.0548018394481744e-05,
+   "worst_control_ap": 0.00043191795017087187
+  },
+  {
+   "path": "results/residual_neural_neighborhood_union_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0012581811590055558,
+   "full_delta_ap": 0.0027431975689181654,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_count_only": [
+    8.94441582232064e-05,
+    0.00061256940685539
+   ],
+   "minus_node_only": [
+    0.0003279619134849421,
+    0.001105355803883823
+   ],
+   "minus_shuffled": [
+    -3.577766328755061e-06,
+    0.0007138774637379663
+   ],
+   "worst_control_auc": -3.577766328755061e-06,
+   "worst_control_ap": 0.00061256940685539
+  },
+  {
+   "path": "results/residual_neural_neighborhood_union_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0011826505365059765,
+   "full_delta_ap": 0.0022227286967530326,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_count_only": [
+    0.0003339248573664595,
+    0.0008879193724980286
+   ],
+   "minus_node_only": [
+    0.0006137856902069064,
+    0.0011938163838544438
+   ],
+   "minus_shuffled": [
+    6.758003065758045e-05,
+    0.0004014952860572627
+   ],
+   "worst_control_auc": 6.758003065758045e-05,
+   "worst_control_ap": 0.0004014952860572627
+  },
+  {
+   "path": "results/residual_polynomial_filter_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0008872860495735546,
+   "full_delta_ap": 0.0015630872673806362,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_type_shared": [
+    0.00042694678191845803,
+    0.0010736998353179095
+   ],
+   "minus_softmax": [
+    0.00047465033297078296,
+    0.0010174186223381732
+   ],
+   "minus_no_graph": [
+    0.0007203236208903618,
+    0.0016990835808233795
+   ],
+   "worst_control_auc": 0.00042694678191845803,
+   "worst_control_ap": 0.0010174186223381732
+  },
+  {
+   "path": "results/residual_polynomial_filter_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0005740327309965062,
+   "full_delta_ap": 0.000533999981001602,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_type_shared": [
+    0.0001458933603017965,
+    0.0002743755946090035
+   ],
+   "minus_softmax": [
+    0.00010335769394675959,
+    0.0003782258051398719
+   ],
+   "minus_no_graph": [
+    0.0004201887788527111,
+    0.0006316882886143738
+   ],
+   "worst_control_auc": 0.00010335769394675959,
+   "worst_control_ap": 0.0002743755946090035
+  },
+  {
+   "path": "results/anchor_priority_friendly_sharpness_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0008693972179287801,
+   "full_delta_ap": 0.0011293853520009112,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_sam": [
+    -0.00023374740015669193,
+    -3.0966059675896496e-05
+   ],
+   "minus_erm": [
+    -0.00020870303585396321,
+    -3.604885261843105e-05
+   ],
+   "worst_control_auc": -0.00023374740015669193,
+   "worst_control_ap": -3.604885261843105e-05
+  },
+  {
+   "path": "results/anchor_priority_information_bottleneck_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0005903314442726737,
+   "full_delta_ap": 0.0003211630571847701,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_kl": [
+    0.00011925887763075682,
+    -1.8596539972492998e-05
+   ],
+   "minus_no_completion": [
+    0.00027906577365632845,
+    -0.00012875454875960202
+   ],
+   "worst_control_auc": 0.00011925887763075682,
+   "worst_control_ap": -0.00012875454875960202
+  },
+  {
+   "path": "results/anchor_priority_variational_feature_learning_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0009946190394413135,
+   "full_delta_ap": 0.0024382825964273103,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_no_feature_variance": [
+    0.0003506211002346493,
+    0.0017604847359505849
+   ],
+   "minus_map": [
+    0.0003553914553399151,
+    0.0017579122753385024
+   ],
+   "worst_control_auc": 0.0003506211002346493,
+   "worst_control_ap": 0.0017579122753385024
+  },
+  {
+   "path": "results/anchor_priority_variational_feature_learning_v1_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0012657342212554952,
+   "full_delta_ap": 0.0019783611374776244,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_no_feature_variance": [
+    0.0005923190922333028,
+    0.0011101911094516157
+   ],
+   "minus_map": [
+    0.000599474624891146,
+    0.001122564370458027
+   ],
+   "worst_control_auc": 0.0005923190922333028,
+   "worst_control_ap": 0.0011101911094516157
+  },
+  {
+   "path": "results/anchor_priority_gaussian_transport_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0006726200698380369,
+   "full_delta_ap": 0.0006248147935695725,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_diagonal": [
+    -5.48590837100571e-05,
+    -0.00014045610392843244
+   ],
+   "minus_root_euclidean": [
+    -2.1466597973418544e-05,
+    -8.379805990399447e-05
+   ],
+   "worst_control_auc": -5.48590837100571e-05,
+   "worst_control_ap": -0.00014045610392843244
+  },
+  {
+   "path": "results/anchor_residual_bernoulli_copula_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0009707672639150955,
+   "full_delta_ap": 0.0016068887153832812,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_independent": [
+    0.00041025053905008324,
+    0.0008823172377623312
+   ],
+   "worst_control_auc": 0.00041025053905008324,
+   "worst_control_ap": 0.0008823172377623312
+  },
+  {
+   "path": "results/anchor_residual_bernoulli_copula_v1_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0007863135331793725,
+   "full_delta_ap": 0.0012541595705974535,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_independent": [
+    1.4708594907782645e-05,
+    0.0004260019804678271
+   ],
+   "worst_control_auc": 1.4708594907782645e-05,
+   "worst_control_ap": 0.0004260019804678271
+  },
+  {
+   "path": "results/anchor_priority_stuart_landau_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0006117980422462033,
+   "full_delta_ap": 0.0012090922961192074,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_phase_feedback": [
+    2.981471940766145e-05,
+    0.00041552795427579614
+   ],
+   "minus_linear_oscillator": [
+    5.008872860490232e-05,
+    -0.0002701755873913969
+   ],
+   "worst_control_auc": 2.981471940766145e-05,
+   "worst_control_ap": -0.0002701755873913969
+  },
+  {
+   "path": "results/residual_neural_common_neighbor_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.00020631785830138583,
+   "full_delta_ap": -0.0003278881801364042,
+   "performance_gate": false,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_count_only": [
+    -0.0007918789474687937,
+    -0.0020165311501980643
+   ],
+   "minus_node_only": [
+    -0.0007239013872192279,
+    -0.0019657299451707466
+   ],
+   "minus_union": [
+    -0.00105186330070417,
+    -0.0030710857490545695
+   ],
+   "worst_control_auc": -0.00105186330070417,
+   "worst_control_ap": -0.0030710857490545695
+  },
+  {
+   "path": "results/anchor_priority_persistence_pairing_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.002143082031026422,
+   "full_delta_ap": 0.0032474348348291437,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_marginal_only": [
+    0.0006535386494171957,
+    0.0014558219962627073
+   ],
+   "worst_control_auc": 0.0006535386494171957,
+   "worst_control_ap": 0.0014558219962627073
+  },
+  {
+   "path": "results/anchor_priority_persistence_pairing_v1_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0012581811590054819,
+   "full_delta_ap": 0.0014018395601741451,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_marginal_only": [
+    -7.115779698637259e-05,
+    -0.00015912066112422352
+   ],
+   "worst_control_auc": -7.115779698637259e-05,
+   "worst_control_ap": -0.00015912066112422352
+  },
+  {
+   "path": "results/residual_block_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0015921060163717193,
+   "full_delta_ap": 0.001995993798034279,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_deterministic": [
+    0.0013237735417023222,
+    0.0019219783590556094
+   ],
+   "minus_no_stick": [
+    0.0005951017993778285,
+    0.0006711180645992965
+   ],
+   "minus_no_expander": [
+    -0.00026236953078795366,
+    -0.0008276039071775099
+   ],
+   "worst_control_auc": -0.00026236953078795366,
+   "worst_control_ap": -0.0008276039071775099
+  },
+  {
+   "path": "results/residual_block_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.000749740810705927,
+   "full_delta_ap": 0.0011338715933017311,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_deterministic": [
+    0.000432114666615783,
+    0.0009403447193287267
+   ],
+   "minus_no_stick": [
+    7.95059184206155e-05,
+    0.00012953947584163727
+   ],
+   "minus_no_expander": [
+    -0.0005056576411547701,
+    1.3602548785389022e-05
+   ],
+   "worst_control_auc": -0.0005056576411547701,
+   "worst_control_ap": 1.3602548785389022e-05
+  },
+  {
+   "path": "results/anchor_priority_neighbor_type_contrastive_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 3.5777663289771056e-06,
+   "full_delta_ap": 2.023727563527089e-06,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_type_shared": [
+    -2.6236953078684344e-05,
+    -3.706436853678774e-05
+   ],
+   "minus_bce": [
+    4.7703551052658e-06,
+    1.4285961165705352e-05
+   ],
+   "worst_control_auc": -2.6236953078684344e-05,
+   "worst_control_ap": -3.706436853678774e-05
+  },
+  {
+   "path": "results/anchor_priority_eigenbasis_adam_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.001644579922529421,
+   "full_delta_ap": 0.0021037584700062117,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_separable_variance": [
+    0.0005974869769306279,
+    0.00105881236448091
+   ],
+   "minus_adamw": [
+    0.0005044650523784444,
+    0.0006323974869120175
+   ],
+   "worst_control_auc": 0.0005044650523784444,
+   "worst_control_ap": 0.0006323974869120175
+  },
+  {
+   "path": "results/anchor_priority_eigenbasis_adam_v1_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.00152492351530642,
+   "full_delta_ap": 0.0018686068743252182,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_separable_variance": [
+    0.0005068502299310589,
+    0.0010266966673657305
+   ],
+   "minus_adamw": [
+    0.00038520617474757657,
+    0.000283910032357948
+   ],
+   "worst_control_auc": 0.00038520617474757657,
+   "worst_control_ap": 0.000283910032357948
+  },
+  {
+   "path": "results/anchor_priority_spectral_persistence_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0011591962905719289,
+   "full_delta_ap": 0.0011791325566024025,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_spectrum": [
+    -0.0009838857404544932,
+    -0.0020683022782267413
+   ],
+   "minus_final_spectrum": [
+    0.00015265136336761742,
+    0.00037947057224374525
+   ],
+   "worst_control_auc": -0.0009838857404544932,
+   "worst_control_ap": -0.0020683022782267413
+  },
+  {
+   "path": "results/anchor_priority_differential_attention_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0008765527505867343,
+   "full_delta_ap": 0.0014770251729445683,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_additive_attention": [
+    0.0003625469879977583,
+    0.0007500512282998528
+   ],
+   "worst_control_auc": 0.0003625469879977583,
+   "worst_control_ap": 0.0007500512282998528
+  },
+  {
+   "path": "results/anchor_priority_differential_attention_v1_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0012343293834792268,
+   "full_delta_ap": 0.0015795724369640867,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_additive_attention": [
+    0.0006571164157459878,
+    0.00073990691733139
+   ],
+   "worst_control_auc": 0.0006571164157459878,
+   "worst_control_ap": 0.00073990691733139
+  },
+  {
+   "path": "results/anchor_residual_state_space_v1_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0006976644341404326,
+   "full_delta_ap": 0.001029316739654118,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_static": [
+    -0.00034108039002422874,
+    0.00038343712219590653
+   ],
+   "minus_no_state": [
+    0.0002814509512086838,
+    0.00011178207150330799
+   ],
+   "worst_control_auc": -0.00034108039002422874,
+   "worst_control_ap": 0.00011178207150330799
+  },
+  {
+   "path": "results/residual_masked_teacher_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0010602114221381909,
+   "full_delta_ap": 0.0010478214730016422,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_teacher": [
+    -0.00036254698799786933,
+    -0.0001427645559570756
+   ],
+   "minus_fixed_remask": [
+    0.00025521399812988843,
+    0.000777614894133638
+   ],
+   "minus_bce": [
+    -4.412578472356987e-05,
+    -0.00043204380558192756
+   ],
+   "worst_control_auc": -0.00036254698799786933,
+   "worst_control_ap": -0.00043204380558192756
+  },
+  {
+   "path": "results/residual_state_space_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0004996946972734007,
+   "full_delta_ap": 0.0005132979464866905,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_static": [
+    -8.825156944669565e-05,
+    6.910596693698867e-05
+   ],
+   "minus_no_state": [
+    9.898486843362697e-05,
+    0.00010075376371676548
+   ],
+   "minus_random_order": [
+    -7.274791535472058e-05,
+    -0.00032408401977213064
+   ],
+   "worst_control_auc": -8.825156944669565e-05,
+   "worst_control_ap": -0.00032408401977213064
+  },
+  {
+   "path": "results/residual_state_space_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0007346346862060852,
+   "full_delta_ap": 0.0005256213999823197,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_static": [
+    0.0002484559950643265,
+    4.227059161091934e-05
+   ],
+   "minus_no_state": [
+    0.0002917867206034818,
+    4.7180469424571824e-05
+   ],
+   "minus_random_order": [
+    0.00022062892361714615,
+    0.00010053666606676026
+   ],
+   "worst_control_auc": 0.00022062892361714615,
+   "worst_control_ap": 4.227059161091934e-05
+  },
+  {
+   "path": "results/anchor_residual_triangular_pair_v2_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.00010614040109147016,
+   "full_delta_ap": 2.4829222986522126e-05,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_additive_value": [
+    -0.00043171713702372383,
+    -0.0004613893801076463
+   ],
+   "worst_control_auc": -0.00043171713702372383,
+   "worst_control_ap": -0.0004613893801076463
+  },
+  {
+   "path": "results/anchor_priority_expected_graph_selftraining_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0004973095197206012,
+   "full_delta_ap": 0.0006392146599165649,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_correction": [
+    -7.274791535494263e-05,
+    -0.00020669227302128057
+   ],
+   "minus_observed_only": [
+    5.48590837100571e-05,
+    -0.0001892702374060029
+   ],
+   "worst_control_auc": -7.274791535494263e-05,
+   "worst_control_ap": -0.00020669227302128057
+  },
+  {
+   "path": "results/anchor_residual_block_v1_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.00026236953078784264,
+   "full_delta_ap": 0.0006319161034890053,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_deterministic": [
+    1.1925887763108989e-05,
+    5.865603242094508e-05
+   ],
+   "worst_control_auc": 1.1925887763108989e-05,
+   "worst_control_ap": 5.865603242094508e-05
+  },
+  {
+   "path": "results/anchor_residual_block_v1_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.00028661883590608284,
+   "full_delta_ap": 0.0004745379950433411,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_deterministic": [
+    3.1404837776009386e-05,
+    6.376427072481611e-05
+   ],
+   "worst_control_auc": 3.1404837776009386e-05,
+   "worst_control_ap": 6.376427072481611e-05
+  },
+  {
+   "path": "results/residual_conflict_free_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.00026952506344579685,
+   "full_delta_ap": -0.00016203896053490485,
+   "performance_gate": false,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_sum": [
+    1.550365409230814e-05,
+    8.201331295010217e-05
+   ],
+   "minus_pcgrad": [
+    3.219989696034986e-05,
+    0.0001015867450901986
+   ],
+   "minus_main_only": [
+    -0.0009838857404543822,
+    -0.0009400717688248239
+   ],
+   "worst_control_auc": -0.0009838857404543822,
+   "worst_control_ap": -0.0009400717688248239
+  },
+  {
+   "path": "results/residual_antisymmetric_dynamics_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0012808403457554851,
+   "full_delta_ap": 0.0020011833123991796,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_no_space": [
+    0.0009731524414678949,
+    0.0005926905572057883
+   ],
+   "minus_free_channels": [
+    0.0002444806991434012,
+    0.0013136229384947962
+   ],
+   "minus_shallow": [
+    0.0010697521323488335,
+    0.001893845496946045
+   ],
+   "worst_control_auc": 0.0002444806991434012,
+   "worst_control_ap": 0.0005926905572057883
+  },
+  {
+   "path": "results/residual_antisymmetric_dynamics_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0007219137392588207,
+   "full_delta_ap": 0.0008356090581243351,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_space": [
+    0.00019081420420952178,
+    -1.233721764119333e-05
+   ],
+   "minus_free_channels": [
+    -0.00030768790428751613,
+    -0.0004069308060589879
+   ],
+   "minus_shallow": [
+    0.0004022999472081586,
+    0.0009185704082367666
+   ],
+   "worst_control_auc": -0.00030768790428751613,
+   "worst_control_ap": -0.0004069308060589879
+  },
+  {
+   "path": "results/mechanism_outer_recheck_20260915/reports/residual_geometry/ASSESSMENT.json",
+   "stage": "partition_or_outer",
+   "primary": "attention_only",
+   "full_delta_auc": 2.2947279771923235e-06,
+   "full_delta_ap": 0.00021230421628282148,
+   "performance_gate": false,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_full": [
+    -0.0002572963744446044,
+    -0.00019698642794833504
+   ],
+   "minus_euclidean": [
+    -5.7224778931737795e-05,
+    2.3203593955208518e-05
+   ],
+   "minus_distance_only": [
+    -0.000119325854814889,
+    -9.043961865777089e-05
+   ],
+   "worst_control_auc": -0.0002572963744446044,
+   "worst_control_ap": -0.00019698642794833504
+  },
+  {
+   "path": "results/anchor_priority_expected_walk_signature_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0006117980422462033,
+   "full_delta_ap": 0.0010569636587223208,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_symmetrized": [
+    -1.6696242868263766e-05,
+    -3.7351410348995806e-05
+   ],
+   "minus_first_level": [
+    2.6236953078795366e-05,
+    3.684821840177488e-05
+   ],
+   "worst_control_auc": -1.6696242868263766e-05,
+   "worst_control_ap": -3.7351410348995806e-05
+  },
+  {
+   "path": "results/anchor_residual_bicentric_v1_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0004674948003129398,
+   "full_delta_ap": 0.0011351061985154232,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_no_mark": [
+    3.458507451303827e-05,
+    0.000763813956246362
+   ],
+   "minus_flat_pool": [
+    2.742954185508406e-05,
+    0.0005874615101223446
+   ],
+   "minus_no_message": [
+    0.00017888831644619074,
+    0.0009036500498672551
+   ],
+   "worst_control_auc": 2.742954185508406e-05,
+   "worst_control_ap": 0.0005874615101223446
+  },
+  {
+   "path": "results/anchor_residual_bicentric_v1_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0003768580533135187,
+   "full_delta_ap": 0.0010337502243849734,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_no_mark": [
+    7.354297453902403e-05,
+    0.0008167583707503108
+   ],
+   "minus_flat_pool": [
+    1.908142042098915e-05,
+    0.0006168860295150032
+   ],
+   "minus_no_message": [
+    0.00011448852252560204,
+    0.0009104952240008845
+   ],
+   "worst_control_auc": 1.908142042098915e-05,
+   "worst_control_ap": 0.0006168860295150032
+  },
+  {
+   "path": "results/anchor_priority_continuous_direction_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0004925391646153354,
+   "full_delta_ap": 0.0004766312076363022,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_symmetric_weights": [
+    -0.0006058350983648708,
+    4.2901661592931184e-05
+   ],
+   "minus_fixed_direction": [
+    -0.00034585074512960556,
+    -0.0005437602205433656
+   ],
+   "worst_control_auc": -0.0006058350983648708,
+   "worst_control_ap": -0.0005437602205433656
+  },
+  {
+   "path": "results/cavity_positive_v2_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.000514005762588976,
+   "full_delta_ap": 0.0005756339922694901,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_backtracking": [
+    -2.3851775526217978e-05,
+    0.0001841481256063352
+   ],
+   "minus_edge_mlp": [
+    1.1102230246251565e-16,
+    0.00018557538520636013
+   ],
+   "worst_control_auc": -2.3851775526217978e-05,
+   "worst_control_ap": 0.0001841481256063352
+  },
+  {
+   "path": "results/anchor_priority_morphological_alignment_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 6.559238269709944e-05,
+   "full_delta_ap": 0.0003349262029355149,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_alignment": [
+    -1.3118476539397683e-05,
+    -8.57365172061142e-05
+   ],
+   "minus_shuffled_rna_targets": [
+    1.1925887763220011e-05,
+    8.913123236986564e-05
+   ],
+   "worst_control_auc": -1.3118476539397683e-05,
+   "worst_control_ap": -8.57365172061142e-05
+  },
+  {
+   "path": "results/anchor_residual_geometry_v1_20260915/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "attention_only",
+   "full_delta_auc": 0.0008872860495735546,
+   "full_delta_ap": 0.000886762722357215,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_euclidean": [
+    0.0006332646402198439,
+    0.0009155005175139896
+   ],
+   "worst_control_auc": 0.0006332646402198439,
+   "worst_control_ap": 0.0009155005175139896
+  },
+  {
+   "path": "results/anchor_residual_geometry_v1_20260915/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "attention_only",
+   "full_delta_auc": 0.0005163909401415904,
+   "full_delta_ap": 0.00046053271508809485,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_euclidean": [
+    0.00029894225326132506,
+    0.00048015368800028807
+   ],
+   "worst_control_auc": 0.00029894225326132506,
+   "worst_control_ap": 0.00048015368800028807
+  },
+  {
+   "path": "results/anchor_priority_kuramoto_phase_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0008085751903372795,
+   "full_delta_ap": 0.0008690182356285714,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_static_phase": [
+    0.0002874138950903493,
+    -2.0371991019896285e-05
+   ],
+   "minus_no_phase_rotation": [
+    -2.5044364302506672e-05,
+    -0.0002525630223173536
+   ],
+   "worst_control_auc": -2.5044364302506672e-05,
+   "worst_control_ap": -0.0002525630223173536
+  },
+  {
+   "path": "results/anchor_priority_risk_distribution_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0010017745720991567,
+   "full_delta_ap": 0.0017021823623962762,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_moment_matching": [
+    -0.00019439197053827684,
+    -2.7116307149910313e-05
+   ],
+   "minus_erm": [
+    -0.0003792432308660221,
+    0.0015253255152355427
+   ],
+   "worst_control_auc": -0.0003792432308660221,
+   "worst_control_ap": -2.7116307149910313e-05
+  },
+  {
+   "path": "results/anchor_priority_spectral_muon_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0006928940790352778,
+   "full_delta_ap": 0.00120287743356573,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_frobenius": [
+    -0.00017054019501205886,
+    0.00019208039659257548
+   ],
+   "minus_adamw": [
+    -0.00038520617474746555,
+    3.744322894638774e-05
+   ],
+   "worst_control_auc": -0.00038520617474746555,
+   "worst_control_ap": 3.744322894638774e-05
+  },
+  {
+   "path": "results/anchor_priority_stable_spectral_position_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0003816284084187105,
+   "full_delta_ap": 0.0005586277529600059,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_constant_spectrum": [
+    -0.0015229358673459759,
+    -0.002163750493538674
+   ],
+   "worst_control_auc": -0.0015229358673459759,
+   "worst_control_ap": -0.002163750493538674
+  },
+  {
+   "path": "results/anchor_priority_kronecker_preconditioning_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0004901539870628691,
+   "full_delta_ap": 0.0010417362564548727,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_scalar_coupling": [
+    -7.871085923627508e-05,
+    -0.00013778155843258144
+   ],
+   "minus_soap": [
+    -0.001154425935466552,
+    -0.001062022213551339
+   ],
+   "minus_adamw": [
+    -0.0006499608830881076,
+    -0.0004296247266393216
+   ],
+   "worst_control_auc": -0.001154425935466552,
+   "worst_control_ap": -0.001062022213551339
+  },
+  {
+   "path": "results/anchor_priority_stochastic_augmentation_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0007883011811400387,
+   "full_delta_ap": 0.000747841464057708,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_injection": [
+    0.0003673173431033572,
+    8.410417929527458e-05
+   ],
+   "minus_no_reverse_drift": [
+    -0.00017769572767001307,
+    -0.0003794806399655126
+   ],
+   "worst_control_auc": -0.00017769572767001307,
+   "worst_control_ap": -0.0003794806399655126
+  },
+  {
+   "path": "results/anchor_priority_cooperative_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0014334917091228805,
+   "full_delta_ap": 0.0017389716409931255,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_soft_actions": [
+    -0.0002194363348406725,
+    0.0002464689844446921
+   ],
+   "minus_no_lookahead": [
+    -0.0005927166218253621,
+    -0.0009651528904830453
+   ],
+   "worst_control_auc": -0.0005927166218253621,
+   "worst_control_ap": -0.0009651528904830453
+  },
+  {
+   "path": "results/anchor_priority_staco_ranking_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.000688123723929901,
+   "full_delta_ap": 0.0010137550622624225,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_no_proximal": [
+    -0.00011091075619684698,
+    -0.00027044247999796767
+   ],
+   "minus_bce": [
+    0.0001264144102886,
+    7.006625479288875e-05
+   ],
+   "worst_control_auc": -0.00011091075619684698,
+   "worst_control_ap": -0.00027044247999796767
+  },
+  {
+   "path": "results/anchor_residual_loopy_path_v2_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0009457228996125888,
+   "full_delta_ap": 0.001083139725952198,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_no_path_message": [
+    0.00032319155837956526,
+    0.00012952345925298925
+   ],
+   "worst_control_auc": 0.00032319155837956526,
+   "worst_control_ap": 0.00012952345925298925
+  },
+  {
+   "path": "results/anchor_residual_loopy_path_v2_20260916/HISTORICAL_ASSESSMENT.json",
+   "stage": "historical",
+   "primary": "full",
+   "full_delta_auc": 0.0011452827548481908,
+   "full_delta_ap": 0.0012942774667843437,
+   "performance_gate": true,
+   "mechanism_gate": true,
+   "declared_gate": true,
+   "minus_no_path_message": [
+    0.00046471209316811823,
+    0.0003807659536337512
+   ],
+   "worst_control_auc": 0.00046471209316811823,
+   "worst_control_ap": 0.0003807659536337512
+  },
+  {
+   "path": "results/anchor_priority_signed_regulatory_v1_20260916/SCREEN_ASSESSMENT.json",
+   "stage": "screen",
+   "primary": "full",
+   "full_delta_auc": 0.0009075600587707955,
+   "full_delta_ap": 0.000817143048061908,
+   "performance_gate": true,
+   "mechanism_gate": false,
+   "declared_gate": false,
+   "minus_unsigned": [
+    9.063674699949509e-05,
+    -2.331789458964728e-06
+   ],
+   "minus_shuffled_sign": [
+    -4.5318373499747544e-05,
+    -0.0003350132116497484
+   ],
+   "worst_control_auc": -4.5318373499747544e-05,
+   "worst_control_ap": -0.0003350132116497484
+  }
+ ]
+}

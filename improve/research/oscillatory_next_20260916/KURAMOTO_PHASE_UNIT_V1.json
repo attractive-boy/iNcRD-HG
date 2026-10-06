@@ -1,0 +1,119 @@
+{
+  "created_at_utc": "2026-09-16T09:02:16.266177+00:00",
+  "tests": 7,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "evidence": {
+    "controls": {
+      "initial_stored_parameters_identical": true,
+      "initial_rng_identical": true,
+      "frozen_parameter_names": {
+        "full": [],
+        "static_phase": [
+          "coupling.edge.weight",
+          "coupling.k_proj.weight",
+          "coupling.q_proj.weight",
+          "coupling.qk_scale"
+        ],
+        "no_phase_rotation": [
+          "coupling.edge.weight",
+          "coupling.k_proj.weight",
+          "coupling.q_proj.weight",
+          "coupling.qk_scale",
+          "layers.0.mix",
+          "layers.1.mix",
+          "phase_init.weight"
+        ]
+      },
+      "plain_attention_forward_error": 0.0,
+      "plain_attention_gradient_error": 0.0,
+      "zero_gamma_full_static_error": 2.384185791015625e-07,
+      "effective_capacities_equal_claimed": false
+    },
+    "executor": {
+      "training_only_inputs": true,
+      "formal_cuda0_rejected": true,
+      "all_active_gradients_finite": true,
+      "frozen_parameters_unchanged": true,
+      "random_streams_equal": true,
+      "forward_operation_counts_equal": true,
+      "counts": {
+        "calls": 5,
+        "attention_layers": 10,
+        "phase_updates": 10,
+        "phase_entries": 920,
+        "feature_score_edge_heads": 2668,
+        "coupling_score_edge_heads": 2668,
+        "rotary_pairs": 9016
+      },
+      "lnc_exact_identity_without_training": true,
+      "evaluation_labels_read": false,
+      "formal_neural_fits": 0
+    },
+    "failure": {
+      "exact_completed_steps": 2,
+      "current_step": 3,
+      "operation": "forward",
+      "partial_model_optimizer_rng_preserved": true,
+      "formal_neural_fit": false
+    },
+    "graph": {
+      "query_edges_and_reverse_absent": true,
+      "omitted_labels_cannot_change_support": true,
+      "node_permutation_max_error": 0.0,
+      "query_order_max_error": 2.384185791015625e-07
+    },
+    "circular": {
+      "independent_arctangent_step": true,
+      "all_phase_step_gradcheck": true,
+      "rotation_inverse_and_norm_preservation": true,
+      "synchronized_state_fixed_point": true,
+      "global_common_phase_gauge_error": 1.1102230246251565e-16
+    },
+    "author": {
+      "commit": "0eade3cebc76978d2944f3ebb9f50f57f1b7ee53",
+      "source_sha256": "1da2179783351c5e377f80fed0a47a783187894d1c8404d0d3027478272df5cc",
+      "unchanged_selected_classes_and_functions": true,
+      "complete_support_graph": true,
+      "typed_edge_embeddings_zero_for_source_equivalence": true,
+      "full_author_ViT_or_training_executed": false,
+      "attention_forward_error": 5.551115123125783e-17,
+      "attention_gradient_error": 4.440892098500626e-16,
+      "coupling_forward_error": 5.551115123125783e-17,
+      "coupling_gradient_error": 2.220446049250313e-16
+    },
+    "sparse_reference": {
+      "nodes": 5,
+      "edges": 10,
+      "types": 3,
+      "complete_graph": false,
+      "independent_numpy_softmax_and_arctangent": true,
+      "rms_epsilon": 2.220446049250313e-16,
+      "forward_max_error": 2.220446049250313e-16,
+      "independent_directional_gradient_errors": {
+        "features": 1.6880368630678433e-12,
+        "theta": 1.2546352845532738e-11,
+        "q_proj.weight": 9.852313409552949e-12,
+        "k_proj.weight": 4.0812492274611145e-13,
+        "qk_scale": 1.1767167101828235e-11,
+        "edge.weight": 2.0097538596438452e-11
+      },
+      "full_feature_and_angle_gradcheck": true
+    }
+  },
+  "source_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_kuramoto_phase_graph_v1.py": "e96017ea6637e7fe979e836e9c3ba2130b272677030e2b7717a880d952cf2076",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/kuramoto_phase_graph_v1.py": "25872e95c9337267c2796dc4155018ced3614437169bf050eb5446d1ff9f9bf1",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/anchor_kuramoto_phase_experiment_v1.py": "20048f4e625fe39e77ffb8eb1d2892906a62c30a8e720e7a72b0cfea6dde2efc",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/test_nested_anchor_v2.py": "31b81bb2a0cfd1978b9fdf467b2dd5354b1fc748081b7b9522c6603e9d9015f0",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/overlap_block_models.py": "8cd9369ecab95c93889ae2bfa2d1e9e0809f4bc260dd70d7bad74ac440182791",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/sharpness_graph_v1.py": "49f346bb2d84281082c9cd38f65254abacdfe6b0d78fa0dd238320451d347982",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/oscillatory_next_20260916/KOPE_AUTHOR_SOURCE_V1.json": "eeafb1209fa07c62349e181d9ce0a7eb29b907cb455dddca6f39ac630efcb6d4",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/oscillatory_next_20260916/kope_author_v1_vit_kope.py": "1da2179783351c5e377f80fed0a47a783187894d1c8404d0d3027478272df5cc",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/oscillatory_next_20260916/kope_author_v1_LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+  },
+  "formal_neural_fits": 0,
+  "evaluation_labels_read": false,
+  "sha256": "659e62a052a83926e2469cf2a2b390adf4fc62ab4d8eb140e29606cea1928bf6"
+}

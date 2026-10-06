@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/AfbFiVcuPcrrw/eiqKky4HEVGOg</id>
+  <title>arXiv Query: search_query=all:"link prediction" AND (all:invariance OR all:"domain generalization" OR all:"causal learning")&amp;id_list=&amp;start=0&amp;max_results=12</title>
+  <updated>2026-09-15T23:31:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22link+prediction%22+AND+(all:invariance+OR+(all:%22domain+generalization%22+OR+all:%22causal+learning%22))&amp;start=0&amp;max_results=12&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>12</opensearch:itemsPerPage>
+  <opensearch:totalResults>34</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.10668v1</id>
+    <title>FITTER: Vocabulary-Agnostic Cross-Domain Inference on Temporal Knowledge Graphs</title>
+    <updated>2026-08-11T08:47:58Z</updated>
+    <link href="https://arxiv.org/abs/2608.10668v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.10668v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Temporal knowledge graphs are central to many uses of the Semantic Web, but existing completion methods assume the entities, relation names, and timestamps to be reasoned about are already known at training time, restricting each model to a single graph and vocabulary. We propose FITTER, the first fully-inductive structural model for temporal knowledge graph link prediction that supports cross-domain transfer: the inference graph may contain entirely unseen entities, relation names, and timestamps drawn from a different domain. FITTER represents each predicate by its interaction patterns with others and time through encodings of relative rather than absolute ordering; message-passing fuses local and global temporal context to produce vocabulary-agnostic embeddings. We prove the temporal encoding is time-shift invariant and evaluate FITTER on cross-domain, cross-graph transfer over six temporal knowledge graph benchmarks of diverse domains, granularities, and time spans. FITTER consistently outperforms inductive baselines without retraining, indicating that vocabulary-agnostic structural learning is a viable foundation for inference over the heterogeneous knowledge graphs of the Semantic Web.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-11T08:47:58Z</published>
+    <arxiv:comment>Accepted at ISWC 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Jiaxin Pan</name>
+    </author>
+    <author>
+      <name>Mojtaba Nayyeri</name>
+    </author>
+    <author>
+      <name>Osama Mohammed</name>
+    </author>
+    <author>
+      <name>Daniel Hernandez</name>
+    </author>
+    <author>
+      <name>Rongchuan Zhang</name>
+    </author>
+    <author>
+      <name>Cheng Cheng</name>
+    </author>
+    <author>
+      <name>Steffen Staab</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.06154v1</id>
+    <title>Graphlets as Building Blocks for Structural Vocabulary in Knowledge Graph Foundation Models</title>
+    <updated>2026-05-07T12:47:34Z</updated>
+    <link href="https://arxiv.org/abs/2605.06154v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.06154v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Foundation models excel at language, where sentences become tokens, and vision, where images become pixels, because both reduce to discrete symbols on a shared, fixed grid. Knowledge Graphs share the discreteness, but not the geometry. Their entities and relations are discrete symbols, yet their arrangement is relational and lacks a common, fixed grid. Knowledge Graphs (KGs) share the discreteness, but not the geometry. They form irregular, non-Euclidean topologies whose local neighborhoods differ from graph to graph. Therefore, Knowledge Graph Foundation Models (KGFMs) rely on identifying structural invariances to produce transferable representations. Without a universal token set, KGFMs are limited in their ability to transfer representations across unseen KGs. We close this gap by treating graphlets, small connected graphs, as structural tokens that recur in heterogeneous KGs. In this paper, We introduce a model-agnostic framework based on a vocabulary of graphlets that mines a KG between relations via pattern matching. In particular, we considered closed and open 2- and 3-path, and star graphlets, to obtain robust invariances. The framework is evaluated on 51 KGs from a wide range of domains, for zero-shot inductive and transductive link prediction. Experiments show that adding simple graphlets to the vocabulary yields models that outperform prior KGFMs.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-07T12:47:34Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Kossi Amouzouvi</name>
+    </author>
+    <author>
+      <name>Robert Wardenga</name>
+    </author>
+    <author>
+      <name>Jens Lehmann</name>
+    </author>
+    <author>
+      <name>Sahar Vahdati</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.00380v1</id>
+    <title>Data-Attributed Adaptive Control Barrier Functions: Safety-Certified Training Data Curation via Influence Analysis</title>
+    <updated>2026-04-01T02:05:13Z</updated>
+    <link href="https://arxiv.org/abs/2604.00380v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.00380v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning-based adaptation of Control Barrier Function (CBF) parameters offers a promising path toward safe autonomous navigation that balances conservatism with performance. Yet the accuracy of the underlying safety predictor is ultimately constrained by training data quality, and no prior work has formally characterized how prediction errors propagate through the adaptive pipeline to degrade closed-loop safety guarantees. We introduce Data-Attributed Adaptive CBF (DA-CBF), a framework that integrates TracIn-based data attribution into adaptive CBF learning. Our theoretical contributions are fourfold: (i) corrected two-sided bounds relating the safety-loss surrogate to the CBF constraint margin; (ii) a safety margin preservation theorem showing that prediction error induces quantifiable margin degradation and, via a smooth parameter selector, yields a genuine closed-loop forward invariance guarantee not conditioned on a fixed trajectory; (iii) a CBF-QP constraint perturbation bound that links prediction accuracy directly to recursive feasibility; and (iv) a principled leave-one-out justification for influence-based data curation under explicit smoothness assumptions. On a DynamicUnicycle2D benchmark, DA-CBF reduces prediction RMSE by 35.6\%, expands the certified safe operating set by 39\%, and achieves collision-free navigation in a 16-obstacle environment where the uncurated baseline incurs 3 collisions.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-01T02:05:13Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Jiachen Li</name>
+    </author>
+    <author>
+      <name>Shihao Li</name>
+    </author>
+    <author>
+      <name>Dongmei Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.05424v2</id>
+    <title>THOR: Inductive Link Prediction over Hyper-Relational Knowledge Graphs</title>
+    <updated>2026-02-06T01:44:41Z</updated>
+    <link href="https://arxiv.org/abs/2602.05424v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.05424v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs (KGs) have become a key ingredient supporting a variety of applications. Beyond the traditional triplet representation of facts where a relation connects two entities, modern KGs observe an increasing number of hyper-relational facts, where an arbitrary number of qualifiers associated with a triplet provide auxiliary information to further describe the rich semantics of the triplet, which can effectively boost the reasoning performance in link prediction tasks. However, existing link prediction techniques over such hyper-relational KGs (HKGs) mostly focus on a transductive setting, where KG embedding models are learned from the specific vocabulary of a given KG and subsequently can only make predictions within the same vocabulary, limiting their generalizability to previously unseen vocabularies. Against this background, we propose THOR, an inducTive link prediction technique for Hyper-relational knOwledge gRaphs. Specifically, we first introduce both relation and entity foundation graphs, modeling their fundamental inter- and intra-fact interactions in HKGs, which are agnostic to any specific relations and entities. Afterward, THOR is designed to learn from the two foundation graphs with two parallel graph encoders followed by a transformer decoder, which supports efficient masked training and fully-inductive inference. We conduct a thorough evaluation of THOR in hyper-relational link prediction tasks on 12 datasets with different settings. Results show that THOR outperforms a sizable collection of baselines, yielding 66.1%, 55.9%, and 20.4% improvement over the best-performing rule-based, semi-inductive, and fully-inductive techniques, respectively. A series of ablation studies also reveals our key design factors capturing the structural invariance transferable across HKGs for inductive tasks.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-05T08:15:49Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Weijian Yu</name>
+    </author>
+    <author>
+      <name>Yuhuan Lu</name>
+    </author>
+    <author>
+      <name>Dingqi Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.14317v7</id>
+    <title>Intervention Efficiency and Perturbation Validation Framework: Capacity-Aware and Robust Clinical Model Selection under the Rashomon Effect</title>
+    <updated>2026-01-12T13:16:09Z</updated>
+    <link href="https://arxiv.org/abs/2511.14317v7" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.14317v7" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In clinical machine learning, the coexistence of multiple models with comparable performance (a manifestation of the Rashomon Effect) poses fundamental challenges for trustworthy deployment and evaluation. Small, imbalanced, and noisy datasets, coupled with high-dimensional and weakly identified clinical features, amplify this multiplicity and make conventional validation schemes unreliable. As a result, selecting among equally performing models becomes uncertain, particularly when resource constraints and operational priorities are not considered by conventional metrics like F1 score. To address these issues, we propose two complementary tools for robust model assessment and selection: Intervention Efficiency (IE) and the Perturbation Validation Framework (PVF). IE is a capacity-aware metric that quantifies how efficiently a model identifies actionable true positives when only limited interventions are feasible, thereby linking predictive performance with clinical utility. PVF introduces a structured approach to assess the stability of models under data perturbations, identifying models whose performance remains most invariant across noisy or shifted validation sets. Empirical results on synthetic and real-world healthcare datasets show that using these tools facilitates the selection of models that generalize more robustly and align with capacity constraints, offering a new direction for tackling the Rashomon Effect in clinical settings.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-18T10:21:07Z</published>
+    <arxiv:comment>Accepted to the Workshop on Navigating Model Uncertainty and the Rashomon Effect: From Theory and Tools to Applications and Impact (AAAI 2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yuwen Zhang</name>
+    </author>
+    <author>
+      <name>Viet Tran</name>
+    </author>
+    <author>
+      <name>Paul Weng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.16885v1</id>
+    <title>UniGTE: Unified Graph-Text Encoding for Zero-Shot Generalization across Graph Tasks and Domains</title>
+    <updated>2025-10-19T15:36:45Z</updated>
+    <link href="https://arxiv.org/abs/2510.16885v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.16885v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generalizing to unseen graph tasks without task-specific supervision is challenging: conventional graph neural networks are typically tied to a fixed label space, while large language models (LLMs) struggle to capture graph structure. We introduce UniGTE, an instruction-tuned encoder-decoder framework that unifies structural and semantic reasoning. The encoder augments a pretrained autoregressive LLM with learnable alignment tokens and a structure-aware graph-text attention mechanism, enabling it to attend jointly to a tokenized graph and a natural-language task prompt while remaining permutation-invariant to node order. This yields compact, task-aware graph representations. Conditioned solely on these representations, a frozen LLM decoder predicts and reconstructs: it outputs the task answer and simultaneously paraphrases the input graph in natural language. The reconstruction objective regularizes the encoder to preserve structural cues. UniGTE is instruction-tuned on five datasets spanning node-level, edge-level, and graph-level tasks across diverse domains, yet requires no fine-tuning at inference. It achieves new state-of-the-art zero-shot results on node classification, link prediction, graph classification, and graph regression under cross-task and cross-domain settings, demonstrating that tight integration of graph structure with LLM semantics enables robust, transferable graph reasoning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-19T15:36:45Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>NeurIPS 2025</arxiv:journal_ref>
+    <author>
+      <name>Duo Wang</name>
+    </author>
+    <author>
+      <name>Yuan Zuo</name>
+    </author>
+    <author>
+      <name>Guangyue Lu</name>
+    </author>
+    <author>
+      <name>Junjie Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.01510v3</id>
+    <title>Flock: A Knowledge Graph Foundation Model via Learning on Random Walks</title>
+    <updated>2026-05-08T15:15:04Z</updated>
+    <link href="https://arxiv.org/abs/2510.01510v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.01510v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the problem of zero-shot link prediction on knowledge graphs (KGs), which requires models to generalize to novel entities and novel relations. Knowledge graph foundation models (KGFMs) address this task by enforcing equivariance over both nodes and relations, which enables them to learn structural properties of nodes and relations that transfer to novel KGs with similar structure. However, the conventional notion of deterministic equivariance inherently limits the expressive power of KGFMs, as it prevents them from distinguishing relations that are structurally similar but semantically distinct. To overcome this limitation, we propose to leverage probabilistic node-relation equivariance, which preserves equivariance in distribution while using structured randomness to break symmetries at inference time. Building on this principle, we present Flock, a KGFM that iteratively samples random walks, encodes them into sequences, embeds them with a sequence model, and aggregates node and relation representations through learned pooling. Flock respects probabilistic node-relation equivariance and, crucially, is a universal approximator for isomorphism-invariant link-level functions over KGs. Empirically, Flock perfectly solves our new diagnostic dataset Petals on which current KGFMs fail, and achieves state-of-the-art performance on entity and relation prediction tasks across 54 KGs from diverse domains. Code is available at https://github.com/jw9730/flock.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-01T23:09:46Z</published>
+    <arxiv:comment>42 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jinwoo Kim</name>
+    </author>
+    <author>
+      <name>Xingyue Huang</name>
+    </author>
+    <author>
+      <name>Krzysztof Olejniczak</name>
+    </author>
+    <author>
+      <name>Kyungbin Min</name>
+    </author>
+    <author>
+      <name>Michael Bronstein</name>
+    </author>
+    <author>
+      <name>Seunghoon Hong</name>
+    </author>
+    <author>
+      <name>İsmail İlkan Ceylan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.03860v1</id>
+    <title>KGBERT4Eth: A Feature-Complete Transformer Powered by Knowledge Graph for Multi-Task Ethereum Fraud Detection</title>
+    <updated>2025-09-04T03:38:11Z</updated>
+    <link href="https://arxiv.org/abs/2509.03860v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.03860v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ethereum's rapid ecosystem expansion and transaction anonymity have triggered a surge in malicious activity. Detection mechanisms currently bifurcate into three technical strands: expert-defined features, graph embeddings, and sequential transaction patterns, collectively spanning the complete feature sets of Ethereum's native data layer. Yet the absence of cross-paradigm integration mechanisms forces practitioners to choose between sacrificing sequential context awareness, structured fund-flow patterns, or human-curated feature insights in their solutions. To bridge this gap, we propose KGBERT4Eth, a feature-complete pre-training encoder that synergistically combines two key components: (1) a Transaction Semantic Extractor, where we train an enhanced Transaction Language Model (TLM) to learn contextual semantic representations from conceptualized transaction records, and (2) a Transaction Knowledge Graph (TKG) that incorporates expert-curated domain knowledge into graph node embeddings to capture fund flow patterns and human-curated feature insights. We jointly optimize pre-training objectives for both components to fuse these complementary features, generating feature-complete embeddings. To emphasize rare anomalous transactions, we design a biased masking prediction task for TLM to focus on statistical outliers, while the Transaction TKG employs link prediction to learn latent transaction relationships and aggregate knowledge. Furthermore, we propose a mask-invariant attention coordination module to ensure stable dynamic information exchange between TLM and TKG during pre-training. KGBERT4Eth significantly outperforms state-of-the-art baselines in both phishing account detection and de-anonymization tasks, achieving absolute F1-score improvements of 8-16% on three phishing detection benchmarks and 6-26% on four de-anonymization datasets.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-04T03:38:11Z</published>
+    <arxiv:comment>This work has been submitted to the IEEE for possible publication</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Yifan Jia</name>
+    </author>
+    <author>
+      <name>Ye Tian</name>
+    </author>
+    <author>
+      <name>Liguo Zhang</name>
+    </author>
+    <author>
+      <name>Yanbin Wang</name>
+    </author>
+    <author>
+      <name>Jianguo Sun</name>
+    </author>
+    <author>
+      <name>Liangliang Song</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.24178v1</id>
+    <title>Invariant Link Selector for Spatial-Temporal Out-of-Distribution Problem</title>
+    <updated>2025-05-30T03:40:00Z</updated>
+    <link href="https://arxiv.org/abs/2505.24178v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.24178v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the era of foundation models, Out-of- Distribution (OOD) problems, i.e., the data discrepancy between the training environments and testing environments, hinder AI generalization. Further, relational data like graphs disobeying the Independent and Identically Distributed (IID) condition makes the problem more challenging, especially much harder when it is associated with time. Motivated by this, to realize the robust invariant learning over temporal graphs, we want to investigate what components in temporal graphs are most invariant and representative with respect to labels. With the Information Bottleneck (IB) method, we propose an error-bounded Invariant Link Selector that can distinguish invariant components and variant components during the training process to make the deep learning model generalizable for different testing scenarios. Besides deriving a series of rigorous generalizable optimization functions, we also equip the training with task-specific loss functions, e.g., temporal link prediction, to make pretrained models solve real-world application tasks like citation recommendation and merchandise recommendation, as demonstrated in our experiments with state-of-the-art (SOTA) methods. Our code is available at https://github.com/kthrn22/OOD-Linker.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-30T03:40:00Z</published>
+    <arxiv:comment>Accepted by AISTATS 2025. 22 pages, 2 figures, 6 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Katherine Tieu</name>
+    </author>
+    <author>
+      <name>Dongqi Fu</name>
+    </author>
+    <author>
+      <name>Jun Wu</name>
+    </author>
+    <author>
+      <name>Jingrui He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.24055v1</id>
+    <title>Bridging Source and Target Domains via Link Prediction for Unsupervised Domain Adaptation on Graphs</title>
+    <updated>2025-05-29T22:54:40Z</updated>
+    <link href="https://arxiv.org/abs/2505.24055v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.24055v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks (GNNs) have shown great ability for node classification on graphs. However, the success of GNNs relies on abundant labeled data, while obtaining high-quality labels is costly and challenging, especially for newly emerging domains. Hence, unsupervised domain adaptation (UDA), which trains a classifier on the labeled source graph and adapts it to the unlabeled target graph, is attracting increasing attention. Various approaches have been proposed to alleviate the distribution shift between the source and target graphs to facilitate the classifier adaptation. However, most of them simply adopt existing UDA techniques developed for independent and identically distributed data to gain domain-invariant node embeddings for graphs, which do not fully consider the graph structure and message-passing mechanism of GNNs during the adaptation and will fail when label distribution shift exists among domains. In this paper, we proposed a novel framework that adopts link prediction to connect nodes between source and target graphs, which can facilitate message-passing between the source and target graphs and augment the target nodes to have ``in-distribution'' neighborhoods with the source domain. This strategy modified the target graph on the input level to reduce its deviation from the source domain in the embedding space and is insensitive to disproportional label distributions across domains. To prevent the loss of discriminative information in the target graph, we further design a novel identity-preserving learning objective, which guides the learning of the edge insertion module together with reconstruction and adaptation losses. Experimental results on real-world datasets demonstrate the effectiveness of our framework.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-29T22:54:40Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yilong Wang</name>
+    </author>
+    <author>
+      <name>Tianxiang Zhao</name>
+    </author>
+    <author>
+      <name>Zongyu Wu</name>
+    </author>
+    <author>
+      <name>Suhang Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.11803v1</id>
+    <title>VITA: Versatile Time Representation Learning for Temporal Hyper-Relational Knowledge Graphs</title>
+    <updated>2025-05-17T03:16:13Z</updated>
+    <link href="https://arxiv.org/abs/2505.11803v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.11803v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs (KGs) have become an effective paradigm for managing real-world facts, which are not only complex but also dynamically evolve over time. The temporal validity of facts often serves as a strong clue in downstream link prediction tasks, which predicts a missing element in a fact. Traditional link prediction techniques on temporal KGs either consider a sequence of temporal snapshots of KGs with an ad-hoc defined time interval or expand a temporal fact over its validity period under a predefined time granularity; these approaches not only suffer from the sensitivity of the selection of time interval/granularity, but also face the computational challenges when handling facts with long (even infinite) validity. Although the recent hyper-relational KGs represent the temporal validity of a fact as qualifiers describing the fact, it is still suboptimal due to its ignorance of the infinite validity of some facts and the insufficient information encoded from the qualifiers about the temporal validity. Against this background, we propose VITA, a $\underline{V}$ersatile t$\underline{I}$me represen$\underline{TA}$tion learning method for temporal hyper-relational knowledge graphs. We first propose a versatile time representation that can flexibly accommodate all four types of temporal validity of facts (i.e., since, until, period, time-invariant), and then design VITA to effectively learn the time information in both aspects of time value and timespan to boost the link prediction performance. We conduct a thorough evaluation of VITA compared to a sizable collection of baselines on real-world KG datasets. Results show that VITA outperforms the best-performing baselines in various link prediction tasks (predicting missing entities, relations, time, and other numeric literals) by up to 75.3%. Ablation studies and a case study also support our key design choices.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-17T03:16:13Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>ChongIn Un</name>
+    </author>
+    <author>
+      <name>Yuhuan Lu</name>
+    </author>
+    <author>
+      <name>Tianyue Yang</name>
+    </author>
+    <author>
+      <name>Dingqi Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.01684v4</id>
+    <title>Predict, Cluster, Refine: A Joint Embedding Predictive Self-Supervised Framework for Graph Representation Learning</title>
+    <updated>2025-09-03T12:25:24Z</updated>
+    <link href="https://arxiv.org/abs/2502.01684v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.01684v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph representation learning has emerged as a cornerstone for tasks like node classification and link prediction, yet prevailing self-supervised learning (SSL) methods face challenges such as computational inefficiency, reliance on contrastive objectives, and representation collapse. Existing approaches often depend on feature reconstruction, negative sampling, or complex decoders, which introduce training overhead and hinder generalization. Further, current techniques which address such limitations fail to account for the contribution of node embeddings to a certain prediction in the absence of labeled nodes. To address these limitations, we propose a novel joint embedding predictive framework for graph SSL that eliminates contrastive objectives and negative sampling while preserving semantic and structural information. Additionally, we introduce a semantic-aware objective term that incorporates pseudo-labels derived from Gaussian Mixture Models (GMMs), enhancing node discriminability by evaluating latent feature contributions. Extensive experiments demonstrate that our framework outperforms state-of-the-art graph SSL methods across benchmarks, achieving superior performance without contrastive loss or complex decoders. Key innovations include (1) a non-contrastive, view-invariant joint embedding predictive architecture, (2) Leveraging single context and multiple targets relationship between subgraphs, and (3) GMM-based pseudo-label scoring to capture semantic contributions. This work advances graph SSL by offering a computationally efficient, collapse-resistant paradigm that bridges spatial and semantic graph features for downstream tasks. The code for our paper can be found at https://github.com/Deceptrax123/JPEB-GSSL</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-02T07:42:45Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Srinitish Srinivasan</name>
+    </author>
+    <author>
+      <name>Omkumar CU</name>
+    </author>
+  </entry>
+</feed>

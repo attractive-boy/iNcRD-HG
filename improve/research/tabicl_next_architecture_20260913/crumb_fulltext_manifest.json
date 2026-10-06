@@ -1,0 +1,60 @@
+{
+  "slug": "crumb",
+  "arxiv_id": "2606.11473",
+  "title": "CRUMB: Efficient Prior Fitted Network Inference via Distributionally Matched Context Batching",
+  "retrieved_utc": "2026-09-13T00:30:46.196614+00:00",
+  "attempts": [
+    {
+      "url": "https://arxiv.org/abs/2606.11473",
+      "final_url": "https://arxiv.org/abs/2606.11473",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 42895,
+      "sha256": "c999a82842148fd57aa705bb9111925a7b620c44c09b72658dddccf8aab81af1"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.11473",
+      "final_url": "https://arxiv.org/html/2606.11473",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 435656,
+      "sha256": "670a0bd6ee484b9022eb727874a2974efb1fe766ad9c8864e8680f8fbaa09c85"
+    }
+  ],
+  "si_status": "not_requested_not_downloaded",
+  "metadata": {
+    "citation_title": [
+      "CRUMB: Efficient Prior Fitted Network Inference via Distributionally Matched Context Batching"
+    ],
+    "citation_author": [
+      "Heredge, Jamie",
+      "Villani, Mattia J.",
+      "Deshpande, Pranav",
+      "Seshadri, Akshay",
+      "Kumar, Niraj"
+    ],
+    "citation_date": [
+      "2026/06/09"
+    ],
+    "citation_online_date": [
+      "2026/06/09"
+    ],
+    "citation_pdf_url": [
+      "https://arxiv.org/pdf/2606.11473"
+    ],
+    "citation_arxiv_id": [
+      "2606.11473"
+    ],
+    "citation_abstract": [
+      "Prior-fitted networks (PFNs) are a promising class of tabular foundation models that perform in-context learning, whereby the entire labelled training set is supplied as context, and predictions for test queries are produced in a single forward pass. However, the quadratically scaling self-attention mechanism in many PFN architectures makes inference prohibitive for very large training datasets. We propose CRUMB (Clustered Retrieval Using Minimised-MMD Batching), a three-stage inference wrapper that (i) clusters the test queries, (ii) selects a small, distributionally matched training subset for each cluster by greedily minimising the maximum mean discrepancy (MMD), and (iii) runs exact PFN inference on each reduced-context batch. CRUMB is architecture-agnostic and requires no retraining. On the 51-dataset TabArena benchmark, evaluated across three PFN architectures (TabPFNv2, TabICLv1, TabICLv2), we show that CRUMB outperforms similar state-of-the-art context selection strategies. We also show that CRUMB is resilient to covariate drift, as the MMD-minimisation step naturally helps align the training context distribution to match the current test batch distributions."
+    ]
+  },
+  "title_verified": true,
+  "version_numbers_seen": [
+    "1"
+  ],
+  "status": "full_text_html_available",
+  "fulltext_path": "fulltext/crumb.txt",
+  "text_characters": 77006,
+  "pdf_status": "not_requested_html_sufficient"
+}

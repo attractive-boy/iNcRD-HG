@@ -1,0 +1,240 @@
+[
+  {
+    "source": "arxiv",
+    "query": "all:\"late interaction\" AND (all:RNA OR all:molecular)",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22late+interaction%22+AND+%28all%3ARNA+OR+all%3Amolecular%29&max_results=4",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2510.22538v1",
+        "title": "Iteratively Refined Early Interaction Alignment for Subgraph Matching based Graph Retrieval",
+        "published": "2025-10-26T05:24:10Z",
+        "summary": "Graph retrieval based on subgraph isomorphism has several real-world applications such as scene graph retrieval, molecular fingerprint detection and circuit design. Roy et al. [35] proposed IsoNet, a late interaction model for subgraph matching, which first computes the node and edge embeddings of each graph independently of paired graph and then computes a trainable alignment map. Here, we present IsoNet++, an early interaction graph neural network (GNN), based on several technical innovations. First, we compute embeddings of all nodes by passing messages within and across the two input graphs, guided by an injective alignment between their nodes. Second, we update this alignment in a lazy fashion over multiple rounds. Within each round, we run a layerwise GNN from scratch, based on the current state of the alignment. After the completion of one round of GNN, we use the last-layer embeddings to update the alignments, and proceed to the next round. Third, IsoNet++ incorporates a novel notion of node-pair partner interaction. Traditional early interaction computes attention between a node and its potential partners in the other graph, the attention then controlling messages passed across graphs. In contrast, we consider node pairs (not single nodes) as potential partners. Existence of an edge between the nodes in one graph and non-existence in the other provide vital signals for refining the alignment. Our experiments on several datasets show that the alignments get progressively refined with successive rounds, resulting in significantly better retrieval performance than existing methods. We demonstrate that all three innovations contribute to the enhanced accuracy. Our code and datasets are publicly available at https://github.com/structlearning/isonetpp."
+      }
+    ]
+  },
+  {
+    "source": "crossref",
+    "query": "MatchAnything Universal Cross-Modality Image Matching",
+    "url": "https://api.crossref.org/works?query.title=MatchAnything+Universal+Cross-Modality+Image+Matching&rows=4",
+    "records": [
+      {
+        "DOI": "10.1007/978-3-540-29678-2_1335",
+        "title": [
+          "Cross-modality Matching"
+        ],
+        "container-title": [
+          "Encyclopedia of Neuroscience"
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              24
+            ]
+          ]
+        },
+        "published": {
+          "date-parts": [
+            [
+              2009
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/978-3-540-29678-2_1335"
+      },
+      {
+        "DOI": "10.4324/9781315127675-4",
+        "title": [
+          "Cross-Modality Matching"
+        ],
+        "container-title": [
+          "Psychophysics"
+        ],
+        "published-online": null,
+        "published": {
+          "date-parts": [
+            [
+              2017,
+              9,
+              29
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.4324/9781315127675-4"
+      },
+      {
+        "DOI": "10.1109/tgrs.2026.3683096",
+        "title": [
+          "MIFTr: Efficient Universal Image Matching With Modality-Invariant Feature Transformer"
+        ],
+        "container-title": [
+          "IEEE Transactions on Geoscience and Remote Sensing"
+        ],
+        "published-online": null,
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1109/tgrs.2026.3683096"
+      },
+      {
+        "DOI": "10.1109/cvpr42600.2020.01095",
+        "title": [
+          "Multi-Modality Cross Attention Network for Image and Sentence Matching"
+        ],
+        "container-title": [
+          "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "published-online": null,
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              6
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1109/cvpr42600.2020.01095"
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "query": "all:TabICL AND (all:relational OR all:matching)",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3ATabICL+AND+%28all%3Arelational+OR+all%3Amatching%29&max_results=4",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2605.06343v1",
+        "title": "Mind the Gap? A Distributional Comparison of Real and Synthetic Priors for Tabular Foundation Models",
+        "published": "2026-05-07T14:29:31Z",
+        "summary": "Tabular foundation models are pre-trained on one of three classes of corpus: curated datasets drawn from benchmark repositories, tables harvested at scale from the web, or synthetic tables sampled from a parametric generative prior. Despite the centrality of pre-training data to model performance, little is known about how these corpora relate to one another in distribution, and the impact this has on downstream performance. In this work we take three canonical, archetypal datasets used to train tabular foundation models; the T4 dataset represents web-scraped corpora, the TabFM dataset curated tables from Kaggle, and the TabICL dataset as the only well-used synthetic prior with publicly available parameters. We characterise each corpus using aggregate features over whole tables, columns and correlations, and compare them using discriminator AUCs and k-NN coverage metrics. We find that the TabICL synthetic prior occupies a narrow region of the space of real tables, that this mismatch cannot be closed by optimising prior hyper-parameters across more than 86 thousand configurations, and that curated and web-scraped corpora are broadly interchangeable on a distributional level in feature space. Surprisingly, the distributional gap between synthetic pre-training data and real tables has a clearly detectable effect on performance under neither feature-based proximity measures or TabICL's own internal representations, suggesting that coverage of the real-data distribution is not the primary driver of TabICL's generalisation."
+      },
+      {
+        "id": "http://arxiv.org/abs/2512.00888v2",
+        "title": "Light-Weight Benchmarks Reveal the Hidden Hardware Cost of Zero-Shot Tabular Foundation Models",
+        "published": "2025-11-30T13:17:08Z",
+        "summary": "Zero-shot foundation models (FMs) promise training-free prediction on tabular data, yet their hardware footprint remains poorly characterized. We present a fully reproducible benchmark that reports test accuracy together with wall-clock latency, peak CPU RAM, and peak GPU VRAM on four public datasets: Adult-Income, Higgs-100k, Wine-Quality, and California-Housing. Two open FMs (TabPFN-1.0 and TabICL-base) are compared against tuned XGBoost, LightGBM, and Random Forest baselines on a single NVIDIA T4 GPU. The tree ensembles equal or surpass FM accuracy on three datasets while completing full-test batches in <= 0.40 s and <= 150 MB RAM, using zero VRAM. TabICL achieves a 0.8 percentage-point gain on Higgs but requires roughly 40,000 times more latency (960 s) and 9 GB VRAM. TabPFN matches tree-model accuracy on Wine and Housing but peaks at 4 GB VRAM and cannot process the full 100k-row Higgs table. These results quantify the substantial hardware-versus-accuracy trade-offs in current tabular FMs and provide an open baseline for future efficiency-oriented research."
+      },
+      {
+        "id": "http://arxiv.org/abs/2512.12405v1",
+        "title": "Can Graphs Improve Tabular Foundation Models?",
+        "published": "2025-12-13T17:34:18Z",
+        "summary": "Tabular data are central to many real-world systems. While recent tabular transformers and in-context learners such as SAINT, TP-BERTa, TabPFN, TabICL, and MITRA incorporate limited inter-row reasoning, most approaches still lack an explicit mechanism to model relationships among instances, even though similar samples often share related outcomes. We investigate whether introducing \\emph{simple graph priors} can enhance \\emph{pretrained tabular transformers}. Concretely, we introduce {BOLERO}, a lightweight, static bipartite graph head that augments {RoBERTa-Tab} (a RoBERTa-style tabular backbone pretrained with masked-token prediction.) Each instance connects to feature/value anchors; a small GNN refines row representations, while the backbone remains frozen. We evaluate on 80 classification and 64 regression datasets from the TP-BERTa benchmark suites, comparing against strong baselines including XGBoost, CatBoost, TabPFN-v2, MITRA, TabICL, TP-BERTa, and RoBERTa-Tab. To ensure statistically sound conclusions, we follow best practices for multi-dataset evaluation: pairwise Wilcoxon signed-rank tests on per-dataset score differences and effect sizes (median improvement with confidence intervals), rather than mean-rank post-hoc tests that depend on the competitor pool. BOLERO achieves the highest number of statistically significant wins across both classification and regression, demonstrating that lightweight graph priors meaningfully improve pretrained tabular transformers."
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.29091v1",
+        "title": "Statistically Indistinguishable, Operationally Distinct: A Formal Barrier for Tabular Foundation Models",
+        "published": "2026-06-27T21:14:06Z",
+        "summary": "Tabular foundation models cannot reason about data produced by running systems without access to the rules that govern them. We make this statement falsifiable. The \\emph{Operational Turing Test} (OTT) constructs pairs of legal and rule-violating database states whose $1$- and $2$-way column-value marginals match to a total variation of $<0.02$; Le~Cam's lemma then bounds any values-only classifier at $\\geq0.49$ Bayes error. Three values-only baselines (XGBoost, TabICL, TabPFN) hit the bound exactly (accuracy $0.50$, pre-registered two one-sided tests (TOST) $p<0.002$), raw row-level access does not help, exposing relational value consistency closes most of the gap, and only a classifier fed by seven executable rule-derived audits reaches $1.00$ classification accuracy. In three matched $100$-state frontier large-language-model (LLM) runs, models given the schema, trigger source, rule tables, and state files classify at most $2/50$ legal states as LEGAL; GPT-5.5 accepts $0/50$ legal states even with higher reasoning effort and a Structured Query Language (SQL) executor. The access-ladder pattern also appears on a second schema with structurally distinct rule families (banking ledger: cross-row balance, cumulative aggregate). The barrier is identifiability, not capacity: scale, data, and richer features cannot cross it without operational grounding."
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "query": "ti:TFMLinker",
+    "url": "https://export.arxiv.org/api/query?search_query=ti%3ATFMLinker&max_results=4",
+    "records": [
+      {
+        "id": "http://arxiv.org/abs/2602.08592v1",
+        "title": "TFMLinker: Universal Link Predictor by Graph In-Context Learning with Tabular Foundation Models",
+        "published": "2026-02-09T12:33:30Z",
+        "summary": "Link prediction is a fundamental task in graph machine learning with widespread applications such as recommendation systems, drug discovery, knowledge graphs, etc. In the foundation model era, how to develop universal link prediction methods across datasets and domains becomes a key problem, with some initial attempts adopting Graph Foundation Models utilizing Graph Neural Networks and Large Language Models. However, the existing methods face notable limitations, including limited pre-training scale or heavy reliance on textual information. Motivated by the success of tabular foundation models (TFMs) in achieving universal prediction across diverse tabular datasets, we explore an alternative approach by TFMs, which are pre-trained on diverse synthetic datasets sampled from structural causal models and support strong in-context learning independent of textual attributes. Nevertheless, adapting TFMs for link prediction faces severe technical challenges such as how to obtain the necessary context and capture link-centric topological information. To solve these challenges, we propose TFMLinker (Tabular Foundation Model for Link Predictor), aiming to leverage the in-context learning capabilities of TFMs to perform link prediction across diverse graphs without requiring dataset-specific fine-tuning. Specifically, we first develop a prototype-augmented local-global context module to construct context that captures both graph-specific and cross-graph transferable patterns. Next, we design a universal topology-aware link encoder to capture link-centric topological information and generate link representations as inputs for the TFM. Finally, we employ the TFM to predict link existence through in-context learning. Experiments on 6 graph benchmarks across diverse domains demonstrate the superiority of our method over state-of-the-art baselines without requiring dataset-specific finetuning."
+      }
+    ]
+  },
+  {
+    "source": "crossref",
+    "query": "RNA drug late interaction local matching",
+    "url": "https://api.crossref.org/works?query.title=RNA+drug+late+interaction+local+matching&rows=4",
+    "records": [
+      {
+        "DOI": "10.1007/978-981-96-6960-8_12",
+        "title": [
+          "Distribution Matching for Drug-Drug Interaction Prediction"
+        ],
+        "container-title": [
+          "Communications in Computer and Information Science",
+          "Neural Information Processing"
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              16
+            ]
+          ]
+        },
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/978-981-96-6960-8_12"
+      },
+      {
+        "DOI": "10.1109/tcbb.2013.2297113",
+        "title": [
+          "Local Exact Pattern Matching for Non-Fixed RNA Structures"
+        ],
+        "container-title": [
+          "IEEE/ACM Transactions on Computational Biology and Bioinformatics"
+        ],
+        "published-online": null,
+        "published": {
+          "date-parts": [
+            [
+              2014,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1109/tcbb.2013.2297113"
+      },
+      {
+        "DOI": "10.1213/01.ane.0000260356.82964.8b",
+        "title": [
+          "Drug–Drug Interaction or a Local Anesthetic Overdose?"
+        ],
+        "container-title": [
+          "Anesthesia &amp; Analgesia"
+        ],
+        "published-online": null,
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              5
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1213/01.ane.0000260356.82964.8b"
+      },
+      {
+        "DOI": "10.1007/978-3-642-31265-6_25",
+        "title": [
+          "Local Exact Pattern Matching for Non-fixed RNA Structures"
+        ],
+        "container-title": [
+          "Lecture Notes in Computer Science",
+          "Combinatorial Pattern Matching"
+        ],
+        "published-online": null,
+        "published": {
+          "date-parts": [
+            [
+              2012
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/978-3-642-31265-6_25"
+      }
+    ]
+  }
+]

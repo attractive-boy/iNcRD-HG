@@ -1,0 +1,739 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2601.04110v2",
+    "title": "Causal Data Augmentation for Robust Fine-Tuning of Tabular Foundation Models",
+    "summary": "Fine-tuning tabular foundation models (TFMs) under data scarcity is challenging, as early stopping on even scarcer validation data often fails to capture true generalization performance. We propose CausalMixFT, a method that enhances fine-tuning robustness and downstream performance by generating structurally consistent synthetic samples using Structural Causal Models (SCMs) fitted on the target dataset. This approach augments limited real data with causally informed synthetic examples, preserving feature dependencies while expanding training diversity. Evaluated across 33 classification datasets from TabArena and over 2300 fine-tuning runs, our CausalMixFT method consistently improves median normalized ROC-AUC from 0.10 (standard fine-tuning) to 0.12, outperforming purely statistical generators such as CTGAN (-0.01), TabEBM (-0.04), and TableAugment (-0.09). Moreover, it narrows the median validation-test performance correlation gap from 0.67 to 0.30, enabling more reliable validation-based early stopping, a key step toward improving fine-tuning stability under data scarcity. These results demonstrate that incorporating causal structure into data augmentation provides an effective and principled route to fine-tuning tabular foundation models in low-data regimes.",
+    "published": "2026-01-07T17:16:39Z",
+    "updated": "2026-01-20T21:03:27Z",
+    "authors": [
+      "Magnus Bühler",
+      "Lennart Purucker",
+      "Frank Hutter"
+    ],
+    "arxiv_id": "2601.04110",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2512.03307v1",
+    "title": "Robust Tabular Foundation Models",
+    "summary": "The development of tabular foundation models (TFMs) has accelerated in recent years, showing strong potential to outperform traditional ML methods for structured data. A key finding is that TFMs can be pretrained entirely on synthetic datasets, opening opportunities to design data generators that encourage desirable model properties. Prior work has mainly focused on crafting high-quality priors over generators to improve overall pretraining performance. Our insight is that parameterizing the generator distribution enables an adversarial robustness perspective: during training, we can adapt the generator to emphasize datasets that are particularly challenging for the model. We formalize this by introducing an optimality gap measure, given by the difference between TFM performance and the best achievable performance as estimated by strong baselines such as XGBoost, CatBoost, and Random Forests. Building on this idea, we propose Robust Tabular Foundation Models (RTFM), a model-agnostic adversarial training framework. Applied to the TabPFN V2 classifier, RTFM improves benchmark performance, with up to a 6% increase in mean normalized AUC over the original TabPFN and other baseline algorithms, while requiring less than 100k additional synthetic datasets. These results highlight a promising new direction for targeted adversarial training and fine-tuning of TFMs using synthetic data alone.",
+    "published": "2025-12-02T23:40:39Z",
+    "updated": "2025-12-02T23:40:39Z",
+    "authors": [
+      "Matthew Peroni",
+      "Franck Le",
+      "Vadim Sheinin"
+    ],
+    "arxiv_id": "2512.03307",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2506.08982v2",
+    "title": "On Finetuning Tabular Foundation Models",
+    "summary": "Foundation models are an emerging research direction in tabular deep learning. Notably, TabPFNv2 recently claimed superior performance over traditional GBDT-based methods on small-scale datasets using an in-context learning paradigm, which does not adapt model parameters to target datasets. However, the optimal finetuning approach for adapting tabular foundational models, and how this adaptation reshapes their internal mechanisms, remains underexplored. While prior works studied finetuning for earlier foundational models, inconsistent findings and TabPFNv2's unique architecture necessitate fresh investigation. To address these questions, we first systematically evaluate various finetuning strategies on diverse datasets. Our findings establish full finetuning as the most practical solution for TabPFNv2 in terms of time-efficiency and effectiveness. We then investigate how finetuning alters TabPFNv2's inner mechanisms, drawing an analogy to retrieval-augmented models. We reveal that the success of finetuning stems from the fact that after gradient-based adaptation, the dot products of the query-representations of test objects and the key-representations of in-context training objects more accurately reflect their target similarity. This improved similarity allows finetuned TabPFNv2 to better approximate target dependency by appropriately weighting relevant in-context samples, improving the retrieval-based prediction logic. From the practical perspective, we managed to finetune TabPFNv2 on datasets with up to 50K objects, observing performance improvements on almost all tasks. More precisely, on academic datasets with I.I.D. splits, finetuning allows TabPFNv2 to achieve state-of-the-art results, while on datasets with gradual temporal shifts and rich feature sets, TabPFNv2 is less stable and prior methods remain better.",
+    "published": "2025-06-10T16:52:31Z",
+    "updated": "2025-06-11T09:47:49Z",
+    "authors": [
+      "Ivan Rubachev",
+      "Akim Kotelnikov",
+      "Nikolay Kartashev",
+      "Artem Babenko"
+    ],
+    "arxiv_id": "2506.08982",
+    "sources": [
+      "arxiv_finetuning.json",
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2601.09654v1",
+    "title": "Exploring Fine-Tuning for Tabular Foundation Models",
+    "summary": "Tabular Foundation Models (TFMs) have recently shown strong in-context learning capabilities on structured data, achieving zero-shot performance comparable to traditional machine learning methods. We find that zero-shot TFMs already achieve strong performance, while the benefits of fine-tuning are highly model and data-dependent. Meta-learning and PEFT provide moderate gains under specific conditions, whereas full supervised fine-tuning (SFT) often reduces accuracy or calibration quality. This work presents the first comprehensive study of fine-tuning in TFMs across benchmarks including TALENT, OpenML-CC18, and TabZilla. We compare Zero-Shot, Meta-Learning, Supervised (SFT), and parameter-efficient (PEFT) approaches, analyzing how dataset factors such as imbalance, size, and dimensionality affect outcomes. Our findings cover performance, calibration, and fairness, offering practical guidelines on when fine-tuning is most beneficial and its limitations.",
+    "published": "2026-01-14T17:40:46Z",
+    "updated": "2026-01-14T17:40:46Z",
+    "authors": [
+      "Aditya Tanna",
+      "Pratinav Seth",
+      "Mohamed Bouadi",
+      "Vinay Kumar Sankarapu"
+    ],
+    "arxiv_id": "2601.09654",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2511.02802v3",
+    "title": "TabTune: A Unified Library for Inference and Fine-Tuning Tabular Foundation Models",
+    "summary": "Tabular foundation models represent a growing paradigm in structured data learning, extending the benefits of large-scale pretraining to tabular domains. However, their adoption remains limited due to heterogeneous preprocessing pipelines, fragmented APIs, inconsistent fine-tuning procedures, and the absence of standardized evaluation for deployment-oriented metrics such as calibration and fairness. We present TabTune, a unified library that standardizes the complete workflow for tabular foundation models through a single interface. TabTune provides consistent access to seven state-of-the-art models supporting multiple adaptation strategies, including zero-shot inference, meta-learning, supervised fine-tuning (SFT), and parameter-efficient fine-tuning (PEFT). The framework automates model-aware preprocessing, manages architectural heterogeneity internally, and integrates evaluation modules for performance, calibration, and fairness. Designed for extensibility and reproducibility, TabTune enables consistent benchmarking of adaptation strategies of tabular foundation models.",
+    "published": "2025-11-04T18:25:17Z",
+    "updated": "2025-12-02T18:48:39Z",
+    "authors": [
+      "Aditya Tanna",
+      "Pratinav Seth",
+      "Mohamed Bouadi",
+      "Utsav Avaiya",
+      "Vinay Kumar Sankarapu"
+    ],
+    "arxiv_id": "2511.02802",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2406.05207v1",
+    "title": "Retrieval & Fine-Tuning for In-Context Tabular Models",
+    "summary": "Tabular data is a pervasive modality spanning a wide range of domains, and the inherent diversity poses a considerable challenge for deep learning. Recent advancements using transformer-based in-context learning have shown promise on smaller and less complex datasets, but have struggled to scale to larger and more complex ones. To address this limitation, we propose a combination of retrieval and fine-tuning: we can adapt the transformer to a local subset of the data by collecting nearest neighbours, and then perform task-specific fine-tuning with this retrieved set of neighbours in context. Using TabPFN as the base model -- currently the best tabular in-context learner -- and applying our retrieval and fine-tuning scheme on top results in what we call a locally-calibrated PFN, or LoCalPFN. We conduct extensive evaluation on 95 datasets curated by TabZilla from OpenML, upon which we establish a new state-of-the-art with LoCalPFN -- even with respect to tuned tree-based models. Notably, we show a significant boost in performance compared to the base in-context model, demonstrating the efficacy of our approach and advancing the frontier of deep learning in tabular data.",
+    "published": "2024-06-07T18:43:33Z",
+    "updated": "2024-06-07T18:43:33Z",
+    "authors": [
+      "Valentin Thomas",
+      "Junwei Ma",
+      "Rasa Hosseinzadeh",
+      "Keyvan Golestan",
+      "Guangwei Yu",
+      "Maksims Volkovs",
+      "Anthony Caterini"
+    ],
+    "arxiv_id": "2406.05207",
+    "sources": [
+      "arxiv_finetuning.json",
+      "arxiv_retrieval.json",
+      "openalex_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification",
+    "doi": "10.48550/arxiv.2406.05207"
+  },
+  {
+    "id": "http://arxiv.org/abs/2606.30258v1",
+    "title": "KnowsTFM: Knowledge-Informed Fine-Tuning of Small Tabular Foundation Models",
+    "summary": "Tabular foundation models have advanced deep learning for tabular data by delivering strong default performance across many small and medium tasks. Yet in niche domains, where data is scarce, high-dimensional, and shifted from the pretraining distribution, they may still fail to outperform carefully designed domain-specific methods. Many such domains also provide curated relational knowledge in the form of knowledge graphs and knowledge banks, but how to use this knowledge to improve and steer \\textit{small} specialist tabular foundation models remains unclear. We address this problem through \\textbf{Know}ledge-informed fine-tuning of \\textbf{s}mall \\textbf{T}abular \\textbf{F}oundation \\textbf{M}odels (\\modelname). Specifically, we study nanoscale TabPFN- and TabICL-style variants, pretrained under controlled synthetic prior families and adapted using two complementary mechanisms: structural attention priors derived from knowledge graphs and parameter-efficient low-rank updates. We show that injecting domain-specific structural knowledge during fine-tuning yields meaningful gains over vanilla variants in specialist settings, whereas gains on general-domain tasks are marginal. We further observe that continual fine-tuning of frontier models can trigger collapse of pretrained knowledge and mechanisms.",
+    "published": "2026-06-29T13:06:48Z",
+    "updated": "2026-06-29T13:06:48Z",
+    "authors": [
+      "Boshko Koloski",
+      "Xiangjian Jiang",
+      "Senja Pollak",
+      "Blaž Škrlj",
+      "Mateja Jamnik",
+      "Nikola Simidjievski"
+    ],
+    "arxiv_id": "2606.30258",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2405.13396v2",
+    "title": "Fine-tuned In-Context Learning Transformers are Excellent Tabular Data Classifiers",
+    "summary": "The recently introduced TabPFN pretrains an In-Context Learning (ICL) transformer on synthetic data to perform tabular data classification. In this work, we extend TabPFN to the fine-tuning setting, resulting in a significant performance boost. We also discover that fine-tuning enables ICL-transformers to create complex decision boundaries, a property regular neural networks do not have. Based on this observation, we propose to pretrain ICL-transformers on a new forest dataset generator which creates datasets that are unrealistic, but have complex decision boundaries. TabForest, the ICL-transformer pretrained on this dataset generator, shows better fine-tuning performance when pretrained on more complex datasets. Additionally, TabForest outperforms TabPFN on some real-world datasets when fine-tuning, despite having lower zero-shot performance due to the unrealistic nature of the pretraining datasets. By combining both dataset generators, we create TabForestPFN, an ICL-transformer that achieves excellent fine-tuning performance and good zero-shot performance.",
+    "published": "2024-05-22T07:13:55Z",
+    "updated": "2025-01-23T06:15:47Z",
+    "authors": [
+      "Felix den Breejen",
+      "Sangmin Bae",
+      "Stephen Cha",
+      "Se-Young Yun"
+    ],
+    "arxiv_id": "2405.13396",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2602.08592v1",
+    "title": "TFMLinker: Universal Link Predictor by Graph In-Context Learning with Tabular Foundation Models",
+    "summary": "Link prediction is a fundamental task in graph machine learning with widespread applications such as recommendation systems, drug discovery, knowledge graphs, etc. In the foundation model era, how to develop universal link prediction methods across datasets and domains becomes a key problem, with some initial attempts adopting Graph Foundation Models utilizing Graph Neural Networks and Large Language Models. However, the existing methods face notable limitations, including limited pre-training scale or heavy reliance on textual information. Motivated by the success of tabular foundation models (TFMs) in achieving universal prediction across diverse tabular datasets, we explore an alternative approach by TFMs, which are pre-trained on diverse synthetic datasets sampled from structural causal models and support strong in-context learning independent of textual attributes. Nevertheless, adapting TFMs for link prediction faces severe technical challenges such as how to obtain the necessary context and capture link-centric topological information. To solve these challenges, we propose TFMLinker (Tabular Foundation Model for Link Predictor), aiming to leverage the in-context learning capabilities of TFMs to perform link prediction across diverse graphs without requiring dataset-specific fine-tuning. Specifically, we first develop a prototype-augmented local-global context module to construct context that captures both graph-specific and cross-graph transferable patterns. Next, we design a universal topology-aware link encoder to capture link-centric topological information and generate link representations as inputs for the TFM. Finally, we employ the TFM to predict link existence through in-context learning. Experiments on 6 graph benchmarks across diverse domains demonstrate the superiority of our method over state-of-the-art baselines without requiring dataset-specific finetuning.",
+    "published": "2026-02-09T12:33:30Z",
+    "updated": "2026-02-09T12:33:30Z",
+    "authors": [
+      "Tianyin Liao",
+      "Chunyu Hu",
+      "Yicheng Sui",
+      "Xingxuan Zhang",
+      "Peng Cui",
+      "Jianxin Li",
+      "Ziwei Zhang"
+    ],
+    "arxiv_id": "2602.08592",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2606.11961v1",
+    "title": "Categorical Prior Lock-in: Why In-Context Learning Fails for Structured Data",
+    "summary": "Large language models (LLMs) are increasingly used as conditional generators for structured data, relying on in-context learning (ICL) to adapt to new distributions without parameter updates. We investigate the limits of ICL for structured generation under distribution mismatch, using high-cardinality tabular data as a controlled test case, and identify a structural failure mode we term \\textit{categorical prior lock-in}: the inability of ICL to update the model's prior over token distributions inherited from pre-training. Across two 7B-parameter open-weight models, ICL improves numerical fidelity with additional examples but exhibits a sharp ceiling on categorical distributions, failing to reproduce rare classes entirely. Parameter-efficient fine-tuning (LoRA) overcomes these limitations but introduces measurable memorization risk and, in some cases, destabilizes structured output generation, highlighting a fundamental trade-off between adaptability and privacy.",
+    "published": "2026-06-10T11:41:13Z",
+    "updated": "2026-06-10T11:41:13Z",
+    "authors": [
+      "Antonio Pelusi",
+      "Stefano Braghin",
+      "Alberto Trombetta"
+    ],
+    "arxiv_id": "2606.11961",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2606.31208v1",
+    "title": "Probing Memorization of Tabular In-Context Learning",
+    "summary": "Large tabular models (LTMs), i.e., tabular foundation models leveraging in-context learning (ICL), achieve state-of-the-art performance on tabular tasks. While LLMs are known to unintentionally memorize training data, the memorization dynamics of LTMs remain largely unexplored. We investigate the potential for parametric memorization in tabular ICL. We introduce ICLMEM, a probing framework designed to separate context-based predictions from parametric memorization. Our zero-information multiple-choice context strips away valid contextual patterns to force the model to fall back on its parametric memory. Our controlled fine-tuning setup establishes membership ground truth and accounts for common pitfalls, e.g., distribution shift, feature contamination, base-rate fallacy, and the pre-trained base model acts as reference to calibrate for sample difficulty. Our controlled evaluation on a leading real-world-trained LTM detects moderate memorization signals in 8 out of 10 tasks ($\\text{AUC}$ up to $0.67$ and TPR at $1\\%$ FPR $>0.1$). Notably, memorization signals are strongest for low-cardinality and binary tasks. However, they largely vanish under realistic training conditions. Our findings show LTM memorization signals under specific circumstances (single-task fine-tuning with fixed samples across many epochs and small query size). To protect sensitive data, appropriate measures must be taken, which we discuss.",
+    "published": "2026-06-30T06:40:36Z",
+    "updated": "2026-06-30T06:40:36Z",
+    "authors": [
+      "Francesco Capano",
+      "Jonas Böhler"
+    ],
+    "arxiv_id": "2606.31208",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2506.02978v2",
+    "title": "On the Robustness of Tabular Foundation Models: Test-Time Attacks and In-Context Defenses",
+    "summary": "Recent tabular Foundational Models (FM) such as TabPFN and TabICL, leverage in-context learning to achieve strong performance without gradient updates or fine-tuning. However, their robustness to adversarial manipulation remains largely unexplored. In this work, we present a comprehensive study of the adversarial vulnerabilities of tabular FM, focusing on both their fragility to targeted test-time attacks and their potential misuse as adversarial tools. We show on three benchmarks in finance, cybersecurity and healthcare, that small, structured perturbations to test inputs can significantly degrade prediction accuracy, even when training context remain fixed. Additionally, we demonstrate that tabular FM can be repurposed to generate transferable evasion to conventional models such as random forests and XGBoost, and on a lesser extent to deep tabular models. To improve tabular FM, we formulate the robustification problem as an optimization of the weights (adversarial fine-tuning), or the context (adversarial in-context learning). We introduce an in-context adversarial training strategy that incrementally replaces the context with adversarial perturbed instances, without updating model weights. Our approach improves robustness across multiple tabular benchmarks. Together, these findings position tabular FM as both a target and a source of adversarial threats, highlighting the urgent need for robust training and evaluation practices in this emerging paradigm.",
+    "published": "2025-06-03T15:15:36Z",
+    "updated": "2026-04-09T13:55:31Z",
+    "authors": [
+      "Mohamed Djilani",
+      "Thibault Simonetto",
+      "Karim Tit",
+      "Florian Tambon",
+      "Salah Ghamizi",
+      "Maxime Cordy",
+      "Mike Papadakis"
+    ],
+    "arxiv_id": "2506.02978",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2604.16123v2",
+    "title": "Tabular foundation models for in-context prediction of molecular properties",
+    "summary": "Accurate molecular property prediction is central to drug discovery, catalysis, and process design, yet real-world applications are often limited by small datasets. Molecular foundation models provide a promising direction by learning transferable molecular representations; however, they typically involve task-specific fine-tuning, require machine learning expertise, and often fail to outperform classical baselines. Tabular foundation models (TFMs) offer a fundamentally different paradigm: they perform predictions through in-context learning, enabling inference without task-specific training. Here, we evaluate TFMs in the low- to medium-data regime across both standardized pharmaceutical benchmarks and chemical engineering datasets. We evaluate both frozen molecular foundation model representations, as well as classical descriptors and fingerprints. Across the benchmarks, the approach shows excellent predictive performance while reducing computational cost, compared to fine-tuning, with these advantages also transferring to practical engineering data settings. In particular, combining TFMs with CheMeleon embeddings yields up to 100\\% win rates on 30 MoleculeACE tasks, while compact RDKit2d and Mordred descriptors provide strong descriptor-based alternatives. Molecular representation emerges as a key determinant in TFM performance, with molecular foundation model embeddings and 2D descriptor sets both providing substantial gains over classic molecular fingerprints on many tasks. These results suggest that in-context learning with TFMs provides a highly accurate and cost-efficient alternative for property prediction in practical applications.",
+    "published": "2026-04-17T14:58:43Z",
+    "updated": "2026-04-20T09:23:14Z",
+    "authors": [
+      "Karim K. Ben Hicham",
+      "Jan G. Rittig",
+      "Martin Grohe",
+      "Alexander Mitsos"
+    ],
+    "arxiv_id": "2604.16123",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2608.16429v1",
+    "title": "Localized TabICLv2: Scaling Tabular In-Context Learning through k-NN",
+    "summary": "Foundational models for tabular data have made significant progress in recent years, with TabICLv2 reporting state-of-the-art performance on several tabular classification tasks. However, full-context tabular ICL still suffers from attention cost that grows with the training-context size, which limits its ability to handle large datasets efficiently. Localized TabICLv2 introduces a method that reduces the inference cost of TabICLv2 by retrieving only the k nearest training neighbours for each test point, measured by similarity in the model's Stage 2 row-representation space, rather than using the full training context. This requires no architectural changes, and we show that accuracy retention can be improved through additional Stage 2 and Stage 3 fine-tuning. On TabArena classification tasks, the fine-tuned localized model retains 98.64% of Full TabICLv2 accuracy and it achieves a median 2.18$\\times$ speedup in batch inference, and reaches approximately 249$\\times$ median speedup in the single-query serving setting.",
+    "published": "2026-08-17T11:30:56Z",
+    "updated": "2026-08-17T11:30:56Z",
+    "authors": [
+      "Beimnet Bekele Guta"
+    ],
+    "arxiv_id": "2608.16429",
+    "sources": [
+      "arxiv_finetuning.json",
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2508.20906v3",
+    "title": "Turning Tabular Foundation Models into Graph Foundation Models",
+    "summary": "While foundation models have revolutionized fields such as natural language processing and computer vision, their potential in graph machine learning remains largely unexplored. One of the key challenges in designing graph foundation models (GFMs) is handling diverse node features that can vary across different graph datasets. While many works on GFMs have focused exclusively on text-attributed graphs, the problem of handling arbitrary features of other types in GFMs has not been fully addressed. However, this problem is not unique to the graph domain, as it also arises in the field of machine learning for tabular data. In this work, motivated by the recent success of tabular foundation models (TFMs) like TabPFNv2 and LimiX, we propose G2T-FM, a simple framework that allows tabular foundation models to be applied to graph node-level tasks. Specifically, G2T-FM augments the original node features with neighborhood feature aggregation, adds structural embeddings, and then applies a TFM to the constructed node representations. Even in the in-context learning setting, our model achieves strong results when combined with a strong TFM, outperforming both prior GFMs and well-tuned GNNs trained from scratch. Moreover, after finetuning, G2T-FM consistently surpasses well-tuned GNN baselines, often by a significant margin. In summary, our paper reveals the potential of a previously overlooked direction: utilizing tabular foundation models for graph machine learning tasks.",
+    "published": "2025-08-28T15:36:37Z",
+    "updated": "2026-06-22T12:08:08Z",
+    "authors": [
+      "Dmitry Eremeev",
+      "Gleb Bazhenov",
+      "Oleg Platonov",
+      "Artem Babenko",
+      "Liudmila Prokhorenkova"
+    ],
+    "arxiv_id": "2508.20906",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2506.21387v2",
+    "title": "Early Stopping Tabular In-Context Learning",
+    "summary": "Tabular foundation models have shown strong performance across various tabular learning tasks via in-context learning, offering robust generalization without any downstream finetuning. However, their inference-time costs remain high, particularly for larger datasets. To address this, we propose early-stopping the in-context learning process. We achieve this by dynamically evaluating whether to stop in-context learning after each Transformer encoder layer. Once stopped, we decode the embedding using a pre-trained layer-wise decoder. Experiments across 34 small classification tasks size show that early stopping in-context learning accelerates inference by up to x1.3 with negligible degradation in predictive performance. To assess scalability, we further evaluate our method on five larger classification tasks, achieving speedups of up to x2.2. Our results demonstrate the potential of early exiting as an effective and practical strategy for improving the efficiency of tabular in-context learning.",
+    "published": "2025-06-26T15:36:37Z",
+    "updated": "2025-06-28T19:36:55Z",
+    "authors": [
+      "Jaris Küken",
+      "Lennart Purucker",
+      "Frank Hutter"
+    ],
+    "arxiv_id": "2506.21387",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2608.22594v1",
+    "title": "Tabular foundation models for non-tabular tasks",
+    "summary": "Tabular foundation models (TFMs) have recently emerged as a promising paradigm for machine learning on tabular data, offering the ability to generalize across datasets without task-specific training. Since many machine learning datasets can be represented as tables, this raises the question: does TFM capability extend beyond tasks traditionally regarded as tabular? We address this question by using TabPFN v3 on three non-tabular classification problems: handwritten digit recognition on MNIST, language identification of French and German words, and image classification on Tiny ImageNet. In each case, the original data are represented as rows of a table and classification is formulated as prediction of a missing label. We evaluate performance as a function of the number of context samples provided to the pretrained model, with no additional training or fine-tuning. Despite having no explicit access to the spatial or sequential structure characterizing the data, TabPFN v3 in some cases achieves accuracies comparable with that of models or methods geared specifically toward the corresponding tasks.",
+    "published": "2026-08-23T20:58:39Z",
+    "updated": "2026-08-23T20:58:39Z",
+    "authors": [
+      "Goran Nakerst",
+      "John Brennan",
+      "Wouter Beugeling",
+      "Masudul Haque"
+    ],
+    "arxiv_id": "2608.22594",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2609.04901v1",
+    "title": "Adaptation Interfaces for In-Context Tabular Foundation Models in Time-to-Event Prediction",
+    "summary": "Tabular foundation models (TabFMs) achieve strong performance on structured data, particularly for standard classification and regression problems. Yet, extending them to censored time-to-event prediction is challenging because it requires properly handling censoring and event-time dynamics. Building on our prior work, we further link TabFMs with CoxPH and DeepHit and revise the context-resampled training procedure. We evaluate temporal zero-shot reformulation, classification-based fine-tuning, and survival-head adaptation using frozen TabFM backbones on 74 single-risk data sets, and we additionally study 4 competing-risk data sets. Zero-shot inference is effective on smaller single-risk data sets, whereas supervised adaptation becomes increasingly advantageous as data sets scale. Cox provides the most reliably strong interface, especially for Integrated Brier Score (IBS) on larger data sets. DeepHit is relatively stronger for the time-dependent Concordance Index than for IBS, while cause-specific MTLR ranks highest among the TabFM survival heads in the four-data-set competing-risk analysis. Classification fine-tuning becomes more competitive with zero-shot inference as data sets grow but remains weaker for probabilistic prediction. Overall, our results indicate that effective TabFM transfer depends on the data regime and on the statistical structure represented by the chosen adaptation interface. The implementation scripts used for this work are available at https://github.com/kaylode/survival-fm.",
+    "published": "2026-09-04T09:01:16Z",
+    "updated": "2026-09-04T09:01:16Z",
+    "authors": [
+      "Minh-Khoi Pham",
+      "Luca Cotugno",
+      "Dan Cernei",
+      "Alina Sirbu",
+      "Stefano Masi",
+      "Giuseppe Prencipe",
+      "Alessandro Pingitore",
+      "Patrizia Landi",
+      "Working Group on Uric Acid",
+      "Cardiovascular Risk of the Italian Society of Hypertension",
+      "Tai Tan Mai",
+      "Martin Crane",
+      "Marija Bezbradica"
+    ],
+    "arxiv_id": "2609.04901",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2609.03880v2",
+    "title": "Xiaomi-TabLDM: A Tabular Foundation Model Technical Report",
+    "summary": "We introduce Xiaomi-TabLDM, a tabular large data foundation model for classification and regression via in-context learning, which delivers superior prediction accuracy without requiring task-specific fine-tuning. Pretrained exclusively on synthetic data generated from structural causal models (SCMs), our model enables more flexible context utilization and more efficient capacity scaling. i) A new performance standard. Strong regression performance across benchmarks: Xiaomi-TabLDM ranks 1st on OpenML-CTR23 and 2nd on regression across TALENT, TabArena, and BCCO, demonstrating consistently strong regression performance across four complementary benchmark suites. Favorable performance--efficiency trade-off: Xiaomi-TabLDM combines strong predictive performance with substantially lower computational cost. For example, on TabArena regression, it achieves the second-highest Elo while using 82% less training time and 68% less prediction time than the top-ranked TabFM. ii) Large-scale synthetic pretraining. Xiaomi-TabLDM expands the coverage and diversity of synthetic tabular data used for pretraining. We also adopt a three-stage training strategy together with dual-stream feature grouping, lightweight Attention Residual, and sparse Mixture-of-Experts, enabling Xiaomi-TabLDM to learn richer feature interactions and expert specialization across diverse tabular tasks. iii) Test-time scaling. Xiaomi-TabLDM further extends tabular prediction through test-time compute scaling, where allocating additional computation at inference time consistently improves predictive performance over the base model.",
+    "published": "2026-09-03T14:06:41Z",
+    "updated": "2026-09-04T03:23:21Z",
+    "authors": [
+      "Xiaomi-TabLDM Team",
+      " :",
+      "Penghui Wang",
+      "Wei Liu",
+      "Hong Wang",
+      "Chengyue Huang",
+      "Yuxi Sun",
+      "Zirui Wang",
+      "Hongming Huang",
+      "Quan Wang",
+      "Zhenwei Xin",
+      "Ping Hou",
+      "Jie Yu",
+      "Chunxiao Liu",
+      "Erli Meng",
+      "Bin Wang"
+    ],
+    "arxiv_id": "2609.03880",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2405.16156v1",
+    "title": "Mixture of In-Context Prompters for Tabular PFNs",
+    "summary": "Recent benchmarks found In-Context Learning (ICL) outperforms both deep learning and tree-based algorithms on small tabular datasets. However, on larger datasets, ICL for tabular learning cannot run without severely compromising performance, due to its quadratic space and time complexity w.r.t. dataset size. We propose MIXTUREPFN, which both extends nearest-neighbor sampling to the state-of-the-art ICL for tabular learning model and uses bootstrapping to finetune said model on the inference-time dataset. MIXTUREPFN is the Condorcet winner across 36 diverse tabular datasets against 19 strong deep learning and tree-based baselines, achieving the highest mean rank among Top-10 aforementioned algorithms with statistical significance.",
+    "published": "2024-05-25T09:47:59Z",
+    "updated": "2024-05-25T09:47:59Z",
+    "authors": [
+      "Derek Xu",
+      "Olcay Cirit",
+      "Reza Asadi",
+      "Yizhou Sun",
+      "Wei Wang"
+    ],
+    "arxiv_id": "2405.16156",
+    "sources": [
+      "arxiv_finetuning.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2608.17957v1",
+    "title": "Understanding the Surprising Generalization Properties of Tabular Foundation Models",
+    "summary": "Tabular Foundation Models (TFMs) increasingly rely on in-context learning, where a model receives labelled examples at inference time and predicts labels for new inputs without updating its weights. Existing TFMs are typically trained on either massive synthetic corpora or very large collections of real datasets. In contrast, we show that surprisingly strong transfer can emerge from self-supervised pre-training on just a single real table. In this setting, we also find that tables tend to be either broadly useful or broadly poor regardless of downstream prediction task, and that the strongest predictor of usefulness is the number of features rather than the number of instances. This leads to a task-centric interpretation of tabular pre-training: the number and the quality of tasks are essential for the pre-training of TFMs. We show that the same task-centric perspective can help corpus design at scale: fine-grained column-level pre-processing consistently improves downstream performance, while no improvements are observed when we filter or deduplicate at the dataset level. Finally, we offer a new perspective for how TFMs generalize: we believe that tabular in-context generalization is largely retrieval-based, and good models are those that learn to identify relevant examples in the provided context and aggregate them well. The mechanics of TFMs have been relatively understudied; our task-centric, retrieval-based perspective offers a new framework to guide future model and corpus design.",
+    "published": "2026-08-18T16:11:08Z",
+    "updated": "2026-08-18T16:11:08Z",
+    "authors": [
+      "Nour Shaheen",
+      "Junwei Ma",
+      "Alex Labach",
+      "Frank Hutter",
+      "Valentin Thomas",
+      "Anthony L. Caterini"
+    ],
+    "arxiv_id": "2608.17957",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2608.01400v2",
+    "title": "TabDPT-Turbo: Efficient In-Context Learning for Tabular Prediction",
+    "summary": "Tabular foundation models, driven by in-context learning, have rapidly grown in quality and popularity. However, recent approaches with either cell-based architectures or retrieval have sacrificed efficiency for raw performance, restricting their utility in situations where compute is limited or inference speed is crucial. We adopt an alternate approach, sticking with row-based attention while incorporating long context pre-training to eliminate the need for retrieval. By combining this with architectural improvements and SSL pre-training on a newly-sourced, larger corpus of real data results, we present TabDPT-Turbo, a model that provides comparable default performance to TabDPT v1.1 on TabArena-Lite, CC18, and CTR23, at orders of magnitude faster. In our experiments, TabDPT-Turbo is the fastest model overall among leading foundation models. We have released the new model as TabDPT v1.2 at https://github.com/layer6ai-labs/TabDPT-inference.",
+    "published": "2026-08-02T17:33:30Z",
+    "updated": "2026-08-25T00:20:12Z",
+    "authors": [
+      "Rasa Hosseinzadeh",
+      "Alex Labach",
+      "Zexin Xue",
+      "Shuyi Han",
+      "Valentin Thomas",
+      "Anthony L. Caterini"
+    ],
+    "arxiv_id": "2608.01400",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2502.03147v1",
+    "title": "Scalable In-Context Learning on Tabular Data via Retrieval-Augmented Large Language Models",
+    "summary": "Recent studies have shown that large language models (LLMs), when customized with post-training on tabular data, can acquire general tabular in-context learning (TabICL) capabilities. These models are able to transfer effectively across diverse data schemas and different task domains. However, existing LLM-based TabICL approaches are constrained to few-shot scenarios due to the sequence length limitations of LLMs, as tabular instances represented in plain text consume substantial tokens. To address this limitation and enable scalable TabICL for any data size, we propose retrieval-augmented LLMs tailored to tabular data. Our approach incorporates a customized retrieval module, combined with retrieval-guided instruction-tuning for LLMs. This enables LLMs to effectively leverage larger datasets, achieving significantly improved performance across 69 widely recognized datasets and demonstrating promising scaling behavior. Extensive comparisons with state-of-the-art tabular models reveal that, while LLM-based TabICL still lags behind well-tuned numeric models in overall performance, it uncovers powerful algorithms under limited contexts, enhances ensemble diversity, and excels on specific datasets. These unique properties underscore the potential of language as a universal and accessible interface for scalable tabular data learning.",
+    "published": "2025-02-05T13:16:41Z",
+    "updated": "2025-02-05T13:16:41Z",
+    "authors": [
+      "Xumeng Wen",
+      "Shun Zheng",
+      "Zhen Xu",
+      "Yiming Sun",
+      "Jiang Bian"
+    ],
+    "arxiv_id": "2502.03147",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2608.27882v1",
+    "title": "SOMTab: Set-Order Mamba for Efficient Tabular In-Context Learning",
+    "summary": "Tabular foundation models based on in-context learning have recently emerged as strong alternatives to task-specific model fitting. However, the current performance frontier remains dominated by attention-heavy architectures, where attention is used throughout the modeling pipeline. This raises a natural question: is attention necessary at every stage of tabular in-context learning? We introduce SOMTab, a Set-Order Mamba architecture for efficient tabular in-context learning. SOMTab separates representation construction from query-conditioned retrieval. For row and column representations, it maps unordered table tokens into stable latent slots and applies Mamba-based state-space mixing to construct compact representations. For final prediction, it retains attention-based in-context learning to preserve query-conditioned retrieval from labeled context examples. We further introduce DCH-TailMix, a synthetic prior that combines degree-corrected graph heterogeneity with mixed heavy-tailed regimes to diversify synthetic dependency structures. Across tabular benchmarks, SOMTab approaches the performance of strong Transformer-based tabular foundation models while achieving faster inference and lower GPU memory usage, yielding a favorable efficiency--accuracy trade-off.",
+    "published": "2026-08-28T03:43:08Z",
+    "updated": "2026-08-28T03:43:08Z",
+    "authors": [
+      "Hao Wang",
+      "Siyu Zhang",
+      "Wei Ma"
+    ],
+    "arxiv_id": "2608.27882",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2609.05955v1",
+    "title": "LoGIC: Budgeted Context Construction for Node-Level Graph In-Context Learning with Tabular Foundation Models",
+    "summary": "Tabular foundation models have become powerful graph learners. Systems such as G2T-FM and GraphPFN encode each node as a feature row and make predictions through in-context learning (ICL), with labeled rows serving as the prompt. Current protocols employ the complete training table as context, causing attention to scale quadratically with the labeled pool and introducing preprocessing and memory bottlenecks. We investigate context construction for node-level graph ICL: which labeled nodes and auxiliary unlabeled nodes should constitute the prompt for specified queries. We formulate this allocation in terms of two resources: a labeled-context budget for predictive evidence and an unlabeled-halo budget for adapter message passing without using label capacity. We present LoGIC, which retrieves labeled nodes via structural, feature-based, and coverage channels, shares each context across the queries in a graph-local cluster, incorporates an unlabeled halo for adapter backbones, and chooses the channel and context budget without test labels. Across three backbone configurations drawn from two model families on GraphLand, budgeted contexts maintain locally runnable full-context performance, stay competitive with published large-dataset results, and markedly lower peak memory requirements compared with full-context and whole-graph inference. They further permit frozen graph ICL on million-node graphs without retraining. Our analysis identifies when retrieval channels work best and connects their behavior with graph properties.",
+    "published": "2026-09-05T07:43:30Z",
+    "updated": "2026-09-05T07:43:30Z",
+    "authors": [
+      "Mingqi Yang",
+      "Zidong Guo",
+      "Jihui Yang",
+      "Wenming Zuo"
+    ],
+    "arxiv_id": "2609.05955",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2410.18164v3",
+    "title": "TabDPT: Scaling Tabular Foundation Models on Real Data",
+    "summary": "Tabular data is one of the most ubiquitous sources of information worldwide, spanning a wide variety of domains. This inherent heterogeneity has slowed the development of Tabular Foundation Models (TFMs) capable of fast generalization to unseen datasets. In-Context Learning (ICL) has recently emerged as a promising solution for TFMs, enabling dynamic adaptation to new tasks without additional tuning. While many studies have attempted to re-purpose large language models for tabular ICL, they have had limited success, so recent works have focused on developing tabular-specific foundation models. In this work, we propose an approach to combine ICL-based retrieval with self supervised learning to train tabular foundation models. We also investigate the utility of real vs. synthetic data for model pre-training, and show that real data can contain useful signal not easily captured in synthetic training. Specifically, we show that incorporating real data during the pre-training phase can lead to significantly faster training and better downstream generalization to unseen data. Our resulting model, TabDPT, achieves strong performance on both regression (CTR23) and classification (CC18) benchmarks. Importantly, we also demonstrate that with our pre-training procedure, scaling both model and data size leads to consistent performance improvements that follow power laws. This echoes scaling laws in LLMs and other foundation models, and suggests that large-scale TFMs can be achievable. We open-source our full pipeline: inference code including trained model weights can be found at github.com/layer6ai-labs/TabDPT-inference, and the training code to reproduce experiments can be found at github.com/layer6ai-labs/TabDPT-training.",
+    "published": "2024-10-23T18:00:00Z",
+    "updated": "2026-01-17T00:50:55Z",
+    "authors": [
+      "Junwei Ma",
+      "Valentin Thomas",
+      "Rasa Hosseinzadeh",
+      "Alex Labach",
+      "Hamidreza Kamkari",
+      "Jesse C. Cresswell",
+      "Keyvan Golestan",
+      "Guangwei Yu",
+      "Anthony L. Caterini",
+      "Maksims Volkovs"
+    ],
+    "arxiv_id": "2410.18164",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2608.17856v1",
+    "title": "ARASH: Adaptive Retrieval And Shot Selection for Tabular Prediction",
+    "summary": "Tabular prediction is a critical task across numerous applications. The recent success of large language models has sparked various approaches for adapting them to the tabular domain. A prevalent strategy involves training or fine-tuning specialized Tabular Foundation Models (TFMs) such as TabPFN. However, TFMs require substantial computational resources, and frequent model retraining is often impractical. In-context learning (ICL), specifically, few-shot prompting, offers a resource-efficient alternative to enhance performance. Yet, identifying the most relevant rows to serve as shots remains a challenge for tabular data. This paper introduces ARASH (Adaptive, query-specific Retrieval And Shot selection), a method that improves TFM efficiency by selecting optimal shots based on local neighborhood analysis within the training set. Our results demonstrate that ARASH reduces the prompt length and memory usage of TabPFN by 1261.5$\\times$ and 2.56$\\times$, respectively, while providing comparable accuracy.",
+    "published": "2026-08-18T14:48:56Z",
+    "updated": "2026-08-18T14:48:56Z",
+    "authors": [
+      "Samirasadat Jamalidinan",
+      "Yue Xu",
+      "Kazem Cheshmi"
+    ],
+    "arxiv_id": "2608.17856",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2501.09384v1",
+    "title": "Evaluating LLM Abilities to Understand Tabular Electronic Health Records: A Comprehensive Study of Patient Data Extraction and Retrieval",
+    "summary": "Electronic Health Record (EHR) tables pose unique challenges among which is the presence of hidden contextual dependencies between medical features with a high level of data dimensionality and sparsity. This study presents the first investigation into the abilities of LLMs to comprehend EHRs for patient data extraction and retrieval. We conduct extensive experiments using the MIMICSQL dataset to explore the impact of the prompt structure, instruction, context, and demonstration, of two backbone LLMs, Llama2 and Meditron, based on task performance. Through quantitative and qualitative analyses, our findings show that optimal feature selection and serialization methods can enhance task performance by up to 26.79% compared to naive approaches. Similarly, in-context learning setups with relevant example selection improve data extraction performance by 5.95%. Based on our study findings, we propose guidelines that we believe would help the design of LLM-based models to support health search.",
+    "published": "2025-01-16T08:52:50Z",
+    "updated": "2025-01-16T08:52:50Z",
+    "authors": [
+      "Jesus Lovon",
+      "Martin Mouysset",
+      "Jo Oleiwan",
+      "Jose G. Moreno",
+      "Christine Damase-Michel",
+      "Lynda Tamine"
+    ],
+    "arxiv_id": "2501.09384",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2609.07956v1",
+    "title": "Streaming Hierarchical Inference with Tabular Foundation Models",
+    "summary": "Tabular Foundation Models (TFMs) have recently demonstrated strong predictive performance through in-context learning, but their deployment in high-throughput data streams remains challenging due to communication overhead and latency. We propose \\textit{HINT}, a hierarchical inference framework that combines edge-based retrieval with cloud-based TFM inference. A graph-based approximate nearest neighbor memory maintained over a sliding window provides local predictions and uncertainty estimates, allowing confident samples to be processed locally while uncertain instances are selectively offloaded, together with their retrieved context, to a cloud-hosted TFM. The framework exposes an offloading threshold and a neighborhood retrieval policy that can be varied to balance predictive performance and communication cost. Experiments show \\textit{HINT} consistently identifies favorable trade-offs.",
+    "published": "2026-09-07T20:26:36Z",
+    "updated": "2026-09-07T20:26:36Z",
+    "authors": [
+      "Vitor Crista",
+      "Afonso Lourenço",
+      "Diogo Martinho",
+      "Goreti Marreiros"
+    ],
+    "arxiv_id": "2609.07956",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2604.01841v4",
+    "title": "Retrieval-aligned Tabular Foundation Models Enable Robust Clinical Risk Prediction in Electronic Health Records Under Real-world Constraints",
+    "summary": "Clinical prediction from structured electronic health records (EHRs) is challenging due to high dimensionality, heterogeneity, class imbalance, and distribution shift. While tabular in-context learning (TICL) and retrieval-augmented methods perform well on generic benchmarks, their behavior in clinical settings remains unclear. We present a multi-cohort EHR benchmark comparing classical, deep tabular, and TICL models across varying data scale, feature dimensionality, outcome rarity, and cross-cohort generalization. PFN-based TICL models are sample-efficient in low-data regimes but degrade under naive distance-based retrieval as heterogeneity and imbalance increase. We propose AWARE, a task-aligned retrieval framework using supervised embedding learning and lightweight adapters. AWARE improves AUPRC by up to 12.2% under extreme imbalance, with gains increasing with data complexity. Our results identify retrieval quality and retrieval-inference alignment as key bottlenecks for deploying tabular in-context learning in clinical prediction.",
+    "published": "2026-04-02T09:56:17Z",
+    "updated": "2026-08-25T16:35:42Z",
+    "authors": [
+      "Minh-Khoi Pham",
+      "Thang-Long Nguyen Ho",
+      "Thao Thi Phuong Dao",
+      "Tai Tan Mai",
+      "Minh-Triet Tran",
+      "Marie E. Ward",
+      "Una Geary",
+      "Rob Brennan",
+      "Nick McDonald",
+      "Martin Crane",
+      "Marija Bezbradica"
+    ],
+    "arxiv_id": "2604.01841",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2406.09621v1",
+    "title": "Enhancing Knowledge Retrieval with In-Context Learning and Semantic Search through Generative AI",
+    "summary": "Retrieving and extracting knowledge from extensive research documents and large databases presents significant challenges for researchers, students, and professionals in today's information-rich era. Existing retrieval systems, which rely on general-purpose Large Language Models (LLMs), often fail to provide accurate responses to domain-specific inquiries. Additionally, the high cost of pretraining or fine-tuning LLMs for specific domains limits their widespread adoption. To address these limitations, we propose a novel methodology that combines the generative capabilities of LLMs with the fast and accurate retrieval capabilities of vector databases. This advanced retrieval system can efficiently handle both tabular and non-tabular data, understand natural language user queries, and retrieve relevant information without fine-tuning. The developed model, Generative Text Retrieval (GTR), is adaptable to both unstructured and structured data with minor refinement. GTR was evaluated on both manually annotated and public datasets, achieving over 90% accuracy and delivering truthful outputs in 87% of cases. Our model achieved state-of-the-art performance with a Rouge-L F1 score of 0.98 on the MSMARCO dataset. The refined model, Generative Tabular Text Retrieval (GTR-T), demonstrated its efficiency in large database querying, achieving an Execution Accuracy (EX) of 0.82 and an Exact-Set-Match (EM) accuracy of 0.60 on the Spider dataset, using an open-source LLM. These efforts leverage Generative AI and In-Context Learning to enhance human-text interaction and make advanced AI capabilities more accessible. By integrating robust retrieval systems with powerful LLMs, our approach aims to democratize access to sophisticated AI tools, improving the efficiency, accuracy, and scalability of AI-driven information retrieval and database querying.",
+    "published": "2024-06-13T23:08:06Z",
+    "updated": "2024-06-13T23:08:06Z",
+    "authors": [
+      "Mohammed-Khalil Ghali",
+      "Abdelrahman Farrag",
+      "Daehan Won",
+      "Yu Jin"
+    ],
+    "arxiv_id": "2406.09621",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2511.06582v2",
+    "title": "TabRAG: Improving Tabular Document Question Answering for Retrieval Augmented Generation via Structured Representations",
+    "summary": "Incorporating external knowledge bases in traditional retrieval-augmented generation (RAG) relies on parsing the document, followed by querying a language model with the parsed information via in-context learning. While effective for text-based documents, question answering on tabular documents often fails to generate plausible responses. Standard parsing techniques lose the two-dimensional structural semantics critical for cell interpretation. In this work, we present TabRAG, a parsing-based RAG framework designed to improve tabular document question answering via structured representations. Our framework consists of layout segmentation that decomposes the document inputs into a series of components, enabling fine-grained extraction. Subsequently, a vision language model parses and extracts the document tables into a hierarchically structured representation. In order to cater various table styles and formats, we integrate a self-generated in-context learning module that guides the table extraction process. Experimental results demonstrate that TabRAG outperforms existing popular parsing techniques across a broad suite of evaluation and ablation benchmarks. Code is available at: https://github.com/jacobyhsi/TabRAG.",
+    "published": "2025-11-10T00:05:58Z",
+    "updated": "2026-01-31T07:02:37Z",
+    "authors": [
+      "Jacob Si",
+      "Mike Qu",
+      "Michelle Lee",
+      "Marek Rei",
+      "Yingzhen Li"
+    ],
+    "arxiv_id": "2511.06582",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2502.16414v1",
+    "title": "TabGen-ICL: Residual-Aware In-Context Example Selection for Tabular Data Generation",
+    "summary": "Large Language models (LLMs) have achieved encouraging results in tabular data generation. However, existing approaches require fine-tuning, which is computationally expensive. This paper explores an alternative: prompting a fixed LLM with in-context examples. We observe that using randomly selected in-context examples hampers the LLM's performance, resulting in sub-optimal generation quality. To address this, we propose a novel in-context learning framework: TabGen-ICL, to enhance the in-context learning ability of LLMs for tabular data generation. TabGen-ICL operates iteratively, retrieving a subset of real samples that represent the residual between currently generated samples and true data distributions. This approach serves two purposes: locally, it provides more effective in-context learning examples for the LLM in each iteration; globally, it progressively narrows the gap between generated and real data. Extensive experiments on five real-world tabular datasets demonstrate that TabGen-ICL significantly outperforms the random selection strategy. Specifically, it reduces the error rate by a margin of $3.5\\%-42.2\\%$ on fidelity metrics. We demonstrate for the first time that prompting a fixed LLM can yield high-quality synthetic tabular data. The code is provided in the \\href{https://github.com/fangliancheng/TabGEN-ICL}{link}.",
+    "published": "2025-02-23T02:51:58Z",
+    "updated": "2025-02-23T02:51:58Z",
+    "authors": [
+      "Liancheng Fang",
+      "Aiwei Liu",
+      "Hengrui Zhang",
+      "Henry Peng Zou",
+      "Weizhi Zhang",
+      "Philip S. Yu"
+    ],
+    "arxiv_id": "2502.16414",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2511.03570v1",
+    "title": "TabGemma: Text-Based Tabular ICL via LLM using Continued Pretraining and Retrieval",
+    "summary": "We study LLMs for tabular prediction with mixed text, numeric, and categorical fields. We introduce TabGemma, a schema-agnostic in-context learner that treats rows as sequences and tackles two practical hurdles when adapting pretrained LLMs for tabular predictions: unstable numeric tokenization and limited context size. We propose to canonicalize numbers via signed scientific notation and continue pretraining of a 12B Gemma 3 model with a target imputation objective using a large-scale real world dataset. For inference, we use a compact n-gram-based retrieval to select informative exemplars that fit within a 128k-token window. On semantically rich benchmarks, TabGemma establishes a new state of the art on classification across low- and high-data regimes and improves monotonically with more context rows. For regression, it is competitive at small sample sizes but trails conventional approaches as data grows. Our results show that LLMs can be effective tabular in-context learners on highly semantic tasks when paired with dedicated numeric handling and context retrieval, while motivating further advances in numeric modeling and long-context scaling.",
+    "published": "2025-11-05T15:51:03Z",
+    "updated": "2025-11-05T15:51:03Z",
+    "authors": [
+      "Günther Schindler",
+      "Maximilian Schambach",
+      "Michael Medek",
+      "Sam Thelin"
+    ],
+    "arxiv_id": "2511.03570",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2504.09207v1",
+    "title": "Pneuma: Leveraging LLMs for Tabular Data Representation and Retrieval in an End-to-End System",
+    "summary": "Finding relevant tables among databases, lakes, and repositories is the first step in extracting value from data. Such a task remains difficult because assessing whether a table is relevant to a problem does not always depend only on its content but also on the context, which is usually tribal knowledge known to the individual or team. While tools like data catalogs and academic data discovery systems target this problem, they rely on keyword search or more complex interfaces, limiting non-technical users' ability to find relevant data. The advent of large language models (LLMs) offers a unique opportunity for users to ask questions directly in natural language, making dataset discovery more intuitive, accessible, and efficient. In this paper, we introduce Pneuma, a retrieval-augmented generation (RAG) system designed to efficiently and effectively discover tabular data. Pneuma leverages large language models (LLMs) for both table representation and table retrieval. For table representation, Pneuma preserves schema and row-level information to ensure comprehensive data understanding. For table retrieval, Pneuma augments LLMs with traditional information retrieval techniques, such as full-text and vector search, harnessing the strengths of both to improve retrieval performance. To evaluate Pneuma, we generate comprehensive benchmarks that simulate table discovery workload on six real-world datasets including enterprise data, scientific databases, warehousing data, and open data. Our results demonstrate that Pneuma outperforms widely used table search systems (such as full-text search and state-of-the-art RAG systems) in accuracy and resource efficiency.",
+    "published": "2025-04-12T13:20:50Z",
+    "updated": "2025-04-12T13:20:50Z",
+    "authors": [
+      "Muhammad Imam Luthfi Balaka",
+      "David Alexander",
+      "Qiming Wang",
+      "Yue Gong",
+      "Adila Krisnadhi",
+      "Raul Castro Fernandez"
+    ],
+    "arxiv_id": "2504.09207",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2512.04292v1",
+    "title": "SQuARE: Structured Query & Adaptive Retrieval Engine For Tabular Formats",
+    "summary": "Accurate question answering over real spreadsheets remains difficult due to multirow headers, merged cells, and unit annotations that disrupt naive chunking, while rigid SQL views fail on files lacking consistent schemas. We present SQuARE, a hybrid retrieval framework with sheet-level, complexity-aware routing. It computes a continuous score based on header depth and merge density, then routes queries either through structure-preserving chunk retrieval or SQL over an automatically constructed relational representation. A lightweight agent supervises retrieval, refinement, or combination of results across both paths when confidence is low. This design maintains header hierarchies, time labels, and units, ensuring that returned values are faithful to the original cells and straightforward to verify. Evaluated on multi-header corporate balance sheets, a heavily merged World Bank workbook, and diverse public datasets, SQuARE consistently surpasses single-strategy baselines and ChatGPT-4o on both retrieval precision and end-to-end answer accuracy while keeping latency predictable. By decoupling retrieval from model choice, the system is compatible with emerging tabular foundation models and offers a practical bridge toward a more robust table understanding.",
+    "published": "2025-12-03T22:11:45Z",
+    "updated": "2025-12-03T22:11:45Z",
+    "authors": [
+      "Chinmay Gondhalekar",
+      "Urjitkumar Patel",
+      "Fang-Chun Yeh"
+    ],
+    "arxiv_id": "2512.04292",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2501.14051v1",
+    "title": "Revisiting CLIP: Efficient Alignment of 3D MRI and Tabular Data using Domain-Specific Foundation Models",
+    "summary": "Multi-modal models require aligned, shared embedding spaces. However, common CLIP-based approaches need large amounts of samples and do not natively support 3D or tabular data, both of which are crucial in the medical domain. To address these issues, we revisit CLIP-style alignment by training a domain-specific 3D foundation model as an image encoder and demonstrate that modality alignment is feasible with only 62 MRI scans. Our approach is enabled by a simple embedding accumulation strategy required for training in 3D, which scales the amount of negative pairs across batches in order to stabilize training. We perform a thorough evaluation of various design choices, including the choice of backbone and loss functions, and evaluate the proposed methodology on zero-shot classification and image-retrieval tasks. While zero-shot image-retrieval remains challenging, zero-shot classification results demonstrate that the proposed approach can meaningfully align the representations of 3D MRI with tabular data.",
+    "published": "2025-01-23T19:34:48Z",
+    "updated": "2025-01-23T19:34:48Z",
+    "authors": [
+      "Jakob Krogh Petersen",
+      "Valdemar Licht",
+      "Mads Nielsen",
+      "Asbjørn Munk"
+    ],
+    "arxiv_id": "2501.14051",
+    "sources": [
+      "arxiv_retrieval.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  },
+  {
+    "id": "http://arxiv.org/abs/2602.11139v1",
+    "title": "TabICLv2: A better, faster, scalable, and open tabular foundation model",
+    "summary": "Tabular foundation models, such as TabPFNv2 and TabICL, have recently dethroned gradient-boosted trees at the top of predictive benchmarks, demonstrating the value of in-context learning for tabular data. We introduce TabICLv2, a new state-of-the-art foundation model for regression and classification built on three pillars: (1) a novel synthetic data generation engine designed for high pretraining diversity; (2) various architectural innovations, including a new scalable softmax in attention improving generalization to larger datasets without prohibitive long-sequence pretraining; and (3) optimized pretraining protocols, notably replacing AdamW with the Muon optimizer. On the TabArena and TALENT benchmarks, TabICLv2 without any tuning surpasses the performance of the current state of the art, RealTabPFN-2.5 (hyperparameter-tuned, ensembled, and fine-tuned on real data). With only moderate pretraining compute, TabICLv2 generalizes effectively to million-scale datasets under 50GB GPU memory while being markedly faster than RealTabPFN-2.5. We provide extensive ablation studies to quantify these contributions and commit to open research by first releasing inference code and model weights at https://github.com/soda-inria/tabicl, with synthetic data engine and pretraining code to follow.",
+    "published": "2026-02-11T18:51:02Z",
+    "updated": "2026-02-11T18:51:02Z",
+    "authors": [
+      "Jingang Qu",
+      "David Holzmüller",
+      "Gaël Varoquaux",
+      "Marine Le Morvan"
+    ],
+    "arxiv_id": "2602.11139",
+    "sources": [
+      "arxiv_tabicl.json"
+    ],
+    "evidence": "Official arXiv API metadata and abstract; not full-paper verification"
+  }
+]

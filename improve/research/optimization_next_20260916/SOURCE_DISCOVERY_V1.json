@@ -1,0 +1,148 @@
+[
+  {
+    "url": "https://api2.openreview.net/notes/search?term=Rethinking+Graph+Generalization&limit=25",
+    "retrieved_at_utc": "2026-09-15T18:06:42.771619+00:00",
+    "http_status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 130585,
+    "file": "improve/research/optimization_next_20260916/openreview_rethinking_v1.json",
+    "sha256": "299590df8b5f5139006ce338856606072ced291956ab2abf8415dc404302f58c",
+    "matches": [
+      {
+        "title": "Learning Invariant Graph Representations via Virtual Environment Inference",
+        "venue": "ICLR 2024 Conference Withdrawn Submission",
+        "id": "YQaf8Mcsrr",
+        "abstract": "Graph invariant learning aims to learn invariant graph representations across different environments, which achieves great success in tackling Out-of-Distribution (OOD) generalization in graph-related tasks. As environments on graphs are usually expensive to obtain, most graph invariant learning methods heavily rely on inferring the underlying environments to learn the environment-wise invariant graph representations. Actually, inferring the underlying environments is extremely challenging, due to the high heterogeneity of the graph environments and the unknown number of underlying environments.\nIn this paper, we solve the OOD graph generalization task from a class-wise perspective, enabling us to generate more reliable virtual environments for effective graph invariant learning.   This is motivated by the observation that class-wise spurious features are more likely shared by different classes despite high environment heterogeneity. To this end, we introduce a novel framework, named Class-wise invariant risk minimization via Virtual Environment Inference (C-VEI), which aims to discard class-wise spurious correlations and preserve class-wise invariance. \nSpecifically, to infer the class-wise virtual environments, C-VEI introduces a contrastive strategy on the latent space, which i) pulls samples from the same class but dissimilar graph representations together and ii) pushes samples from different classes but similar graph representations away. In addition, we design a class-wise invariant risk minimization to preserve class-wise invariance, We conduct extensive experiments on several graph OOD benchmarks and demonstrate the consistent superiority of our C-VEI across all settings and metrics. The source code will be made publicly available.",
+        "pdf": "/pdf/6273ec379393a4970686ca7f7f62280c886b26d8.pdf"
+      },
+      {
+        "title": "Graph Convolutional Kernel Machine versus Graph Convolutional Networks",
+        "venue": "NeurIPS 2023 poster",
+        "id": "SFfOt1oDsX",
+        "abstract": "Graph convolutional networks (GCN) with one or two hidden layers have been widely used in handling graph data that are prevalent in various disciplines. Many studies showed that the gain of making GCNs deeper is tiny or even negative. This implies that the complexity of graph data is often limited and shallow models are often sufficient to extract expressive features for various tasks such as node classification. Therefore, in this work, we present a framework called graph convolutional kernel machine (GCKM) for graph-based machine learning. GCKMs are built upon kernel functions integrated with graph convolution. An example is the graph convolutional kernel support vector machine (GCKSVM) for node classification, for which we analyze the generalization error bound and discuss the impact of the graph structure. Compared to GCNs, GCKMs require much less effort in architecture design, hyperparameter tuning, and optimization. More importantly, GCKMs are guaranteed to obtain globally optimal solutions and have strong generalization ability and high interpretability. GCKMs are composable, can be extended to large-scale data, and are applicable to various tasks (e.g., node or graph classification, clustering, feature extraction, dimensionality reduction). The numerical results on benchmark datasets show that, besides the aforementioned advantages, GCKMs have at least competitive accuracy compared to GCNs.",
+        "pdf": "/pdf/5bb1b5496708ba4881a339a548adb94bc14e1451.pdf"
+      },
+      {
+        "title": "Bridging the Domain Gap by Clustering-based Image-Text Graph Matching",
+        "venue": "ICLR 2024 Conference Withdrawn Submission",
+        "id": "5WDOxf519p",
+        "abstract": "Learning domain-invariant representations is important to train a model that can generalize well to unseen target task domains. Text descriptions inherently contain semantic structures of concepts, and such auxiliary semantic cues can be used as effective pivot embedding for domain generalization problems. Here, we want to use (image-text) multimodal graph representations to get domain-invariant pivot embeddings by considering the inherent semantic structure between local images and text descriptors. Specifically, we aim to learn domain invariant features by (i) representing the image and text descriptions with graphs, and by (ii) clustering and matching the graph-based image node features into textual graphs simultaneously. We experiment with large-scale public datasets, such as CUB-DG and DomainBed, and our model achieves matched or better state-of-the-art performance on these datasets. Our code will be publicly available upon publication.",
+        "pdf": "/pdf/ac5ebda22a02cd16e7cfc683dc76f9ee612cfcf8.pdf"
+      },
+      {
+        "title": "What Improves the Generalization of Graph Transformer? A Theoretical Dive into Self-attention and Positional Encoding",
+        "venue": "Submitted to ICLR 2024",
+        "id": "aJl5aK9n7e",
+        "abstract": "Graph Transformers, which incorporate self-attention and positional encoding, have recently emerged as a powerful architecture for various graph learning tasks. Despite their impressive performance, the complex non-convex interactions across layers and the recursive graph structure have made it challenging to establish a theoretical foundation for learning and generalization. This study introduces the first theoretical investigation of a shallow Graph Transformer for semi-supervised node classification, comprising a self-attention layer with relative positional encoding and a two-layer perception. Focusing on a graph data model with discriminative nodes that determine node labels and non-discriminative nodes that are class-irrelevant, we characterize the sample complexity required to achieve a zero generalization error by training with stochastic gradient descent (SGD). Our theoretical findings suggest that a larger fraction of discriminative nodes, a clearer-cutting vote among discriminative nodes, a smaller fraction of erroneous labels, and smaller errors in the initial model and node patterns improve generalization. Furthermore, we demonstrate that self-attention and positional encoding enhance generalization by making the attention map sparse and promoting the core neighborhood during training, which explains the superior feature representation of Graph Transformers. Our theoretical results are supported by empirical experiments on synthetic and real-world benchmarks.",
+        "pdf": "/pdf/ced8348fcdd990f68352310893e2bcea4f5f96f9.pdf"
+      },
+      {
+        "title": "InterpGNN: Understand and Improve Generalization Ability of Transdutive GNNs through the Lens of Interplay between Train and Test Nodes",
+        "venue": "ICLR 2024 poster",
+        "id": "pwW807WJ9G",
+        "abstract": "Transductive node prediction has been a popular learning setting in Graph Neural Networks (GNNs). It has been widely observed that the shortage of information flow between the distant nodes and intra-batch nodes (for large-scale graphs) often hurt the generalization of GNNs which overwhelmingly adopt message-passing. Yet there is still no formal and direct theoretical results to quantitatively capture the underlying mechanism, despite the recent advance in both theoretical and empirical studies for GNN's generalization ability. In this paper, the $L$-hop interplay (i.e., message passing capability with training nodes) for a  $L$-layer GNN is successfully incorporated in our derived PAC-Bayesian bound for GNNs in the semi-supervised transductive setting. In other words, we quantitatively show how the interplay between training and testing sets influence the generalization ability which also partly explains the effectiveness of some existing empirical methods for enhancing generalization. Based on this result, we further design a plug-and-play ***Graph** **G**lobal **W**orkspace* module for GNNs (InterpGNN-GW) to enhance the interplay, utilizing the key-value attention mechanism to summarize crucial nodes' embeddings into memory and broadcast the memory to all nodes, in contrast to the pairwise attention scheme in previous graph transformers. Extensive experiments on both small-scale and large-scale graph datasets validate the effectiveness of our theory and approaches.",
+        "pdf": "/pdf/4441b0fe7dd9510db98ac6bbb52a923f4d59385a.pdf"
+      },
+      {
+        "title": "HG-Adapter: Improving Pre-Trained Heterogeneous Graph Neural Networks with Dual Adapters",
+        "venue": "ICLR 2025 Poster",
+        "id": "AEglX9CHFN",
+        "abstract": "The \"pre-train, prompt-tuning'' paradigm has demonstrated impressive  performance for tuning pre-trained heterogeneous graph neural networks (HGNNs) by mitigating the gap between pre-trained models and downstream tasks. However, most prompt-tuning-based works may face at least two limitations: (i) the model may be insufficient to fit the graph structures well as they are generally ignored in the prompt-tuning stage, increasing the training error to decrease the generalization ability; and (ii) the model may suffer from the limited labeled data during the prompt-tuning stage, leading to a large generalization gap between the training error and the test error to further affect the model generalization. To alleviate the above limitations, we first derive the generalization error bound for existing prompt-tuning-based methods, and then propose a unified framework that combines two new adapters with potential labeled data extension to improve the generalization of pre-trained HGNN models. Specifically, we design dual structure-aware adapters to adaptively fit task-related homogeneous and heterogeneous structural information. We further design a label-propagated contrastive loss and two self-supervised losses to optimize dual adapters and incorporate unlabeled nodes as potential labeled data. Theoretical analysis indicates that the proposed method achieves a lower generalization error bound than existing methods, thus obtaining superior generalization ability. Comprehensive experiments demonstrate the effectiveness and generalization of the proposed method on different downstream tasks.",
+        "pdf": "/pdf/16355b7b70d22d6b50701852dc7f4a6beb47e2e6.pdf"
+      },
+      {
+        "title": "On the Generalization of Temporal Graph Learning with Theoretical Insights",
+        "venue": "Submitted to ICLR 2024",
+        "id": "cjdmIUYj03",
+        "abstract": "Temporal graph learning (TGL) is a widely-used technique in various real-world applications, but its theoretical foundations remain largely under-explored. In this paper, we fill in this gap by studying the generalization ability of different TGL algorithms (e.g., GNN-based, RNN-based, and memory-based methods) under the finite-wide over-parameterized regime. We establish the connection between the generalization error of TGL algorithms and \\circled{1} \"\\textit{the number of layers/steps}\" in the GNN-/RNN-based TGL methods and \\circled{2} \"\\textit{the feature-label alignment (FLA) score}\", where FLA can be used as a proxy for the expressive power and explains the performance of memory-based methods. Guided by our theoretical analysis, we propose \\textit{\\textbf{S}implified-\\textbf{T}emp\\textbf{o}ral-Graph-\\textbf{Ne}twork} (SToNe), which simultaneously enjoys a small generalization error, the better overall performance, and a lower model complexity. Extensive experiments on real-world datasets demonstrate the effectiveness of SToNe. This paper provides critical insights into TGL from a theoretical perspective and paves the way for designing practical TGL algorithms in future studies.",
+        "pdf": "/pdf/11ee53d1d620ac6832736d2bf73e125490ed439d.pdf"
+      },
+      {
+        "title": "GraphProp: Training the Graph Foundation Models using Graph Properties",
+        "venue": "Submitted to ICLR 2025",
+        "id": "7WgOB2nUaS",
+        "abstract": "In this work, we focus on training Graph Foundation Models (GFMs) for graph-level tasks like protein classification. Effective GFM training requires capturing information consistent across different domains. We have discovered that graph structures provide more consistent cross-domain information compared to node features and graph labels.\nHowever, traditional in-context learning methods primarily focus on transferring node features from various domains into a unified representation space but often lack structural cross-domain generalization.\nTo address this, we introduce a method called GraphProp, which emphasizes structural generalization. The GraphProp training process consists of two main phases: initially, it trains a structural GFM through the supervised prediction of graph structural properties. It then uses the structural representation from this GFM as positional encoding to train a comprehensive GFM. This phase of training utilizes in-context learning with domain-specific node features and graph labels to improve cross-domain node feature generalization.\nAdditionally, employing data augmentation in training the structural GFM helps address the scarcity of labeled graph data and facilitates explicit cross-domain structural generalization.\nOur experimental results demonstrate that GraphProp significantly outperforms traditional in-context learning methods, especially in handling graphs without node features.",
+        "pdf": "/pdf/3a8dda8f941fb93738d317728ffadec14016861b.pdf"
+      },
+      {
+        "title": "Combine and Compare: Graph Rationale Learning with Conditional Non-Rationale Sampling",
+        "venue": "ICLR 2024 Conference Withdrawn Submission",
+        "id": "u8zA1a2Vhf",
+        "abstract": "Traditional Graph Neural Networks (GNNs) assume an ideal distribution of independent and identically distributed (i.i.d) data, a rarely met condition in real-world datasets. Therefore, how to address distribution shifts between training and testing sets becomes paramount in GNNs. Recently, the rationale learning method has garnered much attention as a graph generalization method. It first divides the graph into label-related rationale subgraphs and label-unrelated non-rationale ones. Then, it creates diverse training distributions by combining different non-rationales with rationales. Finally, by exploring the invariant rationales across training distributions, the performance of GNNs facing out-of-distribution (OOD) graphs is boosted. However, this method still faces two problems: (\\textit{i}) when combining non-rationales with rationales, it commonly \\textit{randomly} samples a non-rationale and combines it with the rationale. This may inadvertently produce duplicate samples. (\\textit{ii}) the relationship between the rationales, non-rationales and labels is not properly considered, where non-rationales and labels should be de-correlated compared to the rationales. To address these problems, we propose a Combine and Compare (CoCo) with non-rationales for Graph Rationale Learning method with the conditional non-rationale sampling. Specifically, from the framework of rationale learning, CoCo first employs the diverse sampling method to sample non-rationales, avoiding sampling duplicate non-rationales. Besides, we introduce a non-rationale progressive hard sampling method to de-correlate hard non-rationales and labels, enhancing the model's discrimination ability. Extensive experiments on both benchmarks and synthetic datasets demonstrate the effectiveness of our method for OOD graphs. Code is released at \\url{https://anonymous.4open.science/r/CoCo-5410/}",
+        "pdf": "/pdf/e9e7d3099cd51fbda6f6012184e3d0a6ea5a3a9c.pdf"
+      },
+      {
+        "title": "Rethinking Generalization in Graph Neural Networks: A Structural Complexity Perspective",
+        "venue": "CoRR 2026",
+        "id": "QkIRIcWWev",
+        "abstract": "Graph neural networks (GNNs) have emerged as a fundamental tool for learning from graph-structured data, achieving strong performance across a wide range of applications. However, understanding their generalization capabilities remains challenging due to the complex structural dependencies inherent in such data. Existing generalization analyses largely follow the classical machine learning paradigm, focusing primarily on model complexity while overlooking the fundamental role of graph structure. Therefore, in this work, we systematically investigate this role by asking: does the graph structure actually influence generalization, and if so, by how much? To answer the first question and validate our intuition, we theoretically prove that incorporating more edges into the prediction process transforms the input representations to be overly accommodating to the output model, thereby inducing overfitting. To address the second question, we formulate a structural complexity measure based on the number of effective edges and derive a Rademacher complexity-based generalization bound. In doing so, we demonstrate that GNN generalization depends explicitly on structural complexity, alongside traditional parameter-dependent factors. Motivated by these theoretical findings, we propose a structural entropy regularization method. This approach controls structural complexity by regulating effective edges to balance underfitting and overfitting, ultimately improving the generalization performance of GNNs.",
+        "pdf": "https://arxiv.org/pdf/2605.13597v1"
+      },
+      {
+        "title": "Diversifying Spurious Subgraphs for Graph Out-of-Distribution Generalization",
+        "venue": "Submitted to ICLR 2025",
+        "id": "XWaI6FLVgi",
+        "abstract": "Environment augmentation methods have gained some success in overcoming the out-of-distribution (OOD) generalization challenge in Graph Neural Networks (GNNs). Yet, there exists a challenging trade-off in the augmentation: On one hand, it requires the generated graphs as diverse as possible to extrapolate to unseen environments. On the other hand, it requires the generated graphs to preserve the invariant substructures causally related to the targets. Existing approaches have proposed various environment augmentation strategies to enrich spurious patterns for OOD generalization. However, we argue that these methods remain limited in diversity and precision of the generated environments for two reasons: i) the deterministic nature of the graph composition strategy used for environment augmentation may limit the diversity of the generated environments, and ii) the presence of spurious correlations may lead to the exclusion of invariant subgraphs and reduce the precision of the generated environments. To address this trade-off, we propose a novel paradigm that accurately identifies spurious subgraphs, and an environment augmentation strategy called spurious subgraph diversification, which extrapolates to maximally diversified spurious subgraphs by randomizing the spurious subgraph generation, while preserving the invariant substructures.  Our method is theoretically sound and demonstrates strong empirical performance on both synthetic and real-world datasets, outperforming the second-best method by up to 24.19% across 17 baseline methods, underscoring its superiority in graph OOD generalization.",
+        "pdf": "/pdf/9db1c2fae8021914cc9419c9e6728d7e866d25f4.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://api.openalex.org/works/https://doi.org/10.1145/3774904.3792707",
+    "retrieved_at_utc": "2026-09-15T18:06:42.773530+00:00",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 12629,
+    "file": "improve/research/optimization_next_20260916/openalex_rethinking_v1.json",
+    "sha256": "345592443a7b09c6ed3cacfdac38feb3cb30b1900fca07c3f681b5be13d183d3",
+    "matched": {
+      "title": "Rethinking Graph Generalization through the Lens of Sharpness-Aware Minimization",
+      "doi": "https://doi.org/10.1145/3774904.3792707",
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3774904.3792707",
+        "any_repository_has_fulltext": null
+      },
+      "best_oa_location": {
+        "id": "doi:10.1145/3774904.3792707",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1145/3774904.3792707",
+        "pdf_url": null,
+        "source": null,
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Proceedings of the ACM Web Conference 2026",
+        "raw_type": "proceedings-article"
+      },
+      "locations": [
+        {
+          "id": "doi:10.1145/3774904.3792707",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1145/3774904.3792707",
+          "pdf_url": null,
+          "source": null,
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Proceedings of the ACM Web Conference 2026",
+          "raw_type": "proceedings-article"
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Li_Friendly_Sharpness-Aware_Minimization_CVPR_2024_paper.html",
+    "retrieved_at_utc": "2026-09-15T18:06:42.774748+00:00",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 6711,
+    "file": "improve/research/optimization_next_20260916/friendly_cvf_v1.html",
+    "sha256": "660689756b8630c67c1a3af1db3e67ea786ac70f99ed73ebfc7de2168295163f"
+  }
+]

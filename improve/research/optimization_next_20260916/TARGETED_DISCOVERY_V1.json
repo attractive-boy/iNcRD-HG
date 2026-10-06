@@ -1,0 +1,1577 @@
+[
+  {
+    "url": "https://api2.openreview.net/notes/search?term=GraphSAM&limit=20",
+    "retrieved_at_utc": "2026-09-15T18:05:29.004281+00:00",
+    "http_status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 92521,
+    "file": "improve/research/optimization_next_20260916/openreview_graphsam_v1.json",
+    "sha256": "14a8b5dff5886f4a9a8a664684eb874ac9db1d3c313b97a49a25fdf814af8c27",
+    "matches": [
+      {
+        "title": "Efficient Sharpness-Aware Minimization for Molecular Graph Transformer Models",
+        "venue": "ICLR 2024 poster",
+        "id": "Od39h4XQ3Y",
+        "pdf": "/pdf/18456a69ecee34f68549d5dc59cbfb15f3b0ebd1.pdf",
+        "abstract": "Sharpness-aware minimization (SAM) has received increasing attention in computer vision since it can effectively eliminate the sharp local minima from the training trajectory and mitigate generalization degradation. However, SAM requires two sequential gradient computations during the optimization of each step: one to obtain the perturbation gradient and the other to obtain the updating gradient. \nCompared with the base optimizer (e.g., Adam), SAM doubles the time overhead due to the additional perturbation gradient. By dissecting the theory of SAM and observing the training gradient of the molecular graph transformer, we propose a new algorithm named GraphSAM,  which reduces the training cost of SAM and improves the generalization performance of graph transformer models. \nThere are two key factors that contribute to this result: (i) \\textit{gradient approximation}: we use the updating gradient of the previous step to approximate the perturbation gradient at the intermediate steps smoothly (\\textbf{increases efficiency}); (ii) \\textit{loss landscape approximation}: we theoretically prove that the loss landscape of GraphSAM is limited to a small range centered on the expected loss of SAM (\\textbf{guarantees generalization performance}). The extensive experiments on six datasets with different tasks demonstrate the superiority of GraphSAM, especially in optimizing the model update process."
+      },
+      {
+        "title": "Efficient Sharpness-Aware Minimization for Molecular Graph Transformer Models",
+        "venue": "CoRR 2024",
+        "id": "PIPWapMyrN",
+        "pdf": "http://arxiv.org/pdf/2406.13137v1",
+        "abstract": "Sharpness-aware minimization (SAM) has received increasing attention in computer vision since it can effectively eliminate the sharp local minima from the training trajectory and mitigate generalization degradation. However, SAM requires two sequential gradient computations during the optimization of each step: one to obtain the perturbation gradient and the other to obtain the updating gradient. Compared with the base optimizer (e.g., Adam), SAM doubles the time overhead due to the additional perturbation gradient. By dissecting the theory of SAM and observing the training gradient of the molecular graph transformer, we propose a new algorithm named GraphSAM, which reduces the training cost of SAM and improves the generalization performance of graph transformer models. There are two key factors that contribute to this result: (i) \\textit{gradient approximation}: we use the updating gradient of the previous step to approximate the perturbation gradient at the intermediate steps smoothly (\\textbf{increases efficiency}); (ii) \\textit{loss landscape approximation}: we theoretically prove that the loss landscape of GraphSAM is limited to a small range centered on the expected loss of SAM (\\textbf{guarantees generalization performance}). The extensive experiments on six datasets with different tasks demonstrate the superiority of GraphSAM, especially in optimizing the model update process. The code is in:https://github.com/YL-wang/GraphSAM/tree/graphsam"
+      }
+    ]
+  },
+  {
+    "url": "https://api.crossref.org/works?query.title=Friendly+Sharpness+Aware+Minimization&rows=6",
+    "retrieved_at_utc": "2026-09-15T18:05:29.006154+00:00",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 54973,
+    "file": "improve/research/optimization_next_20260916/crossref_friendly_v1.json",
+    "sha256": "25117f4bd436f673e00ccb6e9b10d3a83693ff99aaafd4580fa983b8d5e02eb1",
+    "matches": [
+      {
+        "title": [
+          "Friendly Sharpness-Aware Minimization"
+        ],
+        "venue": [
+          "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "doi": "10.1109/cvpr52733.2024.00538",
+        "authors": [
+          {
+            "given": "Tao",
+            "family": "Li",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Shanghai Jiao Tong University,Department of Automation,Shanghai,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Pan",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Singapore Management University,Singapore"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhengbao",
+            "family": "He",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Shanghai Jiao Tong University,Department of Automation,Shanghai,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xinwen",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Shanghai Jiao Tong University,Department of Automation,Shanghai,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xiaolin",
+            "family": "Huang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Shanghai Jiao Tong University,Department of Automation,Shanghai,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              16
+            ]
+          ]
+        },
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/10654794/10654797/10657696.pdf?arnumber=10657696",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ]
+      },
+      {
+        "title": [
+          "Random Sharpness-Aware Minimization"
+        ],
+        "venue": [
+          "Advances in Neural Information Processing Systems 35"
+        ],
+        "doi": "10.52202/068431-1782",
+        "authors": [
+          {
+            "given": "Yong",
+            "family": "Liu",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Siqi",
+            "family": "Mai",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Minhao",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xiangning",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Cho-Jui",
+            "family": "Hsieh",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yang",
+            "family": "You",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2022
+            ]
+          ]
+        },
+        "link": null
+      },
+      {
+        "title": [
+          "SAMPa: Sharpness-aware Minimization Parallelized"
+        ],
+        "venue": [
+          "Advances in Neural Information Processing Systems 37"
+        ],
+        "doi": "10.52202/079017-1625",
+        "authors": [
+          {
+            "given": "Wanyun",
+            "family": "Xie",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Thomas",
+            "family": "Pethick",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Volkan",
+            "family": "Cevher",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "link": null
+      },
+      {
+        "title": [
+          "Decentralized Stochastic Sharpness-Aware Minimization Algorithm"
+        ],
+        "venue": null,
+        "doi": "10.2139/ssrn.4613604",
+        "authors": [
+          {
+            "given": "Simiao",
+            "family": "Chen",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Xiaoge",
+            "family": "Deng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Dongpo",
+            "family": "Xu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Tao",
+            "family": "Sun",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Dongsheng",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "link": null
+      },
+      {
+        "title": [
+          "GCSAM: Gradient Centralized Sharpness Aware Minimization"
+        ],
+        "venue": [
+          "IEEE Access"
+        ],
+        "doi": "10.1109/access.2025.3624332",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0005-6934-1385",
+            "authenticated-orcid": false,
+            "given": "Mohamed",
+            "family": "Hassan",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science, University of Idaho, Idaho Falls, ID, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3365-1291",
+            "authenticated-orcid": false,
+            "given": "Aleksandar",
+            "family": "Vakanski",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science, University of Idaho, Idaho Falls, ID, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9401-6163",
+            "authenticated-orcid": false,
+            "given": "Boyu",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science, University of Idaho, Idaho Falls, ID, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-6098-4441",
+            "authenticated-orcid": false,
+            "given": "Min",
+            "family": "Xian",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science, University of Idaho, Idaho Falls, ID, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/6287639/10820123/11214389.pdf?arnumber=11214389",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ]
+      },
+      {
+        "title": [
+          "Decentralized stochastic sharpness-aware minimization algorithm"
+        ],
+        "venue": [
+          "Neural Networks"
+        ],
+        "doi": "10.1016/j.neunet.2024.106325",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0003-3902-2987",
+            "authenticated-orcid": false,
+            "given": "Simiao",
+            "family": "Chen",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xiaoge",
+            "family": "Deng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9663-9743",
+            "authenticated-orcid": false,
+            "given": "Dongpo",
+            "family": "Xu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tao",
+            "family": "Sun",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Dongsheng",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              8
+            ]
+          ]
+        },
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0893608024002491?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0893608024002491?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://api.crossref.org/works?query.title=sharpness+aware+graph&rows=10&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-09-16%2Ctype%3Aproceedings-article",
+    "retrieved_at_utc": "2026-09-15T18:05:29.007362+00:00",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 72511,
+    "file": "improve/research/optimization_next_20260916/crossref_graphsam_v1.json",
+    "sha256": "f62aba15ed5b0d78e5ea9e4ec9de82e1c19b64be1a88beae47efc02281f207c1",
+    "matches": [
+      {
+        "title": [
+          "Sharpness-aware Federated Graph Learning"
+        ],
+        "venue": [
+          "Proceedings of the Nineteenth ACM International Conference on Web Search and Data Mining"
+        ],
+        "doi": "10.1145/3773966.3777989",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0004-7813-7020",
+            "authenticated-orcid": false,
+            "given": "Ruiyu",
+            "family": "Li",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Xidian University, Xi'an, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9346-9574",
+            "authenticated-orcid": false,
+            "given": "Peige",
+            "family": "Zhao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "iFLYTEK, Hefei, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2158-8723",
+            "authenticated-orcid": false,
+            "given": "Guangxia",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Xidian University, Xi'an, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0487-2060",
+            "authenticated-orcid": false,
+            "given": "Pengcheng",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Nanyang Technological University, Singapore, Singapore"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-4660-8092",
+            "authenticated-orcid": false,
+            "given": "Xingyu",
+            "family": "Gao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Chinese Academy of Sciences, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5693-8933",
+            "authenticated-orcid": false,
+            "given": "Zhiqiang",
+            "family": "Xu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "MBZUAI, Abu Dhabi, United Arab Emirates"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              21
+            ]
+          ]
+        },
+        "link": null
+      },
+      {
+        "title": [
+          "Sharpness-aware Zeroth-order Optimization for Graph Transformers"
+        ],
+        "venue": [
+          "Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence"
+        ],
+        "doi": "10.24963/ijcai.2025/348",
+        "authors": [
+          {
+            "given": "Yang",
+            "family": "Liu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Academy of Mathematics and Systems Science"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Chuan",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Academy of Mathematics and Systems Science"
+              },
+              {
+                "name": "University of Chinese Academy of Science"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yuhan",
+            "family": "Lin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Fudan University"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shuai",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Academy of Mathematics and Systems Science"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yang",
+            "family": "Gao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang University"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhao",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Hangzhou Yugu Technology"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shirui",
+            "family": "Pan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Griffith University"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              9
+            ]
+          ]
+        },
+        "link": null
+      },
+      {
+        "title": [
+          "Sharpness-aware Zeroth-order Optimization for Graph Transformers"
+        ],
+        "venue": [
+          "Proceedings of the Thirty-ThirdInternational Joint Conference on Artificial Intelligence"
+        ],
+        "doi": "10.24963/ijcai.2024/348",
+        "authors": [
+          {
+            "given": "Yang",
+            "family": "Liu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Academy of Mathematics and Systems Science"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Chuan",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Academy of Mathematics and Systems Science"
+              },
+              {
+                "name": "University of Chinese Academy of Science"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yuhan",
+            "family": "Lin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Fudan University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Shuai",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Academy of Mathematics and Systems Science"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yang",
+            "family": "Gao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Zhao",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Hangzhou Yugu Technology"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Shirui",
+            "family": "Pan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Griffith University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              8
+            ]
+          ]
+        },
+        "link": null
+      },
+      {
+        "title": [
+          "Rethinking Graph Generalization through the Lens of Sharpness-Aware Minimization"
+        ],
+        "venue": [
+          "Proceedings of the ACM Web Conference 2026"
+        ],
+        "doi": "10.1145/3774904.3792707",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-3564-0521",
+            "authenticated-orcid": false,
+            "given": "Yang",
+            "family": "Qiu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2125-9041",
+            "authenticated-orcid": false,
+            "given": "Yixiong",
+            "family": "Zou",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9515-076X",
+            "authenticated-orcid": false,
+            "given": "Jun",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "iWudao Tech, Nanjing, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              12
+            ]
+          ]
+        },
+        "link": null
+      },
+      {
+        "title": [
+          "Friendly Sharpness-Aware Minimization"
+        ],
+        "venue": [
+          "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "doi": "10.1109/cvpr52733.2024.00538",
+        "authors": [
+          {
+            "given": "Tao",
+            "family": "Li",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Shanghai Jiao Tong University,Department of Automation,Shanghai,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Pan",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Singapore Management University,Singapore"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhengbao",
+            "family": "He",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Shanghai Jiao Tong University,Department of Automation,Shanghai,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xinwen",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Shanghai Jiao Tong University,Department of Automation,Shanghai,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xiaolin",
+            "family": "Huang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Shanghai Jiao Tong University,Department of Automation,Shanghai,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              16
+            ]
+          ]
+        },
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/10654794/10654797/10657696.pdf?arnumber=10657696",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ]
+      },
+      {
+        "title": [
+          "Fast Graph Sharpness-Aware Minimization for Enhancing and Accelerating Few-Shot Node Classification"
+        ],
+        "venue": [
+          "Advances in Neural Information Processing Systems 37"
+        ],
+        "doi": "10.52202/079017-4207",
+        "authors": [
+          {
+            "given": "Yihong",
+            "family": "Luo",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yuhan",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Siya",
+            "family": "Qiu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yiwei",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Chen",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yan",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xiaochun",
+            "family": "Cao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jing",
+            "family": "Tang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "link": null
+      },
+      {
+        "title": [
+          "SAMPa: Sharpness-aware Minimization Parallelized"
+        ],
+        "venue": [
+          "Advances in Neural Information Processing Systems 37"
+        ],
+        "doi": "10.52202/079017-1625",
+        "authors": [
+          {
+            "given": "Wanyun",
+            "family": "Xie",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Thomas",
+            "family": "Pethick",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Volkan",
+            "family": "Cevher",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "link": null
+      },
+      {
+        "title": [
+          "Beyond Local Sharpness: Communication-Efficient Global Sharpness-aware Minimization for Federated Learning"
+        ],
+        "venue": [
+          "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "doi": "10.1109/cvpr52734.2025.02345",
+        "authors": [
+          {
+            "given": "Debora",
+            "family": "Caldarola",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Politecnico di Torino"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Pietro",
+            "family": "Cagnasso",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Politecnico di Torino"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Barbara",
+            "family": "Caputo",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Politecnico di Torino"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Marco",
+            "family": "Ciccone",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Vector Institute"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              10
+            ]
+          ]
+        },
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/11091818/11091608/11094391.pdf?arnumber=11094391",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ]
+      },
+      {
+        "title": [
+          "Fundamental Convergence Analysis of Sharpness-Aware Minimization"
+        ],
+        "venue": [
+          "Advances in Neural Information Processing Systems 37"
+        ],
+        "doi": "10.52202/079017-0419",
+        "authors": [
+          {
+            "given": "Pham",
+            "family": "Khanh",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hoang-Chau",
+            "family": "Luong",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Boris",
+            "family": "Mordukhovich",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Dat",
+            "family": "Tran",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "link": null
+      },
+      {
+        "title": [
+          "Explicit Eigenvalue Regularization Improves Sharpness-Aware Minimization"
+        ],
+        "venue": [
+          "Advances in Neural Information Processing Systems 37"
+        ],
+        "doi": "10.52202/079017-0144",
+        "authors": [
+          {
+            "given": "Haocheng",
+            "family": "Luo",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tuan",
+            "family": "Truong",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tung",
+            "family": "Pham",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Mehrtash",
+            "family": "Harandi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Dinh",
+            "family": "Phung",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Trung",
+            "family": "Le",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "link": null
+      }
+    ]
+  }
+]

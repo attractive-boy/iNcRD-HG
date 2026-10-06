@@ -1,0 +1,36 @@
+{
+  "created_at_utc": "2026-09-15",
+  "scope": "SubKNet and MPHGNN mechanisms relevant to miRNA-drug resistance association prediction; not a systematic review",
+  "sources": [
+    {
+      "key": "SubKNet",
+      "title": "Subgraph-Aware Graph Kernel Neural Network for Link Prediction in Biological Networks",
+      "authors": "Menglu Li, Zhiwei Wang, L. Liu, Xuan Liu, Wen Zhang",
+      "venue": "IEEE Journal of Biomedical and Health Informatics",
+      "year": 2024,
+      "doi": "10.1109/JBHI.2024.3390092",
+      "code": "https://github.com/mengluli-web/SubKNet",
+      "read_depth": "Abstract and highlight (search result); official code cloned and read (code/model.py, code/subgraph_extraction.py). Reported miRNA-drug performance taken from MPHGNN Table 1.",
+      "mechanism": "Per-link h-hop enclosing subgraph (double-radius node labels) fed to a trainable graph-kernel neural network that decomposes each subgraph into trainable graph filters with diversity regularization; node embeddings from the global network are added as auxiliary information."
+    },
+    {
+      "key": "MPHGNN",
+      "title": "MPHGNN: metapath-guided heterogeneous graph neural network for miRNA-drug resistance association prediction",
+      "authors": "Guangsheng Huang, Yali Peng, Shuai Wu, Hang Wei, Shigang Liu",
+      "venue": "Briefings in Bioinformatics",
+      "year": 2026,
+      "doi": "10.1093/bib/bbag013",
+      "pmcid": "PMC12853127",
+      "code": "https://github.com/Gtaizu/MPHGNN",
+      "read_depth": "Full text read from PMC (abstract, methods, results, ablation, parameter analysis).",
+      "mechanism": "miRNA-gene-drug heterogeneous network with miRNA expression, ChemBERTa drug structure and HumanNet gene-gene functional links; gene-space GCN similarity feature; metapath <miRNA-gene-gene-drug> with two-direction node aggregation and attention-based metapath embedding projector; global GCN encoder plus MLP edge decoder; metapath-level and global-level scores combined; BCE training.",
+      "reported": {"AUC": 0.978, "AUPR": 0.937, "evaluation": "independent test set", "subKNet_same_benchmark": {"AUC": 0.9717, "AUPR": 0.9341}}
+    }
+  ],
+  "local_context": [
+    "improve/research/specialized_single_rna_20260915/REPORT.md",
+    "improve/research/frontier_14_directions_20260913/REPORT.md",
+    "improve/results/tabicl_pathway_context_inputs_20260913",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12853127/"
+  ]
+}

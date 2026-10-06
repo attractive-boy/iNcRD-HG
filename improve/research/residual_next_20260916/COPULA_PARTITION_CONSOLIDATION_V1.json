@@ -1,0 +1,94 @@
+{
+  "created_at_utc": "2026-09-15T17:31:24.273943+00:00",
+  "source_sha256": "a2a2620d7db92a73572698ca9d313269f946e5a80809f5e5f23f2946bfbffcec",
+  "prior_csv_sha256": "4772de357d54e5f2e74a3c61f63e056656b89006bcb457ba4443a09be64476b0",
+  "new_csv": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/CONSOLIDATED_RESULTS_V3_20260916.csv",
+  "new_csv_sha256": "33d69f9e17075032ec0a3b1184b75482a4abb5e7f9a2ad20b9fd47e195ffe332",
+  "rows": [
+    {
+      "label": "anchor_residual_bernoulli_copula_v1",
+      "name": "强参考残差＋二元边 Copula",
+      "task": "MiDrug",
+      "auc": 0.9564808454341343,
+      "ap": 0.9192605682121942,
+      "macro_drug_ap": 0.8038904132510138,
+      "delta_auc": -5.36664949338735e-05,
+      "delta_ap": -0.00029802569045703334,
+      "auc_wins": 2,
+      "ap_wins": 1,
+      "min_delta_auc": -0.0007119754994561,
+      "min_delta_ap": -0.0007371285064363,
+      "fresh_gate": false,
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "offset_null_gate": false
+    },
+    {
+      "label": "anchor_residual_bernoulli_copula_v1",
+      "name": "强参考残差＋二元边 Copula",
+      "task": "LncDrug",
+      "auc": 0.9904135255305824,
+      "ap": 0.9805805674416755,
+      "macro_drug_ap": 0.9534779151557397,
+      "delta_auc": -0.00018450520122756758,
+      "delta_ap": -0.0006133649217733,
+      "auc_wins": 1,
+      "ap_wins": 1,
+      "min_delta_auc": -0.0004209836985756,
+      "min_delta_ap": -0.0017096486875333,
+      "fresh_gate": false,
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "offset_null_gate": false
+    }
+  ],
+  "contrasts": [
+    {
+      "task": "LncDrug",
+      "control": "anchor",
+      "auc": -0.00018450520122756758,
+      "ap": -0.0006133649217733
+    },
+    {
+      "task": "LncDrug",
+      "control": "independent",
+      "auc": -0.0001377292347191352,
+      "ap": -0.0004892563500232001
+    },
+    {
+      "task": "LncDrug",
+      "control": "offset_composed",
+      "auc": -0.00018450520122756758,
+      "ap": -0.0006133649217733
+    },
+    {
+      "task": "MiDrug",
+      "control": "anchor",
+      "auc": -5.36664949338735e-05,
+      "ap": -0.00029802569045703334
+    },
+    {
+      "task": "MiDrug",
+      "control": "independent",
+      "auc": 1.1528358171e-05,
+      "ap": -7.883507624926668e-05
+    },
+    {
+      "task": "MiDrug",
+      "control": "offset_composed",
+      "auc": -5.36664949338735e-05,
+      "ap": -0.00029802569045703334
+    }
+  ],
+  "assessment_sha256": "bb4a836dcfbce9af67867153a0fe31930dc124c940d3751106300a485661e5a6",
+  "uncertainty_sha256": "605f5ff83ecfbea769f628d2b30c15b73a4d9e306109e2829c53e1a4ffae3295",
+  "new_historical_neural_fits": 16,
+  "new_partition_neural_fits": 12,
+  "new_outer_neural_fits": 0,
+  "preceding_partition_neural_fit_count": 264,
+  "total_partition_neural_fit_count": 276,
+  "exact_reference_adoptions_and_smoke_fits_excluded": true,
+  "confirmed_final_innovations": 0,
+  "existing_default_replaced": false,
+  "sha256": "7412cfa0a44b3a7ba406268641adf45fe3b4d995155d1b948768e226b3676dc3"
+}

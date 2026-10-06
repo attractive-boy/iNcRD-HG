@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/OCfwx45CqG9LmMPfYrYjAixGY3A</id>
+  <title>arXiv Query: search_query=(ti:"positive unlabeled" OR ti:"positive-unlabeled") AND (all:"propensity" OR all:"selection")&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-09-16T01:29:09Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(ti:%22positive+unlabeled%22+OR+ti:%22positive-unlabeled%22)+AND+(all:%22propensity%22+OR+all:%22selection%22)&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>23</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.03077v1</id>
+    <title>Position: Unlabeled IS NOT Equal to No Human Supervision in Visual Learning</title>
+    <updated>2026-09-02T18:45:41Z</updated>
+    <link href="https://arxiv.org/abs/2609.03077v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.03077v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This position paper argues that the absence of labels does not imply the absence of human supervision in visual learning, and urges the research community to identify sources of supervision more explicitly. Many recent methods in computer vision build upon representations learned from large-scale unlabeled data, and are therefore grouped under the same umbrella term ``unsupervised.'' However, different data curation schemes and training objectives embed substantially different human priors on which models rely, and we argue that one ``unsupervised'' umbrella term is no longer capturing these distinctions. This ambiguity makes it harder to compare unsupervised learning research conducted under different assumptions, coinciding with a sharp decline in papers titled with ``unsupervised'' in flagship computer vision conferences since 2021, despite continued growth of the field. While we fully embrace pre-training as a strong foundation for modern computer vision, we advocate for a community-level effort toward greater conceptual clarity: authors are encouraged to disclose priors in data selection and learning objectives, and to specify which components of a learning pipeline depend on which assumptions. Standardized disclosure practices can improve academic communication, ensure fairer comparisons, and preserve methodological diversity in unsupervised learning.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-02T18:45:41Z</published>
+    <arxiv:comment>ICML 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Dong Lao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.18700v1</id>
+    <title>Decoupled Pipeline with Proposal Reranking and Score Fusion for Positive-Unlabeled Marine Species Detection</title>
+    <updated>2026-07-21T04:35:47Z</updated>
+    <link href="https://arxiv.org/abs/2607.18700v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.18700v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The FathomNetCLEF 2026 competition combines underwater object detection and fine-grained marine species classification under a positive-unlabeled evaluation setting. The provided training labels are sparse, while the hidden test set is out-of-distribution relative to the training imagery, creating both annotation incompleteness and source-shift challenges. We describe DS@GT ARC's multi-stage system developed for this setting while keeping model training restricted to the data provided by the competition. The final private-leaderboard model uses a frozen Megalodon YOLOv8x detector as a class-agnostic proposal generator, combines global and tiled inference with tile-edge filtering, classifies expanded proposal crops with a LoRA-finetuned DINOv3 ViT-H classifier, and ranks predictions using weighted geometric fusion of detector and classifier confidence. This system placed 12th out of 102 teams. A closely related variant added a locally trained TTN-inspired validity head as a light reranking signal, improving public-leaderboard and proxy-evaluation performance but slightly reducing private-leaderboard performance. Across experiments, the strongest lesson was that train-derived validation and detector-only metrics were not reliable enough for model selection. Instead, we used proxy datasets only for validation and comparison, and combined those signals with leaderboard feedback and targeted ablations. These experiments showed that reserving proposal recall, avoiding over-aggressive filtering, and improving downstream ranking were more effective than fine-tuning the detector or directly training on noisy pseudo-labels. Code: https://github.com/dsgt-arc/fathomnetclef-2026.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-21T04:35:47Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Robert James Brock</name>
+    </author>
+    <author>
+      <name>Sebastian Maximilian Krupa</name>
+    </author>
+    <author>
+      <name>Jason Kahei Tam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.13428v1</id>
+    <title>PUe: Biased Positive-Unlabeled Learning Enhancement by Causal Inference</title>
+    <updated>2026-07-15T04:12:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.13428v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.13428v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Positive-Unlabeled (PU) learning aims to achieve high-accuracy binary classification with limited labeled positive examples and numerous unlabeled ones. Existing cost-sensitive-based methods often rely on strong assumptions that examples with an observed positive label were selected entirely at random. In fact, the uneven distribution of labels is prevalent in real-world PU problems, indicating that most actual positive and unlabeled data are subject to selection bias. Building on the SAR-PU propensity-weighted framework of Bekker et al., we study a PU learning enhancement (PUe) framework using normalized propensity scores and normalized inverse probability weighting (NIPW). PUe's main contributions are a normalized inverse-probability-weighted PU risk formulation; additional theoretical analyses of normalized sample-weight error and common PU estimators under biased labeling; regularized deep propensity-score estimation; integration with modern cost-sensitive PU methods; and support for selectively labeled negative classes. Experiments on MNIST, CIFAR-10, and ADNI demonstrate improvements over several PU baselines under non-uniform label distributions.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-15T04:12:30Z</published>
+    <arxiv:comment>Extended arXiv version of the NeurIPS 2023 paper; includes additional discussion of related SAR-PU work</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xutao Wang</name>
+    </author>
+    <author>
+      <name>Hanting Chen</name>
+    </author>
+    <author>
+      <name>Tianyu Guo</name>
+    </author>
+    <author>
+      <name>Yunhe Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.19057v1</id>
+    <title>Quantifying and Auditing LLM Evaluation via Positive--Unlabeled Learning</title>
+    <updated>2026-06-17T13:26:04Z</updated>
+    <link href="https://arxiv.org/abs/2606.19057v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.19057v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) are increasingly used as judges for scalable evaluation, yet such LLM--as--a--Judge systems exhibit systematic biases that are decoupled from semantic quality, most notably verbosity bias. Meanwhile, human supervision is costly and typically selective, yielding reliable positive judgments but leaving most outputs unlabelled and potentially mixed in quality. We formulate LLM evaluation under selective human supervision as a positive--unlabelled learning problem and propose a geometric auditing framework based on Partial Optimal Transport. By aligning a small set of human--verified positives with a reliable subset of unlabelled outputs in a fixed embedding space, our method identifies human--consistent preferences and corrects biased judges without retraining. Experiments demonstrate improved alignment with human preferences, increased robustness to presentation biases, and interpretable confidence estimates, offering a scalable and statistically grounded alternative to existing LLM--as--a--judge pipelines.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-17T13:26:04Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Zilong Zhang</name>
+    </author>
+    <author>
+      <name>Yi-Ting Hung</name>
+    </author>
+    <author>
+      <name>Lei Ding</name>
+    </author>
+    <author>
+      <name>Chi-Kuang Yeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.24228v2</id>
+    <title>Accessible, Realistic, and Fair Evaluation of Positive-Unlabeled Learning Algorithms</title>
+    <updated>2026-02-22T14:16:19Z</updated>
+    <link href="https://arxiv.org/abs/2509.24228v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.24228v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Positive-unlabeled (PU) learning is a weakly supervised binary classification problem, in which the goal is to learn a binary classifier from only positive and unlabeled data, without access to negative data. In recent years, many PU learning algorithms have been developed to improve model performance. However, experimental settings are highly inconsistent, making it difficult to identify which algorithm performs better. In this paper, we propose the first PU learning benchmark to systematically compare PU learning algorithms. During our implementation, we identify subtle yet critical factors that affect the realistic and fair evaluation of PU learning algorithms. On the one hand, many PU learning algorithms rely on a validation set that includes negative data for model selection. This is unrealistic in traditional PU learning settings, where no negative data are available. To handle this problem, we systematically investigate model selection criteria for PU learning. On the other hand, PU learning involves different problem settings and corresponding solution families, i.e., the one-sample and two-sample settings. However, existing evaluation protocols are heavily biased towards the one-sample setting and neglect the significant difference between them. We identify the internal label shift problem of unlabeled training data for the one-sample setting and propose a simple yet effective calibration approach to ensure fair comparisons within and across families. We hope our framework will provide an accessible, realistic, and fair environment for evaluating PU learning algorithms in the future.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-29T03:13:00Z</published>
+    <arxiv:comment>ICLR 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Wei Wang</name>
+    </author>
+    <author>
+      <name>Dong-Dong Wu</name>
+    </author>
+    <author>
+      <name>Ming Li</name>
+    </author>
+    <author>
+      <name>Jingxiong Zhang</name>
+    </author>
+    <author>
+      <name>Gang Niu</name>
+    </author>
+    <author>
+      <name>Masashi Sugiyama</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.08212v2</id>
+    <title>An Effective Flow-based Method for Positive-Unlabeled Learning: 2-HNC</title>
+    <updated>2025-11-02T23:09:43Z</updated>
+    <link href="https://arxiv.org/abs/2505.08212v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.08212v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In many scenarios of binary classification, only positive instances are provided in the training data, leaving the rest of the data unlabeled. This setup, known as positive-unlabeled (PU) learning, is addressed here with a network flow-based method which utilizes pairwise similarities between samples. The method we propose here, 2-HNC, leverages Hochbaum's Normalized Cut (HNC) and the set of solutions it provides by solving a parametric minimum cut problem. The set of solutions, that are nested partitions of the samples into two sets, correspond to varying tradeoff values between the two goals: high intra-similarity inside the sets and low inter-similarity between the two sets. This nested sequence is utilized here to deliver a ranking of unlabeled samples by their likelihood of being negative. Building on this insight, our method, 2-HNC, proceeds in two stages. The first stage generates this ranking without assuming any negative labels, using a problem formulation that is constrained only on positive labeled samples. The second stage augments the positive set with likely-negative samples and recomputes the classification. The final label prediction selects among all generated partitions in both stages, the one that delivers a positive class proportion, closest to a prior estimate of this quantity, which is assumed to be given. Extensive experiments across synthetic and real datasets show that 2-HNC yields strong performance and often surpasses existing state-of-the-art algorithms.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-13T03:58:16Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Dorit Hochbaum</name>
+    </author>
+    <author>
+      <name>Torpong Nitayanont</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.08981v3</id>
+    <title>From Lazy to Prolific: Tackling Missing Labels in Open Vocabulary Extreme Classification by Positive-Unlabeled Sequence Learning</title>
+    <updated>2025-01-09T00:53:45Z</updated>
+    <link href="https://arxiv.org/abs/2408.08981v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.08981v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Open-vocabulary Extreme Multi-label Classification (OXMC) extends traditional XMC by allowing prediction beyond an extremely large, predefined label set (typically $10^3$ to $10^{12}$ labels), addressing the dynamic nature of real-world labeling tasks. However, self-selection bias in data annotation leads to significant missing labels in both training and test data, particularly for less popular inputs. This creates two critical challenges: generation models learn to be "lazy'" by under-generating labels, and evaluation becomes unreliable due to insufficient annotation in the test set. In this work, we introduce Positive-Unlabeled Sequence Learning (PUSL), which reframes OXMC as an infinite keyphrase generation task, addressing the generation model's laziness. Additionally, we propose to adopt a suite of evaluation metrics, F1@$\mathcal{O}$ and newly proposed B@$k$, to reliably assess OXMC models with incomplete ground truths. In a highly imbalanced e-commerce dataset with substantial missing labels, PUSL generates 30% more unique labels, and 72% of its predictions align with actual user queries. On the less skewed EURLex-4.3k dataset, PUSL demonstrates superior F1 scores, especially as label counts increase from 15 to 30. Our approach effectively tackles both the modeling and evaluation challenges in OXMC with missing labels.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-16T19:10:48Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Ranran Haoran Zhang</name>
+    </author>
+    <author>
+      <name>Bensu Uçar</name>
+    </author>
+    <author>
+      <name>Soumik Dey</name>
+    </author>
+    <author>
+      <name>Hansi Wu</name>
+    </author>
+    <author>
+      <name>Binbin Li</name>
+    </author>
+    <author>
+      <name>Rui Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.16485v3</id>
+    <title>Learning Constraint Network from Demonstrations via Positive-Unlabeled Learning with Memory Replay</title>
+    <updated>2025-01-16T11:59:02Z</updated>
+    <link href="https://arxiv.org/abs/2407.16485v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.16485v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Planning for a wide range of real-world tasks necessitates to know and write all constraints. However, instances exist where these constraints are either unknown or challenging to specify accurately. A possible solution is to infer the unknown constraints from expert demonstration. The majority of prior works limit themselves to learning simple linear constraints, or require strong knowledge of the true constraint parameterization or environmental model. To mitigate these problems, this paper presents a positive-unlabeled (PU) learning approach to infer a continuous, arbitrary and possibly nonlinear, constraint from demonstration. From a PU learning view, We treat all data in demonstrations as positive (feasible) data, and learn a (sub)-optimal policy to generate high-reward-winning but potentially infeasible trajectories, which serve as unlabeled data containing both feasible and infeasible states. Under an assumption on data distribution, a feasible-infeasible classifier (i.e., constraint model) is learned from the two datasets through a postprocessing PU learning technique. The entire method employs an iterative framework alternating between updating the policy, which generates and selects higher-reward policies, and updating the constraint model. Additionally, a memory buffer is introduced to record and reuse samples from previous iterations to prevent forgetting. The effectiveness of the proposed method is validated in two Mujoco environments, successfully inferring continuous nonlinear constraints and outperforming a baseline method in terms of constraint accuracy and policy safety.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-23T14:00:18Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Baiyu Peng</name>
+    </author>
+    <author>
+      <name>Aude Billard</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.10309v1</id>
+    <title>Augmented prediction of a true class for Positive Unlabeled data under selection bias</title>
+    <updated>2024-07-14T19:58:01Z</updated>
+    <link href="https://arxiv.org/abs/2407.10309v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.10309v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a new observational setting for Positive Unlabeled (PU) data where the observations at prediction time are also labeled. This occurs commonly in practice -- we argue that the additional information is important for prediction, and call this task "augmented PU prediction". We allow for labeling to be feature dependent. In such scenario, Bayes classifier and its risk is established and compared with a risk of a classifier which for unlabeled data is based only on predictors. We introduce several variants of the empirical Bayes rule in such scenario and investigate their performance. We emphasise dangers (and ease) of applying classical classification rule in the augmented PU scenario -- due to no preexisting studies, an unaware researcher is prone to skewing the obtained predictions. We conclude that the variant based on recently proposed variational autoencoder designed for PU scenario works on par or better than other considered variants and yields advantage over feature-only based methods in terms of accuracy for unlabeled samples.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-14T19:58:01Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Jan Mielniczuk</name>
+    </author>
+    <author>
+      <name>Adam Wawrzeńczyk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.09898v2</id>
+    <title>Positive-Unlabelled Learning for identifying new candidate Dietary Restriction-related genes among Ageing-related genes</title>
+    <updated>2025-03-07T12:25:03Z</updated>
+    <link href="https://arxiv.org/abs/2406.09898v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.09898v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dietary Restriction (DR) is one of the most popular anti-ageing interventions; recently, Machine Learning (ML) has been explored to identify potential DR-related genes among ageing-related genes, aiming to minimize costly wet lab experiments needed to expand our knowledge on DR. However, to train a model from positive (DR-related) and negative (non-DR-related) examples, the existing ML approach naively labels genes without known DR relation as negative examples, assuming that lack of DR-related annotation for a gene represents evidence of absence of DR-relatedness, rather than absence of evidence. This hinders the reliability of the negative examples (non-DR-related genes) and the method's ability to identify novel DR-related genes. This work introduces a novel gene prioritisation method based on the two-step Positive-Unlabelled (PU) Learning paradigm: using a similarity-based, KNN-inspired approach, our method first selects reliable negative examples among the genes without known DR associations. Then, these reliable negatives and all known positives are used to train a classifier that effectively differentiates DR-related and non-DR-related genes, which is finally employed to generate a more reliable ranking of promising genes for novel DR-relatedness. Our method significantly outperforms (p&lt;0.05) the existing state-of-the-art approach in three predictive accuracy metrics with up to 40% lower computational cost in the best case, and we identify 4 new promising DR-related genes (PRKAB1, PRKAB2, IRS2, PRKAG1), all with evidence from the existing literature supporting their potential DR-related role.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-14T10:14:01Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jorge Paz-Ruza</name>
+    </author>
+    <author>
+      <name>Alex A. Freitas</name>
+    </author>
+    <author>
+      <name>Amparo Alonso-Betanzos</name>
+    </author>
+    <author>
+      <name>Bertha Guijarro-Berdiñas</name>
+    </author>
+    <arxiv:doi>10.1016/j.compbiomed.2024.108999</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.compbiomed.2024.108999" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.00145v1</id>
+    <title>Verifying the Selected Completely at Random Assumption in Positive-Unlabeled Learning</title>
+    <updated>2024-03-29T20:36:58Z</updated>
+    <link href="https://arxiv.org/abs/2404.00145v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.00145v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The goal of positive-unlabeled (PU) learning is to train a binary classifier on the basis of training data containing positive and unlabeled instances, where unlabeled observations can belong either to the positive class or to the negative class. Modeling PU data requires certain assumptions on the labeling mechanism that describes which positive observations are assigned a label. The simplest assumption, considered in early works, is SCAR (Selected Completely at Random Assumption), according to which the propensity score function, defined as the probability of assigning a label to a positive observation, is constant. On the other hand, a much more realistic assumption is SAR (Selected at Random), which states that the propensity function solely depends on the observed feature vector. SCAR-based algorithms are much simpler and computationally much faster compared to SAR-based algorithms, which usually require challenging estimation of the propensity score. In this work, we propose a relatively simple and computationally fast test that can be used to determine whether the observed data meet the SCAR assumption. Our test is based on generating artificial labels conforming to the SCAR case, which in turn allows to mimic the distribution of the test statistic under the null hypothesis of SCAR. We justify our method theoretically. In experiments, we demonstrate that the test successfully detects various deviations from SCAR scenario and at the same time it is possible to effectively control the type I error. The proposed test can be recommended as a pre-processing step to decide which final PU algorithm to choose in cases when nature of labeling mechanism is not known.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-29T20:36:58Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Paweł Teisseyre</name>
+    </author>
+    <author>
+      <name>Konrad Furmańczyk</name>
+    </author>
+    <author>
+      <name>Jan Mielniczuk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.06452v1</id>
+    <title>Automated Machine Learning for Positive-Unlabelled Learning</title>
+    <updated>2024-01-12T08:54:34Z</updated>
+    <link href="https://arxiv.org/abs/2401.06452v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.06452v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Positive-Unlabelled (PU) learning is a growing field of machine learning that aims to learn classifiers from data consisting of labelled positive and unlabelled instances, which can be in reality positive or negative, but whose label is unknown. An extensive number of methods have been proposed to address PU learning over the last two decades, so many so that selecting an optimal method for a given PU learning task presents a challenge. Our previous work has addressed this by proposing GA-Auto-PU, the first Automated Machine Learning (Auto-ML) system for PU learning. In this work, we propose two new Auto-ML systems for PU learning: BO-Auto-PU, based on a Bayesian Optimisation approach, and EBO-Auto-PU, based on a novel evolutionary/Bayesian optimisation approach. We also present an extensive evaluation of the three Auto-ML systems, comparing them to each other and to well-established PU learning methods across 60 datasets (20 real-world datasets, each with 3 versions in terms of PU learning characteristics).</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-12T08:54:34Z</published>
+    <arxiv:comment>36 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jack D. Saunders</name>
+    </author>
+    <author>
+      <name>Alex A. Freitas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.16557v1</id>
+    <title>Joint empirical risk minimization for instance-dependent positive-unlabeled data</title>
+    <updated>2023-12-27T12:45:12Z</updated>
+    <link href="https://arxiv.org/abs/2312.16557v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.16557v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning from positive and unlabeled data (PU learning) is actively researched machine learning task. The goal is to train a binary classification model based on a training dataset containing part of positives which are labeled, and unlabeled instances. Unlabeled set includes remaining part of positives and all negative observations. An important element in PU learning is modeling of the labeling mechanism, i.e. labels' assignment to positive observations. Unlike in many prior works, we consider a realistic setting for which probability of label assignment, i.e. propensity score, is instance-dependent. In our approach we investigate minimizer of an empirical counterpart of a joint risk which depends on both posterior probability of inclusion in a positive class as well as on a propensity score. The non-convex empirical risk is alternately optimised with respect to parameters of both functions. In the theoretical analysis we establish risk consistency of the minimisers using recently derived methods from the theory of empirical processes. Besides, the important development here is a proposed novel implementation of an optimisation algorithm, for which sequential approximation of a set of positive observations among unlabeled ones is crucial. This relies on modified technique of 'spies' as well as on a thresholding rule based on conditional probabilities. Experiments conducted on 20 data sets for various labeling scenarios show that the proposed method works on par or more effectively than state-of-the-art methods based on propensity function estimation.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-27T12:45:12Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Wojciech Rejchel</name>
+    </author>
+    <author>
+      <name>Paweł Teisseyre</name>
+    </author>
+    <author>
+      <name>Jan Mielniczuk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.00279v1</id>
+    <title>Robust Positive-Unlabeled Learning via Noise Negative Sample Self-correction</title>
+    <updated>2023-08-01T04:34:52Z</updated>
+    <link href="https://arxiv.org/abs/2308.00279v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.00279v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning from positive and unlabeled data is known as positive-unlabeled (PU) learning in literature and has attracted much attention in recent years. One common approach in PU learning is to sample a set of pseudo-negatives from the unlabeled data using ad-hoc thresholds so that conventional supervised methods can be applied with both positive and negative samples. Owing to the label uncertainty among the unlabeled data, errors of misclassifying unlabeled positive samples as negative samples inevitably appear and may even accumulate during the training processes. Those errors often lead to performance degradation and model instability. To mitigate the impact of label uncertainty and improve the robustness of learning with positive and unlabeled data, we propose a new robust PU learning method with a training strategy motivated by the nature of human learning: easy cases should be learned first. Similar intuition has been utilized in curriculum learning to only use easier cases in the early stage of training before introducing more complex cases. Specifically, we utilize a novel ``hardness'' measure to distinguish unlabeled samples with a high chance of being negative from unlabeled samples with large label noise. An iterative training strategy is then implemented to fine-tune the selection of negative samples during the training process in an iterative manner to include more ``easy'' samples in the early stage of training. Extensive experimental validations over a wide range of learning tasks show that this approach can effectively improve the accuracy and stability of learning with positive and unlabeled data. Our code is available at https://github.com/woriazzc/Robust-PU</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-01T04:34:52Z</published>
+    <arxiv:comment>Accepted at KDD2023</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zhangchi Zhu</name>
+    </author>
+    <author>
+      <name>Lu Wang</name>
+    </author>
+    <author>
+      <name>Pu Zhao</name>
+    </author>
+    <author>
+      <name>Chao Du</name>
+    </author>
+    <author>
+      <name>Wei Zhang</name>
+    </author>
+    <author>
+      <name>Hang Dong</name>
+    </author>
+    <author>
+      <name>Bo Qiao</name>
+    </author>
+    <author>
+      <name>Qingwei Lin</name>
+    </author>
+    <author>
+      <name>Saravan Rajmohan</name>
+    </author>
+    <author>
+      <name>Dongmei Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.15973v1</id>
+    <title>Debiased Pairwise Learning from Positive-Unlabeled Implicit Feedback</title>
+    <updated>2023-07-29T12:32:25Z</updated>
+    <link href="https://arxiv.org/abs/2307.15973v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.15973v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning contrastive representations from pairwise comparisons has achieved remarkable success in various fields, such as natural language processing, computer vision, and information retrieval. Collaborative filtering algorithms based on pairwise learning also rooted in this paradigm. A significant concern is the absence of labels for negative instances in implicit feedback data, which often results in the random selected negative instances contains false negatives and inevitably, biased embeddings. To address this issue, we introduce a novel correction method for sampling bias that yields a modified loss for pairwise learning called debiased pairwise loss (DPL). The key idea underlying DPL is to correct the biased probability estimates that result from false negatives, thereby correcting the gradients to approximate those of fully supervised data. The implementation of DPL only requires a small modification of the codes. Experimental studies on five public datasets validate the effectiveness of proposed learning method.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-29T12:32:25Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Bin Liu</name>
+    </author>
+    <author>
+      <name>Qin Luo</name>
+    </author>
+    <author>
+      <name>Bang Wang</name>
+    </author>
+  </entry>
+</feed>

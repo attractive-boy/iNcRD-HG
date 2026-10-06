@@ -1,0 +1,853 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/NkyvBz4qD3nCI6gr3C2JWl0TAlI</id>
+  <title>arXiv Query: search_query=(ti:"graph reasoning" OR ti:"knowledge graph") AND (all:"path" OR all:"query-dependent") AND submittedDate:"202601010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-09-16T11:59:35Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(ti:%22graph+reasoning%22+OR+ti:%22knowledge+graph%22)+AND+((all:%22path%22+OR+all:%22query-dependent%22)+AND+submittedDate:%22202601010000+TO+202609162359%22)&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>83</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.13664v1</id>
+    <title>Cost Characterization of Vertically Partitioned Federated Knowledge Graphs</title>
+    <updated>2026-09-12T02:47:14Z</updated>
+    <link href="https://arxiv.org/abs/2609.13664v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.13664v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs are increasingly distributed across autonomous organizations that share an entity space but own disjoint subsets of relations, forming a vertical partition. Answering a multi-hop query may require combining facts from several silos, making the partitioning strategy a key data management decision that affects communication, indexing, load balance, and query latency. However, the costs associated with different partitioning strategies remain insufficiently studied. We formalize vertical partitioning as a design space and compare four strategies: semantic domain grouping, frequency-balanced partitioning, co-occurrence graph-cut partitioning, and random partitioning. We evaluate them using five metrics: communication cost, candidate index size, cross-silo path length, load balance, and end-to-end query latency. Three of the five prove to be determined by the graph and the silo count rather than by the partition, which reduces the design problem to two conflicting axes, cross-silo path length and load balance. Experiments on MetaQA and PathQuestion use a fixed federated knowledge graph question-answering architecture based on TransE embeddings and a frozen BERT encoder across three silo configurations. By keeping the learning model unchanged, we isolate the effect of partitioning and show that the trade-off between locality and balance holds only where each silo can hold several relations, weakening as the number of silos increases. The study provides practical guidance for deployments constrained by cross-silo reasoning or by silo load.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-12T02:47:14Z</published>
+    <arxiv:comment>Accepted at DMKG'26: 2nd International Workshop on Data Management for Knowledge Graphs, co-located with ISWC 2026; to appear in CEUR-WS proceedings</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Md Saikat Islam Khan Bappy</name>
+    </author>
+    <author>
+      <name>Oshani Seneviratne</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.12230v1</id>
+    <title>Repair Before Reinforce: Context-Augmented Knowledge Graph Reasoning for Multi-Hop Question Answering</title>
+    <updated>2026-09-10T21:39:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.12230v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.12230v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Question-answering often requires reasoning across multiple connected facts rather than retrieving a single isolated relation. Knowledge graphs (KGs) provide a structured way to represent such facts, but training large language models (LLMs) only on isolated KG head-relation-tail triples may limit their ability to learn the surrounding context needed for multi-hop reasoning. In this work, we propose a context-augmented training framework for multi-hop question-answering. Although generally applicable, we validate the framework in the context of disease-specific KGs, extracted using a reliable KG extraction framework called GraphMERT, for Gastroparesis and Diabetes. For each primary KG triple, we attach supporting triples extracted from the same source text chunk to form a context graph (CG). This creates two supervision settings: KG-grounded supervision, which uses only the target KG triple or path, and CG-grounded supervision, which uses the target KG triple or path together with supporting context triples. We train the Qwen3-14B model using supervised fine-tuning (SFT) under both settings, producing KGModel and CGModel variants. To strengthen the lower-hop factual foundation of the models, we introduce an LLM-judged, history-aware adaptive repair pipeline that identifies unresolved one-hop failures, continually fine-tunes on targeted repair examples, and removes or quarantines problematic noisy triples. This repair stage enables the models to reach 100% accuracy on the cleaned retained one-hop validation sets. Finally, we employ reinforcement learning (RL) using lower-hop question-answer items and evaluate generalization on harder 3-hop, 4-hop, and 5-hop tasks. Across both diseases, context-augmented supervision consistently improves multi-hop performance over KG-only supervision. RL initialized from repaired SFT checkpoints yields larger and more stable gains.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T21:39:11Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Tharaka D. Fonseka</name>
+    </author>
+    <author>
+      <name>Niraj K. Jha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.11569v1</id>
+    <title>Enabling Knowledge Graph Understanding at Scale with the EXplore Your Graphs ENgine (EXYGEN)</title>
+    <updated>2026-09-10T14:03:32Z</updated>
+    <link href="https://arxiv.org/abs/2609.11569v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.11569v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present EXYGEN (EXplore Your Graphs ENgine), a framework for knowledge graph (KG) understanding that enables conversational access to KGs at scale. We address two questions in sequence. First, how effectively can LLMs perform text-to-SPARQL generation given only automatically derived structured metadata and small graph samples, rather than task-specific fine-tuning? We integrate VoID descriptions and ShEx schemas into a retrieval-augmented generation (RAG) pipeline and ablate KG-derived context on the SciQA benchmark. Our best configuration -- combining ShEx schemas, retrieved triples, and example question-query pairs -- reaches an exact match of 0.419 on execution results without any LLM fine-tuning. We further find that lexical metrics such as F1 poorly predict query correctness, and that larger general-purpose LLMs can outperform smaller code-specialized ones once given sufficient context. Second, we ask how to generate the structured metadata that this method relies on from very large KGs, where KG metadata generation becomes computationally intractable. We introduce a predicate-coverage-aware parallel graph sampling strategy that preserves structural diversity while remaining computationally tractable. On OpenCitations Meta and GESIS, it retains high predicate coverage with minimal triple loss and reduces runtime by over 80x; on ORKG, sampling is not just faster but the only tractable path to obtain complete metadata. Together, these results show that structured schema context and lightweight prompting can substantially reduce reliance on fine-tuning for scalable conversational access to KGs, though closing the remaining gap to fully fine-tuned approaches will likely require reducing dependence on curated question-query exemplars -- whether through synthetic generation or an execution-feedback-driven approach -- and validating these findings beyond a single benchmark.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T14:03:32Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Harshdeep Singh</name>
+    </author>
+    <author>
+      <name>Yurui Zhu</name>
+    </author>
+    <author>
+      <name>Giovanni Colavizza</name>
+    </author>
+    <author>
+      <name>Matteo Romanello</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.11493v1</id>
+    <title>From Document Silos to Process Intelligence: A Multi-Layer Knowledge Graph for CMC Process Development</title>
+    <updated>2026-09-10T12:59:04Z</updated>
+    <link href="https://arxiv.org/abs/2609.11493v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.11493v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Chemistry, Manufacturing and Controls (CMC) process development generates an enormous body of technical information across a multi-stage, knowledge-intensive continuum from drug discovery to commercial manufacturing. This knowledge is traditionally fragmented across functions and heterogeneous formats, causing traceability gaps and significant knowledge-management costs during technology transfer and regulatory filing. We present a modular agentic-AI platform that converts a heterogeneous corpus of process-development documents into a queryable, dual-layer knowledge graph. A base knowledge layer builds a lexical graph with a Document-Section-Chunk hierarchy through lossless ingestion of digital, scanned, handwritten, and multilingual documents, while an intelligence layer extracts ontology-aligned entities and bridges cross-document concepts through a provenance-anchored domain graph. LLM agents operate across both layers, selecting the retrieval path best suited to each question. We evaluate the lexical layer with a novel three-tier protocol measuring the deployment-fidelity of a retrieval-augmented generation (RAG) system on proprietary data, demonstrated on 505 questions curated from 38 development reports of a Sanofi small-molecule program. Tier-1 multiple-choice accuracy of 95% signals strong platform reliability; the stricter Tier-2 LLM-judge pass rate of 85%, which degrades on comparative and corpus-wide questions, reveals a failure taxonomy that Tier-1 accuracy alone fails to capture. A router agent selects between layers according to question type. We anticipate this protocol will enable future designers of agentic platforms to assess their systems against nonpublic databases, and that graph-based architectures will see broader adoption in pharma as a means of transforming fragmented document repositories into structured process intelligence.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T12:59:04Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Reza Amirmoshiri</name>
+    </author>
+    <author>
+      <name>Faryad Sahneh</name>
+    </author>
+    <author>
+      <name>Yasser Jangjou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.10237v1</id>
+    <title>The Answer Path and the Grounding Instruction in LLM Question Answering over Knowledge Graphs</title>
+    <updated>2026-09-09T14:31:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.10237v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.10237v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A graph retrieval-augmented generation pipeline chooses which triples to put in the prompt, a syntax to write them in, an order to write them in, and a sentence telling the model what to do with them. We vary all four over six large language models and two knowledge-graph question answering benchmarks. Two of the four choices move the answer and the other two are flat. The first is whether the answer path, the triples needed to reach the answer, is in the prompt at all. Holding the number of triples fixed and replacing every triple that is not on the chain with material from an unrelated entity changes answer accuracy by +0.003 F1, while removing the chain costs most of what the graph was worth. Retrieval budget belongs on recall, and precision in the range we can test buys nothing. There is no retriever here: subgraphs come from gold SPARQL, so precision describes the context we build, not a system setting. The second is the grounding instruction. With no facts in the prompt, telling a model to answer using only the provided facts drops F1 from 0.299 to 0.035, a factor of 8.63. That figure describes an evaluation with an empty context arm rather than a working pipeline, and an experiment that applies the instruction to its context arm but not to its no-context baseline manufactures a spurious finding that graph context hurts at depth. We found one in our own results and retract it. Syntax, triple order and subgraph size produce no effect we can measure at multi-hop depth. The comparison that would price the grounding instruction against correct context is not measurable with a format-sensitive scorer, because the instruction determines the response format; we report it as an open contrast rather than a number.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T14:31:11Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Arquimedes Canedo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.06779v1</id>
+    <title>DrugReason: Dynamic Multi-View Reasoning over Knowledge Graph and Language Evidence for Drug Repurposing</title>
+    <updated>2026-09-06T18:54:26Z</updated>
+    <link href="https://arxiv.org/abs/2609.06779v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.06779v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Drug repurposing aims to identify new therapeutic uses for existing compounds and, compared with de novo drug discovery, offers a faster and more cost-effective path to clinical translation. However, the space of candidate drug-disease pairs is enormous and their underlying relationships often depend on complex multi-hop biological mechanisms, making it difficult to reliably predict which pairs represent true therapeutic relationships. Existing approaches tackle this from two directions: knowledge graph-based methods organize curated biomedical evidence into structured relational networks for grounded multi-hop reasoning, while LLM-based methods leverage pretrained knowledge to generate flexible mechanistic rationales. Yet neither is sufficient alone - KGs are confined to observed graph structure while LLMs lack factual grounding and risk hallucination. To address this gap, we propose DrugReason, a multi-view reasoning framework that integrates grounded KG reasoning with LLM-generated mechanistic inference for drug repurposing. DrugReason adaptively routes diverse reasoning paths to specialized experts conditioned on the query context, while a cross-expert distillation objective enables knowledge sharing without sacrificing expert specialization. Experiments on PharmaDB, DDInter, and DrugBank show that DrugReason improves average performance over strong single-view reasoning baselines and achieves competitive or superior results compared with graph-based alternatives, while providing interpretable routing-based predictions.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-06T18:54:26Z</published>
+    <arxiv:comment>EMNLP 2026 Main Conference</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zijie Liu</name>
+    </author>
+    <author>
+      <name>Hongxuan Li</name>
+    </author>
+    <author>
+      <name>Zhen Tan</name>
+    </author>
+    <author>
+      <name>Jinhao Duan</name>
+    </author>
+    <author>
+      <name>Baixiang Huang</name>
+    </author>
+    <author>
+      <name>Zunpeng Liu</name>
+    </author>
+    <author>
+      <name>Kai Shu</name>
+    </author>
+    <author>
+      <name>Tianlong Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.03816v1</id>
+    <title>When Vision Meets Graphs: A Survey on Graph Reasoning and Learning</title>
+    <updated>2026-09-03T13:19:22Z</updated>
+    <link href="https://arxiv.org/abs/2609.03816v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.03816v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graphs are a fundamental data structure underlying many problems in the natural and social sciences. Over the past decade, Graph Neural Networks (GNNs) have dominated graph machine learning, supported by solid theoretical foundations. Yet scientists often understand graph structure through vision: chemists read molecular diagrams and social scientists inspect network visualizations. Despite decades of work on graph visualization, most graph learning pipelines still treat graphs purely as symbolic structures, rarely leveraging the visual form of graphs. We argue that this gap deserves renewed attention in the era of powerful vision and vision-language models. This survey provides a first systematic overview of the emerging area we term vision meets graphs, which treats visual depictions of graphs as first-class inputs for reasoning and learning. We organize existing work into three threads. Vision for Graph Reasoning studies how models can use visual depictions of graphs to understand structure and carry out multi-step reasoning. Vision for Graph Learning explores how visual features can complement or augment graph encoders beyond known limitations of message passing. Scientific Graphs examines domains where standardized depiction conventions support both reasoning and learning. Our goal is to clarify what current methods can and cannot do, and to outline a path toward foundation models that perceive and reason about graphs as scientists do.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T13:19:22Z</published>
+    <arxiv:comment>IJCAI Survey Track, 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Xinjian Zhao</name>
+    </author>
+    <author>
+      <name>Wei Pang</name>
+    </author>
+    <author>
+      <name>Zhixuan Yu</name>
+    </author>
+    <author>
+      <name>Xiangru Jian</name>
+    </author>
+    <author>
+      <name>Xiaozhuang Song</name>
+    </author>
+    <author>
+      <name>Yaoyao Xu</name>
+    </author>
+    <author>
+      <name>Zhongkai Xue</name>
+    </author>
+    <author>
+      <name>Dingshuo Chen</name>
+    </author>
+    <author>
+      <name>Shu Wu</name>
+    </author>
+    <author>
+      <name>Philip Torr</name>
+    </author>
+    <author>
+      <name>Tianshu Yu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.02216v1</id>
+    <title>PEARL: Path-Entity Aligned Relational Learning with Contextual Subgraphs for Inductive Knowledge Graph Completion</title>
+    <updated>2026-09-02T07:29:42Z</updated>
+    <link href="https://arxiv.org/abs/2609.02216v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.02216v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inductive knowledge graph completion (IKGC) aims to predict missing links involving entities unseen during training, requiring models to learn transferable relational and structural patterns. Existing subgraph- and path-based approaches often encode relational paths independently of their surrounding query subgraphs, although the predictive relevance of a path may vary across structural contexts. We propose PEARL, a Path-Entity Aligned Relational Learning framework that models paths as context-conditioned reasoning signals. PEARL constructs a query-specific contextual subgraph from the union of the query entities' neighborhoods and uses a large language model (LLM)-guided retriever to distill semantically relevant paths. It then builds a bipartite interaction graph over paths, contextual entities, and a global subgraph representation, allowing path embeddings to adapt to local and global structural evidence. To suppress noise introduced by the enlarged context, PEARL employs a dual-view contrastive objective that promotes representation consistency under stochastic contextual perturbations. Experiments on WN18RR, FB15k-237, and NELL-995 show that PEARL obtains the best average Hits@10 among the compared IKGC methods on all three benchmarks. Ablation studies, efficiency analyses, and case studies further validate the contributions of contextual subgraph modeling, semantic path retrieval, path-entity interaction, and contrastive regularization.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-02T07:29:42Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yunchi Yang</name>
+    </author>
+    <author>
+      <name>Longlong Li</name>
+    </author>
+    <author>
+      <name>Cunquan Qu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.02056v1</id>
+    <title>HyGRAIL: Cost-Aware and Evidence-Grounded Scientific Hypothesis Discovery over Knowledge Graphs</title>
+    <updated>2026-09-02T03:34:21Z</updated>
+    <link href="https://arxiv.org/abs/2609.02056v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.02056v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Scientific knowledge graphs organize entities and relations extracted from scientific literature, but they remain inherently incomplete. Missing typed links in such graphs can therefore represent plausible scientific hypotheses, such as unexplored associations between materials and applications. However, scientific hypothesis discovery is challenging because true discoveries are extremely sparse among typed candidate pairs: graph neural networks (GNNs) are efficient but unreliable for ambiguous cases, while large language models (LLMs) are knowledgeable but too costly to apply exhaustively and are not naturally grounded in graph structures. We propose HyGRAIL, a cost-aware and evidence-grounded framework that combines heterogeneous GNN triage with LLM-based hypothesis review. HyGRAIL first uses a GNN to score candidate hypotheses and identify a validation-calibrated ambiguous region, routing only graph-uncertain cases to LLM review. For each routed hypothesis, HyGRAIL retrieves node-level associations and multi-hop relational paths from the knowledge graph (KG), then converts this structured evidence into natural language through template-based or LLM-based naturalization. An LLM review agent finally judges each hard hypothesis using the naturalized evidence and validation-selected decision criteria. On MatKG, HyGRAIL achieves the best F1 score of 0.429, improving over the strongest prior baseline by 0.242 F1 points and over the GNN-only baseline by 0.322. Meanwhile, GNN triage reduces the LLM call rate by 54.36% on average. Ablation studies further show that retrieved graph evidence is crucial for reliable hypothesis verification and that compact, two-sided evidence is more effective than simply increasing retrieval quantity.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-02T03:34:21Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yihang Sun</name>
+    </author>
+    <author>
+      <name>Zhihan Zhu</name>
+    </author>
+    <author>
+      <name>Zhiyuan Jiang</name>
+    </author>
+    <author>
+      <name>Jingyi Ge</name>
+    </author>
+    <author>
+      <name>Zixuan Li</name>
+    </author>
+    <author>
+      <name>Jiaxuan You</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.29263v1</id>
+    <title>RACER: Reinforced Agent Collaboration for Explainable Reasoning on Knowledge Graphs</title>
+    <updated>2026-08-29T13:36:36Z</updated>
+    <link href="https://arxiv.org/abs/2608.29263v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.29263v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) often suffer from hallucination and struggle with complex reasoning tasks requiring multi-hop domain knowledge. While integrating Knowledge Graphs (KGs) provides a structured and verifiable information source, current KG-enhanced LLM paradigms usually rely on single-agent path extraction and fixed prompting, lacking adaptability and facing huge search spaces. To address these challenges, we propose RACER, a Reinforced Agent Collaboration framework for Explainable Reasoning on knowledge graphs. RACER employs a semantic-aware action pruning and teacher-guided reinforcement learning mechanism to efficiently extract high-quality reasoning pathways from large-scale KGs. Furthermore, to mitigate single-path generation pitfalls, we introduce a cross-task accumulated shared memory graph paired with an attention-driven multi-path knowledge refinement module. Finally, RACER orchestrates these components through a four-role multi-agent collaboration system (GraphAgent, TemplateAgent, AnswerAgent, and CriticAgent) to dynamically refine prompts and evaluate answers. Extensive experiments on CommonsenseQA and OpenBookQA datasets demonstrate that RACER significantly outperforms state-of-the-art KG-enhanced LLM baselines with an average improvement of 5\%, offering robust and highly interpretable reasoning capabilities.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-29T13:36:36Z</published>
+    <arxiv:comment>15 pages, 1 figures, This paper has been accepted by ICONIP 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yuwei Lou</name>
+    </author>
+    <author>
+      <name>Hao Hu</name>
+    </author>
+    <author>
+      <name>Yuzhou Jiang</name>
+    </author>
+    <author>
+      <name>Zongfei Zhang</name>
+    </author>
+    <author>
+      <name>Liang Wang</name>
+    </author>
+    <author>
+      <name>Jincai Liu</name>
+    </author>
+    <author>
+      <name>Jidong Ge</name>
+    </author>
+    <author>
+      <name>Xianping Tao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.28279v1</id>
+    <title>STEGNav: Spatio-Temporal Event Graph Reasoning for Multimodal Lifelong Object Navigation</title>
+    <updated>2026-08-28T12:42:16Z</updated>
+    <link href="https://arxiv.org/abs/2608.28279v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.28279v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal lifelong navigation requires an agent to autonomously explore unseen environments while sequentially completing navigation tasks specified by object categories, language descriptions, or reference images. Existing methods primarily accomplish these tasks by constructing state-centric semantic scene graphs. By treating scene graphs as persistent repositories of semantic observations, these methods struggle to distinguish similar instances, jointly represent semantic targets and exploration frontiers, and effectively exploit navigation memory and trajectory experience. To address these limitations, we propose Spatio-Temporal Event Graph Navigation (STEGNav), a training-free framework that extends conventional scene graphs into spatio-temporal event graphs along complementary spatial and temporal axes. The spatial axis performs query-conditioned instance grounding and jointly represents semantic targets and occupancy-aware exploration frontiers characterized by reachability, path cost, and exploration utility. The temporal axis employs trajectory-aware dual-window memory to retain recent decision--trajectory events and verified cross-subtask navigation outcomes. A VLM-based navigation agent reasons over the resulting spatio-temporal event graph and selects either a target instance or an exploration frontier as its next navigation goal. STEGNav achieves 66.3% SR and 39.7 SPL on GOAT-Bench, as well as SR scores of 64.0% and 69.4% on HM3Dv1 and HM3Dv2, respectively. Ablation studies and error analyses validate the complementary effects of the two axes, demonstrating that event-driven spatio-temporal representations improve navigation reliability and cross-subtask experience reuse.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T12:42:16Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Yang Chen</name>
+    </author>
+    <author>
+      <name>Zhenyu Huang</name>
+    </author>
+    <author>
+      <name>Wenbo Fu</name>
+    </author>
+    <author>
+      <name>Danyang Peng</name>
+    </author>
+    <author>
+      <name>Shi-Yu Tian</name>
+    </author>
+    <author>
+      <name>Kun-Yang Yu</name>
+    </author>
+    <author>
+      <name>Lan-Zhe Guo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.26836v1</id>
+    <title>SymbolLKG: Towards Verifiable Logical Reasoning via Logical Knowledge Graph and Symbolic Solvers</title>
+    <updated>2026-08-27T09:06:52Z</updated>
+    <link href="https://arxiv.org/abs/2608.26836v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26836v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have demonstrated remarkable proficiency in natural language understanding, yet they struggle with strict multi-step reasoning, frequently suffering from hallucinations and inconsistency. Existing solutions like Chain-of-Thought (CoT) lack rigorous verification mechanisms, while standard Retrieval-Augmented Generation (RAG) often misses the complex, structural dependencies inherent in logical tasks. To bridge this gap, we propose a Neuro-Symbolic architecture that integrates a Logical Knowledge Graph (LKG) with dynamic solver routing. Specifically, we introduce an ontology-based LKG that treats logical rules and constraints as first-class topological nodes, enabling explicit modeling of dependencies extracted from text. We further design a Logic Router to dynamically dispatch tasks to the optimal symbolic engine, which is supported by a topology-aware hybrid retrieval mechanism. Experimental results on logical reasoning benchmarks demonstrate that our framework significantly outperforms state-of-the-art prompting and RAG baselines, delivering higher accuracy and verifiable reasoning paths.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-27T09:06:52Z</published>
+    <arxiv:comment>19 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Haizhao Fan</name>
+    </author>
+    <author>
+      <name>Yuchi Xiong</name>
+    </author>
+    <author>
+      <name>Jize Wang</name>
+    </author>
+    <author>
+      <name>Xinping Guan</name>
+    </author>
+    <author>
+      <name>Xinyi Le</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.25952v2</id>
+    <title>Spatial-Knowledge-Graph-Grounded LLM Agents for Neighborhood Livability Evaluation</title>
+    <updated>2026-08-29T14:12:55Z</updated>
+    <link href="https://arxiv.org/abs/2608.25952v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.25952v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neighborhood livability is commonly assessed with static built-environment indicators, such as facility proximity, street connectivity, and access to public space. These measures describe available opportunities but do not directly represent how residents with different mobility capacities, household roles, schedules, and care responsibilities experience the neighborhood. This paper presents a prototype framework that uses a spatial knowledge graph (KG) and large language models (LLMs) to generate and revise household schedules, followed by rule-based feasibility checking and GIS-based network materialization. The spatial KG integrates residents, residences, facilities, neighborhood context, and sampled road hubs; Graph-RAG retrieves each household's nearby spatial context, including candidate POIs and approximate walking times, for the scheduling LLM. The LLM produces structured household schedules, while rules are used for lightweight repairs and auditable feasibility checks. The LLM then revises schedules in response to identified feasibility issues. A routing module derives the actual travel paths, travel times, modes, and event histories from the road network. The resulting events support synthetic resident-agent interviews about daily convenience, travel burden, activity feasibility, and household coordination. A prototype demonstration in a Shenzhen neighborhood shows that nominal facility availability does not necessarily imply convenient access: residents with limited mobility and households with care responsibilities experience greater travel and coordination burdens. The framework offers an auditable way to connect spatial opportunity, household activity constraints, and resident-specific livability interpretation, while keeping simulated experience distinct from observed perception.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T16:05:57Z</published>
+    <arxiv:comment>31 pages, 4 figures, prototype framework</arxiv:comment>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Haiyan Hao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.22688v1</id>
+    <title>FashionKG-RAG: Knowledge Graph-Enhanced Retrieval-Augmented Generation for Fashion Question Answering</title>
+    <updated>2026-08-24T01:01:06Z</updated>
+    <link href="https://arxiv.org/abs/2608.22688v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.22688v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fashion is a knowledge-intensive domain in which effective decision-making depends on integrating multiple types of knowledge. Although Large Language Models (LLMs) have transformed many areas, their application in fashion remains limited by hallucinations and weak domain specialization. Knowledge Graph (KG)-based Retrieval-Augmented Generation (RAG) offers a promising way to add structured knowledge to LLMs. However, existing fashion KGs are typically restricted to product-level attributes or item relations, and fail to capture the broader fashion ecosystem. To bridge these gaps, we propose \textbf{FashionEcoKG}, a comprehensive, domain-wide knowledge graph built with expert-level precision and professionalism. It is constructed through a three-stage agentic pipeline that extracts high-fidelity knowledge cores from authoritative textbooks and strengthens structural connectivity through cross-domain augmentation and generative expansion. To leverage this resource, we further develop \textbf{PG-RAG} (Pruning-Grounding RAG), a training-free framework designed to handle the conceptual density and linguistic noise of fashion queries. Specifically, we introduce a Dual-Granularity Path Re-Ranking (DGPR) module of two stages. The Pruning-based Semantic Ranking (PSR) module distills each query into a skeleton form to improve retrieval recall, while the Grounding-based Agentic Ranking (GAR) performs point-wise scrutiny of candidate paths against the original full query to ensure global relevance. Experiments on a curated fashion QA dataset show that PG-RAG effectively leverages FashionEcoKG to improve retrieval and answer accuracy, outperforming both non-RAG and existing KG-RAG baselines.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-24T01:01:06Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Yujuan Ding</name>
+    </author>
+    <author>
+      <name>Linyin Luo</name>
+    </author>
+    <author>
+      <name>Shijie Wang</name>
+    </author>
+    <author>
+      <name>Xu Yuan</name>
+    </author>
+    <author>
+      <name>Yunshan Ma</name>
+    </author>
+    <author>
+      <name>Yi Bin</name>
+    </author>
+    <author>
+      <name>Wenqi Fan</name>
+    </author>
+    <author>
+      <name>Qing Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.21243v1</id>
+    <title>Adapting Knowledge Graphs for Behavior Denoising in Sequential Recommendation</title>
+    <updated>2026-08-21T15:54:39Z</updated>
+    <link href="https://arxiv.org/abs/2608.21243v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.21243v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sequential recommendation predicts the next item from a user's interaction history, but not every interaction is equally informative. Real logs combine persistent preferences with temporary needs, exploration, and incidental behavior, so some interactions can distort history representations or provide unreliable supervision. Existing denoising methods judge such interactions mainly from co-occurrence, order, or model predictions, without explicit evidence from relations between items. Knowledge graphs (KGs) offer this evidence, but item popularity, graph degree, uneven coverage, and widely shared entities can inflate connectivity and bias reliability estimates. Here we present AdaptedKG, which derives calibrated KG evidence for each training example without adding graph representations to the recommendation model. It first compares the observed context with structurally matched alternatives to identify relational paths that are unusually prominent and uses them to build a local KG view. It then compares each interaction with structurally matched reference items to calibrate its support within that view. The resulting retention coefficients gate historical representations and reweight target losses. All sample-specific scores are computed offline using training interactions and a fixed KG, so the backbone remains unchanged and no KG access is required at inference. Experiments show gains with a standard sequential recommender and multiple behavior-denoising sequential recommenders.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-21T15:54:39Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Zichun Jin</name>
+    </author>
+    <author>
+      <name>Zihan Zhou</name>
+    </author>
+    <author>
+      <name>Yinan Liu</name>
+    </author>
+    <author>
+      <name>Bin Wang</name>
+    </author>
+    <author>
+      <name>Xiaochun Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.15948v1</id>
+    <title>Evidence-Carrying Validation for Knowledge Graphs</title>
+    <updated>2026-08-16T22:10:33Z</updated>
+    <link href="https://arxiv.org/abs/2608.15948v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.15948v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Programs that consume a knowledge graph they do not maintain, such as applications, authoring platforms, and LLM agents, need to know whether the graph contains the information their task requires. Validating the graph against a schema can answer this question, but existing validation interfaces usually return a conformance bit or failure-oriented report without identifying why checks pass or the partial matches behind failures. We present an evidence-carrying validation interface: every selected node-shape check returns either a satisfaction trace or failure witness. These are mutually recursive objects that retain constraints, cardinality decisions, paths, and supporting triples. We implement this interface in Shifty, an experimental SHACL validator. Against two real-world shape graph corpora, materializing all-pair evidence costs a median 1.54-2.07X conformance-only validation. A case study then shows how programs combine passing and failing evidence to diagnose missing information and guide repair.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-16T22:10:33Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Gabe Fierro</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.14228v1</id>
+    <title>AutoSchema: Live Schema Grounding for Agentic Text-to-Sparql over Heterogeneous Knowledge Graphs</title>
+    <updated>2026-08-14T12:02:53Z</updated>
+    <link href="https://arxiv.org/abs/2608.14228v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.14228v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Life science knowledge graphs make large collections of structured data available through SPARQL, but each resource uses its own schema, identifiers, and links. TogoMCP helps language model agents query these resources by providing curated Metadata Interoperability Exchange files. Creating and maintaining these files still requires language model assisted drafting, validation, and manual review. We study \emph{live schema grounding}, where an agent obtains the schema evidence needed for a question directly from the current endpoints. We present \textsc{autoschema}, a general framework for live schema grounding that requires no training. It inspects live schemas, maps entity names in a question to graph identifiers, explores relation paths, and finds possible connections between resources during iterative query construction. We use TogoMCP as our main comparison framework. We evaluate \textsc{autoschema} on Resource Focused Biomedical KGQA, Multi Resource Biomedical KGQA, Longitudinal Biomedical Semantic QA over BioASQ Task B, and Chemistry Knowledge Graph Transfer to a previously undocumented RDF graph. \textsc{autoschema} improves mean factoid accuracy over TogoMCP in the biomedical KGQA tasks and gives consistent gains in the longitudinal BioASQ evaluation. It also reduces iteration budget exhaustion and uses fewer tool calls on average in the core evaluation. The transfer study gives preliminary evidence that live schema grounding can support irregular and previously unseen graphs without first creating a curated schema file.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-14T12:02:53Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yiming Zhang</name>
+    </author>
+    <author>
+      <name>Koji Tsuda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.09779v1</id>
+    <title>KGCaRe: Explainable Complex Conditional Question Answering using Automatic Knowledge Graph Construction and Context Retrieval with LLMs</title>
+    <updated>2026-08-10T16:05:58Z</updated>
+    <link href="https://arxiv.org/abs/2608.09779v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.09779v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Answering complex conditional questions using Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) remains a challenge, particularly in domain-specific contexts where general-purpose LLMs and RAG tend to underperform. We hypothesize that augmenting RAG with unstructured and structured knowledge, extracted from both documents and knowledge graphs (KGs), can improve reasoning and answer accuracy for such tasks.
+  To test this, we propose KGCaRe, a hybrid approach that combines neural retrieval with symbolic reasoning over LLM-generated KGs. KGCaRe constructs a KG from documents using a multi-prompt extraction strategy and stores it in a graph database. Simultaneously, the documents are embedded into a vector store to enable neural retrieval. KGCaRe performs innovative iterative graph traversal guided by the LLM to extract relevant triples, prune irrelevant information, and uses additional clue entities to traverse the graph again if the initial traversal does not provide satisfactory context to generate the answer. The relevant triples extracted from the KG in path form, along with semantically retrieved text passages, are then fed into custom KGCaRe prompts to generate answers to the complex conditional questions with explanations.
+  We evaluate KGCaRe on two complex conditional QA datasets. Our results on these datasets show that KGCaRe consistently outperforms existing baselines, including Vanilla LLM, Code Prompt, Text Prompt, Think-on-Graph, Vanilla RAG, and HybridContextQA, across multiple LLMs such as Mistral, Mixtral, GPT-3.5, and GPT-4o. We publicly release the software pipeline that we developed to implement the proposed KGCaRe approach.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-10T16:05:58Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Ghanshyam Verma</name>
+    </author>
+    <author>
+      <name>Simanta Sarkar</name>
+    </author>
+    <author>
+      <name>Devishree Pillai</name>
+    </author>
+    <author>
+      <name>Hotaka Shiokawa</name>
+    </author>
+    <author>
+      <name>Yourong Xu</name>
+    </author>
+    <author>
+      <name>Fiona Veazey</name>
+    </author>
+    <author>
+      <name>Peter Hubbert</name>
+    </author>
+    <author>
+      <name>Hui Su</name>
+    </author>
+    <author>
+      <name>Paul Buitelaar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.09028v1</id>
+    <title>PolicyKG: An Agentic LLM Pipeline for Translating Institutional Policies into SHACL Knowledge Graphs</title>
+    <updated>2026-08-10T02:28:57Z</updated>
+    <link href="https://arxiv.org/abs/2608.09028v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.09028v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Institutional policies stay in natural language while the systems that check compliance demand machine-readable constraints. Bridging that gap is still done by hand.
+  PolicyKG closes the loop. It is an LLM pipeline that reads a policy PDF, classifies each sentence as an obligation, permission, or prohibition, lifts the label into first-order deontic logic, and emits SHACL constraints. Four stages run on a LangGraph state machine with per-stage validators. The piece that matters most is the Corpus Adapter: a YAML vocabulary registry that grounds LLM predicates in a target ontology. Retargeting to a new domain means swapping the registry, not retraining a model.
+  On the Asian Institute of Technology Policies and Procedures corpus (1,663 sentences, 443 rules), PolicyKG reaches 86.9% deontic classification accuracy (Cohen's kappa = .709). Three annotators independently re-label a 50-item sample and agree at Fleiss' kappa = .844. SHACL shape correctness on a 69-shape subset is F1 = .866. The FOL path handles 79.2% of rules; the rest go through a direct NL-to-SHACL fallback.
+  We audited every one of the 443 rules for second- or higher-order constructs. An automated regex checklist flagged none, and a first-author pass on the 92 FOL-fallback cases confirmed the same. The exact upper 95% Clopper-Pearson bound on the true HOL rate is 0.67%. This is an audit finding for one corpus, not a proof of FOL sufficiency for institutional policy.
+  Swapping the AIT registry for a GDPR registry raises exact property alignment from 1/15 to 11/15 (Fisher's exact p &lt; .001; Cohen's h = 1.53). On the LexDeMod lease-contract benchmark (N = 200), Macro F1 drops to .370 because lease English uses "shall be entitled" for permission -- exactly the vocabulary mismatch registry swap is meant to fix. Repeated runs produce hash-identical SHACL outputs.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-10T02:28:57Z</published>
+    <arxiv:comment>23 pages, 3 figures, 4 tables. Under review at IJCKG 2026, Bangkok, Thailand</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Ponkrit Kaewsawee</name>
+    </author>
+    <author>
+      <name>Chaklam Silpasuwanchai</name>
+    </author>
+    <author>
+      <name>Chutiporn Anutariya</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.05982v1</id>
+    <title>THBKG: A Temporal Biomedical Knowledge Graph for Decision-Aligned Clinical Advancement Prediction</title>
+    <updated>2026-08-06T12:59:05Z</updated>
+    <link href="https://arxiv.org/abs/2608.05982v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.05982v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inadequate target--disease linkage accounts for 40--50\% of Phase~II efficacy failures, so anticipating which programmes will advance would let sponsors back the hypotheses most likely to reach patients. What a programme can be judged on is the evidence that supported its linkage \emph{when it entered the clinic}. No existing biomedical knowledge graph allows that evidence profile to be assembled as of a past date. We present the Temporal Heterogeneous Biomedical Knowledge Graph (THBKG), which describes and predicts therapeutic target--disease links through time: 110,396 entities and 11.1M edges across nineteen relation types, each edge carrying the year its evidence changed, so a pair's profile can be recovered as it stood when its own decision fell due. On this graph we define a decision-aligned benchmark that predicts, for a target--disease pair entering Phase~II, whether it advances to Phase~III on evidence datable before that decision. Graph propagation over the THBKG outranks every direct-evidence reference scored under the same decision-aligned protocol, reaching a relative success of 4.3--4.5 at the top ten pairs per therapeutic area. The gain concentrates on the 72.8\% of pairs with no direct target--disease evidence at their decision point, where a direct-edge model has nothing to read: the encoders still rank five- to sixfold above chance, recovering the signal by propagating over the intervening biology. Adapting a path-based explainer to the decision-time subgraph decomposes each prediction into the evidence landscape behind the hypothesis for explainable prediction. We release the THBKG as a continually updated substrate for studying therapeutic target hypotheses by retrospective validation.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-06T12:59:05Z</published>
+    <arxiv:comment>19 pages, 11 figures, 8 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Pui Chung Siu</name>
+    </author>
+    <author>
+      <name>Claudia Cabrera</name>
+    </author>
+    <author>
+      <name>Mani Mudaliar</name>
+    </author>
+    <author>
+      <name>Arkaitz Zubiaga</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.01904v1</id>
+    <title>CoEvoKG: Co-Evolving Knowledge Graphs with Self-Evolving Search Agents</title>
+    <updated>2026-08-03T08:39:16Z</updated>
+    <link href="https://arxiv.org/abs/2608.01904v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.01904v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models can improve with reinforcement learning for search agents, yet existing self play agents repeatedly generate tasks while discarding the knowledge gained during successful searches. We introduce CoEvoKG, a framework that turns a
+  knowledge graph into both a source of verifiable training tasks and a persistent evidence memory for agent evolution. CoEvoKG jointly trains a task generator and a search agent: the generator creates multihop questions from entity chains sampled
+  from the knowledge graph, while the agent learns from rewards for answer correctness and search trajectories whose entity paths are supported by graph evidence. When a search succeeds, CoEvoKG verifies and deduplicates the retrieved evidence, then
+  writes it back to the corresponding graph nodes and edges. Future rounds reuse this enriched graph for task generation and reward computation, closing the loop between model self evolution and knowledge accumulation. Experiments on six QA benchmarks
+  (NQ, TriviaQA, PopQA, HotpotQA, 2WikiMultiHopQA, and Bamboogle) with three backbone models show that CoEvoKG improves macro average accuracy over the corresponding base models by +11.2, +10.1, and +11.6 points on Qwen2.5-3B-Instruct,
+  Qwen2.5-7B-Instruct, and Llama-3.1-8B-Instruct, respectively. Under matched training budgets, CoEvoKG further improves over competitive self play baselines and RL baselines for search agents by +2.6 to +3.7 macro average points across the three
+  backbones. Code is available at https://github.com/lazzy1225/CoEvoKG.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T08:39:16Z</published>
+    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Zhaoyang Li</name>
+    </author>
+    <author>
+      <name>Zenghuang Fu</name>
+    </author>
+    <author>
+      <name>Qiuyuan Ai</name>
+    </author>
+    <author>
+      <name>Ping Jiang</name>
+    </author>
+    <author>
+      <name>Haoyu Wu</name>
+    </author>
+    <author>
+      <name>Minghui Wu</name>
+    </author>
+    <author>
+      <name>Chenxu Zhao</name>
+    </author>
+    <author>
+      <name>Jie Song</name>
+    </author>
+    <author>
+      <name>Guannan He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.01732v1</id>
+    <title>X-KGRank: A Knowledge Graph RAG Framework for Explainable Recommendations via Pattern Mining and LLM Re-Ranking</title>
+    <updated>2026-08-03T05:56:40Z</updated>
+    <link href="https://arxiv.org/abs/2608.01732v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.01732v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern recommender systems produce predictions that users cannot interrogate. The two dominant improvements, collaborative filtering and LLM-based reasoning, each fall short: collaborative filtering captures behavioural signals but offers no reasoning, while large language models (LLMs) generate fluent explanations but hallucinate and are poorly grounded in a user's history. We present X-KGRank, a knowledge graph retrieval augmented framework that unifies structural collaborative filtering with LLM-based explanation. From the MovieLens-1M dataset (6,040 users, 3,704 items, 988,129 interactions) we construct a heterogeneous knowledge graph of 9,762 nodes and 999,264 edges spanning three relation types (RATED, HAS_GENRE, and CO_RATED) persisted in Neo4j. We train a LightGCN ranker with content-aware SBERT initialization and a rating weighted BPR objective, and apply a popularity selective routing strategy that grounds long-tail items (1,855 of 3,704) in knowledge-graph paths while serving popular items from pre-trained knowledge, reducing KG-augmented generations by roughly 50%. On the MovieLens-1M test set under a 99-sample protocol, X-KGRank achieves NDCG@10 = 0.2956 and Recall@10 = 0.5371, improving over a strong popularity baseline by 17.1% on both metrics, by 15.6% on NDCG@20 (0.3449 vs. 0.2983), and by 14.6% on MRR (0.2435 vs. 0.2124). Across three LLM backbones evaluated on 16 cases, a 1.5-billion-parameter model (Qwen2.5-1.5B) matches a 7-billion-parameter model (Mistral-7B) on heuristic explanation quality (0.97 vs. 0.94), yet qualitative analysis shows the smaller model is more prone to factual fabrication.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T05:56:40Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Meenakshi Rajpurohit</name>
+    </author>
+    <author>
+      <name>Jainish Patel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.27182v1</id>
+    <title>GraphQAG: A Knowledge-Graph-Guided Visual Analytics Framework for Question-Answer Pairs Generation</title>
+    <updated>2026-07-29T17:52:53Z</updated>
+    <link href="https://arxiv.org/abs/2607.27182v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.27182v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Question-answer (QA) pairs are widely used in knowledge base construction, question-answering systems, and the post-training of large language models (LLMs). However, important knowledge in long documents is often distributed across multiple paragraphs and connected through complex entity relationships. Such fragmented and relational knowledge poses substantial challenges for existing QA generation methods, which often fail to adequately cover core document content, cross-paragraph semantic connections, and multi-entity relationships. We present GraphQAG, a knowledge graph-guided visual analytics framework for generating high-quality QA pairs from long documents. GraphQAG follows a three-stage workflow. First, it constructs a document knowledge graph by segmenting the document into paragraphs and extracting salient entities and relations. Second, it builds a graph-based generation space from entities, relations, and multi-hop paths to constrain and guide LLM-based QA generation. Third, it uses the knowledge graph as an interactive visual representation, enabling users to explore document knowledge structures, inspect the coverage and evidence provenance of generated QA pairs, and iteratively refine the QA pair set through graph-based interactions. We evaluated GraphQAG through a user study with 16 participants, two case studies, and expert interviews. The results indicate that GraphQAG effectively supports users in identifying knowledge coverage gaps, examining generated QA pairs, and refining the QA pair set. These findings demonstrate the usefulness of combining knowledge graphs, LLM-based generation, and visual analytics for producing more comprehensive and trustworthy QA pairs from long documents.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T17:52:53Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Yize Li</name>
+    </author>
+    <author>
+      <name>Ruiqi Yu</name>
+    </author>
+    <author>
+      <name>Tianya Pan</name>
+    </author>
+    <author>
+      <name>Ningxin Li</name>
+    </author>
+    <author>
+      <name>Songyue Li</name>
+    </author>
+    <author>
+      <name>Xiangyang Wu</name>
+    </author>
+    <author>
+      <name>Jinchang Li</name>
+    </author>
+    <author>
+      <name>Zhiguang Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.26909v1</id>
+    <title>Dual-Path LLM Reasoning for Multimodal Few-Shot Knowledge Graph Completion</title>
+    <updated>2026-07-29T13:40:51Z</updated>
+    <link href="https://arxiv.org/abs/2607.26909v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.26909v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graph completion (KGC) aims to infer missing facts in knowledge graphs (KGs), thereby improving their completeness and supporting downstream intelligent applications. However, emerging entities and relations in real-world deployments make inductive KGC difficult, especially under few-shot and zero-shot settings. Multimodal information and Large Language Model (LLM)-derived priors can enrich sparse relational contexts, but they may also introduce noisy or hallucinated evidence. To address these issues, we propose DuPLeR, a \textbf{Du}al-\textbf{P}ath \textbf{L}LM \textbf{R}easoning framework for multimodal few-shot KGC. DuPLeR builds a calibrated relation graph by combining multimodal LLM-derived type priors with factual support structures, and performs dual-level structural reasoning over the refined relation topology. Moreover, a dual-pathway multimodal enhancement module regulates message passing with query-relevant multimodal signals and supplements entity representations after graph propagation. Experiments on eight inductive variants of two multimodal KG (MMKG) benchmarks show that DuPLeR achieves robust performance in data-scarce KGC scenarios.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T13:40:51Z</published>
+    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jinlan Liu</name>
+    </author>
+    <author>
+      <name>Zhiying Tu</name>
+    </author>
+    <author>
+      <name>Yongchao Xing</name>
+    </author>
+    <author>
+      <name>Yicheng Liu</name>
+    </author>
+    <author>
+      <name>Bolin Zhang</name>
+    </author>
+    <author>
+      <name>Dianbo Sui</name>
+    </author>
+    <author>
+      <name>Dianhui Chu</name>
+    </author>
+    <author>
+      <name>Hongliang Sun</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.25641v1</id>
+    <title>OmniPhys: Knowledge-Graph-Driven Benchmarking and Collective Optimization for Physical Commonsense in Text-to-Image Generation</title>
+    <updated>2026-07-28T12:27:25Z</updated>
+    <link href="https://arxiv.org/abs/2607.25641v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.25641v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While text-to-image models exhibit remarkable visual fidelity, they frequently violate fundamental physical commonsense. Existing benchmarks often rely on coarse-grained descriptions, failing to diagnose the mastery of specific physical principles. Moreover, the high stochasticity of generative processes causes current prompt optimization methods to suffer from gradient hallucinations, where optimizers are misled by transient visual artifacts rather than systemic flaws. To address these challenges, we introduce OmniPhys, a rigorous benchmark of 1,551 samples grounded in a Physical Knowledge Graph. By aligning PhET simulations with standard curricula, OmniPhys operationalizes a knowledge-to-scenario pipeline that performs diagnostic stress tests via a dual-path verification protocol. We further propose OmniPrompt, an iterative framework that treats physical alignment as a discrete optimization problem. For each query, OmniPrompt aggregates K stochastic images into a per-query feedback buffer. Across training, it further merges feedback from batches of B queries before each meta-policy update, filtering seed and query-local noise. Evaluations across 12 representative text-to-image models reveal universal physical bottlenecks. Results demonstrate that OmniPrompt significantly enhances physical consistency across diverse backbones, proving the transferability and efficacy of our evolved meta-policies. The code and data are available at https://github.com/zjukg/OmniPhys</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T12:27:25Z</published>
+    <arxiv:comment>accepted by KDD 2026 DB track</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yajing Xu</name>
+    </author>
+    <author>
+      <name>Yarong Lan</name>
+    </author>
+    <author>
+      <name>Jiaoyan Chen</name>
+    </author>
+    <author>
+      <name>Yichi Zhang</name>
+    </author>
+    <author>
+      <name>Jeff Z. Pan</name>
+    </author>
+    <author>
+      <name>Mingchen Tu</name>
+    </author>
+    <author>
+      <name>Zhizhen Liu</name>
+    </author>
+    <author>
+      <name>Wen Zhang</name>
+    </author>
+    <author>
+      <name>Huajun Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24563v2</id>
+    <title>TRACE-CTI: Auditable Post-Extraction Governance of TTP Claims with Knowledge Graphs</title>
+    <updated>2026-07-28T19:41:26Z</updated>
+    <link href="https://arxiv.org/abs/2607.24563v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24563v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Security Operations Centers increasingly rely on automated mapping of Cyber Threat Intelligence reports to MITRE ATT&amp;CK, yet extractor outputs remain fallible and are often stored without the evidence, provenance, and validation history needed to decide whether an individual mapping should be trusted. We present TRACE- CTI, a post-extraction claim-governance framework that preserves run-level Predictions, aggregates them into configuration-level GraphAssertions, materializes setup-deduplicated corroboration as ConsensusAssertions, and exposes only GraphAssertions backed by policy-compliant validation grounds. The framework retains native evidence granularity, complete extraction provenance, versioned trust decisions, and non-destructive revocation history. We evaluate TRACE-CTI on two public CTI corpora comprising 65 reports and 5,303 sentences, using a controlled 2 x 3 matrix of retrievers and generator families, incrementally ingested across six GraphVersions. All setups are incorporated without schema modification; provenance paths remain complete, operational scopes remain disjoint, and every trusted GraphAssertion has an active qualifying validation ground. Cross-generator-family setup pairs exhibit greater output diversity than same-family pairs. At the final graph state, increasing setup support from k &gt;= 1 to six-setup unanimity raises gold-aligned precision from 25.3% to 90.6%, while recall decreases from 88.2% to 16.3%. The graph also directly answers seven questions about provenance, trust, versioning, dependency, disagreement, and review-queue that the evaluated minimal flat output cannot fully answer without enrichment or reprocessing. These results support explicit, auditable governance of extracted TTP claims; the observed corroboration trajectory is descriptive and does not establish statistical independence or a causal model-family effect.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-27T15:33:18Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Federico Valletta</name>
+    </author>
+    <author>
+      <name>Giacomo Longo</name>
+    </author>
+    <author>
+      <name>Enrico Russo</name>
+    </author>
+    <author>
+      <name>Alessio Merlo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.18481v1</id>
+    <title>Search-on-Graph-R1: Training Large Language Models to Search Knowledge Graphs with Reinforcement Learning</title>
+    <updated>2026-07-20T19:58:32Z</updated>
+    <link href="https://arxiv.org/abs/2607.18481v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.18481v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graph question answering (KGQA) requires navigating from topic entities to an answer several relations away. Recent methods prompt a frontier LLM to explore the graph through a retrieval tool, but their reliance on frontier-scale inference makes them costly to deploy. We present Search-on-Graph-R1 (\sogrone{}), which internalizes this navigation into a compact 8B model through supervised fine-tuning (SFT) followed by reinforcement learning (RL). Our central idea is to scaffold a frontier teacher with each question's gold SPARQL query, so the teacher traverses a known answer-bearing path with a live \texttt{Search} tool rather than having to discover the path itself. Since every call executes against a live Freebase server, the resulting trajectories are grounded in the knowledge graph by construction. On WebQSP, CWQ, and GrailQA, \sogrone{} at 8B surpasses every frozen frontier-LLM system in our comparison and posts the strongest results on CWQ of any system we compare against. It does so using no auxiliary module at inference and no LLM judge during training. Isolating each training stage shows that SFT and RL contribute complementary gains, our approach transfers across model families, and RL learns to reach answers in fewer \texttt{Search} calls than its SFT initialization.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-20T19:58:32Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jia Ao Sun</name>
+    </author>
+    <author>
+      <name>Hao Yu</name>
+    </author>
+    <author>
+      <name>Fengran Mo</name>
+    </author>
+    <author>
+      <name>Zhan Su</name>
+    </author>
+    <author>
+      <name>Yuchen Hui</name>
+    </author>
+    <author>
+      <name>Bang Liu</name>
+    </author>
+    <author>
+      <name>Jian-Yun Nie</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.17935v1</id>
+    <title>DeLIVeR: Decomposed Learning for Information-grounded Veracity Recognition via Reinforced Knowledge Graph Exploration</title>
+    <updated>2026-07-20T13:32:42Z</updated>
+    <link href="https://arxiv.org/abs/2607.17935v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.17935v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Automated fact-checking remains a challenge for Large Language Models (LLMs) due to "query brittleness" in traditional retrieval systems. We propose DeLIVeR (Decomposed Learning for Information-grounded Veracity Recognition), a framework that treats evidence retrieval as a reinforced strategic exploration task. DeLIVeR utilizes a Planner LLM to decompose complex claims into targeted question sets, which are used to traverse structured Knowledge Graphs (KGs) for high-precision evidence. We optimize the Planner's policy using Group Relative Policy Optimization (GRPO) with a reward system prioritizing structural diversity and verdict accuracy. Our evaluation on LIAR, FEVER, and PolitiFact shows that DeLIVeR significantly outperforms state-of-the-art baselines. Using Qwen2.5-7B, our framework achieved peak F1-scores of 83.73, 84.57, and 79.70 respectively, representing a 10-15% improvement over HippoRAG2. By shifting to a reinforced question-planning strategy, DeLIVeR effectively bridges multi-hop reasoning gaps and provides an auditable, transparent path for verifiable misinformation detection.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-20T13:32:42Z</published>
+    <arxiv:comment>Accepted to 7th International Conference on Deep Learning Theory and Applications (DeLTA 2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Cong Hoan Nguyen</name>
+    </author>
+    <author>
+      <name>Thomas Hoang</name>
+    </author>
+    <author>
+      <name>Hieu Minh Duong</name>
+    </author>
+    <author>
+      <name>Long Nguyen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15592v1</id>
+    <title>MGDT: MLLM-Guided Diffusion Transformer with Relation-Adaptive Mixture-of-Experts for Multimodal Knowledge Graph Completion</title>
+    <updated>2026-07-17T03:39:43Z</updated>
+    <link href="https://arxiv.org/abs/2607.15592v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15592v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal Knowledge Graph Completion (MKGC) requires inferring missing entities from structural, textual, and visual cues. Existing diffusion-based MKGC methods usually denoise directly on raw multimodal features. Such a design forces the denoiser to simultaneously perform relation-dependent cue selection, cross-modal semantic alignment, and structure-aware entity generation, which introduces noisy and semantically inconsistent conditions for diffusion and consequently leads to suboptimal completion performance. To address this limitation, we propose MGDT: MLLM-Guided Diffusion Transformer with Relation-Adaptive Mixture-of-Experts (MGDT), a novel MKGC framework built on an align-then-diffuse paradigm. MGDT first employs a Relation-Adaptive Semantic Routing Mixture-of-Experts (RASR-MoE) module to select relation-relevant multimodal semantic transformation paths and suppress irrelevant modality interference. MGDT then uses a frozen Multimodal Large Language Model (MLLM) as a semantic anchor to align the routed multimodal representations into a unified latent space and reduce cross-modal semantic heterogeneity. Finally, a Knowledge Graph Diffusion Transformer (KGDT) performs graph-conditioned denoising generation in the aligned space to produce the missing entity representation. Experiments on three benchmark datasets show that MGDT consistently outperforms strong baselines.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-17T03:39:43Z</published>
+    <arxiv:comment>8pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Xu Hou</name>
+    </author>
+    <author>
+      <name>Meiyu Liang</name>
+    </author>
+    <author>
+      <name>Wei Huang</name>
+    </author>
+    <author>
+      <name>Yawen Li</name>
+    </author>
+    <author>
+      <name>Zhe Xue</name>
+    </author>
+    <author>
+      <name>Wu Liu</name>
+    </author>
+    <author>
+      <name>Guanhua Ye</name>
+    </author>
+    <author>
+      <name>Lei Shi</name>
+    </author>
+    <author>
+      <name>Kangkang Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.14886v1</id>
+    <title>Reachability-Aware Pretraining for Efficient Target-Oriented Path Exploration in Temporal Knowledge Graph Reasoning</title>
+    <updated>2026-07-16T11:59:01Z</updated>
+    <link href="https://arxiv.org/abs/2607.14886v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.14886v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Temporal Knowledge Graph (TKG) reasoning under the extrapolation setting focuses on forecasting future time-stamped events (facts) from historical data in a temporal knowledge graph. Existing approaches, reinforcement learning (RL)-based multi-hop reasoning methods are prominent for TKG reasoning because they produce human-interpretable predictions via explicit multi-hop path tracing. However, during RL training, rewards are typically sparse, and exploration is highly inefficient due to the vast, time-evolving action space. These issues hinder efficient training and often limit overall performance. To address these challenges, we propose RAPTOR (Reachability-Aware Pretraining for Efficient Target-Oriented Path Exploration), a self-supervised pretraining method that injects a reachability-aware inductive bias to the agent. By learning to estimate the reachability of candidate actions to the target entity, RAPTOR reduces exploration over unpromising paths and provides a strong initialization for downstream RL fine-tuning. Experimental results on the ICEWS14, ICEWS05-15, and ICEWS18 datasets demonstrate that RAPTOR pretraining markedly improves the training efficiency and consistently outperforms conventional baselines, establishing it as an effective approach for enhancing RL-based multi-hop reasoning methods for TKG reasoning.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T11:59:01Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Chien-Liang Liu</name>
+    </author>
+    <author>
+      <name>Tsao-Lun Chen</name>
+    </author>
+  </entry>
+</feed>

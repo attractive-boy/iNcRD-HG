@@ -1,0 +1,797 @@
+{
+  "version": "6.9",
+  "hitCount": 2,
+  "request": {
+    "queryString": "PLMF-MDA",
+    "resultType": "core",
+    "cursorMark": "*",
+    "pageSize": 6,
+    "sort": "",
+    "synonym": false
+  },
+  "resultList": {
+    "result": [
+      {
+        "id": "41666238",
+        "source": "MED",
+        "pmid": "41666238",
+        "pmcid": "PMC12915972",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC12915972"
+          ]
+        },
+        "doi": "10.1371/journal.pcbi.1013968",
+        "title": "A pre-trained language model-based cross-modal fusion framework for predicting miRNA-drug resistance and sensitivity associations.",
+        "authorString": "Sheng N, Liu Y, Gao L, Hou W, Huang L, Wang Y.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Sheng N",
+              "lastName": "Sheng",
+              "firstName": "Nan",
+              "initials": "N",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-0306-9009"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Technology, Jilin University, Changchun, China."
+                  },
+                  {
+                    "affiliation": "Key Laboratory of Symbolic Computation and Knowledge Engineering of the Ministry of Education, Jilin University, Changchun, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Liu Y",
+              "lastName": "Liu",
+              "firstName": "Yunzhi",
+              "initials": "Y",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Technology, Jilin University, Changchun, China."
+                  },
+                  {
+                    "affiliation": "Key Laboratory of Symbolic Computation and Knowledge Engineering of the Ministry of Education, Jilin University, Changchun, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Gao L",
+              "lastName": "Gao",
+              "firstName": "Ling",
+              "initials": "L",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Technology, Jilin University, Changchun, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Hou W",
+              "lastName": "Hou",
+              "firstName": "Wenju",
+              "initials": "W",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Technology, Jilin University, Changchun, China."
+                  },
+                  {
+                    "affiliation": "Key Laboratory of Symbolic Computation and Knowledge Engineering of the Ministry of Education, Jilin University, Changchun, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Huang L",
+              "lastName": "Huang",
+              "firstName": "Lan",
+              "initials": "L",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0003-3233-3777"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Technology, Jilin University, Changchun, China."
+                  },
+                  {
+                    "affiliation": "Key Laboratory of Symbolic Computation and Knowledge Engineering of the Ministry of Education, Jilin University, Changchun, China."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Wang Y",
+              "lastName": "Wang",
+              "firstName": "Yan",
+              "initials": "Y",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-4751-0708"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "College of Computer Science and Technology, Jilin University, Changchun, China."
+                  },
+                  {
+                    "affiliation": "Key Laboratory of Symbolic Computation and Knowledge Engineering of the Ministry of Education, Jilin University, Changchun, China."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0002-0306-9009"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-4751-0708"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0003-3233-3777"
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "supporting_data"
+          ]
+        },
+        "journalInfo": {
+          "issue": "2",
+          "volume": "22",
+          "journalIssueId": 4112592,
+          "dateOfPublication": "2026 Feb",
+          "monthOfPublication": 2,
+          "yearOfPublication": 2026,
+          "journal": {
+            "medlineAbbreviation": "PLoS Comput Biol",
+            "title": "PLoS computational biology",
+            "essn": "1553-7358",
+            "issn": "1553-734X",
+            "isoabbreviation": "PLoS Comput Biol",
+            "nlmid": "101238922"
+          },
+          "printPublicationDate": "2026-02-01"
+        },
+        "pubYear": "2026",
+        "pageInfo": "e1013968",
+        "abstractText": "MicroRNAs (miRNAs) are pivotal regulators of drug resistance and sensitivity in cancer cells, functioning as tumor suppressors or oncogenes that modulate the cellular response to anticancer drugs. While experimental identification of miRNA-mediated drug resistance and sensitivity is both costly and laborious, computational methods present a promising alternative. Recent advances in pre-trained language models (PLMs) offer new opportunities to leverage large-scale unlabeled biomolecular data for enhanced relationship prediction. In this study, we introduce PLMF-MDA, a PLM-based cross-modal fusion model designed to predict miRNA-drug resistance (MDR) and miRNA-drug sensitivity (MDS) associations. PLMF-MDA integrates miRNA and drug multimodal embeddings derived from PLMs and intrinsic feature extractors, and employs a cross-modal attention fusion module to adaptively capture key interactions between modalities. To evaluate the performance of the approach, we manually constructed two benchmark datasets. Experimental results demonstrate that the PLMF-MDA achieves superior prediction performance. Furthermore, case studies on anticancer drug docetaxel and gefitinib demonstrate its potential in discovering novel MDR (MDS) associations. All data and source code are available on GitHub: https://github.com/sheng-n/PLMF-MDA.",
+        "affiliation": "College of Computer Science and Technology, Jilin University, Changchun, China.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic-eCollection",
+        "pubTypeList": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "agency": "Jilin Provincial Scientific and Technological Development Program",
+              "grantId": "20240101364JC",
+              "orderIn": 0
+            },
+            {
+              "agency": "China Postdoctoral Science Foundation",
+              "grantId": "2025M771545",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Humans"
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Neoplasms",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "DT",
+                    "qualifierName": "drug therapy"
+                  },
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "MicroRNAs",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  },
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "ME",
+                    "qualifierName": "metabolism"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Antineoplastic Agents",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "PD",
+                    "qualifierName": "pharmacology"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Computational Biology",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "MT",
+                    "qualifierName": "methods"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "Y",
+              "descriptorName": "Drug Resistance, Neoplasm",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Docetaxel",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "PD",
+                    "qualifierName": "pharmacology"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Gefitinib",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "PD",
+                    "qualifierName": "pharmacology"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Predictive Learning Models"
+            }
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "Antineoplastic Agents",
+              "registryNumber": "0"
+            },
+            {
+              "name": "MicroRNAs",
+              "registryNumber": "0"
+            },
+            {
+              "name": "docetaxel",
+              "registryNumber": "15H5577CQD"
+            },
+            {
+              "name": "gefitinib",
+              "registryNumber": "S65743JHBS"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.1371/journal.pcbi.1013968"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC12915972"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC12915972?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "citedByCount": 1,
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "N",
+        "hasLabsLinks": "N",
+        "hasData": "Y",
+        "license": "cc by",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "Y",
+        "tmAccessionTypeList": {
+          "accessionType": [
+            "doi"
+          ]
+        },
+        "dateOfCompletion": "2026-07-07",
+        "dateOfCreation": "2026-02-10",
+        "dateOfRevision": "2026-08-13",
+        "electronicPublicationDate": "2026-02-10",
+        "firstPublicationDate": "2026-02-10",
+        "firstIndexDate": "2026-02-11",
+        "fullTextReceivedDate": "2026-02-19",
+        "hasEvaluations": "N"
+      },
+      {
+        "id": "35215838",
+        "source": "MED",
+        "pmid": "35215838",
+        "pmcid": "PMC8876510",
+        "fullTextIdList": {
+          "fullTextId": [
+            "PMC8876510"
+          ]
+        },
+        "doi": "10.3390/v14020244",
+        "title": "Bacteriophages Roam the Wheat Phyllosphere.",
+        "authorString": "Forero-Junco LM, Alanin KWS, Djurhuus AM, Kot W, Gobbi A, Hansen LH.",
+        "authorList": {
+          "author": [
+            {
+              "fullName": "Forero-Junco LM",
+              "lastName": "Forero-Junco",
+              "firstName": "Laura Milena",
+              "initials": "LM",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0001-7634-1002"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Plant and Environmental Sciences, University of Copenhagen, 1871 Frederiksberg, Denmark."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Alanin KWS",
+              "lastName": "Alanin",
+              "firstName": "Katrine Wacenius Skov",
+              "initials": "KWS",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Plant and Environmental Sciences, University of Copenhagen, 1871 Frederiksberg, Denmark."
+                  },
+                  {
+                    "affiliation": "Department of Environmental Science, Aarhus University, 4000 Roskilde, Denmark."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Djurhuus AM",
+              "lastName": "Djurhuus",
+              "firstName": "Amaru Miranda",
+              "initials": "AM",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Plant and Environmental Sciences, University of Copenhagen, 1871 Frederiksberg, Denmark."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Kot W",
+              "lastName": "Kot",
+              "firstName": "Witold",
+              "initials": "W",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0002-0188-4587"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Plant and Environmental Sciences, University of Copenhagen, 1871 Frederiksberg, Denmark."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Gobbi A",
+              "lastName": "Gobbi",
+              "firstName": "Alex",
+              "initials": "A",
+              "authorId": {
+                "type": "ORCID",
+                "value": "0000-0003-3541-4732"
+              },
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Plant and Environmental Sciences, University of Copenhagen, 1871 Frederiksberg, Denmark."
+                  }
+                ]
+              }
+            },
+            {
+              "fullName": "Hansen LH",
+              "lastName": "Hansen",
+              "firstName": "Lars Hestbjerg",
+              "initials": "LH",
+              "authorAffiliationDetailsList": {
+                "authorAffiliation": [
+                  {
+                    "affiliation": "Department of Plant and Environmental Sciences, University of Copenhagen, 1871 Frederiksberg, Denmark."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "authorIdList": {
+          "authorId": [
+            {
+              "type": "ORCID",
+              "value": "0000-0001-7634-1002"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0002-0188-4587"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0003-0027-1524"
+            },
+            {
+              "type": "ORCID",
+              "value": "0000-0003-3541-4732"
+            }
+          ]
+        },
+        "dataLinksTagsList": {
+          "dataLinkstag": [
+            "altmetrics",
+            "supporting_data"
+          ]
+        },
+        "journalInfo": {
+          "issue": "2",
+          "volume": "14",
+          "journalIssueId": 3319023,
+          "dateOfPublication": "2022 Jan",
+          "monthOfPublication": 1,
+          "yearOfPublication": 2022,
+          "journal": {
+            "medlineAbbreviation": "Viruses",
+            "title": "Viruses",
+            "essn": "1999-4915",
+            "issn": "1999-4915",
+            "isoabbreviation": "Viruses",
+            "nlmid": "101509722"
+          },
+          "printPublicationDate": "2022-01-01"
+        },
+        "pubYear": "2022",
+        "pageInfo": "244",
+        "abstractText": "The phyllosphere microbiome plays an important role in plant fitness. Recently, bacteriophages have been shown to play a role in shaping the bacterial community composition of the phyllosphere. However, no studies on the diversity and abundance of phyllosphere bacteriophage communities have been carried out until now. In this study, we extracted, sequenced, and characterized the dsDNA and ssDNA viral community from a phyllosphere for the first time. We sampled leaves from winter wheat (<i>Triticum aestivum</i>), where we identified a total of 876 virus operational taxonomic units (vOTUs), mostly predicted to be bacteriophages with a lytic lifestyle. Remarkably, 848 of these vOTUs corresponded to new viral species, and we estimated a minimum of 2.0 × 10<sup>6</sup> viral particles per leaf. These results suggest that the wheat phyllosphere harbors a large and active community of novel bacterial viruses. Phylloviruses have potential applications as biocontrol agents against phytopathogenic bacteria or as microbiome modulators to increase plant growth-promoting bacteria.",
+        "affiliation": "Department of Plant and Environmental Sciences, University of Copenhagen, 1871 Frederiksberg, Denmark.",
+        "publicationStatus": "epublish",
+        "language": "eng",
+        "pubModel": "Electronic",
+        "pubTypeList": {
+          "pubType": [
+            "Research Support, Non-U.S. Gov't",
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "grantsList": {
+          "grant": [
+            {
+              "agency": "European Union&apos;s Horizon 2020 research and innovation program (Marie Sklodowska-Curie)",
+              "grantId": "801199",
+              "orderIn": 0
+            },
+            {
+              "agency": "Human Frontier Science Program",
+              "grantId": "HFSP-RGP0024/2018",
+              "orderIn": 0
+            },
+            {
+              "agency": "Novo Nordisk Fonden",
+              "grantId": "NNF19SA0059348",
+              "orderIn": 0
+            },
+            {
+              "agency": "Novo Nordisk Foundation",
+              "grantId": "NNF19SA0059348",
+              "orderIn": 0
+            }
+          ]
+        },
+        "meshHeadingList": {
+          "meshHeading": [
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Pseudomonadaceae",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "CL",
+                    "qualifierName": "classification"
+                  },
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  },
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "IP",
+                    "qualifierName": "isolation & purification"
+                  },
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "VI",
+                    "qualifierName": "virology"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Bacteriophages",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "CL",
+                    "qualifierName": "classification"
+                  },
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  },
+                  {
+                    "majorTopic_YN": "Y",
+                    "abbreviation": "IP",
+                    "qualifierName": "isolation & purification"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Triticum",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "Y",
+                    "abbreviation": "MI",
+                    "qualifierName": "microbiology"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Plant Leaves",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "MI",
+                    "qualifierName": "microbiology"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Genome, Viral",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Toxins, Biological",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Metagenome",
+              "meshQualifierList": {
+                "meshQualifier": [
+                  {
+                    "majorTopic_YN": "N",
+                    "abbreviation": "GE",
+                    "qualifierName": "genetics"
+                  }
+                ]
+              }
+            },
+            {
+              "majorTopic_YN": "N",
+              "descriptorName": "Microbiota"
+            }
+          ]
+        },
+        "keywordList": {
+          "keyword": [
+            "Triticum aestivum",
+            "Bacteriophage",
+            "phyllosphere",
+            "Viral Metagenomics"
+          ]
+        },
+        "chemicalList": {
+          "chemical": [
+            {
+              "name": "Toxins, Biological",
+              "registryNumber": "0"
+            }
+          ]
+        },
+        "subsetList": {
+          "subset": [
+            {
+              "code": "IM",
+              "name": "Index Medicus"
+            }
+          ]
+        },
+        "fullTextUrlList": {
+          "fullTextUrl": [
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Unpaywall",
+              "url": "https://www.mdpi.com/1999-4915/14/2/244/pdf?version=1643172336"
+            },
+            {
+              "availability": "Subscription required",
+              "availabilityCode": "S",
+              "documentStyle": "doi",
+              "site": "DOI",
+              "url": "https://doi.org/10.3390/v14020244"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "html",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC8876510"
+            },
+            {
+              "availability": "Open access",
+              "availabilityCode": "OA",
+              "documentStyle": "pdf",
+              "site": "Europe_PMC",
+              "url": "https://europepmc.org/articles/PMC8876510?pdf=render"
+            }
+          ]
+        },
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "citedByCount": 25,
+        "hasReferences": "Y",
+        "hasTextMinedTerms": "Y",
+        "hasDbCrossReferences": "N",
+        "hasPDF": "Y",
+        "hasBook": "N",
+        "hasSuppl": "Y",
+        "hasLabsLinks": "Y",
+        "hasData": "Y",
+        "license": "cc by",
+        "authMan": "N",
+        "epmcAuthMan": "N",
+        "nihAuthMan": "N",
+        "hasTMAccessionNumbers": "N",
+        "dateOfCompletion": "2022-03-11",
+        "dateOfCreation": "2022-02-26",
+        "dateOfRevision": "2022-03-11",
+        "electronicPublicationDate": "2022-01-26",
+        "firstPublicationDate": "2022-01-26",
+        "firstIndexDate": "2022-02-27",
+        "fullTextReceivedDate": "2025-02-02",
+        "hasEvaluations": "N"
+      }
+    ]
+  }
+}

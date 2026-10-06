@@ -1,0 +1,215 @@
+[
+  {
+    "source": "arxiv_bottleneck",
+    "url": "https://export.arxiv.org/api/query",
+    "params": {
+      "search_query": "(all:\"conditional graph information bottleneck\" OR (ti:\"bottleneck\" AND (all:\"link prediction\" OR all:\"molecular relational\"))) AND submittedDate:[202301010000 TO 202609162359]",
+      "max_results": 12,
+      "sortBy": "submittedDate",
+      "sortOrder": "descending"
+    },
+    "utc": "2026-09-15T21:26:27.248423+00:00",
+    "status": 200,
+    "file": "improve/research/conditional_bottleneck_next_20260916/arxiv_bottleneck_v1.xml",
+    "sha256": "2bb17a95719d2a7842d8e694b296e489abfd5530e4e3892f7b6c33e3c601943e",
+    "items": [
+      {
+        "id": "http://arxiv.org/abs/2506.12568v1",
+        "title": "MVP-CBM:Multi-layer Visual Preference-enhanced Concept Bottleneck Model for Explainable Medical Image Classification",
+        "summary": "The concept bottleneck model (CBM), as a technique improving interpretability via linking predictions to human-understandable concepts, makes high-risk and life-critical medical image classification credible. Typically, existing CBM methods associate the final layer of visual encoders with concepts to explain the model's predictions. However, we empirically discover the phenomenon of concept preference variation, that is, the concepts are preferably associated with the features at different layers than those only at the final layer; yet a blind last-layer-based association neglects such a preference variation and thus weakens the accurate correspondences between features and concepts, impairing model interpretability. To address this issue, we propose a novel Multi-layer Visual Preference-enhanced Concept Bottleneck Model (MVP-CBM), which comprises two key novel modules: (1) intra-layer concept preference modeling, which captures the preferred association of different concepts with features at various visual layers, and (2) multi-layer concept sparse activation fusion, which sparsely aggregates concept activations from multiple layers to enhance performance. Thus, by explicitly modeling concept preferences, MVP-CBM can comprehensively leverage multi-layer visual information to provide a more nuanced and accurate explanation of model decisions. Extensive experiments on several p"
+      },
+      {
+        "id": "http://arxiv.org/abs/2412.15589v1",
+        "title": "Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned Graph Information Bottleneck",
+        "summary": "This study aims to build a pre-trained Graph Neural Network (GNN) model on molecules without human annotations or prior knowledge. Although various attempts have been proposed to overcome limitations in acquiring labeled molecules, the previous pre-training methods still rely on semantic subgraphs, i.e., functional groups. Only focusing on the functional groups could overlook the graph-level distinctions. The key challenge to build a pre-trained GNN on molecules is how to (1) generate well-distinguished graph-level representations and (2) automatically discover the functional groups without prior knowledge. To solve it, we propose a novel Subgraph-conditioned Graph Information Bottleneck, named S-CGIB, for pre-training GNNs to recognize core subgraphs (graph cores) and significant subgraphs. The main idea is that the graph cores contain compressed and sufficient information that could generate well-distinguished graph-level representations and reconstruct the input graph conditioned on significant subgraphs across molecules under the S-CGIB principle. To discover significant subgraphs without prior knowledge about functional groups, we propose generating a set of functional group candidates, i.e., ego networks, and using an attention-based interaction between the graph core and the candidates. Despite being identified from self-supervised learning, our learned subgraphs match t"
+      },
+      {
+        "id": "http://arxiv.org/abs/2406.13214v1",
+        "title": "Self-Explainable Temporal Graph Networks based on Graph Information Bottleneck",
+        "summary": "Temporal Graph Neural Networks (TGNN) have the ability to capture both the graph topology and dynamic dependencies of interactions within a graph over time. There has been a growing need to explain the predictions of TGNN models due to the difficulty in identifying how past events influence their predictions. Since the explanation model for a static graph cannot be readily applied to temporal graphs due to its inability to capture temporal dependencies, recent studies proposed explanation models for temporal graphs. However, existing explanation models for temporal graphs rely on post-hoc explanations, requiring separate models for prediction and explanation, which is limited in two aspects: efficiency and accuracy of explanation. In this work, we propose a novel built-in explanation framework for temporal graphs, called Self-Explainable Temporal Graph Networks based on Graph Information Bottleneck (TGIB). TGIB provides explanations for event occurrences by introducing stochasticity in each temporal event based on the Information Bottleneck theory. Experimental results demonstrate the superiority of TGIB in terms of both the link prediction performance and explainability compared to state-of-the-art methods. This is the first work that simultaneously performs prediction and explanation for temporal graphs in an end-to-end manner."
+      },
+      {
+        "id": "http://arxiv.org/abs/2404.11032v1",
+        "title": "CORE: Data Augmentation for Link Prediction via Information Bottleneck",
+        "summary": "Link prediction (LP) is a fundamental task in graph representation learning, with numerous applications in diverse domains. However, the generalizability of LP models is often compromised due to the presence of noisy or spurious information in graphs and the inherent incompleteness of graph data. To address these challenges, we draw inspiration from the Information Bottleneck principle and propose a novel data augmentation method, COmplete and REduce (CORE) to learn compact and predictive augmentations for LP models. In particular, CORE aims to recover missing edges in graphs while simultaneously removing noise from the graph structures, thereby enhancing the model's robustness and performance. Extensive experiments on multiple benchmark datasets demonstrate the applicability and superiority of CORE over state-of-the-art methods, showcasing its potential as a leading approach for robust LP in graph representation learning."
+      },
+      {
+        "id": "http://arxiv.org/abs/2402.06716v3",
+        "title": "Dynamic Graph Information Bottleneck",
+        "summary": "Dynamic Graphs widely exist in the real world, which carry complicated spatial and temporal feature patterns, challenging their representation learning. Dynamic Graph Neural Networks (DGNNs) have shown impressive predictive abilities by exploiting the intrinsic dynamics. However, DGNNs exhibit limited robustness, prone to adversarial attacks. This paper presents the novel Dynamic Graph Information Bottleneck (DGIB) framework to learn robust and discriminative representations. Leveraged by the Information Bottleneck (IB) principle, we first propose the expected optimal representations should satisfy the Minimal-Sufficient-Consensual (MSC) Condition. To compress redundant as well as conserve meritorious information into latent representation, DGIB iteratively directs and refines the structural and feature information flow passing through graph snapshots. To meet the MSC Condition, we decompose the overall IB objectives into DGIB$_{MS}$ and DGIB$_C$, in which the DGIB$_{MS}$ channel aims to learn the minimal and sufficient representations, with the DGIB$_{MS}$ channel guarantees the predictive consensus. Extensive experiments on real-world and synthetic dynamic graph datasets demonstrate the superior robustness of DGIB against adversarial attacks compared with state-of-the-art baselines in the link prediction task. To the best of our knowledge, DGIB is the first work to learn robu"
+      },
+      {
+        "id": "http://arxiv.org/abs/2308.11991v2",
+        "title": "Relational Concept Bottleneck Models",
+        "summary": "The design of interpretable deep learning models working in relational domains poses an open challenge: interpretable deep learning methods, such as Concept Bottleneck Models (CBMs), are not designed to solve relational problems, while relational deep learning models, such as Graph Neural Networks (GNNs), are not as interpretable as CBMs. To overcome these limitations, we propose Relational Concept Bottleneck Models (R-CBMs), a family of relational deep learning methods providing interpretable task predictions. As special cases, we show that R-CBMs are capable of both representing standard CBMs and message-passing GNNs. To evaluate the effectiveness and versatility of these models, we designed a class of experimental problems, ranging from image classification to link prediction in knowledge graphs. In particular we show that R-CBMs (i) match generalization performance of existing relational black-boxes, (ii) support the generation of quantified concept-based explanations, (iii) effectively respond to test-time interventions, and (iv) withstand demanding settings including out-of-distribution scenarios, limited training data regimes, and scarce concept supervisions."
+      },
+      {
+        "id": "http://arxiv.org/abs/2305.01520v2",
+        "title": "Conditional Graph Information Bottleneck for Molecular Relational Learning",
+        "summary": "Molecular relational learning, whose goal is to learn the interaction behavior between molecular pairs, got a surge of interest in molecular sciences due to its wide range of applications. Recently, graph neural networks have recently shown great success in molecular relational learning by modeling a molecule as a graph structure, and considering atom-level interactions between two molecules. Despite their success, existing molecular relational learning methods tend to overlook the nature of chemistry, i.e., a chemical compound is composed of multiple substructures such as functional groups that cause distinctive chemical reactions. In this work, we propose a novel relational learning framework, called CGIB, that predicts the interaction behavior between a pair of graphs by detecting core subgraphs therein. The main idea is, given a pair of graphs, to find a subgraph from a graph that contains the minimal sufficient information regarding the task at hand conditioned on the paired graph based on the principle of conditional graph information bottleneck. We argue that our proposed method mimics the nature of chemical reactions, i.e., the core substructure of a molecule varies depending on which other molecule it interacts with. Extensive experiments on various tasks with real-world datasets demonstrate the superiority of CGIB over state-of-the-art baselines. Our code is available"
+      }
+    ]
+  },
+  {
+    "source": "crossref_cgib",
+    "url": "https://api.crossref.org/works",
+    "params": {
+      "query.title": "Conditional Graph Information Bottleneck for Molecular Relational Learning",
+      "rows": 5
+    },
+    "utc": "2026-09-15T21:26:27.249172+00:00",
+    "status": 200,
+    "file": "improve/research/conditional_bottleneck_next_20260916/crossref_cgib_v1.json",
+    "sha256": "b0a04ff622add60250d4cba9836977ffcb83e1eef13cb7b5f6cf18cb2389ed78",
+    "items": [
+      {
+        "title": [
+          "Conditional disentangled information bottleneck for multi-view molecular graph representation learning"
+        ],
+        "doi": "10.1016/j.eswa.2026.133312",
+        "venue": [
+          "Expert Systems with Applications"
+        ],
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              12
+            ]
+          ]
+        }
+      },
+      {
+        "title": [
+          "Knowledge graph information bottleneck enhanced molecular representation learning"
+        ],
+        "doi": "10.1016/j.neunet.2025.107560",
+        "venue": [
+          "Neural Networks"
+        ],
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              9
+            ]
+          ]
+        }
+      },
+      {
+        "title": [
+          "Subgraph Information Bottleneck with Causal Dependency for Stable Molecular Relational Learning"
+        ],
+        "doi": "10.24963/ijcai.2025/882",
+        "venue": [
+          "Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence"
+        ],
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              9
+            ]
+          ]
+        }
+      },
+      {
+        "title": [
+          "Subgraph Information Bottleneck with Causal Dependency for Stable Molecular Relational Learning"
+        ],
+        "doi": "10.24963/ijcai.2024/882",
+        "venue": [
+          "Proceedings of the Thirty-ThirdInternational Joint Conference on Artificial Intelligence"
+        ],
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              8
+            ]
+          ]
+        }
+      },
+      {
+        "title": [
+          "Self-Supervised Graph Information Bottleneck for Multiview Molecular Embedding Learning"
+        ],
+        "doi": "10.1109/tai.2023.3297576",
+        "venue": [
+          "IEEE Transactions on Artificial Intelligence"
+        ],
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              4
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "source": "openalex_bottleneck",
+    "url": "https://api.openalex.org/works",
+    "params": {
+      "search": "graph information bottleneck link prediction",
+      "filter": "from_publication_date:2024-01-01,to_publication_date:2026-09-16",
+      "per-page": 8
+    },
+    "utc": "2026-09-15T21:26:27.249958+00:00",
+    "status": 200,
+    "file": "improve/research/conditional_bottleneck_next_20260916/openalex_bottleneck_v1.json",
+    "sha256": "803b814e93e9d44a07ee7b5d0e202620794869b97f983ec661a4891541db3a93",
+    "items": [
+      {
+        "title": "Dynamic Graph Information Bottleneck",
+        "doi": "https://doi.org/10.1145/3589334.3645411",
+        "year": 2024,
+        "url": "https://doi.org/10.1145/3589334.3645411"
+      },
+      {
+        "title": "Graph Bottlenecked Social Recommendation",
+        "doi": "https://doi.org/10.1145/3637528.3671807",
+        "year": 2024,
+        "url": "https://doi.org/10.1145/3637528.3671807"
+      },
+      {
+        "title": "Automated model building and protein identification in cryo-EM maps",
+        "doi": "https://doi.org/10.1038/s41586-024-07215-4",
+        "year": 2024,
+        "url": "https://doi.org/10.1038/s41586-024-07215-4"
+      },
+      {
+        "title": "Self-Explainable Temporal Graph Networks based on Graph Information Bottleneck",
+        "doi": "https://doi.org/10.1145/3637528.3671962",
+        "year": 2024,
+        "url": "https://doi.org/10.1145/3637528.3671962"
+      },
+      {
+        "title": "Federated Graph Neural Networks: Overview, Techniques, and Challenges",
+        "doi": "https://doi.org/10.1109/tnnls.2024.3360429",
+        "year": 2024,
+        "url": "https://doi.org/10.1109/tnnls.2024.3360429"
+      },
+      {
+        "title": "Cross-domain contrastive graph neural network for lncRNA–protein interaction prediction",
+        "doi": "https://doi.org/10.1016/j.knosys.2024.111901",
+        "year": 2024,
+        "url": "https://doi.org/10.1016/j.knosys.2024.111901"
+      },
+      {
+        "title": "Information bottleneck-driven prompt on graphs for unifying downstream few-shot classification tasks",
+        "doi": "https://doi.org/10.1016/j.ipm.2025.104092",
+        "year": 2025,
+        "url": "https://doi.org/10.1016/j.ipm.2025.104092"
+      },
+      {
+        "title": "Advancing Drug Safety in Drug Development: Bridging Computational Predictions for Enhanced Toxicity Prediction",
+        "doi": "https://doi.org/10.1021/acs.chemrestox.3c00352",
+        "year": 2024,
+        "url": "https://doi.org/10.1021/acs.chemrestox.3c00352"
+      }
+    ]
+  }
+]

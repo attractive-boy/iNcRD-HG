@@ -1,0 +1,250 @@
+[
+  {
+    "source": "DuplexFM verification",
+    "records": [
+      {
+        "url": "https://api.biorxiv.org/details/biorxiv/10.64898/2026.08.06.743413",
+        "data": {
+          "messages": [
+            {
+              "status": "ok",
+              "category": "all"
+            }
+          ],
+          "collection": [
+            {
+              "title": "DuplexFM: Transferable small-RNA target representations link miRNA interactions to siRNA efficacy prediction",
+              "authors": "Chen, B.; Yin, J.; Fei, J.; Yang, M.",
+              "author_corresponding": "Baiming Chen",
+              "author_corresponding_institution": "The Chinese University of Hongkong, Shenzhen",
+              "doi": "10.64898/2026.08.06.743413",
+              "date": "2026-08-12",
+              "version": "1",
+              "type": "new results",
+              "license": "cc_by",
+              "category": "bioinformatics",
+              "jatsxml": "https://www.biorxiv.org/content/early/2026/08/12/2026.08.06.743413.source.xml",
+              "abstract": "MicroRNAs (miRNAs) and small interfering RNAs (siRNAs) share Argonaute-mediated guide-target recognition, yet quantitative siRNA efficacy measurements are substantially scarcer and more costly to generate than miRNA-target interaction data. We therefore asked whether miRNA interaction data could provide transferable supervision for siRNA efficacy prediction. Here we present DuplexFM, a biologically grounded framework that uses sample-specific gates to integrate five evidence sources: pairing and sequence-context priors, duplex energetics, experimentally supervised mRNA accessibility, target-to-guide cross-attention, and contextual token-pair compatibility. The accessibility expert, trained on nucleotide-resolution icSHAPE measurements, achieved a held-out nucleotide-level Pearson correlation of 0.627 and evaluated accessibility at seed match and energy-supported candidate sites. On miRBench v7, three independently trained DuplexFM models achieved a macro APS of 0.873 (SD = 0.002), soft-voting increased this to 0.876 and yielded the highest APS on all four test sets. We then froze the miRNA-trained representation and trained only a lightweight residual head with 24 siRNA-specific descriptors. Transfer improved Pearson and Spearman correlations, AUPRC, and F1 over the descriptor-only baseline in all six evaluation settings. The ensemble achieved the highest Pearson and Spearman correlations in four settings, whereas OligoFormer remained stronger on Huesken and Takayuki. These findings show that experimentally grounded accessibility and miRNA-derived interaction representations provide complementary, transferable information, supporting a parameter-efficient route towards unified modeling of Argonaute-guided RNA regulation. Code and data are available at https://github.com/cbaiming/DuplexFM.",
+              "funder": "NA",
+              "published": "NA",
+              "server": "bioRxiv"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A2026.08.06.743413+OR+TITLE%3ADuplexFM&format=json&resultType=core",
+        "data": {
+          "version": "6.9",
+          "hitCount": 1,
+          "request": {
+            "queryString": "EXT_ID:2026.08.06.743413 OR TITLE:DuplexFM",
+            "resultType": "core",
+            "cursorMark": "*",
+            "pageSize": 25,
+            "sort": "",
+            "synonym": false
+          },
+          "resultList": {
+            "result": [
+              {
+                "id": "PPR1297514",
+                "source": "PPR",
+                "doi": "10.64898/2026.08.06.743413",
+                "title": "DuplexFM: Transferable small-RNA target representations link miRNA interactions to siRNA efficacy prediction",
+                "authorString": "Chen B, Yin J, Jia F, Yang M.",
+                "authorList": {
+                  "author": [
+                    {
+                      "fullName": "Chen B",
+                      "firstName": "Baiming",
+                      "lastName": "Chen",
+                      "initials": "B"
+                    },
+                    {
+                      "fullName": "Yin J",
+                      "firstName": "Jiaqi",
+                      "lastName": "Yin",
+                      "initials": "J"
+                    },
+                    {
+                      "fullName": "Jia F",
+                      "firstName": "Fei",
+                      "lastName": "Jia",
+                      "initials": "F"
+                    },
+                    {
+                      "fullName": "Yang M",
+                      "firstName": "Mingjun",
+                      "lastName": "Yang",
+                      "initials": "M"
+                    }
+                  ]
+                },
+                "pubYear": "2026",
+                "abstractText": "<h4>  A  bstract </h4>  MicroRNAs (miRNAs) and small interfering RNAs (siRNAs) share Argonaute-mediated guide-target recognition, yet quantitative siRNA efficacy measurements are substantially scarcer and more costly to generate than miRNA-target interaction data. We therefore asked whether miRNA interaction data could provide transferable supervision for siRNA efficacy prediction. Here we present DuplexFM, a biologically grounded framework that uses sample-specific gates to integrate five evidence sources: pairing and sequence-context priors, duplex energetics, experimentally supervised mRNA accessibility, target-to-guide cross-attention, and contextual token-pair compatibility. The accessibility expert, trained on nucleotide-resolution icSHAPE measurements, achieved a held-out nucleotide-level Pearson correlation of 0.627 and evaluated accessibility at seed match and energy-supported candidate sites. On miRBench v7, three independently trained DuplexFM models achieved a macro APS of 0.873±0.002, soft-voting increased this to 0.876 and yielded the highest APS on all four test sets. We then froze the miRNA-trained representation and trained only a lightweight residual head with 24 siRNA-specific descriptors. Transfer improved Pearson and Spearman correlations, AUPRC, and F1 over the descriptor-only baseline in all six evaluation settings. The ensemble achieved the highest Pearson and Spearman correlations in four settings, whereas OligoFormer remained stronger on Huesken and Takayuki. These findings show that experimentally grounded accessibility and miRNA-derived interaction representations provide complementary, transferable information, supporting a parameter-efficient route towards unified modeling of Argonaute-guided RNA regulation. Code and data are available at  https://github.com/cbaiming/DuplexFM .",
+                "pubTypeList": {
+                  "pubType": [
+                    "Preprint"
+                  ]
+                },
+                "bookOrReportDetails": {
+                  "publisher": "bioRxiv",
+                  "yearOfPublication": 2026
+                },
+                "fullTextUrlList": {
+                  "fullTextUrl": [
+                    {
+                      "availability": "Free",
+                      "availabilityCode": "F",
+                      "documentStyle": "doi",
+                      "site": "DOI",
+                      "url": "https://doi.org/10.64898/2026.08.06.743413"
+                    }
+                  ]
+                },
+                "isOpenAccess": "N",
+                "inEPMC": "N",
+                "inPMC": "N",
+                "hasPDF": "N",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "citedByCount": 0,
+                "hasData": "N",
+                "hasReferences": "N",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasLabsLinks": "N",
+                "license": "cc by",
+                "hasEvaluations": "N",
+                "authMan": "N",
+                "epmcAuthMan": "N",
+                "nihAuthMan": "N",
+                "hasTMAccessionNumbers": "N",
+                "dateOfCreation": "2026-08-13",
+                "firstIndexDate": "2026-08-13",
+                "firstPublicationDate": "2026-08-12"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "source": "arXiv",
+    "query": "ti:\"MatchAnything\"",
+    "url": "https://export.arxiv.org/api/query?search_query=ti%3A%22MatchAnything%22&max_results=5&sortBy=relevance",
+    "records": [
+      {
+        "source": "arXiv",
+        "query": "ti:\"MatchAnything\"",
+        "title": "MatchAnything: Universal Cross-Modality Image Matching with Large-Scale Pre-Training",
+        "doi": null,
+        "year": 2025,
+        "authors": [
+          "Xingyi He",
+          "Hao Yu",
+          "Sida Peng",
+          "Dongli Tan",
+          "Zehong Shen",
+          "Hujun Bao",
+          "Xiaowei Zhou"
+        ],
+        "venue": "arXiv preprint",
+        "url": "http://arxiv.org/abs/2501.07556v1",
+        "abstract": "Image matching, which aims to identify corresponding pixel locations between images, is crucial in a wide range of scientific disciplines, aiding in image registration, fusion, and analysis. In recent years, deep learning-based image matching algorithms have dramatically outperformed humans in rapidly and accurately finding large amounts of correspondences. However, when dealing with images captured under different imaging modalities that result in significant appearance changes, the performance of these algorithms often deteriorates due to the scarcity of annotated cross-modal training data. This limitation hinders applications in various fields that rely on multiple image modalities to obtain complementary information. To address this challenge, we propose a large-scale pre-training framework that utilizes synthetic cross-modal training signals, incorporating diverse data from various sources, to train models to recognize and match fundamental structures across images. This capability is transferable to real-world, unseen cross-modality image matching tasks. Our key finding is that the matching model trained with our framework achieves remarkable generalizability across more than eight unseen cross-modality registration tasks using the same network weight, substantially outperforming existing methods, whether designed for generalization or tailored for specific tasks. This advancement significantly enhances the applicability of image matching technologies across various scientific disciplines and paves the way for new applications in multi-modality human and artificial intelligence analysis and beyond."
+      }
+    ]
+  },
+  {
+    "source": "arXiv",
+    "query": "ti:\"MATCHA\" AND all:\"matching\"",
+    "url": "https://export.arxiv.org/api/query?search_query=ti%3A%22MATCHA%22+AND+all%3A%22matching%22&max_results=5&sortBy=relevance",
+    "records": [
+      {
+        "source": "arXiv",
+        "query": "ti:\"MATCHA\" AND all:\"matching\"",
+        "title": "MatChA: Cross-Algorithm Matching with Feature Augmentation",
+        "doi": null,
+        "year": 2025,
+        "authors": [
+          "Paula Carbó Cubero",
+          "Alberto Jaenal Gálvez",
+          "André Mateus",
+          "José Araújo",
+          "Patric Jensfelt"
+        ],
+        "venue": "arXiv preprint",
+        "url": "http://arxiv.org/abs/2506.22336v1",
+        "abstract": "State-of-the-art methods fail to solve visual localization in scenarios where different devices use different sparse feature extraction algorithms to obtain keypoints and their corresponding descriptors. Translating feature descriptors is enough to enable matching. However, performance is drastically reduced in cross-feature detector cases, because current solutions assume common keypoints. This means that the same detector has to be used, which is rarely the case in practice when different descriptors are used. The low repeatability of keypoints, in addition to non-discriminatory and non-distinctive descriptors, make the identification of true correspondences extremely challenging. We present the first method tackling this problem, which performs feature descriptor augmentation targeting cross-detector feature matching, and then feature translation to a latent space. We show that our method significantly improves image matching and visual localization in the cross-feature scenario and evaluate the proposed method on several benchmarks."
+      },
+      {
+        "source": "arXiv",
+        "query": "ti:\"MATCHA\" AND all:\"matching\"",
+        "title": "MATCHA: A Mathematica package for matching UV models onto HEFT",
+        "doi": null,
+        "year": 2026,
+        "authors": [
+          "Raquel Gómez-Ambrosio",
+          "Carlos Quezada-Calonge"
+        ],
+        "venue": "arXiv preprint",
+        "url": "http://arxiv.org/abs/2606.11170v2",
+        "abstract": "We present MATChing HEFT Amplitudes (MATCHA), a Mathematica package designed for leading-order (LO) matching of an ultraviolet (UV) model to the Higgs Effective Field Theory (HEFT). MATCHA performs the matching of non-decoupling effects of order $\\mathcal{O}(1)$ to the LO HEFT lagrangian for an arbitrary number of Higgs fields. The main benefit of MATCHA is that it is built on existing packages such as FeynArts and FormCalc, which are familiar to the user, and directly benefits from the established features of these packages. In addition, MATCHA is designed to require minimal input from the user: solely the FeynRules output files and the desired order of expansion. Together, these features make MATCHA a practical tool for extracting the leading low-energy HEFT couplings that encode non-decoupling effects. A public release, including the code, documentation and an accompanying Mathematica notebook that reproduces the Real Singlet Extension example and serves as a template for new models, is available at https://cqc-phy.github.io/MATCHA-release."
+      },
+      {
+        "source": "arXiv",
+        "query": "ti:\"MATCHA\" AND all:\"matching\"",
+        "title": "Matcha-TTS: A fast TTS architecture with conditional flow matching",
+        "doi": null,
+        "year": 2023,
+        "authors": [
+          "Shivam Mehta",
+          "Ruibo Tu",
+          "Jonas Beskow",
+          "Éva Székely",
+          "Gustav Eje Henter"
+        ],
+        "venue": "arXiv preprint",
+        "url": "http://arxiv.org/abs/2309.03199v2",
+        "abstract": "We introduce Matcha-TTS, a new encoder-decoder architecture for speedy TTS acoustic modelling, trained using optimal-transport conditional flow matching (OT-CFM). This yields an ODE-based decoder capable of high output quality in fewer synthesis steps than models trained using score matching. Careful design choices additionally ensure each synthesis step is fast to run. The method is probabilistic, non-autoregressive, and learns to speak from scratch without external alignments. Compared to strong pre-trained baseline models, the Matcha-TTS system has the smallest memory footprint, rivals the speed of the fastest models on long utterances, and attains the highest mean opinion score in a listening test. Please see https://shivammehta25.github.io/Matcha-TTS/ for audio examples, code, and pre-trained models."
+      },
+      {
+        "source": "arXiv",
+        "query": "ti:\"MATCHA\" AND all:\"matching\"",
+        "title": "Matcha: Multi-Stage Riemannian Flow Matching for Accurate and Physically Valid Molecular Docking",
+        "doi": null,
+        "year": 2025,
+        "authors": [
+          "Daria Frolova",
+          "Talgat Daulbaev",
+          "Egor Sevriugov",
+          "Sergei A. Nikolenko",
+          "Dmitry N. Ivankov",
+          "Ivan Oseledets",
+          "Marina A. Pak"
+        ],
+        "venue": "arXiv preprint",
+        "url": "http://arxiv.org/abs/2510.14586v3",
+        "abstract": "Accurate prediction of protein-ligand binding poses is crucial for structure-based drug design, yet existing methods struggle to balance speed, accuracy, and physical plausibility. We introduce Matcha, a novel molecular docking pipeline that combines multi-stage flow matching with physically-aware post-processing. Our approach consists of three sequential stages applied consecutively to progressively refine docking predictions, each implemented as a flow matching model operating on appropriate geometric spaces ($\\mathbb{R}^3$, $\\mathrm{SO}(3)$, and $\\mathrm{SO}(2)$). We enhance the prediction quality through GNINA energy minimization and apply unsupervised physical validity filters to eliminate unrealistic poses. Compared to various approaches, Matcha demonstrates superior physical plausibility across all considered benchmarks. Moreover, our method works approximately 31 times faster than modern large-scale co-folding models. The model weights and inference code to reproduce our results are available at https://github.com/LigandPro/Matcha."
+      },
+      {
+        "source": "arXiv",
+        "query": "ti:\"MATCHA\" AND all:\"matching\"",
+        "title": "MATCHA: Matching Text via Contrastive Semantic Alignment",
+        "doi": null,
+        "year": 2026,
+        "authors": [
+          "Siran Li",
+          "Ece Sena Etoglu",
+          "Carsten Eickhoff",
+          "Seyed Ali Bahrainian"
+        ],
+        "venue": "arXiv preprint",
+        "url": "http://arxiv.org/abs/2605.27345v1",
+        "abstract": "Reliable evaluation is essential for understanding large language model (LLM) performance, yet today's go-to metrics, namely token-overlap scores (e.g., ROUGE) and embedding-based measures (e.g., BERTScore), often misjudge semantic similarity of documents. Our study shows that both token-overlap metrics and embedding-based metrics routinely assign nearly identical scores to texts that directly contradict each other, thereby potentially masking fundamental errors. We introduce MATCHA, an automatic metric that jointly rewards semantic agreement with a reference and penalizes contradictions. MATCHA employs a dual-view perspective that measures (i) proximity to the gold text and (ii) distance from an adversarially generated counterfactual contradiction. In eight public benchmarks, MATCHA outperforms popular metrics, compared with human annotations on question-answering, image caption generation, natural language inference, summarization, and semantic textual similarity tasks. On the TruthfulQA dataset (i.e., a dataset without a training set, where no embedding-based metrics could locally train on), this improvement in terms of matching texts with a reference reaches 18.38% over ROUGE-L and 20.82% over BERTScore. Both quantitative comparison and qualitative human assessments confirm the efficacy and validity of MATCHA and uncover fundamental weaknesses in pre-existing metrics. Compared with 23 embedding models, including top state-of-the-art ones, used as a metric similar to BERTScore, MATCHA remains the most accurate in distinguishing correct from incorrect statements solely based on a reference. Our code and metric are publicly available (https://github.com/Siran-Li/MATCHA)."
+      }
+    ]
+  }
+]

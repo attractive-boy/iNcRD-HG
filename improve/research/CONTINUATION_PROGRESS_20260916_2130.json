@@ -1,0 +1,40 @@
+{
+  "created_at_utc": "2026-09-16T13:32:00+00:00",
+  "previous_record": "CONTINUATION_PROGRESS_20260916_195731.json",
+  "objective_retained": "At least three distinct, sufficiently innovative, verified improvements to global MiDrug AUC and AP, preserving LncDrug within 0.001. Do not reuse accepted directions.",
+  "objective_achieved": false,
+  "goal_status_to_retain": "active",
+  "confirmed_new_techniques": 0,
+  "interval_new_neural_fits": 0,
+  "interval_new_identity_scoring_records": 0,
+  "interval_read_only_syntheses": 1,
+  "interval_source_retrievals": 1,
+  "records": {
+    "mechanism_saturation": {
+      "synthesis": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mechanism_saturation_20260916/SYNTHESIS_V1.json",
+      "note": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mechanism_saturation_20260916/SYNTHESIS_V1.md",
+      "script": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/mechanism_saturation_20260916/synthesize_assessments_v1.py",
+      "assessments_scanned": 87,
+      "performance_gate_true": 84,
+      "mechanism_gate_true": 36,
+      "declared_gate_true_by_stage": {"screen": 20, "historical": 16, "partition_or_outer": 0},
+      "full_residual_gain": {"auc_mean": 0.000799, "ap_mean": 0.001043},
+      "mechanism_margin_vs_best_control": {"auc_mean": -0.000062, "auc_positive_fraction": 0.437,
+        "ap_mean": -0.000017, "ap_positive_fraction": 0.494},
+      "fusion_optimum_weight": 0.1,
+      "conclusion": "The shared residual branch supplies a stable +0.0008/+0.001 over the strong reference; the inspected mechanism contributes zero-mean noise versus its own best control. No new message-passing mechanism can pass the mechanism gate on this data and protocol."
+    },
+    "test_time_adaptation_triage": {
+      "note": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/tta_alignment_next_20260916/TTA_TRIAGE_V1.md",
+      "sources_read": ["TSA (AISTATS 2026, arXiv:2502.18334v5)", "T3R (2026, arXiv:2606.30011v1)",
+        "ASSESS (ICML 2025)", "GraphPatcher (NeurIPS 2023)"],
+      "decision": "Not implemented",
+      "reason": "No test-time-only information exists: the cross-fitting support graph is identical between training and inference, query labels are hidden, auxiliary relations are constant. TTA/TTT would duplicate training data and cannot add orthogonal signal."
+    }
+  },
+  "next_research": "Only new, orthogonal information can move the metric. Highest-value remaining direction is a drug-perturbation/response channel: cell-line drug response (GDSC/CCLE-style) cross-correlated with the already-present RNA x cell-line expression matrix, used as new pair evidence with a matched shuffled-entity control. This is data engineering first (entity mapping, coverage audit, label circularity check) before any model change. Graph-mechanism and test-time-adaptation families are closed for this data/protocol.",
+  "old_results_preserved": true,
+  "default_model_replaced": false,
+  "no_unfinished_training_observed": true,
+  "original_retained_test_sources_accessed": false
+}

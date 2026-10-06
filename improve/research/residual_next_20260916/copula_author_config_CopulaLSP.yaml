@@ -1,0 +1,36 @@
+defaults:
+    - _self_
+    - global
+
+# ----------------------------------------------------------------------------------------------- #
+
+model:
+    name: CopulaLSP
+    description: A Scalable Inter-edge Modeling in CopulaGNN for Link Sign Prediction, ICLR 26.
+
+    # Minimum Correlation Eigenvalue
+    eps: 0.04
+    
+    # Label Smoothing
+    eta: 0.0008
+
+    # Conditional Sampling for Inference
+    woodbury: True
+    num_samples: 500 # fixed
+
+    # SNEA backbone
+    embed_dim: 64  # fixed
+    num_layers: 2  # fixed
+
+# ----------------------------------------------------------------------------------------------- #
+
+train:
+    trainer: CopulaTrainer
+
+    epochs: 2000
+    lr: 0.005
+    weight_decay: 5.0e-4
+    
+    patience: 30
+    check_period: 3
+    criterions: [auc, macro_f1]

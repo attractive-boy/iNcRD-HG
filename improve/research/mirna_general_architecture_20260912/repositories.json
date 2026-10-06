@@ -1,0 +1,41 @@
+[
+  {
+    "repo": "BioGeMT/miRBind_2.0",
+    "full_name": "BioGeMT/miRBind_2.0",
+    "html_url": "https://github.com/BioGeMT/miRBind_2.0",
+    "updated_at": "2026-05-21T10:32:58Z",
+    "default_branch": "main",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "readme_file": "improve/research/mirna_general_architecture_20260912/miRBind_2.0_README.md",
+    "readme_sha": "b5efbf3947ad32734c0af214cab5512a0e6ae154",
+    "readme_excerpt": "# miRBind 2.0\n\nDeep-learning models for predicting miRNA–mRNA interactions.\n\nThis repository ships two models:\n\n- **Pairwise binding-site model** — a CNN that predicts whether a given miRNA binds a given target site (≈50 nt window). Use this to score candidate binding sites.\n- **Gene-level repression model** — predicts the gene-level fold change a miRNA induces from a full 3'UTR sequence. Built on top of the binding-site model via transfer learning.\n\n## Installation\n\nClone the repo and install the dependencies (Python ≥ 3.9, PyTorch ≥ 1.9):\n\n```bash\ngit clone https://github.com/BioGeMT/miRBind_2.0.git\ncd miRBind_2.0\npip install -r code/pairwise_binding_site_model/requirements.txt\n```\n\nA GPU is recommended but not required — the models will fall back to CPU automatically.\n\n## Quick start: predicting miRNA binding sites\n\nThe trained binding-site model is included in [models/pairwise_onehot_model_20260105_200141.pt](models/pairwise_onehot_model_20260105_200141.pt).\n\n### 1. Prepare your input\n\nA TSV file with at minimum these columns:\n\n| column 0 (target/mRNA) | column 1 (miRNA) | label |\n|---|---|---|\n| `TTTTTTTT...GACAGTGG` | `TGTGCAAATCTATGCAAAACTGA` | 0 |\n\nThe `label` column is required by the data loader but is ignored at inference. Set it to `0` if you don't have ground truth. A small example is provided in [data/chimeric_datasets/sample_dataset/](data/chimeric_datasets/sample_dataset/).\n\n### 2. Run inference\n\n```bash\ncd code/pairwise_binding_site_model\n\npython -m inference.predict \\\n    --model_path ../../models/pairwise_onehot_model_20260105_200141.pt \\\n    --input_file path/to/your_sites.tsv \\\n    --output_file predictions.tsv \\\n    --model_type pairwise_onehot \\\n    --batch_size 32\n```\n\nThe output TSV is your input plus two columns:\n\n- `prediction_score` — binding"
+  },
+  {
+    "repo": "li-lab-mcgill/miRformer",
+    "full_name": "li-lab-mcgill/miRformer",
+    "html_url": "https://github.com/li-lab-mcgill/miRformer",
+    "updated_at": "2026-07-13T13:59:47Z",
+    "default_branch": "master",
+    "license": null,
+    "readme_file": "improve/research/mirna_general_architecture_20260912/miRformer_README.md",
+    "readme_sha": "828267c94de6ddc7b649a8f671bcd2055eff1658",
+    "readme_excerpt": "# MiRformer: a dual-transformer encoder framework for predicting miRNA-mRNA interactions\n\nThis repository contains the code for `MiRformer`, a deep learning model for predicting miRNA-mRNA interactions using dual-transformer encoder architecture.\n\n# Datasets\n\nAll training, validation and test datasets can be found at [https://doi.org/10.5281/zenodo.19343333]\n\n## Command-line Usage\n\nThe main entry point for training and evaluation is `scripts/DTEA_model.py`.\n\n### Evaluation\n\nTo test MiRformer model, use the following command. This example uses the `DTEA` base model with a custom configuration and a minimal test dataset.\n\n```bash\npython scripts/eval_DTEA_model.py \\\n    --mirna_max_len 24 \\\n    --mrna_max_len 520 \\\n    --device \"cuda\" \\\n    --embed_dim 1024 \\\n    --ff_dim 4096 \\\n    --num_heads 8 \\\n    --num_layers 4 \\\n    --predict_span \\\n    --predict_binding \\\n    --predict_cleavage \\\n    --use_longformer \\\n    --test_path \"test_data/sample_data.csv\"\n```\n\n**Arguments:**\n\n- `--mirna_max_len`: max mirna length.\n- `--mrna_max_len`: max mrna length.\n- `--device`: Device to use (e.g., `cpu`, `cuda`).\n- `--embed_dim`: embedding dimension, default to 1024.\n- `--ff_dim`: feed-forward dimension, default to 4096.\n- `--num_heads`: number of head to use in each transformer encoder.\n- `--num_layers`: number of layers to use in each transformer encoder.\n- `--predict_span`: flag to be set True for model to predict seed region spans in mRNA inputs.\n- `--predict_binding`: flag to be set True for model to predict interaction between miRNA-mRNA pairs.\n- `--predict_cleavage`: flag to be set True for model to predict cleavage sites in mRNA inputs.\n- `--use_longformer`: flag to be set True when using longformers. When false, standard multi-head transformers are used. \n- `test_path`: path to "
+  },
+  {
+    "repo": "joohyung00/lilac",
+    "full_name": "joohyung00/lilac",
+    "html_url": "https://github.com/joohyung00/lilac",
+    "updated_at": "2026-09-03T16:13:16Z",
+    "default_branch": "main",
+    "license": null,
+    "readme_file": "improve/research/mirna_general_architecture_20260912/lilac_README.md",
+    "readme_sha": "ae22c86765ea7a49e4650223655286802635bde4",
+    "readme_excerpt": "# LILaC: Late Interacting in Layered Component Graph\n\n**Repository for the ARR May Submission: \"LILaC: Late Interacting in Layered Component Graph for Open‑domain Multimodal Multihop Retrieval\".**\n\n---\n\n![Idea Overview of LILaC](assets/images/system_overview.png)\n\n---\n\n## 🗺️ Project Overview\n\nLILaC is a **retrieval‑first framework** for open‑domain question answering over multimodal documents. It introduces two key innovations:\n\n1. **Layered Component Graph (LCG)** – documents are represented at *two granularities* (paragraph / table / image ↔ sentence / row / object) and are connected by explicit intra‑ & inter‑document edges.\n2. **Late‑Interaction Subgraph Retrieval** – a beam‑search traversal that scores candidate edges on‑the‑fly via *subcomponent‑level late interaction*, guided by LLM‑driven query decomposition.\n\nTogether, these ideas deliver **state‑of‑the‑art retrieval on 4 / 5 public benchmarks without any task‑specific fine‑tuning**.\n\n---\n\n## ✨ Key Features\n\n* **Layered component graph** — coarse nodes for speed, fine nodes for precision.\n* **Plug‑and‑play embedders** — MM‑Embed, UniME, mmE5, or any CLIP‑like encoder.\n* **Zero‑shot query decomposition** with Qwen‑2.5‑72B.\n* **Edge‑wise late interaction** — strong signal without pre‑computing edge embeddings.\n* **Five reproducible benchmarks** — MP‑DocVQA, SlideVQA, InfoVQA, MultimodalQA, MMCoQA.\n\n---\n\n## 🏗️ Repository Layout\n\nThe repo cleanly separates **inputs** (`datasets/`) from **pipeline outputs** (`artifacts/`) and from the code that produces them (`src/`):\n\n```\nLILaC/\n├── src/                            # core Python package\n│   ├── utils/                      # generic helpers (path resolution, IO, constants)\n│   ├── models/                     # model wrappers (embedders, MLLMs)\n│   ├── lilac/         "
+  }
+]

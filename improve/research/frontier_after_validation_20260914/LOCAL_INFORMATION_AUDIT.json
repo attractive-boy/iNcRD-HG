@@ -1,0 +1,416 @@
+{
+  "as_of": "2026-09-14",
+  "completed_at_utc": "2026-09-13T23:38:12.640284+00:00",
+  "boundary": {
+    "outcome_labels_read": false,
+    "predictions_read": false,
+    "evaluation_pairs_read": false,
+    "source_holdout_evaluated": false,
+    "new_models_fit": false,
+    "coverage_denominator": "Full MiDrug RNA x drug dictionary Cartesian product, not an evaluation split."
+  },
+  "inputs": [
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/tabicl_pathway_context_inputs_20260913/dictionary.json",
+      "sha256": "7d071aa24ca7def2596a910c0826d5f69bc6233bb7c472c254aa66c2fe396433",
+      "bytes": 646601
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/tabicl_pathway_context_inputs_20260913/drug_gene.npz",
+      "sha256": "e745a1d96b49a2bc3d8c839ab0630e9cdccd3c532bee81ba14763e190dbf0113",
+      "bytes": 2336
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/tabicl_pathway_inputs_20260913/drug_to_gene.tsv",
+      "sha256": "4a4fc14ad23c54ff28dad7dbe8c28c5f57f4339a4ef6ceb3c6e628f60b80e72c",
+      "bytes": 88672
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/tabicl_pathway_context_inputs_20260913/INPUTS.json",
+      "sha256": "dccdfe5c7721a643bb32912b5445b6895c0b63a59af8911ab2e230b7c2ea58e6",
+      "bytes": 5163
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/data_external/functional_priority_20260913/chembl/drug_gene_expanded.npz",
+      "sha256": "b260757b39d4ad855d1911c263c75c6b377f8705c57a14e07127f1dd8d18a450",
+      "bytes": 5325
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/data_external/functional_priority_20260913/chembl/INPUTS.json",
+      "sha256": "88c1ca95a8ea8baa227604ae4f09f978e7cf52679f5e364bd6d5d716b639f998",
+      "bytes": 1142
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/rna_functional_inputs_20260914_v2/windows/sites.tsv",
+      "sha256": "7826e02f5ec8d26f52d6e28df43a494d24a695f20a4ebbf30a6c451ac43f2791",
+      "bytes": 1720073
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/context_functional_20260914/SOURCE_FILTER.json",
+      "sha256": "423c3721f6d6f6e9465374688c0578073b5b6f083e56e1f84dc8ad45f4e3c3e1",
+      "bytes": 29154
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/rna_functional_inputs.py",
+      "sha256": "bb778633e1d6db80b711655bfaf7a5ccf8cfc476a036ef4b06c8d07de33bbd31",
+      "bytes": 27686
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/tabicl_functional_modules.py",
+      "sha256": "fd679003293bb21bdc02d6069d2ce823ee71424f11ec702ecd75f71d1e1d7522",
+      "bytes": 9747
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/context_functional_eval.py",
+      "sha256": "89802a82e6c99f76491d18c25bdda9a5cccef90219a42f4b0153944d8717e8b2",
+      "bytes": 16719
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/context_source_eval.py",
+      "sha256": "320a3a34a7f20ff47d0c7c2d43d66be2367fdd6fd3c2fd0d63281655936b2876",
+      "bytes": 19840
+    },
+    {
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/frontier_after_validation_20260914/audit_existing_information.py",
+      "sha256": "fcb197728266e38b5511dbec8c7cd579716d661a6dfd6f20550fc64cfa9c9bbd",
+      "bytes": 12394
+    }
+  ],
+  "dictionary_sizes": {
+    "mirnas": 605,
+    "lncrnas": 1322,
+    "drugs": 216,
+    "genes": 21318
+  },
+  "drug_matrices": {
+    "original_mechanism": {
+      "shape": [
+        216,
+        21318
+      ],
+      "edges": 645,
+      "drugs_with_targets": 93,
+      "genes": 365
+    },
+    "expanded_binding": {
+      "shape": [
+        216,
+        21318
+      ],
+      "edges": 2227,
+      "drugs_with_targets": 156,
+      "genes": 873
+    }
+  },
+  "site_windows": {
+    "all_cached_windows": {
+      "windows": 6975,
+      "rna_count": 546,
+      "gene_count": 523,
+      "unique_rna_gene_edges": 4083,
+      "raw_support_counts": {
+        "Functional MTI": 824,
+        "Functional MTI (Weak)": 6093,
+        "Functional MTI;Functional MTI (Weak)": 2,
+        "Functional MTI;Functional MTI (Weak);Non-Functional MTI": 1,
+        "Functional MTI;Non-Functional MTI": 13,
+        "Functional MTI;Non-Functional MTI (Weak)": 2,
+        "Functional MTI;Non-Functional MTI;Non-Functional MTI (Weak)": 1,
+        "Non-Functional MTI": 37,
+        "Non-Functional MTI (Weak)": 2
+      },
+      "support_classes": {
+        "mixed_functional_nonfunctional": 17,
+        "nonfunctional_only": 39,
+        "strong_functional_no_nonfunctional": 826,
+        "weak_functional_only": 6093
+      },
+      "coverage": {
+        "all": {
+          "original_mechanism": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 2177,
+            "pair_fraction": 0.016659014386287113,
+            "rnas_with_any_matching_drug": 435,
+            "drugs_with_any_matching_rna": 92,
+            "shared_genes": 218,
+            "site_drug_links_with_site_multiplicity": 4290
+          },
+          "expanded_binding": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 7808,
+            "pair_fraction": 0.059749005203550656,
+            "rnas_with_any_matching_drug": 546,
+            "drugs_with_any_matching_rna": 153,
+            "shared_genes": 523,
+            "site_drug_links_with_site_multiplicity": 19088
+          }
+        },
+        "mixed_functional_nonfunctional": {
+          "original_mechanism": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 17,
+            "pair_fraction": 0.0001300887664524028,
+            "rnas_with_any_matching_drug": 8,
+            "drugs_with_any_matching_rna": 16,
+            "shared_genes": 7,
+            "site_drug_links_with_site_multiplicity": 17
+          },
+          "expanded_binding": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 66,
+            "pair_fraction": 0.000505050505050505,
+            "rnas_with_any_matching_drug": 17,
+            "drugs_with_any_matching_rna": 40,
+            "shared_genes": 14,
+            "site_drug_links_with_site_multiplicity": 66
+          }
+        },
+        "nonfunctional_only": {
+          "original_mechanism": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 36,
+            "pair_fraction": 0.0002754820936639118,
+            "rnas_with_any_matching_drug": 15,
+            "drugs_with_any_matching_rna": 21,
+            "shared_genes": 12,
+            "site_drug_links_with_site_multiplicity": 50
+          },
+          "expanded_binding": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 123,
+            "pair_fraction": 0.0009412304866850322,
+            "rnas_with_any_matching_drug": 23,
+            "drugs_with_any_matching_rna": 60,
+            "shared_genes": 22,
+            "site_drug_links_with_site_multiplicity": 163
+          }
+        },
+        "strong_functional_no_nonfunctional": {
+          "original_mechanism": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 503,
+            "pair_fraction": 0.0038490970309152128,
+            "rnas_with_any_matching_drug": 135,
+            "drugs_with_any_matching_rna": 63,
+            "shared_genes": 64,
+            "site_drug_links_with_site_multiplicity": 795
+          },
+          "expanded_binding": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 2033,
+            "pair_fraction": 0.015557086011631466,
+            "rnas_with_any_matching_drug": 233,
+            "drugs_with_any_matching_rna": 127,
+            "shared_genes": 193,
+            "site_drug_links_with_site_multiplicity": 3441
+          }
+        },
+        "weak_functional_only": {
+          "original_mechanism": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 1710,
+            "pair_fraction": 0.013085399449035813,
+            "rnas_with_any_matching_drug": 410,
+            "drugs_with_any_matching_rna": 82,
+            "shared_genes": 199,
+            "site_drug_links_with_site_multiplicity": 3428
+          },
+          "expanded_binding": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 6340,
+            "pair_fraction": 0.0485154576063667,
+            "rnas_with_any_matching_drug": 534,
+            "drugs_with_any_matching_rna": 146,
+            "shared_genes": 475,
+            "site_drug_links_with_site_multiplicity": 15418
+          }
+        }
+      }
+    },
+    "source_filtered_windows": {
+      "windows": 6936,
+      "rna_count": 546,
+      "gene_count": 521,
+      "unique_rna_gene_edges": 4063,
+      "raw_support_counts": {
+        "Functional MTI": 787,
+        "Functional MTI (Weak)": 6093,
+        "Functional MTI;Functional MTI (Weak)": 2,
+        "Functional MTI;Functional MTI (Weak);Non-Functional MTI": 1,
+        "Functional MTI;Non-Functional MTI": 11,
+        "Functional MTI;Non-Functional MTI (Weak)": 2,
+        "Functional MTI;Non-Functional MTI;Non-Functional MTI (Weak)": 1,
+        "Non-Functional MTI": 37,
+        "Non-Functional MTI (Weak)": 2
+      },
+      "support_classes": {
+        "mixed_functional_nonfunctional": 15,
+        "nonfunctional_only": 39,
+        "strong_functional_no_nonfunctional": 789,
+        "weak_functional_only": 6093
+      },
+      "coverage": {
+        "all": {
+          "original_mechanism": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 2162,
+            "pair_fraction": 0.016544230180593818,
+            "rnas_with_any_matching_drug": 434,
+            "drugs_with_any_matching_rna": 89,
+            "shared_genes": 216,
+            "site_drug_links_with_site_multiplicity": 4252
+          },
+          "expanded_binding": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 7760,
+            "pair_fraction": 0.05938169574533211,
+            "rnas_with_any_matching_drug": 546,
+            "drugs_with_any_matching_rna": 152,
+            "shared_genes": 521,
+            "site_drug_links_with_site_multiplicity": 18943
+          }
+        },
+        "mixed_functional_nonfunctional": {
+          "original_mechanism": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 14,
+            "pair_fraction": 0.00010713192531374349,
+            "rnas_with_any_matching_drug": 6,
+            "drugs_with_any_matching_rna": 14,
+            "shared_genes": 6,
+            "site_drug_links_with_site_multiplicity": 14
+          },
+          "expanded_binding": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 60,
+            "pair_fraction": 0.0004591368227731864,
+            "rnas_with_any_matching_drug": 15,
+            "drugs_with_any_matching_rna": 37,
+            "shared_genes": 13,
+            "site_drug_links_with_site_multiplicity": 60
+          }
+        },
+        "nonfunctional_only": {
+          "original_mechanism": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 36,
+            "pair_fraction": 0.0002754820936639118,
+            "rnas_with_any_matching_drug": 15,
+            "drugs_with_any_matching_rna": 21,
+            "shared_genes": 12,
+            "site_drug_links_with_site_multiplicity": 50
+          },
+          "expanded_binding": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 123,
+            "pair_fraction": 0.0009412304866850322,
+            "rnas_with_any_matching_drug": 23,
+            "drugs_with_any_matching_rna": 60,
+            "shared_genes": 22,
+            "site_drug_links_with_site_multiplicity": 163
+          }
+        },
+        "strong_functional_no_nonfunctional": {
+          "original_mechanism": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 490,
+            "pair_fraction": 0.0037496173859810225,
+            "rnas_with_any_matching_drug": 131,
+            "drugs_with_any_matching_rna": 57,
+            "shared_genes": 61,
+            "site_drug_links_with_site_multiplicity": 760
+          },
+          "expanded_binding": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 1981,
+            "pair_fraction": 0.015159167431894705,
+            "rnas_with_any_matching_drug": 227,
+            "drugs_with_any_matching_rna": 122,
+            "shared_genes": 189,
+            "site_drug_links_with_site_multiplicity": 3302
+          }
+        },
+        "weak_functional_only": {
+          "original_mechanism": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 1710,
+            "pair_fraction": 0.013085399449035813,
+            "rnas_with_any_matching_drug": 410,
+            "drugs_with_any_matching_rna": 82,
+            "shared_genes": 199,
+            "site_drug_links_with_site_multiplicity": 3428
+          },
+          "expanded_binding": {
+            "possible_pairs": 130680,
+            "pairs_with_at_least_one_exact_gene_match": 6340,
+            "pair_fraction": 0.0485154576063667,
+            "rnas_with_any_matching_drug": 534,
+            "drugs_with_any_matching_rna": 146,
+            "shared_genes": 475,
+            "site_drug_links_with_site_multiplicity": 15418
+          }
+        }
+      }
+    }
+  },
+  "source_filter": {
+    "overlap_with_validation_or_holdout": 39,
+    "retained_sites": 6936,
+    "excluded_site_support_classes": {
+      "strong_functional_no_nonfunctional": 37,
+      "mixed_functional_nonfunctional": 2
+    },
+    "excluded_sites_also_nonfunctional_only": 0
+  },
+  "drug_actions": {
+    "rows": 654,
+    "unique_drug_gene_edges": 645,
+    "drugs": 93,
+    "genes": 365,
+    "actions_by_row": {
+      "INHIBITOR": 563,
+      "POSITIVE ALLOSTERIC MODULATOR": 32,
+      "STABILISER": 23,
+      "BLOCKER": 11,
+      "AGONIST": 9,
+      "OPENER": 6,
+      "MODULATOR": 4,
+      "ANTAGONIST": 3,
+      "POSITIVE MODULATOR": 2,
+      "DEGRADER": 1
+    },
+    "target_types_by_row": {
+      "PROTEIN COMPLEX": 181,
+      "SINGLE PROTEIN": 136,
+      "PROTEIN COMPLEX GROUP": 122,
+      "PROTEIN FAMILY": 103,
+      "PROTEIN NUCLEIC-ACID COMPLEX": 98,
+      "CHIMERIC PROTEIN": 14
+    },
+    "edges_with_multiple_distinct_action_strings": 1,
+    "mechanism_rows_with_no_action": 0,
+    "interpretation": "Raw ChEMBL mechanism categories; no RNA effect or drug-response sign inferred. Complex-target annotations need per-gene review."
+  },
+  "transcript_annotation": {
+    "cached_refseq_file_extensions": {
+      ".json": 10,
+      ".fasta": 10
+    },
+    "cds_or_utr_annotation_audited": false,
+    "region_assignment_from_current_fasta_possible": false,
+    "limitation": "FASTA + request metadata lack transcript CDS/UTR features; current sequence verification does not establish site region or original experimental isoform."
+  },
+  "cautions": [
+    "Support labels describe miRTarBase evidence categories, not RNA-drug outcome labels.",
+    "Non-Functional annotations are assay/context-specific evidence, not confirmed negative RNA-drug associations.",
+    "A shared gene is a candidate connection, not evidence of a causal drug-response mechanism.",
+    "Counts of 39 source-excluded sites and 39 nonfunctional-only sites describe different sets."
+  ],
+  "outputs": {
+    "local_site_drug_coverage.csv": {
+      "sha256": "7f805bb8450815694350139294bf26207fe23e66640a50dbac18e72d4af1b735",
+      "rows": 4320
+    }
+  }
+}

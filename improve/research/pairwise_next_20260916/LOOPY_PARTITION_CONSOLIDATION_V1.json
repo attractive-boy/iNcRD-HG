@@ -1,0 +1,154 @@
+{
+  "created_at_utc": "2026-09-15T18:38:08.335163+00:00",
+  "assessment_sha256": "e96fd5a3ed05c8fecaf13915a4125812c26f8427f17263fb37afb997b149bb9f",
+  "old_csv_sha256": "33d69f9e17075032ec0a3b1184b75482a4abb5e7f9a2ad20b9fd47e195ffe332",
+  "new_csv_sha256": "e8275fbe65e791446946bd2cbbee65b8a8fc690bb3dfa761af723ef9ceacabb8",
+  "new_rows": [
+    {
+      "label": "anchor_residual_loopy_path_v2",
+      "name": "强参考残差＋Loopy路径消息",
+      "task": "MiDrug",
+      "auc": 0.9558952843449667,
+      "ap": 0.9175823488961825,
+      "delta_auc": -0.0006392275841012666,
+      "delta_ap": -0.0019762450064688,
+      "auc_wins": 0,
+      "ap_wins": 0,
+      "min_delta_auc": -0.0010148930486385,
+      "min_delta_ap": -0.0022204802289395,
+      "macro_drug_ap": 0.7959426740209632,
+      "fresh_gate": false,
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "offset_null_gate": false
+    },
+    {
+      "label": "anchor_residual_loopy_path_v2",
+      "name": "强参考残差＋Loopy路径消息",
+      "task": "LncDrug",
+      "auc": 0.9905486561004956,
+      "ap": 0.981093050989308,
+      "delta_auc": -4.937463131442961e-05,
+      "delta_ap": -0.00010088137414075904,
+      "auc_wins": 2,
+      "ap_wins": 2,
+      "min_delta_auc": -0.0001793078716155,
+      "min_delta_ap": -0.0003580302802871,
+      "macro_drug_ap": 0.9525492582631765,
+      "fresh_gate": false,
+      "performance_gate": false,
+      "mechanism_gate": false,
+      "offset_null_gate": false
+    }
+  ],
+  "old_rows": 26,
+  "new_historical_neural_fits": 16,
+  "new_partition_neural_fits": 12,
+  "cumulative_partition_neural_fits": 288,
+  "new_outer_neural_fits": 0,
+  "reference_refits": 0,
+  "identity_scoring_records": 0,
+  "all_metrics_recomputed_in_frozen_report": true,
+  "all_report_and_prediction_hashes_verified": true,
+  "partition_gate": false,
+  "outer_skipped_because_partition_gate_failed": true,
+  "uncertainty": {
+    "MiDrug": {
+      "method": "Paired two-way endpoint pigeonhole bootstrap; same endpoint draws across all overlapping splits; mean per-split metric difference.",
+      "requested_resamples": 1000,
+      "valid_resamples": 1000,
+      "unique_rnas": 605,
+      "unique_drugs": 216,
+      "selection_bias_corrected": false,
+      "new_biological_validation": false,
+      "intervals": {
+        "anchor": {
+          "auc": {
+            "low": -0.001914784456047198,
+            "high": 0.0005921602829982597,
+            "positive_fraction": 0.147
+          },
+          "ap": {
+            "low": -0.006235885692941856,
+            "high": 0.0007052214633882408,
+            "positive_fraction": 0.072
+          }
+        },
+        "offset_composed": {
+          "auc": {
+            "low": -0.001914784456047198,
+            "high": 0.0005921602829982597,
+            "positive_fraction": 0.147
+          },
+          "ap": {
+            "low": -0.006235885692941856,
+            "high": 0.0007052214633882408,
+            "positive_fraction": 0.072
+          }
+        },
+        "no_path_message": {
+          "auc": {
+            "low": -0.0016629893614011357,
+            "high": 0.00037252027630359214,
+            "positive_fraction": 0.103
+          },
+          "ap": {
+            "low": -0.005001803993934111,
+            "high": 0.000245826890901741,
+            "positive_fraction": 0.041
+          }
+        }
+      }
+    },
+    "LncDrug": {
+      "method": "Paired two-way endpoint pigeonhole bootstrap; same endpoint draws across all overlapping splits; mean per-split metric difference.",
+      "requested_resamples": 1000,
+      "valid_resamples": 1000,
+      "unique_rnas": 1012,
+      "unique_drugs": 215,
+      "selection_bias_corrected": false,
+      "new_biological_validation": false,
+      "intervals": {
+        "anchor": {
+          "auc": {
+            "low": -0.0007654548217625003,
+            "high": 0.000518110346902383,
+            "positive_fraction": 0.451
+          },
+          "ap": {
+            "low": -0.004397270681021477,
+            "high": 0.001960160449764019,
+            "positive_fraction": 0.468
+          }
+        },
+        "offset_composed": {
+          "auc": {
+            "low": -0.0007654548217625003,
+            "high": 0.000518110346902383,
+            "positive_fraction": 0.451
+          },
+          "ap": {
+            "low": -0.004397270681021477,
+            "high": 0.001960160449764019,
+            "positive_fraction": 0.468
+          }
+        },
+        "no_path_message": {
+          "auc": {
+            "low": -0.0007824390620332939,
+            "high": 0.0003435960921602733,
+            "positive_fraction": 0.325
+          },
+          "ap": {
+            "low": -0.004098371277502299,
+            "high": 0.0019160235999186178,
+            "positive_fraction": 0.395
+          }
+        }
+      }
+    }
+  },
+  "confirmed_final_innovations": 0,
+  "default_replaced": false,
+  "sha256": "c917e09877dc6f16ac39cb7ef044486ff474652395ea83d1bee71c39b9b894fd"
+}

@@ -1,0 +1,2571 @@
+{
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22signed+graph%22+OR+TITLE_ABS%3A%22regulatory+direction%22+OR+TITLE_ABS%3A%22negative+correlation%22%29+AND+%28TITLE_ABS%3ARNA+OR+TITLE_ABS%3Adrug%29+AND+FIRST_PDATE%3A%5B2024-01-01+TO+2026-09-13%5D&format=json&resultType=core&pageSize=12",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1061,
+    "nextCursorMark": "AoIIQEGUSyg1NjI2Njc5MA==",
+    "nextPageUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=(TITLE_ABS:\"signed graph\" OR TITLE_ABS:\"regulatory direction\" OR TITLE_ABS:\"negative correlation\") AND (TITLE_ABS:RNA OR TITLE_ABS:drug) AND FIRST_PDATE:[2024-01-01 TO 2026-09-13]&cursorMark=AoIIQEGUSyg1NjI2Njc5MA==&resultType=core&pageSize=12&format=json",
+    "request": {
+      "queryString": "(TITLE_ABS:\"signed graph\" OR TITLE_ABS:\"regulatory direction\" OR TITLE_ABS:\"negative correlation\") AND (TITLE_ABS:RNA OR TITLE_ABS:drug) AND FIRST_PDATE:[2024-01-01 TO 2026-09-13]",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 12,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "PPR1250526",
+          "source": "PPR",
+          "doi": "10.64898/2026.06.08.730656",
+          "title": "ANCHOR: haplotype-aware allelic and isoform inference from single-cell long-read RNA sequencing with de novo variant calling",
+          "authorString": "Fu Z, Zhang C, Yan Y, Xu Y, Yin X, Tao T, Lu P, Liang Y, Wu H, Cui W, Hou R, Chen X, Ke Y, Li Y, Chen Z, Huang T, Wu K, Yuan S.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Fu Z",
+                "firstName": "Zhi-Can",
+                "lastName": "Fu",
+                "initials": "Z"
+              },
+              {
+                "fullName": "Zhang C",
+                "firstName": "Chuanxin",
+                "lastName": "Zhang",
+                "initials": "C"
+              },
+              {
+                "fullName": "Yan Y",
+                "firstName": "Yelian",
+                "lastName": "Yan",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Xu Y",
+                "firstName": "Yuxin",
+                "lastName": "Xu",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Yin X",
+                "firstName": "Xiaoyu",
+                "lastName": "Yin",
+                "initials": "X"
+              },
+              {
+                "fullName": "Tao T",
+                "firstName": "Tietuo",
+                "lastName": "Tao",
+                "initials": "T"
+              },
+              {
+                "fullName": "Lu P",
+                "firstName": "Peng",
+                "lastName": "Lu",
+                "initials": "P"
+              },
+              {
+                "fullName": "Liang Y",
+                "firstName": "Yalin",
+                "lastName": "Liang",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Wu H",
+                "firstName": "Haiyang",
+                "lastName": "Wu",
+                "initials": "H"
+              },
+              {
+                "fullName": "Cui W",
+                "firstName": "Wentao",
+                "lastName": "Cui",
+                "initials": "W"
+              },
+              {
+                "fullName": "Hou R",
+                "firstName": "Runtong",
+                "lastName": "Hou",
+                "initials": "R"
+              },
+              {
+                "fullName": "Chen X",
+                "firstName": "Xuepeng",
+                "lastName": "Chen",
+                "initials": "X"
+              },
+              {
+                "fullName": "Ke Y",
+                "firstName": "Yuwen",
+                "lastName": "Ke",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Li Y",
+                "firstName": "Yanqiang",
+                "lastName": "Li",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Chen Z",
+                "firstName": "Zi-Jiang",
+                "lastName": "Chen",
+                "initials": "Z"
+              },
+              {
+                "fullName": "Huang T",
+                "firstName": "Tao",
+                "lastName": "Huang",
+                "initials": "T"
+              },
+              {
+                "fullName": "Wu K",
+                "firstName": "Keliang",
+                "lastName": "Wu",
+                "initials": "K"
+              },
+              {
+                "fullName": "Yuan S",
+                "firstName": "Shenli",
+                "lastName": "Yuan",
+                "initials": "S"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Long-read RNA sequencing enables haplotype– and isoform-resolved allelic analysis of transcriptomes, yet extending this capability to single cells and distinct cell types remains computationally challenging due to sparse coverage, sequencing errors, incomplete variant information, and reference-biased transcript assignment. Here we present ANCHOR, a haplotype-aware framework for single-cell long-read RNA sequencing that performs de novo expressed-variant discovery, molecule-level haplotype assignment and isoform-resolved allelic quantification. ANCHOR combines a signed-graph variant caller, pair hidden Markov modelling and beta-binomial UMI aggregation to infer parental allele counts for genes and splice-resolved isoforms, without requiring a pre-existing phased genotype or deep learning. In human single-cell long-read RNA benchmarks, ANCHOR improved variant-calling performance over tested long-read RNA callers at single-cell and low-to-moderate coverage, and its beta-binomial model reduced depth-driven false positives in allele-specific expression testing. Applied to newly generated single-cell long-read RNA-seq data from reciprocal mouse crosses during gastrulation, ANCHOR resolved cell-type– and isoform-specific parent-of-origin imprinting and identified an antagonistic maternally biased  Sgce isoform. ANCHOR provides a general framework for allele-and isoform-resolved analysis of diploid single-cell long-read transcriptomes.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "2024YFC2706802",
+                "agency": "the National Key Research and Development Program of China",
+                "orderIn": 0
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.06.08.730656"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by-nc-nd",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-06-12",
+          "firstIndexDate": "2026-06-12",
+          "firstPublicationDate": "2026-06-11"
+        },
+        {
+          "id": "42635229",
+          "source": "MED",
+          "pmid": "42635229",
+          "pmcid": "PMC13501320",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13501320"
+            ]
+          },
+          "doi": "10.1093/bioinformatics/btag385",
+          "title": "A novel ILP framework to identify compensatory pathways in genetic interaction networks with GIDEON.",
+          "authorString": "Garcia JJ, Yu KM, Freudenreich CH, Cowen LJ.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Garcia JJ",
+                "firstName": "Jocelyn J",
+                "lastName": "Garcia",
+                "initials": "JJ",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0001-0512-2854"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Computer Science, Tufts University, Medford, MA 02155, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Yu KM",
+                "firstName": "Kevin M",
+                "lastName": "Yu",
+                "initials": "KM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0002-1164-1252"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Computer Science, Tufts University, Medford, MA 02155, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Freudenreich CH",
+                "firstName": "Catherine H",
+                "lastName": "Freudenreich",
+                "initials": "CH",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-1652-2917"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biology, Tufts University, Medford, MA 02155, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Cowen LJ",
+                "firstName": "Lenore J",
+                "lastName": "Cowen",
+                "initials": "LJ",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6698-6413"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Computer Science, Tufts University, Medford, MA 02155, United States."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6698-6413"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-1652-2917"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0001-0512-2854"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0002-1164-1252"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "Suppl 2",
+            "volume": "42",
+            "journalIssueId": 4258990,
+            "dateOfPublication": "2026 Aug",
+            "monthOfPublication": 8,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-08-01",
+            "journal": {
+              "title": "Bioinformatics (Oxford, England)",
+              "medlineAbbreviation": "Bioinformatics",
+              "issn": "1367-4803",
+              "essn": "1367-4811",
+              "isoabbreviation": "Bioinformatics",
+              "nlmid": "9808944"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "btag385",
+          "abstractText": "<h4>Motivation</h4>In Baker's yeast, there exists a comprehensive collection of pairwise epistasis experiments that, for nearly every pair of non-essential genes, measures the growth of the double-knockout strain as compared to its component single knockouts. This data can be represented as a weighted signed graph termed the genetic interaction network, and we introduce a new ILP-based method named GIDEON to search for a diverse collection of Between-Pathway Models (BPMs) in this network, where BPMs are a graph motif signature that indicates potential compensatory pathways in the genetic interaction network.<h4>Results</h4>With both an improved distribution-informed edge weighting scheme and an improved ILP method, GIDEON produces BPM collections that are substantially larger and with better functional enrichment compared to previous methods. We find some interesting new BPM gene sets including one with potential insights into antifungal drug targets through ties between ergosterol and aromatic amino acid biosynthesis.<h4>Availability and implementation</h4>Code and the full set of BPMs we uncover are available at https://github.com/jocelynjgarcia/GIDEON/ and at https://doi.org/10.5281/zenodo.20130057.",
+          "affiliation": "Department of Computer Science, Tufts University, Medford, MA 02155, United States.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article",
+              "Research Support, N.I.H., Extramural"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "NIH HHS",
+                "acronym": "NH",
+                "orderIn": 0
+              },
+              {
+                "agency": "DIAMONDS REU",
+                "orderIn": 0
+              },
+              {
+                "grantId": "2149871",
+                "agency": "National Science Foundation",
+                "orderIn": 0
+              },
+              {
+                "grantId": "R01 GM163241",
+                "agency": "NIGMS NIH HHS",
+                "acronym": "GM",
+                "orderIn": 0
+              },
+              {
+                "grantId": "R01GM163241",
+                "agency": "National Institute Of General Medical Sciences of the National Institutes of Health",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Institutes of Health",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Saccharomyces cerevisiae",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    },
+                    {
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computational Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Epistasis, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Algorithms"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Software"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Gene Regulatory Networks"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/bioinformatics/btag385"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13501320"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13501320?pdf=render"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "41959282",
+                "source": "MED",
+                "reference": "bioRxiv. 2026 Mar 31:2026.03.29.715009. doi: 10.64898/2026.03.29.715009.",
+                "type": "Update of",
+                "orderIn": 1
+              },
+              {
+                "id": "PPR1217114",
+                "source": "PPR",
+                "type": "Preprint in",
+                "note": "Link created based on a title-first author match",
+                "orderIn": 10002
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "citedByCount": 0,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-08-24",
+          "dateOfCreation": "2026-08-24",
+          "firstIndexDate": "2026-08-25",
+          "fullTextReceivedDate": "2026-09-10",
+          "dateOfRevision": "2026-09-07",
+          "firstPublicationDate": "2026-08-01"
+        },
+        {
+          "id": "PPR1210739",
+          "source": "PPR",
+          "doi": "10.64898/2026.04.29.721775",
+          "title": "A Scalable Sign-Aware Multi-Omics Knowledge Graph Foundation Model for Mechanistic Drug Action and Clinical Response Predictions",
+          "authorString": "Mottaqi M, Zhang S, Adoremos I, Zhang P, Xie L.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Mottaqi M",
+                "firstName": "Mohammadsadeq",
+                "lastName": "Mottaqi",
+                "initials": "M"
+              },
+              {
+                "fullName": "Zhang S",
+                "firstName": "Shuo",
+                "lastName": "Zhang",
+                "initials": "S"
+              },
+              {
+                "fullName": "Adoremos I",
+                "firstName": "Ian",
+                "lastName": "Adoremos",
+                "initials": "I"
+              },
+              {
+                "fullName": "Zhang P",
+                "firstName": "Pengyue",
+                "lastName": "Zhang",
+                "initials": "P"
+              },
+              {
+                "fullName": "Xie L",
+                "firstName": "Lei",
+                "lastName": "Xie",
+                "initials": "L"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "Mechanistically predicting drug action requires distinguishing activating from inhibitory interactions across broad chemical space, yet most biomedical knowledge graphs and graph neural networks (GNNs) rely on unsigned associations that obscure regulatory logic and have a limited chemical coverage. Here we present SIGMA-KG (  SIG ned  M ulti-omics  A tlas  K nowledge  G raph) and FLASH (  F ast  L ightweight  A rchitecture for  S igned  H eterogeneous GNN), a graph foundation model pretrained through self-supervised learning on SIGMA-KG. SIGMA-KG integrates chemogenomic perturbation, transcriptomic, proteomic, and clinical data while explicitly encoding biological polarity and directionality. FLASH preserves polarity composition across multi-hop pathways through structural balance principles, enabling scalable mechanistic reasoning. Without task-specific fine-tuning, FLASH consistently outperforms or matches nine state-of-the-art unsigned, relational, and signed graph baselines across drug mode-of-action prediction, clinical response modeling, and drug–drug interaction prediction, while substantially improving computational efficiency. FLASH further enables explainable inductive drug repurposing, achieving a 69.6% external clinical validation success rate across four complex diseases.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.04.29.721775"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-05-19",
+          "firstIndexDate": "2026-05-19",
+          "firstPublicationDate": "2026-05-04"
+        },
+        {
+          "id": "40147185",
+          "source": "MED",
+          "pmid": "40147185",
+          "doi": "10.1016/j.compbiomed.2025.110067",
+          "title": "SGCLMD: Signed graph-based contrastive learning model for predicting somatic mutation-drug association.",
+          "authorString": "Wang X, Feng H, Zhang Y, Lin F.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Wang X",
+                "firstName": "Xiaosong",
+                "lastName": "Wang",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Information and Artificial Intelligence, Anhui Agricultural University, Hefei, Anhui, 230036, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Feng H",
+                "firstName": "Haisong",
+                "lastName": "Feng",
+                "initials": "H",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Informatics, Xiamen University, Xiamen, Fujian, 361105, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang Y",
+                "firstName": "Yilei",
+                "lastName": "Zhang",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "College of Animal Science and Technology, Anhui Agricultural University, Hefei, Anhui, 230036, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lin F",
+                "firstName": "Fan",
+                "lastName": "Lin",
+                "initials": "F",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2530-859X"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Informatics, Xiamen University, Xiamen, Fujian, 361105, China. Electronic address: iamafan@xmu.edu.cn."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2530-859X"
+              }
+            ]
+          },
+          "journalInfo": {
+            "volume": "190",
+            "journalIssueId": 3931484,
+            "dateOfPublication": "2025 May",
+            "monthOfPublication": 5,
+            "yearOfPublication": 2025,
+            "printPublicationDate": "2025-05-01",
+            "journal": {
+              "title": "Computers in biology and medicine",
+              "medlineAbbreviation": "Comput Biol Med",
+              "issn": "0010-4825",
+              "essn": "1879-0534",
+              "isoabbreviation": "Comput Biol Med",
+              "nlmid": "1250250"
+            }
+          },
+          "pubYear": "2025",
+          "pageInfo": "110067",
+          "abstractText": "Somatic mutations could influence critical cellular processes, leading to uncontrolled cell growth and tumor formation. Understanding the intricate interactions between somatic mutations and drugs was crucial for advancing our knowledge of the underlying biological mechanisms of cancer. This knowledge, in turn, could drive advancements in cancer detection, diagnosis, and treatment. Exploring the relationships between specific somatic mutations and drug responses held the potential to identify targeted therapeutic interventions and improve personalized treatment strategies for cancer patients. In this study, we introduced a computational model, the signed graph comparison learning for mutation-drug associations (SGCLMD), designed to predict signs of somatic mutation-drug associations. Initially, we leveraged clinical data to construct a benchmark dataset encompassing somatic mutation-drug associations. We proposed a graph enhancement method, employing a random perturbation strategy, to expand the signed graph. This approach not only preserved interaction information across the two perspectives of the signed graph but also retained implicit relationships between these perspectives. Furthermore, we devised a multi-view comparison loss algorithm to learn node representations for the graph generated post-random perturbation. Through parameter optimization using 5-fold cross-validation, our SGCLMD model achieves optimal area under the curve (AUC) and area under the precision-recall curve (AUPR) values of 0.8306 and 0.8751, respectively, representing improvements of 3 % and 3.1 % over the state-of-the-art method. Through ablation experiments and case studies, we validated the importance of graph enhancement methods and multi-view contrast learning modules, demonstrating SGCLMD's potential in predicting somatic mutation-drug associations. The code and dataset for SGCLMD are available at https://github.com/wangxiaosong96/SGCLMD.",
+          "affiliation": "School of Information and Artificial Intelligence, Anhui Agricultural University, Hefei, Anhui, 230036, China.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Neoplasms",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "DT",
+                      "qualifierName": "drug therapy",
+                      "majorTopic_YN": "N"
+                    },
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Antineoplastic Agents",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "TU",
+                      "qualifierName": "therapeutic use",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computational Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Mutation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Algorithms"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Machine Learning"
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Graph Neural Network",
+              "Signed Graph",
+              "Multi-view Contrastive Learning",
+              "Somatic Mutation-drug Association"
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Antineoplastic Agents",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1016/j.compbiomed.2025.110067"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2025-04-20",
+          "dateOfCreation": "2025-03-27",
+          "firstIndexDate": "2025-04-01",
+          "dateOfRevision": "2025-04-20",
+          "electronicPublicationDate": "2025-03-26",
+          "firstPublicationDate": "2025-03-26"
+        },
+        {
+          "id": "PPR1217114",
+          "source": "PPR",
+          "doi": "10.64898/2026.03.29.715009",
+          "title": "A Novel ILP Framework to Identify Compensatory Pathways in Genetic Interaction Networks with GIDEON",
+          "authorString": "Garcia JJ, Yu KM, Freudenreich CH, Cowen LJ.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Garcia JJ",
+                "firstName": "Jocelyn",
+                "lastName": "Garcia",
+                "initials": "JJ"
+              },
+              {
+                "fullName": "Yu KM",
+                "firstName": "Kevin",
+                "lastName": "Yu",
+                "initials": "KM"
+              },
+              {
+                "fullName": "Freudenreich CH",
+                "firstName": "Catherine",
+                "lastName": "Freudenreich",
+                "initials": "CH"
+              },
+              {
+                "fullName": "Cowen LJ",
+                "firstName": "Lenore",
+                "lastName": "Cowen",
+                "initials": "LJ"
+              }
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "In Baker’s yeast, there exists a comprehensive collection of pairwise epistasis experiments that, for nearly every pair of non-essential genes, measures the growth of the double-knockout strain as compared to its component single knockouts. This data can be represented as a weighted signed graph termed the genetic interaction network, and we introduce a new ILP-based method named GIDEON to search for a diverse collection of Between-Pathway Models (BPMs) in this network, where BPMs are a graph motif signature that indicates potential compensatory pathways in the genetic interaction network. With both an improved distribution-informed edge weighting scheme and an improved ILP method, GIDEON produces BPM collections that are substantially larger and with better functional enrichment compared to previous methods. We find some interesting new BPM gene sets including one with potential insights into antifungal drug targets through ties between ergosterol and aromatic amino acid biosynthesis.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "bioRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.03.29.715009"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "42635229",
+                "source": "MED",
+                "reference": "Bioinformatics (Oxford, England). \n    2026 Aug;42(Supplement_2):btag385",
+                "type": "Preprint of",
+                "note": "Link created based on a title-first author match",
+                "orderIn": 10001
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by-nd",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-05-19",
+          "firstIndexDate": "2026-05-19",
+          "firstPublicationDate": "2026-03-31"
+        },
+        {
+          "id": "40811368",
+          "source": "MED",
+          "pmid": "40811368",
+          "doi": "10.1109/tcbbio.2025.3548695",
+          "title": "MDSGCN: Predicting Multiple Types of Mutation-Drug Association Through Signed Graph Convolution Network.",
+          "authorString": "Feng H, Wang X, Lin F.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Feng H",
+                "firstName": "Haisong",
+                "lastName": "Feng",
+                "initials": "H"
+              },
+              {
+                "fullName": "Wang X",
+                "firstName": "Xiaosong",
+                "lastName": "Wang",
+                "initials": "X"
+              },
+              {
+                "fullName": "Lin F",
+                "firstName": "Fan",
+                "lastName": "Lin",
+                "initials": "F",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2530-859X"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2530-859X"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "3",
+            "volume": "22",
+            "journalIssueId": 3998693,
+            "dateOfPublication": "2025 May-Jun",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2025,
+            "printPublicationDate": "2025-05-01",
+            "journal": {
+              "title": "IEEE transactions on computational biology and bioinformatics",
+              "medlineAbbreviation": "IEEE Trans Comput Biol Bioinform",
+              "issn": "2998-4165",
+              "essn": "2998-4165",
+              "isoabbreviation": "IEEE Trans Comput Biol Bioinform",
+              "nlmid": "9919068173606676"
+            }
+          },
+          "pubYear": "2025",
+          "pageInfo": "1072-1085",
+          "abstractText": "Cancer constitutes a significant global public health challenge, resulting in millions of fatalities annually. Gene mutations are pivotal in initiating and advancing cancer, disrupting regular cellular growth and differentiation mechanisms, thereby fostering tumor development. Consequently, comprehending the intricacies of gene mutations and their interplay with pharmaceuticals is imperative for cancer prevention, diagnosis, and treatment. Despite drug therapy being a cornerstone in cancer treatment, prognosticating and assessing multiple types of mutation-drug association remains a laborious and costly work. To address this problem, we develop a deep learning model grounded in signed graph convolution network (MDSGCN) to predict multiple types of mutation-drug association. We establish mutation-drug association as a signed bipartite network, comprising mutation nodes, drug nodes and two edge types including sensitive or resistant of mutations in drugs. MDSGCN extracts the subgraphs from the mutation-drug pairs in signed bipartite network, utilizing a label algorithm to learn subgraph structural features. Furthermore, MDSGCN integrates biological features (i.e., mutation-mutation similarity and drug-drug similarity) as the auxiliary information with the subgraph structural features to construct the prediction model. Experimental results demonstrate that our model consistently outperforms the state-of-the-art methods. The case study shows that MDSGCN can discover novel mutation-drug association and the association type.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1109/TCBBIO.2025.3548695"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2025-08-14",
+          "firstIndexDate": "2025-08-21",
+          "dateOfRevision": "2025-08-15",
+          "firstPublicationDate": "2025-05-01"
+        },
+        {
+          "id": "42479790",
+          "source": "MED",
+          "pmid": "42479790",
+          "pmcid": "PMC13387515",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13387515"
+            ]
+          },
+          "doi": "10.1371/journal.pone.0353674",
+          "title": "hLMR1, a hepatocyte-specific long noncoding RNA that represses amino acid catabolism through pre-mRNA interaction in human liver.",
+          "authorString": "Jaso-Vera ME, Takaoka S, Faccioli LAP, Hu Z, Soto-Gutierrez A, Ruan X.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Jaso-Vera ME",
+                "firstName": "Marcos E",
+                "lastName": "Jaso-Vera",
+                "initials": "ME",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3479-4844"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Division of Endocrinology, Diabetes and Metabolism, Johns Hopkins University School of Medicine, Baltimore, Maryland, United States of America."
+                    },
+                    {
+                      "affiliation": "Institute for Fundamental Biomedical Research, Johns Hopkins All Children's Hospital, St. Petersburg, Florida, United States of America."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Takaoka S",
+                "firstName": "Shohei",
+                "lastName": "Takaoka",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3123-8367"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Division of Endocrinology, Diabetes and Metabolism, Johns Hopkins University School of Medicine, Baltimore, Maryland, United States of America."
+                    },
+                    {
+                      "affiliation": "Institute for Fundamental Biomedical Research, Johns Hopkins All Children's Hospital, St. Petersburg, Florida, United States of America."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Faccioli LAP",
+                "firstName": "Lanuza A P",
+                "lastName": "Faccioli",
+                "initials": "LAP",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Pathology, University of Pittsburgh, Pittsburgh, Pennsylvania, United States of America."
+                    },
+                    {
+                      "affiliation": "Center for Transcriptional Medicine, University of Pittsburgh, Pittsburgh, Pennsylvania, United States of America."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Hu Z",
+                "firstName": "Zhiping",
+                "lastName": "Hu",
+                "initials": "Z",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Pathology, University of Pittsburgh, Pittsburgh, Pennsylvania, United States of America."
+                    },
+                    {
+                      "affiliation": "Center for Transcriptional Medicine, University of Pittsburgh, Pittsburgh, Pennsylvania, United States of America."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Soto-Gutierrez A",
+                "firstName": "Alejandro",
+                "lastName": "Soto-Gutierrez",
+                "initials": "A",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Pathology, University of Pittsburgh, Pittsburgh, Pennsylvania, United States of America."
+                    },
+                    {
+                      "affiliation": "Center for Transcriptional Medicine, University of Pittsburgh, Pittsburgh, Pennsylvania, United States of America."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Ruan X",
+                "firstName": "Xiangbo",
+                "lastName": "Ruan",
+                "initials": "X",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7333-9561"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Division of Endocrinology, Diabetes and Metabolism, Johns Hopkins University School of Medicine, Baltimore, Maryland, United States of America."
+                    },
+                    {
+                      "affiliation": "Institute for Fundamental Biomedical Research, Johns Hopkins All Children's Hospital, St. Petersburg, Florida, United States of America."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3123-8367"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3479-4844"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7333-9561"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "7",
+            "volume": "21",
+            "journalIssueId": 4223974,
+            "dateOfPublication": "2026 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-01-01",
+            "journal": {
+              "title": "PloS one",
+              "medlineAbbreviation": "PLoS One",
+              "issn": "1932-6203",
+              "essn": "1932-6203",
+              "isoabbreviation": "PLoS One",
+              "nlmid": "101285081"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "e0353674",
+          "abstractText": "Amino acid (AA) catabolism and ureagenesis in the liver are essential for maintaining systemic nitrogen homeostasis. Patients with Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD) exhibit impaired hepatic AA catabolism and urea production, accompanied by repression of genes governing these pathways. The molecular basis of this repression remains unknown. Here, we identify the hepatocyte-specific long noncoding RNA hLMR1 as a key suppressor of hepatic AA catabolism. Using a humanized liver mouse model, we show that hLMR1 knockdown broadly upregulates genes involved in AA degradation and ureagenesis. Chromatin isolation by RNA purification (ChIRP) coupled with RNA-seq reveals extensive interactions between hLMR1 and the pre-mRNAs of AA catabolism genes, mediated by a complementary motif within hLMR1 (nucleotides 587-598). In primary human hepatocytes, hLMR1 overexpression inhibits glucagon-induced activation of AA catabolic genes, whereas deletion of the 587-598 region abrogates this effect. Analysis of human liver RNA-seq datasets demonstrates a negative correlation between hLMR1 expression and AA catabolic gene programs in MASLD. Together, these findings uncover hLMR1 as a previously unrecognized regulator of hepatic nitrogen metabolism, linking lncRNA dysregulation to metabolic dysfunction in MASLD.",
+          "affiliation": "Division of Endocrinology, Diabetes and Metabolism, Johns Hopkins University School of Medicine, Baltimore, Maryland, United States of America.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic-eCollection",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "R01 DK099257",
+                "agency": "NIDDK NIH HHS",
+                "acronym": "DK",
+                "orderIn": 0
+              },
+              {
+                "grantId": "23SCEFIA1156649",
+                "agency": "American Heart Association",
+                "orderIn": 0
+              },
+              {
+                "grantId": "24DIVSUP1291162",
+                "agency": "American Heart Association",
+                "orderIn": 0
+              },
+              {
+                "grantId": "ACRI fellowship",
+                "agency": "Johns Hopkins All Children’s Foundation",
+                "orderIn": 0
+              },
+              {
+                "grantId": "DK099257",
+                "agency": "National Institute of Diabetes and Digestive and Kidney Diseases",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Liver",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Hepatocytes",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Amino Acids",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "RNA Precursors",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    },
+                    {
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "RNA, Long Noncoding",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    },
+                    {
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Amino Acids",
+                "registryNumber": "0"
+              },
+              {
+                "name": "RNA Precursors",
+                "registryNumber": "0"
+              },
+              {
+                "name": "RNA, Long Noncoding",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1371/journal.pone.0353674"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13387515"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13387515?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "citedByCount": 0,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2026-07-21",
+          "dateOfCreation": "2026-07-21",
+          "firstIndexDate": "2026-07-21",
+          "fullTextReceivedDate": "2026-09-03",
+          "dateOfRevision": "2026-08-22",
+          "electronicPublicationDate": "2026-07-21",
+          "firstPublicationDate": "2026-07-21"
+        },
+        {
+          "id": "42352290",
+          "source": "MED",
+          "pmid": "42352290",
+          "doi": "10.3390/biom16060823",
+          "title": "GCAS: An Integrated R Package and Shiny App for Comprehensive Cancer Data Analysis.",
+          "authorString": "Wang J, Wei M, Zhang J, Song X, Hu Y, Qin L, Liang T, Zhu X, Li J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Wang J",
+                "firstName": "Jin",
+                "lastName": "Wang",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-5178-7606"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Public Health, Suzhou Medical College of Soochow University, Suzhou 215123, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wei M",
+                "firstName": "Meidan",
+                "lastName": "Wei",
+                "initials": "M",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Public Health, Suzhou Medical College of Soochow University, Suzhou 215123, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang J",
+                "firstName": "Jiaxin",
+                "lastName": "Zhang",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Public Health, Suzhou Medical College of Soochow University, Suzhou 215123, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Song X",
+                "firstName": "Xiangrong",
+                "lastName": "Song",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Public Health, Suzhou Medical College of Soochow University, Suzhou 215123, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Hu Y",
+                "firstName": "Yaoyu",
+                "lastName": "Hu",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Public Health, Suzhou Medical College of Soochow University, Suzhou 215123, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Qin L",
+                "firstName": "Lexin",
+                "lastName": "Qin",
+                "initials": "L",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Public Health, Suzhou Medical College of Soochow University, Suzhou 215123, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Liang T",
+                "firstName": "Tingting",
+                "lastName": "Liang",
+                "initials": "T",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Public Health, Suzhou Medical College of Soochow University, Suzhou 215123, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhu X",
+                "firstName": "Xinyu",
+                "lastName": "Zhu",
+                "initials": "X",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0001-1532-2710"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Public Health, Suzhou Medical College of Soochow University, Suzhou 215123, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li J",
+                "firstName": "Jianxiang",
+                "lastName": "Li",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6674-7703"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Public Health, Suzhou Medical College of Soochow University, Suzhou 215123, China."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-5178-7606"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6674-7703"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0001-1532-2710"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "6",
+            "volume": "16",
+            "journalIssueId": 4220344,
+            "dateOfPublication": "2026 Jun",
+            "monthOfPublication": 6,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-06-01",
+            "journal": {
+              "title": "Biomolecules",
+              "medlineAbbreviation": "Biomolecules",
+              "issn": "2218-273X",
+              "essn": "2218-273X",
+              "isoabbreviation": "Biomolecules",
+              "nlmid": "101596414"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "823",
+          "abstractText": "Cancer research is pivotal for understanding cancer biology, discovering new therapeutic targets, and advancing precision medicine. However, it faces challenges such as data complexity, dispersed analytical tools, and the lack of a unified platform. To address these issues, we developed the GEO Cancer Analysis Suite (GCAS), an R package and visualization interface via shinyApp. GCAS includes four main modules: differential gene expression analysis, correlation studies, pan-cancer analysis, and immune infiltration and drug sensitivity analysis. These modules facilitate the identification of potential cancer biomarkers, elucidation of gene regulatory networks, comprehensive multi-cancer analysis, and assessment of gene expression in relation to immune cell infiltration and drug sensitivity. Using GCAS, <i>GAPDH</i> was found to be upregulated in multiple lung cancer and breast datasets and positively correlated with the m<sup>6</sup>A regulatory gene IGF2BP3. Further in vitro assays suggested that IGF2BP3 regulates <i>GAPDH</i> mRNA stability. Immune infiltration analysis indicated a negative correlation between <i>GAPDH</i> expression and CD4 T cell infiltration scores. Drug sensitivity analysis revealed a significant negative correlation between <i>GAPDH</i> expression and sensitivity to EGFR-targeting drugs, particularly Erlotinib. GCAS is a crucial tool in cancer research, simplifying data analysis and enhancing the discovery of novel biomarkers, immune landscape profiles, and drug sensitivity predictions, significantly contributing to cancer research and precision medicine.",
+          "affiliation": "School of Public Health, Suzhou Medical College of Soochow University, Suzhou 215123, China.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "82373613",
+                "agency": "National Natural Science Foundation of China",
+                "orderIn": 0
+              },
+              {
+                "grantId": "82304184",
+                "agency": "National Natural Science Foundation of China",
+                "orderIn": 0
+              },
+              {
+                "grantId": "NA",
+                "agency": "Priority Academic Program Development of Jiangsu Higher Education Institutions (PAPD)",
+                "orderIn": 0
+              },
+              {
+                "grantId": "NA",
+                "agency": "Jiangsu Key Laboratory of Preventive and Translational Medicine for Geriatric Diseases, MOE Key Laboratory of Geriatric Diseases and Immunology",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Neoplasms",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "DT",
+                      "qualifierName": "drug therapy",
+                      "majorTopic_YN": "N"
+                    },
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gene Expression Profiling"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gene Expression Regulation, Neoplastic"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Software"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gene Regulatory Networks"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biomarkers, Tumor",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Data Analytics"
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Bioinformatics Tool",
+              "Immune Cell Infiltration",
+              "Anticancer Drug Sensitivity",
+              "Cancer Biomarker Identification",
+              "Geo Database Analysis"
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Biomarkers, Tumor",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.3390/biom16060823"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2026-06-26",
+          "dateOfCreation": "2026-06-26",
+          "firstIndexDate": "2026-06-26",
+          "dateOfRevision": "2026-08-13",
+          "electronicPublicationDate": "2026-06-02",
+          "firstPublicationDate": "2026-06-02"
+        },
+        {
+          "id": "39976387",
+          "source": "MED",
+          "pmid": "39976387",
+          "pmcid": "PMC11840565",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC11840565"
+            ]
+          },
+          "doi": "10.1093/bib/bbaf062",
+          "title": "CSGDN: contrastive signed graph diffusion network for predicting crop gene-phenotype associations.",
+          "authorString": "Pan Y, Ji X, You J, Li L, Liu Z, Zhang X, Zhang Z, Wang M.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Pan Y",
+                "firstName": "Yiru",
+                "lastName": "Pan",
+                "initials": "Y",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0008-6773-2464"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Key Laboratory of Crop Genetic Improvement, Hubei Hongshan Laboratory, Huazhong Agricultural University, 430070 Hubei, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Ji X",
+                "firstName": "Xingyu",
+                "lastName": "Ji",
+                "initials": "X",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0002-5714-4489"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Key Laboratory of Crop Genetic Improvement, Hubei Hongshan Laboratory, Huazhong Agricultural University, 430070 Hubei, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "You J",
+                "firstName": "Jiaqi",
+                "lastName": "You",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6569-1955"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Key Laboratory of Crop Genetic Improvement, Hubei Hongshan Laboratory, Huazhong Agricultural University, 430070 Hubei, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li L",
+                "firstName": "Lu",
+                "lastName": "Li",
+                "initials": "L",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0000-6800-8373"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Key Laboratory of Crop Genetic Improvement, Hubei Hongshan Laboratory, Huazhong Agricultural University, 430070 Hubei, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Liu Z",
+                "firstName": "Zhenping",
+                "lastName": "Liu",
+                "initials": "Z",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3046-8005"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Key Laboratory of Crop Genetic Improvement, Hubei Hongshan Laboratory, Huazhong Agricultural University, 430070 Hubei, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang X",
+                "firstName": "Xianlong",
+                "lastName": "Zhang",
+                "initials": "X",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7703-524X"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Key Laboratory of Crop Genetic Improvement, Hubei Hongshan Laboratory, Huazhong Agricultural University, 430070 Hubei, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang Z",
+                "firstName": "Zeyu",
+                "lastName": "Zhang",
+                "initials": "Z",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-2376-6151"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Key Laboratory of Crop Genetic Improvement, Hubei Hongshan Laboratory, Huazhong Agricultural University, 430070 Hubei, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wang M",
+                "firstName": "Maojun",
+                "lastName": "Wang",
+                "initials": "M",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-4791-3742"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Key Laboratory of Crop Genetic Improvement, Hubei Hongshan Laboratory, Huazhong Agricultural University, 430070 Hubei, China."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6569-1955"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2376-6151"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3046-8005"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-4791-3742"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7703-524X"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0000-6800-8373"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0002-5714-4489"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0008-6773-2464"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "26",
+            "journalIssueId": 3858464,
+            "dateOfPublication": "2024 Nov",
+            "monthOfPublication": 11,
+            "yearOfPublication": 2024,
+            "printPublicationDate": "2024-11-01",
+            "journal": {
+              "title": "Briefings in bioinformatics",
+              "medlineAbbreviation": "Brief Bioinform",
+              "issn": "1467-5463",
+              "essn": "1477-4054",
+              "isoabbreviation": "Brief Bioinform",
+              "nlmid": "100912837"
+            }
+          },
+          "pubYear": "2024",
+          "pageInfo": "bbaf062",
+          "abstractText": "Positive and negative association prediction between gene and phenotype helps to illustrate the underlying mechanism of complex traits in organisms. The transcription and regulation activity of specific genes will be adjusted accordingly in different cell types, developmental timepoints, and physiological states. There are the following two problems in obtaining the positive/negative associations between gene and phenotype: (1) high-throughput DNA/RNA sequencing and phenotyping are expensive and time-consuming due to the need to process large sample sizes; (2) experiments introduce both random and systematic errors, and, meanwhile, calculations or predictions using software or models may produce noise. To address these two issues, we propose a Contrastive Signed Graph Diffusion Network, CSGDN, to learn robust node representations with fewer training samples to achieve higher link prediction accuracy. CSGDN uses a signed graph diffusion method to uncover the underlying regulatory associations between genes and phenotypes. Then, stochastic perturbation strategies are used to create two views for both original and diffusive graphs. Lastly, a multiview contrastive learning paradigm loss is designed to unify the node presentations learned from the two views to resist interference and reduce noise. We perform experiments to validate the performance of CSGDN in three crop datasets: Gossypium hirsutum, Brassica napus, and Triticum turgidum. The results show that the proposed model outperforms state-of-the-art methods by up to 9. 28% AUC for the prediction of link sign in the G. hirsutum dataset. The source code of our model is available at https://github.com/Erican-Ji/CSGDN.",
+          "affiliation": "National Key Laboratory of Crop Genetic Improvement, Hubei Hongshan Laboratory, Huazhong Agricultural University, 430070 Hubei, China.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "2021YFF1000900",
+                "agency": "National Key Research and Development Program of China",
+                "orderIn": 0
+              },
+              {
+                "grantId": "2023A01",
+                "agency": "Finance Science and Technology Project of Xinjiang Uyghur Autonomous Region",
+                "orderIn": 0
+              },
+              {
+                "grantId": "W2411020",
+                "agency": "National Natural Science Foundation of China",
+                "orderIn": 0
+              },
+              {
+                "grantId": "32170645",
+                "agency": "National Natural Science Foundation of China",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Crops, Agricultural",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computational Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "qualifierName": "methods",
+                      "majorTopic_YN": "N"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Phenotype"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Algorithms"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Software"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Gene Regulatory Networks"
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Gene–phenotype Associations",
+              "Graph Neural Networks",
+              "Signed Bipartite Networks",
+              "Signed Graph Neural Networks"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/bib/bbaf062"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC11840565"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC11840565?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 4,
+          "hasData": "Y",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2025-05-09",
+          "dateOfCreation": "2025-02-20",
+          "firstIndexDate": "2025-02-21",
+          "fullTextReceivedDate": "2025-02-24",
+          "dateOfRevision": "2025-05-09",
+          "firstPublicationDate": "2024-11-01"
+        },
+        {
+          "id": "PPR1249253",
+          "source": "PPR",
+          "doi": "10.64898/2026.06.05.26353604",
+          "title": "Positioning Early Phase CNS Trials for Regulatory and Investor Success: Strategic Implications of the Single Phase 3 Approval Paradigm",
+          "authorString": "Schmidt P, Preskorn S.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Schmidt P",
+                "firstName": "Peter",
+                "lastName": "Schmidt",
+                "initials": "P",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-6201-7305"
+                }
+              },
+              {
+                "fullName": "Preskorn S",
+                "firstName": "Sheldon",
+                "lastName": "Preskorn",
+                "initials": "S"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-6201-7305"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "pubYear": "2026",
+          "abstractText": "In February 2026, the FDA announced that a single pivotal phase 3 (P3) trial would become the new default standard for drug approval—a regulatory direction that had been legally enabled since the FDA Modernization Act of 1997. This announcement has strategic, scientific, and economic implications for drug developers, contract research organizations (CROs), and biotech investors. We argue that the expansion of this framework, originally reserved for various niche submissions, represents a paradigm change, dramatically increasing the value of rigorous early phase (P1 and P2) trial design, requiring sponsors to establish both statistical efficacy signals and mechanistic biological understanding before entering phase 3. Using a CNS indication cost model, we show that single P3 approval can reduce total development expenditure from approximately $447 million over 14 years to $297 million over 12 years—a savings of $150 million and providing two years of additional commercial runway for a modeled CNS drug. Case examples including lecanemab, omaveloxolone, and tofersen illustrate how biomarker-informed early phase strategies can establish the confirmatory evidence necessary for single-trial approval. We provide practical guidance for maximizing the value of P1 and P2 under this evolving framework.",
+          "pubTypeList": {
+            "pubType": [
+              "Preprint"
+            ]
+          },
+          "bookOrReportDetails": {
+            "publisher": "medRxiv",
+            "yearOfPublication": 2026
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.64898/2026.06.05.26353604"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "Y",
+          "license": "cc by",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-06-10",
+          "firstIndexDate": "2026-06-10",
+          "firstPublicationDate": "2026-06-08"
+        },
+        {
+          "id": "42178286",
+          "source": "MED",
+          "pmid": "42178286",
+          "doi": "10.3724/abbs.2026079",
+          "title": "Mitochondrial translocation of immunostimulatory RNA &lt;i&gt;RN7SL1&lt;/i&gt; suppresses innate immune responses.",
+          "authorString": "Liang Y, Wang L, Qin G, Liu X, Yang H, Zhang Z, Yuan J, Zhou W, Fang X.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Liang Y",
+                "firstName": "Yuxin",
+                "lastName": "Liang",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Key Laboratory of Molecular Nanostructure and Nanotechnology, CAS Research/Education Center for Excellence in Molecular Sciences, Institute of Chemistry, Chinese Academy of Sciences, Beijing 100190, China."
+                    },
+                    {
+                      "affiliation": "University of Chinese Academy of Sciences, Beijing 100049, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wang L",
+                "firstName": "Lina",
+                "lastName": "Wang",
+                "initials": "L",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Key Laboratory of Molecular Nanostructure and Nanotechnology, CAS Research/Education Center for Excellence in Molecular Sciences, Institute of Chemistry, Chinese Academy of Sciences, Beijing 100190, China."
+                    },
+                    {
+                      "affiliation": "University of Chinese Academy of Sciences, Beijing 100049, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Qin G",
+                "firstName": "Gege",
+                "lastName": "Qin",
+                "initials": "G",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Key Laboratory of Molecular Nanostructure and Nanotechnology, CAS Research/Education Center for Excellence in Molecular Sciences, Institute of Chemistry, Chinese Academy of Sciences, Beijing 100190, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Liu X",
+                "firstName": "Xiaolong",
+                "lastName": "Liu",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Key Laboratory of Molecular Nanostructure and Nanotechnology, CAS Research/Education Center for Excellence in Molecular Sciences, Institute of Chemistry, Chinese Academy of Sciences, Beijing 100190, China."
+                    },
+                    {
+                      "affiliation": "University of Chinese Academy of Sciences, Beijing 100049, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Yang H",
+                "firstName": "Hongwei",
+                "lastName": "Yang",
+                "initials": "H",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Key Laboratory of Molecular Nanostructure and Nanotechnology, CAS Research/Education Center for Excellence in Molecular Sciences, Institute of Chemistry, Chinese Academy of Sciences, Beijing 100190, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang Z",
+                "firstName": "Zhen",
+                "lastName": "Zhang",
+                "initials": "Z",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Key Laboratory of Molecular Nanostructure and Nanotechnology, CAS Research/Education Center for Excellence in Molecular Sciences, Institute of Chemistry, Chinese Academy of Sciences, Beijing 100190, China."
+                    },
+                    {
+                      "affiliation": "Huairou Research Center, Institute of Chemistry, Chinese Academy of Sciences, Beijing 101407, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Yuan J",
+                "firstName": "Jinghe",
+                "lastName": "Yuan",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Key Laboratory of Molecular Nanostructure and Nanotechnology, CAS Research/Education Center for Excellence in Molecular Sciences, Institute of Chemistry, Chinese Academy of Sciences, Beijing 100190, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhou W",
+                "firstName": "Wei",
+                "lastName": "Zhou",
+                "initials": "W",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Hangzhou Institute of Medicine (HIM), University of Chinese Academy of Sciences (Zhejiang Cancer Hospital), Chinese Academy of Sciences, Hangzhou 310022, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Fang X",
+                "firstName": "Xiaohong",
+                "lastName": "Fang",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Key Laboratory of Molecular Nanostructure and Nanotechnology, CAS Research/Education Center for Excellence in Molecular Sciences, Institute of Chemistry, Chinese Academy of Sciences, Beijing 100190, China."
+                    },
+                    {
+                      "affiliation": "University of Chinese Academy of Sciences, Beijing 100049, China."
+                    },
+                    {
+                      "affiliation": "Hangzhou Institute of Medicine (HIM), University of Chinese Academy of Sciences (Zhejiang Cancer Hospital), Chinese Academy of Sciences, Hangzhou 310022, China."
+                    },
+                    {
+                      "affiliation": "Zhejiang Provincial Key Laboratory of Protein Detection Technology and Diagnostic Equipment, Hangzhou Institute of Medicine (HIM), Chinese Academy of Sciences, Hangzhou 310022, China."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "xx",
+            "volume": "xx",
+            "journalIssueId": 4200818,
+            "dateOfPublication": "2026 May",
+            "monthOfPublication": 5,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-05-01",
+            "journal": {
+              "title": "Acta biochimica et biophysica Sinica",
+              "medlineAbbreviation": "Acta Biochim Biophys Sin (Shanghai)",
+              "issn": "1672-9145",
+              "essn": "1745-7270",
+              "isoabbreviation": "Acta Biochim Biophys Sin (Shanghai)",
+              "nlmid": "101206716"
+            }
+          },
+          "pubYear": "2026",
+          "pageInfo": "xx",
+          "abstractText": "The significance of mitochondria in innate immunity is increasingly recognized. Mitochondrial immunostimulatory nucleic acids released into the cytosol can trigger an innate immune response. However, the possibility of translocating immunostimulatory nucleic acids from the cytosol to the mitochondria remains unexplored. In this study, we demonstrate that the nuclear-encoded immunostimulatory RNA <i>RN7SL1</i> could be translocated into the mitochondria from the cytosol. Once inside the mitochondria, <i>RN7SL1</i> is shielded by mitochondrial membranes, which prevents its recognition by cytosolic dsRNA sensors. The RNA-binding protein LRPPRC interacts with <i>RN7SL1</i> directly and regulates its translocation. Inhibition of LRPPRC impairs this translocation, reduces <i>RN7SL1</i> abundance in mitochondria, and activates the RIG-I-dependent innate immune response. Furthermore, in clinical human lung cancer specimens, elevated <i>RN7SL1</i> expression is associated with a more pronounced negative correlation between the immune response and LRPPRC expression. These findings reveal a novel mitochondrial function in suppressing the immune response induced by immunostimulatory RNA.",
+          "affiliation": "Key Laboratory of Molecular Nanostructure and Nanotechnology, CAS Research/Education Center for Excellence in Molecular Sciences, Institute of Chemistry, Chinese Academy of Sciences, Beijing 100190, China.",
+          "publicationStatus": "aheadofprint",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Mitochondrion",
+              "dsRNA",
+              "RNA transport",
+              "innate immunity"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.3724/abbs.2026079"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-05-24",
+          "firstIndexDate": "2026-05-25",
+          "dateOfRevision": "2026-05-24",
+          "electronicPublicationDate": "2026-05-19",
+          "firstPublicationDate": "2026-05-19"
+        },
+        {
+          "id": "42638335",
+          "source": "MED",
+          "pmid": "42638335",
+          "doi": "10.1002/bcp.70786",
+          "title": "ODC1 inhibition and neuroblastoma: A drug-target Mendelian randomization, eQTL colocalization and drug sensitivity study.",
+          "authorString": "Xie S, Chen W, Bai J, Lin S, Zhang B.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Xie S",
+                "firstName": "Siqi",
+                "lastName": "Xie",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3831-1678"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Fujian Children's Hospital (Fujian Branch of Shanghai Children's Medical Center), College of Clinical Medicine for Obstetrics & Gynecology and Pediatrics, Fujian Medical University, Fuzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Chen W",
+                "firstName": "Weiming",
+                "lastName": "Chen",
+                "initials": "W",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Fujian Children's Hospital (Fujian Branch of Shanghai Children's Medical Center), College of Clinical Medicine for Obstetrics & Gynecology and Pediatrics, Fujian Medical University, Fuzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Bai J",
+                "firstName": "Jianxi",
+                "lastName": "Bai",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Fujian Children's Hospital (Fujian Branch of Shanghai Children's Medical Center), College of Clinical Medicine for Obstetrics & Gynecology and Pediatrics, Fujian Medical University, Fuzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lin S",
+                "firstName": "Sheng",
+                "lastName": "Lin",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Fujian Children's Hospital (Fujian Branch of Shanghai Children's Medical Center), College of Clinical Medicine for Obstetrics & Gynecology and Pediatrics, Fujian Medical University, Fuzhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang B",
+                "firstName": "Bing",
+                "lastName": "Zhang",
+                "initials": "B",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0775-8717"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Fujian Children's Hospital (Fujian Branch of Shanghai Children's Medical Center), College of Clinical Medicine for Obstetrics & Gynecology and Pediatrics, Fujian Medical University, Fuzhou, China."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0775-8717"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3831-1678"
+              }
+            ]
+          },
+          "journalInfo": {
+            "journalIssueId": 4236844,
+            "dateOfPublication": "2026 Aug",
+            "monthOfPublication": 8,
+            "yearOfPublication": 2026,
+            "printPublicationDate": "2026-08-01",
+            "journal": {
+              "title": "British journal of clinical pharmacology",
+              "medlineAbbreviation": "Br J Clin Pharmacol",
+              "issn": "0306-5251",
+              "essn": "1365-2125",
+              "isoabbreviation": "Br J Clin Pharmacol",
+              "nlmid": "7503323"
+            }
+          },
+          "pubYear": "2026",
+          "abstractText": "<h4>Objective</h4>This study aimed to investigate the potential causal relationship between the genetically predicted effects of ornithine decarboxylase (ODC) inhibitors, such as difluoromethylornithine (DFMO), and the risk of neuroblastoma (NB) using a Mendelian randomization (MR) and drug sensitivity prediction approach.<h4>Methods</h4>Genetic variants associated with ODC and NB were selected from GWAS summary data. Statistical methods, including inverse-variance weighted (IVW), weighted median and MR-Egger, were employed to estimate causal effects. Colocalization analysis was performed to investigate the biological mechanisms behind drug target gene ODC1 inhibition and NB. We employed CellHit to perform robust prediction of DFMO drug sensitivity in NB patient samples.<h4>Results</h4>No significant colocalization was observed between ODC1 eQTLs and NB (PP.H4.abf = 0.15). Inhibition of ODC1 does not appear to genetically influence the risk of common NB. Drug sensitivity analysis revealed that, across the full cohort, the predicted log-fold change (preLFC) of DFMO response showed no significant correlation with ODC1 expression levels. However, subgroup analysis based on MYCN status demonstrated a significant negative correlation between preLFC and ODC1 expression specifically in the MYCN non-amplified subgroup.<h4>Conclusions</h4>Drug sensitivity analysis suggests that ODC1 may serve as a valuable therapeutic target in high-risk NB patients without MYCN amplification, with DFMO emerging as a potential candidate drug for this subgroup. ODC1 is not involved in the initiation of NB, but it plays an important role in tumour progression and treatment response in a subset of patients.",
+          "affiliation": "Fujian Children's Hospital (Fujian Branch of Shanghai Children's Medical Center), College of Clinical Medicine for Obstetrics & Gynecology and Pediatrics, Fujian Medical University, Fuzhou, China.",
+          "publicationStatus": "aheadofprint",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "grantId": "ETK2023016",
+                "agency": "The Foundation of Fujian High-level Clinical Medical Center",
+                "orderIn": 0
+              },
+              {
+                "grantId": "2023J011300",
+                "agency": "Fujian Provincial Natural Science Foundation of China",
+                "orderIn": 0
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Neuroblastoma",
+              "Drug sensitivity",
+              "Paediatric Oncology",
+              "Dfmo",
+              "Odc1 Inhibition",
+              "Drug‐target Mendelian Randomization Study"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1002/bcp.70786"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "citedByCount": 0,
+          "hasData": "N",
+          "hasReferences": "N",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasLabsLinks": "N",
+          "hasEvaluations": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-08-25",
+          "firstIndexDate": "2026-08-25",
+          "dateOfRevision": "2026-08-25",
+          "electronicPublicationDate": "2026-08-24",
+          "firstPublicationDate": "2026-08-24"
+        }
+      ]
+    }
+  }
+}

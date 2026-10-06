@@ -1,0 +1,139 @@
+#' metadata_22Q2
+#'
+#' The `metadata` dataset contains the metadata about cell lines in the 22Q2
+#' Broad Institute DepMap release, which includes mapping between `depmap_id`
+#' and `cell_line` name for cancer cell lines. This dataset does not contain any
+#' data from the Achilles screen nor dependency data, but contains the metadata
+#' from the other datasets pertaining to the 22Q1 DepMap release, for 1840
+#' cell lines, 0 genes, 33 primary diseases and 30 lineages. The columns of
+#' `metadata` are: `depmap_id`, `stripped_cell_line_name`, `cell_line`,
+#' `aliases`, `cosmic_id`, `sanger_id`, `WTSI_master_cell_ID`,
+#' `primary_disease`, `subtype_disease`, `sub_subtype_disease`, `gender`,
+#' `source` . This dataset can be loaded into the R
+#'  environment with the `depmap_metadata` function.
+#'
+#' @format A data frame with 1829 rows (cell lines) and 22 variables:
+#' \describe{
+#'   \item{depmap_id}{Cancer cell line primary key (i.e. "ACH-00001")}
+#'   \item{stripped_cell_line_name}{Name of stripped cell line}
+#'   \item{cell_line}{CCLE name of cancer cell line (i.e. "184A1_BREAST")}
+#'   \item{cell_line_name}{Abbreviated name of cancer cell line (i.e. "NIH:OVCAR-3")}
+#'   \item{aliases}{Aliases of cancer cell line}
+#'   \item{cosmic_id}{Catalogue Of Somatic Mutations In Cancer ID number (e.g. 905933)}
+#'   \item{sex}{Sex of tissue sample)}
+#'   \item{source}{Source of tissue sample)}
+#'   \item{culture_type}{Culture type of tissue sample)}
+#'   \item{RRID}{Resource Identification Portal ID}
+#'   \item{sample_collection_site}{Site of sample collection (AML), M3 (Promyelocytic))}
+#'   \item{primary_or_metastasis}{Primary cancer cell line or metastatic}
+#'   \item{primary_disease}{Primary Disease (e.g. cancer type)}
+#'   \item{subtype_disease}{Subtype Disease (e.g. Acute Myelogenous Leukemia)}
+#'   \item{age}{Age of individual sample of cell line was derived}
+#'   \item{sanger_id}{Sanger ID (eg. 2201)}
+#'   \item{WTSI_master_cell_ID}{Wellcome Trust Sanger Institute ID (eg. 1369)}
+#'   \item{additional_info}{Additional information about samples}
+#'   \item{lineage}{Lineage of cancer cell line}
+#'   \item{lineage_subtype}{Subtype of lineage of cancer cell line}
+#'   \item{lineage_sub_subtype}{Subtype of subtype of Lineage of cancer cell line}
+#'   \item{lineage_molecular_subtype}{Molecular type of Lineage of cancer cell line}
+#'   \item{model_manipulation}{Culture model manipulation details}
+#'   \item{model_manipulation_details}{Culture model manipulation details}
+#'   \item{patient_id}{Patient id}
+#'   \item{parent_patient_id}{Parent patient id}
+#'   \item{Cellosaurus_NCIt_disease}{Cellosaurus NCIt disease}
+#'   \item{Cellosaurus_NCIt_id}{Cellosaurus NCIt_id}
+#'   \item{Cellosaurus_NCIt_id}{Cellosaurus NCIt_id}
+#' }
+#'
+#' @details This data represents the `sample_info.csv` file taken from the 22Q2
+#' [Broad Institute](https://depmap.org/portal/download/) cancer depenedency
+#' study. This dataset features the a primary key `depmap_id` which is a unique
+#' ID given to each cell line and is found in the first column of this dataset.
+#' The `depmap_id` attribute is used as a foreign key in all other datasets in
+#' the package. This dataset has been converted to a long format tibble. This
+#' dataset does not contain any expression or dependency data but rather
+#' contains the metadata for all cancer cell lines used in the depmap project.
+#' Variables names were converted to lower case, put in snake case, and
+#' abbreviated where feasible (e.g. "Sanger ID" was changed to "sanger_id").
+#'
+#' @section Change log:
+#'
+#' - 19Q1: Initial dataset consisted of data frame with 1677 rows (cell lines)
+#' and 9 variables, representing 0 genes, 1677 cell lines, 38 primary diseases
+#' and 33 lineages
+#'
+#' - 19Q2: adds 37 new cell lines, 1 primary disease and 1 lineage. This version
+#' of the metadata dataset contains 6 variables not found in previous versions,
+#' relating the the Achilles metadata:  `Achilles_n_replicates`,
+#' `cell_line_NNMD`, `culture_type`, `culture_medium`, and `cas9_activity`.
+#'
+#' - 19Q3: adds 30 cell lines, 2 primary diseases and 2 lineages
+#'
+#' - 19Q4: adds 42 cell lines, 0 primary diseases and 3 lineages
+#'
+#' - 20Q1: adds 19 cell lines, `gender` was changed to `sex`, `age`,
+#' `primary_or_metastasis` and `sample_collection_site`` were added
+#'
+#' - 20Q2: adds 30 cell lines and 1 lineage
+#'
+#' - 20Q3: adds new column `WTSI_master_cell_ID`
+#'
+#' - 20Q4: adds 6 cell lines and 1 lineage. Adds column `cell_line_name`
+#'
+#' - 21Q1: removes 1 cell line
+#'
+#' - 21Q2: adds 3 cell lines
+#'
+#' - 21Q3: adds 1130 cell lines, 8 primary diseases and 8 lineages
+#'
+#' - 21Q4: removes 1119 cell lines, 8 primary diseases and 8 lineages
+#'
+#' - 22Q1: adds 4 cell lines. The features relating to Achilles metadata have
+#' been removed and put into their own dataset: `Achilles_n_replicates`,
+#' `cell_line_NNMD`, `culture_type`, `culture_medium`, and `cas9_activity`.
+#'
+#' - 22Q2: adds 11 cell lines and removes 2 primary diseases and 30 lineages.
+#' The feature `culture_type` has been removed and columns "model_manipulation",
+#' "model_manipulation_details", "patient_id", "parent_depmap_id",
+#' "Cellosaurus_NCIt_disease", "Cellosaurus_NCIt_id" and "Cellosaurus_issues"
+#' have been added.
+#'
+#' @docType data
+#'
+#' @import dplyr
+#'
+#' @keywords datasets
+#'
+#' @examples
+#' \dontrun{
+#' depmap_metadata()
+#' }
+#'
+#' @references Tsherniak, A., Vazquez, F., Montgomery, P. G., Weir, B. A.,
+#' Kryukov, G., Cowley, G. S., ... & Meyers, R. M. (2017). Defining a cancer
+#' dependency map. Cell, 170(3), 564-576.
+#'
+#' DepMap, Broad (2019): DepMap Achilles 19Q1
+#' Public. https://figshare.com/articles/DepMap_Achilles_19Q1_Public/7655150
+#'
+#' Robin M. Meyers, Jordan G. Bryan, James M. McFarland, Barbara
+#' A. Weir, ...  David E. Root, William C. Hahn, Aviad
+#' Tsherniak. Computational correction of copy number effect improves
+#' specificity of CRISPR-Cas9 essentiality screens in cancer
+#' cells. Nature Genetics 2017 October 49:1779–1784.
+#'
+#' Mahmoud Ghandi, Franklin W. Huang, Judit Jané-Valbuena, Gregory
+#' V. Kryukov, ... Todd R. Golub, Levi A. Garraway & William
+#' R. Sellers. 2019. Next- generation characterization of the Cancer
+#' Cell Line Encyclopedia. Nature 569, 503–508 (2019).
+#'
+#' @source DepMap, Broad Institute: https://depmap.org/portal/download/
+#'
+#' @rdname metadata
+#'
+#' @aliases depmap_metadata metadata_19Q1 metadata_19Q2 metadata_19Q3
+#' metadata_19Q4 metadata_20Q1 metadata_20Q2 metadata_20Q3 metadata_20Q4
+#' metadata_21Q1 metadata_21Q2 metadata_21Q3 metadata_21Q4 metadata_22Q1
+#' metadata_22Q2
+#'
+metadata <- NULL

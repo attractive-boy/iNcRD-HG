@@ -1,0 +1,132 @@
+{
+  "purpose": "Read-only failure diagnosis; no candidate selection or innovation claim. Simple fixed row-plus-column Newton residual is a diagnostic null only.",
+  "ridge_penalty": 10.0,
+  "composition_weight": 0.1,
+  "evaluation_labels_used_for_model_fitting": false,
+  "rows": [
+    {
+      "split": "historical",
+      "training_reference_auc": 0.9552614939057582,
+      "training_reference_ap": 0.9156009436901955,
+      "training_reference_bce": 0.2564024561327361,
+      "evaluation_reference_auc": 0.9627256377964776,
+      "evaluation_reference_ap": 0.9278591979450169,
+      "evaluation_reference_bce": 0.2358984546234199,
+      "mean_training_error": -0.007293859637650729,
+      "mean_evaluation_error": -0.009915039877659937,
+      "source_sha256": {
+        "improve/results/anchor_priority_morphological_alignment_v1_20260916/inputs/MiDrug/arrays.npz": "39910438b09c0c3d595f654eb91d20ffa8e60f4554559fb0dcc4892def39d3bf",
+        "improve/results/nested_anchor_v2_20260915/historical/offsets/MiDrug/historical/arrays.npz": "7690ac9891484ce9299af0e27c635cfcf42512b0dcfbdc1945e87b01f8280ce7"
+      },
+      "entities": {
+        "rna": {
+          "eligible_entities": 136,
+          "training_vs_evaluation_error_correlation": -0.06513525970199509,
+          "mean_abs_training_newton_correction": 0.06367376969600246
+        },
+        "drug": {
+          "eligible_entities": 172,
+          "training_vs_evaluation_error_correlation": 0.014695640027586712,
+          "mean_abs_training_newton_correction": 0.06239391946061724
+        }
+      },
+      "simple_diagnostic_null_delta": {
+        "auc": 2.5044364302617694e-05,
+        "ap": -4.153948377427774e-05
+      }
+    },
+    {
+      "split": "61453",
+      "training_reference_auc": 0.9549050706061133,
+      "training_reference_ap": 0.9148816252704149,
+      "training_reference_bce": 0.2590889649442631,
+      "evaluation_reference_auc": 0.9598371877802584,
+      "evaluation_reference_ap": 0.9267230639247649,
+      "evaluation_reference_bce": 0.2395313030977754,
+      "mean_training_error": -0.006770954796600004,
+      "mean_evaluation_error": 0.005308396571196135,
+      "source_sha256": {
+        "improve/results/mechanism_validation_20260915/inputs/MiDrug/61453/arrays.npz": "8fc4b1220fecedd124ff6d9804aa14c636d7b9402ef1b437aaff5f2a9d104efc",
+        "improve/results/nested_anchor_v3_20260915/partitions/offsets/MiDrug/61453/arrays.npz": "042674d94a38b015e746b2cc1dc914f56621cfe7ee8041e69b2504ae74fcee87"
+      },
+      "entities": {
+        "rna": {
+          "eligible_entities": 137,
+          "training_vs_evaluation_error_correlation": -0.054488510641149124,
+          "mean_abs_training_newton_correction": 0.06677675865596805
+        },
+        "drug": {
+          "eligible_entities": 181,
+          "training_vs_evaluation_error_correlation": -0.0211149267779836,
+          "mean_abs_training_newton_correction": 0.06799332467162877
+        }
+      },
+      "simple_diagnostic_null_delta": {
+        "auc": -3.5777663289326966e-05,
+        "ap": -9.306960027244404e-05
+      }
+    },
+    {
+      "split": "7919",
+      "training_reference_auc": 0.9549136456436573,
+      "training_reference_ap": 0.9172553204816444,
+      "training_reference_bce": 0.25961419052633916,
+      "evaluation_reference_auc": 0.9566386646821989,
+      "evaluation_reference_ap": 0.9169889798802071,
+      "evaluation_reference_bce": 0.2571493657042026,
+      "mean_training_error": -0.0077306102519638055,
+      "mean_evaluation_error": 0.0032262077720575256,
+      "source_sha256": {
+        "improve/results/mechanism_validation_20260915/inputs/MiDrug/7919/arrays.npz": "24c604e8b7355b4c5a8ca09697483396903ec62eb3a0a51144d7acb60cb252af",
+        "improve/results/nested_anchor_v3_20260915/partitions/offsets/MiDrug/7919/arrays.npz": "0c0566c7e15a1f8d40a1f0bb538a80b6b75ca0ceae490970449f79ab392d7592"
+      },
+      "entities": {
+        "rna": {
+          "eligible_entities": 133,
+          "training_vs_evaluation_error_correlation": -0.009858551142071743,
+          "mean_abs_training_newton_correction": 0.0660315558043688
+        },
+        "drug": {
+          "eligible_entities": 184,
+          "training_vs_evaluation_error_correlation": 0.14207029229354773,
+          "mean_abs_training_newton_correction": 0.07074244412247582
+        }
+      },
+      "simple_diagnostic_null_delta": {
+        "auc": 1.4311065315686378e-05,
+        "ap": 2.4983203209760774e-05
+      }
+    },
+    {
+      "split": "104729",
+      "training_reference_auc": 0.956834677750089,
+      "training_reference_ap": 0.9183227820652303,
+      "training_reference_bce": 0.2535885226143791,
+      "evaluation_reference_auc": 0.9531276833247467,
+      "evaluation_reference_ap": 0.9149637379029818,
+      "evaluation_reference_bce": 0.26578313868471937,
+      "mean_training_error": -0.004867996052297431,
+      "mean_evaluation_error": -0.009921189447000088,
+      "source_sha256": {
+        "improve/results/mechanism_validation_20260915/inputs/MiDrug/104729/arrays.npz": "bbf6d839e58b01bb1f9b414939c8242e71cee148739581424dbfb20098d6fbe9",
+        "improve/results/nested_anchor_v3_20260915/partitions/offsets/MiDrug/104729/arrays.npz": "55c6be4c7980cb15ec1a37dc3829b130efbe651264abfdfaba6ed41c14f8fd0b"
+      },
+      "entities": {
+        "rna": {
+          "eligible_entities": 135,
+          "training_vs_evaluation_error_correlation": -0.04289657751864096,
+          "mean_abs_training_newton_correction": 0.06287727219675157
+        },
+        "drug": {
+          "eligible_entities": 175,
+          "training_vs_evaluation_error_correlation": 0.12423724227739909,
+          "mean_abs_training_newton_correction": 0.06839450163494648
+        }
+      },
+      "simple_diagnostic_null_delta": {
+        "auc": -1.1925887762886944e-06,
+        "ap": 3.4970568524306245e-06
+      }
+    }
+  ]
+}

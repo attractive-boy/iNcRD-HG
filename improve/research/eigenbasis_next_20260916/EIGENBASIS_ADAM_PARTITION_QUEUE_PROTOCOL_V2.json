@@ -1,0 +1,61 @@
+{
+  "created_at_utc": "2026-09-15T23:04:09.241298+00:00",
+  "family": "eigenbasis_adam",
+  "source_sha256": "29ac0ef26f654709fc43174e3339cd25761edd590e41b75b55de3db2594e2c22",
+  "input_sha256": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/eigenbasis_next_20260916/EIGENBASIS_PARTITION_UNIT_V2.json": "51b31051cba5295341142be6c6e5496d992f4f6e12f6afb9113ea658b6d8cae9",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/eigenbasis_next_20260916/EIGENBASIS_QUEUE_RESULT_V1.json": "df593a9702a89370a180614bdb1df766e80ca80003d3301788e2ee3f9cffec44",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/eigenbasis_next_20260916/EIGENBASIS_SMOKE_V1.json": "92531807e47c1214b1a56eab18a741e124bc55462f8e0106c71a687be34ceea2",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/eigenbasis_next_20260916/PARTITION_EXECUTOR_DERIVATION_V2.json": "b824c4a250e7b95039ecae4ee36498a4ed02714bde46b9abd1202a7d2961feee",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/eigenbasis_next_20260916/prepare_eigenbasis_partitions_v2.py": "fd1c484c812a9b6876c80f380d2eaa66a1acc05b3dd815738cab4fda9ad61077",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/results/mechanism_validation_20260915/candidates/anchor_priority_eigenbasis_adam_v1.json": "f9edfecc8a4d2f8c3a7dd18c2b23fc3028ce7864eef04782284931395dcd8f79"
+  },
+  "device": "cuda:1",
+  "candidate_sha256": "67bafd711f56960d84a178fa61db93f798b227f50aa7c00123322dee681f7432",
+  "split_seeds": [
+    61453,
+    7919,
+    104729
+  ],
+  "recipes": {
+    "MiDrug": {
+      "full": {
+        "lr": 0.003,
+        "epochs": 160
+      },
+      "separable_variance": {
+        "lr": 0.003,
+        "epochs": 60
+      },
+      "adamw": {
+        "lr": 0.003,
+        "epochs": 120
+      }
+    },
+    "LncDrug": {
+      "full": {
+        "lr": 0.003,
+        "epochs": 0
+      },
+      "separable_variance": {
+        "lr": 0.003,
+        "epochs": 0
+      },
+      "adamw": {
+        "lr": 0.003,
+        "epochs": 0
+      }
+    }
+  },
+  "parameter_updates_are_fixed": true,
+  "initialization_gradients_per_neural_fit": 1,
+  "new_neural_fits_expected": 9,
+  "identity_scoring_records_expected": 9,
+  "partition_fit_adoption": false,
+  "previous_candidate_partition_outcomes_seen": true,
+  "this_candidate_partition_outcomes_seen": false,
+  "outer_requires_all_partition_gates": true,
+  "confirmed_final_innovations": 0,
+  "existing_default_replaced": false,
+  "sha256": "1ff57ebb900c14ac35af4e48c77ed33a46418108f11584032f4a75133f7e875a"
+}

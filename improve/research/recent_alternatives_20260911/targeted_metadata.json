@@ -1,0 +1,125 @@
+[
+  {
+    "title": "On the Necessity of Learnable Sheaf Laplacians",
+    "id": "http://arxiv.org/abs/2603.05395v1",
+    "published": "2026-03-05T17:24:13Z",
+    "updated": "2026-03-05T17:24:13Z",
+    "summary": "Sheaf Neural Networks (SNNs) were introduced as an extension of Graph Convolutional Networks to address oversmoothing on heterophilous graphs by attaching a sheaf to the input graph and replacing the adjacency-based operator with a sheaf Laplacian defined by (learnable) restriction maps. Prior work motivates this design through theoretical properties of sheaf diffusion and the kernel of the sheaf Laplacian, suggesting that suitable non-identity restriction maps can avoid representations converging to constants across connected components. Since oversmoothing can also be mitigated through residual connections and normalization, we revisit a trivial sheaf construction to ask whether the additional complexity of learning restriction maps is necessary. We introduce an Identity Sheaf Network baseline, where all restriction maps are fixed to the identity, and use it to ablate the empirical improvements reported by sheaf-learning architectures. Across five popular heterophilic benchmarks, the identity baseline achieves comparable performance to a range of SNN variants. Finally, we introduce the Rayleigh quotient as a normalized measure for comparing oversmoothing across models and show that, in trained networks, the behavior predicted by the diffusion-based analysis of SNNs is not reflected empirically. In particular, Identity Sheaf Networks do not appear to suffer more significant oversmoothing than their SNN counterparts.",
+    "authors": [
+      "Ferran Hernandez Caralt",
+      "Mar Gonzàlez i Català",
+      "Adrián Bazaga",
+      "Pietro Liò"
+    ],
+    "doi": "",
+    "comment": "",
+    "journal_ref": ""
+  },
+  {
+    "title": "Sheaves Reloaded: A Directional Awakening",
+    "id": "http://arxiv.org/abs/2506.02842v1",
+    "published": "2025-06-03T13:13:56Z",
+    "updated": "2025-06-03T13:13:56Z",
+    "summary": "Sheaf Neural Networks (SNNs) represent a powerful generalization of Graph Neural Networks (GNNs) that significantly improve our ability to model complex relational data. While directionality has been shown to substantially boost performance in graph learning tasks and is key to many real-world applications, existing SNNs fall short in representing it. To address this limitation, we introduce the Directed Cellular Sheaf, a special type of cellular sheaf designed to explicitly account for edge orientation. Building on this structure, we define a new sheaf Laplacian, the Directed Sheaf Laplacian, which captures both the graph's topology and its directional information. This operator serves as the backbone of the Directed Sheaf Neural Network (DSNN), the first SNN model to embed a directional bias into its architecture. Extensive experiments on nine real-world benchmarks show that DSNN consistently outperforms baseline methods.",
+    "authors": [
+      "Stefano Fiorini",
+      "Hakan Aktas",
+      "Iulia Duta",
+      "Stefano Coniglio",
+      "Pietro Morerio",
+      "Alessio Del Bue",
+      "Pietro Liò"
+    ],
+    "doi": "",
+    "comment": "",
+    "journal_ref": ""
+  },
+  {
+    "title": "Deep Neural Sheaf Diffusion",
+    "id": "http://arxiv.org/abs/2605.19021v2",
+    "published": "2026-05-18T18:42:19Z",
+    "updated": "2026-05-22T18:44:04Z",
+    "summary": "Deep Graph Neural Networks (GNNs) are essential for capturing complex dependencies in graph-structured data. However, scaling GNNs to depth remains challenging, as stacking layers leads to representation collapse and diminishing sensitivity due to repeated aggregation. While Neural Sheaf Diffusion (NSD) provides strong theoretical guarantees against such collapse, these guarantees do not translate to practice: as depth increases, the disagreement signal of the sheaf Laplacian vanishes, limiting the contribution of deeper layers. We identify mechanisms that hinder NSD effectiveness at depth and propose \\emph{Deep Neural Sheaf Diffusion} (DNSD), which replaces the sheaf Laplacian with a sheaf adjacency operator to maintain informative signals across layers. This is complemented by normalization, odd nonlinearities, and gating. To provide a principled explanation of the expected performance improvement, we contrast sheaf diffusion to graph attention mechanisms, highlighting that DNSD replaces scalar attention scores with matrix-valued edge functions and normalizes node representations rather than attention scores. We demonstrate empirically that DNSD effectively utilizes deep aggregation in graph tasks, outperforming GNN and NSD baselines with up to 30pp accuracy on synthetic long-range datasets, and consistently outperforming them on real-world benchmarks. These results position sheaf-based architectures as a promising building block for graph foundation models by supporting effective deep architectures.",
+    "authors": [
+      "Rémi Bourgerie",
+      "Šarūnas Girdzijauskas",
+      "Viktoria Fodor"
+    ],
+    "doi": "",
+    "comment": "Accepted at the ICML 2026 Workshop on Graph Foundation Models (GFM@ICML 2026). Code available at https://github.com/remibourgerie/deep-neural-sheaf-diffusion",
+    "journal_ref": ""
+  },
+  {
+    "title": "Code evolution for link prediction in complex networks",
+    "id": "http://arxiv.org/abs/2606.26132v1",
+    "published": "2026-06-18T05:46:19Z",
+    "updated": "2026-06-18T05:46:19Z",
+    "summary": "The problem of predicting links in complex networks appears in different disciplines and has led to a variety of ingenious human-designed methods. We use this rich program space to explore the performance and behavior of automated code-evolution systems tasked to obtain machine-designed methods for link prediction. Despite being trained on limited data, algorithms evolved through code evolution outperform human-designed methods (with an average AUC score of 0.915 vs. 0.783, computed over 580 networks) and show improved computational efficiency, allowing them to be applied to networks with millions of links. The discovered methods follow approaches that have been employed in human-designed methods, but contain key innovations in the selection and combination of node- and link-features. This illustrates the role modern large language models and genetic algorithms can play in algorithmic innovation and scientific discovery more generally.",
+    "authors": [
+      "Alexey Vlaskin",
+      "Eduardo G. Altmann"
+    ],
+    "doi": "",
+    "comment": "",
+    "journal_ref": ""
+  },
+  {
+    "title": "Polynomial Neural Sheaf Diffusion: A Spectral Filtering Approach on Cellular Sheaves",
+    "id": "http://arxiv.org/abs/2512.00242v3",
+    "published": "2025-11-28T23:10:54Z",
+    "updated": "2026-05-14T22:07:04Z",
+    "summary": "Sheaf Neural Networks equip graph structures with a cellular sheaf: a geometric structure which assigns local vector spaces (stalks) and a linear learnable restriction/transport maps to nodes and edges, yielding an edge-aware inductive bias that handles heterophily and limits oversmoothing. However, common Neural Sheaf Diffusion implementations rely on SVD-based sheaf normalization and dense per-edge restriction maps, which scale with stalk dimension, require frequent Laplacian rebuilds, and yield brittle gradients. To address these limitations, we introduce Polynomial Neural Sheaf Diffusion (PolyNSD), a new sheaf diffusion approach whose propagation operator is a degree-K polynomial in a normalised sheaf Laplacian, evaluated via a stable three-term recurrence on a spectrally rescaled operator. This provides an explicit K-hop receptive field in a single layer (independently of the stalk dimension), with a trainable spectral response obtained as a convex mixture of K+1 orthogonal polynomial basis responses. PolyNSD enforces stability via convex mixtures, spectral rescaling, and residual/gated paths, reaching new state-of-the-art results on both homophilic and heterophilic benchmarks, inverting the Neural Sheaf Diffusion trend by obtaining these results with just diagonal restriction maps, decoupling performance from large stalk dimension, while reducing runtime and memory requirements.",
+    "authors": [
+      "Alessio Borgi",
+      "Fabrizio Silvestri",
+      "Pietro Liò"
+    ],
+    "doi": "",
+    "comment": "",
+    "journal_ref": ""
+  },
+  {
+    "title": "Benchmarking Sheaf Neural Networks for Inductive Tasks",
+    "id": "http://arxiv.org/abs/2608.02558v1",
+    "published": "2026-08-03T17:41:20Z",
+    "updated": "2026-08-03T17:41:20Z",
+    "summary": "Sheaf Neural Networks (SNNs) generalize message passing by replacing scalar edge weights of standard Graph Neural Networks (GNNs) with learnable, edge-dependent restriction maps between node stalks. Despite their strong theoretical foundations and promising transductive results, SNNs have been evaluated almost exclusively on transductive node classification, leaving their behaviour under inductive protocols unknown. We address this gap through the first systematic benchmark of the sheaf design space, evaluating three diffusion mechanisms (neural sheaf diffusion, sheaf attention, and sheaf attention with Graph Attention Network v2), three restriction-map parameterizations, three stalk dimensions, and six modern GNN architectural components, within a message-passing reformulation that never assembles the heavy sheaf Laplacian, making the full design space trainable under cross-graph batching. Across $1{,}890$ controlled experiments on 14 inductive datasets, multiple insights emerge: restriction maps are the dominant design choice and general maps are preferable, larger stalks add capacity but not long-range reach, architectural components explain more performance variation than the entire sheaf-specific design space itself. Under a matched protocol, SNNs transfer to inductive settings but do not reach the strongest baselines, with gaps being dataset-dependent. Practically, a single sheaf configuration can generalize across datasets, so effort is better spent tuning the surrounding architectural recipe than the sheaf operator itself.",
+    "authors": [
+      "Stefano Fiorini",
+      "Edoardo Coppola",
+      "Pietro Liò"
+    ],
+    "doi": "",
+    "comment": "",
+    "journal_ref": ""
+  },
+  {
+    "title": "SLogic: Subgraph-Informed Logical Rule Learning for Knowledge Graph Completion",
+    "id": "http://arxiv.org/abs/2510.00279v3",
+    "published": "2025-09-30T20:59:22Z",
+    "updated": "2026-08-22T05:57:44Z",
+    "summary": "Logical rule-based methods offer an interpretable approach to knowledge graph completion (KGC) by capturing compositional relationships in the form of human-readable inference rules. While existing logical rule-based methods learn rule confidence scores, they typically assign a global weight to each rule schema, applied uniformly across the graph. This is a significant limitation, as a rule's importance often varies depending on the specific query instance. To address this, we introduce SLogic (Subgraph-Informed Logical Rule learning), a novel framework that assigns query-dependent scores to logical rules. The core of SLogic is a context-aware scoring function. This framework is in line with the specificity principle in commonsense reasoning. This function determines the importance of a rule by analyzing the subgraph locally defined by the query's head entity, thereby enabling a differentiated weighting of rules specific to their local query contexts. Extensive experiments on benchmark datasets show that SLogic achieves competitive performance among rule-based methods. It also generates query-dependent, human-readable logical rules that serve as explicit explanations for its inferences.",
+    "authors": [
+      "Trung Hoang Le",
+      "Tran Cao Son",
+      "Ishtiaq Ahmed",
+      "Huiping Cao"
+    ],
+    "doi": "",
+    "comment": "",
+    "journal_ref": ""
+  },
+  {
+    "title": "Reification as a Transferable Vocabulary: Zero-Shot Link Prediction with Vanilla GNNs",
+    "id": "http://arxiv.org/abs/2609.11347v1",
+    "published": "2026-09-10T10:26:09Z",
+    "updated": "2026-09-10T10:26:09Z",
+    "summary": "Knowledge graph foundation models such as ULTRA achieve zero-shot link prediction on unseen graphs through dedicated architectures that hard-code a transfer mechanism. In this work we move that mechanism out of the architecture and into the representation, by \\emph{reifying} the input graph: every fact becomes a node, connected to its subject, object, and relation type through a fixed vocabulary of six meta-relations, with relation types as anonymous shared nodes rather than model parameters. On this representation, five textbook GNNs (GAT, GINE with sum and with mean+max aggregation, GraphSAGE, R-GCN), each trained on a single knowledge graph of 4,245 triples for 30 minutes on one NVIDIA A100, transfer zero-shot to 40 inductive link-prediction benchmarks. The best of them, an off-the-shelf GAT, matches ULTRA, a dedicated foundation model pretrained on three graphs, across ULTRA's own evaluation suite. The same fixed vocabulary extends to relational databases, a row becoming an entity and a foreign-key column a relation type; a preliminary probe on two unseen databases, with no cell values, schema text or in-context labels, shows a model of this family pretrained on three knowledge graphs ranking foreign-key targets far above random-initialization and degree controls. We release the code, the checkpoints, and the evaluation pipeline for all 40 benchmarks.",
+    "authors": [
+      "Camille Pradel"
+    ],
+    "doi": "",
+    "comment": "",
+    "journal_ref": ""
+  }
+]

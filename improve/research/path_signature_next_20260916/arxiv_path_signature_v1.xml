@@ -1,0 +1,525 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/vDXm1B0KqVaWC5yMcUMf6Ca4aoc</id>
+  <title>arXiv Query: search_query=( (ti:signature OR ti:signatures OR ti:rough) AND (ti:graph OR abs:"graph neural") ) AND submittedDate:"202401010000 TO 202609162359"&amp;id_list=&amp;start=0&amp;max_results=25</title>
+  <updated>2026-09-16T08:22:30Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=((ti:signature+OR+(ti:signatures+OR+ti:rough))+AND+(ti:graph+OR+abs:%22graph+neural%22))+AND+submittedDate:%22202401010000+TO+202609162359%22&amp;start=0&amp;max_results=25&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+  <opensearch:totalResults>22</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.17061v1</id>
+    <title>Repurposing Unified Topological Signatures for Graph Representation Learning</title>
+    <updated>2026-09-15T12:07:05Z</updated>
+    <link href="https://arxiv.org/abs/2609.17061v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.17061v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Message-passing Graph Neural Networks (GNNs) iteratively propagate and aggregate local neighborhood information followed by global readout to learn graph representations. However, their discriminative power is upper-bounded by the Weisfeiler--Lehman (1-WL) graph isomorphism test. This prevents GNNs from distinguishing certain non-isomorphic graphs with identical local neighborhood structures, often leading to similar graph representations. Unified Topological Signatures (UTS) capture compact, multi-scale representation of global graph topology derived from persistent homology. We introduce two complementary UTS signatures: Graph_UTS- a static signature of the input graph topology, and Embedding_UTS- a dynamic signature of the evolving embedding topology. They encode structural information inaccessible to 1-WL-based message-passing GNNs, yet their capabilities are explored solely for post-hoc embedding-space analysis. We integrate UTS into GNN training across three architectural interventions: (i) UTS-Aug: augmenting with standard readout feature that encodes graph's true topology; (ii) UTS-Reg: topological regularizer that constrains representation collapse; (iii) UTS-Pool: topology-guided pooling that retains structurally critical nodes. We further leverage UTS as a layer-wise diagnostic to quantify oversmoothing during GNN training. Theoretically, we show that integrating UTS into GNN optimization strictly extends GNN expressivity beyond the 1-WL hierarchy. Experiments on three graph classification benchmarks show consistent benefits: Graph-UTS, Dual-UTS, and UTS-Pool improve accuracy across all three datasets, Embedding-UTS provides smaller but similarly consistent gains, and UTS-Reg's benefit varies across graph domains. Accuracy improves by up to 5.8% with Graph-UTS augmentation, by up to 1.9% with UTS-Reg, and achieves comparable performance to TOGL with UTS-Pool.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-15T12:07:05Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sanyam Sanjay Jain</name>
+    </author>
+    <author>
+      <name>Anshika Krishnatray</name>
+    </author>
+    <author>
+      <name>Aditya Sharma</name>
+    </author>
+    <author>
+      <name>Vinti Agarwal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.09565v1</id>
+    <title>Multi-Agent Agentic Graph Learning via Structural Signatures</title>
+    <updated>2026-09-09T00:43:45Z</updated>
+    <link href="https://arxiv.org/abs/2609.09565v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.09565v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agentic graph learning (AGL) has recently achieved promising results on graph reasoning tasks, where an agent powered by a large language model (LLM) sequentially samples the graph as evidence to support its final prediction. Existing methods either employ a single agent or orchestrate multiple role-based agents to reason and learn over the entire graph, but both essentially rely on a shared reasoning policy across different graph regions, which can be suboptimal for graphs with heterogeneous structural and semantic patterns. Inspired by the progress of multi-agent collaboration on complex reasoning tasks, a natural remedy is to let multiple agents own different memory and collaborate; however, applying this paradigm to graphs directly faces two challenges. First, existing AGL methods typically verbalize graph structures into natural-language descriptions for LLM agents, making the reasoning process sensitive to the ordering of structural information and thereby breaking the permutation-invariant nature of graphs. Second, incorporating increasingly large sampled neighborhoods leads to rapidly growing contexts. To address these challenges, this paper introduces a multi-agent agentic graph learning (i.e., MAAGL) framework. MAAGL partitions the graph into communities and assigns an independent agent to each community for region-specific specialization. MAAGL represents structural and semantic evidence separately. Structural evidence is summarized by a dynamically updated structural signature that is permutation-invariant and fixed in size, while semantic evidence is filtered to the top-k nodes ranked by relevance. Based on historical trajectories with similar signatures, agents estimate their confidence and trigger debate-style collaboration when needed. Extensive experiments on four benchmark datasets show that MAAGL outperforms SOTA AGL methods.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T00:43:45Z</published>
+    <arxiv:comment>Under review</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Liang Qu</name>
+    </author>
+    <author>
+      <name>Jianxin Li</name>
+    </author>
+    <author>
+      <name>Hua Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.22874v2</id>
+    <title>The signature of connected line graphs is unbounded</title>
+    <updated>2026-07-29T00:14:05Z</updated>
+    <link href="https://arxiv.org/abs/2607.22874v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.22874v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Akbari, Elphick, Kumar, Pragada and Tang [Discrete Math. 349 (2026) 114953] conjectured that for every connected graph G, the line graph of G has at most one more positive than negative adjacency eigenvalue; equivalently, the signature of a connected line graph is at most 1. We refute the conjecture with two independently found counterexamples: a 14-vertex cactus consisting of two pentagons attached by bridges to adjacent vertices of a square, whose line graph has inertia (9,0,7) by an exact characteristic-polynomial certificate, and a 48-vertex triangle-free graph found by simulated annealing and verified in exact rational arithmetic. Indeed, chaining copies of the 14-vertex graph yields connected graphs on 14k vertices whose line graphs have signature k+1 for every k &gt;= 1. The signature of connected line graphs is therefore unbounded, and no constant-bound repair of the conjecture is possible.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-24T19:30:10Z</published>
+    <arxiv:comment>v2: corrected description of the 48-vertex mechanism; added references to independent work of A. Paone</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Luke Francis</name>
+    </author>
+    <author>
+      <name>Trevor Uptain</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.11016v1</id>
+    <title>Search for dark matter in a signature with a four-prong large-radius jet in proton-proton collisions at $\sqrt{s}$ = 13 TeV</title>
+    <updated>2026-07-13T02:31:28Z</updated>
+    <link href="https://arxiv.org/abs/2607.11016v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.11016v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A search for a pair of nonprompt dark matter (DM) candidates produced in association with an initial-state radiation jet, in a signature containing a four-prong large-radius jet, is presented. The signal model contains a heavy vector or axial-vector mediator, which produces long-lived dark-sector particles that decay to a stable DM particle and a light boson, which decays to quarks. The analysis is based on data collected in the years 2016$-$2018 with the CMS detector at the LHC in proton-proton collisions at $\sqrt{s}$ = 13 TeV, corresponding to an integrated luminosity of 138 fb$^{-1}$. Signal candidates feature large-radius jets, which are identified using a jet substructure tagger based on a graph neural network. The large-radius jet aims to reconstruct the decay of light DM mediators into four quarks, which are produced in association with two stable DM particles. The standard model background contributions are estimated from data using dedicated control regions. The missing transverse momentum spectrum is probed for a potential signal over the expected background. No significant excess over the standard model expectation is observed. Upper limits at 95% confidence level are set on the signal strength as functions of either the mediator mass or the relevant coupling. This is the first search for a pair of nonprompt DM candidates in the Lorentz-boosted topology, characterized by a large-radius jet and large missing transverse momentum.</summary>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-13T02:31:28Z</published>
+    <arxiv:comment>Submitted to the Journal of High Energy Physics. All figures and tables can be found at http://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-24-001 (CMS Public Pages)</arxiv:comment>
+    <arxiv:primary_category term="hep-ex"/>
+    <author>
+      <name> CMS Collaboration</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.01176v1</id>
+    <title>Temporal Motif Signatures for Temporal Graph Neural Networks</title>
+    <updated>2026-05-31T11:32:32Z</updated>
+    <link href="https://arxiv.org/abs/2606.01176v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.01176v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Real temporal interaction streams carry predictive structure in short-horizon motif patterns -- repetition, reciprocity, star diversity, triadic flow -- that vanilla temporal graph neural networks (TGNNs) often fail to expose to their edge scorers. We show this concretely on MOOC interaction prediction, where a small four-feature family of past-window star counts already delivers most of the lift over a strong static GNN. Across a wide set of real and synthetic temporal datasets we find that motif activity organizes consistently along three scale-stable axes (dyadic recency/reciprocity, star diversity, triadic flow), and we use this empirical structure to design a compact 13-coordinate, leakage-safe, candidate-local motif feature map h(u, v, t) that linearly embeds into any static or temporal encoder without architectural changes. A temporal Weisfeiler-Leman (WL) analysis places the augmentation relative to the first level of an anchored temporal-WL hierarchy and exhibits a candidate-anchored pair on which motif features distinguish. We demonstrate empirically that the same augmentation consistently lifts performance across heterogeneous tasks: TGB link-property prediction across all five baselines, edge classification on Bitcoin Alpha/OTC and MOOC, and graph-level classification of synthetic temporal generators.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-31T11:32:32Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Dylan Sandfelder</name>
+    </author>
+    <author>
+      <name>Mihai Cucuringu</name>
+    </author>
+    <author>
+      <name>Xiaowen Dong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.21502v1</id>
+    <title>Graph neural network explanations reveal a topological signature of disease-associated hubs in biological networks</title>
+    <updated>2026-05-08T15:29:36Z</updated>
+    <link href="https://arxiv.org/abs/2605.21502v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.21502v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks (GNNs) are increasingly used to model biological systems, yet the reliability of post-hoc explanation methods for recovering meaningful molecular mechanisms remains unclear. Here, we systematically evaluate four widely used approaches: Saliency Attribution (SA), Integrated Gradients (IG), GNNExplainer, and Layer-wise Relevance Propagation (LRP) for identifying disease-relevant structure in breast cancer RNA-seq data projected onto a protein-protein interaction network. Using synthetic benchmarks with known ground-truth motifs, we show that explanation methods recover distinct signal organizations: SA performs best for sparse single-node drivers, whereas IG and LRP preferentially recover distributed pathway-like and cascade-like signals. In TCGA BRCA data, we identify a consistent topological signature of disease-associated hubs in which attribution peaks in the immediate 1-hop neighborhood and decays across successive network shells, a pattern most pronounced for IG and LRP and associated with strong enrichment of known cancer hubs. We further observe a trade-off between local hub enrichment and global gene ranking performance, with IG optimizing local enrichment and SA achieving superior global discrimination. Motivated by these complementary behaviors, we introduce a framework combining a shell-based hub score with consensus ranking across explainers. Consensus scores improve prioritization of canonical cancer genes (TP53, BRCA1, ESR1, MYC), reduce dependence on node degree, and, especially when tuned, outperform individual methods. Pathway enrichment further reveals improved recovery of biologically coherent cancer programs, including ERBB2, RTK, MAPK, immune, and cytokine signaling. Together, these results demonstrate that topology-aware integration of graph explanations can improve biological interpretability and biologically relevant molecular recovery.</summary>
+    <category term="q-bio.MN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-08T15:29:36Z</published>
+    <arxiv:comment>25 pages (excluding supplement), 7 figures, 7 supplementary tables</arxiv:comment>
+    <arxiv:primary_category term="q-bio.MN"/>
+    <author>
+      <name>Kyle Higgins</name>
+    </author>
+    <author>
+      <name>Ivan Laponogov</name>
+    </author>
+    <author>
+      <name>Dennis Veselkov</name>
+    </author>
+    <author>
+      <name>Kirill Veselkov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.22809v1</id>
+    <title>The Elusive Nature of Roughness: Linking Hydraulics and Graph Theory for Water Distribution Networks Model Calibration</title>
+    <updated>2026-04-14T09:24:40Z</updated>
+    <link href="https://arxiv.org/abs/2604.22809v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.22809v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate pipe roughness estimation in large-scale water distribution networks is often hindered by the high cost of traditional field methods. This study investigates whether network partitioning, by utilizing hydraulic and graph-derived attributes, can enhance the calibration of these parameters. Using a high-fidelity model of a real network as a benchmark, we evaluate density-based clustering, and topology-driven grouping strategies. Optimization experiments demonstrate that attribute-based grouping yields stable, repeatable results comparable to manual calibration for hydraulically significant pipes. While hydraulic attributes generate more distinct cluster structures, the inclusion of graph-based data improves calibration robustness by stabilizing the optimization process. Notably, density-based clustering achieves similar accuracy to k-means while reducing computational effort in specific configurations. Although the method does not eliminate all sources of uncertainty, results suggest that topology-informed grouping provides a systematic, reproducible, and computationally efficient alternative to manual heuristics, highlighting the critical role of network structure in reliable parameter estimation.</summary>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-14T09:24:40Z</published>
+    <arxiv:primary_category term="cs.CE"/>
+    <author>
+      <name>Karol Dykiert</name>
+    </author>
+    <author>
+      <name>Mateusz Stolarski</name>
+    </author>
+    <author>
+      <name>Michał Czuba</name>
+    </author>
+    <author>
+      <name>Wojciech Cieżak</name>
+    </author>
+    <author>
+      <name>Piotr Bródka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.27381v1</id>
+    <title>Characterizing Atomistic Transitions Using Cross-scale Graph-pooled Chebyshev Signatures</title>
+    <updated>2026-03-28T19:17:13Z</updated>
+    <link href="https://arxiv.org/abs/2603.27381v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.27381v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large-scale atomistic simulations can produce extreme volumes of information in the form of long trajectories. Reliably and automatically extracting key information from such datasets remains a formidable challenge, especially as it pertains to the analysis of the structural transitions affecting the system. We present a novel approach to characterize and compare atomistic transitions using cross-scale graph-pooled Chebyshev signatures. These signatures are permutation invariants of an operator that transform a Coulomb matrix representation of the initial state of the system into that corresponding to the final state. Using a long-time trajectory of a small metallic nanoparticle, we show that these signatures can be used to define a natural distance metric between transitions that allows for classification and clustering into physically meaningful families. This approach is shown to capture complex patterns and hierarchies of transition types that are inaccessible to traditional techniques, dramatically facilitating the analysis of large-scale simulations.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-28T19:17:13Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <author>
+      <name>Rostyslav Hnatyshyn</name>
+    </author>
+    <author>
+      <name>Danny Perez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.20418v1</id>
+    <title>CITED: A Decision Boundary-Aware Signature for GNNs Towards Model Extraction Defense</title>
+    <updated>2026-02-23T23:33:31Z</updated>
+    <link href="https://arxiv.org/abs/2602.20418v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.20418v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks (GNNs) have demonstrated superior performance in various applications, such as recommendation systems and financial risk management. However, deploying large-scale GNN models locally is particularly challenging for users, as it requires significant computational resources and extensive property data. Consequently, Machine Learning as a Service (MLaaS) has become increasingly popular, offering a convenient way to deploy and access various models, including GNNs. However, an emerging threat known as Model Extraction Attacks (MEAs) presents significant risks, as adversaries can readily obtain surrogate GNN models exhibiting similar functionality. Specifically, attackers repeatedly query the target model using subgraph inputs to collect corresponding responses. These input-output pairs are subsequently utilized to train their own surrogate models at minimal cost. Many techniques have been proposed to defend against MEAs, but most are limited to specific output levels (e.g., embedding or label) and suffer from inherent technical drawbacks. To address these limitations, we propose a novel ownership verification framework CITED which is a first-of-its-kind method to achieve ownership verification on both embedding and label levels. Moreover, CITED is a novel signature-based method that neither harms downstream performance nor introduces auxiliary models that reduce efficiency, while still outperforming all watermarking and fingerprinting approaches. Extensive experiments demonstrate the effectiveness and robustness of our CITED framework. Code is available at: https://github.com/LabRAI/CITED.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-23T23:33:31Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Bolin Shen</name>
+    </author>
+    <author>
+      <name>Md Shamim Seraj</name>
+    </author>
+    <author>
+      <name>Zhan Cheng</name>
+    </author>
+    <author>
+      <name>Shayok Chakraborty</name>
+    </author>
+    <author>
+      <name>Yushun Dong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.19972v1</id>
+    <title>Non Fermi liquid signatures across strain engineered metal-insulator transition in line-graph lattices</title>
+    <updated>2026-02-23T15:34:48Z</updated>
+    <link href="https://arxiv.org/abs/2602.19972v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.19972v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Controlling the properties and thus the functionalities of correlated electron systems via externally tunable perturbations has always remained a cherished goal in quantum condensed matter physics. Recently, straintronics has proved to be one such external control which can dictate the quantum phases and transitions in materials via the reconstruction of their electronic band structure. A particularly intriguing scenario arises in the context of flat band line-graph lattices wherein straintronics is found to bring forth non trivial phase transitions. This paper reports the phase transitions and thermal scales across the Lieb/Kagome interconversion in the electronic interaction-strain-temperature space. Based on the thermodynamic, spectroscopic and transport signatures across the strain tuned interconversion of these line-graph lattices we have mapped out the low temperature phases and thermal transition scales, numerically determined using non perturbative calculations. While at the low temperatures, interaction-strain plane is spanned by magnetically correlated insulators, flat band induced weak transiently localized insulators and non Fermi liquid metallic phases, thermal fluctuations aid in to stabilize coexistent magnetic correlations. Apart from quantifying the magnetic transition scales in this system our results on the spectroscopic and transport signatures distill the strain tuned metal-insulator transition and crossover scales which exhibit variable transport scaling exponents.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-23T15:34:48Z</published>
+    <arxiv:comment>13 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Shashikant Singh Kunwar</name>
+    </author>
+    <author>
+      <name>Madhuparna Karmakar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.02689v2</id>
+    <title>Eidolon: A Post-Quantum Signature Scheme Based on k-Colorability in the Age of Graph Neural Networks</title>
+    <updated>2026-04-24T12:26:54Z</updated>
+    <link href="https://arxiv.org/abs/2602.02689v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.02689v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose Eidolon, a post-quantum signature scheme grounded on the NP-complete k-colorability problem. Our construction generalizes the Goldreich-Micali-Wigderson zero-knowledge protocol to arbitrary k &gt;= 3, applies the Fiat-Shamir transform, and uses Merkle-tree commitments to compress signatures from O(tn) to O(t log n). We generate hard instances by planting a coloring while aiming to preserve the statistical profile of random graphs. We present an empirical security analysis of such a scheme against both classical solvers (ILP, DSatur) and a custom graph neural network (GNN) attacker. Experiments show that for n &gt;= 60, neither approach is able to recover a valid coloring matching the planted solution, suggesting that well-engineered k-coloring instances can resist the considered classical and learning-based cryptanalytic approaches. These experiments indicate that the constructed instances resist the attacks considered in our evaluation.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-02T19:05:50Z</published>
+    <arxiv:comment>20 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <arxiv:journal_ref>Proceedings of WAIFI 2026, Lecture Notes in Computer Science (LNCS), Vol. 16611, Springer, 2026</arxiv:journal_ref>
+    <author>
+      <name>Asmaa Cherkaoui</name>
+    </author>
+    <author>
+      <name>Ramon Flores</name>
+    </author>
+    <author>
+      <name>Delaram Kahrobaei</name>
+    </author>
+    <author>
+      <name>Richard Wilson</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-032-27574-5_3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-032-27574-5_3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.12436v3</id>
+    <title>Rough Sets for Explainability of Spectral Graph Clustering</title>
+    <updated>2026-03-13T18:38:36Z</updated>
+    <link href="https://arxiv.org/abs/2512.12436v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.12436v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph Spectral Clustering methods (GSC) allow representing clusters of diverse shapes, densities, etc. However, the results of such algorithms, when applied e.g. to text documents, are hard to explain to the user, especially due to embedding in the spectral space which has no obvious relation to document contents. Furthermore, the presence of documents without clear content meaning and the stochastic nature of the clustering algorithms deteriorate explainability. This paper proposes an enhancement to the explanation methodology, proposed in an earlier research of our team. It allows us to overcome the latter problems by taking inspiration from rough set theory.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-13T19:29:04Z</published>
+    <arxiv:comment>24 figures, 23 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Bartłomiej Starosta</name>
+    </author>
+    <author>
+      <name>Sławomir T. Wierzchoń</name>
+    </author>
+    <author>
+      <name>Piotr Borkowski</name>
+    </author>
+    <author>
+      <name>Dariusz Czerski</name>
+    </author>
+    <author>
+      <name>Marcin Sydow</name>
+    </author>
+    <author>
+      <name>Eryk Laskowski</name>
+    </author>
+    <author>
+      <name>Mieczysław A. Kłopotek</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.02352v3</id>
+    <title>First-passage horizons in horizontal visibility graphs: a rank-invariant estimator of path roughness for rough volatility models</title>
+    <updated>2026-05-03T14:30:54Z</updated>
+    <link href="https://arxiv.org/abs/2512.02352v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.02352v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Horizontal visibility graphs (HVGs) encode the ordinal structure of time 
+series and provide graph-local summaries of path topology. This article 
+introduces L+(t), the forward visibility horizon at node t, with 
+finite-sample terminal non-crossings treated as right-censored 
+observations. For paths without ties, each uncensored L+(t) is identical 
+to the first-passage time τ+(t) = inf{k â¥ 1 : x_{t+k} â¥ x_t}. For an 
+i.i.d. sequence with a continuous distribution, the survival law is 
+exactly Pr[L+ â¥ k] = 1/k, equivalent to Rényi's record statistic and 
+implying infinite mean and variance. Hence roughness is estimated on a 
+power-law survival scale through a single tail exponent θ. Combining the 
+identity L+ = τ+ with discrete-grid persistence theory for fractional 
+Brownian motion gives the prediction θ(H) = 1 â H. For rough Bergomi-type 
+volatility, the same prediction is derived under an explicit persistence 
+hypothesis for RiemannâLiouville fBm increments and verified numerically. 
+In Monte-Carlo experiments (N = 10,000, T = 2^16), a Hill-MLE with 
+ClausetâShaliziâNewman threshold selection recovers θ(H) within one 
+cross-replicate standard deviation for H â¤ 0.2 and reveals a positive 
+finite-size bias for smoother paths. The rank-invariant, parameter-free 
+estimator separates rough Bergomi volatility from classical Heston, 
+GARCH, and FIGARCH benchmarks. Applied to daily FRED VIX data from 
+2000â2026, the rolling estimate is θÌ = 0.91 Â± 0.19 across 45 four-year 
+windows and lies far below an overlapping-window i.i.d. Monte-Carlo null 
+(p &lt; 0.001). The statistic offers an ordinal diagnostic of roughness for 
+financial volatility and other complex time-series systems.</summary>
+    <category term="q-fin.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.CP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.TR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-02T02:48:41Z</published>
+    <arxiv:primary_category term="q-fin.ST"/>
+    <author>
+      <name>Michał Sikorski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.19321v1</id>
+    <title>Online Handwritten Signature Verification Based on Temporal-Spatial Graph Attention Transformer</title>
+    <updated>2025-10-22T07:32:55Z</updated>
+    <link href="https://arxiv.org/abs/2510.19321v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.19321v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Handwritten signature verification is a crucial aspect of identity authentication, with applications in various domains such as finance and e-commerce. However, achieving high accuracy in signature verification remains challenging due to intra-user variability and the risk of forgery. This paper introduces a novel approach for dynamic signature verification: the Temporal-Spatial Graph Attention Transformer (TS-GATR). TS-GATR combines the Graph Attention Network (GAT) and the Gated Recurrent Unit (GRU) to model both spatial and temporal dependencies in signature data. TS-GATR enhances verification performance by representing signatures as graphs, where each node captures dynamic features (e.g. position, velocity, pressure), and by using attention mechanisms to model their complex relationships. The proposed method further employs a Dual-Graph Attention Transformer (DGATR) module, which utilizes k-step and k-nearest neighbor adjacency graphs to model local and global spatial features, respectively. To capture long-term temporal dependencies, the model integrates GRU, thereby enhancing its ability to learn dynamic features during signature verification. Comprehensive experiments conducted on benchmark datasets such as MSDS and DeepSignDB show that TS-GATR surpasses current state-of-the-art approaches, consistently achieving lower Equal Error Rates (EER) across various scenarios.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-22T07:32:55Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Hai-jie Yuan</name>
+    </author>
+    <author>
+      <name>Heng Zhang</name>
+    </author>
+    <author>
+      <name>Fei Yin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.02819v3</id>
+    <title>Signatures of quantum chaos and complexity in the Ising model on random graphs</title>
+    <updated>2026-07-08T18:05:55Z</updated>
+    <link href="https://arxiv.org/abs/2508.02819v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.02819v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate signatures of quantum chaos in the mixed-field quantum Ising model on finite-size Erdős-Rényi graphs using probes scalable on near-term quantum devices. Upon tuning the graph connectivity, the system exhibits a crossover from a localized regime at low connectivity, through a chaotic regime at intermediate connectivity, to a permutation-symmetric integrable limit near all-to-all connectivity. This crossover has possible implications for the performance and trainability of variational algorithms such as QAOA. We characterize this crossover in finite-size systems using complementary probes. First, deep thermalization of a projected ensemble starting from a product state reveals slow (fast) convergence to the Haar ensemble at extremal (intermediate) connectivities. Second, we analyze eigenstate and eigenvalue correlations using the partial spectral form factor, an experimentally scalable proxy for the spectral form factor with reduced resource overhead, and observe characteristic chaos signatures at intermediate connectivities and distinct deviations at extremal connectivities. Finally, we explore the Krylov complexity of operators, a locality-independent diagnostic that, although not directly experimentally accessible, serves as a tool for quantifying scrambling. We show that it is maximized deep in the chaotic regime, corroborating the signatures observed through the experimentally scalable probes. Our results provide finite-size benchmarks demonstrating robust signatures of chaos in scalable probes and suggest that these diagnostics can be implemented in current quantum platforms to access regimes beyond classical simulation.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-04T18:43:43Z</published>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>Phys. Rev. B 113, 214322 (2026)</arxiv:journal_ref>
+    <author>
+      <name>GJ Sreejith</name>
+    </author>
+    <author>
+      <name>Sandipan Manna</name>
+    </author>
+    <arxiv:doi>10.1103/vt39-tvrs</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/vt39-tvrs" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.04027v1</id>
+    <title>Commute Networks as a Signature of Urban Socioeconomic Performance: Evaluating Mobility Structures with Deep Learning Models</title>
+    <updated>2025-07-05T12:38:59Z</updated>
+    <link href="https://arxiv.org/abs/2507.04027v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.04027v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Urban socioeconomic modeling has predominantly concentrated on extensive location and neighborhood-based features, relying on the localized population footprint. However, networks in urban systems are common, and many urban modeling methods don't account for network-based effects. In this study, we propose using commute information records from the census as a reliable and comprehensive source to construct mobility networks across cities. Leveraging deep learning architectures, we employ these commute networks across U.S. metro areas for socioeconomic modeling. We show that mobility network structures provide significant predictive performance without considering any node features. Consequently, we use mobility networks to present a supervised learning framework to model a city's socioeconomic indicator directly, combining Graph Neural Network and Vanilla Neural Network models to learn all parameters in a single learning pipeline. Our experiments in 12 major U.S. cities show the proposed model outperforms previous conventional machine learning models. This work provides urban researchers methods to incorporate network effects in urban modeling and informs stakeholders of wider network-based effects in urban policymaking and planning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-05T12:38:59Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Devashish Khulbe</name>
+    </author>
+    <author>
+      <name>Alexander Belyi</name>
+    </author>
+    <author>
+      <name>Stanislav Sobolevsky</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.17634v2</id>
+    <title>Scalable Machine Learning Algorithms using Path Signatures</title>
+    <updated>2025-06-24T20:58:09Z</updated>
+    <link href="https://arxiv.org/abs/2506.17634v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.17634v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The interface between stochastic analysis and machine learning is a rapidly evolving field, with path signatures - iterated integrals that provide faithful, hierarchical representations of paths - offering a principled and universal feature map for sequential and structured data. Rooted in rough path theory, path signatures are invariant to reparameterization and well-suited for modelling evolving dynamics, long-range dependencies, and irregular sampling - common challenges in real-world time series and graph data.
+  This thesis investigates how to harness the expressive power of path signatures within scalable machine learning pipelines. It introduces a suite of models that combine theoretical robustness with computational efficiency, bridging rough path theory with probabilistic modelling, deep learning, and kernel methods. Key contributions include: Gaussian processes with signature kernel-based covariance functions for uncertainty-aware time series modelling; the Seq2Tens framework, which employs low-rank tensor structure in the weight space for scalable deep modelling of long-range dependencies; and graph-based models where expected signatures over graphs induce hypo-elliptic diffusion processes, offering expressive yet tractable alternatives to standard graph neural networks. Further developments include Random Fourier Signature Features, a scalable kernel approximation with theoretical guarantees, and Recurrent Sparse Spectrum Signature Gaussian Processes, which combine Gaussian processes, signature kernels, and random features with a principled forgetting mechanism for multi-horizon time series forecasting with adaptive context length.
+  We hope this thesis serves as both a methodological toolkit and a conceptual bridge, and provides a useful reference for the current state of the art in scalable, signature-based learning for sequential and structured data.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-21T08:36:34Z</published>
+    <arxiv:comment>PhD thesis</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Csaba Tóth</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.00943v1</id>
+    <title>Graph Classification and Radiomics Signature for Identification of Tuberculous Meningitis</title>
+    <updated>2025-04-01T16:28:39Z</updated>
+    <link href="https://arxiv.org/abs/2504.00943v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.00943v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Introduction: Tuberculous meningitis (TBM) is a serious brain infection caused by Mycobacterium tuberculosis, characterized by inflammation of the meninges covering the brain and spinal cord. Diagnosis often requires invasive lumbar puncture (LP) and cerebrospinal fluid (CSF) analysis. Objectives: This study aims to classify TBM patients using T1-weighted (T1w) non-contrast Magnetic Resonance Imaging (MRI) scans. We hypothesize that specific brain regions, such as the interpeduncular cisterns, bone, and corpus callosum, contain visual markers that can non-invasively distinguish TBM patients from healthy controls. We propose a novel Pixel-array Graphs Classifier (PAG-Classifier) that leverages spatial relationships between neighbouring 3D pixels in a graph-based framework to extract significant features through eigen decomposition. These features are then used to train machine learning classifiers for effective patient classification. We validate our approach using a radiomics-based methodology, classifying TBM patients based on relevant radiomics features. Results: We utilized an internal dataset consisting of 52 scans, 32 from confirmed TBM patients based on mycobacteria detection in CSF, and 20 from healthy individuals. We achieved a 5-fold cross-validated average F1 score of 85.71% for cistern regions with our PAG-Classifier and 92.85% with the radiomics features classifier, surpassing current state-of-the-art benchmarks by 15% and 22%, respectively. However, bone and corpus callosum regions showed poor classification effectiveness, with average F1 scores below 50%. Conclusion: Our study suggests that algorithms like the PAG-Classifier serve as effective tools for non-invasive TBM analysis, particularly by targeting the interpeduncular cistern. Findings indicate that the bone and corpus callosum regions lack distinctive patterns for differentiation.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-01T16:28:39Z</published>
+    <arxiv:comment>19 pages, 6 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Snigdha Agarwal</name>
+    </author>
+    <author>
+      <name>Ganaraja V H</name>
+    </author>
+    <author>
+      <name>Neelam Sinha</name>
+    </author>
+    <author>
+      <name>Abhilasha Indoria</name>
+    </author>
+    <author>
+      <name>Netravathi M</name>
+    </author>
+    <author>
+      <name>Jitender Saini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.09660v2</id>
+    <title>Power Spectrum Signatures of Graphs</title>
+    <updated>2025-03-14T17:09:50Z</updated>
+    <link href="https://arxiv.org/abs/2503.09660v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.09660v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Point signatures based on the Laplacian operators on graphs, point clouds, and manifolds have become popular tools in machine learning for graphs, clustering, and shape analysis. In this work, we propose a novel point signature, the power spectrum signature, a measure on $\mathbb{R}$ defined as the squared graph Fourier transform of a graph signal. Unlike eigenvectors of the Laplacian from which it is derived, the power spectrum signature is invariant under graph automorphisms. We show that the power spectrum signature is stable under perturbations of the input graph with respect to the Wasserstein metric. We focus on the signature applied to classes of indicator functions, and its applications to generating descriptive features for vertices of graphs. To demonstrate the practical value of our signature, we showcase several applications in characterizing geometry and symmetries in point cloud data, and graph regression problems.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-12T13:36:25Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Karamatou Yacoubou Djima</name>
+    </author>
+    <author>
+      <name>Ka Man Yim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.11526v3</id>
+    <title>RConE: Rough Cone Embedding for Multi-Hop Logical Query Answering on Multi-Modal Knowledge Graphs</title>
+    <updated>2025-06-11T08:52:33Z</updated>
+    <link href="https://arxiv.org/abs/2408.11526v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.11526v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multi-hop query answering over a Knowledge Graph (KG) involves traversing one or more hops from the start node to answer a query. Path-based and logic-based methods are state-of-the-art for multi-hop question answering. The former is used in link prediction tasks. The latter is for answering complex logical queries. The logical multi-hop querying technique embeds the KG and queries in the same embedding space. The existing work incorporates First Order Logic (FOL) operators, such as conjunction ($\wedge$), disjunction ($\vee$), and negation ($\neg$), in queries. Though current models have most of the building blocks to execute the FOL queries, they cannot use the dense information of multi-modal entities in the case of Multi-Modal Knowledge Graphs (MMKGs). We propose RConE, an embedding method to capture the multi-modal information needed to answer a query. The model first shortlists candidate (multi-modal) entities containing the answer. It then finds the solution (sub-entities) within those entities. Several existing works tackle path-based question-answering in MMKGs. However, to our knowledge, we are the first to introduce logical constructs in querying MMKGs and to answer queries that involve sub-entities of multi-modal entities as the answer. Extensive evaluation of four publicly available MMKGs indicates that RConE outperforms the current state-of-the-art.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-21T11:02:35Z</published>
+    <arxiv:comment>Accepted in TKDE (June 2025) as regular paper</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Mayank Kharbanda</name>
+    </author>
+    <author>
+      <name>Rajiv Ratn Shah</name>
+    </author>
+    <author>
+      <name>Raghava Mutharaju</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.15044v1</id>
+    <title>Signature, slicing foams, and crossing changes of Klein graphs</title>
+    <updated>2024-05-23T20:44:19Z</updated>
+    <link href="https://arxiv.org/abs/2405.15044v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.15044v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A totally oriented Klein graph is a trivalent spatial graph in the 3-sphere with a 3-coloring of its edges and an orientation on each bicolored link. A totally oriented Klein foam is a 3-colored 2-complex in the 4-ball whose boundary is a Klein foam and whose bicolored surfaces are oriented. We extend Gille-Robert's signature for 3-Hamiltonian Klein graphs to all totally oriented Klein graphs and develop an analogy of Murasugi's bounds relating the signature, slice genus and unknotting number of knots. In particular, we show that the signature of a totally oriented Klein graph produces a lower bound on the negative orbifold Euler characteristic of certain totally oriented Klein foams bounded by $Γ$. When $Γ$ is abstractly planar, these negative Euler characteristics, in turn, produce a lower bound on a certain natural unknotting number for $Γ$. Mutatis mutandi, we produce lower bounds on the corresponding Gordian distance between two totally oriented Klein graphs that can be related by a sequence of crossing changes. We also give examples of theta-curves for which our lower bounds on unknotting number improve on previously known bounds.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-23T20:44:19Z</published>
+    <arxiv:comment>23 pages, 10 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Kenneth L. Baker</name>
+    </author>
+    <author>
+      <name>Allison H. Moore</name>
+    </author>
+    <author>
+      <name>Danielle O'Donnol</name>
+    </author>
+    <author>
+      <name>Scott Taylor</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.03558v1</id>
+    <title>Path Signatures and Graph Neural Networks for Slow Earthquake Analysis: Better Together?</title>
+    <updated>2024-02-05T22:16:05Z</updated>
+    <link href="https://arxiv.org/abs/2402.03558v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.03558v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The path signature, having enjoyed recent success in the machine learning community, is a theoretically-driven method for engineering features from irregular paths. On the other hand, graph neural networks (GNN), neural architectures for processing data on graphs, excel on tasks with irregular domains, such as sensor networks. In this paper, we introduce a novel approach, Path Signature Graph Convolutional Neural Networks (PS-GCNN), integrating path signatures into graph convolutional neural networks (GCNN), and leveraging the strengths of both path signatures, for feature extraction, and GCNNs, for handling spatial interactions. We apply our method to analyze slow earthquake sequences, also called slow slip events (SSE), utilizing data from GPS timeseries, with a case study on a GPS sensor network on the east coast of New Zealand's north island. We also establish benchmarks for our method on simulated stochastic differential equations, which model similar reaction-diffusion phenomenon. Our methodology shows promise for future advancement in earthquake prediction and sensor network analysis.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-05T22:16:05Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hans Riess</name>
+    </author>
+    <author>
+      <name>Manolis Veveakis</name>
+    </author>
+    <author>
+      <name>Michael M. Zavlanos</name>
+    </author>
+  </entry>
+</feed>

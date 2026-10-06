@@ -1,0 +1,2842 @@
+{
+  "created_at_utc": "2026-09-16T03:43:03.446319+00:00",
+  "academic_mcp_available": false,
+  "workflow": "multi-source-search",
+  "scope": "Bounded discovery; no novelty or implementation claims; no project outcome arrays read",
+  "records": [
+    {
+      "name": "arxiv_directional_v1",
+      "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22magnetic+Laplacian%22+OR+all%3A%22magnetic+graph%22+OR+all%3A%22directed+graph+neural%22%29+AND+submittedDate%3A%5B202401010000+TO+202609162359%5D&start=0&max_results=25&sortBy=submittedDate&sortOrder=descending",
+      "error": "URLError(ConnectionResetError(104, 'Connection reset by peer'))",
+      "valid_response": false
+    },
+    {
+      "name": "crossref_directional_v1",
+      "url": "https://api.crossref.org/works?query=magnetic+graph+neural+network+directed+adaptive&rows=15&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-09-16",
+      "status": 200,
+      "content_type": "application/json",
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/directional_next_20260916/crossref_directional_v1.json",
+      "sha256": "3303971f305cdbe7899626877ad125d5edbd97788743780e62f5363c5577fdeb",
+      "bytes": 103244,
+      "records": [
+        {
+          "title": "Adaptive Node-Level Weighted Learning for Directed Graph Neural Network",
+          "doi": "10.2139/ssrn.5004180",
+          "date": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "given": "Jincheng",
+              "family": "Huang",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Xiaofeng",
+              "family": "Zhu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "abstract": "",
+          "link": []
+        },
+        {
+          "title": "Adaptive node-level weighted learning for directed graph neural network",
+          "doi": "10.1016/j.neunet.2025.107393",
+          "date": {
+            "date-parts": [
+              [
+                2025,
+                7
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "ORCID": "https://orcid.org/0000-0001-8181-9410",
+              "authenticated-orcid": false,
+              "given": "Jincheng",
+              "family": "Huang",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Xiaofeng",
+              "family": "Zhu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "abstract": "",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0893608025002722?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0893608025002722?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ]
+        },
+        {
+          "title": "An End-to-End Gene Regulatory Directed Graph Neural Network Schema",
+          "doi": "10.2139/ssrn.4691778",
+          "date": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "given": "Zhenyu",
+              "family": "Guo",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Wanhong",
+              "family": "Zhang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "abstract": "",
+          "link": []
+        },
+        {
+          "title": "Graph Neural Network (GNN) and XAI for Adaptive, Cross-Institutional Fraud Detection",
+          "doi": "10.37547/tajet/volume08issue02-21",
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                28
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "given": "Ravi Teja",
+              "family": "Bonam",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Independent Researcher, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "abstract": "<jats:p>The rapid digitalization of financial services has significantly increased the scale and complexity of fraudulent activities across financial institutions. Conventional fraud detection systems, primarily based on rule-based mechanisms and tabular machine learning models, often fail to identify sophisticated and interconnected fraud schemes spanning multiple institutions. Furthermore, increasing regulatory requirements regarding transparency and data privacy restrict direct sharing of financial transaction data among organizations. This study proposes a privacy-preserving and adaptive fraud detection framework that integrates Graph Neural Networks (GNNs), Federated Learning (FL), and Explainable Artificial Intelligence (XAI) to enable collaborative fraud detection across institutions without compromising sensitive customer information.\n\nThe proposed framework models financial ecosystems as distributed heterogeneous graphs consisting of accounts, merchants, devices, and transactional relationships. A federated graph learning mechanism enables participating institutions to collaboratively train fraud detection models while preserving local data ownership. To address the interpretability limitations of deep learning systems in highly regulated financial environments, XAI techniques are integrated to provide transparent explanations for fraud predictions at transaction, account, and network levels. Additionally, adaptive learning strategies are incorporated to address evolving fraud patterns and concept drift over time.\n\nThe study presents the conceptual architecture, methodological framework, privacy-preserving mechanisms, explainability integration, and evaluation strategy for the proposed system. The framework aims to improve fraud detection accuracy, enhance regulatory compliance, and facilitate collaborative intelligence sharing among financial institutions while maintaining strict privacy guarantees.</jats:p>",
+          "link": []
+        },
+        {
+          "title": "Review for \"Spectral-Directed Electrostatics Strategy Integrated within a Graph Neural Network Approach for the Prediction of Nanocluster Structures\"",
+          "doi": "10.1039/d6cp00670a/v2/review1",
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                6
+              ]
+            ]
+          },
+          "authors": [],
+          "abstract": "",
+          "link": []
+        },
+        {
+          "title": "Review for \"Spectral-Directed Electrostatics Strategy Integrated within a Graph Neural Network Approach for the Prediction of Nanocluster Structures\"",
+          "doi": "10.1039/d6cp00670a/v1/review1",
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                4
+              ]
+            ]
+          },
+          "authors": [],
+          "abstract": "",
+          "link": []
+        },
+        {
+          "title": "Review for \"Spectral-Directed Electrostatics Strategy Integrated within a Graph Neural Network Approach for the Prediction of Nanocluster Structures\"",
+          "doi": "10.1039/d6cp00670a/v1/review2",
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                21
+              ]
+            ]
+          },
+          "authors": [],
+          "abstract": "",
+          "link": []
+        },
+        {
+          "title": "Resilient Cross-Phase Recommendation: An Adaptive Graph Neural Network Framework",
+          "doi": "10.2139/ssrn.7173691",
+          "date": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "ORCID": "https://orcid.org/0000-0001-6116-7232",
+              "authenticated-orcid": true,
+              "given": "Jiawei",
+              "family": "Chen",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Mengnan",
+              "family": "Wu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "abstract": "<jats:p>Nowadays, digital platforms have increasingly relied on recommendation systems to connect users with relevant products and services. However, these systems often operate in environments vulnerable to major external shocks. Such shocks can reshape user preferences, item characteristics, and interaction patterns, creating a critical challenge for platforms seeking to maintain effective recommendation. In such settings, interactions accumulated before the shock contain useful collaborative signals but may also include outdated information, whereas interactions observed afterward reflect emerging behaviors but are often too sparse for recommendation. How to selectively reuse historical knowledge while adapting to post-shock changes remains insufficiently studied. To address this research gap, we formulate the cross-phase recommendation problem and propose an adaptive graph neural network framework for resilient recommendation under external shocks, which adapts historical knowledge at both the representation and interaction levels. Specifically, we develop a personalized knowledge transfer module that learns user- and item-specific gates to determine how much historical information should be retained and adapted after the shock. We further design a personalized graph augmentation module that selectively incorporates informative historical interactions into the sparse graph after the shock. Comprehensive experiments on a real-world dataset demonstrate that our proposed framework outperforms other alternatives. Its superiority remains consistent across cities, evaluation metrics, and test months. The temporal results also show that it recovers rapidly from the initial performance decline and sustains strong recommendation performance over an extended period.</jats:p>",
+          "link": []
+        },
+        {
+          "title": "Adaptive Graph Neural Network Framework for Real-Time Threat Detection in Critical Infrastructure Networks",
+          "doi": "10.36227/techrxiv.176342124.45949049/v1",
+          "date": {
+            "date-parts": [
+              [
+                2025,
+                11,
+                17
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "ORCID": "https://orcid.org/0009-0006-8009-2938",
+              "authenticated-orcid": false,
+              "given": "Kazeem",
+              "family": "Mohammed",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Independent Researcher"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "abstract": "<jats:p>Critical infrastructure networks face increasingly sophisticated cyber threats that traditional detection methods struggle to identify in real-time. This paper presents AGNN-TID (Adaptive Graph Neural Network for Threat Intelligence and Detection), a novel framework that models infrastructure systems as dynamic temporal graphs and employs attention-based graph neural networks to detect anomalous patterns indicative of cyberattacks. Unlike existing approaches that treat network elements independently, AGNN-TID captures spatial relationships between infrastructure components and temporal evolution of attack patterns simultaneously. We introduce a new multi-scale attention mechanism that adapts to infrastructure topology changes and learns hierarchical threat representations. The framework incorporates a novel loss function combining supervised classification with unsupervised anomaly detection, enabling effective learning even with limited labeled attack data. Extensive evaluation on three datasets-NSL-KDD, CICIDS2017, and a newly collected Australian critical infrastructure dataset (AUS-CII-2024)-demonstrates that AGNN-TID achieves 96.8% detection accuracy with2.3% false positive rate, outperforming state-of-the-art methods by 8.4% in F1-score while reducing detection latency to under 180ms. The framework successfully detected zero-day attack patterns in our infrastructure testbed that signature-based systems missed entirely. Mathematical analysis proves the convergence properties of our training algorithm and establishes theoretical bounds on detection performance. Our code and AUS-CII-2024 dataset are publicly available to enable reproducibility and future research.</jats:p>",
+          "link": [
+            {
+              "URL": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176342124.45949049/v1",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        },
+        {
+          "title": "AlloPool: An Adaptive Graph Neural Network for Dynamic Allosteric Network Prediction in Protein Systems",
+          "doi": "10.1101/2024.11.01.621466",
+          "date": {
+            "date-parts": [
+              [
+                2024,
+                11,
+                3
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "given": "M.",
+              "family": "Marfoglia",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "L.",
+              "family": "Guirardel",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "P.",
+              "family": "Barth",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "abstract": "<jats:title>Abstract</jats:title>\n                <jats:p>Allosteric communication is essential to protein function, facilitating the dynamic regulation of biological responses through the propagation of structural and dynamic changes between regulatory and effector sites in response to stimuli. Traditional approaches to studying protein allostery often rely on static protein structures or abstract representations involving fully connected interaction graphs, which do not capture the temporal and state-dependent nature of these dynamic systems. Here, we introduce AlloPool, a graph neural network (GNN)-based model that iteratively prunes residue interactions to identify minimal, time-dependent interaction networks that govern long-range structural and dynamic responses to chemical or mechanical stimuli. Using temporal attention and graph aggregation, AlloPool accounts for evolving protein conformations in both molecular dynamics (MD) and steered MD (SMD) simulations to predict MD and SMD trajectories. We validate AlloPool on the Pin-1 protein and the ADGRG1 and B1AR receptors, showcasing its ability to accurately recapitulate protein motions, infer allosteric communication pathways, and identify critical allosteric sites. Additionally, AlloPool identifies force-dependent changes in GAIN domain structure and reconstructs directed information flow under mechanical load. Comparative analyses indicate that AlloPool outperforms existing models in MD and SMD trajectory reconstruction, presenting a new framework for analyzing force- and ligand-induced allosteric motions. This work advances the modeling of allosteric systems and offers broad potential for applications in drug discovery, synthetic biology, and protein engineering.</jats:p>",
+          "link": [
+            {
+              "URL": "https://syndication.highwire.org/content/doi/10.1101/2024.11.01.621466",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        },
+        {
+          "title": "A Hybrid Origami-Quantum Graph Neural Network Framework for Adaptive Structural Design and Optimisation",
+          "doi": "10.2139/ssrn.6657378",
+          "date": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "ORCID": "https://orcid.org/0009-0003-3718-240X",
+              "authenticated-orcid": true,
+              "given": "Avi",
+              "family": "Verma",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "abstract": "<jats:p>Adaptive and deployable structures are increasingly important in modern engineering systems including aerospace mechanisms, soft robotics, deployable space structures, and responsive architectural components where lightweight and reconfigurable designs must operate reliably under varying loads and environmental conditions. Origami-inspired engineering structures provide a promising solution by enabling foldable geometries capable of large and controllable shape transformations while using minimal material and maintaining structural efficiency. However, optimising origami crease patterns is a computationally challenging task because the configuration space defined by fold angles, geometric constraints, and material properties is highly nonlinear, high-dimensional, and often non-convex. Traditional optimisation approaches such as gradient-based methods or evolutionary algorithms frequently struggle to efficiently explore this complex design space and may converge to suboptimal folding configurations. In this work, we propose a hybrid Origami-Quantum Graph Neural Network (OQ-GNN) framework for adaptive structural optimisation of origami-based systems. In the proposed approach, origami crease patterns are represented as graphs in which nodes correspond to fold joints and store structural attributes such as fold angles, crease types, and material stiffness, while edges represent crease connectivity and geometric constraints between folds. A graph neural network performs message passing across the crease network to capture relational structural interactions and learn expressive embeddings that describe the global folding configuration. These learned representations are then processed by a quantum-inspired amplitude exploration module that encodes candidate structural states using complex-valued probability amplitudes, enabling simultaneous exploration of multiple design configurations through a superposition-like sampling mechanism implemented entirely on classical hardware. Experimental evaluation on a dataset of procedurally generated origami crease patterns with finite-element-based structural responses demonstrates that the proposed method achieves improved optimisation accuracy, reduced structural stress, and faster convergence compared with classical optimisation baselines and standard graph neural network approaches. The results suggest that combining graph-based structural learning with quantum-inspired probabilistic exploration provides an effective and scalable strategy for the design and optimisation of adaptive origami engineering structures.</jats:p>",
+          "link": []
+        },
+        {
+          "title": "GIMS: Image matching system based on adaptive graph construction and graph neural network",
+          "doi": "10.1016/j.neunet.2025.108030",
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                1
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-7369-1821",
+              "authenticated-orcid": false,
+              "given": "Xianfeng",
+              "family": "Song",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-4382-4670",
+              "authenticated-orcid": false,
+              "given": "Yi",
+              "family": "Zou",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Zheng",
+              "family": "Shi",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-7241-3483",
+              "authenticated-orcid": false,
+              "given": "Zheng",
+              "family": "Liu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "abstract": "",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0893608025009104?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0893608025009104?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ]
+        },
+        {
+          "title": "Wind Power Forecast Using Multilevel Adaptive Graph Convolution Neural Network",
+          "doi": "10.20944/preprints202512.0715.v1",
+          "date": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                8
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "given": "Oluwaseun E.",
+              "family": "Duntoye",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0009-0000-2898-9373",
+              "authenticated-orcid": false,
+              "given": "Kowovi C.",
+              "family": "Alowonou",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Do-Hoon",
+              "family": "Kwon",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "abstract": "<jats:p>Accurate forecasting of wind power is essential for maintaining the stability and efficiency of power networks as renewable energy sources become more integrated. This study proposes a multilevel spatial-temporal graph convolution network (MLAGCN) for wind power forecasting. The framework combines a multilevel adaptive graph convolution (MLAGC) and a lightweight temporal transformer (LWTT) to jointly model complex spatial-temporal relationships in wind power data. MLAGC is constructed using three adaptive graphs: a local-aware graph, a global-aware graph, and a structure-aware graph. These components form a flexible graph structure that effectively represents dynamic spatial interactions while LWTT learns short- and long-term sequential patterns. Experiments on real wind farm datasets demonstrated that the proposed model outperforms existing baselines. The model achieved an improved prediction accuracy and generalization, as indicated by a lower score of 43.44, mean absolute error (38.83), root mean square error (48.05) and a forecast loss of 0.22. These results demonstrates the effectiveness of temporal modeling and multilevel attention-based adaptive graph learning for high-resolution wind power forecasting.</jats:p>",
+          "link": []
+        },
+        {
+          "title": "Adaptive Multi-Agent Graph Neural Network (AMAGNN) for Congestion Control in VANET",
+          "doi": "10.21203/rs.3.rs-6504224/v1",
+          "date": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                7
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "given": "Santosh Kumar",
+              "family": "Maharana",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Biju Patnaik University of Technology"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Prashanta Kumar",
+              "family": "Patra",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Siksha O Anusandhan Deemed to be University"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "abstract": "<title>Abstract</title>\n        <p>Similar approaches are very useful in Vehicular Ad Hoc Networks in which: a flood of traffic and events occurs, especially in Intelligent Transportation Systems (ITS), as congestion control can have a huge impact in efficient traffic field and communication. The existing congestion control mechanisms are not suitable for this type of dynamic network topology and vehicle mobility. In response to these challenges, we propose an Adaptive Multi-Agent Graph Neural Network (AMAGNN), which utilizes graph neural networks (GNNs) and multi-agent reinforcement learning (MARL) for congestion control in vehicular ad hoc networks (VANETs). Institute, “AMAGNN models VANETs as dynamic graphs, with vehicles being intelligent agents that cooperatively learn to optimize data propagation and alleviate network congestion. Optimizes for scalability and adaptability by dynamically responding to network topology changes and traffic density variation. Results show that the proposed AMAGNN model outperforms current practices in congestion control for VANETs on all the key performance metrics. It attains Packet Delivery Ratio (92.5%), lowest delay (28.4 ms), and maximum throughput (275.6 kbps) which shows reliability and efficiency in communication. It also achieves the lowest congestion level (0.35) and average waiting time (0.31 s), highlighting its ability to reduce traffic and delay. AMAGNN achieves the best performance, compared with methods such as GCN-RL, DQN Adaptive, and MA-PPO, highlighting the effectiveness of adaptive multi-agent graph neural networks in the ever-changing vehicular environment.</p>",
+          "link": [
+            {
+              "URL": "https://www.researchsquare.com/article/rs-6504224/v1",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.researchsquare.com/article/rs-6504224/v1.html",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        },
+        {
+          "title": "AGNN-LB: Adaptive Graph Neural Network Based Load Balancing for Energy Efficient and Congestion Aware Wireless Sensor Networks",
+          "doi": "10.17485/ijst/v19i23.374",
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                6
+              ]
+            ]
+          },
+          "authors": [
+            {
+              "given": "D",
+              "family": "Maheshwaran",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Ph.D Research Scholar, Department of Computer Science, Hindusthan College of Arts and Science, Coimbatore, Tamil Nadu, India"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "V",
+              "family": "Saravanan",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Professor and Head, Department of Information Technology, Hindusthan College of Arts and Science, Coimbatore, Tamil Nadu, India"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "abstract": "<jats:p>Objectives: To propose a novel neural network-based load balancing approach for energy-efficient and congestion-aware routing in large-scale wireless sensor network (WSN) environments. The key objective is to develop intelligent routing that is capable of learning node-level interactions and predicting network load conditions to enhance routing efficiency, traffic fairness, and network lifetime. Methods: The Adaptive Graph Neural Network-Based Load Balancing (AGNN-LB) method treats wireless sensor networks as graphs comprised of sensor nodes and links as vertices (V) and edges (E), respectively. Node attributes such as residual energy, queue length, traffic rate, node degree, transmission delay, congestion level, and link quality are extracted by a graph feature extraction layer. The adaptive graph convolution layers learn the latent spatial correlations among neighboring nodes and encode spatial node embeddings. Subsequently, the dynamic load balancing engine predicts the node loads and re-routes network traffic based on the learned graph embedding. The AGNN-WSN2026 dataset containing 1,000 samples of graph-enabled sensor nodes is utilized for training and evaluating the performance. The proposed AGNN-LB is compared against baseline models such as GW-LBC and DBlock-RLB. The implementation is done using PyTorch for GNN development, NS-3 for network simulation, and Python for performance evaluation and statistical analysis. Findings: The simulation results reveal that AGNN-LB shows an outstanding performance, outperforming baseline models in energy efficiency with 96.8%, 97.4% network lifetime and a load balancing index of 96.5%, whereas it achieves a lower congestion level of 4.2% and end-to-end delay of 18.6 ms under different network environments. Novelty: The model stands as a unique design that combines AGNN with load balancing decision-making for wireless sensor networks (WSNs). Unlike typical clustering and routing schemes, the new design learns the spatial dependency among nodes as well as congestion propagation behavior to facilitate topology-aware, energy-aware, and intelligent traffic distribution for future autonomous WSNs.\n\nKeywords: Wireless Sensor Networks, Graph Neural Networks, Load-Balancing Model, Energy Efficiency, Congestion-Aware WSNs</jats:p>",
+          "link": [
+            {
+              "URL": "https://indjst.org/articles/agnn-lb-adaptive-graph-neural-network-based-load-balancing-for-energy-efficient-and-congestion-aware-wireless-sensor-networks",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ]
+        }
+      ],
+      "valid_response": true
+    },
+    {
+      "name": "openalex_directional_v1",
+      "url": "https://api.openalex.org/works?search=magnetic+graph+neural+network&per_page=20&filter=from_publication_date%3A2024-01-01%2Cto_publication_date%3A2026-09-16",
+      "status": 200,
+      "content_type": "application/json",
+      "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/directional_next_20260916/openalex_directional_v1.json",
+      "sha256": "2b6576947625a995e67c69ef950268b3126afb7bb3b86d52915ffacbec78c389",
+      "bytes": 621823,
+      "records": [
+        {
+          "title": "Spin-dependent graph neural network potential for magnetic materials",
+          "doi": "https://doi.org/10.1103/physrevb.109.144426",
+          "date": "2024-04-26",
+          "id": "https://openalex.org/W4395676247",
+          "abstract": "The development of machine-learning interatomic potentials has immensely contributed to the accuracy of simulations of molecules and crystals. However, creating interatomic potentials for magnetic systems that account for both magnetic moments and structural degrees of freedom remains a challenge. This work introduces SpinGNN, a spin-dependent interatomic potential approach that employs the graph neural network (GNN) to describe magnetic systems. SpinGNN consists of two types of edge GNNs: Heisenberg edge GNN (HEGNN) and spin-distance edge GNN (SEGNN). HEGNN is tailored to capture Heisenberg-type spin-lattice interactions, while SEGNN accurately models multibody and high-order spin-lattice coupling. The effectiveness of SpinGNN is demonstrated by its exceptional precision in fitting a high-order spin Hamiltonian and two complex spin-lattice Hamiltonians with great precision. Furthermore, it successfully models the subtle spin-lattice coupling in $\\mathrm{BiFe}{\\mathrm{O}}_{3}$ and performs large-scale spin-lattice dynamics simulations, predicting its antiferromagnetic ground state, magnetic phase transition, and domain-wall energy landscape with high accuracy. Finally, we perform spin-lattice simulations over one million atoms across GPUs in parallel. Our study broadens the scope of graph neural network potentials to magnetic systems, serving as a foundation for carrying out large-scale spin-lattice dynamic simulations in first-principle accuracy on such systems.",
+          "authors": [
+            "Hongyu Yu",
+            "Yang Zhong",
+            "Liangliang Hong",
+            "Changsong Xu",
+            "Wei Ren",
+            "Xin-Gao Gong",
+            "Hongjun Xiang"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1103/physrevb.109.144426",
+              "is_oa": false,
+              "landing_page_url": "https://doi.org/10.1103/physrevb.109.144426",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4210237713",
+                "display_name": "Physical review. B./Physical review. B",
+                "issn_l": "2469-9950",
+                "issn": [
+                  "2469-9950",
+                  "2469-9969",
+                  "2469-9977"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310320261",
+                "host_organization_name": "American Physical Society",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310320261"
+                ],
+                "host_organization_lineage_names": [
+                  "American Physical Society"
+                ],
+                "type": "journal"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Physical Review B",
+              "raw_type": "journal-article"
+            }
+          ]
+        },
+        {
+          "title": "Spin-informed universal graph neural networks for simulating magnetic ordering",
+          "doi": "https://doi.org/10.1073/pnas.2422973122",
+          "date": "2025-07-01",
+          "id": "https://openalex.org/W4411977988",
+          "abstract": "The screening and discovery of magnetic materials are hindered by the computational cost of first-principles density-functional theory (DFT) calculations required to find the ground state magnetic ordering. Although universal machine-learning interatomic potentials (uMLIPs), also known as atomistic foundation models, offer high-fidelity models of many atomistic systems with significant speedup, they currently lack the inputs required for predicting magnetic ordering. In this work, we present a data-efficient, spin-informed graph neural network framework that incorporates spin degrees of freedom as inputs and preserves physical symmetries, extending the functionality of uMLIPs to simulate magnetic orderings. This framework speeds up DFT calculations through better initial guesses for magnetic moments, determines the ground-state ordering of bulk materials and even generalizes to magnetic ordering in surfaces. Furthermore, we implement a closed-loop anomaly detection approach that effectively addresses the classic \"chicken-and-egg\" problem of creating a high-quality dataset while developing a uMLIP, unearthing anomalies in large benchmark datasets and boosting model accuracy.",
+          "authors": [
+            "Wenbin Xu",
+            "Rohan Yuri Sanspeur",
+            "Adeesh Kolluru",
+            "Bowen Deng",
+            "Peter Harrington",
+            "Steven Farrell",
+            "Karsten Reuter",
+            "John R. Kitchin"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1073/pnas.2422973122",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.1073/pnas.2422973122",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S125754415",
+                "display_name": "Proceedings of the National Academy of Sciences",
+                "issn_l": "0027-8424",
+                "issn": [
+                  "0027-8424",
+                  "1091-6490"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310320052",
+                "host_organization_name": "National Academy of Sciences",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310320052"
+                ],
+                "host_organization_lineage_names": [
+                  "National Academy of Sciences"
+                ],
+                "type": "journal"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Proceedings of the National Academy of Sciences",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:40591595",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/40591595",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Proceedings of the National Academy of Sciences of the United States of America",
+              "raw_type": "Journal Article"
+            },
+            {
+              "id": "pmh:oai:europepmc.org:11065513",
+              "is_oa": true,
+              "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/12260432",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306400806",
+                "display_name": "Europe PMC (PubMed Central)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1303153112",
+                "host_organization_name": "European Bioinformatics Institute",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1303153112"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": null,
+              "raw_type": "Text"
+            },
+            {
+              "id": "pmh:oai:pubmedcentral.nih.gov:12260432",
+              "is_oa": true,
+              "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/12260432",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S2764455111",
+                "display_name": "PubMed Central",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "Proc Natl Acad Sci U S A",
+              "raw_type": "Text"
+            },
+            {
+              "id": "pmh:oai:escholarship.org:ark:/13030/qt5cb2182g",
+              "is_oa": true,
+              "landing_page_url": "https://escholarship.org/uc/item/5cb2182g",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306400115",
+                "display_name": "eScholarship (California Digital Library)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I2801248553",
+                "host_organization_name": "California Digital Library",
+                "host_organization_lineage": [
+                  "https://openalex.org/I2801248553"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "Proceedings of the National Academy of Sciences of the United States of America, vol 122, iss 27",
+              "raw_type": "article"
+            },
+            {
+              "id": "pmh:oai:figshare.com:article/29950655",
+              "is_oa": false,
+              "landing_page_url": "https://figshare.com/articles/journal_contribution/Spin-informed_universal_graph_neural_networks_for_simulating_magnetic_ordering/29950655",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4377196282",
+                "display_name": "Figshare",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I4210132348",
+                "host_organization_name": "Figshare (United Kingdom)",
+                "host_organization_lineage": [
+                  "https://openalex.org/I4210132348"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": null,
+              "raw_type": "Text"
+            },
+            {
+              "id": "pmh:oai:pure.mpg.de:item_3658607",
+              "is_oa": true,
+              "landing_page_url": "https://hdl.handle.net/21.11116/0000-0011-8637-8",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306400654",
+                "display_name": "MPG.PuRe (Max Planck Society)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I149899117",
+                "host_organization_name": "Max Planck Society",
+                "host_organization_lineage": [
+                  "https://openalex.org/I149899117"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "Proceedings of the National Academy of Sciences of the USA",
+              "raw_type": "info:eu-repo/semantics/article"
+            }
+          ]
+        },
+        {
+          "title": "Using Convolutional Neural Network to Design and Predict the Forces and Kinematic Performance and External Rotation Moment of the Hip Joint in the Pelvis",
+          "doi": "https://doi.org/10.38124/ijisrt/ijisrt24feb1059",
+          "date": "2024-02-23",
+          "id": "https://openalex.org/W4392664198",
+          "abstract": "In order to improve the dynamic and kinematic adaptability of the hip joint, this paper presented a control attitude and kinematics and torque of the hip joint with power based neural network control. The CNN neural network uses input data only from the limb designed by the medical software, and is trained by different natural and artificially altered step patterns of healthy individuals. This type of network has been used for deep learning to realize adaptive speed control, dynamic and motion attitude, as well as prediction of force and torque performance. Detailed movement and torque tests were performed using MIMICS and ANATOMY AND PHYSIOLOGY software, and the obtained data were checked and varied by a healthy person, and finally, the test results showed that the neural network control system was able to control the selection. It has a variable and high speed with proper adaptation in various conditions. Finally, MATLAB software was used to design and predict the data of the problem, and favorable results were obtained.",
+          "authors": [
+            "Seyed Masoud Ghoreishi Mokri",
+            "Newsha Valadbeygi",
+            "Irina G. Stelnikova"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.38124/ijisrt/ijisrt24feb1059",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.38124/ijisrt/ijisrt24feb1059",
+              "pdf_url": "https://www.ijisrt.com/assets/upload/files/IJISRT24FEB1059.pdf",
+              "source": {
+                "id": "https://openalex.org/S4210189963",
+                "display_name": "International Journal of Innovative Science and Research Technology (IJISRT)",
+                "issn_l": "2456-2165",
+                "issn": [
+                  "2456-2165"
+                ],
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": null,
+                "host_organization_name": null,
+                "host_organization_lineage": [],
+                "host_organization_lineage_names": [],
+                "type": "journal"
+              },
+              "license": "cc-by-nc",
+              "license_id": "https://openalex.org/licenses/cc-by-nc",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "International Journal of Innovative Science and Research Technology (IJISRT)",
+              "raw_type": "journal-article"
+            }
+          ]
+        },
+        {
+          "title": "Multi kernel cross sparse graph attention convolutional neural network for brain magnetic resonance imaging super-resolution",
+          "doi": "https://doi.org/10.1016/j.bspc.2024.106444",
+          "date": "2024-06-17",
+          "id": "https://openalex.org/W4399724055",
+          "abstract": "",
+          "authors": [
+            "Xin Hua",
+            "Zhijiang Du",
+            "Jixin Ma",
+            "Hongjian Yu"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1016/j.bspc.2024.106444",
+              "is_oa": false,
+              "landing_page_url": "https://doi.org/10.1016/j.bspc.2024.106444",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S8427965",
+                "display_name": "Biomedical Signal Processing and Control",
+                "issn_l": "1746-8094",
+                "issn": [
+                  "1746-8094",
+                  "1746-8108"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310320990",
+                "host_organization_name": "Elsevier BV",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310320990"
+                ],
+                "host_organization_lineage_names": [
+                  "Elsevier BV"
+                ],
+                "type": "journal"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Biomedical Signal Processing and Control",
+              "raw_type": "journal-article"
+            }
+          ]
+        },
+        {
+          "title": "Detection of Epileptogenic Focal Cortical Dysplasia Using Graph Neural Networks",
+          "doi": "https://doi.org/10.1001/jamaneurol.2024.5406",
+          "date": "2025-02-24",
+          "id": "https://openalex.org/W4407905037",
+          "abstract": "Importance: A leading cause of surgically remediable, drug-resistant focal epilepsy is focal cortical dysplasia (FCD). FCD is challenging to visualize and often considered magnetic resonance imaging (MRI) negative. Existing automated methods for FCD detection are limited by high numbers of false-positive predictions, hampering their clinical utility. Objective: To evaluate the efficacy and interpretability of graph neural networks in automatically detecting FCD lesions on MRI scans. Design, Setting, and Participants: In this multicenter diagnostic study, retrospective MRI data were collated from 23 epilepsy centers worldwide between 2018 and 2022, as part of the Multicenter Epilepsy Lesion Detection (MELD) Project, and analyzed in 2023. Data from 20 centers were split equally into training and testing cohorts, with data from 3 centers withheld for site-independent testing. A graph neural network (MELD Graph) was trained to identify FCD on surface-based features. Network performance was compared with an existing algorithm. Feature analysis, saliencies, and confidence scores were used to interpret network predictions. In total, 34 surface-based MRI features and manual lesion masks were collated from participants, 703 patients with FCD-related epilepsy and 482 controls, and 57 participants were excluded during MRI quality control. Main Outcomes and Measures: Sensitivity, specificity, and positive predictive value (PPV) of automatically identified lesions. Results: In the test dataset, the MELD Graph had a sensitivity of 81.6% in histopathologically confirmed patients seizure-free 1 year after surgery and 63.7% in MRI-negative patients with FCD. The PPV of putative lesions from the 260 patients in the test dataset (125 female [48%] and 135 male [52%]; mean age, 18.0 [IQR, 11.0-29.0] years) was 67% (70% sensitivity; 60% specificity), compared with 39% (67% sensitivity; 54% specificity) using an existing baseline algorithm. In the independent test cohort (116 patients; 62 female [53%] and 54 male [47%]; mean age, 22.5 [IQR, 13.5-27.5] years), the PPV was 76% (72% sensitivity; 56% specificity), compared with 46% (77% sensitivity; 47% specificity) using the baseline algorithm. Interpretable reports characterize lesion location, size, confidence, and salient features. Conclusions and Relevance: In this study, the MELD Graph represented a state-of-the-art, openly available, and interpretable tool for FCD detection on MRI scans with significant improvements in PPV. Its clinical implementation holds promise for early diagnosis and improved management of focal epilepsy, potentially leading to better patient outcomes.",
+          "authors": [
+            "Mathilde Ripart",
+            "Hannah Spitzer",
+            "Logan Z. J. Williams",
+            "Lennart Walger",
+            "Andrew A. Chen",
+            "Antonio Napolitano",
+            "Maria Camilla Rossi‐Espagnet",
+            "Stephen T. Foldes",
+            "Wenhan Hu",
+            "Jiajie Mo",
+            "Marcus Likeman",
+            "Theodor Rüber",
+            "Maria Eugenia Caligiuri",
+            "Antonio Gambardella",
+            "Christopher Güttler",
+            "Anna Tietze",
+            "Matteo Lenge",
+            "Renzo Guerrini",
+            "Nathan T. Cohen",
+            "Irène Wang",
+            "Ane Kloster",
+            "Lars H. Pinborg",
+            "Khalid Hamandi",
+            "Graeme D. Jackson",
+            "Domenico Tortora",
+            "Martin Tisdall",
+            "Estefanía Conde‐Blanco",
+            "José C. Pariente",
+            "Carmen Pérez‐Enríquez",
+            "Sofía González‐Ortiz",
+            "Nandini Mullatti",
+            "Katy Vecchiato",
+            "Yawu Liu",
+            "Reetta Kälviäinen",
+            "Drahoslav Sokol",
+            "Jay Shetty",
+            "Benjamin Sinclair",
+            "Lucy Vivash",
+            "Anna Willard",
+            "Gavin P. Winston",
+            "Clarissa Lin Yasuda",
+            "Fernando Cendes",
+            "Russell T. Shinohara",
+            "John S. Duncan",
+            "J. Helen Cross",
+            "Torsten Baldeweg",
+            "Emma C. Robinson",
+            "Juan Eugenio Iglesias",
+            "Sophie Adler",
+            "Konrad Wagstyl",
+            "MELD FCD writing group",
+            "Abdulah Fawaz",
+            "Alessandro De Benedictis",
+            "Luca De Palma",
+            "Kai Zhang",
+            "Angelo Labate",
+            "Carmen Barba",
+            "Xiaozhen You",
+            "William D. Gaillard",
+            "Yingying Tang",
+            "Shan Wang",
+            "Shirin Davies",
+            "Mira Semmelroch",
+            "Mariasavina Severino",
+            "Pasquale Striano",
+            "Ajai Chari",
+            "Felice D’Arco",
+            "Kshitij Mankad",
+            "Núria Bargalló",
+            "Saül Pascual‐Diaz",
+            "Ignacio Delgado",
+            "Jonathan O’Muircheartaigh",
+            "Eugenio Abela",
+            "Jothy Kandasamy",
+            "Ailsa McLellan",
+            "Patricia Desmond",
+            "Elaine Lui",
+            "Terence J. O’Brien",
+            "Kirstie Whitaker"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1001/jamaneurol.2024.5406",
+              "is_oa": false,
+              "landing_page_url": "https://doi.org/10.1001/jamaneurol.2024.5406",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S164389565",
+                "display_name": "JAMA Neurology",
+                "issn_l": "2168-6149",
+                "issn": [
+                  "2168-6149",
+                  "2168-6157"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310320259",
+                "host_organization_name": "American Medical Association",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310320259"
+                ],
+                "host_organization_lineage_names": [
+                  "American Medical Association"
+                ],
+                "type": "journal"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "JAMA Neurology",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:39992650",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39992650",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "JAMA neurology",
+              "raw_type": "Journal Article"
+            },
+            {
+              "id": "pmh:oai:europepmc.org:11722820",
+              "is_oa": false,
+              "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11851297",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306400806",
+                "display_name": "Europe PMC (PubMed Central)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1303153112",
+                "host_organization_name": "European Bioinformatics Institute",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1303153112"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": null,
+              "raw_type": "Text"
+            },
+            {
+              "id": "pmh:oai:flore.unifi.it:2158/1414953",
+              "is_oa": false,
+              "landing_page_url": "https://hdl.handle.net/2158/1414953",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306402033",
+                "display_name": "Florence Research (University of Florence)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I45084792",
+                "host_organization_name": "University of Florence",
+                "host_organization_lineage": [
+                  "https://openalex.org/I45084792"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": null,
+              "raw_type": "info:eu-repo/semantics/article"
+            },
+            {
+              "id": "pmh:oai:kclpure.kcl.ac.uk:publications/e3b99e39-06e3-4b40-af27-fc1d822985fb",
+              "is_oa": false,
+              "landing_page_url": "https://kclpure.kcl.ac.uk/portal/en/publications/e3b99e39-06e3-4b40-af27-fc1d822985fb",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306400216",
+                "display_name": "Research Portal (King's College London)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I183935753",
+                "host_organization_name": "King's College London",
+                "host_organization_lineage": [
+                  "https://openalex.org/I183935753"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": null,
+              "raw_type": "info:eu-repo/semantics/article"
+            },
+            {
+              "id": "pmh:oai:pubmedcentral.nih.gov:11851297",
+              "is_oa": true,
+              "landing_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11851297/",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S2764455111",
+                "display_name": "PubMed Central",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "JAMA Neurol",
+              "raw_type": "Text"
+            }
+          ]
+        },
+        {
+          "title": "Graph Autoencoders for Embedding Learning in Brain Networks and Major Depressive Disorder Identification",
+          "doi": "https://doi.org/10.1109/jbhi.2024.3351177",
+          "date": "2024-01-09",
+          "id": "https://openalex.org/W3186881383",
+          "abstract": "Brain functional connectivity (FC) networks inferred from functional magnetic resonance imaging (fMRI) have shown altered or aberrant brain functional connectome in various neuropsychiatric disorders. Recent application of deep neural networks to connectome-based classification mostly relies on traditional convolutional neural networks (CNNs) using input FCs on a regular Euclidean grid to learn spatial maps of brain networks neglecting the topological information of the brain networks, leading to potentially sub-optimal performance in brain disorder identification. We propose a novel graph deep learning framework that leverages non-Euclidean information inherent in the graph structure for classifying brain networks in major depressive disorder (MDD). We introduce a novel graph autoencoder (GAE) architecture, built upon graph convolutional networks (GCNs), to embed the topological structure and node content of large fMRI networks into low-dimensional representations. For constructing the brain networks, we employ the Ledoit-Wolf (LDW) shrinkage method to efficiently estimate high-dimensional FC metrics from fMRI data. We explore both supervised and unsupervised techniques for graph embedding learning. The resulting embeddings serve as feature inputs for a deep fully-connected neural network (FCNN) to distinguish MDD from healthy controls (HCs). Evaluating our model on resting-state fMRI MDD dataset, we observe that the GAE-FCNN outperforms several state-of-the-art methods for brain connectome classification, achieving the highest accuracy when using LDW-FC edges as node features. The graph embeddings of fMRI FC networks also reveal significant group differences between MDD and HCs. Our framework demonstrates the feasibility of learning graph embeddings from brain networks, providing valuable discriminative information for diagnosing brain disorders.",
+          "authors": [
+            "Fuad Noman",
+            "Chee‐Ming Ting",
+            "Hakmook Kang",
+            "Raphaël C.‐W. Phan",
+            "Hernando Ombao"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1109/jbhi.2024.3351177",
+              "is_oa": false,
+              "landing_page_url": "https://doi.org/10.1109/jbhi.2024.3351177",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S2495854775",
+                "display_name": "IEEE Journal of Biomedical and Health Informatics",
+                "issn_l": "2168-2194",
+                "issn": [
+                  "2168-2194",
+                  "2168-2208"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310319808",
+                "host_organization_name": "Institute of Electrical and Electronics Engineers",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310319808"
+                ],
+                "host_organization_lineage_names": [
+                  "Institute of Electrical and Electronics Engineers"
+                ],
+                "type": "journal"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "IEEE Journal of Biomedical and Health Informatics",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:38194405",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/38194405",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "IEEE journal of biomedical and health informatics",
+              "raw_type": "Journal Article"
+            },
+            {
+              "id": "pmh:oai:arXiv.org:2107.12838",
+              "is_oa": true,
+              "landing_page_url": "http://arxiv.org/abs/2107.12838",
+              "pdf_url": "https://arxiv.org/pdf/2107.12838",
+              "source": {
+                "id": "https://openalex.org/S4306400194",
+                "display_name": "arXiv (Cornell University)",
+                "issn_l": "2331-8422",
+                "issn": [
+                  "2331-8422"
+                ],
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I205783295",
+                "host_organization_name": "Cornell University",
+                "host_organization_lineage": [
+                  "https://openalex.org/I205783295"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": null,
+              "raw_type": "text"
+            },
+            {
+              "id": "pmh:oai:repository.kaust.edu.sa:10754/670359",
+              "is_oa": true,
+              "landing_page_url": "http://hdl.handle.net/10754/670359",
+              "pdf_url": "http://hdl.handle.net/10754/670359",
+              "source": {
+                "id": "https://openalex.org/S4306401596",
+                "display_name": "King Abdullah University of Science and Technology Repository (King Abdullah University of Science and Technology)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I71920554",
+                "host_organization_name": "King Abdullah University of Science and Technology",
+                "host_organization_lineage": [
+                  "https://openalex.org/I71920554"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "",
+              "raw_type": "Preprint"
+            }
+          ]
+        },
+        {
+          "title": "Using RNN Artificial Neural Network to Predict the Occurrence of Gastric Cancer in the Future of the World",
+          "doi": "https://doi.org/10.38124/ijisrt/ijisrt24apr2513",
+          "date": "2024-05-06",
+          "id": "https://openalex.org/W4396661817",
+          "abstract": "Gastric cancer is an important health problem and is the fourth most common cancer and the second leading cause of cancer-related deaths worldwide. The incidence of stomach cancer is increasing and it can be dealt with using new methods in prediction and diagnosis. Our goal is to implement an artificial neural network to predict new cancer cases. Gastric cancer is anatomically divided into true gastric adenocarcinomas (non-cardiac gastric cancers) and gastric-esophageal- connective cancer (adenocardia (cardiac) gastric cancers). We use MATLAB R2018 software (MathWorks) to implement an artificial neural network. We used. The data were repeatedly and randomly divided into training (70%) and validation (30%) subsets. Our predictions emphasize the need for detailed studies on the risk factors associated with gastric cell carcinoma to reduce the incidence and has also provided an accuracy of about 99.998%.",
+          "authors": [
+            "Seyed Masoud Ghoreishi Mokri",
+            "Newsha Valadbeygi",
+            "Khafaji Mohammed Balyasimovich"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.38124/ijisrt/ijisrt24apr2513",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.38124/ijisrt/ijisrt24apr2513",
+              "pdf_url": "https://www.ijisrt.com/assets/upload/files/IJISRT24APR2513.pdf",
+              "source": {
+                "id": "https://openalex.org/S4210189963",
+                "display_name": "International Journal of Innovative Science and Research Technology (IJISRT)",
+                "issn_l": "2456-2165",
+                "issn": [
+                  "2456-2165"
+                ],
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": null,
+                "host_organization_name": null,
+                "host_organization_lineage": [],
+                "host_organization_lineage_names": [],
+                "type": "journal"
+              },
+              "license": "cc-by-nc",
+              "license_id": "https://openalex.org/licenses/cc-by-nc",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "International Journal of Innovative Science and Research Technology (IJISRT)",
+              "raw_type": "journal-article"
+            }
+          ]
+        },
+        {
+          "title": "Spectral graph convolutional neural network for Alzheimer's disease diagnosis and multi-disease categorization from functional brain changes in magnetic resonance images",
+          "doi": "https://doi.org/10.3389/fninf.2024.1495571",
+          "date": "2024-10-30",
+          "id": "https://openalex.org/W4403901018",
+          "abstract": "Alzheimer's disease (AD) is a progressive neurological disorder characterized by the gradual deterioration of cognitive functions, leading to dementia and significantly impacting the quality of life for millions of people worldwide. Early and accurate diagnosis is crucial for the effective management and treatment of this debilitating condition. This study introduces a novel framework based on Spectral Graph Convolutional Neural Networks (SGCNN) for diagnosing AD and categorizing multiple diseases through the analysis of functional changes in brain structures captured via magnetic resonance imaging (MRI). To assess the effectiveness of our approach, we systematically analyze structural modifications to the SGCNN model through comprehensive ablation studies. The performance of various Convolutional Neural Networks (CNNs) is also evaluated, including SGCNN variants, Base CNN, Lean CNN, and Deep CNN. We begin with the original SGCNN model, which serves as our baseline and achieves a commendable classification accuracy of 93%. In our investigation, we perform two distinct ablation studies on the SGCNN model to examine how specific structural changes impact its performance. The results reveal that Ablation Model 1 significantly enhances accuracy, achieving an impressive 95%, while Ablation Model 2 maintains the baseline accuracy of 93%. Additionally, the Base CNN model demonstrates strong performance with a classification accuracy of 93%, whereas both the Lean CNN and Deep CNN models achieve 94% accuracy, indicating their competitive capabilities. To validate the models' effectiveness, we utilize multiple evaluation metrics, including accuracy, precision, recall, and F1-score, ensuring a thorough assessment of their performance. Our findings underscore that Ablation Model 1 (SGCNN Model 1) delivers the highest predictive accuracy among the tested models, highlighting its potential as a robust approach for Alzheimer's image classification. Ultimately, this research aims to facilitate early diagnosis and treatment of AD, contributing to improved patient outcomes and advancing the field of neurodegenerative disease diagnosis.",
+          "authors": [
+            "Hadeel Alharbi",
+            "Roben A. Juanatas",
+            "Abdullah Al Hejaili",
+            "Se‐Jung Lim"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.3389/fninf.2024.1495571",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.3389/fninf.2024.1495571",
+              "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1495571/pdf",
+              "source": {
+                "id": "https://openalex.org/S179816892",
+                "display_name": "Frontiers in Neuroinformatics",
+                "issn_l": "1662-5196",
+                "issn": [
+                  "1662-5196"
+                ],
+                "is_oa": true,
+                "is_in_doaj": true,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310320527",
+                "host_organization_name": "Frontiers Media",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310320527"
+                ],
+                "host_organization_lineage_names": [
+                  "Frontiers Media"
+                ],
+                "type": "journal"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Frontiers in Neuroinformatics",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:39539804",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39539804",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Frontiers in neuroinformatics",
+              "raw_type": "Journal Article"
+            },
+            {
+              "id": "pmh:oai:pubmedcentral.nih.gov:11557380",
+              "is_oa": true,
+              "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11557380",
+              "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11557380/pdf/fninf-18-1495571.pdf",
+              "source": {
+                "id": "https://openalex.org/S2764455111",
+                "display_name": "PubMed Central",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "Front Neuroinform",
+              "raw_type": "Text"
+            },
+            {
+              "id": "pmh:oai:doaj.org/article:1b338881794b461c907c2cf12036fe01",
+              "is_oa": true,
+              "landing_page_url": "https://doaj.org/article/1b338881794b461c907c2cf12036fe01",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306401280",
+                "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": null,
+                "host_organization_name": null,
+                "host_organization_lineage": [],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by-sa",
+              "license_id": "https://openalex.org/licenses/cc-by-sa",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "Frontiers in Neuroinformatics, Vol 18 (2024)",
+              "raw_type": "article"
+            }
+          ]
+        },
+        {
+          "title": "Contrastive Graph Pooling for Explainable Classification of Brain Networks",
+          "doi": "https://doi.org/10.1109/tmi.2024.3392988",
+          "date": "2024-04-24",
+          "id": "https://openalex.org/W4395097800",
+          "abstract": "Functional magnetic resonance imaging (fMRI) is a commonly used technique to measure neural activation. Its application has been particularly important in identifying underlying neurodegenerative conditions such as Parkinson's, Alzheimer's, and Autism. Recent analysis of fMRI data models the brain as a graph and extracts features by graph neural networks (GNNs). However, the unique characteristics of fMRI data require a special design of GNN. Tailoring GNN to generate effective and domain-explainable features remains challenging. In this paper, we propose a contrastive dual-attention block and a differentiable graph pooling method called ContrastPool to better utilize GNN for brain networks, meeting fMRI-specific requirements. We apply our method to 5 resting-state fMRI brain network datasets of 3 diseases and demonstrate its superiority over state-of-the-art baselines. Our case study confirms that the patterns extracted by our method match the domain knowledge in neuroscience literature, and disclose direct and interesting insights. Our contributions underscore the potential of ContrastPool for advancing the understanding of brain networks and neurodegenerative conditions. The source code is available at https://github.com/AngusMonroe/ContrastPool.",
+          "authors": [
+            "Jiaxing Xu",
+            "Qingtian Bian",
+            "Xinhang Li",
+            "A.X.J. Zhang",
+            "Yiping Ke",
+            "Miao Qiao",
+            "Wei Zhang",
+            "Wei Khang Jeremy Sim",
+            "Balázs Gulyás"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1109/tmi.2024.3392988",
+              "is_oa": false,
+              "landing_page_url": "https://doi.org/10.1109/tmi.2024.3392988",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S58069681",
+                "display_name": "IEEE Transactions on Medical Imaging",
+                "issn_l": "0278-0062",
+                "issn": [
+                  "0278-0062",
+                  "1558-254X"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310319808",
+                "host_organization_name": "Institute of Electrical and Electronics Engineers",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310319808"
+                ],
+                "host_organization_lineage_names": [
+                  "Institute of Electrical and Electronics Engineers"
+                ],
+                "type": "journal"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "IEEE Transactions on Medical Imaging",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:38656865",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/38656865",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "IEEE transactions on medical imaging",
+              "raw_type": "Journal Article"
+            },
+            {
+              "id": "pmid:39279829",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39279829",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "ArXiv",
+              "raw_type": "Journal Article"
+            },
+            {
+              "id": "pmh:oai:pubmedcentral.nih.gov:11398548",
+              "is_oa": true,
+              "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11398548",
+              "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11398548/pdf/nihpp-2307.11133v3.pdf",
+              "source": {
+                "id": "https://openalex.org/S2764455111",
+                "display_name": "PubMed Central",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by-nc-sa",
+              "license_id": "https://openalex.org/licenses/cc-by-nc-sa",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "ArXiv",
+              "raw_type": "Text"
+            },
+            {
+              "id": "pmh:oai:dr.ntu.edu.sg:10356/180545",
+              "is_oa": false,
+              "landing_page_url": "https://hdl.handle.net/10356/180545",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306402609",
+                "display_name": "DR-NTU (Nanyang Technological University)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I172675005",
+                "host_organization_name": "Nanyang Technological University",
+                "host_organization_lineage": [
+                  "https://openalex.org/I172675005"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": null,
+              "raw_type": "Journal Article"
+            }
+          ]
+        },
+        {
+          "title": "Graph neural network and machine learning analysis of functional neuroimaging for understanding schizophrenia",
+          "doi": "https://doi.org/10.1186/s12868-023-00841-0",
+          "date": "2024-01-02",
+          "id": "https://openalex.org/W4390501042",
+          "abstract": "BACKGROUND: Graph representational learning can detect topological patterns by leveraging both the network structure as well as nodal features. The basis of our exploration involves the application of graph neural network architectures and machine learning to resting-state functional Magnetic Resonance Imaging (rs-fMRI) data for the purpose of detecting schizophrenia. Our study uses single-site data to avoid the shortcomings in generalizability of neuroimaging data obtained from multiple sites. RESULTS: The performance of our graph neural network models is on par with that of our machine learning models, each of which is trained using 69 graph-theoretical measures computed from functional correlations between various regions of interest (ROI) in a brain graph. Our deep graph convolutional neural network (DGCNN) demonstrates a promising average accuracy score of 0.82 and a sensitivity score of 0.84. CONCLUSIONS: This study provides insights into the role of advanced graph theoretical methods and machine learning on fMRI data to detect schizophrenia by harnessing changes in brain functional connectivity. The results of this study demonstrate the capabilities of using both traditional ML techniques as well as graph neural network-based methods to detect schizophrenia using features extracted from fMRI data. The study also proposes two methods to obtain potential biomarkers for the disease, many of which are corroborated by research in this area and can further help in the understanding of schizophrenia as a mental disorder.",
+          "authors": [
+            "Gayathri Sunil",
+            "Smruthi Gowtham",
+            "A. Chandra Bose",
+            "Samhitha Harish",
+            "Gowri Srinivasa"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1186/s12868-023-00841-0",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.1186/s12868-023-00841-0",
+              "pdf_url": "https://bmcneurosci.biomedcentral.com/counter/pdf/10.1186/s12868-023-00841-0",
+              "source": {
+                "id": "https://openalex.org/S82595977",
+                "display_name": "BMC Neuroscience",
+                "issn_l": "1471-2202",
+                "issn": [
+                  "1471-2202"
+                ],
+                "is_oa": true,
+                "is_in_doaj": true,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310320256",
+                "host_organization_name": "BioMed Central",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310320256",
+                  "https://openalex.org/P4310319965"
+                ],
+                "host_organization_lineage_names": [
+                  "BioMed Central",
+                  "Springer Nature"
+                ],
+                "type": "journal"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "BMC Neuroscience",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:38166747",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/38166747",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "BMC neuroscience",
+              "raw_type": "Journal Article"
+            },
+            {
+              "id": "pmh:oai:pubmedcentral.nih.gov:10759601",
+              "is_oa": true,
+              "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/10759601",
+              "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10759601/pdf/12868_2023_Article_841.pdf",
+              "source": {
+                "id": "https://openalex.org/S2764455111",
+                "display_name": "PubMed Central",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "BMC Neurosci",
+              "raw_type": "Text"
+            },
+            {
+              "id": "pmh:oai:doaj.org/article:5260ba50e08d430c88bd082a360fb2f7",
+              "is_oa": true,
+              "landing_page_url": "https://doaj.org/article/5260ba50e08d430c88bd082a360fb2f7",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306401280",
+                "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": null,
+                "host_organization_name": null,
+                "host_organization_lineage": [],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by-sa",
+              "license_id": "https://openalex.org/licenses/cc-by-sa",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "BMC Neuroscience, Vol 25, Iss 1, Pp 1-13 (2024)",
+              "raw_type": "article"
+            }
+          ]
+        },
+        {
+          "title": "Brain networks and intelligence: A graph neural network based approach to resting state fMRI data",
+          "doi": "https://doi.org/10.1016/j.media.2024.103433",
+          "date": "2024-12-16",
+          "id": "https://openalex.org/W4405430060",
+          "abstract": "Resting-state functional magnetic resonance imaging (rsfMRI) is a powerful tool for investigating the relationship between brain function and cognitive processes as it allows for the functional organization of the brain to be captured without relying on a specific task or stimuli. In this paper, we present a novel modeling architecture called BrainRGIN for predicting intelligence (fluid, crystallized and total intelligence) using graph neural networks on rsfMRI derived static functional network connectivity matrices. Extending from the existing graph convolution networks, our approach incorporates a clustering-based embedding and graph isomorphism network in the graph convolutional layer to reflect the nature of the brain sub-network organization and efficient network expression, in combination with TopK pooling and attention-based readout functions. We evaluated our proposed architecture on a large dataset, specifically the Adolescent Brain Cognitive Development Dataset, and demonstrated its effectiveness in predicting individual differences in intelligence. Our model achieved lower mean squared errors and higher correlation scores than existing relevant graph architectures and other traditional machine learning models for all of the intelligence prediction tasks. The middle frontal gyrus exhibited a significant contribution to both fluid and crystallized intelligence, suggesting their pivotal role in these cognitive processes. Total composite scores identified a diverse set of brain regions to be relevant which underscores the complex nature of total intelligence. Our GitHub implementation is publicly available on https://github.com/bishalth01/BrainRGIN/.",
+          "authors": [
+            "Bishal Thapaliya",
+            "Esra Akbaş",
+            "Jiayu Chen",
+            "Ram P. Sapkota",
+            "Bhaskar Ray",
+            "Pranav Suresh",
+            "Vince D. Calhoun",
+            "Jingyu Liu"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1016/j.media.2024.103433",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.1016/j.media.2024.103433",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S116571295",
+                "display_name": "Medical Image Analysis",
+                "issn_l": "1361-8415",
+                "issn": [
+                  "1361-8415",
+                  "1361-8423",
+                  "1361-8431"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310320990",
+                "host_organization_name": "Elsevier BV",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310320990"
+                ],
+                "host_organization_lineage_names": [
+                  "Elsevier BV"
+                ],
+                "type": "journal"
+              },
+              "license": "cc-by-nc-nd",
+              "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Medical Image Analysis",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:39708510",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39708510",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Medical image analysis",
+              "raw_type": "Journal Article"
+            },
+            {
+              "id": "pmh:oai:pubmedcentral.nih.gov:11877132",
+              "is_oa": true,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39708510/",
+              "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11877132/pdf/nihms-2044429.pdf",
+              "source": {
+                "id": "https://openalex.org/S2764455111",
+                "display_name": "PubMed Central",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "Med Image Anal",
+              "raw_type": "Text"
+            }
+          ]
+        },
+        {
+          "title": "A Novel Interpretable Graph Convolutional Neural Network for Multimodal Brain Tumor Segmentation",
+          "doi": "https://doi.org/10.1007/s12559-024-10387-w",
+          "date": "2024-12-06",
+          "id": "https://openalex.org/W4405123521",
+          "abstract": "",
+          "authors": [
+            "Imran Arshad Choudhry",
+            "Saeed Iqbal",
+            "Musaed Alhussein",
+            "Khursheed Aurangzeb",
+            "Adnan N. Qureshi",
+            "Amir Hussain"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1007/s12559-024-10387-w",
+              "is_oa": false,
+              "landing_page_url": "https://doi.org/10.1007/s12559-024-10387-w",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S133078663",
+                "display_name": "Cognitive Computation",
+                "issn_l": "1866-9956",
+                "issn": [
+                  "1866-9956",
+                  "1866-9964"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310319900",
+                "host_organization_name": "Springer Science+Business Media",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310319900",
+                  "https://openalex.org/P4310319965"
+                ],
+                "host_organization_lineage_names": [
+                  "Springer Science+Business Media",
+                  "Springer Nature"
+                ],
+                "type": "journal"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Cognitive Computation",
+              "raw_type": "journal-article"
+            }
+          ]
+        },
+        {
+          "title": "Graph Neural Networks in Brain Connectivity Studies: Methods, Challenges, and Future Directions",
+          "doi": "https://doi.org/10.3390/brainsci15010017",
+          "date": "2024-12-27",
+          "id": "https://openalex.org/W4405850302",
+          "abstract": "Brain connectivity analysis plays a crucial role in unraveling the complex network dynamics of the human brain, providing insights into cognitive functions, behaviors, and neurological disorders. Traditional graph-theoretical methods, while foundational, often fall short in capturing the high-dimensional and dynamic nature of brain connectivity. Graph Neural Networks (GNNs) have recently emerged as a powerful approach for this purpose, with the potential to improve diagnostics, prognostics, and personalized interventions. This review examines recent studies leveraging GNNs in brain connectivity analysis, focusing on key methodological advancements in multimodal data integration, dynamic connectivity, and interpretability across various imaging modalities, including fMRI, MRI, DTI, PET, and EEG. Findings reveal that GNNs excel in modeling complex, non-linear connectivity patterns and enable the integration of multiple neuroimaging modalities to provide richer insights into both healthy and pathological brain networks. However, challenges remain, particularly in interpretability, data scarcity, and multimodal integration, limiting the full clinical utility of GNNs. Addressing these limitations through enhanced interpretability, optimized multimodal techniques, and expanded labeled datasets is crucial to fully harness the potential of GNNs for neuroscience research and clinical applications.",
+          "authors": [
+            "Hamed Mohammadi",
+            "Waldemar Karwowski"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.3390/brainsci15010017",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.3390/brainsci15010017",
+              "pdf_url": "https://www.mdpi.com/2076-3425/15/1/17/pdf?version=1735290817",
+              "source": {
+                "id": "https://openalex.org/S122317144",
+                "display_name": "Brain Sciences",
+                "issn_l": "2076-3425",
+                "issn": [
+                  "2076-3425"
+                ],
+                "is_oa": true,
+                "is_in_doaj": true,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310310987",
+                "host_organization_name": "Multidisciplinary Digital Publishing Institute",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310310987"
+                ],
+                "host_organization_lineage_names": [
+                  "Multidisciplinary Digital Publishing Institute"
+                ],
+                "type": "journal"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Brain Sciences",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:39851385",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39851385",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Brain sciences",
+              "raw_type": "Journal Article"
+            },
+            {
+              "id": "pmh:oai:pubmedcentral.nih.gov:11763835",
+              "is_oa": true,
+              "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11763835",
+              "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11763835/pdf/brainsci-15-00017.pdf",
+              "source": {
+                "id": "https://openalex.org/S2764455111",
+                "display_name": "PubMed Central",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "Brain Sci",
+              "raw_type": "Text"
+            },
+            {
+              "id": "pmh:oai:doaj.org/article:7c9e5bd9ca054e3f8ec325fd028203bc",
+              "is_oa": true,
+              "landing_page_url": "https://doaj.org/article/7c9e5bd9ca054e3f8ec325fd028203bc",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306401280",
+                "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": null,
+                "host_organization_name": null,
+                "host_organization_lineage": [],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by-sa",
+              "license_id": "https://openalex.org/licenses/cc-by-sa",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "Brain Sciences, Vol 15, Iss 1, p 17 (2024)",
+              "raw_type": "article"
+            }
+          ]
+        },
+        {
+          "title": "Predicting magnetic properties of van der Waals magnets using graph neural networks",
+          "doi": "https://doi.org/10.1103/physrevmaterials.8.114002",
+          "date": "2024-11-04",
+          "id": "https://openalex.org/W4404040226",
+          "abstract": "We study two-dimensional (2D) magnetic materials using state-of-the-art machine learning models that use a graph-theory framework. We find that representing materials as graphs allows us to better learn structure-property relationships by leveraging both the chemical properties of the constituent atoms and the connectivity between those atoms. Graph neural network models are capable of predicting global properties of crystal structure (i.e., graphwise properties) and local properties of the constituent atoms (i.e., nodewise properties). We embed physical constraints into our model by simultaneously making predictions of local and global properties. In particular, we use the atomistic line graph neural network (ALIGNN) architecture. We train the ALIGNN model on data comprising local and global magnetic moments of 314 2D structures of the form $\\mathrm{Cr}{A}^{\\text{ii}}{B}^{\\text{i}}{B}^{\\text{ii}}{X}_{6}$, based on monolayer ${\\mathrm{Cr}}_{2}{\\mathrm{Ge}}_{2}{\\mathrm{Te}}_{6}$, calculated from first principles. By learning the relationships between both local and global magnetic properties, we demonstrate an improvement over models that only consider global magnetic properties.",
+          "authors": [
+            "Peter Minch",
+            "Romakanta Bhattarai",
+            "Kamal Choudhary",
+            "Trevor David Rhone"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1103/physrevmaterials.8.114002",
+              "is_oa": false,
+              "landing_page_url": "https://doi.org/10.1103/physrevmaterials.8.114002",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S2786256796",
+                "display_name": "Physical Review Materials",
+                "issn_l": "2475-9953",
+                "issn": [
+                  "2475-9953",
+                  "2476-0455"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310320261",
+                "host_organization_name": "American Physical Society",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310320261"
+                ],
+                "host_organization_lineage_names": [
+                  "American Physical Society"
+                ],
+                "type": "journal"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Physical Review Materials",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmh:oai:osti.gov:2477097",
+              "is_oa": false,
+              "landing_page_url": "https://www.osti.gov/biblio/2477097",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306402487",
+                "display_name": "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I139351228",
+                "host_organization_name": "Office of Scientific and Technical Information",
+                "host_organization_lineage": [
+                  "https://openalex.org/I139351228"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": null,
+              "raw_type": null
+            }
+          ]
+        },
+        {
+          "title": "A Systematic Review of Graph Neural Network in Healthcare-Based Applications: Recent Advances, Trends, and Future Directions",
+          "doi": "https://doi.org/10.1109/access.2024.3354809",
+          "date": "2024-01-01",
+          "id": "https://openalex.org/W4390933379",
+          "abstract": "Graph neural network (GNN) is a formidable deep learning framework that enables the analysis and modeling of intricate relationships present in data structured as graphs. In recent years, a burgeoning interest has arisen in exploiting the latent capabilities of GNN for healthcare-based applications, capitalizing on their aptitude for modeling complex relationships and unearthing profound insights from graph-structured data. However, to the best of our knowledge, no study has systemically reviewed the GNN studies conducted in the healthcare domain. This study has furnished an all-encompassing and erudite overview of the prevailing cutting-edge research on GNN in healthcare. Through analysis and assimilation of studies, current research trends, recurrent challenges, and promising future opportunities in GNN for healthcare applications have been identified. China emerged as the leading country to conduct GNN-based studies in the healthcare domain, followed by the USA, UK, and Turkey. Among various aspects of healthcare, disease prediction and drug discovery emerge as the most prominent areas of focus for GNN application, indicating the potential of GNN for advancing diagnostic and therapeutic approaches. This study proposed research questions regarding diverse aspects of GNN in the healthcare domain and addressed them through an in-depth analysis. This study can provide practitioners and researchers with profound insights into the current landscape of GNN applications in healthcare and can guide healthcare institutes, researchers, and governments by demonstrating the ways in which GNN can contribute to the development of effective and efficient healthcare systems.",
+          "authors": [
+            "Showmick Guha Paul",
+            "Arpa Saha",
+            "Md. Zahid Hasan",
+            "Sheak Rashed Haider Noori",
+            "Ahmed A. Moustafa"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1109/access.2024.3354809",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.1109/access.2024.3354809",
+              "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10401168.pdf",
+              "source": {
+                "id": "https://openalex.org/S2485537415",
+                "display_name": "IEEE Access",
+                "issn_l": "2169-3536",
+                "issn": [
+                  "2169-3536"
+                ],
+                "is_oa": true,
+                "is_in_doaj": true,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310319808",
+                "host_organization_name": "Institute of Electrical and Electronics Engineers",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310319808"
+                ],
+                "host_organization_lineage_names": [
+                  "Institute of Electrical and Electronics Engineers"
+                ],
+                "type": "journal"
+              },
+              "license": "cc-by-nc-nd",
+              "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "IEEE Access",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmh:oai:https://pure.bond.edu.au/:openaire/3bed0777-1e6a-42a7-8e8b-a91a5940d7e9",
+              "is_oa": true,
+              "landing_page_url": "https://research.bond.edu.au/en/publications/3bed0777-1e6a-42a7-8e8b-a91a5940d7e9",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306402608",
+                "display_name": "Bond University Research Portal (Bond University)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I120125038",
+                "host_organization_name": "Bond University",
+                "host_organization_lineage": [
+                  "https://openalex.org/I120125038"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by-nc-nd",
+              "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Paul, S G, Saha, A, Hasan, M Z, Noori, S R H & Moustafa, A 2024, 'A Systematic Review of Graph Neural Network in Healthcare-Based Applications: Recent Advances, Trends, and Future Directions', IEEE Access, vol. 12, pp. 15145-15170. https://doi.org/10.1109/ACCESS.2024.3354809",
+              "raw_type": "info:eu-repo/semantics/article"
+            },
+            {
+              "id": "pmh:oai:doaj.org/article:629c6f62f14a4cf79ead6f696e3c9c84",
+              "is_oa": true,
+              "landing_page_url": "https://doaj.org/article/629c6f62f14a4cf79ead6f696e3c9c84",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306401280",
+                "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": null,
+                "host_organization_name": null,
+                "host_organization_lineage": [],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by-sa",
+              "license_id": "https://openalex.org/licenses/cc-by-sa",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "IEEE Access, Vol 12, Pp 15145-15170 (2024)",
+              "raw_type": "article"
+            }
+          ]
+        },
+        {
+          "title": "Graph neural networks for multi-view learning: a taxonomic review",
+          "doi": "https://doi.org/10.1007/s10462-024-10990-1",
+          "date": "2024-10-21",
+          "id": "https://openalex.org/W4403615755",
+          "abstract": "With the explosive growth of user-generated content, multi-view learning has become a rapidly growing direction in pattern recognition and data analysis areas. Due to the significant application value of multi-view learning, there has been a continuous emergence of research based on machine learning methods and traditional deep learning paradigms. The core challenge in multi-view learning lies in harnessing both consistent and complementary information to forge a unified, comprehensive representation. However, many multi-view learning tasks are based on graph-structured data, making existing methods unable to effectively mine the information contained in the input multiple data sources. Recently, graph neural networks (GNN) techniques have been widely utilized to deal with non-Euclidean data, such as graphs or manifolds. Thus, it is essential to combine the advantages of the powerful learning capability of GNN models and multi-view data. In this paper, we aim to provide a comprehensive survey of recent research works on GNN-based multi-view learning. In detail, we first provide a taxonomy of GNN-based multi-view learning methods according to the input form of models: multi-relation, multi-attribute and mixed. Then, we introduce the applications of multi-view learning, including recommendation systems, computer vision and so on. Moreover, several public datasets and open-source codes are introduced for implementation. Finally, we analyze the challenges of applying GNN models on various multi-view learning tasks and state new future directions in this field.",
+          "authors": [
+            "Shunxin Xiao",
+            "Jiacheng Li",
+            "Jielong Lu",
+            "Sujia Huang",
+            "Bao Zeng",
+            "Shiping Wang"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1007/s10462-024-10990-1",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.1007/s10462-024-10990-1",
+              "pdf_url": "https://link.springer.com/content/pdf/10.1007/s10462-024-10990-1.pdf",
+              "source": {
+                "id": "https://openalex.org/S122814990",
+                "display_name": "Artificial Intelligence Review",
+                "issn_l": "0269-2821",
+                "issn": [
+                  "0269-2821",
+                  "1573-7462"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310319900",
+                "host_organization_name": "Springer Science+Business Media",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310319900",
+                  "https://openalex.org/P4310319965"
+                ],
+                "host_organization_lineage_names": [
+                  "Springer Science+Business Media",
+                  "Springer Nature"
+                ],
+                "type": "journal"
+              },
+              "license": "cc-by-nc-nd",
+              "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Artificial Intelligence Review",
+              "raw_type": "journal-article"
+            }
+          ]
+        },
+        {
+          "title": "Spectral Graph Neural Network-Based Multi-Atlas Brain Network Fusion for Major Depressive Disorder Diagnosis",
+          "doi": "https://doi.org/10.1109/jbhi.2024.3366662",
+          "date": "2024-02-16",
+          "id": "https://openalex.org/W4391892457",
+          "abstract": "Major Depressive Disorder (MDD) imposes a substantial burden within the healthcare domain, impacting millions of individuals worldwide. Functional Magnetic Resonance Imaging (fMRI) has emerged as a promising tool for the objective diagnosis of MDD, enabling the investigation of functional connectivity patterns in the brain associated with this disorder. However, most existing methods focus on a single brain atlas, which limits their ability to capture the complex, multi-scale nature of functional brain networks. To address these limitations, we propose a novel multi-atlas fusion method that incorporates early and late fusion in a unified framework. Our method introduces the concept of the holistic Functional Connectivity Network (FCN), which captures both intra-atlas relationships within individual atlases and inter-regional relationships between atlases with different brain parcellation scales. This comprehensive representation enables the identification of potential disease-related patterns associated with MDD in the early stage of our framework. Moreover, by decoding the holistic FCN from various perspectives through multiple spectral Graph Convolutional Neural Networks and fusing their results with decision-level ensembles, we further improve the performance of MDD diagnosis. Our approach is easily implemented with minimal modifications to existing model structures and demonstrates a robust performance across different baseline models. Our method, evaluated on public resting-state fMRI datasets, surpasses the current multi-atlas fusion methods, enhancing the accuracy of MDD diagnosis. The proposed novel multi-atlas fusion framework provides a more reliable MDD diagnostic technique. Experimental results show our approach outperforms both single- and multi-atlas-based methods, demonstrating its effectiveness in advancing MDD diagnosis.",
+          "authors": [
+            "Deok-Joong Lee",
+            "Dong-Hee Shin",
+            "Young-Han Son",
+            "Ji-Wung Han",
+            "Ji-Hye Oh",
+            "Da-Hyun Kim",
+            "Ji-Hoon Jeong",
+            "Tae‐Eui Kam"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1109/jbhi.2024.3366662",
+              "is_oa": false,
+              "landing_page_url": "https://doi.org/10.1109/jbhi.2024.3366662",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S2495854775",
+                "display_name": "IEEE Journal of Biomedical and Health Informatics",
+                "issn_l": "2168-2194",
+                "issn": [
+                  "2168-2194",
+                  "2168-2208"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310319808",
+                "host_organization_name": "Institute of Electrical and Electronics Engineers",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310319808"
+                ],
+                "host_organization_lineage_names": [
+                  "Institute of Electrical and Electronics Engineers"
+                ],
+                "type": "journal"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "IEEE Journal of Biomedical and Health Informatics",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:38363664",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/38363664",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "IEEE journal of biomedical and health informatics",
+              "raw_type": "Journal Article"
+            }
+          ]
+        },
+        {
+          "title": "NeuroNet19: an explainable deep neural network model for the classification of brain tumors using magnetic resonance imaging data",
+          "doi": "https://doi.org/10.1038/s41598-024-51867-1",
+          "date": "2024-01-17",
+          "id": "https://openalex.org/W4390941945",
+          "abstract": "Brain tumors (BTs) are one of the deadliest diseases that can significantly shorten a person's life. In recent years, deep learning has become increasingly popular for detecting and classifying BTs. In this paper, we propose a deep neural network architecture called NeuroNet19. It utilizes VGG19 as its backbone and incorporates a novel module named the Inverted Pyramid Pooling Module (iPPM). The iPPM captures multi-scale feature maps, ensuring the extraction of both local and global image contexts. This enhances the feature maps produced by the backbone, regardless of the spatial positioning or size of the tumors. To ensure the model's transparency and accountability, we employ Explainable AI. Specifically, we use Local Interpretable Model-Agnostic Explanations (LIME), which highlights the features or areas focused on while predicting individual images. NeuroNet19 is trained on four classes of BTs: glioma, meningioma, no tumor, and pituitary tumors. It is tested on a public dataset containing 7023 images. Our research demonstrates that NeuroNet19 achieves the highest accuracy at 99.3%, with precision, recall, and F1 scores at 99.2% and a Cohen Kappa coefficient (CKC) of 99%.",
+          "authors": [
+            "Rezuana Haque",
+            "Md. Mehedi Hassan",
+            "Anupam Kumar Bairagi",
+            "Sheikh Mohammed Shariful Islam"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1038/s41598-024-51867-1",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.1038/s41598-024-51867-1",
+              "pdf_url": "https://www.nature.com/articles/s41598-024-51867-1.pdf",
+              "source": {
+                "id": "https://openalex.org/S196734849",
+                "display_name": "Scientific Reports",
+                "issn_l": "2045-2322",
+                "issn": [
+                  "2045-2322"
+                ],
+                "is_oa": true,
+                "is_in_doaj": true,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310319908",
+                "host_organization_name": "Nature Portfolio",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310319908",
+                  "https://openalex.org/P4310319965"
+                ],
+                "host_organization_lineage_names": [
+                  "Nature Portfolio",
+                  "Springer Nature"
+                ],
+                "type": "journal"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Scientific Reports",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:38233516",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/38233516",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "Scientific reports",
+              "raw_type": "Journal Article"
+            },
+            {
+              "id": "pmh:oai:pubmedcentral.nih.gov:10794704",
+              "is_oa": true,
+              "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/10794704",
+              "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10794704/pdf/41598_2024_Article_51867.pdf",
+              "source": {
+                "id": "https://openalex.org/S2764455111",
+                "display_name": "PubMed Central",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "Sci Rep",
+              "raw_type": "Text"
+            },
+            {
+              "id": "pmh:oai:doaj.org/article:0af835644c2e428b825bca463e9300e7",
+              "is_oa": true,
+              "landing_page_url": "https://doaj.org/article/0af835644c2e428b825bca463e9300e7",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306401280",
+                "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": null,
+                "host_organization_name": null,
+                "host_organization_lineage": [],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by-sa",
+              "license_id": "https://openalex.org/licenses/cc-by-sa",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "Scientific Reports, Vol 14, Iss 1, Pp 1-22 (2024)",
+              "raw_type": "article"
+            },
+            {
+              "id": "pmh:oai:figshare.com:article/25295284",
+              "is_oa": true,
+              "landing_page_url": "https://figshare.com/articles/journal_contribution/NeuroNet19_an_explainable_deep_neural_network_model_for_the_classification_of_brain_tumors_using_magnetic_resonance_imaging_data/25295284",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4377196282",
+                "display_name": "Figshare",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I4210132348",
+                "host_organization_name": "Figshare (United Kingdom)",
+                "host_organization_lineage": [
+                  "https://openalex.org/I4210132348"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": "cc-by",
+              "license_id": "https://openalex.org/licenses/cc-by",
+              "version": "submittedVersion",
+              "is_accepted": false,
+              "is_published": false,
+              "raw_source_name": "",
+              "raw_type": "Text"
+            }
+          ]
+        },
+        {
+          "title": "Enhancing Major Depressive Disorder Diagnosis With Dynamic-Static Fusion Graph Neural Networks",
+          "doi": "https://doi.org/10.1109/jbhi.2024.3395611",
+          "date": "2024-05-01",
+          "id": "https://openalex.org/W4396542702",
+          "abstract": "Major Depressive Disorder (MDD) is a debilitating, complex mental condition with unclear mechanisms hindering diagnostic progress. Research links MDD to abnormal brain connectivity using functional magnetic resonance imaging (fMRI). Yet, existing fMRI-based MDD models suffer from limitations, including neglecting dynamic network traits, lacking interpretability, and struggling with small datasets. We present DSFGNN, a novel graph neural network framework addressing these issues for improved MDD diagnosis. DSFGNN employs a graph isomorphism encoder to model static and dynamic brain networks, achieving effective fusion of temporal and spatial information through a spatiotemporal attention mechanism, thereby enhancing interpretability. Furthermore, we incorporate a causal disentangling module and orthogonal regularization module to augment the model's expressiveness. We evaluate DSFGNN on the Rest-meta-MDD dataset, yielding superior results compared to the best baseline. Besides, extensive ablation studies and interpretability analysis confirm DSFGNN's effectiveness and potential for biomarker discovery.",
+          "authors": [
+            "Tianyi Zhao",
+            "Gaoyan Zhang"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.1109/jbhi.2024.3395611",
+              "is_oa": false,
+              "landing_page_url": "https://doi.org/10.1109/jbhi.2024.3395611",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S2495854775",
+                "display_name": "IEEE Journal of Biomedical and Health Informatics",
+                "issn_l": "2168-2194",
+                "issn": [
+                  "2168-2194",
+                  "2168-2208"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310319808",
+                "host_organization_name": "Institute of Electrical and Electronics Engineers",
+                "host_organization_lineage": [
+                  "https://openalex.org/P4310319808"
+                ],
+                "host_organization_lineage_names": [
+                  "Institute of Electrical and Electronics Engineers"
+                ],
+                "type": "journal"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "IEEE Journal of Biomedical and Health Informatics",
+              "raw_type": "journal-article"
+            },
+            {
+              "id": "pmid:38691439",
+              "is_oa": false,
+              "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/38691439",
+              "pdf_url": null,
+              "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                  "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [],
+                "type": "repository"
+              },
+              "license": null,
+              "license_id": null,
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "IEEE journal of biomedical and health informatics",
+              "raw_type": "Journal Article"
+            }
+          ]
+        },
+        {
+          "title": "Preparation and Identification of Magnetic Iron Nanoparticle based on a Natural Hydrogel and its Performance in Targeted Drug Delivery",
+          "doi": "https://doi.org/10.38124/ijisrt/ijisrt24may1088",
+          "date": "2024-05-22",
+          "id": "https://openalex.org/W4398208019",
+          "abstract": "Billions of dollars are spent annually in the world to treat and investigate problems caused by drug side effects. According to the estimates of health researchers, about 40%of people who take medicine suffer from side effects. In this way, the necessity of using a targeted system in order to deliver medicine to the desired place without damaging healthy tissues is felt more than ever. In recent years, targeted drug delivery systems based on nanoparticles have received much attention. Meanwhile, the use of natural polymers is more suitable for various purposes in drug delivery systems in terms of indicating greater biological compatibility with the body and being non-toxic.In this research, the natural hydrogel extracted from the seeds of the Plantago ovata, which is loaded on the bed of magnetic iron nanoparticles, was used to entrap the drugmefenamic acid. In order to achieve this goal, at the beginning, magnetic iron nanoparticles were prepared by co-precipitation method using iron (II) and iron (III) oxides, and then a coating of silica was created on its surface, then the hydrocolloid of Plantago ovata was extracted from its seed, in order to connect the magnetite nanoparticles and the polymer extracted from the Plantago ovata, the surface of both components was modified by vinyl-functional groups. Next, radical polymerization under heat was used to connect the particles and trap the drug, after that the release of the drug from the polymer capsule was checked by UV-Vis device. Before examining the drug release, the resulting product was identified by FT-IR, XRD, VSM, DLS, TGA, SEM analysis. Therefore, the obtained results indicated that the natural polymer was correctly loaded on the desired magnetic substrate and the drug mefenamic acid was trapped inside the hydrogel networks and polymer capsule. Therefore, the drug can be directed in a controlled and targeted manner by the magnetic field, and the release of the drug was done well and at an acceptable speed.",
+          "authors": [
+            "Vahid Hosseini",
+            "Seyed Masoud Ghoreishi Mokri",
+            "Dalia hafezghoran",
+            "Bahareh Karimi",
+            "Anastasia A. Anashkina",
+            "Anna Borisovna Yazykova"
+          ],
+          "locations": [
+            {
+              "id": "doi:10.38124/ijisrt/ijisrt24may1088",
+              "is_oa": true,
+              "landing_page_url": "https://doi.org/10.38124/ijisrt/ijisrt24may1088",
+              "pdf_url": "https://www.ijisrt.com/assets/upload/files/IJISRT24MAY1088.pdf",
+              "source": {
+                "id": "https://openalex.org/S4210189963",
+                "display_name": "International Journal of Innovative Science and Research Technology (IJISRT)",
+                "issn_l": "2456-2165",
+                "issn": [
+                  "2456-2165"
+                ],
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": null,
+                "host_organization_name": null,
+                "host_organization_lineage": [],
+                "host_organization_lineage_names": [],
+                "type": "journal"
+              },
+              "license": "cc-by-nc",
+              "license_id": "https://openalex.org/licenses/cc-by-nc",
+              "version": "publishedVersion",
+              "is_accepted": true,
+              "is_published": true,
+              "raw_source_name": "International Journal of Innovative Science and Research Technology (IJISRT)",
+              "raw_type": "journal-article"
+            }
+          ]
+        }
+      ],
+      "valid_response": true
+    }
+  ]
+}

@@ -1,0 +1,811 @@
+{
+  "created_at_utc": "2026-09-16T01:17:19.176970+00:00",
+  "sources": {
+    "arxiv_residual": {
+      "query": "(ti:\"link prediction\") AND (all:Gaussian OR all:kernel OR all:residual OR all:correction)",
+      "url": "https://export.arxiv.org/api/query?search_query=%28ti%3A%22link+prediction%22%29+AND+%28all%3AGaussian+OR+all%3Akernel+OR+all%3Aresidual+OR+all%3Acorrection%29&start=0&max_results=30&sortBy=submittedDate&sortOrder=descending",
+      "status": 200,
+      "rows": [
+        {
+          "title": "Fairness in Link Prediction Beyond Demographic Parity: A Reproducibility Study",
+          "id": "http://arxiv.org/abs/2608.09899v1",
+          "published": "2026-08-10T17:47:19Z",
+          "abstract": "In fair ranked link prediction, demographic parity ($Δ_\\mathrm{DP}$) is a common fairness metric. Yet, Mattos et al. (2025) argue that it fails to detect exposure bias because it ignores where links appear in the ranking. In this study, we reproduce this claim by showing that $Δ_\\mathrm{DP}$ can indicate aggregate parity even when some subgroup-pair links are systematically ranked lower than others. The proposed rank-aware Normalized Discounted KL-divergence (NDKL), however, does detect such disparities. We also reproduce the effectiveness of MORAL, a post-processing method that improves exposure-based fairness while maintaining competitive utility. Beyond reproduction, we assess robustness using synthetic homophily settings, categorical sensitive attributes, and additional fairness and utility metrics, including subgroup-pair-adapted Attention-Weighted Rank Fairness (AWRF). Overall, our results show that exposure-based metrics uncover biases hidden by $Δ_\\mathrm{DP}$ and that MORAL reduces these biases with minimal utility loss across diverse settings and datasets. We release a corrected, reproducible implementation at https://github.com/Floris93100/reproducing-MORAL."
+        },
+        {
+          "title": "Mini-Batch Class Composition Bias in Link Prediction",
+          "id": "http://arxiv.org/abs/2604.25978v1",
+          "published": "2026-04-28T14:03:50Z",
+          "abstract": "Prior work on node classification has shown that Graph Neural Networks (GNNs) can learn representations that transfer across graphs, when underlying graph properties are shared. For a fixed graph, one would then expect GNNs trained for link prediction to learn a representation consistent with that learnt for node classification. We show this intuition does not hold in the general case. Instead, we find popular link prediction models can learn a trivial mini-batch dependent heuristic, enabled by batch-normalisation layers, to solve the edge classification task. When correcting for this, we observe increased alignment of the network representation with node-class relevant features, suggesting the network has learnt a graph representation that better aligns with the underlying graph's properties. Our findings suggest that standard link prediction training may be leading us to overestimate link predictors' ability to learn a generalised representation of a graph that is consistent across tasks."
+        },
+        {
+          "title": "Link prediction in ecological networks under extreme taxonomic bias",
+          "id": "http://arxiv.org/abs/2506.23370v2",
+          "published": "2025-06-29T19:09:37Z",
+          "abstract": "Ecological networks offer powerful insights into community function, but without first characterizing these networks accurately, our ability to detect and interpret changes under environmental stress is limited. We develop an approach to reduce bias in link prediction in the common scenario in which data are derived from studies focused on a small number of species. Our Extended Covariate-Informed Link Prediction (COIL+) framework employs a latent factor model that flexibly borrows information across species, incorporates species traits and phylogeny, and leverages information from multiple studies to address uncertainty in species occurrence. We also propose a trait-matching procedure that allows heterogeneity in species-level trait-interaction associations. We illustrate the approach with a literature-based dataset of 268 sources reporting Afrotropical frugivory and compare performance with and without correction for occurrence uncertainty. COIL+ substantially improves link prediction and reduces sampling bias, revealing 5637 likely but unobserved frugivory interactions (a median of nine additional interactions per frugivore). Newly predicted interactions are concentrated among poorly sampled frugivores, such as the water chevrotain (Hyemoschus aquaticus, a small forest-dwelling ungulate) and the rufous-bellied helmetshrike (Prionops rufiventris, a passerine bird of East African tropical forests). Additionally, the method improves model discrimination compared to existing methods under strong taxonomic bias and narrow study focus. This framework generalizes to diverse network contexts and provides a useful tool for link prediction in the face of biased interaction data."
+        },
+        {
+          "title": "Identification of Device Dependencies Using Link Prediction",
+          "id": "http://arxiv.org/abs/2407.03019v1",
+          "published": "2024-07-03T11:28:09Z",
+          "abstract": "Devices in computer networks cannot work without essential network services provided by a limited count of devices. Identification of device dependencies determines whether a pair of IP addresses is a dependency, i.e., the host with the first IP address is dependent on the second one. These dependencies cannot be identified manually in large and dynamically changing networks. Nevertheless, they are important due to possible unexpected failures, performance issues, and cascading effects. We address the identification of dependencies using a new approach based on graph-based machine learning. The approach belongs to link prediction based on a latent representation of the computer network's communication graph. It samples random walks over IP addresses that fulfill time conditions imposed on network dependencies. The constrained random walks are used by a neural network to construct IP address embedding, which is a space that contains IP addresses that often appear close together in the same communication chain (i.e., random walk). Dependency embedding is constructed by combining values for IP addresses from their embedding and used for training the resulting dependency classifier. We evaluated the approach using IP flow datasets from a controlled environment and university campus network that contain evidence about dependencies. Evaluation concerning the correctness and relationship to other approaches shows that the approach achieves acceptable performance. It can simultaneously consider all types of dependencies and is applicable for batch processing in operational conditions."
+        },
+        {
+          "title": "Implicit degree bias in the link prediction task",
+          "id": "http://arxiv.org/abs/2405.14985v2",
+          "published": "2024-05-23T18:38:42Z",
+          "abstract": "Link prediction -- a task of distinguishing actual hidden edges from random unconnected node pairs -- is one of the quintessential tasks in graph machine learning. Despite being widely accepted as a universal benchmark and a downstream task for representation learning, the validity of the link prediction benchmark itself has been rarely questioned. Here, we show that the common edge sampling procedure in the link prediction task has an implicit bias toward high-degree nodes and produces a highly skewed evaluation that favors methods overly dependent on node degree, to the extent that a ``null'' link prediction method based solely on node degree can yield nearly optimal performance. We propose a degree-corrected link prediction task that offers a more reasonable assessment that aligns better with the performance in the recommendation task. Finally, we demonstrate that the degree-corrected benchmark can more effectively train graph machine-learning models by reducing overfitting to node degrees and facilitating the learning of relevant structures in graphs."
+        }
+      ]
+    },
+    "arxiv_propagation": {
+      "query": "(ti:\"label propagation\" OR ti:\"error correction\" OR ti:\"residual propagation\") AND all:graph",
+      "url": "https://export.arxiv.org/api/query?search_query=%28ti%3A%22label+propagation%22+OR+ti%3A%22error+correction%22+OR+ti%3A%22residual+propagation%22%29+AND+all%3Agraph&start=0&max_results=30&sortBy=submittedDate&sortOrder=descending",
+      "status": 200,
+      "rows": [
+        {
+          "title": "Surface-Code Quantum Error Correction for Molecular Tweezer Arrays: Encoding, Layout, and Correlated Noise",
+          "id": "http://arxiv.org/abs/2608.21961v1",
+          "published": "2026-08-22T13:59:27Z",
+          "abstract": "Polar molecules trapped in optical tweezer arrays offer a promising platform for quantum information processing, providing precise control and long-range interactions that enable high-fidelity gate operations. We investigate quantum error correction in this system and show the influence of underlying physical noise. A mapping is constructed from a molecular tweezer array onto a rotated surface code in which a single specification of the array, namely, which code qubits share a molecule and where those molecules are located, determines both the correlated erasure structure and the dipolar exchange graph. We compare molecular encodings with rotational qudit dimensions (D), two and four under heralded molecular loss, coherent dipolar exchange, and imperfect heralding. It is found that a D= 4 encoding with spatially dispersed pairing exhibits a finite distance crossing at approximately the same per molecule loss rate as D= 2, while using 48-49 % fewer molecules, at the cost of a 6-10 % increase in sub-threshold logical error. Fixing the encoding and varying only the spatial embedding produces substantially larger effects: pairing the two co-located qubits along a lattice direction yields a logical-sector asymmetry of approximately fifty times. Over the simulated distances (d = 5, 7, 9), the disfavoured sector shows little or no suppression of logical error with increasing code distance, whereas the favoured sector improves by a factor of 1.5-2.3. We also find that Pauli twirl of the exchange interaction overestimates the logical error rate, which we attribute to the excitation-conserving structure of the interaction. These results reveal that the spatial embedding of correlated loss units is an important design parameter for molecular architectures and that single-sector benchmarks may be insufficient when correlated loss has directional structure."
+        },
+        {
+          "title": "Bounds and constructions for constant/low-power error-correcting cooling codes",
+          "id": "http://arxiv.org/abs/2608.08742v1",
+          "published": "2026-08-09T14:39:38Z",
+          "abstract": "The low-power error-correcting cooling (LPECC) codes and constant-power error-correcting cooling (CPECC) codes, introduced in [IEEE Trans. Inf. Theory, 64 (2018), 3062--3085; 66 (2020), 4804--4818], respectively, are two coding schemes designed to simultaneously control the peak temperature and average power consumption of on-chip buses while providing error-correction capability for transmitted information. This paper establishes new upper bounds for both $(n,1,w,w-2)$-CPECC codes and $(n,t,w,w-2)$-CPECC codes using graph-theoretic techniques, and constructs several new families of optimal CPECC codes using combinatorial configurations. Moreover, it completely resolves the conjecture concerning CPECC codes posed in [IEEE Trans. Inf. Theory, DOI: 10.1109/TIT.2026.3721101]. Finally, we derive a new upper bound for $(n,t,w,w-2)$-LPECC codes by probabilistic method, along with new optimal families, and establish the relationship between optimal $(n,t,w,w-2)$-LPECC codes and optimal $(n+1,t,w,w-2)$-CPECC codes."
+        },
+        {
+          "title": "Efficient Recommendations via Graph Coarsening and Label Propagation",
+          "id": "http://arxiv.org/abs/2607.22287v1",
+          "published": "2026-07-24T13:25:26Z",
+          "abstract": "Graph-based recommendations are widely adopted in real-world industrial applications. However, graphs in these systems often reach a massive scale, posing notable scalability and efficiency challenges. This requires techniques that can effectively balance predictive quality with computational cost. One promising approach is graph coarsening, an adaptive graph reduction technique that offers a way to systematically construct smaller, yet structurally representative, versions of the original large-scale graphs. In this work, we propose a flexible two-stage diffusion framework that combines graph coarsening with multi-step label propagation in the telecommunications domain. Domain-specific heuristics are applied to first aggregate nodes into meaningful communities, reducing graph size while preserving essential business-relevant relationships. An initial diffusion process done by a Label Propagation Algorithm (LPA) or a Graph Neural Network (GNN) propagates labels across the coarsened graph to produce coarse-grained predictions. Finally, a second LPA within subgraphs generates the final recommendations for individual users. On a real-world telecommunications dataset, when using LPA in both stages, our method achieves up to +24% NDCG@5 over the full-graph LPA baseline. Incorporating a lightweight GNN in the first stage further boosts NDCG@5 by more than 50%, but requires substantial training and inference time. Through extensive experiments and a detailed ablation, we quantify these trade-offs and demonstrate that our coarsening-driven approach delivers an optimal balance between scalability, latency, and recommendation quality."
+        },
+        {
+          "title": "Extinction Depth and q-ary Error-Correcting Codes for the Limited Permutation Channel",
+          "id": "http://arxiv.org/abs/2607.19566v1",
+          "published": "2026-07-21T20:48:55Z",
+          "abstract": "In the radius-one limited permutation channel, errors consist of disjoint adjacent transpositions. A correcting code must separate distinct codewords: their error balls may not contain a common received word. Hamming distance does not ensure this, because disjoint swaps can make words differing in many positions confusable. For block-concatenation codes, earlier work tested each possible collision only through the longer initial block. This sufficient condition is not necessary: we exhibit a valid ternary block set that it does not certify. We introduce extinction depth, which tracks unresolved first-block pairs through later block extensions, and prove that their extinction at one common finite horizon certifies correction at every length. The criterion gives explicit $q=3$ and $q=5$ block sets with rates above $0.6777475$ and $0.6694926$. No block-set-independent depth bound exists: we give an exact linear family, verify a quadratic formula for every $3\\leq k\\leq 60$, and derive a polynomial-time finite-graph test. For growing alphabets, the normalized correction loss lies between $\\ln\\varphi$ and $\\ln(1.82560995)$, while explicit finite-length covers improve finite-alphabet upper bounds. We develop a parallel directed-extinction theory for detection, including an all-length block criterion, a set unresolved by the earlier test, and exact corridor depth $4k$. Stable type lifting yields optimal first-order loss $\\sqrt{2}$, and weak-zigzag codes improve the $q=3,4$ lower bounds. Finally, window restriction, cancellation, and a bounded pending-input frontier extend the criterion and its finite-state verification to every fixed displacement radius $r$."
+        },
+        {
+          "title": "Experience Memory Graph: One-Shot Error Correction for Agents",
+          "id": "http://arxiv.org/abs/2607.13884v2",
+          "published": "2026-07-15T14:33:15Z",
+          "abstract": "Large Language Model (LLM) agents have shown remarkable capabilities in autonomous decision-making by generating sequential trajectories of states, actions, and observations. However, in complex, long-horizon tasks, these agents frequently suffer from compounding errors and struggle to recover from failures. Existing self-correction mechanisms rely on prompt-based reflection, which is inherently brittle, incurs heavy time and API costs due to iterative trial-and-error loops, and produces task-specific memory that may be hard to generalize to new scenarios. To address this, we propose Experience Memory Graph (EMG), a framework that reformulates agent failure recovery as a graph matching problem. At training time, we convert both failed exploration trajectories and successful expert trajectories into directed action decision graphs. By matching these graphs, we extract common subgraphs (successful workflows) and graph edit paths that explicitly indicate how to correct failures (e.g., which actions to add, delete, or relabel under a given observation), and store them in a memory graph with intra-task nodes and cross-task edges. At test time, EMG retrieves relevant insights and guides the agent in a single, loop-free execution. Experiments on ALFWorld and ScienceWorld show that EMG consistently outperforms state-of-the-art reflection baselines in success rate and average reward, while requiring no test-time trial-and-error."
+        },
+        {
+          "title": "Foliated Quantum Error Correction for Qudits",
+          "id": "http://arxiv.org/abs/2607.13784v1",
+          "published": "2026-07-15T12:40:56Z",
+          "abstract": "We present a framework for foliating any Pauli-based quantum error-correcting code over prime-dimensional qudits. For any such code, we obtain a qudit graph state that can be measured to perform fault-tolerant measurement-based quantum computing. Such a paradigm is of interest in platforms such as photonics, where measurement-based protocols are natural and high-dimensional states are readily available. We discuss several examples for arbitrary prime dimension $d$, such as the qudit toric code (stabilizer, CSS), the $d$-dimensional perfect $[[5,1,3]]$ code (stabilizer, non-CSS), and a straightforward $d$-dimensional generalization of the CSS honeycomb code (dynamical, CSS). Under a simple error model, we numerically calculate thresholds for the foliated qudit toric code and demonstrate that they are comparable to the non-foliated version."
+        },
+        {
+          "title": "Latency-Constrained Hardware-Aware Quantum Error Correction Co-Design with Adaptive Confidence-Gated Neural Decoding for the Rotated Surface Code",
+          "id": "http://arxiv.org/abs/2607.05814v2",
+          "published": "2026-07-07T04:18:42Z",
+          "abstract": "Real-time decoding is a major bottleneck in scaling quantum error correction (QEC) from noisy intermediate-scale quantum (NISQ) devices to fault-tolerant quantum computing. We present an adaptive confidence-gated decoding framework for the rotated surface code that treats decoding as a two-stage inference problem. A lightweight feed-forward neural network performs fast-path decoding for the majority of syndrome measurements, while only low-confidence predictions are escalated to a minimum-weight perfect matching (MWPM) refinement stage. We benchmark the framework on rotated surface codes with distances $d \\in \\{3,5,7,9,11\\}$ under circuit-level depolarising noise using the Stim stabiliser simulator. The evaluation characterises logical accuracy, confidence-controlled accuracy-latency trade-offs, decoding throughput, per-shot latency, and decoding-graph resource scaling. Routing only 3.3%-6.2% of syndromes to the refinement stage improves logical accuracy from 99.21% for the neural-only baseline to 99.81% at a confidence threshold of 0.95 while incurring only a bounded increase in average decoding cost. Neural-decoder throughput saturates near $4.6 \\times 10^{5}$ samples s$^{-1}$ at batch size 512 on commodity CPU hardware, indicating that the neural fast path is not the dominant throughput bottleneck beyond code distance $d=7$. We release the complete benchmarking pipeline, trained models, raw benchmark data, and source code, and explicitly distinguish the experimentally validated contributions from the broader hardware-aware QEC co-design roadmap, including hardware-constrained code discovery, GPU-accelerated inference, and multi-noise optimisation, which remain directions for future work."
+        },
+        {
+          "title": "New Results on Limited Magnitude Error Correcting Codes",
+          "id": "http://arxiv.org/abs/2607.05026v1",
+          "published": "2026-07-06T13:05:54Z",
+          "abstract": "This paper investigates the existence, construction and classification of limited magnitude error-correcting codes, with a focus on splitter sets and their connections to group splittings. We establish new nonexistence results for quasi-perfect splitter sets and provide a complete classification of quasi-perfect $B[0,3](n)$ splitter sets in both singular and nonsingular cases. Furthermore, we derive improved lower bounds for the size of maximal $B[0,3](q)$ sets by investigating Cayley graphs, where $q$ is a prime. We also provide existence criteria for perfect $B[0,6](q)$ splitter sets and quasi-perfect $B[-4,4](2p)$ sets for prime $p$. For perfect burst-correcting codes, we develop a general construction framework, and prove the existence of infinite families of $(k_2,k_1)$-limited-magnitude cyclic $b$-burst-correcting codes for $k_1+k_2\\le 4$ and arbitrary burst length $b$. We further provide sufficient existence conditions for general parameters $k_1$ and $k_2$. Our results combine algebraic, combinatorial, and number-theoretic methods to advance the understanding of codes tailored for flash memory and related storage systems."
+        },
+        {
+          "title": "Evolving Quantum Error-Correcting Encodings for Molecular Simulation",
+          "id": "http://arxiv.org/abs/2606.25870v1",
+          "published": "2026-06-24T14:19:43Z",
+          "abstract": "Useful quantum algorithms require many coupled discrete design choices. We study LLM-driven evolutionary program synthesis -- a language model edits a program, an external verifier scores the result, and high-scoring programs are retained and re-mutated -- as a tool for quantum-computing research. As a case study, we apply this loop to the Generalized Superfast Encoding (GSE), a fermion-to-qubit encoding whose prior molecular constructions reach code distance $3$. The search discovered interpretable constructor programs whose codes have \\emph{exact} distance $5$ on the molecular instances tested, and distance $6$ on one $20$-mode instance, under strict stabilizer-coset semantics. To our knowledge these are the first GSE/superfast encodings beyond distance $3$ for dense molecular Hamiltonians. A second search, guided by verifier analysis of the first artifact, found a circulant constructor that reaches a five-qubits-per-mode floor on the tested $12$-, $14$-, $16$-, and $20$-mode instances, with certified dense-rule fallback at the failing $18$-mode case. As secondary resource descriptors, in a code-capacity \\emph{memory} comparison at $p=10^{-3}$ the resulting encodings use $4.2$--$5.0\\times$ fewer data qubits than a scoped per-mode Jordan--Wigner $+$ $[[25,1,5]]$ surface route and have $3.4$--$8.2\\times$ lower logical-failure rates under finite-weight decoding tables with explicit truncation brackets; we claim no circuit-level fault-tolerance or Trotter-cost advantage. The search trajectory illustrates a general operating lesson: rewarding distance alone selects trivial dense graphs, whereas holding verified distance fixed and rewarding compression selects structured rules."
+        },
+        {
+          "title": "MaskedFOP: Polyglot Speaker Identification under Missing Visual Modality via Cascaded Graph Label Propagation",
+          "id": "http://arxiv.org/abs/2606.14321v1",
+          "published": "2026-06-12T10:00:13Z",
+          "abstract": "We present MaskedFOP, a system for closed-set polyglot speaker identification under two simultaneous challenges: the face modality is entirely absent at test time, and speech comes from Urdu, a language unseen during face-supervised training. The system integrates three complementary mechanisms. First, a modality-dropout dual-head network built on the Fusion and Orthogonal Projection (FOP) backbone forces the audio branch to develop independent discriminative power via per-sample face masking, ensuring that the audio encoder remains capable when face is absent. Second, two MaskedFOP instances trained on Emphasized Channel Attention, Propagation, and Aggregation in Time Delay Neural Network (ECAPA-TDNN) features with different random seeds produce complementary audio embeddings whose element-wise average yields a more robust 512-dimensional representation than any single model. Third, a two-stage cascaded inference procedure first refines multimodal labels through a fused Graph Label Propagation (GLP) pass (Stage 1), then assigns audio-only labels by cosine nearest-centroid (Stage 2), replacing the 70 sparse training prototypes with ~1,500 in-domain test-set centroids from Stage 1. Submitted to the POLY-SIM 2026 Grand Challenge, the system achieves a mean P-accuracy of 0.9989, placing first among all submissions evaluated on the challenge server. An ablation identifies cascaded seeding as the single largest gain (>8 pp on P4/P6). The code is available at https://github.com/Ayoub-Elkhouzari/POLY-SIM2026."
+        },
+        {
+          "title": "Coset Ensemble Decoder for Quantum Error Correction with Algorithm-Hardware Co-Design",
+          "id": "http://arxiv.org/abs/2606.11076v1",
+          "published": "2026-06-09T16:37:13Z",
+          "abstract": "Reliable large-scale quantum computation relies on fault-tolerant architectures, where quantum error correction (QEC) continuously extracts and decodes error syndromes in real time. A critical component in QEC is the decoder, a classical subsystem that must simultaneously deliver high logical accuracy and ultra-low latency. This paper presents a novel algorithm-hardware co-design that improves the accuracy-latency trade-off over existing approaches such as vanilla Minimum-Weight Perfect Matching (MWPM) and Union-Find (UF) decoders. At the algorithmic level, we introduce coset ensemble decoding, which improves UF decoding by explicitly exploiting logically equivalent cosets. Our method performs ensemble forest exploration to generate multiple coset-consistent candidates and aggregates them to approximate coset-level maximum-likelihood decoding. We further reduce computational and memory complexity via reverse-order elimination and lossless graph compression, without sacrificing accuracy. At the hardware level, we design a domain-specific architecture that temporally reuses resources, avoiding the code-distance-proportional resource growth in prior spatial architectures. Several optimizations, such as multi-bank memory hashing and hierarchical ID mapping, are proposed to mitigate pipeline stalls and memory conflicts under highly concurrent access patterns. Under a circuit-level depolarizing noise model, our co-design approach achieves a better accuracy-latency trade-off than prior MWPM- and UF-based decoders, while reducing FPGA LUT consumption by up to 8.2 times compared with reported UF-based decoder resources. The tunable candidate number further exposes a flexible design knob, enabling users to tailor decoding performance to the requirements of different fault-tolerant workloads. Our implementation is publicly available at https://github.com/IMSeonL/coset-ensemble-decoder."
+        },
+        {
+          "title": "Adaptive Graph Refinement and Label Propagation with LLMs for Cost-Effective Entity Resolution",
+          "id": "http://arxiv.org/abs/2605.25814v1",
+          "published": "2026-05-25T13:11:33Z",
+          "abstract": "Dirty entity resolution (ER), which identifies records referring to the same real-world entity from a single, messy dataset, is a fundamental task in data management and mining. However, the dominant blocking-matching-clustering paradigm for ER suffers from critical flaws. Its cascaded, decoupled workflow essentially produces a static, sparse graph plagued by missing edges (due to blocking failures) and noisy links (due to matching errors), causing error propagation and yielding suboptimal clusters, particularly when rigid transitivity is imposed in the clustering. We contend that matching and clustering are fundamentally synergistic, both optimizing for the construction of an ideal entity graph. Building upon this insight, we propose Alper, a unified framework that integrates these steps into an iterative probabilistic label propagation process over a global, evolving graph. Unlike disjoint blocking, Alper refines the graph structure and labels dynamically by adaptively integrating \"weak but cheap\" signals from graph propagation with \"strong but expensive\" LLM-based pairwise queries. For higher cost-effectiveness, we formulate the signal selection as a constrained optimization problem maximizing cumulative marginal gain under a query budget, solved via our greedy algorithm with provable theoretical guarantees. Our extensive experiments over eight benchmark datasets demonstrate that Alper is consistently superior to state-of-the-art cascaded pipelines."
+        },
+        {
+          "title": "Towards Scalable Quaternary Message-Passing Decoding for Quantum Error Correction",
+          "id": "http://arxiv.org/abs/2605.24177v1",
+          "published": "2026-05-22T19:57:24Z",
+          "abstract": "The scalability and interpretability of message-passing (MP) decoding, such as (quaternary) Belief Propagation, remain open challenges in quantum error correction. Even for surface codes, arguably the first testbed for decoding methods, studies of improved MP decoders have mostly been restricted to small distances ($d \\lesssim 19$). Moreover, the mismatch with established message-passing theory limits the decoder's interpretability, making it unclear whether MP decoding can sustain its effectiveness at large system sizes. This work takes a step toward a more principled and interpretable MP decoding framework, with the goal of making MP-based decoding more reliable and bridging theory and practice. We introduce a dilution method, which allows a quaternary Min-Sum (MS) decoder to exhibit an apparent depolarizing threshold of $16\\%$ up to distance $20$, outperforming Minimum-Weight Perfect Matching in finite-length regimes. Notably, for $X$-noise, the standard MS decoder under dilution has worst-case complexity $O(N \\log^2 d)$ and outperforms BP-OSD at $d=65$. The observed $\\sim 9\\%$ threshold may correspond to a true asymptotic threshold. Finally, we give a graph-dilution argument that interprets the success of the dilution method and offers insight into when MP algorithms can genuinely scale. Taken together, these results provide encouraging progress toward scalable and interpretable MP decoding in quantum error correction."
+        },
+        {
+          "title": "Maximum Likelihood Decoding of Quantum Error Correction Codes",
+          "id": "http://arxiv.org/abs/2605.17230v1",
+          "published": "2026-05-17T02:32:52Z",
+          "abstract": "Quantum error correction (QEC) is indispensable for realizing fault-tolerant quantum computation, yet its effectiveness hinges critically on the classical decoding algorithm that interprets noisy syndrome measurements. Among all possible decoding strategies, maximum likelihood decoding (MLD) is provably optimal, since it identifies the logical group with largest likelihood by summing over all possible errors within logical class consistent with the observed syndrome. Despite its optimality, MLD is computationally intractable in general (#P-hard), motivating a rich landscape of exact and approximate algorithms. In this topical review, we provide a unified perspective on MLD by surveying recent advances through three complementary lenses: statistical mechanics, tensor networks, and artificial intelligence. From the statistical mechanics viewpoint, the MLD problem maps onto evaluating partition functions of disordered spin models, enabling exact solutions for certain codes and noise models as well as threshold estimation via phase-transition analysis. From the tensor network perspective, approximate contraction of tensor networks on the code's factor graph yields decoders that closely approach MLD accuracy with polynomial computational cost. From the artificial intelligence perspective, neural-network-based decoders, including autoregressive generative models and recurrent transformers, learn to approximate the MLD distribution from data, achieving high accuracy with the parallelism afforded by modern hardware accelerators. We discuss the connections among these three approaches, review their application to both simulated and experimental quantum hardware, and outline open challenges including real-time decoding, scalability to large code distances, and generalization to high-rate quantum low-density parity-check codes."
+        },
+        {
+          "title": "Scalable Mamba-Based Message-Passing Neural Decoder for Error-Correcting Codes",
+          "id": "http://arxiv.org/abs/2605.10681v1",
+          "published": "2026-05-11T14:57:41Z",
+          "abstract": "Forward error correction is essential for reliable communication over noisy channels. Attention-based model-free neural decoders have shown strong performance for short codes, but their scalability to longer codes is limited by the quadratic memory and computational cost of attention. In this paper, we introduce the Mamba message-passing decoder (MMPD), an attention-free syndrome-based neural decoder for binary linear codes. MMPD retains the Tanner-graph structure of a message-passing decoder by performing local pairwise aggregation along variable-check edges. To enable efficient long-range information propagation, these local updates are combined with bidirectional Mamba state-space blocks. By avoiding dense attention matrices, MMPD scales more favorably for long codes in both memory and computation. Experiments on the (1056, 880) LDPC code show that MMPD achieves a 0.45 dB gain over the state-of-the-art CrossMPT decoder at a specified target bit error rate, while reducing memory consumption by a factor of 1.5. This reduction factor increases substantially for longer codes, demonstrating the applicability of MMPD to scalable neural decoding of practical long codes."
+        },
+        {
+          "title": "Graph-Based Phonetic Error Correction of Noisy ASR",
+          "id": "http://arxiv.org/abs/2606.24889v1",
+          "published": "2026-04-29T13:57:11Z",
+          "abstract": "Automatic speech recognition (ASR) systems, despite low overall word error rates, produce residual lexical errors that disproportionately affect semantically critical tokens such as named entities, negations, and sentiment-bearing words. These errors are often structured, arising from phonetic similarity rather than random noise, making naive token-level correction insufficient. We propose a structured ASR correction framework, that we call G-SPIN, that combines phonetic graph modeling with contextual language understanding. A graph neural network (GNN) first constructs acoustically plausible candidate neighborhoods for flagged tokens, explicitly restricting the correction search space to phonetic alternatives. A masked language model (MLM) then provides local contextual scoring, and an instruction-tuned large language model (LLM) performs final context-aware re-ranking over this compact candidate set. By decoupling structured phonetic reasoning from contextual semantic selection, our method avoids unconstrained generation while improving correction accuracy. The framework is lightweight, modular, and operates entirely at inference time."
+        },
+        {
+          "title": "DiffQEC: A versatile diffusion model for quantum error correction",
+          "id": "http://arxiv.org/abs/2604.24640v1",
+          "published": "2026-04-27T16:08:38Z",
+          "abstract": "Quantum computers could solve problems beyond the reach of classical devices, but this potential depends on quantum error correction (QEC) to protect fragile quantum states from noise. A central challenge in QEC is decoding: inferring likely physical errors from syndrome patterns generated by repeated stabilizer measurements. Existing decoders, including graph-based and neural approaches, typically return a single correction hypothesis and therefore discard the richer posterior structure of the error distribution conditioned on the observed syndrome. Here we recast QEC decoding as posterior inference using discrete denoising diffusion, exploiting the analogy between stochastic error accumulation and the forward diffusion process. We introduce DiffQEC, a generative decoder that combines a syndrome processor for multi-round spatial-temporal syndrome histories with syndrome feature modulation to condition denoising on the observed syndrome throughout inference. On experimental data from Google's superconducting quantum processor, DiffQEC reduces logical error rates by up to 10.2% relative to minimum-weight perfect matching and by about 5% relative to tensor-network decoding. These improvements persist for larger code distances up to 17 under depolarizing noise and for logical circuits of increasing depth. Beyond accuracy, the learned posterior provides confidence estimates for post-selection and reveals physically meaningful error structure, establishing posterior generative decoding as a practical framework for QEC."
+        },
+        {
+          "title": "F\\textsuperscript{2}LP-AP: Fast \\& Flexible Label Propagation with Adaptive Propagation Kernel",
+          "id": "http://arxiv.org/abs/2604.20736v1",
+          "published": "2026-04-22T16:23:17Z",
+          "abstract": "Semi-supervised node classification is a foundational task in graph machine learning, yet state-of-the-art Graph Neural Networks (GNNs) are hindered by significant computational overhead and reliance on strong homophily assumptions. Traditional GNNs require expensive iterative training and multi-layer message passing, while existing training-free methods, such as Label Propagation, lack adaptability to heterophilo\\-us graph structures. This paper presents \\textbf{F$^2$LP-AP} (Fast and Flexible Label Propagation with Adaptive Propagation Kernel), a training-free, computationally efficient framework that adapts to local graph topology. Our method constructs robust class prototypes via the geometric median and dynamically adjusts propagation parameters based on the Local Clustering Coefficient (LCC), enabling effective modeling of both homophilous and heterophilous graphs without gradient-based training. Extensive experiments across diverse benchmark datasets demonstrate that \\textbf{F$^2$LP-AP} achieves competitive or superior accuracy compared to trained GNNs, while significantly outperforming existing baselines in computational efficiency."
+        },
+        {
+          "title": "GreenPeas: Unlocking adaptive quantum error correction with just-in-time decoding hypergraphs",
+          "id": "http://arxiv.org/abs/2604.16613v2",
+          "published": "2026-04-17T18:11:20Z",
+          "abstract": "Circuit-level decoders are essential for the realisation of low-overhead fault-tolerant quantum computing. However, they rely on complex hypergraphs that are traditionally compiled ahead-of-time. This static approach introduces a significant bottleneck for an emerging class of adaptive circuits, where the structure is modified during execution based on mid-circuit measurement outcomes. Pre-compiling hypergraphs for all possible circuit branches would incur an exponential memory cost, rendering current tools impractical for these workloads. Hence, we introduce GreenPeas, a just-in-time compiler for decoding hypergraphs. By lowering the realised circuit to a space-time error propagation graph, GreenPeas decomposes Stim's backtracking algorithm for error analysis into two sequentially dependent, internally parallelisable stages: (1) mapping physical errors to their corresponding equivalence classes, and (2) aggregating error probabilities within each class. Evaluated on surface and bivariate bicycle code memory circuits without user-annotated repeat blocks, GreenPeas achieves a geometric mean speedup of 13.2x over Stim using a high-end GPU. This speedup carries over to the adaptive regime, unlocking circuit-level decoding of [[4,2,2]]-concatenated surface code memories with adaptive syndrome measurements -- a capability previously restricted to less accurate phenomenological decoders -- yielding 6.7x lower logical error rate and 4.5x lower decoding latency at a representative outer code distance of 10."
+        },
+        {
+          "title": "AI-Enabled Decoding of Qubit Loss for Quantum Error-Correcting Codes",
+          "id": "http://arxiv.org/abs/2604.14269v2",
+          "published": "2026-04-15T17:59:35Z",
+          "abstract": "Qubit loss is a major source of error in quantum computation, as it invalidates the algebraic structure of the standard stabilizer formalism for quantum error-correcting codes. On the one hand, it complicates decoding; on the other hand, it introduces stochastic flicker patterns in stabilizers as a hallmark of qubit loss. Here, we develop an artificial-intelligence-enabled decoder based on a spatiotemporal Graph Neural Network (STGNN) architecture to extract spatial and temporal correlations from syndrome histories. Our decoder performs a dual-head task, simultaneously correcting standard Pauli errors and identifying the locations of qubit loss. Our decoder achieves significantly higher logical accuracy than both the traditional minimum-weight perfect matching (MWPM) algorithm and even delayed-erasure MWPM decoders that use qubit loss information from the final round as input. Our decoder can also identify more than 90% of loss locations after accumulating stabilizer measurements over the subsequent ten rounds, thereby facilitating qubit reinitialization, for instance, via the continuous loading technique on the atom array platform. For both tasks, our STGNN performs nearly identically to a modified version of AlphaQubit, but it employs a parallel input structure, giving it an advantage in inference time over modified AlphaQubit's recurrent input structure. This work provides a robust and scalable framework for correcting qubit loss errors, paving the way for more efficient fault-tolerant quantum computation."
+        },
+        {
+          "title": "DynLP: Parallel Dynamic Batch Update for Label Propagation in Semi-Supervised Learning",
+          "id": "http://arxiv.org/abs/2604.06596v1",
+          "published": "2026-04-08T02:29:49Z",
+          "abstract": "Semi-supervised learning aims to infer class labels using only a small fraction of labeled data. In graph-based semi-supervised learning, this is typically achieved through label propagation to predict labels of unlabeled nodes. However, in real-world applications, data often arrive incrementally in batches. Each time a new batch appears, reapplying the traditional label propagation algorithm to recompute all labels is redundant, computationally intensive, and inefficient. To address the absence of an efficient label propagation update method, we propose DynLP, a novel GPU-centric Dynamic Batched Parallel Label Propagation algorithm that performs only the necessary updates, propagating changes to the relevant subgraph without requiring full recalculation. By exploiting GPU architectural optimizations, our algorithm achieves on average 13x and upto 102x speedup on large-scale datasets compared to state-of-the-art approaches."
+        },
+        {
+          "title": "Scoring Edit Impact in Grammatical Error Correction via Embedded Association Graphs",
+          "id": "http://arxiv.org/abs/2604.06573v2",
+          "published": "2026-04-08T01:37:59Z",
+          "abstract": "A Grammatical Error Correction (GEC) system produces a sequence of edits to correct an erroneous sentence. The quality of these edits is typically evaluated against human annotations. However, a sentence may admit multiple valid corrections, and existing evaluation settings do not fully accommodate diverse application scenarios. Recent meta-evaluation approaches rely on human judgments across multiple references, but they are difficult to scale to large datasets. In this paper, we propose a new task, Scoring Edit Impact in GEC, which aims to automatically estimate the importance of edits produced by a GEC system. To address this task, we introduce a scoring framework based on an embedded association graph. The graph captures latent dependencies among edits and syntactically related edits, grouping them into coherent groups. We then perform perplexity-based scoring to estimate each edit's contribution to sentence fluency. Experiments across 4 GEC datasets, 4 languages, and 4 GEC systems demonstrate that our method consistently outperforms a range of baselines. Further analysis shows that the embedded association graph effectively captures cross-linguistic structural dependencies among edits."
+        },
+        {
+          "title": "Hypothesis Graph Refinement: Hypothesis-Driven Exploration with Cascade Error Correction for Embodied Navigation",
+          "id": "http://arxiv.org/abs/2604.04108v1",
+          "published": "2026-04-05T13:02:18Z",
+          "abstract": "Embodied agents must explore partially observed environments while maintaining reliable long-horizon memory. Existing graph-based navigation systems improve scalability, but they often treat unexplored regions as semantically unknown, leading to inefficient frontier search. Although vision-language models (VLMs) can predict frontier semantics, erroneous predictions may be embedded into memory and propagate through downstream inferences, causing structural error accumulation that confidence attenuation alone cannot resolve. These observations call for a framework that can leverage semantic predictions for directed exploration while systematically retracting errors once new evidence contradicts them. We propose Hypothesis Graph Refinement (HGR), a framework that represents frontier predictions as revisable hypothesis nodes in a dependency-aware graph memory. HGR introduces (1) semantic hypothesis module, which estimates context-conditioned semantic distributions over frontiers and ranks exploration targets by goal relevance, travel cost, and uncertainty, and (2) verification-driven cascade correction, which compares on-site observations against predicted semantics and, upon mismatch, retracts the refuted node together with all its downstream dependents. Unlike additive map-building, this allows the graph to contract by pruning erroneous subgraphs, keeping memory reliable throughout long episodes. We evaluate HGR on multimodal lifelong navigation (GOAT-Bench) and embodied question answering (A-EQA, EM-EQA). HGR achieves 72.41% success rate and 56.22% SPL on GOAT-Bench, and shows consistent improvements on both QA benchmarks. Diagnostic analysis reveals that cascade correction eliminates approximately 20% of structurally redundant hypothesis nodes and reduces revisits to erroneous regions by 4.5x, with specular and transparent surfaces accounting for 67% of corrected prediction errors."
+        },
+        {
+          "title": "Correlated Atom Loss as a Resource for Quantum Error Correction",
+          "id": "http://arxiv.org/abs/2603.24237v2",
+          "published": "2026-03-25T12:17:14Z",
+          "abstract": "Atom loss is a dominant error source in neutral-atom quantum processors, yet its correlated structure remains largely unexploited by existing quantum error correction decoders. We analyze the performance of the surface code equipped with teleportation-based loss-detection units for neutral-atom quantum processors subject to circuit-level, partially correlated atom loss and depolarizing noise. We introduce and implement a decoding strategy that exploits loss correlations, effectively converting the \\textit{delayed} erasure channels stemming from atom loss to erasure channels. The decoder constructs a loss graph and dynamically updates loss probabilities, a procedure that is highly parallelizable and compatible with real-time operation. Compared to a decoder that assumes independent loss events, our approach achieves up to an order-of-magnitude reduction in logical error probability and increases the loss threshold from $3.2\\%$ to $4\\%$. Our approach extends to experimentally relevant regimes with partially correlated loss, demonstrating robust gains beyond the idealized fully correlated setting."
+        },
+        {
+          "title": "Low Latency GNN Accelerator for Quantum Error Correction",
+          "id": "http://arxiv.org/abs/2603.22149v3",
+          "published": "2026-03-23T16:14:52Z",
+          "abstract": "Quantum computers can solve selected problems more efficiently than classical computers, but current devices are limited by high physical error rates. Quantum Error Correction (QEC) mitigates this by encoding many physical qubits into a logical qubit, with the surface code among the most widely studied approaches. Since syndrome measurements are produced continuously, the decoder must process them fast enough to avoid becoming a system bottleneck, making real-time decoding essential for fault-tolerant quantum computing. While most state-of-the-art real-time decoders rely on Minimum-Weight Perfect Matching (MWPM), we instead use a high-accuracy Graph Neural Network (GNN) that trades higher computational cost for lower logical error rates. To make this GNN practical for real-time decoding, we apply algorithm-hardware co-design. We reduce complexity through hardware-guided pruning and retraining, producing two hardware-friendly models that reduce parameter count by $3.1\\times$ and $6.5\\times$. These target, respectively, an average decoding latency of one syndrome cycle and a worst-case latency within one syndrome cycle. We further reduce hardware cost using input-graph filtering and post-training quantization. Based on these optimized models, we propose an FPGA-based architecture for low-latency inference and real-time decoding. Evaluated on surface codes up to distance 7 under circuit-level noise at physical error rate $p=10^{-3}$, our decoder outperforms MWPM in decoding accuracy for both average-latency and max-latency settings. It reduces logical error rate by 40% at $1μs$ average latency, and by 13% under a strict $1μs$ deadline."
+        },
+        {
+          "title": "Neural Belief-Matching Decoding for Topological Quantum Error Correction Codes",
+          "id": "http://arxiv.org/abs/2603.21730v2",
+          "published": "2026-03-23T09:15:48Z",
+          "abstract": "Quantum error correction (QEC) is critical for scalable fault-tolerant quantum computing. Topological codes, such as the toric code, offer hardware-efficient architectures but their Tanner graphs contain many girth-4 cycles that degrade the performance of belief-propagation (BP) decoding. For this reason, BP decoding is typically followed by a more complex second stage decoder such as minimum-weight perfect matching. These combined decoders achieve a remarkable performance, albeit at the cost of increased complexity. In this paper we propose two key improvements for the decoding of toric code. The first one is replacing the BP decoder by a neural BP decoder, giving rise to the neural belief-matching decoder which substantially decreases the average decoding complexity. The main drawback of this approach is the high cost associated with the training of the neural BP decoder. To address this issue, we impose a convolutional architecture on the neural BP decoder, enabling weight sharing across the spatially homogeneous structure of the code's factor graph. This design allows a model trained on a modest-size topological code to be directly transferred to much larger instances, preserving decoding quality while dramatically lowering the training burden. Our numerical experiments on toric-code lattices of various sizes demonstrate that this technique does not result in a noticeable loss in performance."
+        },
+        {
+          "title": "A Hierarchical Error-Corrective Graph Framework for Autonomous Agents with LLM-Based Action Generation",
+          "id": "http://arxiv.org/abs/2603.08388v4",
+          "published": "2026-03-09T13:46:00Z",
+          "abstract": "We propose a Hierarchical Error-Corrective Graph FrameworkforAutonomousAgentswithLLM-BasedActionGeneration(HECG),whichincorporates three core innovations: (1) Multi-Dimensional Transferable Strategy (MDTS): by integrating task quality metrics (Q), confidence/cost metrics (C), reward metrics (R), and LLM-based semantic reasoning scores (LLM-Score), MDTS achieves multi-dimensional alignment between quantitative performance and semantic context, enabling more precise selection of high-quality candidate strate gies and effectively reducing the risk of negative transfer. (2) Error Matrix Classification (EMC): unlike simple confusion matrices or overall performance metrics, EMC provides structured attribution of task failures by categorizing errors into ten types, such as Strategy Errors (Strategy Whe) and Script Parsing Errors (Script-Parsing-Error), and decomposing them according to severity, typical actions, error descriptions, and recoverability. This allows precise analysis of the root causes of task failures, offering clear guidance for subsequent error correction and strategy optimization rather than relying solely on overall success rates or single performance metrics. (3) Causal-Context Graph Retrieval (CCGR): to enhance agent retrieval capabilities in dynamic task environments, we construct graphs from historical states, actions, and event sequences, where nodes store executed actions, next-step actions, execution states, transferable strategies, and other relevant information, and edges represent causal dependencies such as preconditions for transitions between nodes. CCGR identifies subgraphs most relevant to the current task context, effectively capturing structural relationships beyond vector similarity, allowing agents to fully leverage contextual information, accelerate strategy adaptation, and improve execution reliability in complex, multi-step tasks."
+        },
+        {
+          "title": "Accelerating the Tesseract Decoder for Quantum Error Correction",
+          "id": "http://arxiv.org/abs/2602.02985v2",
+          "published": "2026-02-03T01:46:51Z",
+          "abstract": "Quantum Error Correction (QEC) is essential for building robust, fault-tolerant quantum computers; however, the decoding process often presents a significant computational bottleneck. Tesseract is a novel Most-Likely-Error (MLE) decoder for QEC that employs the A* search algorithm to explore an exponentially large graph of error hypotheses, achieving high decoding speed and accuracy. This paper presents a systematic approach to optimizing the Tesseract decoder through low-level performance enhancements. Based on extensive profiling, we implemented four targeted optimization strategies, including the replacement of inefficient data structures, reorganization of memory layouts to improve cache hit rates, and the use of hardware-accelerated bit-wise operations. We achieved significant decoding speedups across a wide range of code families and configurations, including Color Codes, Bivariate-Bicycle Codes, Surface Codes, and Transversal CNOT Protocols. Our results demonstrate consistent speedups of approximately 2x for most code families, often exceeding 2.5x. Notably, we achieved a peak performance gain of over 5x for the most computationally demanding configurations of Bivariate-Bicycle Codes. These improvements make the Tesseract decoder more efficient and scalable, serving as a practical case study that highlights the importance of high-performance software engineering in QEC and providing a strong foundation for future research."
+        },
+        {
+          "title": "Spectral-Aligned Pruning for Universal Error-Correcting Code Transformers",
+          "id": "http://arxiv.org/abs/2602.01602v3",
+          "published": "2026-02-02T03:50:03Z",
+          "abstract": "Universal channel decoders based on transformers-such as the Foundation Error Correction Code Transformer (FECCT)-achieve competitive decoding performance across diverse code families with a single shared backbone, optionally followed by code-specific finetuning. However, the high computational complexity and large parameter footprint of FECCT present substantial obstacles to practical deployment. To address these challenges, we investigate structured pruning for FECCT and propose Spectral-Aligned Pruning (SAP), a structure-aware framework that enables cross-code reuse of structured pruning masks by leveraging the spectrum of the corresponding bipartite graph. SAP is grounded in classical graph analysis of codes: the two algebraically largest adjacency eigenvalues provide compact spectral proxies for degree scale, expansion ratio, and minimum-distance lower bounds. These quantities are directly relevant to decoding performance: degree scale reflects how densely codeword bits and parity checks are connected; expansion ratio influences how information propagates across the bipartite graph; and minimum distance characterizes codeword separation. Based on this connection, SAP uses these two leading eigenvalues as a lightweight code signature for pruning-mask retrieval. Empirically, this two-dimensional signature yields stable library selection equivalent to higher-dimensional spectral signatures in our evaluation. After pruning, SAP performs per-code recovery via parameter-efficient low-rank adaptation (LoRA), enabling a shared pruned backbone while storing only small code-specific adapter parameters. Experiments across diverse codes show that SAP achieves decoding performance comparable to dedicated per-code pruning, while enabling substantial reductions in computational cost and model memory footprint through kernel-level structured pruning."
+        },
+        {
+          "title": "MedSpeak: A Knowledge Graph-Aided ASR Error Correction Framework for Spoken Medical QA",
+          "id": "http://arxiv.org/abs/2602.00981v2",
+          "published": "2026-02-01T02:44:08Z",
+          "abstract": "Spoken question-answering (SQA) systems relying on automatic speech recognition (ASR) often struggle with accurately recognizing medical terminology. To this end, we propose MedSpeak, a novel knowledge graph-aided ASR error correction framework that refines noisy transcripts and improves downstream answer prediction by leveraging both semantic relationships and phonetic information encoded in a medical knowledge graph, together with the reasoning power of LLMs. Comprehensive experimental results on benchmarks demonstrate that MedSpeak significantly improves the accuracy of medical term recognition and overall medical SQA performance, establishing MedSpeak as a state-of-the-art solution for medical SQA. The code is available at https://github.com/RainieLLM/MedSpeak."
+        }
+      ]
+    },
+    "arxiv_meta": {
+      "query": "(ti:meta OR ti:\"test-time\") AND all:\"link prediction\"",
+      "url": "https://export.arxiv.org/api/query?search_query=%28ti%3Ameta+OR+ti%3A%22test-time%22%29+AND+all%3A%22link+prediction%22&start=0&max_results=30&sortBy=submittedDate&sortOrder=descending",
+      "status": 200,
+      "rows": [
+        {
+          "title": "Mochi: Aligning Pre-training and Inference for Efficient Graph Foundation Models via Meta-Learning",
+          "id": "http://arxiv.org/abs/2604.22031v2",
+          "published": "2026-04-23T19:46:45Z",
+          "abstract": "We propose Mochi, a Graph Foundation Model that addresses task unification and training efficiency by adopting a meta-learning based training framework. Prior models pre-train with reconstruction-based objectives such as link prediction, and assume that the resulting representations can be aligned with downstream tasks through a separate unification step such as class prototypes. We demonstrate through synthetic and real-world experiments that this procedure, while simple and intuitive, has limitations that directly affect downstream task performance. To address these limitations, Mochi pre-trains on few-shot episodes that mirror the downstream evaluation protocol, aligning the training objective with inference rather than relying on a post-hoc unification step. We show that Mochi, along with its more powerful variant Mochi++, achieves competitive or superior performance compared to existing Graph Foundation Models across 25 real-world graph datasets spanning node classification, link prediction, and graph classification, while requiring 8$\\sim$27 times less training time than the strongest baseline."
+        },
+        {
+          "title": "Meta-learning optimizes predictions of missing links in real-world networks",
+          "id": "http://arxiv.org/abs/2508.09069v1",
+          "published": "2025-08-12T16:41:16Z",
+          "abstract": "Relational data are ubiquitous in real-world data applications, e.g., in social network analysis or biological modeling, but networks are nearly always incompletely observed. The state-of-the-art for predicting missing links in the hard case of a network without node attributes uses model stacking or neural network techniques. It remains unknown which approach is best, and whether or how the best choice of algorithm depends on the input network's characteristics. We answer these questions systematically using a large, structurally diverse benchmark of 550 real-world networks under two standard accuracy measures (AUC and Top-k), comparing four stacking algorithms with 42 topological link predictors, two of which we introduce here, and two graph neural network algorithms. We show that no algorithm is best across all input networks, all algorithms perform well on most social networks, and few perform well on economic and biological networks. Overall, model stacking with a random forest is both highly scalable and surpasses on AUC or is competitive with graph neural networks on Top-k accuracy. But, algorithm performance depends strongly on network characteristics like the degree distribution, triangle density, and degree assortativity. We introduce a meta-learning algorithm that exploits this variability to optimize link predictions for individual networks by selecting the best algorithm to apply, which we show outperforms all state-of-the-art algorithms and scales to large networks."
+        },
+        {
+          "title": "TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction",
+          "id": "http://arxiv.org/abs/2506.00453v1",
+          "published": "2025-05-31T08:15:23Z",
+          "abstract": "Dynamic graphs evolve continuously, presenting challenges for traditional graph learning due to their changing structures and temporal dependencies. Recent advancements have shown potential in addressing these challenges by developing suitable meta-learning-based dynamic graph neural network models. However, most meta-learning approaches for dynamic graphs rely on fixed weight update parameters, neglecting the essential intrinsic complex high-order topological information of dynamically evolving graphs. We have designed Dowker Zigzag Persistence (DZP), an efficient and stable dynamic graph persistent homology representation method based on Dowker complex and zigzag persistence, to capture the high-order features of dynamic graphs. Armed with the DZP ideas, we propose TMetaNet, a new meta-learning parameter update model based on dynamic topological features. By utilizing the distances between high-order topological features, TMetaNet enables more effective adaptation across snapshots. Experiments on real-world datasets demonstrate TMetaNet's state-of-the-art performance and resilience to graph noise, illustrating its high potential for meta-learning and dynamic graph analysis. Our code is available at https://github.com/Lihaogx/TMetaNet."
+        },
+        {
+          "title": "Exploiting Meta-Learning-based Poisoning Attacks for Graph Link Prediction",
+          "id": "http://arxiv.org/abs/2504.06492v2",
+          "published": "2025-04-08T23:36:29Z",
+          "abstract": "Link prediction in graph data uses various algorithms and Graph Nerual Network (GNN) models to predict potential relationships between graph nodes. These techniques have found widespread use in numerous real-world applications, including recommendation systems, community/social networks, and biological structures. However, recent research has highlighted the vulnerability of GNN models to adversarial attacks, such as poisoning and evasion attacks. Addressing the vulnerability of GNN models is crucial to ensure stable and robust performance in GNN applications. Although many works have focused on enhancing the robustness of node classification on GNN models, the robustness of link prediction has received less attention. To bridge this gap, this article introduces an unweighted graph poisoning attack that leverages meta-learning with weighted scheme strategies to degrade the link prediction performance of GNNs. We conducted comprehensive experiments on diverse datasets across multiple link prediction applications to evaluate the proposed method and its parameters, comparing it with existing approaches under similar conditions. Our results demonstrate that our approach significantly reduces link prediction performance and consistently outperforms other state-of-the-art baselines."
+        },
+        {
+          "title": "HetFS: A Method for Fast Similarity Search with Ad-hoc Meta-paths on Heterogeneous Information Networks",
+          "id": "http://arxiv.org/abs/2502.16288v1",
+          "published": "2025-02-22T16:36:41Z",
+          "abstract": "Numerous real-world information networks form Heterogeneous Information Networks (HINs) with diverse objects and relations represented as nodes and edges in heterogeneous graphs. Similarity between nodes quantifies how closely two nodes resemble each other, mainly depending on the similarity of the nodes they are connected to, recursively. Users may be interested in only specific types of connections in the similarity definition, represented as meta-paths, i.e., a sequence of node and edge types. Existing Heterogeneous Graph Neural Network (HGNN)-based similarity search methods may accommodate meta-paths, but require retraining for different meta-paths. Conversely, existing path-based similarity search methods may switch flexibly between meta-paths but often suffer from lower accuracy, as they rely solely on path information. This paper proposes HetFS, a Fast Similarity method for ad-hoc queries with user-given meta-paths on Heterogeneous information networks. HetFS provides similarity results based on path information that satisfies the meta-path restriction, as well as node content. Extensive experiments demonstrate the effectiveness and efficiency of HetFS in addressing ad-hoc queries, outperforming state-of-the-art HGNNs and path-based approaches, and showing strong performance in downstream applications, including link prediction, node classification, and clustering."
+        },
+        {
+          "title": "FHGE: A Fast Heterogeneous Graph Embedding with Ad-hoc Meta-paths",
+          "id": "http://arxiv.org/abs/2502.16281v1",
+          "published": "2025-02-22T16:26:18Z",
+          "abstract": "Graph neural networks (GNNs) have emerged as the state of the art for a variety of graph-related tasks and have been widely used in Heterogeneous Graphs (HetGs), where meta-paths help encode specific semantics between various node types. Despite the revolutionary representation capabilities of existing heterogeneous GNNs (HGNNs) due to their focus on improving the effectiveness of heterogeneity capturing, the huge training costs hinder their practical deployment in real-world scenarios that frequently require handling ad-hoc queries with user-defined meta-paths. To address this, we propose FHGE, a Fast Heterogeneous Graph Embedding designed for efficient, retraining-free generation of meta-path-guided graph embeddings. The key design of the proposed framework is two-fold: segmentation and reconstruction modules. It employs Meta-Path Units (MPUs) to segment the graph into local and global components, enabling swift integration of node embeddings from relevant MPUs during reconstruction and allowing quick adaptation to specific meta-paths. In addition, a dual attention mechanism is applied to enhance semantics capturing. Extensive experiments across diverse datasets demonstrate the effectiveness and efficiency of FHGE in generating meta-path-guided graph embeddings and downstream tasks, such as link prediction and node classification, highlighting its significant advantages for real-time graph analysis in ad-hoc queries."
+        },
+        {
+          "title": "Learn to Unlearn: Meta-Learning-Based Knowledge Graph Embedding Unlearning",
+          "id": "http://arxiv.org/abs/2412.00881v1",
+          "published": "2024-12-01T16:43:04Z",
+          "abstract": "Knowledge graph (KG) embedding methods map entities and relations into continuous vector spaces, improving performance in tasks like link prediction and question answering. With rising privacy concerns, machine unlearning (MU) has emerged as a critical AI technology, enabling models to eliminate the influence of specific data. Existing MU approaches often rely on data obfuscation and adjustments to training loss but lack generalization across unlearning tasks. This paper introduces MetaEU, a Meta-Learning-Based Knowledge Graph Embedding Unlearning framework. MetaEU leverages meta-learning to unlearn specific embeddings, mitigating their impact while preserving model performance on remaining data. Experiments on benchmark datasets demonstrate its effectiveness in KG embedding unlearning."
+        },
+        {
+          "title": "HeteroSample: Meta-path Guided Sampling for Heterogeneous Graph Representation Learning",
+          "id": "http://arxiv.org/abs/2411.07022v2",
+          "published": "2024-11-11T14:27:30Z",
+          "abstract": "The rapid expansion of Internet of Things (IoT) has resulted in vast, heterogeneous graphs that capture complex interactions among devices, sensors, and systems. Efficient analysis of these graphs is critical for deriving insights in IoT scenarios such as smart cities, industrial IoT, and intelligent transportation systems. However, the scale and diversity of IoT-generated data present significant challenges, and existing methods often struggle with preserving the structural integrity and semantic richness of these complex graphs. Many current approaches fail to maintain the balance between computational efficiency and the quality of the insights generated, leading to potential loss of critical information necessary for accurate decision-making in IoT applications. We introduce HeteroSample, a novel sampling method designed to address these challenges by preserving the structural integrity, node and edge type distributions, and semantic patterns of IoT-related graphs. HeteroSample works by incorporating the novel top-leader selection, balanced neighborhood expansion, and meta-path guided sampling strategies. The key idea is to leverage the inherent heterogeneous structure and semantic relationships encoded by meta-paths to guide the sampling process. This approach ensures that the resulting subgraphs are representative of the original data while significantly reducing computational overhead. Extensive experiments demonstrate that HeteroSample outperforms state-of-the-art methods, achieving up to 15% higher F1 scores in tasks such as link prediction and node classification, while reducing runtime by 20%.These advantages make HeteroSample a transformative tool for scalable and accurate IoT applications, enabling more effective and efficient analysis of complex IoT systems, ultimately driving advancements in smart cities, industrial IoT, and beyond."
+        }
+      ]
+    },
+    "crossref_inference": {
+      "query": "link prediction graph inference residual correction Gaussian processes",
+      "url": "https://api.crossref.org/works?query=link+prediction+graph+inference+residual+correction+Gaussian+processes&rows=20&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-09-16",
+      "status": 200,
+      "rows": [
+        {
+          "title": "Inference for Processes Driven by Gaussian Processes",
+          "doi": "10.1142/9789819810796_0007",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                7,
+                16
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Inference of Time–Varying Graph Topologies via Gaussian Processes",
+          "doi": "10.1109/icassp48485.2024.10447631",
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                4,
+                14
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Cascaded Gaussian Process Residual Correction for Remaining Useful Life Prediction of Lithium-Ion Batteries",
+          "doi": "10.1109/isssr69973.2026.00033",
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                5
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Correction: Inverse link prediction with graph convolutional networks for knowledge-preserving sparsification in cheminformatics",
+          "doi": "10.1186/s40537-025-01263-x",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                8,
+                20
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Statistical Inference for Operator-Valued Graph Processes",
+          "doi": "10.2139/ssrn.6657538",
+          "published": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "abstract": "<jats:p>We develop an operator-algebraic framework for inference on dynamic weighted networks, treating each network as a bounded self-adjoint operator. A three-theorem stack establishes structure-preserving eigendecomposition of the covariance super-operator, spectral equivariance together with reference-anchored sensitivity to eigenspace alignment, and local asymptotic power separation against O (m)-invariant summaries of segment sample means. A spectral-gap hypothesis underwrites all estimation and inferential rates through Kato-contour perturbation expansion. Four procedures are organised around two spectral pipelines: a mean-eigenprojector pipeline for spectral-projection change-point detection and reference-anchored classification, and a covariance Karhunen-Loève score pipeline for projected operator-valued prediction; a multi-scale diffusiondistance anomaly monitor operates on the heat-kernel functional calculus. Simulations exhibit a phase transition in the spectral-projection statistic's power against principal-witness perturbations while scalar spectral-invariant baselines remain near nominal size in the moderate-signal regime. On the monthly trajectory of the United States domestic airline network from 1995 to 2019, the four procedures yield distinct signatures for the September 2001 shock and the 2008 merger wave; the projected operator-valued prediction regions provide calibrated score-space coverage on the leading-J KL-score projection of the holdout, complementing simultaneous-edge ARIMA baselines that target a higher-dimensional inferential object.</jats:p>"
+        },
+        {
+          "title": "Adaptive Inference Neuro-Fuzzy Driven Embedding Fusion for Improving Link Prediction Through Graph Neural Network",
+          "doi": "10.1142/s0218488526500340",
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                28
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Link prediction has long been regarded as a fundamental problem in networked data analysis and mining, owing to its importance in a wide range of real-world applications, including social network analysis, recommendation systems, and biological network modeling. Over the years, numerous approaches have been proposed to address this problem, ranging from similarity-based heuristics and probabilistic models to dimensionality reduction and deep learning (DL)–based representation learning techniques. These methods aim to capture latent relational patterns among nodes in order to infer missing or potential links. Recently, graph neural networks (GNNs) have emerged as a powerful DL paradigm for graph-structured data representation learning and have demonstrated strong performance in complex link prediction tasks. In particular, multi-view GNN-based approaches have gained increasing attention by integrating different GNN architectures to capture complementary structural perspectives, such as local neighborhood proximity and global graph topology. This strategy enables the learning of richer node embeddings and improves task-driven prediction performance. However, the integration of multiple GNN layers and architectures often introduces feature uncertainty and noise amplification, which can degrade model stability and predictive accuracy. To address these challenges, this paper proposes AFGNN, a novel framework that integrates adaptive neuro-fuzzy inference with multi-view graph neural learning. By leveraging a robust fuzzy neural architecture with an adaptive inference engine, our proposed AFGNN model dynamically regulates the fusion of view-specific embeddings, enhances reasoning capability, and suppresses uncertainty during representation learning. Extensive experiments on benchmark graph datasets demonstrate the effectiveness and superiority of AFGNN compared with state-of-the-art GNN-based link prediction models.</jats:p>"
+        },
+        {
+          "title": "Prediction of sunspot number using Gaussian processes",
+          "doi": "10.5194/egusphere-egu24-4181",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                1,
+                20
+              ]
+            ]
+          },
+          "abstract": "<jats:p>The solar activity has various direct and indirect impacts on human activities. During periods of high solar activity, the harmful effects triggered by solar variability are maximized. On a decadal to multidecadal time scale, solar variability exhibits a main cycle of around 11 years known as the Schwabe solar cycle, leading to a solar maximum approximately every 11 years. The most commonly used variable for measuring solar activity is the sunspot number. Over the last few decades, numerous techniques have been employed to predict the time evolution of the solar cycle for subsequent years. Recently, there has been a growing number of studies utilizing machine learning methods to predict solar cycles. One such method is the Gaussian process, which is well-suited for working with small amounts of data and can also provide an uncertainty measure for predictions. In this study, the Gaussian process technique is employed to predict the sunspot number between 2024 and 2050. The dataset used to train and validate the model comprises monthly averages of sunspots relative to the period 1700-2023. According to the results, the current solar cycle, currently at its maximum, is anticipated to last until 2030. The subsequent solar maximum is projected to occur around the end of 2033, with an estimated maximum sunspot number of approximately 150. If this prediction holds true, the next solar cycle's maximum will resemble that observed in the current one.</jats:p>"
+        },
+        {
+          "title": "noisysbmGGM: Noisy Stochastic Block Model for GGM Inference",
+          "doi": "10.32614/cran.package.noisysbmggm",
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                7
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "CGLE: Class-Label Graph Link Estimator for Link Prediction",
+          "doi": "10.1109/icdm65498.2025.00067",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                11,
+                12
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "RGLRE: Residual Graph Learning for circRNA-miRNA Interaction Prediction with Role-aware graph Embeddings",
+          "doi": "10.21203/rs.3.rs-7117771/v1",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                7,
+                24
+              ]
+            ]
+          },
+          "abstract": "<title>Abstract</title>\n                <p>Circular RNAs (circRNAs) and microRNAs (miRNAs) are key regulators of gene expression, and their interactions (CMIs) are involved in many biological processes and diseases. Nevertheless, CMIs are still hard to validate experimentally because of limitations in resources, which is why solid computational models are required to obtain accurate CMIs prediction. This paper proposes a new Residual Graph Learning framework (RGLRE) for CMIs prediction using Role-aware Graph Embeddings. RGLRE combines sequence-based features extracted using DNABERT that encodes the nucleotide level patterns, and topological embeddings produced by Role2Vec which maintains the functional roles of the nodes in the interaction network. It employs a residual graph neural network that uses skip connections and batch normalization to suppress information loss and improve feature learning. RGLRE framework is evaluated on the benchmark datasets CMI-9905 and CMI-9589 using 5-fold cross-validation. It demonstrates superior performance compared to existing methods., with an accuracy of 0.9118 (CMI-9905) and 0.9269 (CMI-9589), alongside high AUROC (0.9650 and 0.9755) and AUPR (0.9791 and 0.9889) on the two benchmark datasets respectively. Comparative analysis shows that RGLRE outperforms current methods including boosting and graph-based deep learning methods. The framework's modular design and scalability make it a promising tool for broader biological interaction prediction tasks.</p>"
+        },
+        {
+          "title": "Probabilistic Load Forecasting via CEEMDAN-Enhanced Multi-Scale Residual Correction and Adaptive Conformal Inference⋆",
+          "doi": "10.2139/ssrn.6113908",
+          "published": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Link prediction heuristics for temporal graph benchmark",
+          "doi": "10.14428/esann/2024.es2024-141",
+          "published": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Cone: A Common Neighbor-Aware Link Weight Prediction Method with Simplified Graph Transformer",
+          "doi": "10.2139/ssrn.4826325",
+          "published": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Higher-Order Structure-Based Variational Graph Auto-Encoder for Link Prediction",
+          "doi": "10.2139/ssrn.4965423",
+          "published": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Defending Against Link Prediction by Residual Path Entropy Maximization",
+          "doi": "10.2139/ssrn.5206936",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Enhancing Molecular Property Prediction with Gaussian-Enhanced Graph Matching",
+          "doi": "10.21203/rs.3.rs-4137400/v1",
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                25
+              ]
+            ]
+          },
+          "abstract": "<title>Abstract</title>\n        <p>In recent years, graph neural network technology has revolutionized molecular graph matching methods, offering new opportunities for drug discovery. Central to this research are two key steps: latent representation learning of molecules and molecular graph matching. However, the challenge lies in effectively capturing and expressing the intricate features of molecular graphs, given their strict chemical rules and high structural complexity. To address this, we propose a gaussian-enhanced graph matching method. This approach combines a dual-channel message-passing neural network, based in the GIN algorithm, to encode both nodes and edges of molecules, enabling precise representations of molecular graphs. Additionally, an end-to-end graph similarity calculation model is introduced, assessing similarity at both the node and global levels. By integrating these evaluations, we obtain a comprehensive similarity score for molecular graph pairs. This method enhances the accuracy and interpretability of molecular structural similarity. Experimental results demonstrate the superior performance of our model compared to state-of-the-art baseline methods, marking a significant step forward in molecular property prediction.</p>"
+        },
+        {
+          "title": "Balance-Aware Prototypical Graph Transformer for Signed Bipartite Link Prediction",
+          "doi": "10.2139/ssrn.7355395",
+          "published": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Signed bipartite link-sign prediction aims to infer the polarity of candidate interactions between two disjoint node sets from observed positive and negative relations. Existing methods face three key challenges in this setting: conventional triangle-based structural balance is incompatible with bipartite topology, node-centric aggregation may obscure interaction-specific structural evidence, and severe sign imbalance is often accompanied by substantial intra-class heterogeneity. To address these challenges, we propose a Balance-Aware Prototypical Graph Transformer (BAPGT), which formulates signed bipartite link-sign prediction as query-conditioned interaction-level reasoning. BAPGT represents observed interactions as signed edge tokens and introduces each candidate interaction as an unknown-sign query token. It then retrieves a bounded query-relevant context without explicitly constructing a complete line graph. To adapt structural balance to bipartite topology, BAPGT extracts query-specific polarity evidence from odd-length signed paths and local compatibility evidence from signed butterflies, i.e., four-node bipartite motifs, and incorporates both signals into sparse Transformer attention. Furthermore, a multi-prototype sign decoder captures heterogeneous patterns within positive and negative interactions, while a confidence-weighted balanced-path consistency objective reduces the influence of weak or contradictory structural evidence. Extensive experiments on five benchmark signed bipartite datasets demonstrate that BAPGT consistently outperforms representative unsigned graph, signed graph, signed bipartite graph, and Transformer-based baselines. Ablation, structural, sparsity, and scalability analyses further verify the effectiveness and efficiency of the proposed components.</jats:p>"
+        },
+        {
+          "title": "Community Knowledge Graph Abstraction for Enhanced Link Prediction: A Study on Pubmed Knowledge Graph",
+          "doi": "10.2139/ssrn.4795319",
+          "published": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Helpormer: Heterogeneous Graph Transformer for Link Prediction",
+          "doi": "10.2139/ssrn.5297031",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Inference at the Data’s Edge: Gaussian Processes for Estimation and Inference in the Face of Extrapolation Uncertainty",
+          "doi": "10.1017/pan.2026.10032",
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                10
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>\n                    Many inferential tasks involve fitting models to observed data and predicting outcomes at new covariate values, requiring interpolation or extrapolation. Conventional methods select a single best-fitting model, discarding fits that were similarly plausible in-sample but would yield sharply different predictions out-of-sample. Gaussian processes (GPs) offer a principled alternative. Rather than committing to one conditional expectation function, GPs deliver a posterior distribution over outcomes at any covariate value. This posterior effectively retains the range of models consistent with the data, widening uncertainty intervals where extrapolation magnifies divergence. In this way, the GP’s uncertainty estimates reflect the implications of extrapolation on our predictions, helping to tame the “dangers of extreme counterfactuals” (King and Zeng, 2006). The approach requires (i) specifying a covariance function linking outcome similarity to covariate similarity and (ii) assuming Gaussian noise around the conditional expectation. We provide an accessible introduction to GPs with emphasis on this property, along with a simple, automated procedure for hyperparameter selection implemented in the R package\n                    <jats:monospace>gpss</jats:monospace>\n                    . We illustrate the value of GPs for capturing counterfactual uncertainty in three settings: (i) treatment effect estimation with poor overlap, (ii) interrupted time series requiring extrapolation beyond pre-intervention data, and (iii) regression discontinuity designs where estimates hinge on boundary behavior.\n                  </jats:p>"
+        }
+      ]
+    },
+    "crossref_uncertainty": {
+      "query": "link prediction conditional neural process uncertainty kernel 2025",
+      "url": "https://api.crossref.org/works?query=link+prediction+conditional+neural+process+uncertainty+kernel+2025&rows=20&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-09-16",
+      "status": 200,
+      "rows": [
+        {
+          "title": "Conditional Distribution Compression via the Kernel Conditional Mean Embedding",
+          "doi": "10.52202/085713-2665",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Practical Kernel Selection for Kernel-based Conditional Independence Test",
+          "doi": "10.52202/085713-1650",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "A Memory-Augmented Conditional Neural Process Model for Traffic Prediction",
+          "doi": "10.2139/ssrn.4915293",
+          "published": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Prediction of Blade Vibration Response with Uncertainty Propagation Using Physics-Informed Neural Networks and Physics-Informed Gaussian Process Regression",
+          "doi": "10.2139/ssrn.5357487",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Hybrid Neural PDE and Conditional GAN Framework for Sparse Co₂ Plume Prediction.",
+          "doi": "10.31223/x5cb4s",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                5
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Digital twin architectures for geological carbon storage demand uncertainty-aware surrogates capable of rapid plume forecasting under extreme data scarcity. Traditional physics-based simulators are computationally expensive; pure data-driven models lack principled uncertainty quantification. This work presents a hybrid Neural Posterior Density Estimation–Conditional GAN (NPDE-CCGAN) framework that integrates physics-aware loss weighting, symmetry-based data augmentation, and amortized Bayesian inference to enable robust CO₂ saturation prediction on 99.70% zero-inflated monitoring data. Applied to Sleipner, the framework achieves R² = +0.007269 across nine test layers, a 297-point improvement from baseline collapse (R² = -297.0), and demonstrates generalization via per-sample R² ranging +0.0070 to +0.0149. The approach is computationally efficient (12 hours CPU training, seconds per inference) and enables Monte Carlo uncertainty quantification for real-time CCS risk assessment.</jats:p>"
+        },
+        {
+          "title": "Deep Graph Kernel Learning for Material and Atomic Level      Uncertainty Quantification in Adsorption Energy Prediction",
+          "doi": "10.26434/chemrxiv-2025-pfng2-v2",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                21
+              ]
+            ]
+          },
+          "abstract": "<jats:p>For high-throughput catalytic material discovery, Graph Neural Networks (GNNs) provide an efficient method for predicting the adsorption energies of adsorbates on transition metal surfaces. While GNNs perform well on in-domain prediction tasks, they often struggle to generalize to out-of-domain scenarios. This limitation necessitates a robust method for quantifying prediction uncertainty to enable informed catalyst discovery.  Gaussian Processes (GPs) offer a principled approach to uncertainty quantification within a Bayesian framework. However, traditional implementations suffer from key challenges, including cubic time complexity, high memory requirements, and an inability to learn meaningful representations from graph structures.  To address these issues, we introduce Deep Graph Kernel Learning (DGKL), a scalable framework that integrates a GNN backbone with sparse variational Gaussian Processes (SVGP) for uncertainty quantification in adsorption energy prediction. We benchmark DGKL against state-of-the-art methods such as ensemble/query-by-committee and Monte Carlo dropout, using both ranking-based metrics (e.g., Spearman's rank correlation, negative log-likelihood, miscalibration area) and error-based metrics (e.g., RMSE vs. RMV and error vs. standard deviation plots).  DGKL consistently outperforms existing methods across all evaluation metrics while maintaining computational efficiency and scalability. For example, the correlation coefficient between RMSE and RMV for DGKL ranges from 0.98 to 1.00, slightly exceeding the next best method (ensemble learning). More significantly, the expected normalized calibration error (ENCE) for DGKL ranges from 0.06 to 0.15 across different datasets and GNN backbones, while the ensemble method exhibits a wider range of 0.36 to 1.55.  DGKL can be incorporated into an active learning framework to iteratively explore catalytic material space, guiding the discovery of novel active catalysts. Additionally, we propose a variation of DGKL capable of predicting atomic-level uncertainty, a feature absent in existing methods. This enables fine-grained insights into out-of-domain data and provides a pathway for enhancing predictive model performance.</jats:p>"
+        },
+        {
+          "title": "Deep Graph Kernel Learning for Material and Atomic Level      Uncertainty Quantification in Adsorption Energy Prediction",
+          "doi": "10.26434/chemrxiv-2025-pfng2",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                14
+              ]
+            ]
+          },
+          "abstract": "<jats:p>For high-throughput catalytic material discovery, Graph Neural Networks (GNNs) provide an efficient method for predicting the adsorption energies of adsorbates on transition metal surfaces. While GNNs perform well on in-domain prediction tasks, they often struggle to generalize to out-of-domain scenarios. This limitation necessitates a robust method for quantifying prediction uncertainty to enable informed catalyst discovery.  Gaussian Processes (GPs) offer a principled approach to uncertainty quantification within a Bayesian framework. However, traditional implementations suffer from key challenges, including cubic time complexity, high memory requirements, and an inability to learn meaningful representations from graph structures.  To address these issues, we introduce Deep Graph Kernel Learning (DGKL), a scalable framework that integrates a GNN backbone with sparse variational Gaussian Processes (SVGP) for uncertainty quantification in adsorption energy prediction. We benchmark DGKL against state-of-the-art methods such as ensemble/query-by-committee and Monte Carlo dropout, using both ranking-based metrics (e.g., Spearman's rank correlation, negative log-likelihood, miscalibration area) and error-based metrics (e.g., RMSE vs. RMV and error vs. standard deviation plots).  DGKL consistently outperforms existing methods across all evaluation metrics while maintaining computational efficiency and scalability. For example, the correlation coefficient between RMSE and RMV for DGKL ranges from 0.98 to 1.00, slightly exceeding the next best method (ensemble learning). More significantly, the expected normalized calibration error (ENCE) for DGKL ranges from 0.06 to 0.15 across different datasets and GNN backbones, while the ensemble method exhibits a wider range of 0.36 to 1.55.  DGKL can be incorporated into an active learning framework to iteratively explore catalytic material space, guiding the discovery of novel active catalysts. Additionally, we propose a variation of DGKL capable of predicting atomic-level uncertainty, a feature absent in existing methods. This enables fine-grained insights into out-of-domain data and provides a pathway for enhancing predictive model performance.</jats:p>"
+        },
+        {
+          "title": "Sample-Conditional Coverage in Split-Conformal Prediction",
+          "doi": "10.52202/085713-2903",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Uncertainty Quantification with the Empirical Neural Tangent Kernel",
+          "doi": "10.52202/085713-4983",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Kernel conditional tests from learning-theoretic bounds",
+          "doi": "10.52202/085713-1667",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Improving Link Prediction Algorithms Based on Graph Neural Networks",
+          "doi": "10.1109/nnice64954.2025.11063835",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                1,
+                10
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Conditional Shift-Robust Conformal Prediction for Graph Neural Network",
+          "doi": "10.2139/ssrn.4934720",
+          "published": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Conditional Shift-Robust Conformal Prediction for Graph Neural Network",
+          "doi": "10.2139/ssrn.4862107",
+          "published": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Multi-task neural diffusion processes for uncertainty-quantified wind power prediction",
+          "doi": "10.2139/ssrn.5737465",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Pqkelp: Projected Quantum Kernel Embedding Based Link Prediction in Dynamic Networks",
+          "doi": "10.2139/ssrn.4881694",
+          "published": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Prediction and uncertainty quantification of coefficient of consolidation using multi-kernel Bayesian Gaussian process regression: An efficient and interpretable machine learning approach",
+          "doi": "10.2139/ssrn.5600934",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Uncertainty-Aware Prediction and Generation of Spinodal Decomposition Microstructures via Conditional Variational Autoencoders",
+          "doi": "10.2139/ssrn.6303741",
+          "published": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Spinodal decomposition can give rise to distinct microstructural realizations, even with nominally identical processing conditions, due to the intrinsic stochasticity of the initial microstructures. As a result, deterministic process–structure surrogates that predict a single outcome collapse physically meaningful variability and provide limited insight for uncertainty-aware design. In this work, we develop a probabilistic surrogate modeling framework that targets the full conditional distribution of microstructure descriptors rather than their mean. Microstructures generated by elastochemical phase-field simulations are quantified using two-point spatial statistics and reduced via principal component analysis to obtain a compact, physically interpretable representation. A conditional variational autoencoder, conditioned on 18 simulation (process) parameters, is then trained to model the conditional distribution of principle components. Model architecture and regularization are selected using multi-objective Bayesian optimization to balance reconstruction fidelity and latent-space regularization. The resulting surrogate accurately reconstructs reduced microstructure descriptors, generalizes robustly to held-out data, and reproduces the distributional structure of principal component scores through both posterior predictive and generative sampling. Conditional ensemble predictions recover structured microstructural variability at fixed processing conditions, while modifying the processing conditions reveals physically consistent process–structure trends and associated uncertainty without additional high-fidelity simulations. These results demonstrate that probabilistic framing is important for surrogate modeling of stochastic process–structure relationships and provide a scalable foundation for uncertainty-aware microstructure design and exploration.</jats:p>"
+        },
+        {
+          "title": "TopoLink: Topology-enhanced Graph Transformer with Extended Persistent Homology For Link Prediction",
+          "doi": "10.1109/ijcnn64981.2025.11228419",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                30
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "Uncertainty-aware stacked physics-informed neural networks for reservoir permeability prediction in deep coals",
+          "doi": "10.2139/ssrn.5964580",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "abstract": ""
+        },
+        {
+          "title": "A Two-Stage Deep Learning Framework for Uncertainty-Aware Forecasting and Conditional Process Optimization Toward Sustainable Smart Manufacturing",
+          "doi": "10.20944/preprints202508.0377.v1",
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                8,
+                6
+              ]
+            ]
+          },
+          "abstract": "<jats:p>The rise of Industry 4.0 has made robust forecasting and process control central to achieving sustainable smart manufacturing. While deep learning improves prediction accuracy, most models lack uncertainty quantification and process control—both critical for minimizing waste and optimizing energy use. Generative models are promising but underused in real-world manufacturing due to data and integration challenges. To address this, we propose a unified two-stage deep learning framework for real-time simulation and adaptive process control in dynamic manufacturing environments. The first stage leverages DeepAR and Monte Carlo Dropout to produce both accurate point predictions and calibrated uncertainty intervals. The second stage introduces a novel LSTM-based Conditional Variational Autoencoder (LSTM-CVAE) that reconstructs temporally coherent multivariate input sequences conditioned on target specifications. Then a two-stage filtering mechanism ensures the plausibility of generated inputs and their predictive alignment with operational goals. Experiments on two real-time industrial datasets (sugar and bioprocessing) and a public benchmark demonstrate average improvements of up to 35.7%, 21.0%, 24.6% in Balanced MAE, and 21.3%, 9.8%, 25.2% in Comprehensive Uncertainty Score metrics. The framework remains robust under batch-wise shuffling, supporting real-world deployment. Overall, it enables interpretable, forecast-aware, target-driven process control that improves resource efficiency and product cost—advancing sustainable manufacturing.</jats:p>"
+        }
+      ]
+    }
+  }
+}

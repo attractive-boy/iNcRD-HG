@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/q2bgtjqkIkpb5UFBit2Jj/X5Iw8</id>
+  <title>arXiv Query: search_query=&amp;id_list=2506.10967v2,2305.18417v3,2403.11408v1&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-16T05:14:53Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2506.10967v2,2305.18417v3,2403.11408v1" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2403.11408v1</id>
+    <title>Layer-diverse Negative Sampling for Graph Neural Networks</title>
+    <updated>2024-03-18T01:48:50Z</updated>
+    <link href="https://arxiv.org/abs/2403.11408v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.11408v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks (GNNs) are a powerful solution for various structure learning applications due to their strong representation capabilities for graph data. However, traditional GNNs, relying on message-passing mechanisms that gather information exclusively from first-order neighbours (known as positive samples), can lead to issues such as over-smoothing and over-squashing. To mitigate these issues, we propose a layer-diverse negative sampling method for message-passing propagation. This method employs a sampling matrix within a determinantal point process, which transforms the candidate set into a space and selectively samples from this space to generate negative samples. To further enhance the diversity of the negative samples during each forward pass, we develop a space-squeezing method to achieve layer-wise diversity in multi-layer GNNs. Experiments on various real-world graph datasets demonstrate the effectiveness of our approach in improving the diversity of negative samples and overall learning performance. Moreover, adding negative samples dynamically changes the graph's topology, thus with the strong potential to improve the expressiveness of GNNs and reduce the risk of over-squashing.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-18T01:48:50Z</published>
+    <arxiv:comment>Published in Transactions on Machine Learning Research (03/2024)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Wei Duan</name>
+    </author>
+    <author>
+      <name>Jie Lu</name>
+    </author>
+    <author>
+      <name>Yu Guang Wang</name>
+    </author>
+    <author>
+      <name>Junyu Xuan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.18417v3</id>
+    <title>Determinantal Point Process Attention Over Grid Cell Code Supports Out of Distribution Generalization</title>
+    <updated>2024-01-23T10:50:06Z</updated>
+    <link href="https://arxiv.org/abs/2305.18417v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.18417v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep neural networks have made tremendous gains in emulating human-like intelligence, and have been used increasingly as ways of understanding how the brain may solve the complex computational problems on which this relies. However, these still fall short of, and therefore fail to provide insight into how the brain supports strong forms of generalization of which humans are capable. One such case is out-of-distribution (OOD) generalization-successful performance on test examples that lie outside the distribution of the training set. Here, we identify properties of processing in the brain that may contribute to this ability. We describe a two-part algorithm that draws on specific features of neural computation to achieve OOD generalization, and provide a proof of concept by evaluating performance on two challenging cognitive tasks. First we draw on the fact that the mammalian brain represents metric spaces using grid cell code (e.g., in the entorhinal cortex): abstract representations of relational structure, organized in recurring motifs that cover the representational space. Second, we propose an attentional mechanism that operates over the grid cell code using Determinantal Point Process (DPP), that we call DPP attention (DPP-A) -- a transformation that ensures maximum sparseness in the coverage of that space. We show that a loss function that combines standard task-optimized error with DPP-A can exploit the recurring motifs in the grid cell code, and can be integrated with common architectures to achieve strong OOD generalization performance on analogy and arithmetic tasks. This provides both an interpretation of how the grid cell code in the mammalian brain may contribute to generalization performance, and at the same time a potential means for improving such capabilities in artificial neural networks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-28T19:07:55Z</published>
+    <arxiv:comment>29 pages (including Appendix), 21 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Shanka Subhra Mondal</name>
+    </author>
+    <author>
+      <name>Steven Frankland</name>
+    </author>
+    <author>
+      <name>Taylor Webb</name>
+    </author>
+    <author>
+      <name>Jonathan D. Cohen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.10967v2</id>
+    <title>Beyond Attention or Similarity: Maximizing Conditional Diversity for Token Pruning in MLLMs</title>
+    <updated>2025-07-01T08:19:08Z</updated>
+    <link href="https://arxiv.org/abs/2506.10967v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.10967v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In multimodal large language models (MLLMs), the length of input visual tokens is often significantly greater than that of their textual counterparts, leading to a high inference cost. Many works aim to address this issue by removing redundant visual tokens. However, current approaches either rely on attention-based pruning, which retains numerous duplicate tokens, or use similarity-based pruning, overlooking the instruction relevance, consequently causing suboptimal performance. In this paper, we go beyond attention or similarity by proposing a novel visual token pruning method named CDPruner, which maximizes the conditional diversity of retained tokens. We first define the conditional similarity between visual tokens conditioned on the instruction, and then reformulate the token pruning problem with determinantal point process (DPP) to maximize the conditional diversity of the selected subset. The proposed CDPruner is training-free and model-agnostic, allowing easy application to various MLLMs. Extensive experiments across diverse MLLMs show that CDPruner establishes new state-of-the-art on various vision-language benchmarks. By maximizing conditional diversity through DPP, the selected subset better represents the input images while closely adhering to user instructions, thereby preserving strong performance even with high reduction ratios. When applied to LLaVA, CDPruner reduces FLOPs by 95\% and CUDA latency by 78\%, while maintaining 94\% of the original accuracy. Our code is available at https://github.com/Theia-4869/CDPruner.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-12T17:59:09Z</published>
+    <arxiv:comment>22 pages, 5 figures, code: https://github.com/Theia-4869/CDPruner, project page: https://theia-4869.github.io/CDPruner</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Qizhe Zhang</name>
+    </author>
+    <author>
+      <name>Mengzhen Liu</name>
+    </author>
+    <author>
+      <name>Lichen Li</name>
+    </author>
+    <author>
+      <name>Ming Lu</name>
+    </author>
+    <author>
+      <name>Yuan Zhang</name>
+    </author>
+    <author>
+      <name>Junwen Pan</name>
+    </author>
+    <author>
+      <name>Qi She</name>
+    </author>
+    <author>
+      <name>Shanghang Zhang</name>
+    </author>
+  </entry>
+</feed>
