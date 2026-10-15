@@ -1,0 +1,155 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "drug_rec10",
+    "mean_inner_auc": 0.9535636613905556,
+    "mean_inner_ap": 0.9137288643052557,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0009638663358042902,
+          "fold_deltas": [
+            0.001876319186318809,
+            0.000496031319975665,
+            0.0005192485011183967
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0019037552103905082,
+          "fold_deltas": [
+            0.003613854037572084,
+            0.00038316648803060627,
+            0.0017142451055688346
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.00014882061961570456,
+          "fold_deltas": [
+            0.0001257747704395129,
+            -0.0001623375229011792,
+            -0.00040989910638544735
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0003617171487927025,
+          "fold_deltas": [
+            -0.0001445885897224386,
+            -0.00026392495089744283,
+            -0.0006766379057582261
+          ]
+        }
+      },
+      "dot_drug_rec10": {
+        "auc": {
+          "mean_delta": -5.906990279488008e-05,
+          "fold_deltas": [
+            4.099484838548939e-05,
+            -0.00013914644820089972,
+            -7.90581085692299e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -6.0636348705234155e-05,
+          "fold_deltas": [
+            0.0001723684788385027,
+            -0.0006425982727473745,
+            0.0002883207477931693
+          ]
+        }
+      },
+      "mean_rec10": {
+        "auc": {
+          "mean_delta": -0.0002585150540435066,
+          "fold_deltas": [
+            -0.00036101222505002806,
+            -0.00019927145668297008,
+            -0.0002152614803975217
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00027298029003860097,
+          "fold_deltas": [
+            -0.00030692512045038534,
+            -0.0004024935425849252,
+            -0.00010952220708049243
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0003617171487927025
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 6,
+  "new_checkpoint_replays": 6,
+  "reused_control_checks": 12,
+  "new_candidate_test_evaluations": 0,
+  "no_lncrna": true,
+  "processes_expected_live": [],
+  "next_action": "Use frozen gate and post-selection conditioning/column-alignment diagnostics; no automatic attention parameter sweep.",
+  "component_diagnostics": {
+    "status": "passed",
+    "selection_unchanged": true,
+    "means": [
+      {
+        "config": "drug_rec10",
+        "full": {
+          "auc": 0.9535636613905556,
+          "ap": 0.9137288987006501
+        },
+        "zero_projection": {
+          "auc": 0.9536544442623098,
+          "ap": 0.9134258241803644
+        },
+        "swapped_condition": {
+          "auc": 0.9535797463362533,
+          "ap": 0.913742530523232
+        },
+        "misaligned_columns": {
+          "auc": 0.9535596329314763,
+          "ap": 0.9135885553887482
+        },
+        "zero_mean_abs_probability_shift": 0.013587189372628927,
+        "swapped_mean_abs_probability_shift": 0.0032487662150136507,
+        "misalignment_mean_abs_probability_shift": 0.0022087441223751134,
+        "projection_weight_norm": 1.4869505167007446,
+        "addition_rms": 0.19682957977056503,
+        "base_pre_activation_rms": 2.955796003341675,
+        "normalized_attention_entropy": 0.7265712221463522,
+        "effective_columns": 126.8278071085612,
+        "mean_max_attention": 0.10000478103756905
+      },
+      {
+        "config": "mean_rec10",
+        "full": {
+          "auc": 0.9538221764445991,
+          "ap": 0.9140018445952944
+        },
+        "zero_projection": {
+          "auc": 0.9536512212292069,
+          "ap": 0.9134993937117537
+        },
+        "swapped_condition": {
+          "auc": 0.9538220333561233,
+          "ap": 0.9140020588226726
+        },
+        "misaligned_columns": {
+          "auc": 0.9537824002071073,
+          "ap": 0.9140108102590468
+        },
+        "zero_mean_abs_probability_shift": 0.01694648837049802,
+        "swapped_mean_abs_probability_shift": 4.3671108092742844e-07,
+        "misalignment_mean_abs_probability_shift": 0.0021952051793050487,
+        "projection_weight_norm": 1.3840413490931194,
+        "addition_rms": 0.22825255493323007,
+        "base_pre_activation_rms": 2.5620659987131753,
+        "normalized_attention_entropy": 0.6434725522994995,
+        "effective_columns": 383.2140197753906,
+        "mean_max_attention": 0.3163108769804239
+      }
+    ]
+  }
+}

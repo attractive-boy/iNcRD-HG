@@ -1,0 +1,150 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "off",
+    "mean_inner_auc": 0.9537124820101713,
+    "mean_inner_ap": 0.9140905814540484,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0011126869554199947,
+          "fold_deltas": [
+            0.001750544415879296,
+            0.0006583688428768442,
+            0.0009291476075038441
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0022654723591832107,
+          "fold_deltas": [
+            0.0037584426272945226,
+            0.0006470914389280491,
+            0.0023908830113270607
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 0.0,
+          "fold_deltas": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0,
+          "fold_deltas": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "keep": {
+        "auc": {
+          "mean_delta": 0.0,
+          "fold_deltas": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0,
+          "fold_deltas": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "selection_score": 0.0
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 9,
+  "new_checkpoint_replays": 9,
+  "reused_control_checks": 6,
+  "new_candidate_test_evaluations": 0,
+  "no_lncrna": true,
+  "processes_expected_live": [],
+  "next_action": "Read the frozen post-selection diagnostics; do not retrospectively promote or sweep this failed fine-tuning schedule.",
+  "component_diagnostics": {
+    "status": "passed",
+    "selection_unchanged": true,
+    "means": [
+      {
+        "config": "keep",
+        "selected_train": {
+          "auc": 0.9600763002617528,
+          "ap": 0.9252792518995325,
+          "bce": 0.24019895493984222
+        },
+        "selected_val": {
+          "auc": 0.9537124820101713,
+          "ap": 0.9140905814540484,
+          "bce": 0.2564118206501007
+        },
+        "selected_reconstruction": 0.5946982304255167,
+        "final_val": {
+          "auc": 0.9531059150445708,
+          "ap": 0.9124000205752679
+        },
+        "final_minus_source": {
+          "auc": -0.0006065669656005005,
+          "ap": -0.0016905608787805375
+        },
+        "final_train_mode_pre_update_bce": 0.22892028093338013
+      },
+      {
+        "config": "off",
+        "selected_train": {
+          "auc": 0.9600763002617528,
+          "ap": 0.9252792518995325,
+          "bce": 0.24019894997278848
+        },
+        "selected_val": {
+          "auc": 0.9537124820101713,
+          "ap": 0.9140905814540483,
+          "bce": 0.2564118206501007
+        },
+        "selected_reconstruction": 0.5946982304255167,
+        "final_val": {
+          "auc": 0.9528747738630393,
+          "ap": 0.911413921466426
+        },
+        "final_minus_source": {
+          "auc": -0.0008377081471321324,
+          "ap": -0.002676659987622343
+        },
+        "final_train_mode_pre_update_bce": 0.22457734247048697
+      },
+      {
+        "config": "decay",
+        "selected_train": {
+          "auc": 0.9600763002617528,
+          "ap": 0.9252792518995325,
+          "bce": 0.24019895493984222
+        },
+        "selected_val": {
+          "auc": 0.9537124820101713,
+          "ap": 0.9140905814540484,
+          "bce": 0.2564118305842082
+        },
+        "selected_reconstruction": 0.5946982304255167,
+        "final_val": {
+          "auc": 0.9531015346029124,
+          "ap": 0.9123795323752013
+        },
+        "final_minus_source": {
+          "auc": -0.0006109474072589401,
+          "ap": -0.0017110490788470785
+        },
+        "final_train_mode_pre_update_bce": 0.22686989605426788
+      }
+    ]
+  }
+}

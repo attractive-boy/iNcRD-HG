@@ -1,0 +1,167 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "pathwise",
+    "mean_inner_auc": 0.9537154870669635,
+    "mean_inner_ap": 0.9141006196964246,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0011156920122121032,
+          "fold_deltas": [
+            0.001757841928157422,
+            0.0006605161646083824,
+            0.0009287179438705051
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.002275510601559468,
+          "fold_deltas": [
+            0.003784585609758917,
+            0.0006499662888554969,
+            0.00239197990606399
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 3.0050567921084217e-06,
+          "fold_deltas": [
+            7.297512278126028e-06,
+            2.1473217315381987e-06,
+            -4.296636333389614e-07
+          ]
+        },
+        "ap": {
+          "mean_delta": 1.0038242376257204e-05,
+          "fold_deltas": [
+            2.6142982464394393e-05,
+            2.874849927447798e-06,
+            1.0968947369294213e-06
+          ]
+        }
+      },
+      "endpoints": {
+        "auc": {
+          "mean_delta": -1.0019177095458668e-05,
+          "fold_deltas": [
+            -1.0731635702976305e-05,
+            -1.93258955833997e-05,
+            0.0
+          ]
+        },
+        "ap": {
+          "mean_delta": -1.505521627661229e-05,
+          "fold_deltas": [
+            -2.4376464195619008e-05,
+            -2.078918463421786e-05,
+            0.0
+          ]
+        }
+      },
+      "fixed": {
+        "auc": {
+          "mean_delta": -1.717857385230559e-06,
+          "fold_deltas": [
+            0.0,
+            -5.153572155691677e-06,
+            0.0
+          ]
+        },
+        "ap": {
+          "mean_delta": -2.9049919135400635e-06,
+          "fold_deltas": [
+            0.0,
+            -8.71497574062019e-06,
+            0.0
+          ]
+        }
+      },
+      "no_edges": {
+        "auc": {
+          "mean_delta": -1.1453845975821034e-05,
+          "fold_deltas": [
+            -6.8682468497005544e-06,
+            -1.1166073003776589e-05,
+            -1.632721807398596e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -2.254944459719373e-05,
+          "fold_deltas": [
+            -2.016390113046551e-05,
+            -1.5032032495310155e-05,
+            -3.245240016580553e-05
+          ]
+        }
+      },
+      "mpnn": {
+        "auc": {
+          "mean_delta": -0.00015534353122281797,
+          "fold_deltas": [
+            1.2877962844992652e-06,
+            -0.00033541165445993837,
+            -0.0001319067354930148
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00012783933482455692,
+          "fold_deltas": [
+            -2.4282098746164493e-05,
+            -0.0003160565606351584,
+            -4.317934509234789e-05
+          ]
+        }
+      }
+    },
+    "selection_score": -0.00015534353122281797
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 15,
+  "new_checkpoint_replays": 15,
+  "final_state_inspections": 15,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "component_diagnostics": {
+    "pathwise": {
+      "train_auc": 0.9600794684366699,
+      "train_ap": 0.9252847967423584,
+      "val_branch_logit_rms": 0.03289038377503554,
+      "final_inner_auc_from_curve": 0.9537088998206413,
+      "final_inner_ap_from_curve": 0.9140899350600492
+    },
+    "endpoints": {
+      "train_auc": 0.9601105185066471,
+      "train_ap": 0.925343792655594,
+      "val_branch_logit_rms": 0.03585645773758491,
+      "final_inner_auc_from_curve": 0.9537179187732306,
+      "final_inner_ap_from_curve": 0.9141021137760381
+    },
+    "fixed": {
+      "train_auc": 0.9600844609897833,
+      "train_ap": 0.9252916974046809,
+      "val_branch_logit_rms": 0.03720355965197086,
+      "final_inner_auc_from_curve": 0.9537107608328087,
+      "final_inner_ap_from_curve": 0.9140910113829639
+    },
+    "no_edges": {
+      "train_auc": 0.9601179948352878,
+      "train_ap": 0.9253609006731293,
+      "val_branch_logit_rms": 0.08984699472784996,
+      "final_inner_auc_from_curve": 0.9537226471307171,
+      "final_inner_ap_from_curve": 0.9141070572789802
+    },
+    "mpnn": {
+      "train_auc": 0.9609677002786791,
+      "train_ap": 0.9266264433628759,
+      "val_branch_logit_rms": 0.16160148630539575,
+      "final_inner_auc_from_curve": 0.9504340664974967,
+      "final_inner_ap_from_curve": 0.9063613902506983
+    }
+  },
+  "next_action": "Review the frozen pathwise/endpoints/fixed/no_edges/mpnn results before another mechanism. Do not retrospectively select controls or sweep kernel steps/prototype counts/extraction size. If considering new extraction, establish a distinct hypothesis and exact query-deletion protocol first."
+}

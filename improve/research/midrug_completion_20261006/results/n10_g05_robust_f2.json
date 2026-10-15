@@ -1,0 +1,57 @@
+{
+  "tag": "n10_g05_robust_f2",
+  "config": "n10_g05_robust",
+  "settings": {
+    "nuclear_fraction": 0.1,
+    "graph_weight": 0.05,
+    "error_cost": 0.25
+  },
+  "fold": 2,
+  "inner_auc": 0.905571104605049,
+  "inner_ap": 0.8367829740531554,
+  "checkpoint_sha256": "d2bf48b66fc21335c1f1ebb154eb443851c2faa8fa4265bd294378e247bf2e35",
+  "prediction_sha256": "53951f6147439c385e05ae9a69e9a4ba259fbd9d94cc966fb122ea62887f82d1",
+  "elapsed_seconds": 3.1408441066741943,
+  "fit_info": {
+    "intercept": -1.9461749094487049,
+    "nominal_intercept": -0.6933788497373975,
+    "lambda_max": 5.133445174100031,
+    "nuclear_weight": 0.5133445174100032,
+    "step_size": 2.857142857142857,
+    "iterations": 100,
+    "converged": true,
+    "curves": [
+      {
+        "iteration": 1,
+        "objective": 2605.4523819384112,
+        "nuclear_penalty": 97.01423168354786,
+        "rank": 138,
+        "stationarity_residual": 0.3230915468148488,
+        "observed_loss": 2502.0727226943295,
+        "graph_penalty": 6.365427560533875
+      },
+      {
+        "iteration": 50,
+        "objective": 1405.632838229324,
+        "nuclear_penalty": 641.9182103802553,
+        "rank": 71,
+        "stationarity_residual": 0.000162642706936687,
+        "observed_loss": 584.5125024726614,
+        "graph_penalty": 179.20212537640748
+      },
+      {
+        "iteration": 100,
+        "objective": 1405.0371853363026,
+        "nuclear_penalty": 639.0878541660239,
+        "rank": 71,
+        "stationarity_residual": 9.732105457509925e-06,
+        "observed_loss": 585.3905786310751,
+        "graph_penalty": 180.55875253920345
+      }
+    ]
+  },
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false,
+  "training_stopping": "training objective and stationarity only; no heldout inputs to fit"
+}

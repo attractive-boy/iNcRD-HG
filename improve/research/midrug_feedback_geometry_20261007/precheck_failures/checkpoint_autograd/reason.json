@@ -1,0 +1,8 @@
+{
+  "status": "precheck_api_incompatibility",
+  "reason": "Torch 1.13 reentrant activation checkpoint supports backward(), not autograd.grad(); training already uses backward(). Change only the chunk gradient checker to backward and retain the failed checker/log.",
+  "files": {
+    "check.py": "85a5d5e44b62975669c5412c5d1012222d201ab637ccede2e540268df1b9b43f",
+    "check.log": "5db1ff07129ae999785c821ccd5f9d18445e8641909d1eab817eda4a8a567e70"
+  }
+}

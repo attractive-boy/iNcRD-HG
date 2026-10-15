@@ -1,0 +1,136 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn_classification": "progress:12 observed-source fits/replays archived",
+  "current_turn": "progress:offline original-ChemBERTa input identity,12 attention/pooled adaptation fits and12 new replays",
+  "best": {
+    "config": "token_rec10",
+    "mean_inner_auc": 0.9537536534810457,
+    "mean_inner_ap": 0.9139496990256747,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0011538584262944147,
+          "fold_deltas": [
+            0.001829529254653517,
+            0.0009933510329904749,
+            0.0006386949912392526
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0021245899308094764,
+          "fold_deltas": [
+            0.003646297162169465,
+            0.0009098582862678839,
+            0.0018176143439910808
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 4.1171470874420045e-05,
+          "fold_deltas": [
+            7.898483877422091e-05,
+            0.00033498219011363073,
+            -0.0002904526162645915
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00014088242837373421,
+          "fold_deltas": [
+            -0.00011214546512505752,
+            0.0002627668473398348,
+            -0.0005732686673359799
+          ]
+        }
+      },
+      "pooled_rec10": {
+        "auc": {
+          "mean_delta": -4.0342097584818624e-05,
+          "fold_deltas": [
+            -0.0002914712256943952,
+            0.00028344646855771316,
+            -0.00011300153561777382
+          ]
+        },
+        "ap": {
+          "mean_delta": 2.192253175440732e-05,
+          "fold_deltas": [
+            -0.00011502616011049849,
+            0.00036372850322419215,
+            -0.0001829347478504717
+          ]
+        }
+      }
+    },
+    "selection_score": -0.00014088242837373421
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "If promoted, freeze original-validation confirmation. Otherwise use the matched token/pooled and component evidence before selecting a distinct next hypothesis; do not start a LoRA rank/layer grid automatically.",
+  "component_diagnostics": {
+    "status": "passed",
+    "selection_unchanged": true,
+    "means": [
+      {
+        "config": "token",
+        "full": {
+          "auc": 0.9525003061849205,
+          "ap": 0.911732711325732
+        },
+        "zero_adaptation": {
+          "auc": 0.9524773161548055,
+          "ap": 0.9116637499063281
+        },
+        "adaptation_weight_norm": 2.72334877649943,
+        "mean_absolute_feature_change": 0.017986060430606205,
+        "mean_absolute_probability_change": 0.0011746460028613608
+      },
+      {
+        "config": "token_rec10",
+        "full": {
+          "auc": 0.9537536534810457,
+          "ap": 0.9139496990256747
+        },
+        "zero_adaptation": {
+          "auc": 0.9538357904587058,
+          "ap": 0.9140845975673652
+        },
+        "adaptation_weight_norm": 3.2381006876627603,
+        "mean_absolute_feature_change": 0.05537182092666626,
+        "mean_absolute_probability_change": 0.0031678639740372696
+      },
+      {
+        "config": "pooled",
+        "full": {
+          "auc": 0.9525675590830941,
+          "ap": 0.9116886732190007
+        },
+        "zero_adaptation": {
+          "auc": 0.9526077896920224,
+          "ap": 0.9116886801664518
+        },
+        "adaptation_weight_norm": 2.707660516103109,
+        "mean_absolute_feature_change": 0.04506505404909452,
+        "mean_absolute_probability_change": 0.0035273906153937182
+      },
+      {
+        "config": "pooled_rec10",
+        "full": {
+          "auc": 0.9537939955786306,
+          "ap": 0.9139277764939203
+        },
+        "zero_adaptation": {
+          "auc": 0.9537238214690916,
+          "ap": 0.9136912645147254
+        },
+        "adaptation_weight_norm": 2.963754336039225,
+        "mean_absolute_feature_change": 0.06569304938117664,
+        "mean_absolute_probability_change": 0.004820694370816152
+      }
+    ]
+  }
+}

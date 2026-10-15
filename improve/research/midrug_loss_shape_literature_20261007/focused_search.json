@@ -1,0 +1,1550 @@
+[
+  {
+    "source": "arxiv",
+    "query": "(all:\"proper loss\" OR all:\"proper scoring\") AND (all:\"asymmetric\" OR all:\"robust\") AND submittedDate:[202401010000 TO 202610062359]",
+    "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22proper+loss%22+OR+all%3A%22proper+scoring%22%29+AND+%28all%3A%22asymmetric%22+OR+all%3A%22robust%22%29+AND+submittedDate%3A%5B202401010000+TO+202610062359%5D&max_results=20&sortBy=submittedDate&sortOrder=descending",
+    "retrieved_utc": "2026-10-06T23:11:15.489860+00:00",
+    "raw_file": "raw/arxiv_9d6d3b1853.txt",
+    "papers": [
+      {
+        "title": "LWCal: Loss-Weighted Calibration for Tabular Classifiers with Noisy Calibration Labels",
+        "id": "http://arxiv.org/abs/2609.26839v1",
+        "date": "2026-09-22T00:41:17Z",
+        "abstract": "Post-hoc probability calibration is usually evaluated under an optimistic assumption: the held-out calibration labels are clean. In many AI deployment settings, however, labels come from weak annotators, historical decisions, heuristics, or distant supervision, so the same label noise that corrupts training also corrupts calibration. We study this overlooked failure mode for tabular classifiers and propose LWCal, a CPU-only post-hoc calibrator that down-weights calibration examples whose noisy labels are contradicted by the base model's held-out probability. LWCal requires no clean validation labels, no noise-rate estimate, and no retraining of the base classifier. A second variant, Gated-LWCal, adds a conservative disagreement gate that backs off toward the raw score when the calibration split appears extremely inconsistent. On nine local binary tabular tasks, six random seeds, symmetric and asymmetric label corruption, and three tree-based base learners, LWCal obtains the lowest average calibration error while Gated-LWCal obtains the best average proper-score tradeoff. In the main random-forest study over 432 noisy cells, Gated-LWCal reduces expected calibration error from 0.188 to 0.122 and negative log likelihood from 0.438 to 0.396 relative to the raw classifier. Paired bootstrap intervals for Gated-LWCal versus raw, Platt, isotonic, and beta calibration exclude zero on ECE, Brier score, and NLL. The artifact contains all scripts, result tables, figures, and the compiled paper.",
+        "authors": [
+          "Zeming Liu",
+          "Hang Lyu",
+          "Jingtao Zhang",
+          "Yuan Xie"
+        ]
+      },
+      {
+        "title": "Proof-Carrying Cognition: Closing the Verification Gap with Reality-Settled Reward",
+        "id": "http://arxiv.org/abs/2609.09776v1",
+        "date": "2026-09-09T06:24:53Z",
+        "abstract": "Frontier gains in language-model reasoning come from reinforcement learning on reasoning traces and are concentrated in domains with a cheap, sound verifier. We argue the field's binding constraint is the verification gap: no scalable, incorruptible reward for reasoning outside formal domains. We make four contributions. (1) Theory: in a joint-Gaussian model of best-of-N selection, verifier-gold correlation rho is the exact exchange rate between test-time compute and capability, and an unsound verifier pays a polynomial penalty N^(1/rho^2); a margin-free copula form predicts realized soundness of real LLM judges to 4% median error. (2) Demonstration: in program-synthesis testbeds with executable ground truth, including a pre-registered scaled replication, unsound verifiers lose Soundness-under-Pressure as optimization grows (0.94 to 0.32 at N=4096) while a sound verifier improves monotonically; reality-anchored settlement beats a frozen verifier under i.i.d. and adversarial pressure, driving the hacking gap from ~0.27 to ~0; soundness scales log-linearly with settled labels, with on-policy settlement ~10x more label-efficient than random labeling. With real LLM judges and unit-test execution as gold, a weak judge loses soundness under best-of-N (p<0.001), a stronger judge is more robust, and selection alone manufactures +0.53 hacking gaps from honest samples. Under real GRPO training, a frozen reward model traces the full overoptimization curve (executed reward collapses 90%) while the same model refit on a 10% settlement stream preserves 6x the executed reward. (3) Paradigm: proof-carrying cognition, where reasoning steps are typed probabilistic claims priced by a self-built world model trained only on held-out reality and settled by proper scoring rules. (4) Benchmark: we specify Soundness-under-Pressure as the headline metric for a reality-settled reasoning benchmark.",
+        "authors": [
+          "Eshwar Reddy M",
+          "Sourav Karmakar"
+        ]
+      },
+      {
+        "title": "CPR-IE:A Compression-Prediction-Resource Intelligence Efficiency Metric",
+        "id": "http://arxiv.org/abs/2609.04809v1",
+        "date": "2026-09-04T07:06:21Z",
+        "abstract": "Comparing intelligent systems under deployment constraints requires more than predictiveaccuracy.This paper develops Compression-Prediction-Resource Intelligence Efficiency (CPR-IE) as a protocol-relative ordering by representational economy, predictive quality, and resourceburden. The analysis separates two questions-how raw resource consumption is represented, andhow the resulting attributes are aggregated. Proportional-increment composition uniquely yieldslogarithmic cumulative burden, and context-independent ratio response yields power responsesto compression, prediction, and burden; with reference normalization the representation is I(C,P,T).We prove Pareto consistency, unit invariance, boundary behavior, trade-off identities, ranking-stability regions, and cross-task aggregation. A translog parent model makes interaction restrictions explicit, and further results establish cardinal and ordinal identification, sub-Gaussianfinite-sample ranking guarantees, robust selection under exponent uncertainty, and deterministicregret bounds. Minimum description length, algorithmic complexity, proper scoring rules, varia-tional inference, and Landauer's principle motivate measurement choices but do not entail theformula. CPR-IE is a constructed efficiency representation, not a universal law or a definition ofintelligence itself.",
+        "authors": [
+          "Xiantao Jiang"
+        ]
+      },
+      {
+        "title": "Proper-score observation-driven filters: local geometry, estimation, and continuous-time limits",
+        "id": "http://arxiv.org/abs/2608.02828v3",
+        "date": "2026-08-03T19:40:59Z",
+        "abstract": "Observation-driven filters typically use likelihood-score updates, corresponding to the logarithmic scoring rule. We generalise these updates to negative parameter derivatives of differentiable proper scoring rules, under a declared working family and predictable scaling. The rule determines the conditional risk projection and tail response, scaling converts its derivative into the update, and the autoregressive component determines the composite dynamic centre. Locally, risk curvature and scaling govern mean reversion, while the variance of the scaled innovation governs update noise. Under correct specification, unscaled curvature and score variance coincide for the log score by the information identity, but generally differ for other proper rules. For static parameters, we establish consistency and asymptotic normality under explicit stability and fixed-tuning conditions. In high-frequency scale models, centred updates converge to diffusions, whereas non-centred updates follow deterministic mean flows. For time-varying rule-specific projections, the local tracking error admits an Ornstein-Uhlenbeck approximation up to a stopping time, allowing correlated update and target shocks. Simulations and an international-equity application illustrate how criterion choice affects robustness, adaptation, variance-forecast loss, value-at-risk calibration and probability-integral-transform diagnostics. Predictive density and updating criterion are distinct design choices whose relative performance depends on the target and disturbance.",
+        "authors": [
+          "Giulia Livieri",
+          "Gianluca Palmari"
+        ]
+      },
+      {
+        "title": "When Synthetic Users Fail: A Cross-Domain Benchmark of LLM-Simulated Human Survey Responses",
+        "id": "http://arxiv.org/abs/2607.26348v2",
+        "date": "2026-07-28T23:43:00Z",
+        "abstract": "Large language models (LLMs) are increasingly used as synthetic users, stand-ins for human respondents whose simulated answers feed product, policy, and market decisions. We ask when this substitution is valid and when it fails, and package the answer as an evaluation framework for intelligent synthetic-user systems. A single protocol, run across four models spanning two families and an 8B-to-frontier capability range, is applied to two independent domains of real human-response data: U.S. general social attitudes (General Social Survey) and cross-cultural values (World Values Survey). Every model is benchmarked against a suite of non-LLM baselines fit on held-out human data. Under demographic prompting and the survey-simulation protocols we test, two failures replicate across both domains, all four models, and both families. First, at the individual level no LLM beats even the strongest baseline; on cross-cultural values every model falls well below it, and the gap survives distance-aware and proper scoring. Second, models systematically over-determine demographics, treating identity as far more predictive of attitudes than it is among real people, a distortion present for nearly every question-group combination and robust to a coding-invariant measure. Neither failure is remedied by a larger, more capable model. A decision-impact analysis shows why this matters in practice: on a segment-targeting task the models inflate between-segment gaps two to fourfold, would direct a team to the wrong segment in half of U.S. and most cross-cultural cases, and manufacture segment splits that do not exist in real people. We publicly release the cross-domain benchmark and validation framework, including all code and data, so that teams can determine in advance when synthetic-user evidence is safe for decision support and when it is not.",
+        "authors": [
+          "Zihan Chen",
+          "Di Zhu",
+          "Lei Nico Zheng"
+        ]
+      },
+      {
+        "title": "Estimating Rare Events in Language Models with Proper Evaluation",
+        "id": "http://arxiv.org/abs/2607.18454v1",
+        "date": "2026-07-20T19:07:43Z",
+        "abstract": "Quantifying the risk of rare failures in language models, such as those triggered by adversarial distribution shifts or very large-scale deployments, requires estimating probabilities far too small for random sampling. While recent work has formalized Low Probability Estimation, existing pipelines remain fragile in the rarest regimes: estimators can suffer zero-estimate collapse or systematic bias, and standard evaluation losses can become unstable or poorly matched to asymmetric safety costs. In this work, we introduce Gradient Activation Adaptive Multi-Level Splitting (GA-AMLS), which adapts rare-event Monte Carlo methods to the continuous activation space of language models. Specifically, GA-AMLS uses a gradient-based MCMC kernel to navigate activation space, eliminating the zero-estimate collapse of input-space search and replacing the independence assumptions of prior activation-space estimators with conditional sampling under an explicit, heavier-tailed activation prior. We also propose the Shifted-Power Bregman (SPB) Loss, a proper scoring rule that remains finite for zero-estimates and offers tunable asymmetry between underestimation and overestimation penalties. Experiments on small transformer models reveal a bias-variance tradeoff: GA-AMLS achieves the lowest loss under symmetric evaluation, reducing average log-space squared error relative to the strongest baseline across model sizes, while methods with overestimation bias prevail under asymmetric penalties. Our findings highlight that estimator choice should be matched to deployment context. More broadly, our work establishes activation space as a tractable domain for rare-event estimation in language models, circumventing the brittleness of discrete input-space search.",
+        "authors": [
+          "Nikita Y. Parulekar",
+          "Anqi Liu"
+        ]
+      },
+      {
+        "title": "Algorithmic Expert Aggregation",
+        "id": "http://arxiv.org/abs/2607.08744v1",
+        "date": "2026-07-09T17:45:35Z",
+        "abstract": "Forecast aggregation aims to combine information from multiple Bayesian experts' forecasts into an aggregate forecast. In much of this literature, however, the aggregate forecast is optimized for a particular loss or robustness criterion and need not itself be calibrated with respect to the outcome. We introduce and study expert aggregation, where the goal is instead to aggregate Bayesian experts into a new expert that continues to provide calibrated forecasts. In particular, we consider a setting where each input expert reports calibrated predictions, and the aggregator observes the prior distribution over states, and the input experts, but not the underlying Bayes probabilities of the states. We ask whether one can (i) construct a calibrated output expert that Blackwell refines a target expert and cannot be further Blackwell improved using the available information; and (ii) when a proper loss is specified, compute a nearly loss-optimal expert among all such refinements. We formulate calibrated experts as reduced-form information structures and measure refinement by Blackwell dominance of the induced prediction distributions. We characterize the constructible output experts through observable linear information: the input experts generate a linear system whose row space determines which calibrated output predictions are identifiable, and a new expert is constructible exactly when its predictions lie in the associated observable nonnegative cone. We establish a sharp algorithmic picture. When randomized output experts are allowed, both questions above admit efficient algorithms. In contrast, deterministic output experts are computationally intractable: deciding whether a deterministic calibrated refinement exists is $\\mathsf{NP}$-hard, and deterministic proper-loss optimization admits no multiplicative PTAS unless $\\mathsf{P}=\\mathsf{NP}$.",
+        "authors": [
+          "Wei Tang",
+          "Hanrui Zhang"
+        ]
+      },
+      {
+        "title": "When do prophets profit in prediction markets?",
+        "id": "http://arxiv.org/abs/2607.06166v3",
+        "date": "2026-07-07T11:41:46Z",
+        "abstract": "Prediction markets aggregate dispersed beliefs into prices that act as probabilistic forecasts of uncertain events. Classical theory establishes how a better-than-market forecast can yield positive trading profit. However, it hinges crucially on the specific automated market maker (AMM) design, and is not applicable to popular exchanges today which are based on central limit order books. This paper fills that gap. For any prediction market and any proper scoring rule $S$, we exhibit a ``proper'' betting strategy that depends only on the forecaster's prediction $\\mathbf{p}$ and the market price $\\mathbf{q}$, and earns positive expected profit \\emph{whenever} $\\mathbf{p}$ outperforms $\\mathbf{q}$ under $S$ and the market has sufficient liquidity. Moreover, this proper betting is essentially the only strategy with such robust profitability guarantee. Our proof rests on a decomposition of expected profit that strictly generalizes the classical AMM guarantee and also explains how strategies can profit even without an accuracy edge. Empirically, across thousands of forecasts by AI models, proper betting is the only strategy that reliably converts accuracy into profit, and we further identify systematic forecasting personas and show how the optimal proper strategy varies across them. For feasibility demonstration, we run a monthlong live pilot test on Kalshi; the encouraging preliminary results show that proper betting can survive real-world spreads, fees, discrete fills, and limited liquidity.",
+        "authors": [
+          "Anri Gu",
+          "Nicole Kagan",
+          "Alec Sun",
+          "Jibang Wu",
+          "Haifeng Xu"
+        ]
+      },
+      {
+        "title": "On the QUEST for Uncertainty Quantification via Highest Density Regions",
+        "id": "http://arxiv.org/abs/2606.19569v1",
+        "date": "2026-06-17T20:13:45Z",
+        "abstract": "Uncertainty quantification (UQ) is essential for reliable decision-making in safety-critical applications in probabilistic machine learning. For regression problems, dominant scalar UQ approaches - notably, those based on proper scoring rules - measure uncertainty via pointwise predictive risk. This can lead to counterintuitive results when the target statistic is not the conditional expectation. We propose an alternative framework, in which uncertainty is characterised by the volume of the most probable subset of a distribution's support. QUEST (Quantifying Uncertainty via highest dEnSiTy regions) is a novel approach to UQ based on the concentration of Lebesgue measure at a distribution's peak(s), evaluated at one or more values of a robustness parameter $α$. We establish connections between our measures and classical statistics from information theory and economics. We show that, unlike popular alternatives based on proper scoring rules, QUEST measures of epistemic and aleatoric uncertainty satisfy a set of axioms adapted from the UQ literature, including monotonicity under distributional spread and invariance to location shifts. Selective prediction benchmarks confirm that QUEST performs favourably against standard measures such as variance and differential entropy.",
+        "authors": [
+          "Sam Goring",
+          "Tom Kuipers",
+          "Nicola Paoletti",
+          "David S. Watson"
+        ]
+      },
+      {
+        "title": "Robust Bayesian Predictive Model Selection using Bregman Divergence",
+        "id": "http://arxiv.org/abs/2606.10409v1",
+        "date": "2026-06-09T04:34:57Z",
+        "abstract": "Predictive Bayesian model comparison often relies on leave-one-out (LOO) cross-validation criteria such as the expected log predictive density (ELPD). However, model rankings can be overly sensitive to outliers and tail mismatch because ELPD is based on the log score. We propose a score-matched generalized ELPD framework that replaces the log score by a Bregman scoring rule to update model parameters through a generalized posterior and to evaluate LOO predictive utility. Candidate posterior predictive distributions are ranked by out-of-sample utility under the chosen scoring rule, yielding a direct proper-score generalization of standard ELPD. We focus especially on the $β$-divergence family, where $β$ controls the sensitivity of predictive comparison to low-density observations. Under model misspecification, the procedure asymptotically selects the model whose predictive distribution is closest to the data-generating process under the chosen Bregman divergence. A simulation study and applications to microbial and forensic data show that the generalized ELPD can change the selected model through reduced sensitivity to low-density observations.",
+        "authors": [
+          "Jongwoo Choi",
+          "Neil A. Spencer",
+          "Dipak K. Dey"
+        ]
+      },
+      {
+        "title": "Chance-Constrained MPPI under State and Dynamic Object Prediction Uncertainty and the Evaluation of Collision Risk Calibration",
+        "id": "http://arxiv.org/abs/2605.28330v1",
+        "date": "2026-05-27T11:32:05Z",
+        "abstract": "Chance-constrained Model Predictive Path Integral (MPPI) control is increasingly adopted for navigation in dynamic environments to explicitly bound collision risk. However, these probabilistic guarantees implicitly assume that upstream uncertainties from localization and perception are well-calibrated. In practice, estimators are often miscalibrated, inducing characteristic closed-loop failure modes: overconfidence leads to systematic safety violations, while underconfidence triggers overly conservative freezing or probability dilution. To address this critical gap, our primary contribution is a rigorous evaluation methodology applying proper scoring rules to assess the statistical validity of predicted collision risks during closed-loop execution. Concurrently, Dual-Uncertainty Chance-Constrained Tube MPPI (DUCCT-MPPI) is proposed as a real-time, risk-aware planning architecture. DUCCT-MPPI jointly integrates localization uncertainty via a one-tube Unscented Transform (UT) approximation and dynamic obstacle prediction uncertainty via Monte Carlo aggregation. Through extensive physics-based simulations, the framework demonstrates robust failure-mitigation, seamlessly transitioning to safe, conservative maneuvering without succumbing to functional deadlocks in highly cluttered environments. In highly cluttered environments, DUCCT-MPPI achieves superior robustness, outperforming established Monte Carlo MPPI baselines by nearly 28\\% in navigation success rate, while simultaneously recording the lowest travel times and minimizing induced social forces. Ultimately, these findings establish that reliable probabilistic safety in autonomous navigation dictates not only expressive risk models but statistically valid uncertainty estimates throughout the entire autonomy stack.",
+        "authors": [
+          "Benjamin Serfling",
+          "Konrad Doll",
+          "Kati Radkhah-Lens"
+        ]
+      },
+      {
+        "title": "Quantum Proper Scoring Rules: Minimax Estimation and Resource-Theoretic Advantages",
+        "id": "http://arxiv.org/abs/2605.05268v1",
+        "date": "2026-05-06T11:23:07Z",
+        "abstract": "We generalize proper scoring rules to the quantum domain, replacing probability distributions with density operators. We define Quantum Value Functionals via operator convex generators and establish a complete duality theory yielding proper quantum scoring rules. We derive minimax optimal bounds for quantum state tomography under McCarthy-type incentives, proving a Quantum Cramér-Rao-McCarthy Bound that explicitly links minimax risk to the curvature of the generating function and the Quantum Fisher Information. We quantify the economic value of quantum resources (coherence, entanglement, adaptivity) in forecasting tasks, establishing scaling separations between classical and quantum estimation strategies. Our results guide the design of quantum sensors, incentive-compatible quantum data markets, and robust quantum machine learning protocols.",
+        "authors": [
+          "M. W. AlMasri"
+        ]
+      },
+      {
+        "title": "BAS: A Decision-Theoretic Approach to Evaluating Large Language Model Confidence",
+        "id": "http://arxiv.org/abs/2604.03216v1",
+        "date": "2026-04-03T17:44:32Z",
+        "abstract": "Large language models (LLMs) often produce confident but incorrect answers in settings where abstention would be safer. Standard evaluation protocols, however, require a response and do not account for how confidence should guide decisions under different risk preferences. To address this gap, we introduce the Behavioral Alignment Score (BAS), a decision-theoretic metric for evaluating how well LLM confidence supports abstention-aware decision making. BAS is derived from an explicit answer-or-abstain utility model and aggregates realized utility across a continuum of risk thresholds, yielding a measure of decision-level reliability that depends on both the magnitude and ordering of confidence. We show theoretically that truthful confidence estimates uniquely maximize expected BAS utility, linking calibration to decision-optimal behavior. BAS is related to proper scoring rules such as log loss, but differs structurally: log loss penalizes underconfidence and overconfidence symmetrically, whereas BAS imposes an asymmetric penalty that strongly prioritizes avoiding overconfident errors. Using BAS alongside widely used metrics such as ECE and AURC, we then construct a benchmark of self-reported confidence reliability across multiple LLMs and tasks. Our results reveal substantial variation in decision-useful confidence, and while larger and more accurate models tend to achieve higher BAS, even frontier models remain prone to severe overconfidence. Importantly, models with similar ECE or AURC can exhibit very different BAS due to highly overconfident errors, highlighting limitations of standard metrics. We further show that simple interventions, such as top-$k$ confidence elicitation and post-hoc calibration, can meaningfully improve confidence reliability. Overall, our work provides both a principled metric and a comprehensive benchmark for evaluating LLM confidence reliability.",
+        "authors": [
+          "Sean Wu",
+          "Fredrik K. Gustafsson",
+          "Edward Phillips",
+          "Boyan Gao",
+          "Anshul Thakur",
+          "David A. Clifton"
+        ]
+      },
+      {
+        "title": "Energy Score-Guided Neural Gaussian Mixture Model for Predictive Uncertainty Quantification",
+        "id": "http://arxiv.org/abs/2603.27672v1",
+        "date": "2026-03-29T12:46:43Z",
+        "abstract": "Quantifying predictive uncertainty is essential for real world machine learning applications, especially in scenarios requiring reliable and interpretable predictions. Many common parametric approaches rely on neural networks to estimate distribution parameters by optimizing the negative log likelihood. However, these methods often encounter challenges like training instability and mode collapse, leading to poor estimates of the mean and variance of the target output distribution. In this work, we propose the Neural Energy Gaussian Mixture Model (NE-GMM), a novel framework that integrates Gaussian Mixture Model (GMM) with Energy Score (ES) to enhance predictive uncertainty quantification. NE-GMM leverages the flexibility of GMM to capture complex multimodal distributions and leverages the robustness of ES to ensure well calibrated predictions in diverse scenarios. We theoretically prove that the hybrid loss function satisfies the properties of a strictly proper scoring rule, ensuring alignment with the true data distribution, and establish generalization error bounds, demonstrating that the model's empirical performance closely aligns with its expected performance on unseen data. Extensive experiments on both synthetic and real world datasets demonstrate the superiority of NE-GMM in terms of both predictive accuracy and uncertainty quantification.",
+        "authors": [
+          "Yang Yang",
+          "Chunlin Ji",
+          "Haoyang Li",
+          "Ke Deng"
+        ]
+      },
+      {
+        "title": "The Importance of Being Smoothly Calibrated",
+        "id": "http://arxiv.org/abs/2603.16015v1",
+        "date": "2026-03-16T23:50:02Z",
+        "abstract": "Recent work has highlighted the centrality of smooth calibration [Kakade and Foster, 2008] as a robust measure of calibration error. We generalize, unify, and extend previous results on smooth calibration, both as a robust calibration measure, and as a step towards omniprediction, which enables predictions with low regret for downstream decision makers seeking to optimize some proper loss unknown to the predictor. We present a new omniprediction guarantee for smoothly calibrated predictors, for the class of all bounded proper losses. We smooth the predictor by adding some noise to it, and compete against smoothed versions of any benchmark predictor on the space, where we add some noise to the predictor and then post-process it arbitrarily. The omniprediction error is bounded by the smooth calibration error of the predictor and the earth mover's distance from the benchmark. We exhibit instances showing that this dependence cannot, in general, be improved. We show how this unifies and extends prior results [Foster and Vohra, 1998; Hartline, Wu, and Yang, 2025] on omniprediction from smooth calibration. We present a crisp new characterization of smooth calibration in terms of the earth mover's distance to the closest perfectly calibrated joint distribution of predictions and labels. This also yields a simpler proof of the relation to the lower distance to calibration from [Blasiok, Gopalan, Hu, and Nakkiran, 2023]. We use this to show that the upper distance to calibration cannot be estimated within a quadratic factor with sample complexity independent of the support size of the predictions. This is in contrast to the distance to calibration, where the corresponding problem was known to be information-theoretically impossible: no finite number of samples suffice [Blasiok, Gopalan, Hu, and Nakkiran, 2023].",
+        "authors": [
+          "Parikshit Gopalan",
+          "Konstantinos Stavropoulos",
+          "Kunal Talwar",
+          "Pranay Tankala"
+        ]
+      },
+      {
+        "title": "Breaking the Martingale Curse: Multi-Agent Debate via Asymmetric Cognitive Potential Energy",
+        "id": "http://arxiv.org/abs/2603.06801v1",
+        "date": "2026-03-06T19:10:19Z",
+        "abstract": "Multi-Agent Debate (MAD) has emerged as a promising paradigm for enhancing large language model reasoning. However, recent work reveals a limitation:standard MAD cannot improve belief correctness beyond majority voting; we refer to this as the Martingale Curse. This curse arises because correlated errors cause agents to converge toward erroneous consensus, where debate merely reinforces collective mistakes rather than filtering noise. We propose AceMAD, a framework that breaks the Martingale Curse by harnessing asymmetric cognitive potential energy to transform MAD from a random walk into a directed convergence process with positive drift. Through a peer-prediction mechanism, agents predict their peers' belief distributions, revealing asymmetric cognitive potential: truth-holders not only know the correct answer but also anticipate the crowd's misconceptions, while the hallucinating majority remains blind to their collective error. This asymmetry creates a potential energy gap that we quantify via strictly proper scoring rules. We prove this cognitive potential manifests as information-theoretic superiority and, under nonlinear aggregation, converts into submartingale drift toward truth, directly breaking the Martingale Curse. Experiments on challenging subsets across six benchmarks show AceMAD recovers sparse truth signals even when initial majorities are incorrect, substantially outperforming baseline methods.",
+        "authors": [
+          "Yuhan Liu",
+          "Juntian Zhang",
+          "Yichen Wu",
+          "Martin Takac",
+          "Salem Lahlou",
+          "Xiuying Chen",
+          "Nils Lukas"
+        ]
+      },
+      {
+        "title": "Online Bayesian Imbalanced Learning with Bregman-Calibrated Deep Networks",
+        "id": "http://arxiv.org/abs/2602.08128v1",
+        "date": "2026-02-08T21:23:00Z",
+        "abstract": "Class imbalance remains a fundamental challenge in machine learning, where standard classifiers exhibit severe performance degradation in minority classes. Although existing approaches address imbalance through resampling or cost-sensitive learning during training, they require retraining or access to labeled target data when class distributions shift at deployment time, a common occurrence in real-world applications such as fraud detection, medical diagnosis, and anomaly detection. We present \\textit{Online Bayesian Imbalanced Learning} (OBIL), a principled framework that decouples likelihood-ratio estimation from class-prior assumptions, enabling real-time adaptation to distribution shifts without model retraining. Our approach builds on the established connection between Bregman divergences and proper scoring rules to show that deep networks trained with such losses produce posterior probability estimates from which prior-invariant likelihood ratios can be extracted. We prove that these likelihood-ratio estimates remain valid under arbitrary changes in class priors and cost structures, requiring only a threshold adjustment for optimal Bayes decisions. We derive finite-sample regret bounds demonstrating that OBIL achieves $O(\\sqrt{T \\log T})$ regret against an oracle with perfect prior knowledge. Extensive experiments on benchmark datasets and medical diagnosis benchmarks under simulated deployment shifts demonstrate that OBIL maintains robust performance under severe distribution shifts, outperforming state-of-the-art methods in F1 Score when test distributions deviate significantly from the training conditions.",
+        "authors": [
+          "Zahir Alsulaimawi"
+        ]
+      },
+      {
+        "title": "The Blown Lead Paradox: A Pathwise Calibration Benchmark for Win Probability Forecasts",
+        "id": "http://arxiv.org/abs/2601.18774v4",
+        "date": "2026-01-26T18:45:04Z",
+        "abstract": "Live win probabilities have given sports collapses a common numerical language: the highest win probability attained by the team that eventually lost. Yet this familiar number is a selected pathwise extreme. The losing path is identified by the terminal outcome and then searched for its most favorable point. Under ideal sequential calibration, we derive an exact continuous-path benchmark for this statistic, a conservative bound for discretely reported paths, and a probability-integral-transform diagnostic for collections of games. Unlike fixed-time calibration summaries and proper scores, the diagnostic asks whether a published feed produces severe losing paths as often as a calibrated sequential model should. We apply the benchmark separately to public regular-season NFL and NBA feeds from 2018-2024, using a season-stratified dyadic bootstrap to account for recurring teams. We detect no global departure in the NFL and a systematic excess of extreme losing-team peaks in the NBA. In the upper 5% benchmark tail, the NBA excess is 1.3% (95% interval 0.4% to 2.3%); first crossings of a published win probability of 0.95 show the same positive gap between observed and implied loss rates.",
+        "authors": [
+          "Jonathan Pipping-Gamón",
+          "Abraham J. Wyner"
+        ]
+      },
+      {
+        "title": "On robust Bayesian causal inference",
+        "id": "http://arxiv.org/abs/2511.13895v2",
+        "date": "2025-11-17T20:40:59Z",
+        "abstract": "This paper develops a Bayesian framework for robust causal inference from longitudinal observational data. Many contemporary methods rely on structural assumptions, such as factor models, to adjust for unobserved confounding, but they can lead to biased causal estimands when mis-specified. We focus on directly estimating time--unit--specific causal effects and use generalised Bayesian inference to quantify model mis-specification and adjust for it, while retaining interpretable posterior inference. We select the learning rate~$ω$ based on a proper scoring rule that jointly evaluates point and interval accuracy of the causal estimand, thus providing a coherent, decision-theoretic foundation for tuning~$ω$. Simulation studies and applications to real data demonstrate improved calibration, sharpness, and robustness in estimating causal effects.",
+        "authors": [
+          "Angelos Alexopoulos",
+          "Nikolaos Demiris"
+        ]
+      },
+      {
+        "title": "Bayesimax Theory: Selecting Priors by Minimizing Total Information",
+        "id": "http://arxiv.org/abs/2508.15976v2",
+        "date": "2025-08-21T21:37:43Z",
+        "abstract": "We introduce Bayesimax theory, a paradigm for objective Bayesian analysis which selects priors by applying minimax theory to prior disclosure games. In these games, the uniquely optimal strategy for a Bayesian agent upon observing the data is to reveal their prior. As such, the prior chosen by minimax theory is, in effect, the implicit prior of minimax agents. Since minimax analysis disregards prior information, this prior is arguably noninformative. We refer to minimax solutions of certain prior disclosure games as Bayesimax priors, and we classify a statistical procedure as Bayesimax if it is a Bayes rule with respect to a Bayesimax prior. Under regular conditions, if a decision rule is minimax, then it is a Bayes rule under priors which maximize the minimum Bayes risk. We study games leveraging strictly proper scoring rules to induce posterior (and thereby prior) revelation. In such games, the minimum Bayes risk equals the conditional (generalized) entropy of the parameter given the data. Bayesimax theory therefore prescribes conditional entropy maximization. As conditional entropy equals marginal entropy (prior uninformativeness) minus mutual information (data informativeness), Bayesimax priors effectively minimize total information. We provide a rigorous formulation of these ideas, characterize sufficient conditions for regularity and identifiability, and investigate asymptotics and conjugate family examples. We next describe a generic Monte Carlo algorithm for estimating conditional entropy under a given prior. Finally, we compare and contrast Bayesimax theory with various related proposals from the objective Bayes and robust Bayes literature.",
+        "authors": [
+          "Sitaram Vangala"
+        ]
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "source": "arxiv",
+    "query": "(all:\"Beta scoring\" OR all:\"Beta loss\" OR all:\"asymmetric loss\") AND (all:\"binary\" OR all:\"classification\") AND submittedDate:[202401010000 TO 202610062359]",
+    "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22Beta+scoring%22+OR+all%3A%22Beta+loss%22+OR+all%3A%22asymmetric+loss%22%29+AND+%28all%3A%22binary%22+OR+all%3A%22classification%22%29+AND+submittedDate%3A%5B202401010000+TO+202610062359%5D&max_results=20&sortBy=submittedDate&sortOrder=descending",
+    "retrieved_utc": "2026-10-06T23:11:15.491755+00:00",
+    "raw_file": "raw/arxiv_28c6880ded.txt",
+    "papers": [
+      {
+        "title": "What Makes Deep Learning Work for Traditional Chinese Medicine Tongue Diagnosis? A Comprehensive Ablation Study",
+        "id": "http://arxiv.org/abs/2607.28148v1",
+        "date": "2026-07-30T12:55:05Z",
+        "abstract": "Deep learning has shown promise for automated tongue diagnosis in traditional Chinese medicine (TCM), yet the design space remains underexplored. We conducted a systematic ablation study spanning 20+ model versions under rigorous 5-fold cross-validation on TongueDx2 (5,109 images, 976 expert-annotated) and a merged dataset of 11,101 samples. We compared six backbone architectures, four loss functions, five augmentation strategies, and six training strategies. The best 976-sample model achieved weighted-F1 of 0.6625 using ConvNeXt-Tiny with restrained augmentation and weak-group ensemble, while the best 11,101-sample model reached weighted-F1 of 0.7761. Six key design principles emerged: (1) ConvNeXt-Tiny offers optimal parameter efficiency; (2) BCE substantially outperforms Asymmetric Loss (+2.7%); (3) restrained color augmentation is critical; (4) weak-group ensemble replacement (+2.1%) outperforms probability averaging; (5) data scaling yielded +20.6% improvement; (6) expanding from 13 to 45 label dimensions caused catastrophic collapse (0.78 to 0.22). These principles are generalizable to multi-label medical image classification with class imbalance.",
+        "authors": [
+          "Longxia Gao",
+          "Linan Wang",
+          "Yuhe Han",
+          "Junze Geng",
+          "Meng Zhang",
+          "Hanqing Zhao"
+        ]
+      },
+      {
+        "title": "Generalized Distribution-Free Semi-Supervised Learning with Risk Rewrite",
+        "id": "http://arxiv.org/abs/2607.11947v2",
+        "date": "2026-07-11T13:51:56Z",
+        "abstract": "Typical semi-supervised learning (SSL) methods rely on distributional assumptions, and their performance degrades when these are violated. While PNU learning, a risk rewriting method, offers a distribution-free alternative, it is restricted to binary classification and its variance optimality remains unclear. In this paper, we propose a generalized framework that constructs unbiased risk estimators using linear combinations of component risks, subsuming PNU learning and extending to multiclass classification. We derive the minimum achievable variance, demonstrating our estimator can attain lower variance than PNU in asymmetric loss scenarios. Furthermore, we establish a generalization bound directly linking this variance reduction to improved learning performance. Based on these theoretical insights, we introduce two practical SSL methods that empirically match or outperform existing approaches on binary and multiclass benchmarks.",
+        "authors": [
+          "Yushi Hirose",
+          "Hiroo Irobe",
+          "Takafumi Kanamori"
+        ]
+      },
+      {
+        "title": "PulmoSight-XAI: An Explainable Multi-View Attention Ensemble with Gradient Boosting Meta-Learning for Multi-Label Chest X-Ray Classification",
+        "id": "http://arxiv.org/abs/2607.04478v1",
+        "date": "2026-07-05T19:50:53Z",
+        "abstract": "Automated chest X-ray classification remains challenging due to severe class imbalance, co-occurring pathologies, and the loss of localized features in conventional architectures. To address these, we propose an explainable hierarchical multi-view ensemble framework for the robust classification of 14 thoracic pathologies. The framework employs view-specific training by independently modeling frontal and lateral radiographs using an ensemble of five complementary convolutional neural networks. Replacing global average pooling, a multi-scale feature fusion strategy augmented with Convolutional Block Attention Modules (CBAM) preserves fine-grained intermediate representations while emphasizing high-level pathology-specific semantic features. To mitigate positive-negative imbalance and varying inter-class difficulty, models are optimized using a novel hybrid objective combining Asymmetric Loss with Adaptive Focal Loss. Beyond simple probability averaging, the framework incorporates a hierarchical meta-learning strategy where test-time augmentation (TTA) predictions and cross-model uncertainty measures are integrated into Level-1 gradient-boosting meta-learners (XGBoost, LightGBM, and CatBoost), followed by Level-2 stacking with optimized alpha blending. Evaluated on a large-scale CheXpert-style dataset, the framework achieves state-of-the-art macro-average AUROC scores of 0.9319 for frontal and 0.9154 for lateral radiographs. Furthermore, comprehensive explainability analysis using seven post-hoc attribution techniques demonstrates strong anatomical consistency and clinically meaningful decision localization. By integrating architectural diversity, multi-scale attention, hierarchical meta-learning, and rigorous explainability, the proposed framework provides a transparent, highly accurate, and clinically practical computer-aided diagnosis system for thoracic disease classification.",
+        "authors": [
+          "Moshiur Rahman",
+          "Shafqat Alam",
+          "Tasnia Binte Mamun"
+        ]
+      },
+      {
+        "title": "Uncertainty-Aware Longitudinal Forecasting of Alzheimer's Disease Progression Using Deep Learning",
+        "id": "http://arxiv.org/abs/2606.24604v1",
+        "date": "2026-06-23T14:04:27Z",
+        "abstract": "Longitudinal modelling of Alzheimer's disease progression is clinically useful only if it can describe not just the most likely next diagnosis, but how a patient may evolve over time and how reliable that forecast is. Most deep learning approaches reduce this problem to single-step classification, treating cognitively normal, mild cognitive impairment, and dementia as flat categories while providing limited insight into how uncertainty accumulates across future visits. We propose a probabilistic framework that combines ordinal diagnosis prediction, multi-horizon trajectory generation, and decomposed uncertainty estimation. A Temporal Fusion Transformer encoder is adapted with a CORAL ordinal output layer, asymmetric loss weighting, and converter oversampling to respect disease-stage ordering and improve sensitivity to MCI-to-dementia transitions. Conditioned on the learned patient-context representation, an autoregressive Mixture Density Network generates five-year probabilistic trajectories for diagnosis state, CDR Sum of Boxes, MMSE orientation, and hippocampal volume. On ADNI, the model outperforms linear, recurrent, and transformer baselines for next-visit diagnosis prediction, with the strongest gains on MCI-versus-dementia discrimination. Generated trajectories achieve near-nominal 90% credible interval coverage, widening uncertainty across the forecast horizon, and biomarker dynamics consistent with expected Alzheimer's disease progression. We further separate aleatoric from epistemic uncertainty using analytic mixture variance and a five-member bootstrap ensemble, which provides the strongest encoder diversity and output-level epistemic signal. Epistemic uncertainty is higher for rare progression archetypes, MCI and dementia patients, and under external evaluation on OASIS-3, where it increases alongside prediction error.",
+        "authors": [
+          "Arya Hariharan",
+          "Shreyank N Gowda",
+          "Anala M R"
+        ]
+      },
+      {
+        "title": "UAU-Net: Uncertainty-aware Representation Learning and Evidential Classification for Facial Action Unit Detection",
+        "id": "http://arxiv.org/abs/2604.21227v1",
+        "date": "2026-04-23T02:47:24Z",
+        "abstract": "Facial action unit (AU) detection remains challenging because it involves heterogeneous, AU-specific uncertainties arising at both the representation and decision stages. Recent methods have improved discriminative feature learning, but they often treat the AU representations as deterministic, overlooking uncertainty caused by visual noise, subject-dependent appearance variations, and ambiguous inter-AU relationships, all of which can substantially degrade robustness. Meanwhile, conventional point-estimation classifiers often provide poorly calibrated confidence, producing overconfident predictions, especially under the severe label imbalance typical of AU datasets. We propose UAU-Net, an Uncertainty-aware AU detection framework that explicitly models uncertainty at both stages. At the representation stage, we introduce CV-AFE, a conditional VAE (CVAE)-based AU feature extraction module that learns probabilistic AU representations by jointly estimating feature means and variances across multiple spatio-temporal scales; conditioning on AU labels further enables CV-AFE to capture uncertainty associated with inter-AU dependencies. At the decision stage, we design AB-ENN, an Asymmetric Beta Evidential Neural Network for multi-label AU detection, which parameterizes predictive uncertainty with Beta distributions and mitigates overconfidence via an asymmetric loss tailored to highly imbalanced binary labels. Extensive experiments on BP4D and DISFA show that UAU-Net achieves strong AU detection performance, and further analyses indicate that modeling uncertainty in both representation learning and evidential prediction improves robustness and reliability.",
+        "authors": [
+          "Yuze Li",
+          "Zhilei Liu"
+        ]
+      },
+      {
+        "title": "CXR-LT 2026 Challenge: Projection-Aware Multi-Label and Zero-Shot Chest X-Ray Classification",
+        "id": "http://arxiv.org/abs/2604.02185v1",
+        "date": "2026-04-02T15:46:16Z",
+        "abstract": "This challenge tackles multi-label classification for known chest X-ray (CXR) lesions and zero-shot classification for unseen ones. To handle diverse CXR projections, we integrate projection-specific models via a classification network into a unified framework. For zero-shot classification (Task 2), we extend CheXzero with a novel dual-branch architecture that combines contrastive learning, Asymmetric Loss (ASL), and LLM-generated descriptive prompts. This effectively mitigates severe long-tail imbalances and maximizes zero-shot generalization. Additionally, strong data and test-time augmentations (TTA) ensure robustness across both tasks.",
+        "authors": [
+          "Juno Cho",
+          "Dohui Kim",
+          "Mingeon Kim",
+          "Hyunseo Jang",
+          "Chang Sun Lee",
+          "Jong Chul Ye"
+        ]
+      },
+      {
+        "title": "Demographic-Aware Self-Supervised Anomaly Detection Pretraining for Equitable Rare Cardiac Diagnosis",
+        "id": "http://arxiv.org/abs/2603.19695v1",
+        "date": "2026-03-20T07:04:00Z",
+        "abstract": "Rare cardiac anomalies are difficult to detect from electrocardiograms (ECGs) due to their long-tailed distribution with extremely limited case counts and demographic disparities in diagnostic performance. These limitations contribute to delayed recognition and uneven quality of care, creating an urgent need for a generalizable framework that enhances sensitivity while ensuring equity across diverse populations. In this study, we developed an AI-assisted two-stage ECG framework integrating self-supervised anomaly detection with demographic-aware representation learning. The first stage performs self-supervised anomaly detection pretraining by reconstructing masked global and local ECG signals, modeling signal trends, and predicting patient attributes to learn robust ECG representations without diagnostic labels. The pretrained model is then fine-tuned for multi-label ECG classification using asymmetric loss to better handle long-tail cardiac abnormalities, and additionally produces anomaly score maps for localization, with CPU-based optimization enabling practical deployment. Evaluated on a longitudinal cohort of over one million clinical ECGs, our method achieves an AUROC of 94.7% for rare anomalies and reduces the common-rare performance gap by 73%, while maintaining consistent diagnostic accuracy across age and sex groups. In conclusion, the proposed equity-aware AI framework demonstrates strong clinical utility, interpretable anomaly localization, and scalable performance across multiple cohorts, highlighting its potential to mitigate diagnostic disparities and advance equitable anomaly detection in biomedical signals and digital health. Source code is available at https://github.com/MediaBrain-SJTU/Rare-ECG.",
+        "authors": [
+          "Chaoqin Huang",
+          "Zi Zeng",
+          "Aofan Jiang",
+          "Yuchen Xu",
+          "Qing Cao",
+          "Kang Chen",
+          "Chenfei Chi",
+          "Yanfeng Wang",
+          "Ya Zhang"
+        ]
+      },
+      {
+        "title": "Loss Design and Architecture Selection for Long-Tailed Multi-Label Chest X-Ray Classification",
+        "id": "http://arxiv.org/abs/2603.02294v1",
+        "date": "2026-03-02T17:33:00Z",
+        "abstract": "Long-tailed class distributions pose a significant challenge for multi-label chest X-ray (CXR) classification, where rare but clinically important findings are severely underrepresented. In this work, we present a systematic empirical evaluation of loss functions, CNN backbone architectures and post-training strategies on the CXR-LT 2026 benchmark, comprising approximately 143K images with 30 disease labels from PadChest. Our experiments demonstrate that LDAM with deferred re-weighting (LDAM-DRW) consistently outperforms standard BCE and asymmetric losses for rare class recognition. Amongst the architectures evaluated, ConvNeXt-Large achieves the best single-model performance with 0.5220 mAP and 0.3765 F1 on our development set, whilst classifier re-training and test-time augmentation further improve ranking metrics. On the official test leaderboard, our submission achieved 0.3950 mAP, ranking 5th amongst all 68 participating teams with total of 1528 submissions. We provide a candid analysis of the development-to-test performance gap and discuss practical insights for handling class imbalance in clinical imaging settings. Code is available at https://github.com/Nikhil-Rao20/Long_Tail.",
+        "authors": [
+          "Nikhileswara Rao Sulake"
+        ]
+      },
+      {
+        "title": "A Convex Loss Function for Set Prediction with Optimal Trade-offs Between Size and Conditional Coverage",
+        "id": "http://arxiv.org/abs/2512.19142v1",
+        "date": "2025-12-22T08:41:31Z",
+        "abstract": "We consider supervised learning problems in which set predictions provide explicit uncertainty estimates. Using Choquet integrals (a.k.a. Lov{á}sz extensions), we propose a convex loss function for nondecreasing subset-valued functions obtained as level sets of a real-valued function. This loss function allows optimal trade-offs between conditional probabilistic coverage and the ''size'' of the set, measured by a non-decreasing submodular function. We also propose several extensions that mimic loss functions and criteria for binary classification with asymmetric losses, and show how to naturally obtain sets with optimized conditional coverage. We derive efficient optimization algorithms, either based on stochastic gradient descent or reweighted least-squares formulations, and illustrate our findings with a series of experiments on synthetic datasets for classification and regression tasks, showing improvements over approaches that aim for marginal coverage.",
+        "authors": [
+          "Francis Bach"
+        ]
+      },
+      {
+        "title": "Mining Legal Arguments to Study Judicial Formalism",
+        "id": "http://arxiv.org/abs/2512.11374v2",
+        "date": "2025-12-12T08:37:53Z",
+        "abstract": "Courts must justify their decisions, but systematically analyzing judicial reasoning at scale remains difficult. This study tests claims about formalistic judging in Central and Eastern Europe (CEE) by developing automated methods to detect and classify judicial reasoning in decisions of Czech Supreme Courts using state-of-the-art natural language processing methods. We create the MADON dataset of 272 decisions from two Czech Supreme Courts with expert annotations of 9,183 paragraphs with eight argument types and holistic formalism labels for supervised training and evaluation. Using a corpus of 300,511 Czech court decisions, we adapt transformer LLMs to Czech legal domain through continued pretraining and we experiment with methods to address dataset imbalance including asymmetric loss and class weighting. The best models can detect argumentative paragraphs (82.6% Bal-F1), classify traditional types of legal argument (77.5% Bal-F1), and classify decisions as formalistic/non-formalistic (83.8% Bal-F1). Our three-stage pipeline combining ModernBERT, Llama 3.1, and traditional feature-based machine learning achieves promising results for decision classification while reducing computational costs and increasing explainability. Empirically, we challenge prevailing narratives about CEE formalism. We demonstrate that legal argument mining enables promising judicial philosophy classification and highlight its potential for other important tasks in computational legal studies. Our methodology can be used across jurisdictions, and our entire pipeline, datasets, guidelines, models, and source codes are available at https://github.com/trusthlt/madon.",
+        "authors": [
+          "Tomáš Koref",
+          "Lena Held",
+          "Mahammad Namazov",
+          "Harun Kumru",
+          "Yassine Thlija",
+          "Ivan Habernal"
+        ]
+      },
+      {
+        "title": "Learning Sparse Label Couplings for Multilabel Chest X-Ray Diagnosis",
+        "id": "http://arxiv.org/abs/2511.07801v1",
+        "date": "2025-11-11T03:38:01Z",
+        "abstract": "We study multilabel classification of chest X-rays and present a simple, strong pipeline built on SE-ResNeXt101 $(32 \\times 4d)$. The backbone is finetuned for 14 thoracic findings with a sigmoid head, trained using Multilabel Iterative Stratification (MIS) for robust cross-validation splits that preserve label co-occurrence. To address extreme class imbalance and asymmetric error costs, we optimize with Asymmetric Loss, employ mixed-precision (AMP), cosine learning-rate decay with warm-up, gradient clipping, and an exponential moving average (EMA) of weights. We propose a lightweight Label-Graph Refinement module placed after the classifier: given per-label probabilities, it learns a sparse, trainable inter-label coupling matrix that refines logits via a single message-passing step while adding only an L1-regularized parameter head. At inference, we apply horizontal flip test-time augmentation (TTA) and average predictions across MIS folds (a compact deep ensemble). Evaluation uses macro AUC averaging classwise ROC-AUC and skipping single-class labels in a fold to reflect balanced performance across conditions. On our dataset, a strong SE-ResNeXt101 baseline attains competitive macro AUC (e.g., 92.64% in our runs). Adding the Label-Graph Refinement consistently improves validation macro AUC across folds with negligible compute. The resulting method is reproducible, hardware-friendly, and requires no extra annotations, offering a practical route to stronger multilabel CXR classifiers.",
+        "authors": [
+          "Utkarsh Prakash Srivastava",
+          "Kaushik Gupta",
+          "Kaushik Nath"
+        ]
+      },
+      {
+        "title": "deep-REMAP: Probabilistic Parameterization of Stellar Spectra Using Regularized Multi-Task Learning",
+        "id": "http://arxiv.org/abs/2510.09362v1",
+        "date": "2025-10-10T13:20:06Z",
+        "abstract": "In the era of exploding survey volumes, traditional methods of spectroscopic analysis are being pushed to their limits. In response, we develop deep-REMAP, a novel deep learning framework that utilizes a regularized, multi-task approach to predict stellar atmospheric parameters from observed spectra. We train a deep convolutional neural network on the PHOENIX synthetic spectral library and use transfer learning to fine-tune the model on a small subset of observed FGK dwarf spectra from the MARVELS survey. We then apply the model to 732 uncharacterized FGK giant candidates from the same survey. When validated on 30 MARVELS calibration stars, deep-REMAP accurately recovers the effective temperature ($T_{\\rm{eff}}$), surface gravity ($\\log \\rm{g}$), and metallicity ([Fe/H]), achieving a precision of, for instance, approximately 75 K in $T_{\\rm{eff}}$. By combining an asymmetric loss function with an embedding loss, our regression-as-classification framework is interpretable, robust to parameter imbalances, and capable of capturing non-Gaussian uncertainties. While developed for MARVELS, the deep-REMAP framework is extensible to other surveys and synthetic libraries, demonstrating a powerful and automated pathway for stellar characterization.",
+        "authors": [
+          "Sankalp Gilda"
+        ]
+      },
+      {
+        "title": "CheX-DS: Improving Chest X-ray Image Classification with Ensemble Learning Based on DenseNet and Swin Transformer",
+        "id": "http://arxiv.org/abs/2505.11168v1",
+        "date": "2025-05-16T12:10:01Z",
+        "abstract": "The automatic diagnosis of chest diseases is a popular and challenging task. Most current methods are based on convolutional neural networks (CNNs), which focus on local features while neglecting global features. Recently, self-attention mechanisms have been introduced into the field of computer vision, demonstrating superior performance. Therefore, this paper proposes an effective model, CheX-DS, for classifying long-tail multi-label data in the medical field of chest X-rays. The model is based on the excellent CNN model DenseNet for medical imaging and the newly popular Swin Transformer model, utilizing ensemble deep learning techniques to combine the two models and leverage the advantages of both CNNs and Transformers. The loss function of CheX-DS combines weighted binary cross-entropy loss with asymmetric loss, effectively addressing the issue of data imbalance. The NIH ChestX-ray14 dataset is selected to evaluate the model's effectiveness. The model outperforms previous studies with an excellent average AUC score of 83.76\\%, demonstrating its superior performance.",
+        "authors": [
+          "Xinran Li",
+          "Yu Liu",
+          "Xiujuan Xu",
+          "Xiaowei Zhao"
+        ]
+      },
+      {
+        "title": "The Tile: A 2D Map of Ranking Scores for Two-Class Classification",
+        "id": "http://arxiv.org/abs/2412.04309v2",
+        "date": "2024-12-05T16:27:59Z",
+        "abstract": "In the computer vision and machine learning communities, as well as in many other research domains, rigorous evaluation of any new method, including classifiers, is essential. One key component of the evaluation process is the ability to compare and rank methods. However, ranking classifiers and accurately comparing their performances, especially when taking application-specific preferences into account, remains challenging. For instance, commonly used evaluation tools like Receiver Operating Characteristic (ROC) and Precision/Recall (PR) spaces display performances based on two scores. Hence, they are inherently limited in their ability to compare classifiers across a broader range of scores and lack the capability to establish a clear ranking among classifiers. In this paper, we present a novel versatile tool, named the Tile, that organizes an infinity of ranking scores in a single 2D map for two-class classifiers, including common evaluation scores such as the accuracy, the true positive rate, the positive predictive value, Jaccard's coefficient, and all F-beta scores. Furthermore, we study the properties of the underlying ranking scores, such as the influence of the priors or the correspondences with the ROC space, and depict how to characterize any other score by comparing them to the Tile. Overall, we demonstrate that the Tile is a powerful tool that effectively captures all the rankings in a single visualization and allows interpreting them.",
+        "authors": [
+          "Sébastien Piérard",
+          "Anaïs Halin",
+          "Anthony Cioppa",
+          "Adrien Deliège",
+          "Marc Van Droogenbroeck"
+        ]
+      },
+      {
+        "title": "Machine Learning Evaluation Metric Discrepancies across Programming Languages and Their Components: Need for Standardization",
+        "id": "http://arxiv.org/abs/2411.12032v2",
+        "date": "2024-11-18T20:07:31Z",
+        "abstract": "This study evaluates metrics for tasks such as classification, regression, clustering, correlation analysis, statistical tests, segmentation, and image-to-image (I2I) translation. Metrics were compared across Python libraries, R packages, and Matlab functions to assess their consistency and highlight discrepancies. The findings underscore the need for a unified roadmap to standardize metrics, ensuring reliable and reproducible ML evaluations across platforms. This study examined a wide range of evaluation metrics across various tasks and found only some to be consistent across platforms, such as (i) Accuracy, Balanced Accuracy, Cohens Kappa, F-beta Score, MCC, Geometric Mean, AUC, and Log Loss in binary classification; (ii) Accuracy, Cohens Kappa, and F-beta Score in multi-class classification; (iii) MAE, MSE, RMSE, MAPE, Explained Variance, Median AE, MSLE, and Huber in regression; (iv) Davies-Bouldin Index and Calinski-Harabasz Index in clustering; (v) Pearson, Spearman, Kendall's Tau, Mutual Information, Distance Correlation, Percbend, Shepherd, and Partial Correlation in correlation analysis; (vi) Paired t-test, Chi-Square Test, ANOVA, Kruskal-Wallis Test, Shapiro-Wilk Test, Welchs t-test, and Bartlett's test in statistical tests; (vii) Accuracy, Precision, and Recall in 2D segmentation; (viii) Accuracy in 3D segmentation; (ix) MAE, MSE, RMSE, and R-Squared in 2D-I2I translation; and (x) MAE, MSE, and RMSE in 3D-I2I translation. Given observation of discrepancies in a number of metrics (e.g. precision, recall and F1 score in binary classification, WCSS in clustering, multiple statistical tests, and IoU in segmentation, amongst multiple metrics), this study concludes that ML evaluation metrics require standardization and recommends that future research use consistent metrics for different tasks to effectively compare ML techniques and solutions.",
+        "authors": [
+          "Mohammad R. Salmanpour",
+          "Morteza Alizadeh",
+          "Ghazal Mousavi",
+          "Saba Sadeghi",
+          "Sajad Amiri",
+          "Mehrdad Oveisi",
+          "Arman Rahmim",
+          "Ilker Hacihaliloglu"
+        ]
+      },
+      {
+        "title": "Ensemble of ConvNeXt V2 and MaxViT for Long-Tailed CXR Classification with View-Based Aggregation",
+        "id": "http://arxiv.org/abs/2410.10710v2",
+        "date": "2024-10-14T16:49:14Z",
+        "abstract": "In this work, we present our solution for the MICCAI 2024 CXR-LT challenge, achieving 4th place in Subtask 2 and 5th in Subtask 1. We leveraged an ensemble of ConvNeXt V2 and MaxViT models, pretrained on an external chest X-ray dataset, to address the long-tailed distribution of chest findings. The proposed method combines state-of-the-art image classification techniques, asymmetric loss for handling class imbalance, and view-based prediction aggregation to enhance classification performance. Through experiments, we demonstrate the advantages of our approach in improving both detection accuracy and the handling of the long-tailed distribution in CXR findings. The code is available at https://github.com/yamagishi0824/cxrlt24-multiview-pp.",
+        "authors": [
+          "Yosuke Yamagishi",
+          "Shouhei Hanaoka"
+        ]
+      },
+      {
+        "title": "Taming the Tail: Leveraging Asymmetric Loss and Pade Approximation to Overcome Medical Image Long-Tailed Class Imbalance",
+        "id": "http://arxiv.org/abs/2410.04084v1",
+        "date": "2024-10-05T08:49:33Z",
+        "abstract": "Long-tailed problems in healthcare emerge from data imbalance due to variability in the prevalence and representation of different medical conditions, warranting the requirement of precise and dependable classification methods. Traditional loss functions such as cross-entropy and binary cross-entropy are often inadequate due to their inability to address the imbalances between the classes with high representation and the classes with low representation found in medical image datasets. We introduce a novel polynomial loss function based on Pade approximation, designed specifically to overcome the challenges associated with long-tailed classification. This approach incorporates asymmetric sampling techniques to better classify under-represented classes. We conducted extensive evaluations on three publicly available medical datasets and a proprietary medical dataset. Our implementation of the proposed loss function is open-sourced in the public repository:https://github.com/ipankhi/ALPA.",
+        "authors": [
+          "Pankhi Kashyap",
+          "Pavni Tandon",
+          "Sunny Gupta",
+          "Abhishek Tiwari",
+          "Ritwik Kulkarni",
+          "Kshitij Sharad Jadhav"
+        ]
+      },
+      {
+        "title": "Category-Prompt Refined Feature Learning for Long-Tailed Multi-Label Image Classification",
+        "id": "http://arxiv.org/abs/2408.08125v1",
+        "date": "2024-08-15T12:51:57Z",
+        "abstract": "Real-world data consistently exhibits a long-tailed distribution, often spanning multiple categories. This complexity underscores the challenge of content comprehension, particularly in scenarios requiring Long-Tailed Multi-Label image Classification (LTMLC). In such contexts, imbalanced data distribution and multi-object recognition pose significant hurdles. To address this issue, we propose a novel and effective approach for LTMLC, termed Category-Prompt Refined Feature Learning (CPRFL), utilizing semantic correlations between different categories and decoupling category-specific visual representations for each category. Specifically, CPRFL initializes category-prompts from the pretrained CLIP's embeddings and decouples category-specific visual representations through interaction with visual features, thereby facilitating the establishment of semantic correlations between the head and tail classes. To mitigate the visual-semantic domain bias, we design a progressive Dual-Path Back-Propagation mechanism to refine the prompts by progressively incorporating context-related visual information into prompts. Simultaneously, the refinement process facilitates the progressive purification of the category-specific visual representations under the guidance of the refined prompts. Furthermore, taking into account the negative-positive sample imbalance, we adopt the Asymmetric Loss as our optimization objective to suppress negative samples across all classes and potentially enhance the head-to-tail recognition performance. We validate the effectiveness of our method on two LTMLC benchmarks and extensive experiments demonstrate the superiority of our work over baselines. The code is available at https://github.com/jiexuanyan/CPRFL.",
+        "authors": [
+          "Jiexuan Yan",
+          "Sheng Huang",
+          "Nankun Mu",
+          "Luwen Huangfu",
+          "Bo Liu"
+        ]
+      },
+      {
+        "title": "PUAL: A Classifier on Trifurcate Positive-Unlabeled Data",
+        "id": "http://arxiv.org/abs/2405.20970v1",
+        "date": "2024-05-31T16:18:06Z",
+        "abstract": "Positive-unlabeled (PU) learning aims to train a classifier using the data containing only labeled-positive instances and unlabeled instances. However, existing PU learning methods are generally hard to achieve satisfactory performance on trifurcate data, where the positive instances distribute on both sides of the negative instances. To address this issue, firstly we propose a PU classifier with asymmetric loss (PUAL), by introducing a structure of asymmetric loss on positive instances into the objective function of the global and local learning classifier. Then we develop a kernel-based algorithm to enable PUAL to obtain non-linear decision boundary. We show that, through experiments on both simulated and real-world datasets, PUAL can achieve satisfactory classification on trifurcate data.",
+        "authors": [
+          "Xiaoke Wang",
+          "Xiaochen Yang",
+          "Rui Zhu",
+          "Jing-Hao Xue"
+        ]
+      },
+      {
+        "title": "Advancing Supervised Learning with the Wave Loss Function: A Robust and Smooth Approach",
+        "id": "http://arxiv.org/abs/2404.18101v2",
+        "date": "2024-04-28T07:32:00Z",
+        "abstract": "Loss function plays a vital role in supervised learning frameworks. The selection of the appropriate loss function holds the potential to have a substantial impact on the proficiency attained by the acquired model. The training of supervised learning algorithms inherently adheres to predetermined loss functions during the optimization process. In this paper, we present a novel contribution to the realm of supervised machine learning: an asymmetric loss function named wave loss. It exhibits robustness against outliers, insensitivity to noise, boundedness, and a crucial smoothness property. Theoretically, we establish that the proposed wave loss function manifests the essential characteristic of being classification-calibrated. Leveraging this breakthrough, we incorporate the proposed wave loss function into the least squares setting of support vector machines (SVM) and twin support vector machines (TSVM), resulting in two robust and smooth models termed Wave-SVM and Wave-TSVM, respectively. To address the optimization problem inherent in Wave-SVM, we utilize the adaptive moment estimation (Adam) algorithm. It is noteworthy that this paper marks the first instance of the Adam algorithm application to solve an SVM model. Further, we devise an iterative algorithm to solve the optimization problems of Wave-TSVM. To empirically showcase the effectiveness of the proposed Wave-SVM and Wave-TSVM, we evaluate them on benchmark UCI and KEEL datasets (with and without feature noise) from diverse domains. Moreover, to exemplify the applicability of Wave-SVM in the biomedical domain, we evaluate it on the Alzheimer Disease Neuroimaging Initiative (ADNI) dataset. The experimental outcomes unequivocally reveal the prowess of Wave-SVM and Wave-TSVM in achieving superior prediction accuracy against the baseline models.",
+        "authors": [
+          "Mushir Akhtar",
+          "M. Tanveer",
+          "Mohd. Arshad"
+        ]
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "source": "crossref",
+    "query": "proper scoring rule robust asymmetric binary classification",
+    "url": "https://api.crossref.org/works?query.title=proper+scoring+rule+robust+asymmetric+binary+classification&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-10-06&rows=20",
+    "retrieved_utc": "2026-10-06T23:11:15.493406+00:00",
+    "raw_file": "raw/crossref_5ad035e148.txt",
+    "papers": [
+      {
+        "title": "Robust Binary Classification",
+        "doi": "10.1002/9781394294404.ch8",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              4
+            ]
+          ]
+        },
+        "journal": [
+          "Fundamentals of Robust Machine Learning"
+        ],
+        "abstract": null,
+        "authors": null
+      },
+      {
+        "title": "VarFlow: Proper Scoring-Rule Diffusion Distillation via Energy Matching",
+        "doi": "10.52202/085713-1847",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "journal": [
+          "Advances in Neural Information Processing Systems 38"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Huiyang",
+            "family": "Shao",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Tsinghua University"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xin",
+            "family": "Xia",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Bytedance"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yuxi",
+            "family": "Ren",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "ByteDance Inc."
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "XING",
+            "family": "WANG",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "ByteDance"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xuefeng",
+            "family": "Xiao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "South China University of Technology"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A proper scoring rule for minimum information bivariate copulas",
+        "doi": "10.1016/j.jmva.2023.105271",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              5
+            ]
+          ]
+        },
+        "journal": [
+          "Journal of Multivariate Analysis"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Yici",
+            "family": "Chen",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tomonari",
+            "family": "Sei",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Generative Bayesian Computation: A Proper Scoring Rule Alternative to DCGAN",
+        "doi": "10.2139/ssrn.7265319",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "journal": null,
+        "abstract": "<jats:p>The deep convolutional generative adversarial network of Radford et al. (2016) fixed a set of architectural conventions that remain in use: strided convolutions in place of pooling, fractionally strided convolutions for upsampling, batch normalisation in both networks, and no fully connected hidden layers. These conventions concern the architecture. The learning signal is a separate object, and it is the learning signal that carries the known pathologies of adversarial training, namely mode dropping, absent uncertainty quantification and sensitivity to the random seed. We show that Radford's generator can be retained verbatim while the discriminator is replaced by a strictly proper scoring rule, which is the Generative Bayesian Computation (GBC) construction of Polson and Sokolov (2023). The resulting estimator is Fisher consistent for the conditional quantile function, admits a Knothe-Rosenblatt transport interpretation, and cannot drop mass without incurring an excess risk that we bound below. In four studies, GBC attains lower calibration error at equal mode coverage on an eight component mixture; on amortised posterior inference with exact ground truth it is roughly seven times closer in W 1 and nominally calibrated, where a conditional GAN covers 58% at nominal 90%; and on a miniature but architecturally faithful DCGAN, holding the generator fixed and varying only the learning signal, the unmodified adversarial arm recovers 4.0 ± 1.6 of eight modes while GBC recovers 8.0 ± 0.0 and halves the energy distance. That advantage does not survive stabilisation: adding spectral normalisation restores full mode coverage to the adversarial arm and gives it both a smaller energy distance and sharper samples than GBC, leaving GBC ahead only on seed to seed variance, by a factor of five to ten. A hybrid arm that adds a critic supplied sharpness term to the score recovers most of the fidelity gap while retaining the best mode balance of any arm. A fourth study isolates a design rule for the quantile path that mattered more than network width. We are explicit about scale: the image study is 16 × 16, and the sharpness deficit of scoring rule training is real and unresolved.</jats:p>",
+        "authors": [
+          {
+            "given": "Nicholas G.",
+            "family": "Polson",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Vadim",
+            "family": "Sokolov",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Proper Scoring Rules",
+        "doi": "10.24818/ida-ql/2025.215",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "journal": [
+          "IDA Quantlets Repository"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Owen",
+            "family": "Chaffard",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wolfgang Karl",
+            "family": "Härdle",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Proper Scoring Rules",
+        "doi": "10.24818/ida-cl/2025.133",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "journal": null,
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Owen",
+            "family": "Chaffard",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wolfgang Karl",
+            "family": "Härdle",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Proper Scoring Rules",
+        "doi": "10.24818/ida-ql/2025.209",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "journal": [
+          "IDA Quantlets Repository"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Owen",
+            "family": "Chaffard",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wolfgang Karl",
+            "family": "Härdle",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "P52 - Survival models: Proper scoring rule and stochastic optimization with competing risks",
+        "doi": "10.1016/j.jeph.2025.203083",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "journal": [
+          "Journal of Epidemiology and Population Health"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "J.",
+            "family": "Alberge",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "V.",
+            "family": "Maladière",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "O.",
+            "family": "Grisel",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "J.",
+            "family": "Abécassis",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "G.",
+            "family": "Varoquaux",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Proper Scoring Rules - Scoring rules characterization",
+        "doi": "10.24818/ida-ql/2025.214",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "journal": [
+          "IDA Quantlets Repository"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Owen",
+            "family": "Chaffard",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wolfgang Karl",
+            "family": "Härdle",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Proper Scoring Rules - Locality of scoring rules",
+        "doi": "10.24818/ida-ql/2025.213",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "journal": [
+          "IDA Quantlets Repository"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Owen",
+            "family": "Chaffard",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wolfgang Karl",
+            "family": "Härdle",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Optimal thresholding for binary classification applied in credit scoring",
+        "doi": "10.18778/2391-6478.2.50.03",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              30
+            ]
+          ]
+        },
+        "journal": [
+          "Journal of Finance and Financial Law"
+        ],
+        "abstract": "<jats:p>The paper concerns a new method of classifying individuals into two subpopulations and demonstrates the application of this method in credit scoring. Individuals are classified into two subpopulations depending on the duration   of a certain phenomenon (e.g., default). The duration may be shorter or longer than a certain fixed value . It is assumed that the variable  is not known at the time of classification, so the explanatory continuous predictive marker is used instead. The optimal acceptance threshold for a predictive marker is determined by a time-dependent receiver operating curve (ROC) estimated from a random sample. A typical complexity of time-to-event data is that observations in the sample can be right-censored. Therefore, the estimation is based on a sequential random sampling and the Kaplan-Meier estimator.</jats:p>",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-0444-4181",
+            "authenticated-orcid": false,
+            "given": "Agnieszka",
+            "family": "Rossa",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Evaluating Aleatoric Uncertainty from Repeated Measurements: A Proper Scoring Rule for Heteroscedastic Probabilistic Surrogates",
+        "doi": "10.2139/ssrn.7548499",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "journal": null,
+        "abstract": "<jats:p>Probabilistic surrogate models increasingly require reliable predictive uncertainty for engineering design and certification, yet aggregate metrics such as the negative log-likelihood evaluate the total predictive distribution and cannot reveal whether an underestimated aleatoric variance is compensated by an inflated epistemic term. Repeated measurements, routinely available in experimental campaigns, give direct access to the aleatoric variance, yet no aggregable scoring rule exploits them. We introduce the aleatoric variance negative log-likelihood (AV-NLL), which evaluates the negative log-density of the chi-squared sampling distribution of the replicate variance, and show that it is a strictly proper scoring rule for the aleatoric variance. A hierarchical cluster aggregation with a common reference grid extends it to repeated measurement sweeps with differing discretizations, such as duplicated aerodynamic polars. Synthetic experiments with known ground truth confirm that AV-NLL discriminates miscalibrated aleatoric variances of a Bayesian neural network and a Deep Ensemble and, used as tuning objective, reduces the squared log-variance error of the Bayesian network by 36 to 57 percent. On 24 duplicate clusters of a real, industrial-scale wind-tunnel dataset, AV-NLL reverses the ranking of several aggregate metrics: the Deep Ensemble appears superior under aggregate metrics, yet its aleatoric variance falls short of the observed repeat scatter more strongly than that of the Bayesian network, which its larger epistemic term compensates. AV-NLL thus provides a novel model-agnostic diagnostic for calibration-aware surrogate modeling and is relevant for adaptive sampling and data fusion.</jats:p>",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0001-5884-6119",
+            "authenticated-orcid": true,
+            "given": "Ferdinand",
+            "family": "Dunkes",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Christian",
+            "family": "Breitsamter",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Localizing Strictly Proper Scoring Rules",
+        "doi": "10.1080/01621459.2025.2576189",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              5
+            ]
+          ]
+        },
+        "journal": [
+          "Journal of the American Statistical Association"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-4824-8788",
+            "authenticated-orcid": false,
+            "given": "Ramon F. A.",
+            "family": "de Punder",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Quantitative Economics, University of Amsterdam",
+                "place": [
+                  "Amsterdam, The Netherlands"
+                ]
+              },
+              {
+                "name": "Tinbergen Institute",
+                "place": [
+                  "Amsterdam, The Netherlands"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0006-1455-5068",
+            "authenticated-orcid": false,
+            "given": "Cees G. H.",
+            "family": "Diks",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Quantitative Economics, University of Amsterdam",
+                "place": [
+                  "Amsterdam, The Netherlands"
+                ]
+              },
+              {
+                "name": "Tinbergen Institute",
+                "place": [
+                  "Amsterdam, The Netherlands"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9582-3955",
+            "authenticated-orcid": false,
+            "given": "Roger J. A.",
+            "family": "Laeven",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Quantitative Economics, University of Amsterdam",
+                "place": [
+                  "Amsterdam, The Netherlands"
+                ]
+              },
+              {
+                "name": "CentER, Tilburg University",
+                "place": [
+                  "Tilburg, The Netherlands"
+                ]
+              },
+              {
+                "name": "EURANDOM, Eindhoven University of Technology",
+                "place": [
+                  "Eindhoven, The Netherlands"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1880-204X",
+            "authenticated-orcid": false,
+            "given": "Dick J. C.",
+            "family": "van Dijk",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Tinbergen Institute",
+                "place": [
+                  "Amsterdam, The Netherlands"
+                ]
+              },
+              {
+                "name": "Department of Econometrics, Erasmus University Rotterdam",
+                "place": [
+                  "Rotterdam, The Netherlands"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Proper Scoring Rules - Local scale dependence of scoring rules",
+        "doi": "10.24818/ida-ql/2025.211",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "journal": [
+          "IDA Quantlets Repository"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Owen",
+            "family": "Chaffard",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wolfgang Karl",
+            "family": "Härdle",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minimal counterexamples separating accuracy, proper scoring rules, and calibration error in probabilistic classification",
+        "doi": "10.2139/ssrn.7082155",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "journal": null,
+        "abstract": "<jats:p>Probabilistic classifiers built with machine learning are routinely judged by three families of numbers: classification accuracy, a strictly proper score such as the logarithmic score (cross-entropy) or the Brier score, and the expected calibration error. In practice these are often treated as if an improvement in one entailed an improvement in the others, and a low cross-entropy or a low calibration error is read as evidence of trustworthy probabilities. This paper collects four exact, finite counterexamples that break these implications and organises them through the reliability–resolution–uncertainty decomposition of the Brier score, which locates each failure in a distinct component. The examples show, respectively, that accuracy is unrelated to calibration in both directions; that a forecaster can have a strictly lower logarithmic score and a strictly lower Brier score yet a strictly larger calibration error; that the uninformative constant forecaster attains zero calibration error, because that error measures only the reliability term and is blind to resolution; and that the value of the calibration error, together with the ranking it induces between two models, can be reversed by changing the binning scheme. Short remarks establish that each construction is minimal and that the phenomena persist in parametric families. Every quantity is given in closed form and reproduced from small tabulated data sets.</jats:p>",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0002-9521-4847",
+            "authenticated-orcid": true,
+            "given": "Dr. Ibrahim",
+            "family": "Al Souleiman",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0000-4746-0694",
+            "authenticated-orcid": true,
+            "given": "Habib",
+            "family": "Al Souleiman",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fixing imbalanced binary classification: An asymmetric Bayesian learning approach",
+        "doi": "10.1371/journal.pone.0311246",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              16
+            ]
+          ]
+        },
+        "journal": [
+          "PLOS ONE"
+        ],
+        "abstract": "<jats:p>Most statistical and machine learning models used for binary data modeling and classification assume that the data are balanced. However, this assumption can lead to poor predictive performance and bias in parameter estimation when there is an imbalance in the data due to the threshold election for the binary classification. To address this challenge, several authors suggest using asymmetric link functions in binary regression, instead of the traditional symmetric functions such as logit or probit, aiming to highlight characteristics that would help the classification task. Therefore, this study aims to introduce new classification functions based on the Lomax distribution (and its variations; including power and reverse versions). The proposed Bayesian functions have proven asymmetry and were implemented in a Stan program into the R workflow. Additionally, these functions showed promising results in real-world data applications, outperforming classical link functions in terms of metrics. For instance, in the first example, comparing the reverse power double Lomax (RPDLomax) with the logit link showed that, regardless of the data imbalance, the RPDLomax model assigns effectively lower mean posterior predictive probabilities to failure and higher probabilities to success (21.4% and 63.7%, respectively), unlike Logistic regression, which does not clearly distinguish between the mean posterior predictive probabilities for these two classes (36.0% and 39.5% for failure and success, respectively). That is, the proposed asymmetric Lomax approach is a competitive model for differentiating binary data classification in imbalanced tasks against the Logistic approach.</jats:p>",
+        "authors": [
+          {
+            "given": "Letícia F. M.",
+            "family": "Reis",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Diego C.",
+            "family": "Nascimento",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-6312-6098",
+            "authenticated-orcid": true,
+            "given": "Paulo H.",
+            "family": "Ferreira",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Francisco",
+            "family": "Louzada",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Employing Iterative Feature Selection in Fuzzy Rule-Based Binary Classification",
+        "doi": "10.1109/tfuzz.2024.3414836",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              9
+            ]
+          ]
+        },
+        "journal": [
+          "IEEE Transactions on Fuzzy Systems"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Haoning",
+            "family": "Li",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Artificial Intelligence, OPtics and ElectroNics, Northwestern Polytechnical University, Xi&#x0027;an, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8182-0243",
+            "authenticated-orcid": false,
+            "given": "Cong",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Artificial Intelligence, OPtics and ElectroNics, Northwestern Polytechnical University, Xi&#x0027;an, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1080-6940",
+            "authenticated-orcid": false,
+            "given": "Qinghua",
+            "family": "Huang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Artificial Intelligence, OPtics and ElectroNics, Northwestern Polytechnical University, Xi&#x0027;an, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Proper Scoring Rules - Probabilistic forecasting examples",
+        "doi": "10.24818/ida-ql/2025.212",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "journal": [
+          "IDA Quantlets Repository"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Owen",
+            "family": "Chaffard",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wolfgang Karl",
+            "family": "Härdle",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Gradient Boosting-Based Predictive Uncertainty Estimation for Tabular Data Using Statistical Variance and Proper Scoring Rule",
+        "doi": "10.1109/tase.2026.3671833",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "journal": [
+          "IEEE Transactions on Automation Science and Engineering"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Peng-Cheng",
+            "family": "Yan",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Reliability and Systems Engineering, Beihang University, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7108-637X",
+            "authenticated-orcid": false,
+            "given": "Enrico",
+            "family": "Zio",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Energy Department, Politecnico di Milano, Milan, Italy"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-6248-7537",
+            "authenticated-orcid": false,
+            "given": "Yan-Hui",
+            "family": "Lin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Reliability and Systems Engineering, Beihang University, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Proper Scoring Rules - Multivariate Probabilistic Forecasting",
+        "doi": "10.24818/ida-ql/2025.210",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "journal": [
+          "IDA Quantlets Repository"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Owen",
+            "family": "Chaffard",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wolfgang Karl",
+            "family": "Härdle",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "ok"
+  }
+]

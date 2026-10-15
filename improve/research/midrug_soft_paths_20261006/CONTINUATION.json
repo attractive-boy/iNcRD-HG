@@ -1,0 +1,92 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn": "progress: path moments and class-frequency experiments completed and audited",
+  "current_turn": "progress: restricted soft path completion, exact query/gradient checks, 18 fits and 24 checkpoint replays",
+  "best": {
+    "config": "soft_rec10",
+    "mean_inner_auc": 0.9535954997162254,
+    "mean_inner_ap": 0.9131846493506764,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0009957046614740284,
+          "fold_deltas": [
+            0.0017767296069945981,
+            0.00041572148721780167,
+            0.0007946628902096853
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.001359540255811161,
+          "fold_deltas": [
+            0.0028098518181344234,
+            -9.01613126326195e-05,
+            0.001358930261931679
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.00011698229394596638,
+          "fold_deltas": [
+            2.6185191115302153e-05,
+            -0.0002426473556590425,
+            -0.00013448471729415878
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0009059321033720499,
+          "fold_deltas": [
+            -0.0009485908091600992,
+            -0.0007372527515606686,
+            -0.0010319527493953817
+          ]
+        }
+      },
+      "direct_rec10": {
+        "auc": {
+          "mean_delta": 0.0005143533954563573,
+          "fold_deltas": [
+            0.001125533952534341,
+            0.00023019288961667606,
+            0.0001873333442180547
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.000792149964768396,
+          "fold_deltas": [
+            0.0014891549377229474,
+            0.00026949814597432287,
+            0.0006177968106079179
+          ]
+        }
+      },
+      "uniform_rec10": {
+        "auc": {
+          "mean_delta": -7.601506800040496e-05,
+          "fold_deltas": [
+            -4.035095024323976e-05,
+            -0.00014816519947324913,
+            -3.952905428472597e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0004192596320152046,
+          "fold_deltas": [
+            -0.0006427536751938412,
+            -0.00026738739134635203,
+            -0.00034763782950542055
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0009059321033720499
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Freeze original-validation confirmation if promoted; otherwise use paired controls and coverage to assess the next mechanism."
+}

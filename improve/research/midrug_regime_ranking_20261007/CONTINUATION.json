@@ -1,0 +1,171 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "cross",
+    "mean_inner_auc": 0.9537823875932098,
+    "mean_inner_ap": 0.91384626870118,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0011825925384583529,
+          "fold_deltas": [
+            0.0022626580716279543,
+            0.00047241078092918887,
+            0.0008127087628179153
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0020211596063148076,
+          "fold_deltas": [
+            0.00415586708893767,
+            0.0005058831398186969,
+            0.001401728590188056
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 6.990558303835807e-05,
+          "fold_deltas": [
+            0.0005121136557486583,
+            -0.0001859580619476553,
+            -0.0001164388446859288
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00024431275286840304,
+          "fold_deltas": [
+            0.0003974244616431477,
+            -0.00014120829910935218,
+            -0.0009891544211390046
+          ]
+        }
+      },
+      "all": {
+        "auc": {
+          "mean_delta": 0.00010088064576426377,
+          "fold_deltas": [
+            0.0003554317744843827,
+            -0.00012669198215831123,
+            7.390214496671987e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": 4.24043014963423e-05,
+          "fold_deltas": [
+            0.0005377374174238003,
+            -0.00016995286306686896,
+            -0.00024057164986790447
+          ]
+        }
+      },
+      "within": {
+        "auc": {
+          "mean_delta": -2.0652241644936176e-05,
+          "fold_deltas": [
+            0.0003867681507373488,
+            -0.0005896545474691761,
+            0.00014092967179701876
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0001612839272925696,
+          "fold_deltas": [
+            0.00021959082292311027,
+            -0.0007783417735294229,
+            7.48991687286038e-05
+          ]
+        }
+      }
+    },
+    "selection_score": -0.00024431275286840304
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 9,
+  "new_checkpoint_replays": 9,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Use frozen comparison-set diagnostics to choose a distinct next hypothesis; no retrospective all/within promotion or ranking-weight/temperature sweep.",
+  "component_diagnostics": {
+    "status": "passed",
+    "means": [
+      {
+        "config": "all",
+        "train": {
+          "auc": 0.9614281092434224,
+          "ap": 0.9276326775085738,
+          "bce": 0.23593944311141968,
+          "conditional_auc": {
+            "all": 0.9614281092434221,
+            "cross": 0.9727363450481251,
+            "within": 0.8870964915135314
+          }
+        },
+        "val": {
+          "auc": 0.9536815069474454,
+          "ap": 0.9138038643996836,
+          "bce": 0.2581399778525035,
+          "conditional_auc": {
+            "all": 0.9536815069474455,
+            "cross": 0.9682962533020443,
+            "within": 0.8574154057098632
+          }
+        },
+        "weighted_rank_norm_over_bce": 0.08563525650031345
+      },
+      {
+        "config": "cross",
+        "train": {
+          "auc": 0.9618012619888673,
+          "ap": 0.9284479292397619,
+          "bce": 0.23470792671044668,
+          "conditional_auc": {
+            "all": 0.9618012619888673,
+            "cross": 0.9729531534767202,
+            "within": 0.8884887905336548
+          }
+        },
+        "val": {
+          "auc": 0.9537823875932098,
+          "ap": 0.91384626870118,
+          "bce": 0.25809535880883533,
+          "conditional_auc": {
+            "all": 0.9537823875932098,
+            "cross": 0.9683760044249375,
+            "within": 0.8576508991918547
+          }
+        },
+        "weighted_rank_norm_over_bce": 0.06212378606316273
+      },
+      {
+        "config": "within",
+        "train": {
+          "auc": 0.9619031062732929,
+          "ap": 0.9285237901498382,
+          "bce": 0.23422845701376596,
+          "conditional_auc": {
+            "all": 0.9619031062732929,
+            "cross": 0.9729804718021723,
+            "within": 0.8891762236143448
+          }
+        },
+        "val": {
+          "auc": 0.9538030398348547,
+          "ap": 0.9140075526284726,
+          "bce": 0.2576424131790797,
+          "conditional_auc": {
+            "all": 0.9538030398348547,
+            "cross": 0.9682510786131981,
+            "within": 0.8586759580436971
+          }
+        },
+        "weighted_rank_norm_over_bce": 0.2378639418664369
+      }
+    ],
+    "selection_unchanged": true
+  }
+}

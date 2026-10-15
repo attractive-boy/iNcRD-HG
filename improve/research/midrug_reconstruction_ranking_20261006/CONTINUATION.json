@@ -1,0 +1,73 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "current_turn": "progress: 15 new fits and 24 checkpoint replays; no complementarity over reconstruction-only",
+  "best_combination": {
+    "config": "rec3_bpr010",
+    "mean_inner_auc": 0.953432874843161,
+    "mean_inner_ap": 0.9130347872299978,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "fold_deltas": [
+            0.0020858007152422253,
+            0.00024264735565915352,
+            0.00017079129432739926
+          ],
+          "mean_delta": 0.0008330797884095927
+        },
+        "ap": {
+          "fold_deltas": [
+            0.003739787674183037,
+            5.631853534748821e-05,
+            -0.00016707180413311207
+          ],
+          "mean_delta": 0.001209678135132471
+        }
+      },
+      "bpr010": {
+        "auc": {
+          "fold_deltas": [
+            0.0025300904333479535,
+            0.0003873768403621636,
+            0.0005216116511029822
+          ],
+          "mean_delta": 0.0011463596416043664
+        },
+        "ap": {
+          "fold_deltas": [
+            0.0038563626785445004,
+            0.0002293458239747137,
+            0.00047241282947352303
+          ],
+          "mean_delta": 0.0015193737773309124
+        }
+      },
+      "unmasked3": {
+        "auc": {
+          "fold_deltas": [
+            -5.19411168025119e-05,
+            -0.0002774339677092952,
+            -0.00017831040791405073
+          ],
+          "mean_delta": -0.00016922849747528593
+        },
+        "ap": {
+          "fold_deltas": [
+            -0.00018557302746979865,
+            -0.0006229208676593601,
+            -0.0016889071184928994
+          ],
+          "mean_delta": -0.000832467004540686
+        }
+      }
+    },
+    "selection_score": -0.000832467004540686
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Assess robust masked matrix completion from original miRNA/drug labels and similarities; avoid repeating neural bilinear fusion."
+}

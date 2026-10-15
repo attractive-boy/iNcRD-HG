@@ -1,0 +1,159 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "root_path",
+    "mean_inner_auc": 0.9537197806495294,
+    "mean_inner_ap": 0.914107571598076,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0011199855947780686,
+          "fold_deltas": [
+            0.0017647101750071226,
+            0.0006665286654565783,
+            0.0009287179438705051
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.002282462503210625,
+          "fold_deltas": [
+            0.003787746793986857,
+            0.0006676608095810277,
+            0.00239197990606399
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 7.298639358073918e-06,
+          "fold_deltas": [
+            1.4165759127826583e-05,
+            8.159822579734133e-06,
+            -4.296636333389614e-07
+          ]
+        },
+        "ap": {
+          "mean_delta": 1.699014402741413e-05,
+          "fold_deltas": [
+            2.9304166692334377e-05,
+            2.056937065297859e-05,
+            1.0968947369294213e-06
+          ]
+        }
+      },
+      "kernel_pathwise": {
+        "auc": {
+          "mean_delta": 4.2935825659654965e-06,
+          "fold_deltas": [
+            6.8682468497005544e-06,
+            6.012500848195934e-06,
+            0.0
+          ]
+        },
+        "ap": {
+          "mean_delta": 6.951901651156926e-06,
+          "fold_deltas": [
+            3.1611842279399838e-06,
+            1.7694520725530793e-05,
+            0.0
+          ]
+        }
+      },
+      "kernel_mpnn": {
+        "auc": {
+          "mean_delta": -0.00015104994865685248,
+          "fold_deltas": [
+            8.15604313419982e-06,
+            -0.00032939915361174243,
+            -0.0001319067354930148
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0001208874331734,
+          "fold_deltas": [
+            -2.112091451822451e-05,
+            -0.0002983620399096276,
+            -4.317934509234789e-05
+          ]
+        }
+      },
+      "root_endpoints": {
+        "auc": {
+          "mean_delta": 2.003304970576991e-06,
+          "fold_deltas": [
+            5.580450565423334e-06,
+            4.2946434630763974e-07,
+            0.0
+          ]
+        },
+        "ap": {
+          "mean_delta": 2.8588886273143527e-07,
+          "fold_deltas": [
+            -6.649413777481961e-06,
+            7.507080365676266e-06,
+            0.0
+          ]
+        }
+      },
+      "global_only": {
+        "auc": {
+          "mean_delta": 4.2935825659654965e-06,
+          "fold_deltas": [
+            6.8682468497005544e-06,
+            6.012500848195934e-06,
+            0.0
+          ]
+        },
+        "ap": {
+          "mean_delta": 6.997939738795367e-06,
+          "fold_deltas": [
+            3.1611842279399838e-06,
+            1.7832634988446117e-05,
+            0.0
+          ]
+        }
+      }
+    },
+    "selection_score": -0.00015104994865685248
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 9,
+  "new_checkpoint_replays": 9,
+  "final_state_inspections": 9,
+  "reused_control_checks": 12,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "component_diagnostics": {
+    "root_path": {
+      "train_auc": 0.9601168536045566,
+      "train_ap": 0.9253513864773822,
+      "val_branch_logit_rms": 0.03983263050516447,
+      "val_branch_logit_std": 0.006465841923879149,
+      "val_branch_logit_mean": 0.007163467817008495,
+      "final_inner_auc_from_curve": 0.9537119060724185,
+      "final_inner_ap_from_curve": 0.9140850237570741
+    },
+    "root_endpoints": {
+      "train_auc": 0.9600913865722841,
+      "train_ap": 0.9252999544170452,
+      "val_branch_logit_rms": 0.034934474931408964,
+      "val_branch_logit_std": 0.005931724444963038,
+      "val_branch_logit_mean": 0.0027694030043979487,
+      "final_inner_auc_from_curve": 0.9536977360010593,
+      "final_inner_ap_from_curve": 0.914043416032322
+    },
+    "global_only": {
+      "train_auc": 0.9600794684366699,
+      "train_ap": 0.9252848000794559,
+      "val_branch_logit_rms": 0.032500252748529114,
+      "val_branch_logit_std": 0.0008025863159370298,
+      "val_branch_logit_mean": 0.002203124575316906,
+      "final_inner_auc_from_curve": 0.9537087566658592,
+      "final_inner_ap_from_curve": 0.9140897858215764
+    }
+  },
+  "next_action": "Use the frozen rooted-path versus endpoint-only/global controls and branch-variation diagnostics to choose the next distinct hypothesis. Do not retrospectively select controls or sweep kernel steps, prototype counts, pooling coefficients or extraction sizes."
+}

@@ -1,0 +1,127 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "label",
+    "mean_inner_auc": 0.9506503173147364,
+    "mean_inner_ap": 0.9084963692927954,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": -0.001949477740015008,
+          "fold_deltas": [
+            -0.001516594757553058,
+            -0.0023800914071916424,
+            -0.0019517470553003236
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0033287398020697876,
+          "fold_deltas": [
+            -0.0022472108516746747,
+            -0.004011571809674153,
+            -0.003727436744860535
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.0030621646954350026,
+          "fold_deltas": [
+            -0.003267139173432354,
+            -0.0030384602500684865,
+            -0.0028808946628041676
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.005594212161252998,
+          "fold_deltas": [
+            -0.006005653478969197,
+            -0.004658663248602202,
+            -0.006118319756187596
+          ]
+        }
+      },
+      "features": {
+        "auc": {
+          "mean_delta": -0.0016867463337878474,
+          "fold_deltas": [
+            -0.0019819184816366464,
+            -0.002324690506518956,
+            -0.0007536300132079399
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0017482978521660142,
+          "fold_deltas": [
+            -0.0012161050415244734,
+            -0.002775435529713599,
+            -0.00125335298525997
+          ]
+        }
+      },
+      "direct": {
+        "auc": {
+          "mean_delta": -0.001708140506160934,
+          "fold_deltas": [
+            -0.001770290625572768,
+            -0.002397269981043393,
+            -0.0009568609118666416
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.002024809290602151,
+          "fold_deltas": [
+            -0.0016563487475951266,
+            -0.003082109897255658,
+            -0.0013359692269556689
+          ]
+        }
+      }
+    },
+    "selection_score": -0.005594212161252998
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 9,
+  "new_checkpoint_replays": 9,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "component_diagnostics": {
+    "label": {
+      "train_auc": 0.9639591312357142,
+      "train_ap": 0.9339383824152693,
+      "inner_auc": 0.9506503173147364,
+      "inner_ap": 0.9084963692927954,
+      "mean_abs_residual_logit": 0.4957130750020345,
+      "rms_residual_logit": 0.5432526071866354,
+      "mean_effective_neighbors": 31.610933939615887,
+      "same_miRNA_mass": 0.08490584542353947,
+      "same_drug_mass": 0.31554914514223736,
+      "positive_label_mass": 0.3665142357349396
+    },
+    "features": {
+      "train_auc": 0.9659435531774515,
+      "train_ap": 0.9355018411312243,
+      "inner_auc": 0.9523370636485242,
+      "inner_ap": 0.9102446671449614,
+      "mean_abs_residual_logit": 0.7165618141492208,
+      "rms_residual_logit": 0.8343784610430399,
+      "mean_effective_neighbors": 31.880159378051758,
+      "same_miRNA_mass": 0.1399894803762436,
+      "same_drug_mass": 0.1752835363149643,
+      "positive_label_mass": 0.3650437792142232
+    },
+    "direct": {
+      "train_auc": 0.9634429205150038,
+      "train_ap": 0.9316650884758805,
+      "inner_auc": 0.9523584578208973,
+      "inner_ap": 0.9105211785833975,
+      "mean_abs_residual_logit": 0.5815114974975586,
+      "rms_residual_logit": 0.6809072295824686
+    }
+  },
+  "next_action": "Review frozen retrieval component evidence and prior experiments to choose a distinct next hypothesis; no retrospective neighbor/width/weight sweep."
+}

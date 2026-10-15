@@ -1,0 +1,60 @@
+{
+  "configs": {
+    "original": {
+      "transform": "original",
+      "nodes": []
+    },
+    "mi_global": {
+      "transform": "global",
+      "nodes": [
+        "miRNA"
+      ]
+    },
+    "mi_column": {
+      "transform": "column",
+      "nodes": [
+        "miRNA"
+      ]
+    },
+    "rna_global": {
+      "transform": "global",
+      "nodes": [
+        "miRNA",
+        "lncRNA"
+      ]
+    },
+    "rna_column": {
+      "transform": "column",
+      "nodes": [
+        "miRNA",
+        "lncRNA"
+      ]
+    },
+    "rna_rowz": {
+      "transform": "rowz",
+      "nodes": [
+        "miRNA",
+        "lncRNA"
+      ]
+    },
+    "rna_columnz": {
+      "transform": "columnz",
+      "nodes": [
+        "miRNA",
+        "lncRNA"
+      ]
+    },
+    "rna_stats": {
+      "transform": "stats",
+      "nodes": [
+        "miRNA",
+        "lncRNA"
+      ]
+    }
+  },
+  "seed": 42,
+  "source_sha256": "a83d34b0ff9affcfcba99cd88d68b75a918ab35dbb8cf3639d7a307746b8bbff",
+  "model_sha256": "470638241e9f2e46c4d613ee4ea1f4cd7731a33481bdd901cb15130d888a9258",
+  "selection": "min(validation AUC gain, validation AP gain)",
+  "test_evaluated": false
+}

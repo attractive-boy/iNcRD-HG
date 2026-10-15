@@ -1,0 +1,110 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn": "progress: two soft-completion experiments and certified bound on fixed probability mixtures",
+  "current_turn": "progress: same-forward full completion gradients, 6 fits and new checkpoint replays, 24 immutable control checks",
+  "best": {
+    "config": "full_rec10",
+    "mean_inner_auc": 0.9536760195659838,
+    "mean_inner_ap": 0.9140345802842952,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0010762245112324968,
+          "fold_deltas": [
+            0.0021287272580541305,
+            0.00044707238449770426,
+            0.0006528738911456555
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0022094711894298977,
+          "fold_deltas": [
+            0.003787698169551934,
+            0.0005591654614593988,
+            0.00228154993727836
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -3.6462444187497965e-05,
+          "fold_deltas": [
+            0.00037818284217483455,
+            -0.0002112964583791399,
+            -0.00027627371635818854
+          ]
+        },
+        "ap": {
+          "mean_delta": -5.600116975331323e-05,
+          "fold_deltas": [
+            2.925554225741145e-05,
+            -8.792597746865027e-05,
+            -0.00010933307404870085
+          ]
+        }
+      },
+      "soft_rec10": {
+        "auc": {
+          "mean_delta": 9.173718706441865e-05,
+          "fold_deltas": [
+            5.408744394319598e-05,
+            0.0003289696892655458,
+            -0.00010784557201548584
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00016402577213499767,
+          "fold_deltas": [
+            -0.0003325226174177853,
+            -0.0006602530649686411,
+            0.0005006983659814335
+          ]
+        }
+      },
+      "direct_rec10": {
+        "auc": {
+          "mean_delta": 7.18570479882515e-05,
+          "fold_deltas": [
+            -3.391196882163161e-05,
+            0.0003263929031877,
+            -7.690979040131385e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -8.769154712836198e-05,
+          "fold_deltas": [
+            0.00013622734896978628,
+            -0.000776470493397019,
+            0.0003771685030421468
+          ]
+        }
+      },
+      "uniform_rec10": {
+        "auc": {
+          "mean_delta": -0.0002187529222736906,
+          "fold_deltas": [
+            -0.00020733520178273235,
+            -0.0001614785942084529,
+            -0.0002874449708298865
+          ]
+        },
+        "ap": {
+          "mean_delta": -8.352460489624569e-05,
+          "fold_deltas": [
+            -0.00013192324409372347,
+            5.588242933696197e-05,
+            -0.00017453299993197557
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0002187529222736906
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Freeze original-validation confirmation if promoted; otherwise use the paired gradient-only result to select the next mechanism."
+}

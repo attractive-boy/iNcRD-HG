@@ -1,0 +1,83 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "ensemble8",
+    "mean_inner_auc": 0.9540113462970207,
+    "mean_inner_ap": 0.9143350617002101,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0014115512422693266,
+          "fold_deltas": [
+            0.002266521460481119,
+            0.000800951005848316,
+            0.0011671812604785448
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.002509952605344775,
+          "fold_deltas": [
+            0.004119042865719513,
+            0.0008944787416331756,
+            0.0025163362086816354
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 0.00029886428684933186,
+          "fold_deltas": [
+            0.000515977044601823,
+            0.00014258216297147186,
+            0.0002380336529747007
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.000244480246161564,
+          "fold_deltas": [
+            0.00036060023842499067,
+            0.00024738730270512654,
+            0.00012545319735457472
+          ]
+        }
+      },
+      "mean_individual_members": {
+        "auc": {
+          "mean_delta": 0.0004046600581846989,
+          "fold_deltas": [
+            0.0002659835908995767,
+            0.0005841251940105208,
+            0.00036387138964399934
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0007517114835727812,
+          "fold_deltas": [
+            0.000477636254700764,
+            0.0010639673564208918,
+            0.0007135308395966877
+          ]
+        }
+      }
+    },
+    "selection_score": 0.000244480246161564
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 21,
+  "new_checkpoint_replays": 21,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "diversity": {
+    "mean_residual_correlation": 0.9940826323745573,
+    "mean_member_probability_sd": 0.01324040445333913,
+    "mean_member_brier": 0.07740449143222622,
+    "ensemble_brier": 0.07698200445945752,
+    "probability_variance": 0.00042248697276870746,
+    "fraction_threshold_disagreement": 0.03696491990991794
+  },
+  "next_action": "Use frozen diversity evidence and review recent miRNA-drug methods against prior experiments; no retrospective seed/weight sweep."
+}

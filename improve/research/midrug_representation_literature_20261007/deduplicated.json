@@ -1,0 +1,2258 @@
+[
+  {
+    "title": "Dual-granularity feature learning reveals static and dynamic mechanisms of ncRNA-drug interactions.",
+    "doi": "10.1109/jbhi.2026.3717803",
+    "pmid": "42519854",
+    "pmcid": null,
+    "date": "2026-07-28",
+    "journal": "IEEE journal of biomedical and health informatics",
+    "abstract": "Accurately identifying interactions between non-coding RNAs (ncRNAs) and drugs is crucial for elucidating drug mechanisms and advancing drug repositioning. Existing deep learning-based methods for ncRNA-drug association prediction typically leverage multi-source biological information to learn informative representations, thereby alleviating the cold-start issue arising from the scarcity of experimentally validated associations. However, the direct fusion of multi-source features often introduces feature redundancy, semantic conflicts, and high-dimensional feature sparsity, thereby hindering model convergence and degrading predictive performance. To address these challenges, this study proposes DC-MetaMG, a deep learning framework based on a causal disentanglement strategy that models association responses as the synergistic interplay between two complementary mechanisms: static binding and dynamic regulation. By characterizing the principal patterns underlying differential responses between drugs and ncRNAs across multiple dimensions, the proposed framework effectively suppresses spurious associations arising from irrelevant feature interactions and mitigates the adverse effects introduced during model training with multi-source biomedical information, thereby improving the reliability of association prediction. Experiments conducted on lncRNA-drug and miRNA-drug datasets demonstrate the superior performance of the proposed model. Under five-fold cross-validation, the proposed model achieves an average AUC improvement of 0.41% over competing methods. Under the cold evaluation experiments, the AUC, ACC, and AUPR metrics show average increases of 1.22%, 0.51%, and 0.35%, respectively. Case studies further demonstrate the interpretability of the model. Furthermore, visualization analyses confirm the effective characterization of the two underlying association mechanisms, highlighting the model's ability to disentangle and integrate multi-source biological information, thereby demonstrating its suitability for training scenarios involving complex biological information.",
+    "authors": "Tang R, Zhou X, Qi Y, Zhu X, Huang Y, Hu L, You Z, Hu P.",
+    "sources": [
+      "europepmc"
+    ]
+  },
+  {
+    "title": "Vibe Coding Specificity Foundation Models",
+    "doi": "10.64898/2026.06.04.730134",
+    "pmid": "PPR1247052",
+    "pmcid": null,
+    "date": "2026-06-04",
+    "journal": null,
+    "abstract": "Molecular recognition - the determination of which agent binds which target - governs adaptive immunity, gene regulation, signal transduction, RNA silencing, enzyme catalysis, and the selectivity of therapeutics. Determining binding specificity remains dependent on experimental screening or domain-specific computational tools that do not generalize across binding modalities. Transformer softmax attention is mathematically identical to the Boltzmann distribution governing molecular binding. This identity, together with five conditions of molecular recognition systems, prescribes a single neural network architecture for cross-modal binding prediction: dual sequence encoders, symmetric contrastive learning, and a learned physical temperature. A Specificity Foundation Model (SFM) is an instance of this physics-derived, sequence-to-sequence architecture that maps any agent-target sequence pair to a binding compatibility score, enabling bidirectional retrieval across molecular recognition domains without requiring structural information. The first SFM for antibody-antigen binding demonstrated ~100,000-fold greater data efficiency than comparable vision-language models. Here we report six SFMs across six molecular recognition domains - transcription factor-DNA, enzyme-substrate, peptide-MHC, CRISPR gRNA-off-target genomic DNA, microRNA-mRNA target, and small molecule drug-target protein - using the identical architecture without modification and trained using publicly available data only. Evaluated by cross-modal retrieval from pools of 512 candidates (random baseline 0.2%), in-distribution R@1 ranges from 27.7% to 98.0% across the six domains. mir-SFM retrieves miRNA targets at 98.0% R@1, including the ~80% of validated interactions that seed-matching tools cannot find. mhcSFM achieves 95.4% R@1 on held-out rare HLA alleles absent from training. Applying crisprSFM to CRISPR off-target prediction improves precision to 94.0% compared to 33.2% from Hamming distance alone. All six SFMs were built by a domain expert with no programming experience using vibe coding - natural-language-directed AI coding agents - with numerical claims independently verified by an orthogonal AI auditor. These results establish SFMs as a physics-derived, sequence-native class of model that augments experimental and computational workflows across molecular recognition domains.",
+    "authors": "Reddy ST.",
+    "sources": [
+      "europepmc"
+    ]
+  },
+  {
+    "title": "DVCH-LMI: A dual-view contrastive framework for lncRNA-miRNA interaction prediction under class imbalance.",
+    "doi": "10.1016/j.ijbiomac.2026.152448",
+    "pmid": "42106043",
+    "pmcid": null,
+    "date": "2026-05-07",
+    "journal": "International journal of biological macromolecules",
+    "abstract": "Identifying long non-coding RNA (lncRNA) and microRNA (miRNA) interactions (LMIs) is essential for elucidating post-transcriptional regulation and disease-related molecular mechanisms. Accurate identification of LMIs can facilitate biomarker discovery, RNA-targeted therapeutics, and data-driven drug design. However, robust prediction and candidate prioritization remain challenging due to the limited number of experimentally validated interactions and the large number of unknown pairs. Accordingly, we propose DVCH-LMI, a dual-view contrastive heterogeneous representation learning framework. DVCH-LMI initializes node features with Doc2Vec embeddings trained on k-mer vectors, constructs an adjacency view and a similarity view over shared bipartite interaction semantics, and learns complementary embeddings using two heterogeneous encoders with identical architectures but independent parameters. A symmetric information noise-contrastive estimation (InfoNCE) loss is further introduced to achieve node-level cross-view alignment. The aligned embeddings are then fused, and interaction prediction is performed by a hybrid scorer composed of a similarity branch and a multi-layer perceptron (MLP) branch. To better align with candidate prioritization tasks in computational biology and therapeutic design, we integrate random negative sampling and hard negative sampling to enhance the model's candidate prioritization ability in an imbalanced candidate space. On an animal benchmark dataset, DVCH-LMI achieves AUC of 0.9465 and AUPR of 0.9468 under the 1:1 setting, and it maintains strong positive-oriented ranking performance under more imbalanced settings such as 1:20 and 1:50. Ablation studies verify the effectiveness of key components. Case studies on MALAT1 and NEAT1 further show that DVCH-LMI prioritizes literature-supported interactions. Cross-view alignment visualizations and structure-consistency analyses provide additional representational evidence for the interpretability and reliability of our model. Overall, DVCH-LMI serves as both an effective LMI predictive model and a robust candidate prioritization framework for data-sparse and highly class-imbalanced scenarios, with promising potential for RNA regulatory mechanism studies and RNA-guided drug design.",
+    "authors": "Liu R, Wang Z, Fang Y, Zhao Q.",
+    "sources": [
+      "europepmc"
+    ]
+  },
+  {
+    "title": "Methods for Molecular Recognition Computing",
+    "doi": "10.64898/2026.04.03.716328",
+    "pmid": "PPR1216959",
+    "pmcid": null,
+    "date": "2026-04-03",
+    "journal": null,
+    "abstract": "The softmax attention mechanism in transformer architectures (Vaswani et al., 2017) is mathematically identical to the Boltzmann distribution governing molecular binding at thermal equilibrium (Boltzmann, 1877). Luce's Choice Axiom (1959) establishes this function - which we term the convergence equation - as the unique function satisfying five axioms of competitive selection: positivity, normalization, unrestricted domain, rank preservation, and independence of irrelevant alternatives. We show that five additional architecture conditions - discrete intermolecular contacts, bilinear energy decomposition, finite competitor pools, thermal equilibrium, and stochastic selection - are satisfied by at least ten biological molecular recognition systems and together prescribe a complete neural architecture: dual encoders, cross-attention, InfoNCE contrastive training, symmetric loss, learned temperature, and cross-attentive decoder. We term this architecture a Specificity Foundation Model (SFM) and specify it for antibody-antigen, TCR-peptide-MHC, transcription factor-DNA, microRNA-mRNA, enzyme-substrate, CRISPR guide RNA-DNA, drug-target, peptide-MHC, receptor-ligand, and RNA-binding protein-RNA recognition. The first implementation (CALM; Lee et al., 2026) achieves antibody-antigen retrieval from approximately 4,000 training pairs with ~100,000-fold greater data efficiency than comparable contrastive architectures trained without the physics derivation. We classify this as Level 3 architecture-physics alignment and derive three further theoretical results: an exponential scaling law for retrieval accuracy as a function of training data diversity (the MRC scaling law), a two-parameter affinity calibration framework connecting contrastive scores to binding free energies, and a hybrid recursive learning framework for cross-modal reinforcement learning with orthogonal verification. The failure conditions of the framework are analyzed in terms of the validity of equilibrium thermodynamics for molecular binding and the convergence properties of gradient-based parameter estimation.",
+    "authors": "Reddy ST.",
+    "sources": [
+      "europepmc"
+    ]
+  },
+  {
+    "title": "Therapeutic rewiring of ceRNA networks: a computational pipeline for drug repurposing in acute kidney injury via circRNA-miRNA-mRNA axis disruption.",
+    "doi": "10.1186/s40246-026-00930-1",
+    "pmid": "41736103",
+    "pmcid": "PMC13041499",
+    "date": "2026-02-24",
+    "journal": "Human genomics",
+    "abstract": "This review synthesizes current evidence on competing endogenous RNA (ceRNA) regulation in acute kidney injury (AKI) and proposes a practical, reproducible framework for computationally guided drug repurposing that aims to rewire pathogenic circRNA–miRNA–mRNA axes. We summarize the ceRNA concept and its biological rationale in renal injury, anchored to foundational descriptions of the ceRNA hypothesis. Building on curated circRNA resources and drug–gene mapping platforms, we present and critically evaluate a five-stage computational framework: (1) multi-omics data mining and ceRNA triplet inference, (2) network pharmacology mapping to drug–gene resources, (3) RNA-aware molecular docking to candidate structured RNA motifs, (4) molecular dynamics (MD) refinement and rescoring, and (5) integrative prioritization with explicit experimental filters for renal safety and tractability. We synthesize methodological best practices and limitations for each stage, with particular attention to the emerging field of RNA-targeted small molecules and their experimental validation. Three illustrative case studies demonstrate how distinct repurposing logics (direct RNA engagement, network/miRNA modulation, pathway-level modulation) can be mapped onto this pipeline and what orthogonal assays are required to progress candidates from in silico nomination to biochemical and in vivo testing. The review concludes with a pragmatic experimental roadmap, clear caveats (RNA structural dynamics, cellular context dependency, miRNA redundancy), and proposals to integrate single-cell and systems-pharmacology approaches to improve replicability and translational potential. By collating the literature and proposing a transparent, stepwise framework with validation benchmarks, this review aims to generate testable, prioritized in-silico hypotheses for RNA-aware repurposing in AKI that require rigorous biochemical and preclinical validation before any consideration of clinical testing. Because AKI arises from multiple, biologically distinct etiologies (for example ischemia–reperfusion injury, sepsis, nephrotoxic injury such as cisplatin exposure, and obstructive causes), candidate drugs and circRNA/miRNA targets must be evaluated in etiology-matched cellular and animal models; the pipeline therefore explicitly recommends etiology-aware filtering and model selection to avoid overgeneralizing findings across all AKI types.",
+    "authors": "Wang M, Gao F.",
+    "sources": [
+      "europepmc"
+    ]
+  },
+  {
+    "title": "Remodeling of non-coding RNA regulatory networks: Decoding the pathological mechanisms and new therapeutic paradigms of cardiovascular diseases.",
+    "doi": "10.1016/j.plrev.2025.12.007",
+    "pmid": "41447890",
+    "pmcid": null,
+    "date": "2025-12-16",
+    "journal": "Physics of life reviews",
+    "abstract": "The essential role of non-coding RNAs (ncRNAs) in cardiovascular disease (CVD) research instigates a shift from empirical studies to those based on molecular mechanisms, targeted interventions, and personalized health management in the world of precision medicine. This review systematically summarizes the expression profiles and multilayered regulatory mechanisms of various ncRNAs such as microRNAs (miRNAs), long non-coding RNAs (lncRNAs), circular RNAs (circRNAs), and small nucleolar RNAs (snoRNAs) in a variety of cardiovascular diseases (CVDs) ranging from congenital heart disease to atherosclerosis (AS), cardiomyopathies, heart failure (HF), and arrhythmias. The central roles of key pathological pathways like epigenetic changes, competing endogenous RNA (ceRNA), inflammation and cell fate determination will be highlighted. From a diagnostic point of view, ncRNAs have good potentials as early-stage biomarkers, in applications such as exosomal liquid biopsy, disease classification, and prognosis. Emerging technologies, notably locked nucleic acid (LNA) oligonucleotides, adeno-associated virus serotype 9 (AAV9)-based delivery systems and engineered exosomes, are unlocking new avenues for intervention on the therapeutic front. These developments, coupled with drug repurposing strategies and tissue-specific delivery platforms, can make ncRNA-targeted therapies more specific and controllable. At the same time, interdisciplinary innovations, like single-cell multi-omics, spatial transcriptomics, CRISPR-dCas9 systems, and deep learning assist clinical translation greatly. However, the real-world application of ncRNA-based therapies is constrained by many challenges like low delivery efficiency, functional redundancy, and microenvironmental dependence. Future directions must aim to create integrative platforms that can dynamically identify and modulate ncRNA functions to link mechanistic studies to personalized therapies and subsequently expedite clinical translation of ncRNA discoveries. In this sense, three cross-scale principles-network topology and ceRNA competition dynamics; spatiotemporal gradients modeled by exosome transport and tissue microenvironments; and energetic/stoichiometric constraints like Dicer processing capacity and miRNA-target ratios- provide an analytical framework that appears recurrently across diverse CVD phenotypes and tighten the mechanistic unity of this review.",
+    "authors": "Zhang W, Duan L, Wang C, Liao Y, Zhao R, Li Z, Zhang H, Wang Z, Zhang JJ.",
+    "sources": [
+      "europepmc"
+    ]
+  },
+  {
+    "title": "AttBiomarker: unveiling preeclampsia biomarkers and molecular pathways through two-stage gene selection techniques and attention-based CNN with gene regulatory network analysis.",
+    "doi": "10.1093/bib/bbaf473",
+    "pmid": "40966654",
+    "pmcid": "PMC12448737",
+    "date": "2025-08-01",
+    "journal": "Briefings in bioinformatics",
+    "abstract": "Preeclampsia is a complex pregnancy disorder that poses significant health risks to both mother and fetus. Despite its clinical importance, the underlying molecular mechanisms remain poorly understood. In this study, we developed an integrative deep learning and bioinformatics approach to identify potential biomarkers for preeclampsia. Three microarray datasets related to preeclampsia were initially analyzed to select a preliminary gene subset based on $P$-values. Feature selection was then performed in two consecutive rounds: first, the Fisher score method was applied to extract significant genes, followed by the minimum Redundancy Maximum Relevance method to refine the subset further. These selected gene subsets were trained using our proposed Attention-based Convolutional Neural Network (AttCNN), which achieved the highest classification accuracy compared with other models. From the experiments, a set of 58 common genes was identified between differentially expressed genes and the final optimized subset. Here, Gene Ontology and KEGG pathway enrichment analyses highlighted key biological processes and pathways associated with preeclampsia. Subsequently, a protein-protein interaction network was constructed, identifying 10 hub genes: TSC22D1, IRF3, MME, SRSF10, SOD1, HK2, ERO1L, SH3BP5, UBC, and ZFAND5. Further analysis of gene regulatory networks, including transcription factor-gene, gene-microRNA, and drug-gene interactions, revealed that seven hub genes (HK2, SRSF10, SOD1, ERO1L, IRF3, MME, and SH3BP5) were strongly associated with preeclampsia. Molecular docking analysis showed that HK2, SH3BP5, and SOD1 exhibited significant binding affinities with two preeclampsia drugs. These findings suggest that the identified hub genes hold promise as biomarkers for early prognosis, diagnosis, and potential therapeutic targets for preeclampsia.",
+    "authors": "Sarker S, Mahmud SMH, Hosen MF, Michael Goh KO, Shoombuatong W.",
+    "sources": [
+      "europepmc"
+    ]
+  },
+  {
+    "title": "Graph Mask Contrastive Autoencoder for MiRNA-Disease Association Prediction",
+    "doi": "10.1109/ccai65422.2025.11189546",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          23
+        ]
+      ]
+    },
+    "journal": [
+      "2025 IEEE 5th International Conference on Computer Communication and Artificial Intelligence (CCAI)"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Qinghang",
+        "family": "Cui",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Yunnan University,School of Information Science and Engineering,Kunming,China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Honglie",
+        "family": "Guo",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Yunnan University,School of Information Science and Engineering,Kunming,China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Shunfang",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Yunnan University,School of Information Science and Engineering,Kunming,China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "CLHGNNMDA: Hypergraph Neural Network Model Enhanced by Contrastive Learning for miRNA–Disease Association Prediction",
+    "doi": "10.1089/cmb.2024.0720",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          9
+        ]
+      ]
+    },
+    "journal": [
+      "Journal of Computational Biology"
+    ],
+    "abstract": "<jats:p>Numerous biological experiments have demonstrated that microRNA (miRNA) is involved in gene regulation within cells, and mutations and abnormal expression of miRNA can cause a myriad of intricate diseases. Forecasting the association between miRNA and diseases can enhance disease prevention and treatment and accelerate drug research, which holds considerable importance for the development of clinical medicine and drug research. This investigation introduces a contrastive learning-augmented hypergraph neural network model, termed CLHGNNMDA, aimed at predicting associations between miRNAs and diseases. Initially, CLHGNNMDA constructs multiple hypergraphs by leveraging diverse similarity metrics related to miRNAs and diseases. Subsequently, hypergraph convolution is applied to each hypergraph to extract feature representations for nodes and hyperedges. Following this, autoencoders are employed to reconstruct information regarding the feature representations of nodes and hyperedges and to integrate various features of miRNAs and diseases extracted from each hypergraph. Finally, a joint contrastive loss function is utilized to refine the model and optimize its parameters. The CLHGNNMDA framework employs multi-hypergraph contrastive learning for the construction of a contrastive loss function. This approach takes into account inter-view interactions and upholds the principle of consistency, thereby augmenting the model’s representational efficacy. The results obtained from fivefold cross-validation substantiate that the CLHGNNMDA algorithm achieves a mean area under the receiver operating characteristic curve of 0.9635 and a mean area under the precision-recall curve of 0.9656. These metrics are notably superior to those attained by contemporary state-of-the-art methodologies.</jats:p>",
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-0687-7343",
+        "authenticated-orcid": false,
+        "given": "Rong",
+        "family": "Zhu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Computer Science, Qufu Normal University, Rizhao, China."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yong",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Laboratory Experimental Teaching and Equipment Management Center, Qufu Normal University, Rizhao, China."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ling-Yun",
+        "family": "Dai",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science, Qufu Normal University, Rizhao, China."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "MCL-DMD: Multi-modal Contrastive Learning for Drug-Microbe-Disease Association Prediction",
+    "doi": "10.1145/3765612.3767307",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          10
+        ]
+      ]
+    },
+    "journal": [
+      "Proceedings of the 16th ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0005-0734-1590",
+        "authenticated-orcid": false,
+        "given": "Niecia",
+        "family": "Say",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Georgia Gwinnett College, Atlanta, GA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0008-8526-8159",
+        "authenticated-orcid": false,
+        "given": "Farhan",
+        "family": "Tanvir",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Georgia State University, Atlanta, GA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0005-6274-7374",
+        "authenticated-orcid": false,
+        "given": "Moctar",
+        "family": "Keita",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Health Sciences and Pharmacy in St. Louis, St. Louis, MO, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0008-5360-4605",
+        "authenticated-orcid": false,
+        "given": "Lilia",
+        "family": "Chebbah",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Georgia State University, Atlanta, GA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0008-1293-400X",
+        "authenticated-orcid": false,
+        "given": "Muhammad Ifte Khairul",
+        "family": "Islam",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Georgia State University, Atlanta, GA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8817-2442",
+        "authenticated-orcid": false,
+        "given": "Esra",
+        "family": "Akbas",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Georgia State University, Atlanta, GA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "NCH-DDA: Neighborhood contrastive learning heterogeneous network for drug–disease association prediction",
+    "doi": "10.1016/j.eswa.2023.121855",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          3
+        ]
+      ]
+    },
+    "journal": [
+      "Expert Systems with Applications"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-1826-3349",
+        "authenticated-orcid": false,
+        "given": "Peiliang",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2978-5430",
+        "authenticated-orcid": false,
+        "given": "Chao",
+        "family": "Che",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4094-7499",
+        "authenticated-orcid": false,
+        "given": "Bo",
+        "family": "Jin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7924-8620",
+        "authenticated-orcid": false,
+        "given": "Jingling",
+        "family": "Yuan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0007-8942-9063",
+        "authenticated-orcid": false,
+        "given": "Ruixin",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4787-5122",
+        "authenticated-orcid": false,
+        "given": "Yongjun",
+        "family": "Zhu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "MNGCCL: Multi-neighborhood graph collaborative contrastive learning for drug-disease association prediction",
+    "doi": "10.1109/bibm62325.2024.10822460",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          12,
+          3
+        ]
+      ]
+    },
+    "journal": [
+      "2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Cheng-Long",
+        "family": "Mi",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Qufu Normal University,the School of Computer Science,Rizhao,China,276826"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jin-Xing",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Health and Rehabilitation Sciences,the School of Health and Life Sciences,Qingdao,China,266113"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Xu",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Qufu Normal University,the School of Computer Science,Rizhao,China,276826"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jun-Liang",
+        "family": "Shang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Qufu Normal University,the School of Computer Science,Rizhao,China,276826"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Rong",
+        "family": "Zhu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Qufu Normal University,the School of Computer Science,Rizhao,China,276826"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Juan",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Qufu Normal University,the School of Computer Science,Rizhao,China,276826"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Ling-Yun",
+        "family": "Dai",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Qufu Normal University,the School of Computer Science,Rizhao,China,276826"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "DHGCMDA: a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction",
+    "doi": "10.1186/s12859-026-06436-w",
+    "date": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          1
+        ]
+      ]
+    },
+    "journal": [
+      "BMC Bioinformatics"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Yan",
+        "family": "Sun",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Fanyu",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Shijia",
+        "family": "Yan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Xiaotong",
+        "family": "Kong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Hanxiang",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Junliang",
+        "family": "Shang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jin-Xing",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Enhancing LncRNA-miRNA interaction prediction with multimodal contrastive representation learning",
+    "doi": "10.1093/bib/bbaf281",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          17
+        ]
+      ]
+    },
+    "journal": [
+      "Briefings in Bioinformatics"
+    ],
+    "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>Interactions between long non-coding RNAs (lncRNAs) and microRNAs (miRNAs) play an important role in the development of complex human diseases by collaboratively regulating gene transcription and expression. Therefore, identifying lncRNA-miRNA interactions (LMIs) is essential for diagnosing and treating complex human diseases. Because identifying LMIs with wet experiments is time-consuming and labor-intensive, some computational methods have been developed to infer LMIs. However, these approaches excel at utilizing single-modal information but struggle to integrate multimodal data from lncRNAs and miRNAs, which is essential for uncovering complex patterns in LMIs, ultimately limiting their performance. Therefore, this article proposes a novel multimodal contrastive representation learning model (MCRLMI) for LMI predictions. The model fully integrates multi-source similarity information and sequence encodings of lncRNAs and miRNAs. It leverages a graph convolutional network (GCN) and a Transformer to capture local neighborhood structural features and long-distance dependencies, respectively, enabling the collaborative modeling of structural and semantic information. Subsequently, to effectively integrate multimodal characteristics with encoded information, a multichannel attention mechanism and contrastive learning are introduced to fuse the extracted features. Finally, a Kolmogorov–Arnold Network (KAN) is trained with the optimized embeddings to predict LMIs. Extensive experiments show that the proposed MCRLMI consistently outperforms existing methods. Moreover, case studies further validate the potential of MCRLMI to identify novel LMIs in practical applications.</jats:p>",
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-6968-4354",
+        "authenticated-orcid": false,
+        "given": "Zhixia",
+        "family": "Teng",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "College of Computer and Control Engineering, Northeast Forestry University , 150040, Harbin ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0006-3765-1992",
+        "authenticated-orcid": false,
+        "given": "Zhaowen",
+        "family": "Tian",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer and Control Engineering, Northeast Forestry University , 150040, Harbin ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9634-8164",
+        "authenticated-orcid": false,
+        "given": "Murong",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer and Control Engineering, Northeast Forestry University , 150040, Harbin ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7381-2374",
+        "authenticated-orcid": false,
+        "given": "Guohua",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer and Control Engineering, Northeast Forestry University , 150040, Harbin ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0945-8168",
+        "authenticated-orcid": false,
+        "given": "Zhen",
+        "family": "Tian",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer and Artificial Intelligence, Zhengzhou University , 450001, Zhengzhou ,",
+            "place": [
+              "China"
+            ]
+          },
+          {
+            "name": "Yangtze Delta Region Institute (Quzhou), University of Electronic Science and Technology of China , 324000, Quzhou ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7219-0999",
+        "authenticated-orcid": false,
+        "given": "Yuming",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer and Control Engineering, Northeast Forestry University , 150040, Harbin ,",
+            "place": [
+              "China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Global-local aware Heterogeneous Graph Contrastive Learning for multifaceted association prediction in miRNA–gene–disease networks",
+    "doi": "10.1093/bib/bbae443",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          9,
+          10
+        ]
+      ]
+    },
+    "journal": [
+      "Briefings in Bioinformatics"
+    ],
+    "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>Unraveling the intricate network of associations among microRNAs (miRNAs), genes, and diseases is pivotal for deciphering molecular mechanisms, refining disease diagnosis, and crafting targeted therapies. Computational strategies, leveraging link prediction within biological graphs, present a cost-efficient alternative to high-cost empirical assays. However, while plenty of methods excel at predicting specific associations, such as miRNA–disease associations (MDAs), miRNA–target interactions (MTIs), and disease–gene associations (DGAs), a holistic approach harnessing diverse data sources for multifaceted association prediction remains largely unexplored. The limited availability of high-quality data, as vitro experiments to comprehensively confirm associations are often expensive and time-consuming, results in a sparse and noisy heterogeneous graph, hindering an accurate prediction of these complex associations. To address this challenge, we propose a novel framework called Global-local aware Heterogeneous Graph Contrastive Learning (GlaHGCL). GlaHGCL combines global and local contrastive learning to improve node embeddings in the heterogeneous graph. In particular, global contrastive learning enhances the robustness of node embeddings against noise by aligning global representations of the original graph and its augmented counterpart. Local contrastive learning enforces representation consistency between functionally similar or connected nodes across diverse data sources, effectively leveraging data heterogeneity and mitigating the issue of data scarcity. The refined node representations are applied to downstream tasks, such as MDA, MTI, and DGA prediction. Experiments show GlaHGCL outperforming state-of-the-art methods, and case studies further demonstrate its ability to accurately uncover new associations among miRNAs, genes, and diseases. We have made the datasets and source code publicly available at https://github.com/Sue-syx/GlaHGCL.</jats:p>",
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-2828-5231",
+        "authenticated-orcid": false,
+        "given": "Yuxuan",
+        "family": "Si",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Ophthalmology, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine , East Qingchun Road, 310016 Zhejiang, China"
+          },
+          {
+            "name": "College of Computer Science and Technology, Zhejiang University , 38 Zheda Road, 310027 Zhejiang, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zihan",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, Zhejiang University , 38 Zheda Road, 310027 Zhejiang, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhengqing",
+        "family": "Fang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Ophthalmology, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine , East Qingchun Road, 310016 Zhejiang, China"
+          },
+          {
+            "name": "College of Computer Science and Technology, Zhejiang University , 38 Zheda Road, 310027 Zhejiang, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhouhang",
+        "family": "Yuan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Ophthalmology, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine , East Qingchun Road, 310016 Zhejiang, China"
+          },
+          {
+            "name": "College of Computer Science and Technology, Zhejiang University , 38 Zheda Road, 310027 Zhejiang, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhengxing",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, Zhejiang University , 38 Zheda Road, 310027 Zhejiang, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yingming",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Information Science and Electronic Engineering, Zhejiang University , 38 Zheda Road, 310027 Zhejiang, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ying",
+        "family": "Wei",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, Zhejiang University , 38 Zheda Road, 310027 Zhejiang, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Fei",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, Zhejiang University , 38 Zheda Road, 310027 Zhejiang, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yu-Feng",
+        "family": "Yao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Ophthalmology, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine , East Qingchun Road, 310016 Zhejiang, China"
+          },
+          {
+            "name": "Department of Ophthalmology , The Fourth Affiliated Hospital of Soochow University, 215000 Suzhou, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "MGACL: Prediction Drug–Protein Interaction Based on Meta-Graph Association-Aware Contrastive Learning",
+    "doi": "10.3390/biom14101267",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          10,
+          8
+        ]
+      ]
+    },
+    "journal": [
+      "Biomolecules"
+    ],
+    "abstract": "<jats:p>The identification of drug–target interaction (DTI) is crucial for drug discovery. However, how to reduce the graph neural network’s false positives due to its bias and negative transfer in the original bipartite graph remains to be clarified. Considering that the impact of heterogeneous auxiliary information on DTI varies depending on the drug and target, we established an adaptive enhanced personalized meta-knowledge transfer network named Meta Graph Association-Aware Contrastive Learning (MGACL), which can transfer personalized heterogeneous auxiliary information from different nodes and reduce data bias. Meanwhile, we propose a novel DTI association-aware contrastive learning strategy that aligns high-frequency drug representations with learned auxiliary graph representations to prevent negative transfer. Our study improves the DTI prediction performance by about 3%, evaluated by analyzing the area under the curve (AUC) and area under the precision–recall curve (AUPRC) compared with existing methods, which is more conducive to accurately identifying drug targets for the development of new drugs.</jats:p>",
+    "authors": [
+      {
+        "given": "Pinglu",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Faculty of Information Science and Engineering, Ocean University of China, Qingdao 266003, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0009-3398-8864",
+        "authenticated-orcid": false,
+        "given": "Peng",
+        "family": "Lin",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Marine Drugs, Chinese Ministry of Education, School of Medicine and Pharmacy, Ocean University of China, Qingdao 266003, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7191-2002",
+        "authenticated-orcid": false,
+        "given": "Dehai",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Marine Drugs, Chinese Ministry of Education, School of Medicine and Pharmacy, Ocean University of China, Qingdao 266003, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wanchun",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Faculty of Information Science and Engineering, Ocean University of China, Qingdao 266003, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xin",
+        "family": "Qi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Marine Drugs, Chinese Ministry of Education, School of Medicine and Pharmacy, Ocean University of China, Qingdao 266003, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jing",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Marine Drugs, Chinese Ministry of Education, School of Medicine and Pharmacy, Ocean University of China, Qingdao 266003, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianshe",
+        "family": "Xiong",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Faculty of Information Science and Engineering, Ocean University of China, Qingdao 266003, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Hierarchical Negative Sampling Based Graph Contrastive Learning Approach for Drug-Disease Association Prediction",
+    "doi": "10.1109/jbhi.2024.3360437",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          5
+        ]
+      ]
+    },
+    "journal": [
+      "IEEE Journal of Biomedical and Health Informatics"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-1953-8081",
+        "authenticated-orcid": false,
+        "given": "Yuanxu",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Technology, Xinjiang University, Urumqi, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0847-9813",
+        "authenticated-orcid": false,
+        "given": "Jinmiao",
+        "family": "Song",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Software, Xinjiang University, Urumqi, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-3040-2492",
+        "authenticated-orcid": false,
+        "given": "Qiguo",
+        "family": "Dai",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Big Data Applied Technology State Ethnic Affairs Commission, Dalian Minzu University, Dalian, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0001-1775-6280",
+        "authenticated-orcid": false,
+        "given": "Xiaodong",
+        "family": "Duan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Big Data Applied Technology State Ethnic Affairs Commission, Dalian Minzu University, Dalian, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Drug-microbe association prediction using graph neural network with triple-view contrastive learning",
+    "doi": "10.2139/ssrn.7560374",
+    "date": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "journal": null,
+    "abstract": "<jats:p>Motivation. Microbial communities, including bacteria, archaea, viruses, protozoa and fungi, interact with drugs through metabolism, detoxification, resistance and therapeutic response. Experimental screening of drug-microbe associations is slow and costly while computational prediction of pairs can support drug repurposing, antimicrobial discovery and precision medicine. Many models of graph neural network (GNN) represent drugs and microbes with similarities, such as Gaussian interaction profile (GIP) kernels, computed from the drug-microbe interaction matrix. Since these similarities are derived from the same associations being predicted, their random-split evaluation would be sensitive to the feature-construction protocol. This motivates the models that rely on chemical and biological covariates and evaluations that state clearly which information is available to the models.,Results. We introduce a novel GNN that leverages contrastive learning to predict drug-microbe associations. Our approach is built upon a multi-view representation strategy, wherein each drug is characterized by three complementary chemical modalities and each microbe is encoded through three distinct biological views. This heterogeneous feature fusion enables the model to capture complex interactional patterns from diverse biomedical data sources. The model comprises three parallel branches, each corresponding to a distinct view pair that combines one drug view with one microbe view. Within each branch, we construct a heterogeneous graph, in which drug-drug and microbe-microbe edges are defined by similarity scores, while drug-microbe edges are derived exclusively from the known training associations. Every branch processes its graph through a dedicated graph convolutional network (GCN). Subsequently, a link predictor is applied to score candidate drug-microbe pairs, and a projection head is employed to align the learned representations across branches, ensuring consistency among the complementary views. We evaluate our model using fivefold crossvalidation (5-CV) on a complete set of experimentally verified drug-microbe associations in three publicly available benchmark datasets: MDAD, aBiofilm, and DrugVirus. To ensure unbiased assessment, we employ a dedicated evaluation split, which was withheld from training and previously used solely for viewpair selection. Moreover, we evaluate our model on an independent hold-out test set and on an external database, and present case studies. Our model achieves strong performance across all datasets, with AUC/AUPR scores of 0.940/0.948 on MDAD, 0.926/0.931 on aBiofilm, and 0.878/0.870 on DrugVirus. In a complementary analysis, we investigate the impact of incorporating GIP features under a standard randomsplit evaluation protocol. While the inclusion of GIP features improves predictive accuracy, we emphasize that this improvement reflects a protocolsensitivity effect rather than a corrected or enhanced performance estimate for our model or prior work.</jats:p>",
+    "authors": [
+      {
+        "given": "Zahra",
+        "family": "Mohammadi",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Eghbal",
+        "family": "Mansoori",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Multi-view Graph Attention Contrastive Learning for Predicting miRNA-Disease Association",
+    "doi": "10.65286/icic.v21i2.76657",
+    "date": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "journal": [
+      "Poster Volume Ⅱ  The 2025 Twenty-First International  Conference on Intelligent Computing July 26-29, 2025  Ningbo, China"
+    ],
+    "abstract": "<jats:p>MicroRNAs  miRNAs  are an important class of endogenous non-coding RNAs that regulate critical biological processes, such as cell differentiation, proliferation, and apoptosis, through post-transcriptional mechanisms. Recent studies have shown that aberrant miRNA expression is closely linked to the pathogenesis of complex diseases, including cancer and neurodegenerative disorders. This study introduces a novel prediction model, MGACMDA, which combines multi-view contrastive learning and residual graph attention to overcome several limitations of existing miRNA-disease association prediction methods, such as limited robustness to data sparsity, high sensitivity to network noise, and insufficient extraction of deep topological information. We propose three data enhancement methods to construct global, local and topological views, and design a graph attention encoder with residual connection to fuse shallow topological features with deep representations through residual mechanism. Finally, a momentum-driven multi-view contrastive learning module is designed, and momentum encoder is used to maintain the global negative sample queue, which significantly improves the discrimination ability of sparse association. We applied MGACMDA to benchmark datasets, including HMDD v2.0 and HMDD v3.2, using 5-fold cross-validation. The evaluation metrics, including F1 score, AUC and AUPR values, and case studies of experimental results indicate that our method is efficient and robust for predicting miRNA-disease associations.</jats:p>",
+    "authors": [
+      {
+        "given": "YvKai",
+        "family": "Ma",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Enhancing miRNA-Disease Prediction with Attention-Based Multi-View Contrastive Learning",
+    "doi": "10.1109/bibm62325.2024.10822253",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          12,
+          3
+        ]
+      ]
+    },
+    "journal": [
+      "2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Tianxiang",
+        "family": "Ouyang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Central South University,School of Computer Science and Engineering,Changsha,China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhijian",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Central South University,School of Computer Science and Engineering,Changsha,China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lei",
+        "family": "Deng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Central South University,School of Computer Science and Engineering,Changsha,China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Sampling-Aware Contrastive Learning Framework for Drug-Drug Interaction Prediction",
+    "doi": "10.2139/ssrn.6328778",
+    "date": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "journal": null,
+    "abstract": "<jats:p>Accurate prediction of drug-drug interactions (DDIs) is critical for medication safety. Many existing graph neural network (GNN) methods rely on global interaction graphs or historical DDI labels, which are often sparse and biased in real-world settings: interaction histories are missing or unreliable for many drugs, limiting generalization in both warm-start and cold-start scenarios. To inject self-supervised signals beyond interaction labels, we leverage graph contrastive learning (GCL) on molecular graphs. However, existing GCL frameworks face two challenges: (i) random discrete augmentations may distort molecular structures and break chemical semantics, and (ii) uniform negative sampling is dominated by trivially easy negatives, providing weak discriminative gradients under missing labels. To address these issues, we propose Sampling-Aware Contrastive learning framework for Drug-Drug Interaction prediction (SAC-DDI). Specifically, we introduce a representation autoencoder to construct reconstruction-anchored positive views in embedding space, avoiding destructive graph edits. We further adopt difficulty-aware negative sampling with a hard-easy mixture to improve discrimination while reducing false-negative risk. Across warm-start and cold-start protocols, SAC-DDI delivers robust performance with particularly large gains under cold-start. This robustness supports reliable large-scale screening of combinatorial drug pairs, enabling efficient triage for expert review and experimental validation.</jats:p>",
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0003-1215-7072",
+        "authenticated-orcid": true,
+        "given": "Rui",
+        "family": "Han",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yuhan",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7691-4672",
+        "authenticated-orcid": true,
+        "given": "Lin",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yihan",
+        "family": "Fu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0002-4533-2028",
+        "authenticated-orcid": true,
+        "given": "Zihao",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0006-1044-0116",
+        "authenticated-orcid": true,
+        "given": "Jiankang",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Deep graph contrastive learning model for drug-drug interaction prediction",
+    "doi": "10.1371/journal.pone.0304798",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          17
+        ]
+      ]
+    },
+    "journal": [
+      "PLOS ONE"
+    ],
+    "abstract": "<jats:p>Drug-drug interaction (DDI) is the combined effects of multiple drugs taken together, which can either enhance or reduce each other’s efficacy. Thus, drug interaction analysis plays an important role in improving treatment effectiveness and patient safety. It has become a new challenge to use computational methods to accelerate drug interaction time and reduce its cost-effectiveness. The existing methods often do not fully explore the relationship between the structural information and the functional information of drug molecules, resulting in low prediction accuracy for drug interactions, poor generalization, and other issues. In this paper, we propose a novel method, which is a deep graph contrastive learning model for drug-drug interaction prediction (DeepGCL for brevity). DeepGCL incorporates a contrastive learning component to enhance the consistency of information between different views (molecular structure and interaction network), which means that the DeepGCL model predicts drug interactions by integrating molecular structure features and interaction network topology features. Experimental results show that DeepGCL achieves better performance than other methods in all datasets. Moreover, we conducted many experiments to analyze the necessity of each component of the model and the robustness of the model, which also showed promising results. The source code of DeepGCL is freely available at<jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"uri\" xlink:href=\"https://github.com/jzysj/DeepGCL\" xlink:type=\"simple\">https://github.com/jzysj/DeepGCL</jats:ext-link>.</jats:p>",
+    "authors": [
+      {
+        "given": "Zhenyu",
+        "family": "Jiang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhi",
+        "family": "Gong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0007-9832-9566",
+        "authenticated-orcid": true,
+        "given": "Xiaopeng",
+        "family": "Dai",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hongyan",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Pingjian",
+        "family": "Ding",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8505-6406",
+        "authenticated-orcid": true,
+        "given": "Cong",
+        "family": "Shen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "GGANet: A Model for the Prediction of MiRNA-Drug Resistance Based on Contrastive Learning and Global Attention",
+    "doi": "10.1007/978-981-97-5689-6_23",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          31
+        ]
+      ]
+    },
+    "journal": [
+      "Lecture Notes in Computer Science",
+      "Advanced Intelligent Computing in Bioinformatics"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Zimai",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Bo-Wei",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yu-An",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Zhu-Hong",
+        "family": "You",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Lun",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Xi",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Pengwei",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Multi-View Contrastive Learning for Drug-Drug Interaction Event Prediction",
+    "doi": "10.1109/jbhi.2025.3600045",
+    "date": {
+      "date-parts": [
+        [
+          2026,
+          3
+        ]
+      ]
+    },
+    "journal": [
+      "IEEE Journal of Biomedical and Health Informatics"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-9701-5377",
+        "authenticated-orcid": false,
+        "given": "Dongxu",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Sciences, Urumqi, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Feifan",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Zunyi Medical University, Zunyi, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7729-595X",
+        "authenticated-orcid": false,
+        "given": "Yue",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Sciences, Urumqi, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7867-3692",
+        "authenticated-orcid": false,
+        "given": "Ziwen",
+        "family": "Cui",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Sciences, Urumqi, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5974-7932",
+        "authenticated-orcid": false,
+        "given": "Pengwei",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Sciences, Urumqi, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1591-8549",
+        "authenticated-orcid": false,
+        "given": "Lun",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Sciences, Urumqi, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "ALRTGCL: Adaptive Low-Rank Transformer and Graph Contrastive Learning for MiRNA–Drug Associations Prediction in Consumer Healthcare",
+    "doi": "10.1109/tce.2025.3593065",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          8
+        ]
+      ]
+    },
+    "journal": [
+      "IEEE Transactions on Consumer Electronics"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0001-5042-5504",
+        "authenticated-orcid": false,
+        "given": "Yunyin",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, Qingdao Institute of Software, China University of Petroleum (East China), Qingdao, Shandong, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4360-6718",
+        "authenticated-orcid": false,
+        "given": "Shudong",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, the State Key Laboratory of Chemical Safety, and the Shandong Key Laboratory of Intelligent Oil and Gas Industrial Software, Qingdao Institute of Software, China University of Petroleum (East China), Qingdao, Shandong, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yuanyuan",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information and Control Engineering, Qingdao University of Technology, Qingdao, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Chuanru",
+        "family": "Ren",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Technology, Tongji University, Shanghai, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yingye",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, Qingdao Institute of Software, China University of Petroleum (East China), Qingdao, Shandong, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5705-1218",
+        "authenticated-orcid": false,
+        "given": "Shanchen",
+        "family": "Pang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, the State Key Laboratory of Chemical Safety, and the Shandong Key Laboratory of Intelligent Oil and Gas Industrial Software, Qingdao Institute of Software, China University of Petroleum (East China), Qingdao, Shandong, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Human miRNA–disease Association Prediction Via Residual GraphSAGE With Nonlinear Adaptive Feature Fusion and Triplet Contrastive Learning",
+    "doi": "10.1016/j.jmb.2025.169360",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          10
+        ]
+      ]
+    },
+    "journal": [
+      "Journal of Molecular Biology"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0000-0043-6275",
+        "authenticated-orcid": false,
+        "given": "Jianan",
+        "family": "Sui",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Weirong",
+        "family": "Cui",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiaoxiao",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hongliang",
+        "family": "Duan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4632-4364",
+        "authenticated-orcid": false,
+        "given": "Jingjing",
+        "family": "Guo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "AGCLNDA: Enhancing the Prediction of ncRNA-Drug Resistance Association Using Adaptive Graph Contrastive Learning",
+    "doi": "10.1109/jbhi.2025.3531112",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          6
+        ]
+      ]
+    },
+    "journal": [
+      "IEEE Journal of Biomedical and Health Informatics"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0001-7473-0490",
+        "authenticated-orcid": false,
+        "given": "Yanhao",
+        "family": "Fan",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Engineering, Central South University, Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Che",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Software, Xinjiang University, Urumqi, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7339-3007",
+        "authenticated-orcid": false,
+        "given": "Xiaowen",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Engineering, Central South University, Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0000-1949-167X",
+        "authenticated-orcid": false,
+        "given": "Zhijian",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Engineering, Central South University, Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2869-1619",
+        "authenticated-orcid": false,
+        "given": "Lei",
+        "family": "Deng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Engineering, Central South University, Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Energy-Balanced Hyperspherical Graph Representation Learning via Structural Binding and Entropic Dispersion",
+    "id": "http://arxiv.org/abs/2512.24062v2",
+    "date": "2025-12-30T08:11:37Z",
+    "abstract": "Graph Representation Learning (GRL) can be fundamentally modeled as a physical process of seeking an energy equilibrium state for a node system on a latent manifold. However, existing Graph Neural Networks (GNNs) often suffer from uncontrolled energy dissipation during message passing, driving the system towards a state of Thermal Death--manifested as feature collapse or over-smoothing--due to the absence of explicit thermodynamic constraints. To address this, we propose HyperGRL, a thermodynamics-driven framework that embeds nodes on a unit hypersphere by minimizing a Helmholtz free energy objective composed of two competing potentials. First, we introduce Structural Binding Energy (via Neighbor-Mean Alignment), which functions as a local binding force to strengthen structural cohesion, encouraging structurally related nodes to form compact local clusters. Second, to counteract representation collapse, we impose a Mean-Field Repulsive Potential (via Sampling-Free Uniformity), which acts as a global entropic force to maximize representation dispersion without the need for negative sampling. Crucially, to govern the trade-off between local alignment and global uniformity, we devise an Adaptive Thermostat. This entropy-guided strategy dynamically regulates the system's \"temperature\" during training, guiding the representation towards a robust metastable state that balances local cohesion with global discriminability. Extensive experiments on node classification, node clustering, and link prediction show that HyperGRL consistently achieves strong performance across diverse benchmark datasets, yielding more discriminative and robust representations while alleviating over-smoothing.",
+    "authors": [
+      "Rui Chen",
+      "Junjun Guo",
+      "Hongbin Wang",
+      "Yan Xiang",
+      "Yantuan Xian",
+      "Zhengtao Yu"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Predict, Cluster, Refine: A Joint Embedding Predictive Self-Supervised Framework for Graph Representation Learning",
+    "id": "http://arxiv.org/abs/2502.01684v4",
+    "date": "2025-02-02T07:42:45Z",
+    "abstract": "Graph representation learning has emerged as a cornerstone for tasks like node classification and link prediction, yet prevailing self-supervised learning (SSL) methods face challenges such as computational inefficiency, reliance on contrastive objectives, and representation collapse. Existing approaches often depend on feature reconstruction, negative sampling, or complex decoders, which introduce training overhead and hinder generalization. Further, current techniques which address such limitations fail to account for the contribution of node embeddings to a certain prediction in the absence of labeled nodes. To address these limitations, we propose a novel joint embedding predictive framework for graph SSL that eliminates contrastive objectives and negative sampling while preserving semantic and structural information. Additionally, we introduce a semantic-aware objective term that incorporates pseudo-labels derived from Gaussian Mixture Models (GMMs), enhancing node discriminability by evaluating latent feature contributions. Extensive experiments demonstrate that our framework outperforms state-of-the-art graph SSL methods across benchmarks, achieving superior performance without contrastive loss or complex decoders. Key innovations include (1) a non-contrastive, view-invariant joint embedding predictive architecture, (2) Leveraging single context and multiple targets relationship between subgraphs, and (3) GMM-based pseudo-label scoring to capture semantic contributions. This work advances graph SSL by offering a computationally efficient, collapse-resistant paradigm that bridges spatial and semantic graph features for downstream tasks. The code for our paper can be found at https://github.com/Deceptrax123/JPEB-GSSL",
+    "authors": [
+      "Srinitish Srinivasan",
+      "Omkumar CU"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "NodeJEPA: Structure-Conditioned Latent Prediction for Node-Level Graph Self-Supervised Learning",
+    "id": "http://arxiv.org/abs/2608.04381v1",
+    "date": "2026-08-05T02:39:28Z",
+    "abstract": "Self-supervised learning on graphs is largely shaped by contrastive methods that depend on carefully designed augmentations, and by generative methods that reconstruct node attributes in the input space. Both paradigms can entangle representations with low-level input statistics rather than with relational structure. Joint-embedding predictive architectures (JEPA) instead learn by predicting latent targets rather than reconstructing inputs. Recent work has explored this idea for graph-level representation learning, but how to design JEPA-style objectives for node-level tasks, and which structural signals the predictor should condition on, remains less clear. We present NodeJEPA, a joint-embedding predictive architecture for node-level graph self-supervised learning. NodeJEPA masks structure-aware k-hop ego-subgraphs and trains a context encoder to predict the latent representations of the masked nodes. These targets come from an EMA-updated target encoder with stop-gradient. A structure-conditioned predictor integrates spectral and centrality descriptors through cross-attention. Variance, covariance, and Laplacian spectral regularizers help stabilize the embedding geometry, and an optional curriculum gradually increases masking difficulty during training. Because prediction occurs in latent space, NodeJEPA does not rely on input reconstruction or hand-crafted graph augmentations. We evaluate NodeJEPA on standard node classification benchmarks under linear probing and fine-tuning protocols, and conduct ablations on masking, prediction, and regularization design choices. Our study offers a practical recipe for node-level JEPA-style latent prediction on graphs, and clarifies when structural conditioning helps representation learning. Code, configurations, and evaluation scripts are publicly available at https://github.com/OliverZ-dot/Node-Jepa.",
+    "authors": [
+      "Tinghe Zhang",
+      "Jian Xu",
+      "Jiaheng Chen",
+      "Jiaxing Li",
+      "Yucheng Xiao",
+      "Qiang Wang"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Understanding Submodular Information Measure Based Objectives for Representation Learning: A Variance and Separation Perspective",
+    "id": "http://arxiv.org/abs/2607.27660v1",
+    "date": "2026-07-30T04:17:17Z",
+    "abstract": "Submodular Information Measures (SIMs) have recently emerged as a powerful framework for representation learning and multimodal learning. In particular, the SCORE framework~\\cite{majee2024score} demonstrated that SIMs can serve as effective objectives for supervised contrastive learning. Despite their empirical success, however, the geometric and statistical properties induced by different submodular information measures remain poorly understood. In this work, we develop a unified theoretical framework connecting SIMs to classical concepts in representation learning and statistical pattern recognition. We show that Total Information (TI) objectives characterize intra-class structure: Graph Cut TI recovers within-class variance, LogDet TI recovers generalized variance and covariance volume, and Facility Location TI induces imbalance-aware separation that emphasizes rare and confusable classes. We further show that Mutual Information (MI) objectives capture complementary notions of inter-class structure: Graph Cut MI is closely related to centroid separation and Fisher-style discrimination, LogDet MI captures covariance-aware separation through Mahalanobis distance, and Facility Location MI measures nearest-mode representational overlap. We validate these theoretical characterizations using controlled synthetic experiments that independently vary variance, covariance, class imbalance, class separation, and multimodal overlap. Across all settings, the empirical behavior closely matches the proposed theory. Our results provide the first unified geometric and statistical understanding of submodular information measures and offer principled guidance for selecting and designing SIM-based objectives for representation learning.",
+    "authors": [
+      "Rishabh Iyer",
+      "Truong Pham",
+      "Anay Majee"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Weakly Supervised Spatio-Temporal Candidate Discovery of Dairy Farm Sites from Seasonal Satellite Imagery",
+    "id": "http://arxiv.org/abs/2607.12748v1",
+    "date": "2026-07-14T13:17:18Z",
+    "abstract": "Farm site discovery from satellite imagery is a spatiotemporal candidate ranking problem because farm evidence is distributed across pasture, field boundaries, roads, buildings, and seasonal vegetation patterns. Direct farm labels are often incomplete, which makes fully supervised detection difficult. This paper proposes a weakly supervised pipeline for ranking dairy farm candidate clusters from seasonal Sentinel imagery and open map priors. The method uses aligned spring, summer, and autumn image tiles from County Cork, Ireland, with spectral bands, vegetation indices, built area indices, and a pasture channel. A Barlow Twins encoder learns multi-season tile embeddings without farm labels. In parallel, weak OpenStreetMap farm priors are split into a prior and a held-out set. Prior features support a rule-based tile score that combines farm proximity, seasonal pasture evidence, and summer greenness, while held-out features are reserved only for proxy evaluation. The rule score is smoothed over a spatial representation graph using geographic proximity and embedding similarity, and high-scoring tiles are grouped into ranked candidate clusters. From 26,722 valid tiles, the main run selects 535 high-confidence tiles and forms 71 candidate clusters. The top 5 clusters achieve 0.60 precision within 500 m and 0.80 precision within 1000 m of held-out OpenStreetMap farm features. The top 10 clusters achieve 0.40 precision within 500 m and 0.80 precision within 1000 m. The results show that seasonal representation learning and weak geographic priors can reduce large satellite image collections into compact candidate sets for human review.",
+    "authors": [
+      "Usman Haider",
+      "Fatima Khalid",
+      "Karl Mason"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Multi-Head Spectral-Adaptive Graph Anomaly Detection",
+    "id": "http://arxiv.org/abs/2512.22291v1",
+    "date": "2025-12-25T14:55:43Z",
+    "abstract": "Graph anomaly detection technology has broad applications in financial fraud and risk control. However, existing graph anomaly detection methods often face significant challenges when dealing with complex and variable abnormal patterns, as anomalous nodes are often disguised and mixed with normal nodes, leading to the coexistence of homophily and heterophily in the graph domain. Recent spectral graph neural networks have made notable progress in addressing this issue; however, current techniques typically employ fixed, globally shared filters. This 'one-size-fits-all' approach can easily cause over-smoothing, erasing critical high-frequency signals needed for fraud detection, and lacks adaptive capabilities for different graph instances. To solve this problem, we propose a Multi-Head Spectral-Adaptive Graph Neural Network (MHSA-GNN). The core innovation is the design of a lightweight hypernetwork that, conditioned on a 'spectral fingerprint' containing structural statistics and Rayleigh quotient features, dynamically generates Chebyshev filter parameters tailored to each instance. This enables a customized filtering strategy for each node and its local subgraph. Additionally, to prevent mode collapse in the multi-head mechanism, we introduce a novel dual regularization strategy that combines teacher-student contrastive learning (TSC) to ensure representation accuracy and Barlow Twins diversity loss (BTD) to enforce orthogonality among heads. Extensive experiments on four real-world datasets demonstrate that our method effectively preserves high-frequency abnormal signals and significantly outperforms existing state-of-the-art methods, especially showing excellent robustness on highly heterogeneous datasets.",
+    "authors": [
+      "Qingyue Cao",
+      "Bo Jin",
+      "Changwei Gong",
+      "Xin Tong",
+      "Wenzheng Li",
+      "Xiaodong Zhou"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  }
+]

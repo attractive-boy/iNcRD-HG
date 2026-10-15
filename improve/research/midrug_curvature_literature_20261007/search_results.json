@@ -1,0 +1,1445 @@
+[
+  {
+    "source": "arxiv",
+    "query": "(all:\"Laplace approximation\" OR all:\"last-layer Bayesian\") AND (all:\"classification\" OR all:\"link prediction\" OR all:\"graph\") AND submittedDate:[202501010000 TO 202610062359]",
+    "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22Laplace+approximation%22+OR+all%3A%22last-layer+Bayesian%22%29+AND+%28all%3A%22classification%22+OR+all%3A%22link+prediction%22+OR+all%3A%22graph%22%29+AND+submittedDate%3A%5B202501010000+TO+202610062359%5D&max_results=20&sortBy=submittedDate&sortOrder=descending",
+    "retrieved_utc": "2026-10-06T22:05:35.417268+00:00",
+    "raw_file": "raw/arxiv_bf887d4014.txt",
+    "papers": [
+      {
+        "title": "Tracking Dynamic Simplicial Complexes via Constrained State-Space Estimation",
+        "id": "http://arxiv.org/abs/2609.30930v1",
+        "date": "2026-09-25T07:47:09Z",
+        "abstract": "Simplicial complexes (SCs) extend graphs to represent higher-order interactions, but couple their simplex levels through the inclusion property. While static SC inference is an emerging research direction, tracking time-varying SCs remains largely unexplored. A central challenge in tracking SCs is to account for the inclusion property. To this end, we build a nonlinear state-space model tailored to SCs. For prediction, we introduce a closure-aware Markov generation model whose conditional mean preserves simplicial inclusion and whose covariance captures edge-triangle dependencies. For correction, we encode inclusion constraints as nonlinear pseudo-measurements, allowing the constraints to inform both the state and covariance updates. We investigate progressively richer treatments of these measurements through a standard extended Kalman filter, an iterated extended Kalman filter, and a Laplace approximation. Experiments then demonstrate the benefits of exploiting the proposed dynamics and constraint information.",
+        "authors": [
+          "Varun Sarathchandran",
+          "Bishwadeep Das",
+          "Elvin Isufi",
+          "Geert Leus"
+        ]
+      },
+      {
+        "title": "Flexible latent variable models on graphs: Laplace approximated inference for multiview network data",
+        "id": "http://arxiv.org/abs/2609.26495v1",
+        "date": "2026-09-22T14:30:10Z",
+        "abstract": "We propose a novel and flexible nonlinear approach for dimensionality reduction of large-scale multiview network data and derive its theory. The (linear) predictor incorporates observed covariates (edge-specific, layer-specific, and global) and Gaussian latent factors. Inference is conducted via the graph Laplace approximated maximum likelihood estimator. Letting $K$ denote the number of network layers and $n_V$ the number of nodes, we derive asymptotic theory under two regimes: (i) $K \\to \\infty$ with fixed $n_V$, and (ii) double asymptotics $K, n_V \\to \\infty$, establishing consistency and asymptotic normality for local and global parameters, with distinct convergence rates. In an application to the gravity model for commodity trades, we use a zero-adjusted Gamma distribution with latent factors and observable covariates (e.g.\\ distance, tariffs, common language) to capture excess zeros, skewness, and unobserved heterogeneity. Synthetic and real-data exercises show that our approach outperforms the routinely applied Poisson pseudo-maximum likelihood estimator with fixed effects. We complement our theoretical and empirical contributions with open-source R/C++ routines and a novel strategy for starting values selection.",
+        "authors": [
+          "Anna van Es",
+          "Eva Cantoni",
+          "Davide La Vecchia"
+        ]
+      },
+      {
+        "title": "Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization",
+        "id": "http://arxiv.org/abs/2608.07859v1",
+        "date": "2026-08-08T01:56:13Z",
+        "abstract": "Preferential Bayesian optimization (PBO) optimizes objectives accessible only through pairwise user comparisons. The standard approach fits a Gaussian process surrogate for observed pairwise comparisons (PairwiseGP) using the Laplace approximation and selects queries with the Expected Utility of Best Option (EUBO) acquisition function. EUBO queries new candidates at each step, producing pairs that share no candidates with previous queries. Each such pair forms an isolated component in the comparison graph, removing one degree of freedom from the likelihood Hessian and making it rank-deficient. This deficiency is structural and cannot be resolved by changing the surrogate modeling approach. Existing approaches to remedy this issue either waste query budget by forcing comparisons to stay connected, or apply uniform regularization that also perturbs directions already well-constrained by the observed comparisons. We propose KappaSharp that enables a diagonal correction to the Hessian to reduce its condition number, with larger corrections where the prior uncertainty is higher. The correction is only applied in the model fitting step, not query selection. An adaptive variant of KappaSharp is also presented that activates the correction only when the surrogate is confident about recent comparisons, avoiding unnecessary corrections when the problem is well-conditioned. On 11 benchmarks (5--20 dimensions), including a 16-dimensional controller tuning problem in plasma medicine, Adaptive KappaSharp outperforms the standard PBO baseline, with up to +10.9% ($p{=}0.003$).",
+        "authors": [
+          "Ketong Shao",
+          "Jialu Wang",
+          "Xuekai Pei",
+          "Ali Mesbah"
+        ]
+      },
+      {
+        "title": "Scalable Bayesian structure learning of directed acyclic graphs via Laplace approximation, with an application to breast cancer gene expression networks",
+        "id": "http://arxiv.org/abs/2607.10222v1",
+        "date": "2026-07-11T09:22:07Z",
+        "abstract": "Structure learning of directed acyclic graphs (DAGs) from observational data is a foundational task in causal discovery and is widely used to infer regulatory networks from medical and genomic measurements. The Bayesian formulation quantifies model uncertainty and admits prior biological knowledge, but its practical use has been hampered by the super-exponential growth of the DAG space and by the intractability of the node-marginal likelihood under flexible, non-conjugate priors. Existing closed-form solutions are largely confined to the conjugate Normal--Inverse-Gamma prior. We develop a Laplace-approximated Bayesian scoring function for the non-conjugate Normal--Gamma prior on the modified Cholesky parameterisation of the precision matrix, embed it in a Metropolis--Hastings sampler over DAGs, and couple the latent Gaussian network to a binary clinical outcome through a probit link. We show that the node-marginal integral is of generalised inverse-Gaussian form, so that its exact value is a modified Bessel function of the second kind and the proposed scoring function is its leading large-argument asymptotic; the posterior of each conditional variance is likewise generalised inverse-Gaussian and is sampled exactly. In simulation, the proposed prior improves on the conjugate baseline and on the PC, greedy-equivalence-search, NOTEARS, and DAGMA benchmarks at sample sizes typical of clinical cohorts. On two real datasets, the Sachs protein-signalling network, scored against its validated consensus graph, and the Wisconsin Diagnostic Breast Cancer data, the method recovers known structure and, through the DAG-probit extension, predicts malignancy from nuclear morphometry with a cross-validated ROC-AUC of $0.94$ using a sparse, interpretable set of direct predictors.",
+        "authors": [
+          "Samaneh Nazari",
+          "Mohammad Arashi",
+          "Abdolnasser Sadeghkhani"
+        ]
+      },
+      {
+        "title": "Ribbon: Scalable Approximation and Robust Uncertainty Quantification",
+        "id": "http://arxiv.org/abs/2606.27269v1",
+        "date": "2026-06-25T16:51:18Z",
+        "abstract": "Reliably quantifying predictive uncertainty is difficult for complex, high-dimensional, or misspecified models. Both fully Bayesian and bootstrap resampling methods provide principled uncertainty estimates but are often too expensive for modern machine-learning models because they require posterior sampling or repeated model refitting. We introduce Ribbon, a scalable approximation to Dirichlet-reweighted bootstrap uncertainty. Ribbon replaces repeated refitting with an influence-function linearization around a single fitted model, preserving the first-order data-reweighting structure of the Bayesian bootstrap while requiring only post-hoc linear algebra. Ribbon approximates the Bayesian-bootstrap or weighted-likelihood-bootstrap refitting target. With a general concentration parameter, Ribbon gives a calibrated Dirichlet-reweighting family whose uncertainty scale can be tuned on validation data. We show that Ribbon is asymptotically equivalent to a flat-prior Laplace approximation under correct likelihood specification and recovers the robust sandwich covariance under misspecification. Across synthetic regression, MNIST classification, and California Housing benchmarks, Ribbon provides competitive predictive performance and improved calibration in several settings while avoiding repeated model retraining.",
+        "authors": [
+          "Graham Gibson",
+          "John Tipton",
+          "Kellin Rumsey",
+          "Natalie Klein"
+        ]
+      },
+      {
+        "title": "PRCD-MAP: Learning How Much to Trust Imperfect Priors in Causal Discovery",
+        "id": "http://arxiv.org/abs/2605.01669v2",
+        "date": "2026-05-03T01:48:45Z",
+        "abstract": "External priors of unknown reliability create a brittle trade-off in causal discovery: blind trust amplifies errors, blind rejection wastes signal. Real priors are also heterogeneously reliable -- physical laws are trustworthy, LLM-suggested edges are speculative -- yet existing methods either ignore priors or impose them through globally uniform trust. We propose PRCD-MAP, a soft prior-consumption layer that assigns per-edge trust to an imperfect prior and uses it to modulate a prior-aware $\\ell_1$ and prior-weighted $\\ell_2$ regularizer in a MAP objective. Trust is calibrated by empirical Bayes on a Laplace-approximated marginal likelihood and propagated along the prior graph by an MLP, so data-confirmed neighborhoods boost trust and contradictions suppress it. PRCD-MAP enjoys a population-level safety guarantee: it is $\\varepsilon$-safe in expectation over the prior-generation distribution, with $\\varepsilon\\leq C\\cdot\\mathrm{acc}(1{-}\\mathrm{acc})\\cdot d^2/T$ at the parametric $T^{-1}$ rate and vanishing at the prior-quality endpoints. When the prior is uninformative, learned trust provably collapses to its floor and the method recovers a no-prior baseline. Empirically, on real CausalTime data PRCD-MAP exploits informative LLM priors (LLM-prior gain $+0.067/+0.089$ AUROC on AQI/Medical over a no-prior PRCD-MAP backbone; combined backbone+prior lead $+0.123/+0.043$ over PCMCI+), auto-attenuates on the anonymous-variable Traffic stress test, and retains a lead at $d{=}300$; against BayesDAG, the closest soft-Bayesian baseline, PRCD-MAP wins on every CausalTime dataset under a matched $W_0$-only protocol. A four-way ablation isolates each component: EB calibration and MLP trust propagation jointly carry the plurality of the gain, with positive sign on every dataset. Extensions to nonlinear (NAM) and cross-sectional settings show the calibrated-trust principle is setting-agnostic.",
+        "authors": [
+          "Xihang Shan",
+          "Da Zhou"
+        ]
+      },
+      {
+        "title": "From Deep Additive Kernel Learning to Last-Layer Bayesian Neural Networks via Induced Prior Approximation",
+        "id": "http://arxiv.org/abs/2502.10540v1",
+        "date": "2025-02-14T20:14:17Z",
+        "abstract": "With the strengths of both deep learning and kernel methods like Gaussian Processes (GPs), Deep Kernel Learning (DKL) has gained considerable attention in recent years. From the computational perspective, however, DKL becomes challenging when the input dimension of the GP layer is high. To address this challenge, we propose the Deep Additive Kernel (DAK) model, which incorporates i) an additive structure for the last-layer GP; and ii) induced prior approximation for each GP unit. This naturally leads to a last-layer Bayesian neural network (BNN) architecture. The proposed method enjoys the interpretability of DKL as well as the computational advantages of BNN. Empirical results show that the proposed approach outperforms state-of-the-art DKL methods in both regression and classification tasks.",
+        "authors": [
+          "Wenyuan Zhao",
+          "Haoyuan Chen",
+          "Tie Liu",
+          "Rui Tuo",
+          "Chao Tian"
+        ]
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "source": "arxiv",
+    "query": "(all:\"natural gradient\" OR all:\"curvature\") AND (all:\"tabular\" OR all:\"graph neural\") AND submittedDate:[202501010000 TO 202610062359]",
+    "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22natural+gradient%22+OR+all%3A%22curvature%22%29+AND+%28all%3A%22tabular%22+OR+all%3A%22graph+neural%22%29+AND+submittedDate%3A%5B202501010000+TO+202610062359%5D&max_results=20&sortBy=submittedDate&sortOrder=descending",
+    "retrieved_utc": "2026-10-06T22:05:35.419526+00:00",
+    "raw_file": "raw/arxiv_7531046848.txt",
+    "papers": [
+      {
+        "title": "On the Geometry of Multimodal Saturation: Riemannian VICReg",
+        "id": "http://arxiv.org/abs/2610.06096v1",
+        "date": "2026-10-05T10:28:51Z",
+        "abstract": "In self-supervised learning, a third modality should improve, or at least preserve, performance. Across nine image-text-tabular datasets, we show that it instead harms performance: the trimodal model underperforms its own best bimodal subset in 55.6% of paired runs under VICReg. The same failure occurs in 51.1% of paired runs under SimSiam. We call this failure multimodal saturation. We propose that the failure lies in the alignment geometry. Riemannian VICReg (R-VICReg) generalizes classical VICReg: it aligns views by squared geodesic distance on learnable negative-curvature product factors and recovers VICReg exactly as curvature vanishes. Over the same 45 paired runs, R-VICReg raises the probability that the third modality helps from 44.4% to 64.4%, with gains concentrated where VICReg saturates.",
+        "authors": [
+          "Nessim Ben Abbes",
+          "Duc Han Le",
+          "Sabri Mtibaa",
+          "Van-Tam Nguyen"
+        ]
+      },
+      {
+        "title": "Topology-Adaptive Hyperbolic Graph Attention Networks Guided by the Hyperbolic Sombor Index",
+        "id": "http://arxiv.org/abs/2609.32275v1",
+        "date": "2026-09-26T06:04:09Z",
+        "abstract": "Hyperbolic geometry has emerged as a principled space for representing hierarchical graphs. However, existing hyperbolic graph neural networks typically rely on shared curvature configurations and feature-driven attention, failing to explicitly exploit local hierarchical topological patterns. To bridge this gap, we introduce the Hyperbolic Sombor Index (HSO) as a lightweight structural prior for capturing hierarchy-indicative degree stratification. Building on this, we propose \\textbf{HSO-GAT}, a topology-adaptive hyperbolic graph attention network that unifies geometric adaptation and message propagation. Specifically, it comprises two complementary modules: HSO-Guided Local Curvature Adaptation, which performs adaptive node-wise geometric scaling from aggregated node-level HSO signals, and HSO-Gated Hyperbolic Graph Attention, which enables structure-aware message passing through feature-conditioned gating. Theoretically, we establish the monotonic sensitivity of edge-level HSO to degree imbalance and analyze the validity and radial scaling properties of node-adaptive hyperbolic mappings. Extensive experiments on eight benchmark datasets demonstrate that HSO-GAT consistently achieves state-of-the-art performance in both node classification and link prediction tasks.",
+        "authors": [
+          "Haifang Cao",
+          "Boan Tao",
+          "Xiyuan Gao",
+          "Timing Li",
+          "Yu Wang",
+          "Pengfei Zhu"
+        ]
+      },
+      {
+        "title": "Spectral Graph Neural Networks with Hermite Polynomials: A Comprehensive Study",
+        "id": "http://arxiv.org/abs/2609.28979v1",
+        "date": "2026-09-24T03:46:45Z",
+        "abstract": "We study spectral graph neural networks built from Hermite polynomials and propose HermNet, a simple model that combines a nodewise predictor with normalized Hermite propagation. Its sparse recurrence requires neither eigendecomposition nor a learned basis. We distinguish the basic model from optional coordinate calibration, response normalization and Gaussian derivative regularization. Hermite and other complete polynomial bases span the same degree-bounded filter space, but their coordinates can produce different optimization behavior under limited training budgets. We analyze this behavior through spectral signal energy, label sampling, changes in learned features and the bias--variance trade-off of regularization. Controlled synthetic experiments identify a regime in which plain HermNet outperforms matched polynomial-basis alternatives, including with a jointly trained nonlinear predictor. Curvature regularization further improves HermNet when the same functional penalty is available to every comparator. Fixed-predictor controls support the advantage under short training budgets, but longer training removes the plain-model lead. Matched real-data comparisons show accuracy deficits, and architectural and numerical studies identify further limits. Together, the analysis and experiments clarify when Hermite propagation is useful and how calibration and regularization affect its performance.",
+        "authors": [
+          "Shuang Wu"
+        ]
+      },
+      {
+        "title": "Scalable Subgraph Sampling via Resistance Curvature",
+        "id": "http://arxiv.org/abs/2609.27209v1",
+        "date": "2026-09-23T01:16:29Z",
+        "abstract": "Subgraph sampling reduces the training cost of large-scale graph neural networks, but sampling criteria may overlook the geometric roles of edges. We propose a resistance-curvature-guided sampling framework built on ERC-LG, a curvature approximation method for large-scale graphs. ERC-LG combines Johnson-Lindenstrauss projections with regularized multi-GPU batched conjugate gradient solvers, avoiding explicit Laplacian pseudoinverse computation and full embedding storage. The resulting curvature informs node- and edge-sampling probabilities for constructing GNN training subgraphs. Experiments show numerical agreement with pseudoinverse-based curvature and reduced runtime compared with CG-only computation. ERC-LG-based sampling variants achieve the highest mean accuracy on six of seven real-world datasets in downstream node classification.",
+        "authors": [
+          "Chaoqun Fei",
+          "Tinglve Zhou",
+          "Tianyong Hao",
+          "Yangyang Li"
+        ]
+      },
+      {
+        "title": "CurvFlow-DTA: dual-graph discrete Ricci curvature flow for drug--target affinity prediction",
+        "id": "http://arxiv.org/abs/2609.22862v1",
+        "date": "2026-09-19T08:02:34Z",
+        "abstract": "Graph neural networks are widely used for drug--target affinity (DTA) prediction, and discrete Ricci curvature has recently been used to characterize molecular graph geometry. Existing curvature-aware DTA approaches mainly use static curvature on the drug graph while representing proteins primarily with sequence-derived features. This leaves pair-adaptive use of graph geometry underexplored, which may limit adaptation to unseen entities in cold-start settings relevant to practical screening. We present CurvFlow-DTA, which replaces a single static curvature representation with weighted Forman curvature flow on both molecular and protein residue--residue contact graphs. A label-independent flow trajectory is precomputed for each entity, and a pair-conditioned selector determines the horizons read by a dual-branch Flow-GINE. A frozen ESM-2 supplies residue-level representations and contact scores used to construct the protein graph. Inference requires only SMILES strings and protein sequences, without a bound complex structure. On Davis and KIBA, CurvFlow-DTA improves on the protocol-matched Ricci-GraphDTA baseline in every warm and cold-start setting. Warm-split mean squared error (MSE) decreases by $19.9\\%$ on Davis and $18.9\\%$ on KIBA. Across the six cold-start comparisons, MSE decreases by $14.3$--$27.4\\%$, with higher concordance index (CI) throughout. Within our compiled set of literature baselines, CurvFlow-DTA achieves the lowest MSE on both warm benchmarks and across four out of six cold-start evaluation settings.",
+        "authors": [
+          "Jicheng Ma",
+          "Yunyan Yang",
+          "Juan Zhao",
+          "Liang Zhao"
+        ]
+      },
+      {
+        "title": "Personalized Federated Reinforcement Learning via Model-Agnostic Meta-Learning: Convergence of Exact and Hessian-Free Meta-Policy Gradients",
+        "id": "http://arxiv.org/abs/2609.22833v1",
+        "date": "2026-09-19T07:11:23Z",
+        "abstract": "We study personalized federated reinforcement learning, in which $n$ agents, each acting in its own Markov decision process, collaborate through a server to learn a shared MAML-style policy initialization that becomes effective for an individual agent once that agent adapts it with a single local policy-gradient step. We propose Per-FedAvg-PG, in which agents take $τ$ local stochastic meta-policy-gradient steps between communication rounds, and prove that it reaches an $\\varepsilon$-approximate first-order stationary point of the personalized objective in $K=\\mathcal O(\\varepsilon^{-3/2})$ rounds with $τ=Θ(\\varepsilon^{-1/2})$ local steps. The analysis rests on a structural feature of the reinforcement learning setting: under standard policy-class regularity, the per-agent objectives have uniformly bounded gradients and Hessians with explicit constants, so the bounded-gradient and bounded-heterogeneity conditions imposed by the supervised theory hold automatically and no separate heterogeneity assumption is needed. The exact meta-gradient requires the inner-loop policy Hessian, which our experiments identify as the practical bottleneck. We therefore analyze the Hessian-free variant, bound its bias, and exhibit fixed points at which the meta-gradient is nonzero and of order $α$, showing that the resulting stationarity floor is a property of the method rather than of the bound. Experiments on tabular and neural navigation confirm the predicted behavior and show transfer to unseen agents at an order of magnitude lower sample cost than independent training. Together these results identify the adaptation step size as a tunable personalization knob and the curvature estimate as the quantity that governs whether exact meta-gradients are affordable.",
+        "authors": [
+          "Ali Beikmohammadi",
+          "Sarit Khirirat",
+          "Sindri Magnússon"
+        ]
+      },
+      {
+        "title": "PccDiffuser: Multi-solution Motion Planning for Continuum Robots",
+        "id": "http://arxiv.org/abs/2609.09745v1",
+        "date": "2026-09-09T05:41:27Z",
+        "abstract": "We present the PccDiffuser, a conditional diffusion framework for continuum robots that learns a multimodal distribution over complete configuration-space paths and samples multiple candidate solutions in parallel, which are subsequently converted into an executable trajectory by time allocation considering actuator constraints. Under the piecewise constant-curvature model, we use exponential co-ordinates to describe the robot kinematics, and use graph neural network to encode a variable number of environment obstacles. Analytical differential kinematics is incorporated in the denoising process to improve terminal accuracy and whole-body clearance. On a mixed test set comprising workspace with zero to four obstacles, PccDiffuser achieved a success rate of 91\\%. Compared with existing sampling- and optimisation-based benchmarks, it delivered both a higher success rate and greater computational efficiency, with the latter advantage becoming more substantial when sampling more candidate solutions. Experiments on a three-section tendon-driven continuum robot further demonstrate consecutive planning, multi-solution planning, and whole-body obstacle avoidance.",
+        "authors": [
+          "Ke Qiu",
+          "Sifan Chen",
+          "Si Wang",
+          "Rong Xiong",
+          "Yue Wang",
+          "Haojian Lu"
+        ]
+      },
+      {
+        "title": "Two-level domain-decomposition AdaGrad method for scalable training of graph neural networks",
+        "id": "http://arxiv.org/abs/2608.22575v1",
+        "date": "2026-08-23T19:54:30Z",
+        "abstract": "Graph neural networks (GNNs) have emerged as a powerful framework for learning from graph-structured data. However, their efficient training remains challenging, particularly in distributed computing environments. This challenge arises from the use of message passing, which couples all graph nodes, leading to expensive optimization steps, high memory requirements, and substantial communication overhead. To alleviate these limitations, we propose a novel domain-decomposition (DD) variant of AG2m, an AdaGrad method enhanced with second-order curvature information and momentum, denoted by DD-AG2m. The proposed DD-AG2m alternates between AG2m optimization on the original (global) graph and AG2m optimization on the partitioned graphs. To incorporate global information at reduced cost, we further introduce a two-level variant (2DD-AG2m) that performs global optimization steps on a coarse graph obtained by randomly subsampling nodes within each subdomain. Numerical experiments spanning graph classification, node-level regression, and spatiotemporal forecasting tasks demonstrate that the proposed DD methods reduce the computational cost required to achieve the same predictive performance by a factor of 4-8. Moreover, for the fixed computational cost, they improve the predictive performance of GNNs by up to 22% compared with the baseline AG2m.",
+        "authors": [
+          "Laurynas Varnas",
+          "Julien Herrmann",
+          "Alexander Heinlein",
+          "Serge Gratton",
+          "Alena Kopaničáková"
+        ]
+      },
+      {
+        "title": "BRAID: Learning Equilibrium Maps in Interdependent Security Games via Weight-Tied Iterative Graph Neural Networks",
+        "id": "http://arxiv.org/abs/2608.14856v1",
+        "date": "2026-08-14T19:53:34Z",
+        "abstract": "Computing Nash equilibria in interdependent security (IDS) games on networks is computationally expensive: best-response dynamics may need hundreds of iterations per instance, and downstream tasks such as auditing, stress-testing, and incentive design often require repeatedly re-solving the game under parameter perturbations. We propose BRAID, a Best-Response Amortized Iterative Dynamics model that uses a weight-tied iterative graph neural network to learn a direct map from game parameters to Nash equilibrium effort profiles, replacing iterative best response computation with a single forward pass that is up to 43X faster per instance. BRAID is derived from the best-response fixed-point structure of IDS games: its SUM aggregation reflects additive neighbor coupling, and a weight-tied gated recurrent unit (GRU) mirrors a damped best-response update. The same architecture applies across IDS specifications that vary investment-cost curvature and neighborhood aggregation, including log-linear, quadratic-cost, and log constant-elasticity-of-substitution (CES) utilities. Beyond equilibrium prediction, BRAID also recovers how equilibrium efforts change under perturbations to game parameters, including costs and network edge weights. We make this sensitivity recovery an explicit evaluation target and introduce two training strategies, interior-equilibrium training and input-noise regularization, that improve the local behavior of the learned equilibrium map without using sensitivity labels. Experiments show that BRAID effectively predicts Nash equilibria and recovers equilibrium sensitivities across utility specifications and network sizes.",
+        "authors": [
+          "Elnaz Nowrouzi",
+          "Zhiqun Zuo",
+          "Xueru Zhang",
+          "Mohammad Mahdi Khalili"
+        ]
+      },
+      {
+        "title": "Do Existing Preconditioners Improve Biomedical Tabular Foundation Learning? An Empirical Study on TabPFN Optimization",
+        "id": "http://arxiv.org/abs/2609.25013v1",
+        "date": "2026-08-01T16:50:19Z",
+        "abstract": "Tabular foundation models have recently shown strong potential for structured biomedical data analysis. Among them, TabPFN has emerged as an effective approach for low-data tabular classification tasks. However, the impact of optimization and preconditioning strategies on biomedical fine-tuning remains largely unexplored. In this work, we present a comprehensive empirical investigation of five AdamW-based preconditioning strategies for fine-tuning TabPFN v2.5 on 59 biomedical datasets spanning Alzheimer's disease, breast cancer, schizophrenia, significant memory concern (SMC), KEEL biomedical datasets, and UCI biomedical benchmarks. The evaluation considers predictive performance, computational efficiency, and statistical significance analysis. Experimental results demonstrate that the original AdamW optimizer consistently achieves the best overall performance and statistical ranking, while existing curvature-aware preconditioners fail to provide reliable improvements across diverse biomedical learning scenarios. The findings suggest that generic preconditioning approaches may not adequately capture the optimization characteristics of biomedical tabular learning, motivating the development of biomedical-aware preconditioners specifically tailored for healthcare-oriented tabular foundation models.",
+        "authors": [
+          "M. Sajid",
+          "Pinki Khatun",
+          "M. Tanveer"
+        ]
+      },
+      {
+        "title": "Local-Global Geometric Insights for Graph Neural Networks via Entropic Curvature",
+        "id": "http://arxiv.org/abs/2607.22381v1",
+        "date": "2026-07-24T15:07:37Z",
+        "abstract": "Curvature notions on graphs, particularly Ollivier-Ricci and Forman, have emerged as powerful tools for addressing fundamental issues in Graph Neural Networks (GNNs) such as oversmoothing and oversquashing, but rely almost exclusively on local edge-level comparisons and therefore fail to certify how information actually propagates over long distances. We introduce Entropic Curvature, a global, transport-based curvature obtained by extending the Lott-Sturm-Villani framework to graphs through the displacement convexity of entropy along Wasserstein geodesics. We define a tractable Weak Entropic Curvature proxy that lower-bounds the global entropic curvature, and from it derive (i) a Poincare-type inequality controlling oversmoothing, (ii) a transport-entropy generalization bound, and (iii) an expansion paradox proving that sparsity, strong spectral expansion, and positive entropic curvature cannot coexist in large graphs, unifying oversmoothing and oversquashing as opposite ends of a single curvature spectrum. We translate the theory into three practical mechanisms, the E-Gate aggregator, the ENT structural encoding, and Midpoint-Completion Rewiring (MCR), and benchmark them against SDRF, FoSR, BORF, LCP, and Graph Ricci Flow on six node-classification benchmarks, and graph-classification.",
+        "authors": [
+          "Rachid Caich",
+          "Yassine Abbahaddou"
+        ]
+      },
+      {
+        "title": "Non-Asymptotic Best Policy Identification Guarantees in Online Reinforcement Learning",
+        "id": "http://arxiv.org/abs/2607.17201v1",
+        "date": "2026-07-19T11:48:09Z",
+        "abstract": "In this work we study the Best Policy Identification (BPI) problem in online, tabular Reinforcement Learning. This is an active sequential hypothesis testing problem in which the learner's objective is to identify an optimal policy in a Markov Decision Process (MDP) with high confidence, while minimizing the expected sample complexity to do so. We consider an online setting with deterministic rewards, where the agent must strategically navigate through the MDP in order to effectively explore. Previous works in the literature have provided asymptotically optimal methods for BPI, such as the Navigate and Stop (NaS) algorithm and its variants, however existing analysis remains asymptotic. In this work, we fill that gap by providing the first non-asymptotic sample complexity guarantees for NaS, showing that its sample complexity depends not only on the characteristic time, but also on the connectivity of the underlying MDP, the curvature of the optimal characteristic time, and other instance-dependent quantities. We identify these additional attributes and make explicit their contributions to the overall sample complexity.",
+        "authors": [
+          "Joseph Lazzaro",
+          "Alessio Russo",
+          "Aldo Pacchiano"
+        ]
+      },
+      {
+        "title": "Convex--Concave Quadratic Spectral Filtering for Graph Neural Networks",
+        "id": "http://arxiv.org/abs/2606.24956v1",
+        "date": "2026-06-23T08:49:51Z",
+        "abstract": "Spectral graph neural networks (GNNs) interpret message passing as frequency-selective filtering. While low-order spectral filters are efficient, their limited selectivity often leads to weak attenuation outside the passband, whereas high-order alternatives introduce optimization challenges. We propose DCQ-GNN, a spectral GNN based on a compact bank of adaptive convex--concave quadratic filters. By restricting the filter order to two while explicitly exploiting complementary curvature, DCQ-GNN improves spectral selectivity as quantified by Dirichlet energy and entropy measures without resorting to high-order polynomial expansions. The model fuses filter outputs through a node-adaptive gating mechanism to enable node-wise structure-aware spectral selection. We provide a formal spectral analysis grounded in Dirichlet energy attenuation, von Neumann entropy, and curvature polarity, and derive explicit characterizations of filter behavior across varying levels of homophily and structural perturbations. Extensive benchmarks on 10 datasets show that DCQ-GNN ties for the top average rank (3.0) on heterophilic graphs and obtains the second-best rank (4.2) on homophilic graphs, remaining competitive with representative high-order polynomial spectral filters. Furthermore, under strong structural perturbations, DCQ-GNN exhibits substantially smaller performance degradation compared to both first-order and high-order baselines. These results demonstrate that curvature-aware quadratic banks provide a robust and efficient alternative to high-order spectral models while preserving optimization stability and computational efficiency.",
+        "authors": [
+          "Ranhui Yan",
+          "Jia Cai",
+          "Mengzhu Chen",
+          "Haodong Yang"
+        ]
+      },
+      {
+        "title": "Ramanujan Graph Rewiring with Non Negative Resistance Curvature",
+        "id": "http://arxiv.org/abs/2606.21333v2",
+        "date": "2026-06-19T11:26:42Z",
+        "abstract": "Graph Neural Networks (GNNs) have emerged as a powerful paradigm for learning on graph-structured data by iteratively propagating and aggregating information across edges. However, conventional message passing schemes often suffer from over-squashing, whereby exponentially large neighborhoods are compressed into fixed-dimensional embeddings, impeding effective long-range dependency learning. In this work, we introduce Ramanujan Propagation, a graph rewiring strategy that leverages Ramanujan graphs to alleviate topological bottlenecks in GNNs. We first establish that suitably chosen Ramanujan graphs guarantee non-negative resistance curvature, which mitigates over-squashing and facilitates efficient information flow. We then propose an algorithmic framework to construct a Ramanujan rewired graph that preserves the local connectivity of the original graph. Our experiments demonstrate that our method outperforms nine state-of-the-art rewiring techniques. These results establish Ramanujan graphs as a rigorous structural prior for scalable, topology-aware message passing in GNNs.",
+        "authors": [
+          "Hugo Attali",
+          "Rachid El Jouhri"
+        ]
+      },
+      {
+        "title": "Curvature-Informed Potential Energy Surface for Protein-Ligand Binding Affinity Prediction",
+        "id": "http://arxiv.org/abs/2606.14217v1",
+        "date": "2026-06-12T07:53:26Z",
+        "abstract": "Accurate prediction of protein-ligand binding affinity is essential for structure-based drug discovery. Recent geometric deep learning methods have achieved promising performance by representing protein-ligand complexes as three-dimensional graphs. However, most existing approaches mainly rely on static interaction geometry from a single bound conformation, while neglecting molecular flexibility and binding-induced conformational changes. To address this limitation, we propose a curvature-informed potential energy surface (CPES) graph neural network for protein-ligand binding affinity prediction, which incorporates physics-informed curvature representations to model conformational flexibility. CPES first derives curvature spectral descriptors from the Hessian of the potential energy surface evaluated at equilibrium configurations, whose eigenvalues define the local principal curvatures of the potential energy surface. It then uses spectral cross-attention to compare the unbound ligand and protein with the bound complex, thereby capturing binding-induced changes in conformational dynamics. In parallel, hierarchical protein-ligand interaction representations are learned from static structural features through geometry-aware message passing, soft clustering, and bidirectional cross-attention. Finally, CPES fuses the curvature-informed dynamic representations with static interaction representations for affinity regression. Extensive evaluations on multiple benchmark datasets demonstrate that CPES achieves improved predictive performance and offers physical interpretability.",
+        "authors": [
+          "Peng-Fei Sun",
+          "Chuan-Xian Ren",
+          "Hong Yan"
+        ]
+      },
+      {
+        "title": "The Post-GCN Decade Revisited: Curvature-Stratified Evaluation of Relational Learning",
+        "id": "http://arxiv.org/abs/2606.06397v2",
+        "date": "2026-06-04T17:05:36Z",
+        "abstract": "Current evaluation practices in relational learning rely heavily on flat leaderboards that average performance across heterogeneous datasets, implicitly assuming a uniform underlying structure. We show that this assumption introduces systematic bias: it obscures geometry-dependent performance variations and can lead to misleading conclusions about model generalization. In this work, we identify intrinsic geometry as a key latent factor governing model effectiveness. We demonstrate that conventional aggregated metrics mask critical performance trade-offs that only become visible when datasets are stratified by their geometric properties. To address this issue, we introduce a curvature-stratified evaluation framework that partitions datasets into positive, negative, and near-zero curvature regimes. Our benchmark evaluates 18 representative models including Graph Convolutional Networks (GCNs), Graph Foundation Models (GFMs), and tabular learning methods across 14 datasets. We find that model rankings are highly stable within each curvature regime but shift significantly across regimes, indicating that performance is fundamentally geometry-dependent rather than universally transferable. Notably, we identify regimes where GFMs offer diminishing returns compared to geometry-aligned GNNs. Based on these findings, we propose a geometry-aware evaluation protocol that yields more reliable and interpretable comparisons than standard aggregated benchmarks. We release all code, curvature-stratified dataset splits, and evaluation tools to support reproducible and rigorous assessment of future relational learning methods. Code and datasets are provided in our project homepage: https://sirbabbage.github.io/CurvBench_HOME/.",
+        "authors": [
+          "Shuo Wang",
+          "Xiangyu Wang",
+          "Quanxin Wang",
+          "Bailin Wu",
+          "Bokui Wang",
+          "Shunyang Huang",
+          "Boyan Deng",
+          "Haonan Liu",
+          "Ruiyi Fang",
+          "Zhenxiang Xu",
+          "Boyu Wang",
+          "Zhao Kang"
+        ]
+      },
+      {
+        "title": "Geometric Fairness-Aware Routing for Federated Edge Networks",
+        "id": "http://arxiv.org/abs/2606.26125v1",
+        "date": "2026-05-31T15:02:58Z",
+        "abstract": "Emerging 6G and edge-intelligent networks require effective and balanced routing algorithms among varied and spatially distributed devices. Existing federated routing systems often prioritize aggregate latency or throughput above fairness and the underlying geometric structure of network topologies. This paper describes Geo-FairFed, a geometric fairness-aware routing system that blends hyperbolic graph neural networks (HGNNs) and federated optimization to provide equal performance across edge nodes. Each node learns topology-aware representations on a negatively curved manifold, which include hierarchical relationships and connection asymmetries. A global aggregator next enforces fairness using a curvature-regularized aim that minimizes routing loss, geometric inconsistency, and an inequality penalty based on Jain's fairness index. A theoretical analysis develops convergence guarantees under limited curvature and shows that the proposed fairness term results in a Pareto-improving equilibrium in routing performance. Extensive simulations on dynamic 6G-edge and IoT topologies reveal that Geo-FairFed minimizes average latency by 20\\%, reduces energy consumption by 17\\%, and improves fairness by up to 21\\% when compared to state-of-the-art federated and geometric routing protocols. The study found that embedding topology in a hyperbolic manifold and including fairness into federated updates can significantly enhance the efficiency and equity of large-scale network routing.",
+        "authors": [
+          "Ratun Rahman"
+        ]
+      },
+      {
+        "title": "Prospect-Theory Behavior from Bellman Optimality in MDPs with Catastrophic States",
+        "id": "http://arxiv.org/abs/2606.00970v2",
+        "date": "2026-05-31T03:01:48Z",
+        "abstract": "We study risk-neutral control in Markov decision processes with an absorbing catastrophic state. Even though rewards are linear and the agent has no utility curvature, probability weighting, or framing dependence, standard Bellman optimality produces three prospect-theory-like signatures: an S-shaped value-function profile (convex near catastrophe, concave in the far field), an endogenous loss-sensitivity coefficient $λ^*(S) > 1$, and a reflection-effect policy reversal. Across 495 configurations, the optimal policy plays safe near catastrophe in positive-drift (growth) regimes despite the risky action's higher immediate expected value, and plays risky near catastrophe in negative-drift (decline) regimes despite the safe action's lower immediate expected loss. We derive a closed-form expression for the asymptotic loss-aversion plateau $\\barλ$ that depends only on win probability $p$, payoff asymmetry $r = |Δ_\\ell/Δ_w|$, and discount factor $β$, and matches numerical solutions to $R^2 = 0.999$. The mechanism does not require asymmetric payoffs. Across a sweep of $(p,β)$ at three asymmetry levels, the asymmetry share of $\\barλ$ above unity has median 4.6% at $r = 1.25$ and rises to 13.9% at $r = 2$, with the boundary contribution exceeding the asymmetry contribution in every cell tested. The phenomena persist under tabular Q-learning (a model-free agent reproduces $V^*$ at correlation 0.98 in growth and 1.00 in decline) and under stochastic transitions with Gaussian, heavy-tailed Student-$t_3$, and asymmetric skew-normal noise up to 50% of the step size, where the asymptotic plateau tracks the closed-form prediction within 0.41% for safe-channel noise and within 9.6% for risky-channel or both-channel noise. These results identify absorbing failure states as a sufficient structural mechanism for prospect-theory-like behavior under optimal control.",
+        "authors": [
+          "Yujiao Chen"
+        ]
+      },
+      {
+        "title": "Query-Efficient Quantum Approximate Optimization via Graph-Conditioned Trust Regions",
+        "id": "http://arxiv.org/abs/2604.24803v1",
+        "date": "2026-04-27T03:48:48Z",
+        "abstract": "In low-depth implementations of the Quantum Approximate Optimization Algorithm (QAOA), the dominant cost is often the number of objective evaluations rather than circuit depth. We introduce a graph-conditioned trust-region method for reducing this query cost. A graph neural network predicts a Gaussian distribution N(mu, Sigma) over QAOA angles. The mean initializes a local optimizer, the covariance defines an ellipsoidal trust region that constrains the search, and the predicted uncertainty determines an instance-dependent evaluation budget. Thus the learned distribution defines a search policy rather than only an initial parameter estimate. Under explicit assumptions on local smoothness, curvature, calibration, and noise, we derive bounds on objective degradation within the trust region, lower bounds on gradient variance, preservation of expected objective ordering under depolarizing noise, and finite-sample coverage guarantees. We evaluate the method for MaxCut at depth p = 2 on Erdos-Renyi, 3-regular, Barabasi-Albert, and Watts-Strogatz graphs with n = 8-16 vertices. Relative to random restarts and the strongest learned point-prediction baseline, the method reduces the mean number of circuit evaluations from 343 and 85 to 45 +/- 7, while maintaining sampled approximation ratios within 3 percentage points of concentration-based heuristics. The method does not improve absolute approximation ratios; its advantage is reduced query cost at comparable solution quality. The predictive uncertainty is calibrated in the experiments, with ECE = 0.052 and Spearman correlation rho = 0.770, and the learned trust regions transfer to graph sizes not used during training. The results identify a low-depth, query-dominated regime in which graph-conditioned trust regions reduce the query cost of QAOA without modifying the ansatz.",
+        "authors": [
+          "Molena Huynh"
+        ]
+      },
+      {
+        "title": "Ollivier-Ricci Curvature of Riemannian Manifolds and Directed Graphs with Applications to Graph Neural Networks",
+        "id": "http://arxiv.org/abs/2604.14211v2",
+        "date": "2026-04-06T22:28:17Z",
+        "abstract": "This thesis is an exposition of Ollivier-Ricci Curvature of metric spaces as introduced by Yann Ollivier, which is based upon the 1-Wasserstein Distance and optimal transport theory. We present some of the major results and proofs that connect Ollivier-Ricci curvature with classical Ricci curvature of Riemannian manifolds, including extensions of various theoretical bounds and theorems such as Bonnet-Myers and Levy-Gromov. Then we shift to results introduced by Lin-Lu-Yau on an extension of Ollivier-Ricci curvature on graphs, as well as the work of Jost-Liu on proving various combinatorial bounds for graph Ollivier-Ricci curvature. At the end of this thesis we present novel ideas and proofs regarding extensions of these results to directed graphs, and finally applications of graph-based Ollivier-Ricci curvature to various algorithms in network science and graph machine learning.",
+        "authors": [
+          "Eleanor P Wiesler"
+        ]
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "source": "crossref",
+    "query": "last layer Laplace approximation classification uncertainty",
+    "url": "https://api.crossref.org/works?query.title=last+layer+Laplace+approximation+classification+uncertainty&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-10-06&rows=20",
+    "retrieved_utc": "2026-10-06T22:05:35.420946+00:00",
+    "raw_file": "raw/crossref_ca4d3d84a9.txt",
+    "papers": [
+      {
+        "title": "Beyond Heuristic Thresholds: Uncertainty-Aware Industrial Anomaly Detection With Last-Layer Laplace Approximation",
+        "doi": "10.1109/access.2026.3702052",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "journal": [
+          "IEEE Access"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0006-6714-0405",
+            "authenticated-orcid": false,
+            "given": "Yu-Hang",
+            "family": "Huang",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Computer Science and Engineering (SCSE), Macau University of Science and Technology (MUST), Macau, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5296-0922",
+            "authenticated-orcid": false,
+            "given": "Sio-Long",
+            "family": "Lo",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Computer Science and Engineering (SCSE), Macau University of Science and Technology (MUST), Macau, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Enhanced Laplace approximation",
+        "doi": "10.1016/j.jmva.2024.105321",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              7
+            ]
+          ]
+        },
+        "journal": [
+          "Journal of Multivariate Analysis"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Jeongseop",
+            "family": "Han",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9820-6434",
+            "authenticated-orcid": false,
+            "given": "Youngjo",
+            "family": "Lee",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Hierarchical Models and Laplace Approximation",
+        "doi": "10.1201/9781003410294-2",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              19
+            ]
+          ]
+        },
+        "journal": [
+          "Spatio-Temporal Models for Ecologists"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "James T.",
+            "family": "Thorson",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Kasper",
+            "family": "Kristensen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Last-layer committee machines for uncertainty estimations of benthic imagery",
+        "doi": "10.1016/j.neunet.2026.108819",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              8
+            ]
+          ]
+        },
+        "journal": [
+          "Neural Networks"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-4650-5384",
+            "authenticated-orcid": false,
+            "given": "H. Martin",
+            "family": "Gillis",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4443-0582",
+            "authenticated-orcid": false,
+            "given": "Isaac",
+            "family": "Xu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5822-4574",
+            "authenticated-orcid": false,
+            "given": "Benjamin",
+            "family": "Misiuk",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5125-978X",
+            "authenticated-orcid": false,
+            "given": "Craig J.",
+            "family": "Brown",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6144-8963",
+            "authenticated-orcid": false,
+            "given": "Thomas",
+            "family": "Trappenberg",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Stein’s Method for Asymmetric Laplace Approximation",
+        "doi": "10.1007/s10959-026-01512-6",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              13
+            ]
+          ]
+        },
+        "journal": [
+          "Journal of Theoretical Probability"
+        ],
+        "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Motivated by its appearance as a limiting distribution for random and non-random sums of independent random variables, in this paper we develop Stein’s method for approximation by the asymmetric Laplace distribution. Our results generalise and offer technical refinements on existing results concerning Stein’s method for (symmetric) Laplace approximation. We provide general bounds for asymmetric Laplace approximation in the Kolmogorov and Wasserstein distances, and a smooth Wasserstein distance, that involve a distributional transformation that can be viewed as an asymmetric Laplace analogue of the zero bias transformation. As an application, we derive explicit Kolmogorov, Wasserstein and smooth Wasserstein distance bounds for the asymmetric Laplace approximation of geometric random sums and complement these results by providing explicit bounds for the asymmetric Laplace approximation of a deterministic sum of random variables with a random normalisation sequence.</jats:p>",
+        "authors": [
+          {
+            "given": "Fraser",
+            "family": "Daly",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Robert E.",
+            "family": "Gaunt",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Heather L.",
+            "family": "Sutcliffe",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Evaluating the Efficiency of Bayesian Laplace Approximation for Binary Classification of Cardiovascular Disease (CVD) Risk",
+        "doi": "10.11159/icsta25.140",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              8
+            ]
+          ]
+        },
+        "journal": [
+          "International Conference on Statistics: Theory and Applications",
+          "Proceedings of the 7th International Conference on Statistics: Theory and Applications"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Shuhrah",
+            "family": "Alghamdi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Correction to: ‘Simplified integrated nested Laplace approximation’",
+        "doi": "10.1093/biomet/asae030",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              13
+            ]
+          ]
+        },
+        "journal": [
+          "Biometrika"
+        ],
+        "abstract": null,
+        "authors": null
+      },
+      {
+        "title": "nimbleQuad: Laplace Approximation, Quadrature, and Nested Deterministic Approximation Methods for 'nimble'",
+        "doi": "10.32614/cran.package.nimblequad",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              14
+            ]
+          ]
+        },
+        "journal": [
+          "CRAN: Contributed Packages"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Paul",
+            "family": "van Dam-Bates",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Perry",
+            "family": "de Valpine",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wei",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Christopher",
+            "family": "Paciorek",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Daniel",
+            "family": "Turek",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "FSP-Laplace: Function-Space Priors for the Laplace Approximation in Bayesian Deep Learning",
+        "doi": "10.52202/079017-0446",
+        "date": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "journal": [
+          "Advances in Neural Information Processing Systems 37"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Tristan",
+            "family": "Cinquin",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Marvin",
+            "family": "Pförtner",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Vincent",
+            "family": "Fortuin",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Philipp",
+            "family": "Hennig",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Robert",
+            "family": "Bamler",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Kappa Model with Laplace Approximation: A Bayesian Study",
+        "doi": "10.18576/jsap/150313",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              1
+            ]
+          ]
+        },
+        "journal": [
+          "Journal of Statistics Applications &amp; Probability"
+        ],
+        "abstract": null,
+        "authors": null
+      },
+      {
+        "title": "Scalable Linearized Laplace Approximation via Surrogate Neural Kernel",
+        "doi": "10.14428/esann/2026.es2026-71",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "journal": [
+          "ESANN 2026 proceesdings"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Luis A.",
+            "family": "Ortega",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Simón",
+            "family": "Rodríguez-Santana",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Daniel",
+            "family": "Hernández-Lobato",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Improving the Linearized Laplace Approximation via Quadratic Approximations",
+        "doi": "10.14428/esann/2026.es2026-154",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "journal": [
+          "ESANN 2026 proceesdings"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Pedro",
+            "family": "Jiménez García-Ligero",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Luis A.",
+            "family": "Ortega",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Pablo",
+            "family": "Morales-Álvarez",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Daniel",
+            "family": "Hernández-Lobato",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Precise Laplace approximation for mixed rough differential equation",
+        "doi": "10.1016/j.jde.2024.09.010",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        },
+        "journal": [
+          "Journal of Differential Equations"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Xiaoyu",
+            "family": "Yang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8407-4650",
+            "authenticated-orcid": false,
+            "given": "Yong",
+            "family": "Xu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Bin",
+            "family": "Pei",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Function-Approximation Classification",
+        "doi": "10.1007/978-3-031-60950-3_6",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              7
+            ]
+          ]
+        },
+        "journal": [
+          "Fundamentals of Pattern Recognition and Machine Learning"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Ulisses",
+            "family": "Braga-Neto",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Solving Geometric Programming Problems with Laplace Uncertainty Distribution",
+        "doi": "10.1007/978-981-96-8456-4_17",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              1
+            ]
+          ]
+        },
+        "journal": [
+          "Frontiers of Artificial Intelligence, Ethics and Multidisciplinary Applications",
+          "Soft Computing for Problem Solving"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Tapas",
+            "family": "Mondal",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Akshay Kumar",
+            "family": "Ojha",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sabyasachi",
+            "family": "Pani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A Generalized Laplace Transform Approximation for Nonlinear Groundwater Flow",
+        "doi": "10.22541/au.174466155.50674543/v1",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              14
+            ]
+          ]
+        },
+        "journal": null,
+        "abstract": "<jats:p>• A truncated integration-by-parts expansion allows Laplace transforms to handle nonlinear source terms in groundwater flow equations. • Approximation closely matches exact solutions for exponential, Bessel, and error-function tests common in aquifer analysis. • Smooth, rapidly decaying groundwater signals minimize higher-order terms, ensuring efficiency and broad applicability.</jats:p>",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-4853-3944",
+            "authenticated-orcid": false,
+            "given": "YF",
+            "family": "Lin",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Approximation of Cauchy-Stieltjes and Laplace-Stieltjes Functions",
+        "doi": "10.1007/978-3-031-75802-7_7",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              12,
+              4
+            ]
+          ]
+        },
+        "journal": [
+          "Multiscale, Nonlinear and Adaptive Approximation II"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0007-7232-0299",
+            "authenticated-orcid": false,
+            "given": "Dietrich",
+            "family": "Braess",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-4801-6189",
+            "authenticated-orcid": false,
+            "given": "Wolfgang",
+            "family": "Hackbusch",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Generalized laplace approximation and its application to credibility theory",
+        "doi": "10.1080/03461238.2026.2629286",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              18
+            ]
+          ]
+        },
+        "journal": [
+          "Scandinavian Actuarial Journal"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Rosy",
+            "family": "Oh",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Korea Military Academy, Seoul",
+                "place": [
+                  "Korea"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Kyungbae",
+            "family": "Park",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Kangwon National University, Chuncheon",
+                "place": [
+                  "Korea"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Weonyoung",
+            "family": "Joo",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Ewha Womans University",
+                "place": [
+                  "Seoul, Republic of Korea"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jae Youn",
+            "family": "Ahn",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Ewha Womans University",
+                "place": [
+                  "Seoul, Republic of Korea"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A Bayesian Federated Learning Framework With Online Laplace Approximation",
+        "doi": "10.1109/tpami.2023.3322743",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              1
+            ]
+          ]
+        },
+        "journal": [
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0000-4074-5144",
+            "authenticated-orcid": false,
+            "given": "Liangxi",
+            "family": "Liu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science and Engineering, Southern University of Science and Technology, Shenzhen, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0007-2675-2023",
+            "authenticated-orcid": false,
+            "given": "Xi",
+            "family": "Jiang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science and Engineering, Southern University of Science and Technology, Shenzhen, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1701-9141",
+            "authenticated-orcid": false,
+            "given": "Feng",
+            "family": "Zheng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science and Engineering, Southern University of Science and Technology, Shenzhen, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9084-5482",
+            "authenticated-orcid": false,
+            "given": "Hong",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "College of Informatics, Huazhong Agricultural University, Wuhan, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3508-1851",
+            "authenticated-orcid": false,
+            "given": "Guo-Jun",
+            "family": "Qi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Westlake University, Bellevue, WA, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3483-8333",
+            "authenticated-orcid": false,
+            "given": "Heng",
+            "family": "Huang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Maryland College Park, College Park, MD, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8264-6117",
+            "authenticated-orcid": false,
+            "given": "Ling",
+            "family": "Shao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UCAS-Terminus AI Lab, University of Chinese Academy of Sciences, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Uncertainty in Measurement and Approximation",
+        "doi": "10.1002/9783527839599.app3",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              25
+            ]
+          ]
+        },
+        "journal": [
+          "Field Simulation for Accelerator Magnets"
+        ],
+        "abstract": null,
+        "authors": null
+      }
+    ],
+    "status": "ok"
+  }
+]

@@ -1,0 +1,182 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn_classification": "progress:conditioned-expression fits and source/boundary diagnostics",
+  "current_turn": "progress:12 class-budget-matched boundary/random fits, independent prototype gradients and12 new checkpoint replays",
+  "best": {
+    "config": "boundary_rec10",
+    "mean_inner_auc": 0.9537220030598593,
+    "mean_inner_ap": 0.9139384967877618,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.001122208005107946,
+          "fold_deltas": [
+            0.0020789324683921917,
+            0.00048529471131830704,
+            0.0008023968356133393
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0021133876928965956,
+          "fold_deltas": [
+            0.004127451036640473,
+            -0.00010801958890127583,
+            0.00232073163095059
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 9.521049687951274e-06,
+          "fold_deltas": [
+            0.0003283880525128957,
+            -0.00017307413155853713,
+            -0.00012675077189050477
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00015208466628661524,
+          "fold_deltas": [
+            0.00036900840934595003,
+            -0.0007551110278293249,
+            -7.015138037647084e-05
+          ]
+        }
+      },
+      "random_rec10": {
+        "auc": {
+          "mean_delta": -0.0002879710902202737,
+          "fold_deltas": [
+            -0.0002335203928980345,
+            -0.0007614402859887903,
+            0.0001310474082260038
+          ]
+        },
+        "ap": {
+          "mean_delta": -8.99179061061665e-05,
+          "fold_deltas": [
+            -0.0001337568902468611,
+            -0.0014348118696067003,
+            0.0012988150415350619
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0002879710902202737
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "If promoted, freeze original-validation confirmation. Otherwise review the original-expression column-token hypothesis in post_result_review.json and implement a matched, query-deletion-verified test if distinct from existing code. Do not import historical annotation MIL inputs or automatically search boundary temperatures/weights/fractions.",
+  "component_diagnostics": {
+    "status": "passed",
+    "selection_unchanged": true,
+    "means": [
+      {
+        "config": "control",
+        "clean_bce": 0.23591841260592142,
+        "boundary_auxiliary": 1.069666902224223,
+        "random_auxiliary": 0.4020032485326131,
+        "prototype_cosine": -0.9420876502990723,
+        "boundary_gradient": {
+          "cosine_to_clean": 0.08800245076417923,
+          "weighted_norm_ratio": 0.3400828142960866
+        },
+        "random_gradient": {
+          "cosine_to_clean": 0.05479986717303594,
+          "weighted_norm_ratio": 0.18853327631950378
+        },
+        "boundary_mean_abs_margin": 0.7607201672550005,
+        "random_mean_abs_margin": 1.6762349569752422
+      },
+      {
+        "config": "unmasked10",
+        "clean_bce": 0.24019895493984222,
+        "boundary_auxiliary": 1.2388299703598022,
+        "random_auxiliary": 0.44810763001441956,
+        "prototype_cosine": -0.9110404849052429,
+        "boundary_gradient": {
+          "cosine_to_clean": 0.1333430657784144,
+          "weighted_norm_ratio": 0.7084365685780843
+        },
+        "random_gradient": {
+          "cosine_to_clean": 0.08483367413282394,
+          "weighted_norm_ratio": 0.40351009368896484
+        },
+        "boundary_mean_abs_margin": 0.7689694416188134,
+        "random_mean_abs_margin": 1.6709575127190452
+      },
+      {
+        "config": "boundary",
+        "clean_bce": 0.24826793372631073,
+        "boundary_auxiliary": 0.7902746597925822,
+        "random_auxiliary": 0.34222927689552307,
+        "prototype_cosine": -0.7600645820299784,
+        "boundary_gradient": {
+          "cosine_to_clean": 0.17597774167855582,
+          "weighted_norm_ratio": 0.13430194308360419
+        },
+        "random_gradient": {
+          "cosine_to_clean": 0.0949841837088267,
+          "weighted_norm_ratio": 0.09192795058091481
+        },
+        "boundary_mean_abs_margin": 0.7415136189473177,
+        "random_mean_abs_margin": 1.662939425362248
+      },
+      {
+        "config": "boundary_rec10",
+        "clean_bce": 0.3017890950043996,
+        "boundary_auxiliary": 1.4621470371882122,
+        "random_auxiliary": 0.5672215024630228,
+        "prototype_cosine": -0.9099927345911661,
+        "boundary_gradient": {
+          "cosine_to_clean": 0.08531978726387024,
+          "weighted_norm_ratio": 0.3508974214394887
+        },
+        "random_gradient": {
+          "cosine_to_clean": 0.05363907044132551,
+          "weighted_norm_ratio": 0.21665878345568976
+        },
+        "boundary_mean_abs_margin": 0.7211780013120269,
+        "random_mean_abs_margin": 1.632102573376384
+      },
+      {
+        "config": "random",
+        "clean_bce": 0.24286621312300363,
+        "boundary_auxiliary": 0.9225203990936279,
+        "random_auxiliary": 0.3397359848022461,
+        "prototype_cosine": -0.8721670707066854,
+        "boundary_gradient": {
+          "cosine_to_clean": 0.28236167629559833,
+          "weighted_norm_ratio": 0.23465944826602936
+        },
+        "random_gradient": {
+          "cosine_to_clean": 0.171573335925738,
+          "weighted_norm_ratio": 0.1356565977136294
+        },
+        "boundary_mean_abs_margin": 0.7686447142412867,
+        "random_mean_abs_margin": 1.6776287433396107
+      },
+      {
+        "config": "random_rec10",
+        "clean_bce": 0.24300512174765268,
+        "boundary_auxiliary": 1.2701462507247925,
+        "random_auxiliary": 0.46345876653989154,
+        "prototype_cosine": -0.8934889237085978,
+        "boundary_gradient": {
+          "cosine_to_clean": 0.1486800710360209,
+          "weighted_norm_ratio": 0.7001614471276602
+        },
+        "random_gradient": {
+          "cosine_to_clean": 0.08924291282892227,
+          "weighted_norm_ratio": 0.40511375665664673
+        },
+        "boundary_mean_abs_margin": 0.7550930547339528,
+        "random_mean_abs_margin": 1.6642414071205724
+      }
+    ]
+  }
+}

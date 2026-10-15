@@ -1,0 +1,67 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "previous_goal_turn": "progress: 33 tested configurations; those using lncRNA now ineligible",
+  "current_turn": "progress: stopped prohibited auxiliary work; strict miRNA-only inputs and 12 inner-fold runs; scope and deletion audits",
+  "current_target": {
+    "user_clarification": "AUC 和 AP 都增加 0.02",
+    "reference": "original iNcRD-HG, frozen MiDrug split, mean seeds 42/43/44",
+    "minimum_absolute_gain": {
+      "auc": 0.02,
+      "ap": 0.02
+    },
+    "original_test": {
+      "auc": 0.9533929274189016,
+      "ap": 0.9136833737326769
+    },
+    "target_test": {
+      "auc": 0.9733929274189016,
+      "ap": 0.933683373732677
+    },
+    "protected_plmf_test": {
+      "MDR": {
+        "auc": 0.9483092900780825,
+        "ap": 0.9436701561780362
+      },
+      "MDS": {
+        "auc": 0.950897883727978,
+        "ap": 0.9490119743588824
+      }
+    },
+    "external_datasets_allowed": false,
+    "status": "active_not_achieved",
+    "user_scope_clarification": "不要使用 lncRNA 我做的是专门的mirna的",
+    "allowed_node_types": [
+      "miRNA",
+      "drug"
+    ],
+    "lncrna_features_relations_supervision_allowed": false
+  },
+  "eligible_reference": {
+    "auc": 0.9575892677867234,
+    "ap": 0.9233078960316973
+  },
+  "inner_selection": {
+    "config": "control",
+    "mean_inner_auc": 0.9525997950547515,
+    "mean_inner_ap": 0.9118251090948654,
+    "mean_auc_gain": 0.0,
+    "mean_ap_gain": 0.0,
+    "fold_auc_gains": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fold_ap_gains": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "selection_score": 0.0
+  },
+  "promote_to_outer_validation": false,
+  "new_candidate_test_evaluations": 0,
+  "no_lncrna": true,
+  "processes_expected_live": [],
+  "next_action": "Evaluate a query-subgraph branch on strict miRNA/drug training graph with explicit query deletion and inner validation"
+}

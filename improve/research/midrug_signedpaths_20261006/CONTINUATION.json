@@ -1,0 +1,44 @@
+{
+  "goal_status": "active",
+  "previous_goal_turn": "progress: 46 completed validation configurations",
+  "current_turn": "progress: 35 additional configurations, confirmed both-metric target, trained deletion audits",
+  "current_target": {
+    "user_clarification": "AUC 和 AP 都增加 0.02",
+    "reference": "original iNcRD-HG, frozen MiDrug split, mean seeds 42/43/44",
+    "minimum_absolute_gain": {
+      "auc": 0.02,
+      "ap": 0.02
+    },
+    "original_test": {
+      "auc": 0.9533929274189016,
+      "ap": 0.9136833737326769
+    },
+    "target_test": {
+      "auc": 0.9733929274189016,
+      "ap": 0.933683373732677
+    },
+    "protected_plmf_test": {
+      "MDR": {
+        "auc": 0.9483092900780825,
+        "ap": 0.9436701561780362
+      },
+      "MDS": {
+        "auc": 0.950897883727978,
+        "ap": 0.9490119743588824
+      }
+    },
+    "external_datasets_allowed": false,
+    "status": "active_not_achieved"
+  },
+  "test_evaluations_this_turn": 0,
+  "best_exploratory_blend": {
+    "family": "probe",
+    "tag": "walk_d2",
+    "weight": 0.25,
+    "auc": 0.9601638091566531,
+    "ap": 0.926652410720861
+  },
+  "completion_proven": false,
+  "processes_expected_live": [],
+  "next_action": "Query-conditioned M2 path attention from original endpoint covariates; retain exact query deletion"
+}

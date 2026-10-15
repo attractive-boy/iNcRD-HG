@@ -1,0 +1,1250 @@
+{
+  "raw_records": 85,
+  "deduplicated_records": 82,
+  "scope": "bounded discovery, not a systematic review; downloaded does not imply fully read",
+  "records": [
+    {
+      "records": [
+        {
+          "title": "Multi-view Graph Learning Framework with Spectral Encoding and Sparse Cross-Attention for miRNA-Drug Association Prediction",
+          "doi": "10.1109/tcbbio.2026.3729865",
+          "id": null,
+          "abstract": null,
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        },
+        {
+          "title": "Multi-view Graph Learning Framework with Spectral Encoding and Sparse Cross-Attention for miRNA-Drug Association Prediction.",
+          "doi": "10.1109/tcbbio.2026.3729865",
+          "id": "42678847",
+          "date": "2026-09-01",
+          "source": "Europe PMC",
+          "abstract": "Chemoresistance is a major contributor to cancer treatment failure, and microRNAs (miRNAs) play a critical role in mediating this resistance by regulating gene expression. Therefore, identifying miRNA-drug associations is of great significance for advancing cancer therapy. However, existing computational models face significant challenges, including heterogeneous feature integration and data sparsity. To overcome these limitations, we propose a novel Multi-view Graph Learning Framework with Spectral Encoding and Sparse Cross-Attention (MVGSCA) for predicting miRNA-drug associations. The model constructs node features based on miRNA sequence similarity and drug SMILES similarity. Then it builds two distinct graphs: a gene-mediated functional graph from miRNA-drug target interactions and an association-guided structural graph from known miRNA-drug associations. These two graphs are linearly combined to produce a collaborative feature representation. To capture both local and global topological features, the model applies local power filtering and global heat kernel diffusion, followed by spectral encoding via Poisson-Charlier polynomial approximation to enhance the feature representation. Furthermore, a sparse cross-attention mechanism is introduced to dynamically weight and integrate heterogeneous features from multiple sources. On a benchmark dataset with 8,720 associations, MVGSCA achieves an AUC of 96.32% and an AUPR of 95.69% under five-fold cross-validation, significantly outperforming six state-of-the-art methods. Experimental results show that MVGSCA effectively integrates heterogeneous biological information and achieves superior prediction performance, offering valuable insights into cancer resistance mechanisms and supporting drug discovery efforts."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Drug-microbe association prediction using graph neural network with triple-view contrastive learning",
+          "doi": "10.2139/ssrn.7560374",
+          "id": null,
+          "abstract": "<jats:p>Motivation. Microbial communities, including bacteria, archaea, viruses, protozoa and fungi, interact with drugs through metabolism, detoxification, resistance and therapeutic response. Experimental screening of drug-microbe associations is slow and costly while computational prediction of pairs can support drug repurposing, antimicrobial discovery and precision medicine. Many models of graph neural network (GNN) represent drugs and microbes with similarities, such as Gaussian interaction profile (GIP) kernels, computed from the drug-microbe interaction matrix. Since these similarities are derived from the same associations being predicted, their random-split evaluation would be sensitive to the feature-construction protocol. This motivates the models that rely on chemical and biological covariates and evaluations that state clearly which information is available to the models.,Results. We introduce a novel GNN that leverages contrastive learning to predict drug-microbe associations. Our approach is built upon a multi-view representation strategy, wherein each drug is characterized by three complementary chemical modalities and each microbe is encoded through three distinct biological views. This heterogeneous feature fusion enables the model to capture complex interactional patterns from diverse biomedical data sources. The model comprises three parallel branches, each corresponding to a distinct view pair that combines one drug view with one microbe view. Within each branch, we construct a heterogeneous graph, in which drug-drug and microbe-microbe edges are defined by similarity scores, while drug-microbe edges are derived exclusively from the known training associations. Every branch processes its graph through a dedicated graph convolutional network (GCN). Subsequently, a link predictor is applied to score candidate drug-microbe pairs, and a projection head is employed to align the learned representations across branches, ensuring consistency among the complementary views. We evaluate our model using fivefold crossvalidation (5-CV) on a complete set of experimentally verified drug-microbe associations in three publicly available benchmark datasets: MDAD, aBiofilm, and DrugVirus. To ensure unbiased assessment, we employ a dedicated evaluation split, which was withheld from training and previously used solely for viewpair selection. Moreover, we evaluate our model on an independent hold-out test set and on an external database, and present case studies. Our model achieves strong performance across all datasets, with AUC/AUPR scores of 0.940/0.948 on MDAD, 0.926/0.931 on aBiofilm, and 0.878/0.870 on DrugVirus. In a complementary analysis, we investigate the impact of incorporating GIP features under a standard randomsplit evaluation protocol. While the inclusion of GIP features improves predictive accuracy, we emphasize that this improvement reflects a protocolsensitivity effect rather than a corrected or enhanced performance estimate for our model or prior work.</jats:p>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Molecular-Driven Multi-View Hypergraph Contrastive Learning for Drug-Drug Interaction Prediction",
+          "doi": "10.2139/ssrn.5397945",
+          "id": null,
+          "abstract": null,
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        },
+        {
+          "title": "Molecular-Driven Multi-View Hypergraph Contrastive Learning for Drug-Drug Interaction Prediction",
+          "doi": "10.2139/ssrn.5214161",
+          "id": null,
+          "abstract": null,
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "GIL-DDI: Multi-View Graph Invariant Learning for Unknown Drug-Drug Interaction Prediction",
+          "doi": "10.21203/rs.3.rs-6731543/v1",
+          "id": null,
+          "abstract": "<title>Abstract</title>\n                <p>Drug-Drug Interaction (DDI) prediction is essential for evaluating the side effects of a new drug and adverse interactions before the clinical application.The latest research applies multi-view data to enhance the generalization ability of models to predict new drug interactions, mainly unknown Drug-Drug Interaction (uDDI).However, a new drug's feature inevitably encounters the feature-shift problem; the trained models have not previously learned information about the new drug, significantly decreasing the uDDI prediction's accuracy.Thus, we proposed the GIL-DDI model that tries to extract the invariant features of known drugs, alleviating the impact of the feature-shift problem on the prediction of uDDI.In detail, the graph attention network(GAT) models embed multi-view drug graphs, including drug-chemical entities, drug substructures, drug-drug interactions, and molecular structures. Then, invariant features corresponding to the new drug are learned from the knowledge graph of the previous drugs.After that, a variant feature of the new drug is embedded through the GAT models and fused with learned invariant drug features to predict the DDI.Extensive experiments on real-world drug datasets indicate that the proposed method achieves new state-of-the-art records on new drug DDI prediction tasks. The source code is available at https://anonymous.4open.science/r/GIL-DDI-F701/README.md.</p>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                18
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Integrating Molecular Large Model with Multi-View Representations for miRNA-Drug Association Prediction",
+          "doi": "10.1109/bibm66473.2025.11356634",
+          "id": null,
+          "abstract": null,
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                15
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "A Multi-view Hierarchical Semantic-aware Heterogeneous Graph Neural Network for Drug–Disease Association Prediction",
+          "doi": "10.2139/ssrn.5498647",
+          "id": null,
+          "abstract": null,
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Multi-view Graph Attention Contrastive Learning for Predicting miRNA-Disease Association",
+          "doi": "10.65286/icic.v21i2.76657",
+          "id": null,
+          "abstract": "<jats:p>MicroRNAs  miRNAs  are an important class of endogenous non-coding RNAs that regulate critical biological processes, such as cell differentiation, proliferation, and apoptosis, through post-transcriptional mechanisms. Recent studies have shown that aberrant miRNA expression is closely linked to the pathogenesis of complex diseases, including cancer and neurodegenerative disorders. This study introduces a novel prediction model, MGACMDA, which combines multi-view contrastive learning and residual graph attention to overcome several limitations of existing miRNA-disease association prediction methods, such as limited robustness to data sparsity, high sensitivity to network noise, and insufficient extraction of deep topological information. We propose three data enhancement methods to construct global, local and topological views, and design a graph attention encoder with residual connection to fuse shallow topological features with deep representations through residual mechanism. Finally, a momentum-driven multi-view contrastive learning module is designed, and momentum encoder is used to maintain the global negative sample queue, which significantly improves the discrimination ability of sparse association. We applied MGACMDA to benchmark datasets, including HMDD v2.0 and HMDD v3.2, using 5-fold cross-validation. The evaluation metrics, including F1 score, AUC and AUPR values, and case studies of experimental results indicate that our method is efficient and robust for predicting miRNA-disease associations.</jats:p>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "RGCNMDA: pathway-bridged relational graph learning with adaptive multi-view fusion for human miRNA–disease association prediction",
+          "doi": "10.1093/bioinformatics/btag620",
+          "id": null,
+          "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Motivation</jats:title>\n                    <jats:p>MicroRNAs are key post-transcriptional regulators whose dysregulation is associated with complex human diseases. Computational prediction can prioritize candidate miRNA–disease associations, but reliable evaluation is complicated by sparse labels, cold-start entities, limited biological context in bipartite graphs, and leakage when association-derived features are constructed before data splitting.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>We present RGCNMDA, a leakage-controlled multi-view framework that integrates global latent structure, local profiles and similarities, and pathway context. Within every fold, interaction profiles, GIP similarities, PCA inputs, MDMF factors, and miRNA–disease graph edges are reconstructed exclusively from training positives. Four independent factorized encoders transform the miRNA and disease interaction profiles and GIP similarities, while a fold-local MDMF branch captures global latent structure. These representations are integrated with a pathway-bridged graph containing miRNA, disease, and pathway nodes connected by six directed relation types. A relational graph convolutional network performs type- and direction-specific message passing, and node-wise gates adaptively fuse graph, MDMF, and combined profile and similarity representations before an MLP pair decoder scores candidate associations. On HMDD v4.0, RGCNMDA achieved AUCs of 0.9589, 0.9109, and 0.8836 under random, cold-disease, and cold-miRNA evaluation, respectively; on the processed independent-source RNADisease v4.0 benchmark, the corresponding values were 0.9580, 0.8446, and 0.8913. Same-protocol baseline comparisons and diagnostic analyses showed that the benefits of RGCNMDA were setting dependent, with the strongest pathway-related improvement under cold-disease evaluation. These results support the robustness of leakage-controlled multi-view learning across standard and cold-start evaluation settings.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Availability and implementation</jats:title>\n                    <jats:p>https://github.com/hnuchao/pathway-RGCNMDA</jats:p>\n                  </jats:sec>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                25
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "A Comprehensive Multi-Dimensional Disease Similarity Computation Framework for miRNA-Disease Association Prediction",
+          "doi": "10.21203/rs.3.rs-9053024/v1",
+          "id": null,
+          "abstract": "<title>Abstract</title>\n                <p>In light of the explosive growth of gene and disease association data driven by the rapid development of high-throughput sequencing technologies, mining potential molecular associations between diseases from massive biomedical data has emerged as a crucial direction in bioinformatics research. To address this, we propose and implement a macroscopic gene-associated disease similarity computational framework tailored for bioinformatics mining. Leveraging the latest miRNA-disease association dataset (HMDD v4.0) [1] as the core data source, this framework deeply integrates gene-disease association information from the DisGeNET database [2] and the hierarchical structure data of MeSH (Medical Subject Headings) to construct a multi-source heterogeneous disease association network. The objective is to provide a comprehensive and precise disease similarity prediction strategy for biomedical research through multi-dimensional data fusion analysis. Technically, the framework integrates multiple core computational mechanisms, including target-based disease functional similarity, MeSH-based semantic similarity, and network topology-based Gaussian Interaction Profile similarity. Notably, the semantic similarity algorithm incorporates Information Content (IC) weights upon classical structural decay; the functional similarity algorithm introduces an exponential penalty term to address the long-tail distribution problem, effectively resolving the illusion of false-positive associations caused by unequal research depth between common and rare diseases, thereby achieving a multi-perspective quantification of disease similarity. Based on the calculated similarity matrices, we conducted extensive evaluations (e.g., AUC, AUPR, Accuracy) using state-of-the-art deep learning models, such as graph neural networks (TriFusion) [9] and Transformer architectures (MDformer) [8]. Experimental results demonstrate that this multi-dimensional similarity feature enhancement strategy can effectively reveal potential biological associations between diseases, validating its application value in drug repositioning and rare disease auxiliary prediction, while exhibiting robust generalized predictive performance and high scalability.</p>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                18
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Transformer-based multi-modal representation learning and hybrid interaction modeling for miRNA–disease association prediction",
+          "doi": "10.1186/s12859-026-06668-w",
+          "id": null,
+          "abstract": null,
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                21
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "MAGMDA: A Multi-order Adaptive Graph-based MiRNA-Disease Association Prediction Model",
+          "doi": "10.21203/rs.3.rs-8697093/v1",
+          "id": null,
+          "abstract": "<title>Abstract</title>\n                <p>Background\n MicroRNAs are key biomarkers for human diseases; however, experimentally identifying miRNA-disease associations was costly and inefficient. To improve the robustness and interpretability of computational models, we developed a multi-order adaptive graph-based miRNA-disease association model (MAGMDA).\nResults\n MAGMDA introduced an adaptive moment-order selection mechanism and a dynamic threshold network, which replaced the fixed moment orders and manually defined thresholds commonly used in traditional high-order statistical modeling with learnable components. By integrating numerically stable high-order moment computation with cross-order attention aggregation, MAGMDA enhanced model robustness and interpretability while maintaining computational efficiency. Five-fold cross-validation on the HMDD v2.0 dataset showed that MAGMDA achieved an AUC of 93.58% and an AUPR of 93.48%. Across multiple evaluation metrics, MAGMDA outperformed representative existing methods, exhibiting particularly consistent advantages on ranking-related metrics such as AUC and AUPR, while maintaining smaller performance variations across different cross-validation folds, indicating stable predictive ability under different data partitions. Mechanistic diagnostic analysis further verified the stable utilization of the adaptive modules across different training folds. To demonstrate biological utility, we applied MAGMDA to hepatocellular carcinoma research. Based on the model predictions and analysis of the TCGA-LIHC cohort, we constructed a seven-gene prognostic signature, which was successfully validated in independent datasets and showed strong prognostic stratification ability, highlighting its potential for clinical translation.\nConclusions\n MAGMDA effectively improved miRNA-disease association prediction through an adaptive multi-order moment modeling framework and, supported by systematic biological validation, provided a powerful tool for translational research from computational discovery to clinical application. The MAGMDA framework and data resources are publicly available at https://github.com/zhangclbio/MAGMDA.</p>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                11
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "A Heterogeneous Graph Transformer with Dose-Aware Cross-Layer Attention for Joint lncRNA-miRNA-Drug Resistance Association Prediction in Cancer",
+          "doi": "10.2139/ssrn.7211818",
+          "id": null,
+          "abstract": "<jats:p>Cancer drug resistance is increasingly understood to be mediated by long non-coding RNA (lncRNA) and microRNA (miRNA) regulatory networks, yet computational models typically treat lncRNA-drug and miRNA-drug resistance as separate, static prediction tasks. This paper proposes a Dose-Aware Heterogeneous Graph Transformer (HGT) that jointly models lncRNA, miRNA, and drug entities as a single heterogeneous graph, extending meta-relation-typed attention with a dose-conditioned gating mechanism and a cross-layer attention pooling module for interpretability. Because no real dataset was available in this working environment, the architecture is validated as a proof-of-concept (PoC) on a synthetic heterogeneous graph, implemented and trained from scratch in numpy (no GPU deep-learning framework was available), with manual backpropagation verified against numerical gradients. Two implementations are compared: a fixed-projection encoder with a trained prediction head, and a fully end-to-end trainable encoder. Both recover above-chance predictive signal (AUC 0.52-0.60), but a 5-seed replication with paired significance testing finds no statistically detectable benefit from dose-conditioning (p = 0.895) or cross-layer attention (p = 0.635) at this scale, a properly tested null result rather than an unresolved limitation. We report these results transparently, situate them against the closest published models (iNcRD-HG; MHGTMDA) via a qualitative comparative-positioning table, and specify the real-data validation required before the architecture's specific contributions can be properly evaluated.</jats:p>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "A multi-view framework integrating structure-aware Mamba and hypergraph representation learning for circRNA–disease association prediction",
+          "doi": "10.2139/ssrn.6806918",
+          "id": null,
+          "abstract": "<jats:p>Circular RNAs are stable biomolecular regulators whose disease associations remain difficult to verify experimentally. To support computational screening, we propose MVMHCDA, a multi-view modelling framework for circRNA–disease association prediction. The method constructs a similarity-guided heterogeneous biomolecular network and integrates graph attention, a Mamba-based long-range encoder, hypergraph convolution, and semantic attribute encoding to capture local, non-local, and group-level interaction patterns. A gated fusion module combines these representations for prediction. Experiments on two benchmark datasets show that MVMHCDA outperforms representative methods, and case studies indicate biologically meaningful candidates.</jats:p>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "DMCRL: Deep Multi-View Contrastive Representation Learning for Drug-Target Affinity Prediction",
+          "doi": "10.1109/bibm66473.2025.11356336",
+          "id": null,
+          "abstract": null,
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                15
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "MV-HAGCN: Prediction of miRNA-Disease Association Based on Multi-View Hybrid Attention Graph Convolutional Network",
+          "doi": "10.3390/ijms27083533",
+          "id": null,
+          "abstract": "<jats:p>Accurate identification of disease-associated microRNAs (miRNAs) is crucial for elucidating pathogenic mechanisms and advancing therapeutic discovery. Although computational methods, particularly those based on biological networks, have become essential tools for predicting miRNA-disease associations, existing approaches often struggle to comprehensively learn from heterogeneous data and optimize feature representations. To overcome these limitations, we propose the Multi-view Hybrid Attention Graph Convolutional Network (MV-HAGCN). This framework constructs a comprehensive heterogeneous network by integrating multi-source biological information, simultaneously capturing miRNA similarity and disease similarity. We design a hierarchical attention mechanism to enable refined feature learning: first, the Efficient Channel Attention (ECA) module prioritizes information-rich input features, ensuring the model focuses on high-value biological characteristics. Subsequently, the Multi-Head Self-Attention Graph Convolutional Network operates on these refined features. Through iterative message passing and multi-head self-attention, it captures not only direct first-order relationships between nodes but also explicitly models and infers complex, indirect higher-order relationships within the network. This hierarchical design progressively refines feature representations, from channel-level recalibration to global structural dependency modeling, enabling the model to capture both local and high-order relational patterns. Furthermore, a dynamic weight learning strategy adaptively integrates multi-perspective similarity matrices, achieving superior feature complementarity and synergy. Finally, the high-order node representations learned through multi-layer graph convolutions are fed into a multi-layer perceptron for integration and nonlinear transformation, enabling precise prediction of potential miRNA-disease associations. Comprehensive evaluation through five-fold cross-validation on HMDD v2.0 and v3.2 benchmark datasets demonstrates that MV-HAGCN consistently outperforms existing state-of-the-art methods in predictive performance. Case studies targeting key diseases such as breast cancer, lung tumors, and pancreatic disorders revealed that the top 50 miRNAs associated with each of these three conditions were all validated in databases, confirming the practical value of this model in screening candidate miRNAs with high biological relevance.</jats:p>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                15
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "LncRNA-Cervical Cancer Association Prediction Based on Multi-View Variational Autoencoder Driven by Knowledge Distillation Transfer Learning",
+          "doi": "10.21203/rs.3.rs-7730156/v1",
+          "id": null,
+          "abstract": "<title>Abstract</title>\n                <p>Long non-coding RNAs (lncRNAs) play crucial regulatory roles in the pathogenesis of cervical cancer. Accurate identification of lncRNA-cervical cancer associations is of great significance for understanding disease molecular mechanisms and discovering potential therapeutic targets. However, the extreme scarcity of cervical cancer-specific lncRNA association data has become the core bottleneck constraining the performance of existing computational prediction methods. To address this challenge, we propose a Multi-View Collaborative Variational Autoencoder based on Knowledge Distillation Transfer Learning (MVCVAE), which innovatively integrates the two technical advantages of multi-source heterogeneous data fusion and cross-disease knowledge transfer. The multi-view collaborative variational autoencoder constructs dual-view feature representations of lncRNA similarity and disease similarity, utilizing symmetric encoder-decoder architecture to learn complex lncRNA-disease association patterns in latent space. The knowledge distillation transfer learning framework adopts a teacher-student network design, where the teacher model is pre-trained on a large-scale dataset containing 12,865 lncRNA-disease associations to learn universal association patterns, and effectively transfers rich prior knowledge to the student model targeting 92 cervical cancer associations through feature distillation and prediction distillation strategies. In five-fold cross-validation, MVCVAE achieved an AUC of 0.9228±0.0058. Through the synergistic effect of multi-view heterogeneous information fusion and cross-domain knowledge transfer, MVCVAE achieves excellent performance in lncRNA-cervical cancer association prediction, effectively alleviating the bottleneck constraint of cervical cancer-specific lncRNA association data scarcity.</p>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                17
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "DHGCMDA: a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction",
+          "doi": "10.1186/s12859-026-06436-w",
+          "id": null,
+          "abstract": null,
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                1
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        },
+        {
+          "title": "DHGCMDA: a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction.",
+          "doi": "10.1186/s12859-026-06436-w",
+          "id": "41922959",
+          "date": "2026-04-01",
+          "source": "Europe PMC",
+          "abstract": "BACKGROUND: Accumulating evidence demonstrates that microRNA (miRNA) dysregulation drives the pathogenesis of diverse human diseases via intricate, context-dependent molecular mechanisms. Hence, prediction of miRNA-disease association types is a critical prerequisite for dissecting functional roles of miRNAs in disease initiation and progression. Although computational methods offer cost-effective, time-efficient alternatives to wet-lab experiments for miRNA-disease association type prediction, most of them are hampered by three key limitations: excessive reliance on association-derived similarity metrics gives rise to quantification bias, traditional pairwise graph architectures inadequately capture high-order biological interactions, and existing representation learning strategies fail to generate consistent embeddings across heterogeneous views and modalities. RESULTS: To address these issues, this study presents DHGCMDA, a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction. Specifically, dual-view hypergraphs are first constructed based on heterogeneous similarity data to avoid excessive reliance on association-derived similarity metrics. A hypergraph convolutional network is then employed to capture high-order topological relationships between miRNAs and diseases, with its convolution cooperatively integrated with contrastive learning, intra-modality for cross-view consistency and cross-modality for embedding space alignment, to enhance feature representation quality. Finally, an attention-guided adaptive view fusion strategy dynamically weights and integrates distinct view representations, and type-aware message passing via heterogeneous graph Transformer simultaneously enables prediction of association presence and functional types. 5-fold cross-validation on HMDD v2.0 and v3.2 datasets demonstrates that DHGCMDA outperforms several state-of-the-art methods. Furthermore, case studies on breast neoplasms and hepatocellular carcinoma reveal that most predicted association types are corroborated by published literature, thereby validating the efficacy of DHGCMDA in miRNA-disease association type prediction. CONCLUSIONS: DHGCMDA exhibits robust discriminative power and generalization capability, providing a reliable computational alternative for miRNA-disease association type prediction. The source code is publicly available at https://github.com/CDMBlab/DHGCMDA ."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Enhancing Drug Peptide Sequence Prediction Using Multi-view Feature Fusion Learning",
+          "doi": "10.2174/0115748936294345240510112941",
+          "id": null,
+          "abstract": "<jats:sec>\n<jats:title>Background:</jats:title>\n<jats:p>Currently, various types of peptides have broad implications for human\nhealth and disease. Some drug peptides play significant roles in sensory science, drug research, and\ncancer biology. The prediction and classification of peptide sequences are of significant importance\nto various industries. However, predicting peptide sequences through biological experiments is a\ntime-consuming and expensive process. Moreover, the task of protein sequence classification and\nprediction faces challenges due to the high dimensionality, nonlinearity, and irregularity of protein\nsequence data, along with the presence of numerous unknown or unlabeled protein sequences.\nTherefore, an accurate and efficient method for predicting peptide category is necessary.</jats:p>\n</jats:sec>\n<jats:sec>\n<jats:title>Methods:</jats:title>\n<jats:p>In our work, we used two pre-trained models to extract sequence features, TextCNN\n(Convolutional Neural Networks for Text Classification) and Transformer. We extracted the overall\nsemantic information of the sequences using Transformer Encoder and extracted the local semantic\ninformation between sequences using TextCNN and concatenated them into a new feature. Finally,\nwe used the concatenated feature for classification prediction. To validate this approach, we conducted\nexperiments on the BP dataset, THP dataset and DPP-IV dataset and compared them with\nsome pre-trained models.</jats:p>\n</jats:sec>\n<jats:sec>\n<jats:title>Results:</jats:title>\n<jats:p>Since TextCNN and Transformer Encoder extract features from different perspectives, the\nconcatenated feature contains multi-view information, which improves the accuracy of the peptide\npredictor.</jats:p>\n</jats:sec>\n<jats:sec>\n<jats:title>Conclusion:</jats:title>\n<jats:p>Ultimately, our model demonstrated superior metrics, highlighting its efficacy in peptide\nsequence prediction and classification.</jats:p>\n</jats:sec>",
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2025,
+                1
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "MolP-PC: a multi-view fusion and multi-task learning framework for drug ADMET property prediction",
+          "doi": "10.1016/s1875-5364(25)60945-9",
+          "id": null,
+          "abstract": null,
+          "firstPublicationDate": null,
+          "date": {
+            "date-parts": [
+              [
+                2025,
+                11
+              ]
+            ]
+          },
+          "source": "crossref_recent_mda"
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Router-guided dual attention with graph masked autoencoder for microRNA-drug association prediction.",
+          "doi": "10.1016/j.compbiolchem.2026.109236",
+          "id": "42470826",
+          "date": "2026-07-13",
+          "source": "Europe PMC",
+          "abstract": "MicroRNAs (miRNAs), a major class of small non-coding RNAs, regulate gene expression and serve as key mediators of drug response. Identifying miRNA-drug associations is therefore important for elucidating drug-response mechanisms and supporting therapeutic discovery. However, existing computational methods still struggle to simultaneously capture long-range dependency patterns and fine-grained local topological structures, particularly under sparse association observations and noisy biological data. To address this challenge, we present router-guided dual attention with graph masked autoencoder (RGDAGMAE), a unified predictive framework that couples route-mediated global dependency modeling with gated graph masked reconstruction. The router-guided dual attention module couples softmax-based routed aggregation with low-rank route-mediated interaction to model global dependencies with controlled computational complexity. In parallel, the gated graph masked autoencoder performs self-supervised feature masking and gate-controlled message passing to reconstruct local structures and suppress spurious noise. Their complementary representations are then fused to generate association scores. Extensive experiments on three benchmark datasets show that RGDAGMAE consistently outperforms representative competing methods. Further ablation studies confirm the effectiveness of adaptive attention routing and masked graph reconstruction in capturing informative miRNA-drug association patterns. Case studies on vorinostat and miR-509-3p further support the biological plausibility of RGDAGMAE in prioritizing candidate miRNA-drug associations."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Heterogeneous dual-channel and interpretable graph representation learning with global virtual nodes for microRNA-mediated drug sensitivity prediction.",
+          "doi": "10.1007/s11030-026-11648-6",
+          "id": "42423923",
+          "date": "2026-07-09",
+          "source": "Europe PMC",
+          "abstract": "Drug sensitivity critically affects therapeutic outcomes, and microRNAs (miRNAs) play a key role in regulating drug response by modulating genes involved in drug metabolism and action. However, existing computational methods for predicting miRNA-drug sensitivity associations are often limited by heterogeneous network structures and severe data sparsity, which hinder effective feature propagation and robust learning. To address these challenges, we propose HDIGRL, a channel-aware heterogeneous graph representation learning framework centered on channel-gated global heterogeneous propagation for miRNA-mediated drug sensitivity prediction. HDIGRL models miRNAs and drugs from complementary structural and interaction-derived perspectives via a dual-channel feature extraction strategy. HDIGRL introduces channel-gated global heterogeneous propagation, in which global virtual nodes first enable graph-level context exchange and a channel-wise propagation gate then recalibrates propagated embeddings to emphasize discriminative feature channels and suppress noisy or redundant ones. In addition, an imbalance-aware focal loss is adopted to improve robustness under extreme class imbalance. Experimental results on public datasets demonstrate that HDIGRL consistently outperforms existing methods, and further analyses reveal latent miRNA-mediated drug-sensitivity pathways, highlighting its potential for predictive modeling and biological interpretation."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Integrated Transcriptomic Analysis Identifies a Putative cfa-miR-10a-&lt;i&gt;ACTG1&lt;/i&gt;/&lt;i&gt;SDC1&lt;/i&gt; Network Associated with Extracellular Matrix and Cytoskeletal Remodeling in Canine Hepatocellular Carcinoma.",
+          "doi": "10.3390/cimb48080840",
+          "id": "42651838",
+          "date": "2026-08-19",
+          "source": "Europe PMC",
+          "abstract": "A coordinated extracellular matrix (ECM) and cytoskeletal remodeling are critical drivers of hepatocellular carcinoma (HCC) progression, yet the upstream post-transcriptional mechanisms regulating these processes in spontaneous canine HCC remain poorly defined. Previously, we reported significantly downregulated miRNAs and enriched pathways from differentially expressed genes (DEGs) in canine HCC tissues. In the present study, we investigated putative post-transcriptional target interactions between the prioritized miRNAs and enriched ECM-cytoskeleton pathway-associated genes (<i>n</i> = 34). Integrative bioinformatic analysis prioritized <i>ACTG1</i> and <i>SDC1</i> as the key putative targets of cfa-miR-10a based on their concordant prediction by four target-prediction algorithms, high transcript abundance, and inverse correlations with cfa-miR-10a-5p. RNAhybrid and miRanda analyses supported favorable predicted interactions between cfa-miR-10a and the 3'UTRs of both transcripts, with RNAhybrid minimum free energy values ≤ -20 kcal/mol and miRanda scores ≥ 140. In the matched canine transcriptomic subset, cfa-miR-10a and its predicted targets showed inverse expression trends. Cross-species analysis using TCGA-LIHC datasets further demonstrated concordant dysregulation of <i>ACTG1</i>, <i>SDC1</i> and hsa-miR-10a-5p in human HCC, despite their weak or non-concordant correlation with hsa-miR-10a-5p. Collectively, these exploratory findings identify a candidate cfa-miR-10a-<i>ACTG1</i>/<i>SDC1</i> network associated with coordinated ECM and cytoskeletal transcriptomic alterations in canine HCC. While cross-species analysis supports the conservation of target gene dysregulation, the divergent miRNA-mRNA correlation patterns highlight potential species-specific post-transcriptional co-expression landscapes that warrant future functional validation."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "RIBOTAC-mediated degradation of hsa-microRNA-301a-3p suppresses TNBC bone metastasis.",
+          "doi": "10.1126/sciadv.aeh7999",
+          "id": "42647607",
+          "date": "2026-08-26",
+          "source": "Europe PMC",
+          "abstract": "Triple-negative breast cancer (TNBC) is an aggressive subtype with a high propensity for bone metastasis and limited treatment options. Although many proteins drive metastasis, most remain inaccessible to conventional small-molecule drugs due to lack of suitable binding sites, prompting interest in upstream RNA regulators. Using integrative bioinformatics and machine learning, we identified hsa-microRNA-301a-3p as a central regulator of TNBC bone metastasis. However, current nucleic acid-based therapies are limited by instability and inefficient delivery. To overcome these challenges, we designed a ribonuclease-targeting chimera (RIBOTAC) that recruits endogenous RNase L to degrade the primary transcript pri-microRNA-301a. The resulting RIBOTAC efficiently reduced hsa-microRNA-301a-3p levels, restored NEDD4L expression, and promoted degradation of the oncogenic protein YAP, thereby suppressing TNBC bone metastasis. These findings identify hsa-microRNA-301a-3p as a key driver and demonstrate RNA-targeted degradation as a therapeutic strategy in TNBC bone metastasis."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Cancer-Derived Exosomes: A Cross-Cancer Comparative Analysis of Exosomal Proteins and MicroRNAs.",
+          "doi": "10.3390/ijms27157057",
+          "id": "42589707",
+          "date": "2026-08-06",
+          "source": "Europe PMC",
+          "abstract": "Exosomes are small extracellular vesicles that mediate intercellular communication and, in cancer, carry cargo that both reflects the donor tumor cell and influences recipient cells within local and distant microenvironments. Exosomal proteins and microRNAs have been reported individually across many cancer types, but rarely compared on a common basis; in this review, previously reported molecules from eight cancer categories-blood, breast, colon, kidney, liver, lung, prostate, and stomach-were compiled from curated repositories and re-analyzed within a single functional framework. In total, 3643 exosomal proteins (523 hematologic, 3120 solid-tumor) and 627,225 miRNA-target pairs, derived from 350 unique microRNAs, were organized using Gene Ontology, KEGG, and PANTHER annotation. Across cancers, proteins converged on a reproducible core-signaling, transport, cytoskeletal organization, and extracellular interaction-dominated by binding, catalytic, and transporter functions localized to membrane, vesicle, and extracellular compartments. Comparisons between hematologic and solid malignancies revealed both shared cancer-associated functions and context-dependent patterns linked to tissue origin and disease ecology. Together, these findings indicate that integrated protein-and-microRNA profiling offers a useful framework for understanding tumor communication, refining cancer classification, and advancing biomarker discovery, while underscoring that harmonized workflows, independent validation, and mechanistic follow-up remain necessary before descriptive enrichment outputs can support clinically robust applications."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Prediction of lymphocyte-predominant breast cancer using microRNA expression in cytology specimens.",
+          "doi": "10.1002/cncy.70114",
+          "id": "42137987",
+          "date": "2026-06-01",
+          "source": "Europe PMC",
+          "abstract": "<h4>Background</h4>Tumor-infiltrating lymphocytes are prognostic and predictive biomarkers of breast cancer; however, conventional assessment is hindered by invasiveness and subjective evaluation, limiting clinical reproducibility. This study investigated the utility of microRNA (miRNA) profiles in predicting lymphocyte-predominant breast cancer (LPBC).<h4>Methods</h4>This study included 56 patients with breast cancer who underwent fine-needle aspiration cytology at the time of diagnosis (28 LPBC and 28 non-LPBC cases). Total RNA was extracted from cytology smear specimens, and the expression levels of six candidate miRNAs (miR-30a-3p, miR-187, miR-196b, miR-1247, miR-4485, and miR-6510) were quantified using reverse-transcriptase polymerase chain reaction. The performance in identifying LPBC was evaluated using receiver operating characteristic curve analysis and logistic regression models.<h4>Results</h4>All six miRNAs showed significantly lower expression levels in the LPBC group than in the non-LPBC group (all p < .05). Receiver operating characteristic curve analysis demonstrated moderate to high diagnostic accuracy, with an area under the curve of 0.708 for miR-30a-3p, 0.739 for miR-187, 0.783 for miR-196b, 0.777 for miR-1247, 0.790 for miR-4485, and 0.673 for miR-6510. Multivariate analysis further identified each miRNA as an independent diagnostic predictor for LPBC.<h4>Conclusions</h4>miRNA profiling of cytologic samples enabled the objective identification of LPBC. These findings suggest that specific miRNA expression patterns reflect the tumor immune microenvironment and can be used to evaluate the status of tumor-infiltrating lymphocytes in breast cancer."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "MicroRNA sequencing reveals modulation of neurodegenerative miRNAs by &lt;i&gt;Withania somnifera&lt;/i&gt; in human neuroblastoma SK-N-SH cells.",
+          "doi": "10.1515/dmpt-2026-0006",
+          "id": "42470121",
+          "date": "2026-07-20",
+          "source": "Europe PMC",
+          "abstract": "<h4>Objectives</h4><i>Withania somnifera</i> (WS) is known for its adaptogenic benefits; however, its beneficial effects in neurodegenerative diseases have not been fully explored. MicroRNAs (miRNAs) are small noncoding RNAs whose role(s) in modulating the effects of WS in neurodegeneration are yet unknown. This study aimed to investigate the impact of WS on miRNA expression in the SK-N-SH human neuroblastoma cell line.<h4>Methods</h4>We employed high-throughput sequencing to identify miRNAs with altered expression following dose-dependent and temporal treatment with WS.<h4>Results</h4>Our findings revealed that miRNA expression profiles were significantly altered in WS-treated cells. In the dose comparison (100 μg/mL vs. 50 μg/mL), 21 miRNAs were modulated at 3 h (18 upregulated and 3 downregulated), whereas 7 miRNAs were modulated at 9 h (3 upregulated and 4 downregulated). In the temporal comparison (9 h vs. 3 h), 9 miRNAs were modulated at 50 μg/mL (6 upregulated and 3 downregulated), whereas 30 miRNAs were modulated at 100 μg/mL (4 upregulated and 26 downregulated). Bioinformatics analyses, including target prediction and functional enrichment, revealed that these WS-modulated differentially expressed miRNAs were significantly enriched in neurodegenerative, apoptotic, and inflammatory pathways. Finally, 51 novel miRNAs were identified post-WS treatment.<h4>Conclusions</h4>Taken together, our results indicate that WS may be beneficial in neurodegenerative disease and healthy aging by modulating noncoding miRNAs."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "MicroRNAs as novel therapeutics against multidrug-resistant ESKAPE pathogens: mechanisms, challenges, and future directions.",
+          "doi": "10.1016/j.gene.2026.150374",
+          "id": "42648582",
+          "date": "2026-08-26",
+          "source": "Europe PMC",
+          "abstract": "<h4>Background</h4>Multidrug-resistant (MDR) ESKAPE pathogens, including Enterococcus faecium, S. aureus, Klebsiella pneumoniae, Acinetobacter baumannii, P. aeruginosa, and Enterobacter spp., pose a critical global health threat.<h4>Objective</h4>This narrative review evaluates microRNAs (miRNAs) as novel antibacterial agents against MDR ESKAPE, focusing on their mechanisms of action, preclinical efficacy, delivery innovations, and translational barriers.<h4>Methods</h4>PubMed and Google Scholar were searched using terms related to miRNA biology, antibacterial activity, ESKAPE pathogens, and delivery platforms RESULTS: miRNAs exert antibacterial effects through three mechanisms: innate and adaptive immune modulation, regulation of host antibacterial pathways (including antimicrobial peptide production), and direct cross-kingdom bacterial mRNA silencing with biofilm disruption. Preclinical evidence highlights key candidates: let-7b-5p achieved a 90% reduction in P. aeruginosa biofilm and restored aztreonam sensitivity, and miR-101-3p, delivered via DNA tetrahedron nanostructures, suppressed polymicrobial biofilms in cystic fibrosis (CF) models. The Rocket-miR platform identified miRNA candidates across all ESKAPE organisms, including miR-877-5p and miR-3127-5p, which target carbapenem-resistant K. pneumoniae and vancomycin-resistant E. faecium. The core translational challenges include miRNA instability, limited cellular uptake, off-target effects, and undefined regulatory pathways. Nanocarrier-based delivery, exosomal platforms, and machine learning-assisted target prediction offer promising solutions to these challenges.<h4>Conclusion</h4>Current preclinical evidence suggests that miRNAs hold promise as early-stage candidate antibacterial agents through immunomodulation, host pathway regulation, and direct bacterial gene silencing with biofilm disruption. However, no miRNA-based antibacterial therapy has entered clinical evaluation, and substantial translational barriers, including delivery challenges, off-target effects, and undefined regulatory pathways, must be addressed before clinical application can be considered."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Integrated miR-omics and proteomics reveal the regulatory role of miR in protein networks associated with COVID-19 disease progression.",
+          "doi": "10.3389/fimmu.2026.1796638",
+          "id": "42807246",
+          "date": "2026-09-14",
+          "source": "Europe PMC",
+          "abstract": "<h4>Introduction</h4>While microRNA (miR) expression profiling has identified potential biomarkers in patients with COVID-19, the regulatory mechanisms by which miRs modulate disease severity remain poorly characterized. We performed integrated miR-proteome analysis to elucidate mechanistic relationships between miR regulation and COVID-19 severity.<h4>Method</h4>Deidentified plasma samples from 93 participants with acute COVID-19 were categorized by severity using a 12-point symptom scoring system: mild (0-1), moderate (2-4), and severe (5-12). miR and proteomic profiles were analyzed using univariate statistics, pathway analysis, miR-target prediction, and correlation analysis. Differentially expressed miRNAs (DEMs) and differentially expressed proteins (DEPs) between the three severity groups from the original cohort were evaluated in a validation cohort of 94 participants.<h4>Results</h4>We identified 365 unique miRs and 801 unique proteins that were significantly associated with COVID-19 severity in any of the three comparisons. Ingenuity pathway analysis revealed neutrophil degranulation, cytokine storm, interleukin-10 (IL-10) signaling, and wound healing signaling as top dysregulated pathways in severe versus mild cases, with IL-6 involved in 9 of the 10 most significant pathways. Correlation analysis between miRs and proteins from 93 participants identified 6,559 miR-protein pairs with |<i>r</i>| > 0.5, of which 83.6% were negative correlations, suggesting widespread miR-mediated downregulation of protein expression. A significant correlation (<i>r</i> = 0.43, <i>p</i> < 0.0001) was found between 122 predicted miR-protein pairs found in the discovery cohort and the same miR-protein pairs in the validation cohort.<h4>Discussion</h4>To our knowledge, this represents the first integrated analysis of circulating miRs and proteins from the same COVID-19 participants and separately in a validation cohort. The high frequency of negative miR-protein correlations combined with target prediction analysis suggests that miRs play regulatory roles in COVID-19 severity-associated pathways. These findings provide mechanistic insights into miR regulation of host immune responses and identify potential biomarkers that could inform therapy of COVID-19."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Serum microRNA Profiles Reflect Differentiation Status and Age in Early Gastric Cancer",
+          "doi": null,
+          "id": "PMC13296932",
+          "date": "2026-06-01",
+          "source": "Europe PMC",
+          "abstract": null
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "SLC30A8 (ZnT8) at the crossroads of epigenetics and microRNA regulation in type 2 diabetes and nephropathy.",
+          "doi": "10.5527/wjn.122565",
+          "id": "42626274",
+          "date": "2026-09-01",
+          "source": "Europe PMC",
+          "abstract": "Diabetic nephropathy (DN) is a major kidney disease and linked to type 2 diabetes mellitus (T2DM), and it significantly which increases the global health burden. In the pathogenesis of DN, ZnT8 is essential for zinc transport into insulin granules; it ensures proper insulin crystallization, storage, and secretion while safeguarding β-cells against oxidative stress. it is suggested that the in pathogenesis of DN, the role of the SLC30A8/ZnT8/PDX-1 axis is underexplored along with its mechanism linking β-cell impairment to T2DM progression and renal fibrosis. In this review, we explore the role of microRNA-mediated regulation of SLC30A8/ZnT8 <i>via</i> PDX-1. Under hyperglycaemic and glucolipotoxic conditions, elevated level of miR-375 and miR-765 suppresses PDX-1 (master regulator of β-cell identity) and transcription of SLC30A8, culminating in ZnT8 silencing. PDX-1 directly binds to SLC30A8 enhancers and modulates its expression. Therapeutic targeting of this pathway <i>via</i> miR-375 and miR-765 antagomirs, CRISPR editing, ZnT8 overexpression, or zinc supplementation offers promise for restoring β-cell function and mitigating DN. Large scale clinical trial and epigenetic studies on patient cohorts will help and guide precision interventions."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Investigation of the relationship between expression patterns of plasma microRNAs and pregnancy complications.",
+          "doi": "10.1590/1806-9282.20260435",
+          "id": "42820576",
+          "date": "2026-09-28",
+          "source": "Europe PMC",
+          "abstract": "<h4>Objective</h4>The aim of the study was to determine the association between plasma expression levels of microRNAs (miRNAs; MIR126-3p; and MIR375-3p) and pregnancy complications.<h4>Methods</h4>This prospective study included 39 pregnant women who admitted to Obstetrics and Gynecology Polyclinic of Tokat Gaziosmanpasa University, Faculty of Medicine. 28 of these pregnant women were healthy, while 11 had pregnancy complications (five hypertensive disorders of pregnancy and six gestational diabetes). Hypertensive disorders include preeclampsia, gestational hypertension, and chronic hypertension. The study included pregnant women older than 18 years of age with singleton pregnancies and no history of cancer. Quantitative real time-polymerase chain reaction was used to determine the expression patterns of MIR126-3p and MIR375-3p in maternal plasma. Fold change (2-ΔΔCt) analysis was used to examine the microRNA expression patterns.<h4>Results</h4>MIR375-3p expression levels demonstrated a statistically significant difference between two groups. It was significantly lower in women with pregnancy complications than healthy pregnant women.<h4>Conclusion</h4>We found that MIR375-3p might be a useful indicator for non-invasive diagnosis and play a crucial part in predicting pregnancy complications. Given the limited patient cohort, more research using bigger samples is required to validate our findings."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Plasma multi-miRNA models classify Alzheimer's, Parkinson's, and Lewy body dementia.",
+          "doi": "10.3389/fnagi.2026.1788991",
+          "id": "42643339",
+          "date": "2026-08-11",
+          "source": "Europe PMC",
+          "abstract": "<h4>Introduction</h4>Differentiating Alzheimer's disease (AD) from both Parkinson's disease (PD) and Lewy body dementia (DLB) is difficult due to their clinical similarities. Plasma biomarkers offer an alternative to neuroimaging and cerebrospinal fluid analysis; however, there are limitations with respect to differential diagnosis of AD, PD, and DLB with current clinical assays.<h4>Methods</h4>Here we used machine learning to assess plasma miRNAs for their specificity in diagnosing AD vs. PD, and DLB. Our multi-center study assayed 57 AD-associated miRNAs in human plasma from 82 cognitively normal controls (NC), 87 AD, 100 PD, and 20 DLB. Predictive models generated by three independent machine learning methods were evaluated by cross-validated ROC curves [cvAUC (bootstrap bias-corrected 95% CI)]. We also used linear discriminant analysis with all 57 miRNAs to identify a model that best separates AD from PD + DLB participants and DLB from AD+PD participants. Further, we used Target prediction and Ingenuity Pathway Analysis to identify highly relevant mRNA targets of the miRNAs.<h4>Results</h4>Individual assessment of the 57 miRNAs identified a subset of 10 miRNAs that were more AD-specific, and 23 miRNAs that were more PD and/or DLB associated. Ridge logistic regression predictive models with the 10 AD-specific miRNAs had good performance for separating AD vs. PD and DLB (cvAUC = 0.77 [0.70, 0.83]) and AD vs. PD (cvAUC = 0.79 [0.71, 0.85]), but not for AD vs. DLB (cvAUC = 0.58 [0.43, 0.79]). By developing a predictive model using data from all 57 miRNAs and elastic-net regression we achieved good separation of AD from PD (cvAUC = 0.80 [0.72, 0.86]) and DLB (cvAUC = 0.77 [0.64, 0.87]) with a subset of six miRNAs (miRs-19a-3p, 22-3p, 92b-3p, 101-3p, 143-3p, 423-5p) identified as the most important to these models. The linear discriminant analysis model achieved very good classification of AD vs. PD + DLB (cvAUC = 0.94 [0.87, 0.97]), PD from AD+DLB (cvAUC = 0.88 [0.80, 0.92]), and DLB from AD+PD (cvAUC = 0.85 [0.78, 0.89]) with miR-26a-5p and 146a-5p being most important for AD vs. PD + DLB, and miR-142-3p and 101-3p being most important for DLB vs. AD+PD. Target prediction and Ingenuity Pathway Analysis with miR-26a-5p, 146a-5p, 142-3p, 101-3p returned highly relevant mRNA targets associated with tauopathy, dementia, and movement disorders.<h4>Discussion</h4>These data demonstrate that predictive modeling using plasma miRNA expression data may improve the differential diagnosis of AD from PD from DLB."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "miRSiC: a regulatory-aware machine learning framework for microRNA expression inference across bulk and single-cell transcriptomes.",
+          "doi": "10.1093/bib/bbag457",
+          "id": "42636032",
+          "date": "2026-07-01",
+          "source": "Europe PMC",
+          "abstract": "MicroRNAs (miRNAs) are key post-transcriptional regulators embedded in gene regulatory networks between upstream transcription factors (TFs) and downstream target genes (TGs), yet most computational approaches infer miRNA expression using unstructured transcriptomic features without explicitly modeling their regulatory architecture. In this study, we develop miRSiC, an interpretable machine learning framework that integrates TFs and experimentally validated TGs for regulatory-aware miRNA expression inference. miRSiC formulates prediction as miRNA-specific regression tasks and evaluates three regulatory configurations (TF-only, TG-only, and combined TF-TG) using Light Gradient Boosting Machine. Applied to The Cancer Genome Atlas (TCGA) breast cancer cohort, the integrated model achieves superior performance (mean Spearman correlation = 0.5462 across 326 miRNAs), outperforming single-layer models and demonstrating the effectiveness of incorporating both upstream and downstream regulatory signals. Feature importance analysis and regulatory network reconstruction show that selected features are enriched in biologically coherent TF-miRNA-target circuits. Prediction performance varies across breast cancer subtypes, reflecting differences in regulatory patterns and sample size. Cross-platform evaluation further reveals that models trained on bulk transcriptomes do not generalize to single-cell data due to distributional shifts and sparsity; however, domain-specific retraining partially restores performance. Together, miRSiC provides an interpretable and biologically grounded framework for miRNA expression inference, highlighting the importance of modeling regulatory context and adopting domain-aware strategies across bulk and single-cell transcriptomic data."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Plasma miR-98-5p as a candidate biomarker of pain severity in oxaliplatin-induced peripheral neuropathy related to NGF and catecholamine dysregulation.",
+          "doi": "10.3389/fmolb.2026.1884789",
+          "id": "42774042",
+          "date": "2026-09-08",
+          "source": "Europe PMC",
+          "abstract": "<h4>Background</h4>Oxaliplatin-induced peripheral neuropathy (OIPN) is a common and severe adverse event in patients with gastrointestinal (GI) cancer who undergo oxaliplatin-based chemotherapy. Assessments remain largely dependent on a numeric rating scale (NRS), which is needed for early detection and objective quantification of pain intensity.<h4>Methods</h4>This study aimed to identify differentially expressed microRNAs (miRNAs) in plasma samples from 22 patients with GI cancer treated with oxaliplatin to elucidate the association between candidate miRNA expression levels, nerve growth factor (NGF), catecholamines, and NRS scores for peripheral neuropathic pain. High-throughput RNA sequencing was used to analyze miRNA expression profiles, and patients were stratified into Groups 1 (<i>n</i> = 10, no or mild pain) and 2 (<i>n</i> = 12, moderate or severe pain) based on their NRS scores. Correlations between variables were assessed using Spearman's rank-order correlation (r = 0.4031, <i>P</i> = 0.0629).<h4>Results</h4>In Group 2, hsa-miR-98-5p was significantly upregulated and demonstrated the greatest potential to stratify patients by pain severity among the candidate miRNAs (The area under the curve = 0.8083, 95% CI: 0.6222-0.9944). Gene ontology enrichment analysis revealed that hsa-miR-98-5p was significantly associated with critical neuronal injury and repair signaling pathways. Patients in Group 2 exhibited decreased norepinephrine and dopamine levels, elevated NGF levels, and elevated cortisol levels, indicating potential alterations in the OIPN neuromodulatory systems.<h4>Conclusion</h4>These findings suggest that miR-98-5p is a candidate biomarker of pain severity in OIPN and may play a role in OIPN pathophysiology."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "HybridGNN: a graph neural network approach for human miRNA-disease association prediction.",
+          "doi": "10.1093/bioinformatics/btag171",
+          "id": "41936073",
+          "date": "2026-05-01",
+          "source": "Europe PMC",
+          "abstract": "<h4>Motivation</h4>MicroRNAs (miRNAs) are small non-coding RNAs, typically 18-24 nucleotides in length, that play a pivotal role in RNA silencing and the post-transcriptional regulation of gene expression by targeting messenger RNAs (mRNAs). Dysregulation of these miRNAs has consistently been implicated in the onset and progression of a variety of complex human diseases.<h4>Results</h4>In this study, we propose a novel HybridGNN model that integrates a Graph Convolutional Network (GCN), a Graph Attention Network (GAT), and Matrix Decomposition with Matrix Factorization (MDMF) to predict potential miRNA-disease associations (MDAs). We incorporate five types of similarity in which three are derived from miRNAs and two are derived from diseases, to comprehensively explore and optimize multi-source feature information. The complementary interactions among these modules also help to mitigate the oversmoothing problem. The model utilizes neighboring nodes in a heterogeneous network to generate node embeddings via a message-passing mechanism. To improve computational efficiency, we employ a mini-batch gradient descent approach that partitions the graph into smaller sub-graphs, thereby enhancing the model's accuracy, speed, and scalability. As a result of these advanced techniques, HybridGNN achieved an area under the receiver operating characteristic curve (AUC-ROC) of 0.9715 using a dot-product classifier, outperforming several existing methods and underscoring its potential as a robust and accurate tool for predicting MDAs.<h4>Availability</h4>Code and data are freely available at https://github.com/mbasharatahmad/HybridGNN-miRNA-disease/."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Multiple roles of MicroRNAs in melanoma: biomarkers for diagnosis, prognosis, and treatment prediction.",
+          "doi": "10.3389/fimmu.2026.1826584",
+          "id": "42136656",
+          "date": "2026-04-29",
+          "source": "Europe PMC",
+          "abstract": "Melanoma, a highly malignant form of skin cancer, continues to rise in incidence worldwide. Early diagnosis and accurate prognostic assessment are critical to reducing melanoma-related mortality rates. MicroRNAs (miRNAs), a class of non-coding RNAs approximately 22 nucleotides in length, play pivotal roles in melanoma initiation, progression, invasion, and metastasis by regulating the expression of target genes. Beyond their cell-intrinsic functions, miRNAs are increasingly recognized as critical regulators of the tumor immune microenvironment (TIME). They modulate anti-tumor immune responses by influencing immune checkpoint expression, immune cell recruitment and function, and intercellular communication via extracellular vesicles (EVs). This comprehensive review explores the multifaceted functions of miRNAs in melanoma, highlighting their potential as diagnostic markers, prognostic indicators, and predictors of therapeutic response. It also addresses current research challenges and explores future directions, including the integration of AI-powered spatial transcriptomics to decipher the complex, context-dependent networks of miRNAs within the TIME, offering a theoretical foundation and novel insights for precision medicine in melanoma treatment."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Circular RNA serves as an upstream regulator of the miRNA//ABCC1 axis in human cancers.",
+          "doi": "10.1016/j.pharmthera.2026.109054",
+          "id": "42250735",
+          "date": "2026-06-06",
+          "source": "Europe PMC",
+          "abstract": "Multidrug resistance (MDR) is one of the main causes of chemotherapy failure and cancer recurrence. Among the ATP-binding cassette (ABC) transporter family, ATP binding cassette subfamily C member 1 (ABCC1/MRP1) is a key member that significantly reduces intracellular drug accumulation by effluxing various chemotherapeutic drugs, leading to treatment failure. Recent studies have found that microRNA (miRNA) can inhibit ABCC1 expression at the post-transcriptional level by targeting its 3' untranslated region (3'-UTR) region, thereby affecting chemotherapy sensitivity. However, miRNA itself is regulated by upstream molecules, particularly circular RNA (circRNA), which acts as competing endogenous RNA (ceRNA) and can bind miRNA through the sponge mechanism, relieving their inhibition of ABCC1 and promoting the MDR phenotype. Multiple studies have identified specific circRNA/miRNA/ABCC1 regulatory axes in various cancers such as non-small cell lung cancer, colorectal cancer, breast cancer, and ovarian cancer. This axis is not only involved in chemotherapy resistance but also affects tumor proliferation, migration, and invasion. Due to their high stability and tissue specificity, circRNAs and miRNAs have the potential as liquid biopsy biomarkers and therapeutic targets. Despite challenges posed by the complexity of the ceRNA network, intervention strategies targeting this axis, such as circRNA knockdown or miRNA mimics, are still considered important approaches to reverse cancer MDR. In addition, emerging computational approaches, such as graph learning, hypergraph networks, and pre-trained models, now enable large-scale prediction of circRNA-miRNA interactions, offering powerful tools to further dissect the regulatory axes underlying MDR."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Are RNA Therapies a Solid Foundation or a Frontier Yet to Be Conquered?",
+          "doi": "10.3390/ijms27136086",
+          "id": "42450354",
+          "date": "2026-07-07",
+          "source": "Europe PMC",
+          "abstract": "The identification of microRNAs (miRNAs) has resulted in significant advancements in research, particularly regarding their utilization as diagnostic and therapeutic targets. This has generated enthusiasm for exploring the potential of non-coding RNAs (ncRNAs) in treating cancer and other diseases, with miRNAs and long non-coding RNAs (lncRNAs) showing particular promise. Over the past twelve years, there has been significant research into RNA-based treatments. Antisense oligonucleotides and small interfering RNAs are the most commonly used. Certain products have received Federal and Drug Administration approval. Notably, the findings from clinical trials have been inconsistent, with certain investigations indicating notable effectiveness and others reporting only minimal efficacy or safety concerns. Consequently, clinical trials are currently underway to evaluate the efficacy of novel treatment options, including antimiRNAs, in addressing these challenges. There is an increasing interest in the use of long non-coding RNA (lncRNA)-based therapies. The potential for drugs developed using this technology is significant. Significant advancements in preclinical and clinical trials have emerged, indicating promising potential for future developments. MiRNAs are playing an increasingly important role in the diagnosis and prediction of acute coronary syndrome manifestations. Its utilization, whether as a comprehensive approach or in conjunction with existing biomarkers, may be implemented in the foreseeable future, especially in instances of uncertainty regarding diagnosis. The primary objective of this review is to deliver a thorough and detailed assessment of recent progress in the field of microRNA detection and characterization. A key focus of this assessment will be on their clinical translation. Secondly, an exploration of the prevailing knowledge in the field of RNA therapies as potential targets for diagnosis and treatment in the cardiovascular system will be conducted. The most recent challenges and perspectives on the road to clinical application are presented herein. The aim of the present seminar is to furnish a thorough report on the recent advancements in the detection and characterization of miRNAs and lncRNAs, with specific emphasis on their clinical translation. In summary, the paper herein presents an exploration of the most recent challenges and perspectives on the road to clinical application."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Analytical and Clinical Validation of a Serum microRNA RT-qPCR Assay for Detection of Acute Cellular Rejection in Liver Transplant Recipients.",
+          "doi": "10.3390/diagnostics16142152",
+          "id": "42510016",
+          "date": "2026-07-09",
+          "source": "Europe PMC",
+          "abstract": "<b>Background:</b> Acute cellular rejection (ACR) remains a significant cause of graft dysfunction after liver transplantation and requires timely detection. Liver biopsy, the diagnostic gold standard for ACR, is invasive and unsuitable for frequent monitoring, while liver enzyme tests lack specificity for detecting ACR. Circulating microRNAs (miRNAs), including miR-122 and miR-885, have been previously identified as predictive biomarkers of ACR in liver transplant recipients. HepatoTrack™ is a serum-based miRNA RT-qPCR assay designed for noninvasive assessment of ACR using these biomarkers. This study evaluated the analytical performance and clinical validity of HepatoTrack™ for diagnosing ACR in liver transplant recipients. <b>Methods:</b> HepatoTrack™ uses 100 μL of serum and a one-step RT-qPCR workflow. It quantifies miR-122 and miR-885 normalized to miR-23a, with synthetic cel-miR-39 included as an exogenous control. Analytical validation assessed performance characteristics. Clinical performance was evaluated in a cohort of liver transplant recipients undergoing for-cause liver biopsy and used for model development and validation. <b>Results:</b> Analytical validation demonstrated robust assay performance. The HepatoTrack™ Prediction Score (HPS) algorithm was trained using 47 subjects from the training cohort based on a linear regression model incorporating longitudinal miRNA changes. In the independent testing cohort (<i>n</i> = 37), HPS achieved a sensitivity of 92.9%, specificity of 73.9%, positive predictive value (PPV) of 68.4%, and negative predictive value (NPV) of 94.4% for biopsy-confirmed ACR. HPS achieved an area under the curve (AUC) of 0.831 compared with 0.731 for ALT and 0.660 for AST. <b>Conclusions:</b> HepatoTrack™ support the analytical and clinical validity for detection of biopsy-confirmed acute cellular rejection in liver transplant recipients. The assay provides a noninvasive molecular test to aid in the diagnosis of acute cellular rejection and may complement existing post-transplant diagnostic evaluation."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "The involvement of miRNAs in CYP450 enzymes and UDP-glucuronosyltransferases regulation in the human liver.",
+          "doi": "10.1038/s41598-026-45113-z",
+          "id": "41857360",
+          "date": "2026-03-19",
+          "source": "Europe PMC",
+          "abstract": "MicroRNAs play a key role in post-transcriptional regulation of genes. There is substantial evidence that miRNA regulate the transcription of genes involved in drug metabolism and transport. As the liver is the main organ contributing to the biotransformation of exogenous compounds including drugs, this study aimed to identify miRNAs that regulate the function of genes encoding enzymes crucial for drug biotransformation in the human liver. The identification of miRNAs potentially regulating pivotal cytochrome P450 enzymes and UDP-glucuronosyltransferase genes was performed via three different widely available web tools. Among the 479 predicted microRNA-target gene interactions, 22 unique miRNAs were detected at the quantitative level determined using qPCR low density arrays. The expression levels of these selected miRNAs were correlated with the target enzyme protein abundance quantified via mass spectrometry-based targeted proteomics. Significant negative correlations between miRNA expression and enzyme protein abundance were observed for CYP2C8, CYP2C9, CYP3A4, UGT1A1, UGT1A3 and UGT2B15. To verify the microRNA expression results, additional miRNA expression analysis (qPCR) in higher reaction volumes was performed. This analysis confirmed the statistically significant negative correlations between CYP2C8-hsa-miR-655-3p and UGT1A3-hsa-miR-200a-3p, and to validate the predicted interactions, in vitro experiments were conducted for these two miRNA-target pairs. For this purpose, HepG2 cells were co-transfected with pre-miR miRNA precursors (hsa-miR-655-3p and hsa-miR-200a-3p) and the respective enzyme 3'UTR constructs. A significant reduction in reporter activity confirmed the direct targeting of UGT1A3 by miR-200a-3p, while miR-655-3p had no significant effect on CYP2C8. These results provide insights into the miRNA-mediated epigenetic regulation of drug-metabolizing enzymes."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Integrated Analysis of microRNA Expression, Lymphocyte Counts, and Metabolic Parameters in Obese Individuals.",
+          "doi": "10.3390/ijms27177663",
+          "id": "42737561",
+          "date": "2026-08-27",
+          "source": "Europe PMC",
+          "abstract": "Obesity is a complex metabolic disorder characterized by chronic inflammation and immune system dysfunction. This study aimed to investigate hematological and metabolic parameters, as well as microRNA (miRNA) expression profiles associated with lymphocyte alterations, in order to elucidate obesity-specific immune-metabolic interactions. A total of 50 individuals with obesity and 25 healthy controls were included in the study. miRNA expression levels were determined using the Fluidigm BioMark RT-PCR system. The obtained data were analyzed in relation to lymphocyte count, lipid profile parameters including total cholesterol, triglycerides, LDL-C, HDL-C, and body mass index (BMI). In the analysis of lymphocyte-associated miRNA expression, hsa-miR-223-3p and hsa-miR-199a-3p expression levels were significantly decreased in individuals with obesity compared with the control group (<i>p</i> < 0.0045 and <i>p</i> < 0.0063, respectively), whereas hsa-miR-155-3p expression was significantly increased (<i>p</i> < 0.0484). Analyses based on BMI revealed significant associations with the expression levels of hsa-miR-199a-3p and hsa-miR-143-3p (<i>p</i> < 0.0321 and <i>p</i> < 0.0116, respectively). In addition, significant positive associations were detected between triglyceride levels and the expression of hsa-miR-424-3p and hsa-miR-375-3p (<i>p</i> < 0.0419 and <i>p</i> < 0.0302, respectively). Alterations in miRNA expression associated with lymphocyte parameters may represent an important component of obesity pathophysiology. These findings suggest that miRNAs may serve as potential biomarkers and therapeutic targets in obesity."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Consolidated Evidence and New Frontiers of Liquid Biopsy in Lung Cancer: A Narrative Review.",
+          "doi": "10.3390/cells15181641",
+          "id": "42782742",
+          "date": "2026-09-10",
+          "source": "Europe PMC",
+          "abstract": "Emerging liquid biopsy platforms are expanding frontiers in lung cancer care, facilitating real-time molecular insights and addressing some of the limitations of tissue biopsy. While standardization and sensitivity improvements are undergoing continuous refinement in those liquid biopsy techniques that are now established, several advancements are expanding the panorama of its potential future applications. This review offers an overview of the emerging uses of liquid biopsy in the field of lung cancer, with a specific focus on emerging technologies. We comprehensively reviewed the literature through PubMed and Embase, combining keywords and Medical Subject Headings (MeSH) related to small-cell (SCLC) and non-small-cell lung cancer (NSCLC) and liquid biopsy using Boolean operators. The search was limited to publications from 2017 up to 2026. Titles and abstracts underwent manual scrutiny for relevance. We critically analyzed a body of evidence assessing the potential role of liquid biopsy in common and uncommon applications, such as its combination with machine learning and AI and its integration in multiomics approaches or its usage in next-generation technologies-including label-free CTC isolation, DNA fragmentomics and end-motif profiling, four-dimensional proteomics, and unconventional biospecimens-that remain largely unaddressed in prior narrative reviews on this topic."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "MicroRNA-Ferroptosis-Spinal Cord Injury: A Complex Interplay in Neurodegeneration and Repair.",
+          "doi": "10.3390/ijms27177711",
+          "id": "42737610",
+          "date": "2026-08-28",
+          "source": "Europe PMC",
+          "abstract": "Spinal cord injury (SCI) is a devastating neurological condition characterized by irreversible primary damage followed by a complex secondary injury cascade involving oxidative stress, neuroinflammation, iron dysregulation, and regulated cell death. Among these mechanisms, ferroptosis, a distinct, iron-dependent form of regulated cell death driven by lipid peroxidation and redox imbalance, is increasingly recognized as a critical mediator of neurodegeneration after SCI. The miRNAs play essential roles in neural injury responses by modulating inflammation, oxidative stress, and cell-death pathways. Growing evidence indicates that miRNAs closely regulate ferroptosis-related signaling networks following SCI, influencing key molecular targets including iron metabolism, antioxidant defense systems, and lipid peroxidation pathways. Conversely, ferroptotic stress may alter miRNA expression profiles, suggesting a bidirectional regulatory relationship. In addition, ferritinophagy, a selective autophagy pathway degrading ferritin via nuclear receptor coactivator 4 (NCOA4), has emerged as an important yet underexplored regulator of intracellular iron homeostasis and ferroptosis susceptibility in SCI. This review systematically summarizes current evidence on the molecular mechanisms linking miRNAs and ferroptosis in SCI, highlights how miRNA-mediated regulation of ferroptosis contributes to neuronal death, glial responses, and impaired regeneration, and discusses emerging therapeutic strategies targeting this axis to promote neuroprotection and functional recovery. By integrating recent experimental findings, we aim to provide mechanistic insight and identify translational opportunities for miRNA- and ferroptosis-based interventions in SCI."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "&lt;i&gt;MIR133A&lt;/i&gt; in Cancer Biology: Target Genes, Biological Effects, and Biomarker Potential.",
+          "doi": "10.3390/genes17070781",
+          "id": "42510821",
+          "date": "2026-07-05",
+          "source": "Europe PMC",
+          "abstract": "Cancer is one of the leading causes of mortality and morbidity worldwide. Various studies have highlighted the involvement of microRNAs (miRNAs) in tumor initiation and progression. MiRNAs are endogenous, non-coding, single-stranded RNA molecules that interact with the 3'-untranslated region (3'-UTR) of target mRNAs to inhibit mRNA translation or promote mRNA degradation. Various studies have reported that <i>MIR133A</i> is expressed at reduced levels in many tumor tissues and inhibits tumor progression. In this review, we comprehensively summarize the interactions of <i>MIR133A</i> and its target genes in the most commonly diagnosed cancers, namely, breast, lung, colorectal, gastric, and prostate. These results demonstrated that <i>MIR133A</i> is one of the optimal biomarkers for the diagnosis, prognosis, and prediction of various tumors, providing insights into the clinical management and practice of malignant tumors."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "DVCH-LMI: A dual-view contrastive framework for lncRNA-miRNA interaction prediction under class imbalance.",
+          "doi": "10.1016/j.ijbiomac.2026.152448",
+          "id": "42106043",
+          "date": "2026-05-07",
+          "source": "Europe PMC",
+          "abstract": "Identifying long non-coding RNA (lncRNA) and microRNA (miRNA) interactions (LMIs) is essential for elucidating post-transcriptional regulation and disease-related molecular mechanisms. Accurate identification of LMIs can facilitate biomarker discovery, RNA-targeted therapeutics, and data-driven drug design. However, robust prediction and candidate prioritization remain challenging due to the limited number of experimentally validated interactions and the large number of unknown pairs. Accordingly, we propose DVCH-LMI, a dual-view contrastive heterogeneous representation learning framework. DVCH-LMI initializes node features with Doc2Vec embeddings trained on k-mer vectors, constructs an adjacency view and a similarity view over shared bipartite interaction semantics, and learns complementary embeddings using two heterogeneous encoders with identical architectures but independent parameters. A symmetric information noise-contrastive estimation (InfoNCE) loss is further introduced to achieve node-level cross-view alignment. The aligned embeddings are then fused, and interaction prediction is performed by a hybrid scorer composed of a similarity branch and a multi-layer perceptron (MLP) branch. To better align with candidate prioritization tasks in computational biology and therapeutic design, we integrate random negative sampling and hard negative sampling to enhance the model's candidate prioritization ability in an imbalanced candidate space. On an animal benchmark dataset, DVCH-LMI achieves AUC of 0.9465 and AUPR of 0.9468 under the 1:1 setting, and it maintains strong positive-oriented ranking performance under more imbalanced settings such as 1:20 and 1:50. Ablation studies verify the effectiveness of key components. Case studies on MALAT1 and NEAT1 further show that DVCH-LMI prioritizes literature-supported interactions. Cross-view alignment visualizations and structure-consistency analyses provide additional representational evidence for the interpretability and reliability of our model. Overall, DVCH-LMI serves as both an effective LMI predictive model and a robust candidate prioritization framework for data-sparse and highly class-imbalanced scenarios, with promising potential for RNA regulatory mechanism studies and RNA-guided drug design."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Optimizing miRNA Loading into Platelet Exosomes via Electroporation: A Comparative Analysis of Buffer Systems and Voltage Parameters for Enhanced Targeted Drug Delivery.",
+          "doi": "10.1007/s12033-026-01590-1",
+          "id": "42401783",
+          "date": "2026-07-04",
+          "source": "Europe PMC",
+          "abstract": "Exosomes, which transport miRNAs in vivo, hold significant therapeutic potential for treating diseases. Current methods for loading miRNAs into exosomes include sonication, co-incubation, kit-based transfection, and electroporation, with electroporation being the most efficient and widely used approach. However, standardized protocols for electroporation conditions remain lacking, necessitating the optimization of electroporation parameters to enhance the utility of extracellular vesicles as drug delivery vehicles in vivo. Platelets were isolated from healthy volunteer blood donors, and platelet-derived exosomes were extracted. The exosomes were labeled with specific dyes and loaded with miRNA using Bio-Rad Gene Pulser Electroporation buffer or 50 mM trehalose. Electroporation was performed at 150 V, 350 V, and 500 V. The miRNA-loaded exosomes were then co-incubated with cells. The efficiency of miRNA delivery was evaluated through fluorescence co-localization, nanoparticle tracking analysis, and qPCR. Our findings demonstrate that the Bio-Rad Gene Pulser Electroporation buffer is highly effective as an electroporation medium for exosomes. Optimal miRNA transfection efficiency and cellular uptake were achieved at 350 V, with significantly higher exosome internalization observed under these conditions. Utilizing the Bio-Rad Gene Pulser Electroporation buffer at 350 V enhances both miRNA loading efficiency into extracellular vesicles and subsequent cellular uptake. This study establishes an optimized electroporation protocol, addressing limitations in existing methodologies and advancing the potential of extracellular vesicles as a robust platform for miRNA-based therapeutic delivery."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Unravelling therapeutic resistance: role of cancer stem cell and microRNA in metastatic prostate cancer.",
+          "doi": "10.3389/fmolb.2026.1904473",
+          "id": "42812781",
+          "date": "2026-09-15",
+          "source": "Europe PMC",
+          "abstract": "Metastatic prostate cancer (PCa) is one of the leading causes of cancer-related deaths in men globally. This is largely attributable to the occurrence of therapeutic resistance that reduces the efficacy of the traditional treatment, such as Androgen deprivation therapy, chemotherapy, and radiotherapy. Accumulating evidence suggests that prostate cancer stem cells a rare population of Cancer Stem Cells drive therapy resistance by sustaining self-renewal, tumor plasticity, epithelial-mesenchymal transition, and metastasis. Concurrently, miRNAs are critical post-transcriptional regulators of gene expression, modulating key signalling pathways that control CSC stemness, reshaping tumor microenvironment, and conferring resistance to therapy. Dysregulation of miRNAs has been closely associated with the regulation of CSCs and the progression of metastatic PCa, and causes disease recurrence. In accordance with their targets, miRNAs can function either as oncogenic drivers that promote cancer progression or as tumor suppressors that inhibit malignant transformation and growth. Moreover, it contributes to the capacity of CSCs to withstand therapy and initiate disease recurrence. Recent advances in precision oncology have increased the pace of novel therapeutic modalities, such as CRISPR/Cas9, nanotechnology-based delivery vehicles, chimeric antigen receptor -T cell therapy, and epigenetic reprogramming strategies to counteract aberrant transcriptional states that sustain PCSC plasticity. The integration of these approaches offers a promising strategy to overcome refractoriness to treatment and improve clinical outcomes in advanced PCa. This review highlights the complex interplay between miRNAs and PCSCs in therapy resistance of metastatic PCa, and explores their translational potential in shaping durable and more effective clinical interventions."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "The Cytoplasmic MicroRNA-Production Complex Regulates MicroRNA Sorting to Extracellular Vesicles During Synaptogenesis.",
+          "doi": "10.1002/advs.78067",
+          "id": "42815010",
+          "date": "2026-09-30",
+          "source": "Europe PMC",
+          "abstract": "Extracellular vesicles (EVs) have emerged as novel players of cell communication, in part via the transfer of microRNA (miRNA) cargo to recipient cells. Although several RNA-binding proteins (RBPs) were shown to shuttle miRNAs to EVs, how they are loaded with miRNA is unknown. This study demonstrates that the core accessory protein of the cytoplasmic miRNA production machinery TRBP interacts with several EV-RBPs and differentially regulates miRNA secretion in small EVs. TRBP-regulated EV-miRNAs were highly enriched in a Syncrip-recognition sequence motif. Moreover, we show that Syncrip associates with TRBP via its C-terminal domain at the surface of the endoplasmic reticulum (ER), a nucleation site of the miRNA production machinery. The recruitment of Syncrip to ER-associated TRBP was regulated by ER-endosome membrane contact sites (MCS), whereby increased MCS formation promotes Syncrip loading to endosomes as well as Argonaute 2-positive RNA granules. Functionally, this pathway is important for the regulation of synapse formation in developing neurons, as expression of miRNA- or TRBP-binding deficient mutants of Syncrip differentially regulated synapse formation in EV-donor and recipient neurons. Overall, this work highlights an important role of TRBP as a gatekeeper for microRNA sorting, which could be crucial for the fine-tuning of neuronal circuits during postnatal development."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Editorial: Targeting the Wnt/β-catenin signaling pathway in cancer, volume II.",
+          "doi": "10.3389/fonc.2026.1970244",
+          "id": "42755928",
+          "date": "2026-09-03",
+          "source": "Europe PMC",
+          "abstract": null
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "MiracleNet: A Biologically Interpretable Machine Learning Model for Resected Non-small-cell Lung Cancer.",
+          "doi": "10.34133/csbj.0145",
+          "id": "42454104",
+          "date": "2026-07-14",
+          "source": "Europe PMC",
+          "abstract": "Lung cancer remains one of the leading causes of cancer-related mortality worldwide. Accurate prediction of relapse is notoriously difficult, posing substantial challenges to patient care and necessitating advanced tools to improve prognostic outcomes. MicroRNA (miRNA) expression profiles hold promise as biomarkers for predicting relapse, yet existing predictive models lack interpretability or sufficient predictive performance. Biologically informed neural networks have emerged as a modeling approach incorporating biological interpretability and predictive accuracy. Here, we introduce MiracleNet, to our knowledge the first visible neural network in which sparse connectivity is structured by the miRNA → target gene → pathway hierarchy for disease-free survival prediction from circulating miRNA in non-small-cell lung cancer and the first to expose interpretable importances jointly at all 3 biological layers, with nodes connected by prior knowledge about miRNA targets and related biological pathways. Our model, which also integrates clinical data, achieves a maximum concordance index of 0.76, demonstrates improved generalization over unconstrained neural networks of the same dimensionality (including both dense and sparse architectures lacking biological knowledge), and provides explicit biological interpretability. Our model also highlights several important biomarkers in the form of predictive miRNAs and connected biological pathways. We additionally evaluate MiracleNet under a nested repeated 80/20 protocol, augmented with patient sex and tumor stage as clinical covariates and combined across circulating free and extracellular-vesicle-associated miRNAs through early and intermediate fusion; these analyses are reported as separate sections."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Design, Synthesis and Biophysical Characterisation of CPP-PNA Conjugates for Targeting Oncogenic microRNA-221.",
+          "doi": "10.1002/psc.70129",
+          "id": "42825383",
+          "date": "2026-11-01",
+          "source": "Europe PMC",
+          "abstract": "Peptide nucleic acids (PNAs) are a promising platform targeting disease-associated microRNAs due to their high binding affinity, excellent sequence specificity and resistance to enzymatic degradation. However, their therapeutic application is often limited by inefficient cellular uptake. In this study, we present the design, synthesis and physicochemical characterisation of cell-penetrating peptide (CPP)-PNA conjugates that target the oncogenic microRNA miRNA-221-5p, as well as their preliminary biological evaluation. Anti-miRNA-221-5p PNAs functionalised for conjugation with CPPs via Cu(I)-catalysed azide-alkyne cycloaddition (CuAAC) or disulfide-mediated coupling were synthesised using solid-phase peptide synthesis. Circular dichroism and UV-melting analyses confirmed the formation of a stable, sequence-specific PNA-RNA heteroduplex with miRNA-221-5p. This demonstrated strong hybridisation and high thermodynamic stability compared to scrambled control sequences. Cell proliferation assays indicated modest but reproducible antiproliferative effects for the CPP-PNA conjugates co-incubated with chloroquine, with no evidence of acute cytotoxicity. These findings emphasise the potential of CPP-PNA systems for the intracellular delivery of antisense agents and highlight the importance of the linker nature in determining their biological performance."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "AKT Inhibitor Capivasertib as a Target for Osimertinib Combination Therapy in Lung Adenocarcinoma with &lt;i&gt;EGFR&lt;/i&gt; Mutation.",
+          "doi": "10.3390/genes17091016",
+          "id": "42792909",
+          "date": "2026-08-27",
+          "source": "Europe PMC",
+          "abstract": "<b>Background/Objective</b>: An analysis of microRNA (miRNA) expression signatures in lung adenocarcinoma (LUAD) harboring <i>EGFR</i> mutations revealed that multiple miRNAs, including <i>miR-126-3p</i>, were suppressed in cancer tissues. This study focused on <i>miR-126-3p</i> and aimed to identify therapeutic target genes regulated by <i>miR-126-3p</i> in LUAD harboring <i>EGFR</i> mutations and evaluate their potential for combination therapy with EGFR tyrosine kinase inhibitors. <b>Methods</b>: The antitumor function of <i>miR-126-3p</i> was analyzed by the ectopic expression of <i>miR-126-3p</i> into LUAD cells with <i>EGFR</i> mutation. The target genes of <i>miR-126-3p</i> were identified through an analysis of the TargetScan, Genecodis 4 and TCGA databases. The Chou-Talalay method was used to determine the potential synergistic effects of selected drug combinations. <b>Results</b>: The expression of <i>miR-126-3p</i> attenuated the malignant transformation of LUAD cells through targeting the \"EGFR tyrosine kinase inhibitor resistance pathway\". We focused on <i>AKT2</i> among the genes involved in this pathway. Capivasertib was recently approved as the first inhibitor of oncogenic <i>AKT</i> signaling. Therefore, we investigated the effect of combination therapy comprising osimertinib and capivasertib on LUAD cell viability. Combination therapy synergistically reduced cell viability in both PC9 and H1975 cells, with combination index values of 0.61 and 0.14, respectively, at Fa = 0.5. <b>Conclusions</b>: Our miRNA-based analysis is an excellent strategy for identifying therapeutic targets that enhance the effects of EGFR inhibitors on LUAD."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Endogenous enzyme-driven unarming of spherical nucleic acid in a divide-and-conquer pattern for amplified imaging of microRNA in tumor cells.",
+          "doi": "10.1016/j.talanta.2026.129602",
+          "id": "41764800",
+          "date": "2026-02-28",
+          "source": "Europe PMC",
+          "abstract": "While the precise identification of cancer cells holds significant importance for early diagnosis, prediction of prognosis in patients and evaluating the risk of recurrence after surgery, the intracellular imaging of low abundance of miRNA biomarkers is essential for recognizing tumor cells but remains highly challenging due to the limitation of 'one-to-one' signal transduction mechanism and fragility of sensing probes (especially a multiple-components-based probe) in complex biological environments. Herein, we demonstrate AHP-AuNP nanoprobe (essentially spherical nucleic acid, SNA) for the sensitive amplification imaging of intracellular miRNA-21 biomarker, where a gold nanoparticle (AuNP) surrounded by a layer of DNA AHPs capable of identifying target miRNA-21 with the apurinic/apyrimidinic (AP) site available for the cleavage by endonuclease APE1. The cancer-related miRNA-21 can specifically open the loop-stem structure of AHP-AuNP nanoprobe and trigger the ERDN amplification reaction, during which endogenous enzyme (E), target recycle (R), scissile AP site-contained DNA probe (D), and gold nanoparticle substrate (N) are integrated into an assay system, finally leading to the unarming of SNA in a divide-and-conquer pattern and generating a sensitive fluorescence signal. Even if only one DNA strand is involved in the signaling process, miRNA-21 can be detected down to 27.1 pM, achieving a 90 times improved limit of detection. Moreover, no obvious interference from exogenous enzymes and miRNA family members, and even a single-base mismatch can be easily sensed. Additionally, without the requirement of transfection agents, AHP-AuNP nanoprobe can enter living cells and accomplish the sensitive fluorescence imaging of intracellular miRNA-21, enabling the identification of cancerous cells from healthy cells. AHP-AuNP nanoprobe is expected to become a powerful diagnostic tool for specifically screening tumor cells in patients and holds exceptional promise for the early diagnosis of cancers, prediction of surgical tumor recurrence, and evaluation of metastasis."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Editorial: Adoption of artificial intelligence in human and clinical genomics: volume II.",
+          "doi": "10.3389/fmolb.2026.1949944",
+          "id": "42670500",
+          "date": "2026-08-17",
+          "source": "Europe PMC",
+          "abstract": null
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Emerging Roles of MicroRNAs in Diffuse Large B-Cell Lymphoma: From Molecular Mechanisms to Clinical Translation, Liquid Biopsy, and Precision Medicine.",
+          "doi": "10.3390/biomedicines14091904",
+          "id": "42792647",
+          "date": "2026-08-26",
+          "source": "Europe PMC",
+          "abstract": "Diffuse large B-cell lymphoma (DLBCL), the most prevalent subtype of non-Hodgkin lymphoma (NHL), is an aggressive and fairly heterogeneous group with diverse clinical, pathological, and molecular features. Despite the success of first-line immunochemotherapy, relapsed or treatment-resistant forms remain a clinical challenge. Consequently, minimally invasive markers are needed to predict refractoriness. Recently, circulating microRNAs (miRNAs) have emerged as highly stable, promising biomarkers. MiRNAs such as miR-21, miR-155, miR-222-3p, and the miR-17~92 cluster act as oncogenes that promote tumor survival, while others, such as miR-34, miR-181a, miR-144, miR-101, miR-10a, and miR-320, act as tumor suppressors. Despite multiple recent publications that have correlated dysregulated miRNAs with diagnostic and prognostic importance, the clinical translation has not been fully addressed. Overall, this review provides an updated perspective on the potential of miRNAs in DLBCL and outlines key challenges and future directions for their integration into precision oncology, as miRNAs can remodel the clinical management of DLBCL by enabling earlier diagnosis, improved prognostication, and personalized treatment approaches."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "The Association of miR-29a and miR-29c with Carotid Intima-Media Thickness and Coronary Artery Disease Severity.",
+          "doi": "10.3390/genes17090987",
+          "id": "42792881",
+          "date": "2026-08-24",
+          "source": "Europe PMC",
+          "abstract": "<h4>Background/objectives</h4>Carotid intima-media thickness (CIMT) is widely recognized as an established biomarker of systemic atherosclerosis and coronary artery disease (CAD). Nevertheless, the connection between circulating miR-29 family members, CIMT and CAD severity has not yet been determined. The aim of this study was to investigate the association of plasma miR-29a and miR-29c with CIMT and CAD severity.<h4>Methods</h4>A total of 628 patients scheduled for elective coronary angiography were included in the study. CAD severity was estimated using the Gensini scoring system and was classified into mild, moderate, and severe categories. Additionally, CIMT was evaluated using high-resolution B-mode ultrasonography, while plasma miR-29a and miR-29c levels were detected using qRT-PCR.<h4>Results</h4>CIMT increased significantly with CAD severity (0.76 ± 0.15, 0.94 ± 0.18, and 1.12 ± 0.22 mm for mild, moderate, and severe CAD, respectively; <i>p</i> < 0.001). MiR-29a expression progressively increased, whereas miR-29c expression decreased with advancing CAD (both <i>p</i> < 0.001). MiR-29a correlated positively with CIMT (r = 0.612) and Gensini score (r = 0.658), while miR-29c showed negative correlations (r = -0.527 and -0.584, respectively; all <i>p</i> < 0.001). CIMT, miR-29a, and miR-29c were found to be independently associated with CAD severity. Their combined model demonstrated a powerful association with severe CAD (AUC = 0.927; sensitivity 88.6%; specificity 84.1%).<h4>Conclusions</h4>Plasma miR-29a and miR-29c are independent biomarkers of CIMT and CAD severity. Their combination with CIMT can improve diagnosis of severe CAD and may enhance cardiovascular risk stratification."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Characterization of ZIC5 expression in esophageal squamous cell carcinoma and its association with patient survival.",
+          "doi": "10.3892/ol.2026.15834",
+          "id": "42698844",
+          "date": "2026-08-26",
+          "source": "Europe PMC",
+          "abstract": "Esophageal squamous cell carcinoma (ESCC) is a prevalent malignancy known for its aggressive nature and poor prognosis. The present study aimed to investigate the expression levels and clinical importance of the Zic family member 5 (ZIC5) gene in ESCC. Gene expression data and survival information obtained from The Cancer Genome Atlas and Gene Expression Omnibus were utilized. In 176 patients with surgically resected ESCC, immunohistochemical analysis was conducted to validate the expression of ZIC5 protein in cancerous and adjacent tissues. The findings of the present study revealed a significant upregulation of ZIC5 in ESCC compared with normal tissues (P<0.05), which was further corroborated by immunohistochemistry exhibiting a notable association between ZIC5 expression and clinical parameters such as tumor size, invasion depth, lymph node metastasis and TNM staging (P<0.05). Survival analysis further indicated that high ZIC5 expression was an independent prognostic factor for poor outcomes in patients with ESCC (hazard ratio=1.519; 95% CI: 1.017-2.269; P<0.05). In addition, bioinformatic analyses predicted that hsa-microRNA-212-5p may regulate ZIC5 mRNA and gene enrichment analysis suggested that ZIC5 may facilitate ESCC progression through involvement in the cell cycle and DNA repair pathways. In conclusion, ZIC5 is highly expressed in ESCC and associated with a poor prognosis, indicating its potential as a therapeutic target and biomarker for ESCC management. Further studies are warranted to elucidate the precise mechanisms underlying the role of ZIC5 in ESCC progression."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Integrating Genetic Variants and Expression Profiles of Pharmacogenes to Investigate Resistance to Antidepressant Treatment.",
+          "doi": "10.3390/medicina62050965",
+          "id": "42195218",
+          "date": "2026-05-15",
+          "source": "Europe PMC",
+          "abstract": "<i>Background and Objectives</i>: Treatment-resistant depression (TRD) is a major clinical challenge in the management of major depressive disorder (MDD). While pharmacogenetics has been suggested to be clinically useful in guiding antidepressant treatment, few studies have explored if and how pharmacogenes can be involved in TRD pathophysiology and its clinical outcomes. <i>Material amd Methods</i>: We explored the role of differences in metabolizer phenotypes, gene expression levels, and microRNAs of three key pharmacogenes (CYP2D6, CYP2C19, CYP2B6) in TRD pathophysiology and antidepressant response in a cohort of 300 patients with MDD from the PROMPT consortium. <i>Results</i>: <i>CYP2D6</i> phenotype distribution did not differ significantly between TRD and non-TRD groups, but mRNA expression was significantly upregulated in TRD. Hsa-miR-26b-5p, a microRNA predicted to regulate <i>CYP2D6</i>, was significantly downregulated in TRD. For CYP2C19, intermediate metabolizers (IMs) were underrepresented in TRD versus non-TRD (IMs vs. normal metabolizers (NMs): χ<sup>2</sup> = 6.07, <i>p</i> = 0.019). microRNA hsa-let-7d-5p and hsa-miR-27a-3p, predicted to regulate CYP2C19, were significantly downregulated in TRD. No significant differences were found for CYP2B6. <i>Conclusions</i>: This study contributes valuable insights to the PROMPT project on how pharmacokinetic gene variants and their expression and regulatory mechanisms may influence antidepressant response and resistance in MDD."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Genetic Regulation of Monocyte MicroRNAs and Their Implication in Musculoskeletal Diseases: A Cross-Ancestry Expression Quantitative Trait Loci and Imputation Study.",
+          "doi": "10.3390/ijms27062818",
+          "id": "41898677",
+          "date": "2026-03-20",
+          "source": "Europe PMC",
+          "abstract": "This study investigated the genetic regulation of microRNA (miRNA) expression in monocytes and its potential role in musculoskeletal diseases. We mapped expression quantitative trait loci (eQTLs) for miRNAs using data from 281 Caucasian (CAU) and 170 African American (AA) individuals, constructed ancestry-specific models to impute miRNA expression from genotype data, and applied these models to test associations with osteoporosis and sarcopenia. Analysis identified 468 and 2653 independent eQTLs for 61 miRNAs in CAU and 25 in AA, respectively, the majority of which were ancestry-specific. Association analyses identified 22 and 26 miRNAs associated with osteoporosis and sarcopenia, respectively, in the CAU population; corresponding findings in the African American population were 26 and 14 miRNAs. Analysis of their target genes revealed 1238 and 741 genes that were nominally associated with osteoporosis and sarcopenia in CAU; with 524 genes associated with osteoporosis and 891 associated with sarcopenia in AA. Functional enrichment analysis indicated that the target genes of the identified miRNAs are involved in disease-relevant biological processes-cell migration and motility in osteoporosis, and immune/cytokine responses in sarcopenia. This work provides insights into the genetic architecture of miRNA expression and implicates monocyte miRNAs in musculoskeletal diseases, underscoring the importance of including diverse ancestral backgrounds in genomic studies."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Expression characteristics of serum exosomal microRNAs in patients with liver injury induced by anti-tuberculosis drugs.",
+          "doi": "10.3724/abbs.2025242",
+          "id": "41656990",
+          "date": "2026-02-06",
+          "source": "Europe PMC",
+          "abstract": null
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Tear MicroRNA-Based Molecular Signature for Keratoconus Stratification: A Cross-Cohort Integration Study.",
+          "doi": "10.1177/11779322261489962",
+          "id": "42732169",
+          "date": "2026-09-10",
+          "source": "Europe PMC",
+          "abstract": "Keratoconus (KC) is a progressive corneal ectatic disorder characterized by structural remodeling and immune-associated molecular alterations. However, whether tear-derived microRNAs reflect corneal molecular changes remains unclear. We analyzed three publicly available corneal transcriptomic datasets (N = 112) to identify immune-associated gene expression patterns using differential expression analysis and Gene Set Enrichment Analysis. In a prospective tear cohort (N = 20), tear miRNA profiling was performed, and candidate miRNAs were selected using LASSO regression. miRNA patterns were integrated with immune-related transcriptomic alterations, and an exploratory molecular-structural index was constructed using standardized hsa-miR-326 expression and keratometry (K2). We identified immune-associated transcriptional alterations in KC corneas and derived a five-miRNA tear signature. The signature showed discriminatory performance in an independent corneal epithelial miRNA dataset (AUC = 0.89, 95% CI: 0.69-1.00; N = 16) and was further evaluated in an additional tear cohort using RT-qPCR (N = 52). Among these candidates, hsa-miR-326 showed consistent downregulation across datasets. Network analysis identified associations between candidate miRNAs and immune-related genes, including <i>IL1B</i>, <i>CD4</i>, <i>CXCL10</i>, and <i>TGFB1</i>. The exploratory molecular-structural index demonstrated an inverse association with keratometric steepening (Spearman ρ = -0.86, p < 0.001). These findings suggest that tear-derived miRNAs may provide complementary molecular information associated with immune-related corneal alterations and warrant further investigation in KC characterization."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Graph attention networks-based prediction of MicroRNA-disease causality in head and neck neoplasms.",
+          "doi": "10.1038/s41598-025-24130-4",
+          "id": "41249334",
+          "date": "2025-11-17",
+          "source": "Europe PMC",
+          "abstract": "Head and neck cancers represent a critical global health issue, contributing to substantial morbidity and mortality. Recent research has explored the role of microRNAs (miRNAs) in these cancers by constructing miRNA-associated disease networks using bipartite graphs. Graph attention networks (GATs) have emerged as a powerful tool for predicting disease associations within such biological networks, offering enhanced accuracy in identifying potential miRNA-disease relationships. This study employs GATs to uncover and predict potential miRNA contributors to head and neck cancers. Data on miRNA-disease associations were sourced from the HMDD v4.0 database, a platform based on SQLite and Django. The head and neck neoplasms dataset included miRNA, disease, causality, category, and PubMed ID (PMID). GATs were applied to analyze the network, leveraging their ability to capture the significance and interdependencies of nodes and edges. The model used a learnable weight matrix to compute attention coefficients, normalize them, and aggregate information from neighboring nodes for edge prediction. The GAT model, integrating graph neural networks with attention mechanisms, achieved an accuracy of 83% in predicting miRNA-disease associations for head and neck neoplasms. This study highlights the potential of graph-based deep learning models, particularly GATs, in accurately predicting miRNA-disease associations. A functional enrichment analysis revealed significant involvement of miRNAs in oral cancer pathways, notably highlighting the critical roles of the TGF-beta and PI3K-Akt signaling pathways in tumor progression and cell survival. These findings offer a pathway to better understanding the molecular mechanisms underlying head and neck cancers. Future improvements in dataset size, model evaluation, and interpretability could further enhance prediction accuracy, potentially advancing diagnostic and therapeutic strategies for these cancers."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Cellular miRNA-31 and miRNA-125b as predictors of remission and major disease improvement in patients with early rheumatoid arthritis.",
+          "doi": "10.1038/s41598-026-46990-0",
+          "id": "42000839",
+          "date": "2026-04-18",
+          "source": "Europe PMC",
+          "abstract": "Rheumatoid arthritis (RA) is an autoimmune disease that impairs quality of life, highlighting the need for novel biomarkers for early diagnosis and improve disease management. This study explored the cellular microRNAs (miRNAs) profile in early RA to identify potential predictors of therapeutic response. We measured a panel of 768 miRNAs in peripheral blood mononuclear cells (PBMCs) from two early RA cohorts (< 6 months), stratified by sustained SDAI/CDAI remission and non-response to conventional therapy over 12 months. Initial screening identified 13 differentially expressed miRNAs (≥ 1.5-fold change), which were validated in an independent cohort comprising 59 early RA patients and 54 healthy controls. MiRNA levels were quantified by qPCR, and predictive performance was assessed by receiver operating characteristic (ROC) curve. Among the 13 candidates, baseline levels of miRNA-31 and miRNA-125b predicted SDAI/CDAI remission at 6 months. Moreover, changes in their expression after 1 month of therapy predicted Boolean2.0 remission and achievement of major disease improvement (≥ 85% reduction in disease activity) at 6 months. Higher baseline expressions of both miRNAs were consistently observed in patients who achieved remission. These findings suggest that cellular expression of miRNA-31 and miRNA-125b may serve as promising prognostic biomarkers for 6-month remission in early RA."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Investigation of MicroRNAs as predictors of radioligand therapy response in gastroenteropancreatic neuroendocrine tumours.",
+          "doi": "10.1038/s41598-026-40046-z",
+          "id": "41702995",
+          "date": "2026-02-17",
+          "source": "Europe PMC",
+          "abstract": "Gastroenteropancreatic neuroendocrine tumours (GEP-NETs) are commonly treated with radio-ligand therapy (RLT) but reliable biomarkers for predicting early disease progression are lacking. In this exploratory study we investigated whether microRNA (miRNA) expression in archival samples is associated with early response to RLT and with tumour origin and grading. Forty-eight formalin-fixed, paraffin-embedded samples from G1–G2 GEP-NETs patients treated with RLT (177Lu-Oxodotreotide (Lutathera®) were analyzed. Two CT or MRI scans per patient, performed within three months before and after RLT, were used to assess early progression (PD) according to RECIST v1.1. Thirteen miRNAs previously implicated in NET biology were quantified by qRT-PCR. Multiple logistic regression evaluated associations between miRNA expression and early progression, as well as relationships with tumour origin and grade. We observed trends suggesting that lower expression of miR-21-5p (OR = 0.51, 90% CI: 0.26–1.00) and miR-196a (OR = 0.78, 90% CI: 0.59–1.02), and higher expression of miR‑30a-5p (OR = 2.62, 90% CI: 0.1.14–6.05) may be associated with a reduced likelihood of early progression. Lower miR-196a and higher miR‑30a-5p expression was also more frequent in pancreatic tumours and lower miR-196a expression is associated to G1 lesions. These findings indicate that miRNA profiling in GEP-NETs archival samples is feasible and support the potential role of miR-21-5p, miR-196a, and miR‑30a-5p as exploratory biomarkers for early progression afterRLT. Further validation in independent cohorts is required to confirm these preliminary observations."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Non-Coding RNA Biomarkers in Male Infertility: From Discovery to Clinical Actionability-A Narrative Review.",
+          "doi": "10.3390/genes17091074",
+          "id": "42792968",
+          "date": "2026-09-06",
+          "source": "Europe PMC",
+          "abstract": "Non-coding RNAs (ncRNAs) are biologically plausible biomarkers in male infertility, but no assay is ready for routine use. This narrative review organizes human evidence by intended clinical decision and defines clinical actionability as a test's ability to inform a specified decision through analytical reliability, clinical validity, incremental value, decision-level benefit, and feasible implementation. Evidence is most developed for obstructive versus non-obstructive azoospermia (NOA) classification and sperm-retrieval prognosis. Most reports, however, use selected case-control samples, single-center development cohorts, or same-program evaluations. Mixed biospecimens, incompletely specified RNA isoforms and normalization, uncertain cohort independence, imperfect diagnostic references, and protocol-dependent retrieval outcomes limit transportability. No independent geographic validation of a locked ncRNA assay or prospective evaluation of ncRNA-guided management was identified within the retrieved sources. Current guidelines do not recommend routine ncRNA testing. Progress requires prespecified intended uses, locked assays, representative multicenter validation, same-patient comparison with contemporary care, calibrated risk estimates, decision-curve analysis, and patient-important, couple-centered outcomes."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Dose-Dependent Hepatotoxicity of Zinc Oxide Nanoparticles in Rats: Oxidative Stress, Apoptosis, and Dysregulation of Hepatic miR-122, miR-34a, and miR-21.",
+          "doi": "10.3390/ijms27188073",
+          "id": "42794503",
+          "date": "2026-09-10",
+          "source": "Europe PMC",
+          "abstract": "Zinc oxide nanoparticles (ZnO NPs) are widely used in biomedical, agricultural, and industrial applications, raising concerns about their potential hepatotoxicity. This study investigated the effects of 28-day oral ZnO NP exposure on hepatic function, oxidative stress, apoptosis, inflammatory signaling, and microRNA expression in rats. Sixty male Wistar albino rats were allocated to three groups (<i>n</i> = 20 each),control, low dose (30 mg/kg), and high dose (100 mg/kg), and treated by oral gavage. The administered material had a nominal particle size of 50 nm and a supplier-stated purity of 99.9%. Serum alanine aminotransferase (ALT) and aspartate aminotransferase (AST), hepatic malondialdehyde (MDA) and reduced glutathione (GSH), histopathology, immunohistochemistry, mRNA expression, and hepatic microRNAs were assessed. ZnO NPs induced dose-related liver injury: ALT increased from 31.26 ± 2.5 to 75.48 ± 12.3 IU/L, while AST increased from 32.47 ± 4.1 to 85.57 ± 18.9 IU/L. Hepatic MDA increased, whereas GSH increased at the low dose but was depleted at the high dose. Histopathology demonstrated sinusoidal congestion, hepatocellular necrosis, and inflammatory infiltration. Immunohistochemistry indicated reduced B-cell lymphoma 2 (Bcl-2) and increased caspase-3 and tumor necrosis factor-alpha (TNF-α) immunoreactivity. Interleukin-6 (IL-6) and heme oxygenase-1 (HO-1) were upregulated, whereas superoxide dismutase 2 (SOD2) was downregulated. At the high dose, miR-122-5p, miR-34a-5p, and miR-21-5p increased by 8.74-, 6.53-, and 4.38-fold, respectively (all <i>p</i> < 0.05). Their expression levels were also strongly and positively correlated with biochemical, oxidative, and histopathological indicators of liver injury. These findings indicate that ZnO NP exposure is associated with oxidative, inflammatory, apoptotic, and microRNA responses; the altered hepatic microRNAs may represent candidate tissue indicators of ZnO NP-induced liver injury."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "MicroRNA-phytochemical interactome targeting thioredoxin-interacting protein: a narrative review at the nexus of RNA therapeutics, cancer biology, and metabolic regulation.",
+          "doi": "10.3389/fonc.2026.1907571",
+          "id": "42712981",
+          "date": "2026-08-25",
+          "source": "Europe PMC",
+          "abstract": "MicroRNAs (miRNAs) are increasingly recognized as central regulators of gene expression, cellular adaptation, and disease progression. This is fundamentally reshaping current understanding of disease molecular pathogenesis and therapeutic intervention. Beyond their established roles in development and metabolism, miRNAs actively participate in oncogenesis, metabolic dysfunction, inflammation, and redox homeostasis. Emerging evidence shows that phytochemicals can modulate miRNA-mediated regulatory networks by influencing miRNA biogenesis, expression, stability, and functional activity through transcriptional, epigenetic, and post-transcriptional mechanisms. Among these pathways, the thioredoxin-interacting protein (TXNIP) axis has attracted considerable attention because of its critical involvement in oxidative stress, inflammation, metabolic reprogramming, apoptosis, and cancer-associated signalling. For instance, dysregulated TXNIP expression is strongly associated with metabolic dysfunction-associated fatty liver disease (MAFLD), diabetes, cardiovascular diseases, neurodegenerative disorders, and multiple cancers, making it an attractive therapeutic target. This narrative review discussed emerging trends on phytochemical-mediated regulation of TXNIP-associated miRNAs, including miR-148b, miR-33a/b, miR-17-5p, miR-224, and miR-20a. Particular emphasis was placed on the conserved miRNA seed region as the principal determinant of target recognition, while discussing the emerging hypothesis that phytochemicals may allosterically modulate structurally accessible RNA motifs to influence miRNA conformation, stability, RNA-induced silencing complex loading, and target accessibility without disrupting canonical Watson-Crick base pairing. We further discussed molecular docking, RNA-specific molecular dynamics simulations, and complementary structural validation approaches as emerging tools for investigating RNA-ligand interactions. Therefore, this review has provided a mechanistic and translational framework integrating RNA biology, redox signalling, and precision medicine to guide future development of RNA-targeted phytochemical therapeutics for cancer, metabolic disorders, and other chronic diseases."
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Signed Graph Pre-Training and Prompt Learning",
+          "id": "http://arxiv.org/abs/2609.25722v2",
+          "date": "2026-09-22T05:51:38Z",
+          "source": "arXiv",
+          "abstract": "Signed graphs arise in trust--distrust networks, financial correlation systems, biological interaction graphs, and many other domains in which edges can be positive or negative and may also be directed. While signed graph neural networks have improved task-specific learning, graph transfer learning on signed graphs remains underdeveloped. In this paper, we introduce TopoSIGN, a pioneer topology-guided graph pre-training and prompt learning framework for signed graphs. TopoSIGN combines a structural encoder built on the magnetic signed Laplacian with a novel persistent-homology branch that summarizes signed topology through Dowker-complex persistence images. The fused embeddings are then transferred to a prompt learning function. Experimental results on synthetic and real-world datasets demonstrate the efficacy of TopoSIGN in extracting useful structural information in signed graphs, as well as the adaptability and flexibility of the proposed general framework.",
+          "authors": [
+            "Zihan Mei",
+            "Rong Pan",
+            "Yuzhou Chen",
+            "Yixuan He"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Polarity-Asymmetric Structural Calibration for Link Sign Prediction",
+          "id": "http://arxiv.org/abs/2609.05896v1",
+          "date": "2026-09-05T05:33:27Z",
+          "source": "arXiv",
+          "abstract": "Link sign prediction (LSP) aims to infer the positive or negative polarity of unobserved links in signed networks. Signed Graph Neural Networks (SGNNs) usually rely on signed-graph structural priors, including structural balance and homophily-like similarity, to guide message passing and prediction. These priors describe population-level tendencies, not guarantees for individual target edges. Their failures are especially costly under severe sign imbalance, where errors on minority and locally conflicting relations are harder to detect and correct. We propose Polarity-Asymmetric Structural Calibration (PASC), a target-edge structural-prior calibration framework for signed link prediction. PASC constructs a structure-only prior representation, estimates a target-edge structural prior score, and compares this score with a local signed-context cue to derive a conflict residual. The residual calibrates signed attention aggregation, target-edge gated fusion, and regime-adaptive optimization. Experiments on five real-world signed network datasets show that PASC consistently achieves the best Macro-F1 among representative baselines, with competitive AUC, Binary-F1, and Micro-F1. Structural-shift experiments further suggest reduced dependence on dense-neighborhood and local-closure shortcuts. Source code is available at https://github.com/iqqGGGGGGG/PASC-for-LSP.",
+          "authors": [
+            "Qiqi Gao",
+            "Wenzhuo Song",
+            "Xueyan Liu"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "ECHO: A Locally-Deployable Agentic Health Assistant with Temporal Memory, Safety Guardrails, and Speech Assessment",
+          "id": "http://arxiv.org/abs/2608.06110v2",
+          "date": "2026-08-06T14:44:12Z",
+          "source": "arXiv",
+          "abstract": "This paper presents ECHO (Enhanced Care & Health Observer), a locally-deployable conversational health assistant for long-term chronic care management. ECHO integrates three complementary software modules developed under shared supervision as a unified system. The core module is an agentic chatbot built on a ReAct loop orchestrated via LangGraph, equipped with 17 clinical tools and a temporal knowledge graph for persistent cross-session memory; it achieves a 94.9% tool-execution pass rate across a 59-scenario benchmark with GPT-5 Mini. A two-stage hybrid safety layer intercepts all incoming queries: a rule-based layer handles explicit crisis signals and jailbreak attempts in under 1ms, while a signed graph neural network (GNN) with APPNP-style propagation classifies boundary cases by clinical intent, achieving 88.8% accuracy and 90.6% unsafe recall on a 2,537-query annotated Turkish health dataset while outperforming zero-shot LLM baselines including Llama 3.3 70B. A multimodal speech assessment module combining Whisper acoustic encoding and BERT text encoding with cross-attention fusion estimates emotion, depression, and pain, reaching a mean macro F1 of 0.652. The full system is implemented as a web application that can run entirely on consumer hardware, with no patient data transmitted to external services, supporting compliance with GDPR and KVKK.",
+          "authors": [
+            "Abdulkadir Külçe",
+            "Alihan Esen",
+            "Çağla Fikir",
+            "Berke Kurt",
+            "Kuzey Arar",
+            "Gökhan Ercan",
+            "Faik Boray Tek"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Nonlinear Laplacians Improve Signed-Directed Graph Learning",
+          "id": "http://arxiv.org/abs/2608.00836v1",
+          "date": "2026-08-01T19:30:15Z",
+          "source": "arXiv",
+          "abstract": "While signed-directed graphs have been studied using linear Laplacians in the design of graph neural networks, relatively little research has focused on developing non-linear Laplacian operators for such networks. We introduce a non-linear Laplacian operator specific to signed and directed networks (NLSD). This non-linear operator extends the concepts of the signed Laplacian for signed graphs and the Laplacian for directed graphs. The NLSD calculates node-specific potentials based on features More precisely, if the potential discrepancy is not aligned with the edge direction, we ignore it (and vice versa) leveraging message-passing techniques only across edges where potential discrepancies align with the edge's direction. Utilizing this novel operator, we propose an efficient spectral GNN framework (NLSD-GNN). We conducted comprehensive evaluations focusing on node classification and link prediction, examining scenarios involving signed, directional, or both types of information. Our findings reveal that this spectral GNN framework not only integrates signed and directional data effectively but also achieves superior performance across diverse datasets.",
+          "authors": [
+            "Ali Parviz",
+            "Yuichi Yoshida"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Dynamic Link Prediction with Temporally Enhanced Signed Graph Neural Networks",
+          "id": "http://arxiv.org/abs/2605.26290v3",
+          "date": "2026-05-25T19:28:01Z",
+          "source": "arXiv",
+          "abstract": "Temporal signed networks (TSNs) model the time evolution of cooperative and adversarial relationships that arise in applications such as social media analysis, trust and reputation systems, and financial transaction networks. While graph neural networks (GNNs) perform well for static or unsigned link prediction, effective learning in temporal signed graphs remains challenging due to the interaction of signed relations, evolving structure, and balance-theoretic constraints. To address this gap, we propose a \\emph{modular} temporal enhancement framework for signed GNNs that integrates historical context into otherwise static architectures. The framework introduces a Historical Context Integration Module (HCIM) that combines learnable recency-aware temporal weighting, LSTM-based embedding trajectory modeling, and multi-head temporal attention to capture both short- and long-term signed interaction dynamics. Historical information is fused with current node representations using either global or node-adaptive weighting, allowing the architecture-agnostic framework to accommodate heterogeneous temporal behaviors. We instantiate the approach on the Self-Explainable Signed Graph Transformer (SE-SGformer), preserving interpretability while extending it with temporal awareness. Experiments on real-world and synthetic TSNs, including Bitcoin OTC, Bitcoin Alpha, Reddit, and small-world network models, demonstrate consistent and statistically significant improvements over the static baseline.",
+          "authors": [
+            "Derek Regier",
+            "Andrew Polyak",
+            "Aresh Dadlani",
+            "Khosro Salmani"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Learning over Positive and Negative Edges with Contrastive Message Passing",
+          "id": "http://arxiv.org/abs/2605.17854v1",
+          "date": "2026-05-18T04:52:07Z",
+          "source": "arXiv",
+          "abstract": "Conventional approaches to learning on graphs involve message passing along existing (i.e., positive) edges to update node features. However, these approaches often disregard the potentially valuable information contained in the absence (i.e., negative) of edges. Here, we theoretically analyze the value of negative edges in graph representations and prove that in settings of low label rates, high homophily, and high edge density, access to negative edges provides significant information gain over using only positive edges. Motivated by this insight, we introduce Contrastive Message Passing (CMP), a general message passing architecture that enable graph neural network layers to reason over positive and negative edges. By imposing soft positive semidefinite constraints on the learnable weights, our approach differentially applies similarity-preserving transformations to positively connected nodes and dissimilarity-inducing transformations to negatively connected nodes. Over simulated and real datasets in varying data regimes, CMP consistently outperforms baselines in low-label settings when negative edges are informative.",
+          "authors": [
+            "Peter Pao-Huang",
+            "Charilaos I. Kanatsoulis",
+            "Michael Bereket",
+            "Jure Leskovec"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Decoding Functional Networks for Visual Categories via GNNs",
+          "id": "http://arxiv.org/abs/2603.28931v1",
+          "date": "2026-03-30T19:10:28Z",
+          "source": "arXiv",
+          "abstract": "Understanding how large-scale brain networks represent visual categories is fundamental to linking perception and cortical organization. Using high-resolution 7T fMRI from the Natural Scenes Dataset, we construct parcel-level functional graphs and train a signed Graph Neural Network that models both positive and negative interactions, with a sparse edge mask and class-specific saliency. The model accurately decodes category-specific functional connectivity states (sports, food, vehicles) and reveals reproducible, biologically meaningful subnetworks along the ventral and dorsal visual pathways. This framework bridges machine learning and neuroscience by extending voxel-level category selectivity to a connectivity-based representation of visual processing.",
+          "authors": [
+            "Shira Karmi",
+            "Galia Avidan",
+            "Tammy Riklin Raviv"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "TAS-GNN: A Status-Aware Signed Graph Neural Network for Anomaly Detection in Bitcoin Trust Systems",
+          "id": "http://arxiv.org/abs/2603.13290v1",
+          "date": "2026-02-28T04:51:04Z",
+          "source": "arXiv",
+          "abstract": "Decentralized financial platforms rely heavily on Web of Trust reputation systems to mitigate counterparty risk in the absence of centralized identity verification. However, these pseudonymous networks are inherently vulnerable to adversarial behaviors, such as Sybil attacks and camouflaged fraud, where malicious actors cultivate artificial reputations before executing exit scams. Traditional anomaly detection in this domain faces two critical limitations. First, reliance on naive statistical heuristics (e.g., flagging the lowest 5% of rated users) fails to distinguish between victims of bad-mouthing attacks and actual fraudsters. Second, standard Graph Neural Networks (GNNs) operate on the assumption of homophily and cannot effectively process the semantic inversion inherent in signed (trust vs. distrust) and directed (status) edges. We propose TAS-GNN (Topology-Aware Signed Graph Neural Network), a novel framework designed for feature-sparse signed networks like Bitcoin-Alpha. TAS-GNN integrates recursive Web-of-Trust labeling and a dual-channel message-passing architecture that separately models trust and distrust signals, fused through a Status-Aware Attention mechanism. Experiments demonstrate that TAS-GNN achieves state-of-the-art performance, significantly outperforming existing signed GNN baselines.",
+          "authors": [
+            "Chang Xue",
+            "Fang Liu",
+            "Jiaye Wang",
+            "Jinming Xing",
+            "Chen Yang"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Certified Signed Graph Unlearning",
+          "id": "http://arxiv.org/abs/2511.14168v1",
+          "date": "2025-11-18T06:09:17Z",
+          "source": "arXiv",
+          "abstract": "Signed graphs model complex relationships through positive and negative edges, with widespread real-world applications. Given the sensitive nature of such data, selective removal mechanisms have become essential for privacy protection. While graph unlearning enables the removal of specific data influences from Graph Neural Networks (GNNs), existing methods are designed for conventional GNNs and overlook the unique heterogeneous properties of signed graphs. When applied to Signed Graph Neural Networks (SGNNs), these methods lose critical sign information, degrading both model utility and unlearning effectiveness. To address these challenges, we propose Certified Signed Graph Unlearning (CSGU), which provides provable privacy guarantees while preserving the sociological principles underlying SGNNs. CSGU employs a three-stage method: (1) efficiently identifying minimal influenced neighborhoods via triangular structures, (2) applying sociological theories to quantify node importance for optimal privacy budget allocation, and (3) performing importance-weighted parameter updates to achieve certified modifications with minimal utility degradation. Extensive experiments demonstrate that CSGU outperforms existing methods, achieving superior performance in both utility preservation and unlearning effectiveness on SGNNs.",
+          "authors": [
+            "Junpeng Zhao",
+            "Lin Li",
+            "Kaixi Hu",
+            "Kaize Shi",
+            "Jingling Yuan"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Toward Robust Signed Graph Learning through Joint Input-Target Denoising",
+          "id": "http://arxiv.org/abs/2510.22513v1",
+          "date": "2025-10-26T03:34:40Z",
+          "source": "arXiv",
+          "abstract": "Signed Graph Neural Networks (SGNNs) are widely adopted to analyze complex patterns in signed graphs with both positive and negative links. Given the noisy nature of real-world connections, the robustness of SGNN has also emerged as a pivotal research area. Under the supervision of empirical properties, graph structure learning has shown its robustness on signed graph representation learning, however, there remains a paucity of research investigating a robust SGNN with theoretical guidance. Inspired by the success of graph information bottleneck (GIB) in information extraction, we propose RIDGE, a novel framework for Robust sI gned graph learning through joint Denoising of Graph inputs and supervision targEts. Different from the basic GIB, we extend the GIB theory with the capability of target space denoising as the co-existence of noise in both input and target spaces. In instantiation, RIDGE effectively cleanses input data and supervision targets via a tractable objective function produced by reparameterization mechanism and variational approximation. We extensively validate our method on four prevalent signed graph datasets, and the results show that RIDGE clearly improves the robustness of popular SGNN models under various levels of noise.",
+          "authors": [
+            "Junran Wu",
+            "Beng Chin Ooi",
+            "Ke Xu"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Computing frustration and near-monotonicity in deep neural networks",
+          "id": "http://arxiv.org/abs/2510.05286v1",
+          "date": "2025-10-06T18:54:54Z",
+          "source": "arXiv",
+          "abstract": "For the signed graph associated to a deep neural network, one can compute the frustration level, i.e., test how close or distant the graph is to structural balance. For all the pretrained deep convolutional neural networks we consider, we find that the frustration is always less than expected from null models. From a statistical physics point of view, and in particular in reference to an Ising spin glass model, the reduced frustration indicates that the amount of disorder encoded in the network is less than in the null models. From a functional point of view, low frustration (i.e., proximity to structural balance) means that the function representing the network behaves near-monotonically, i.e., more similarly to a monotone function than in the null models. Evidence of near-monotonic behavior along the partial order determined by frustration is observed for all networks we consider. This confirms that the class of deep convolutional neural networks tends to have a more ordered behavior than expected from null models, and suggests a novel form of implicit regularization.",
+          "authors": [
+            "Joel Wendin",
+            "Erik G. Larsson",
+            "Claudio Altafini"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "GegenNet: Spectral Convolutional Neural Networks for Link Sign Prediction in Signed Bipartite Graphs",
+          "id": "http://arxiv.org/abs/2508.19907v1",
+          "date": "2025-08-27T14:10:16Z",
+          "source": "arXiv",
+          "abstract": "Given a signed bipartite graph (SBG) G with two disjoint node sets U and V, the goal of link sign prediction is to predict the signs of potential links connecting U and V based on known positive and negative edges in G. The majority of existing solutions towards link sign prediction mainly focus on unipartite signed graphs, which are sub-optimal due to the neglect of node heterogeneity and unique bipartite characteristics of SBGs. To this end, recent studies adapt graph neural networks to SBGs by introducing message-passing schemes for both inter-partition (UxV) and intra-partition (UxU or VxV) node pairs. However, the fundamental spectral convolutional operators were originally designed for positive links in unsigned graphs, and thus, are not optimal for inferring missing positive or negative links from known ones in SBGs.\n  Motivated by this, this paper proposes GegenNet, a novel and effective spectral convolutional neural network model for link sign prediction in SBGs. In particular, GegenNet achieves enhanced model capacity and high predictive accuracy through three main technical contributions: (i) fast and theoretically grounded spectral decomposition techniques for node feature initialization; (ii) a new spectral graph filter based on the Gegenbauer polynomial basis; and (iii) multi-layer sign-aware spectral convolutional networks alternating Gegenbauer polynomial filters with positive and negative edges. Our extensive empirical studies reveal that GegenNet can achieve significantly superior performance (up to a gain of 4.28% in AUC and 11.69% in F1) in link sign prediction compared to 11 strong competitors over 6 benchmark SBG datasets.",
+          "authors": [
+            "Hewen Wang",
+            "Renchi Yang",
+            "Xiaokui Xiao"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "A Signed Graph Approach to Understanding and Mitigating Oversmoothing in GNNs",
+          "id": "http://arxiv.org/abs/2502.11394v2",
+          "date": "2025-02-17T03:25:36Z",
+          "source": "arXiv",
+          "abstract": "Deep graph neural networks (GNNs) often suffer from oversmoothing, where node representations become overly homogeneous with increasing depth. While techniques like normalization, residual connections, and edge dropout have been proposed to mitigate oversmoothing, they are typically developed independently, with limited theoretical understanding of their underlying mechanisms. In this work, we present a unified theoretical perspective based on the framework of signed graphs, showing that many existing strategies implicitly introduce negative edges that alter message-passing to resist oversmoothing. However, we show that merely adding negative edges in an unstructured manner is insufficient-the asymptotic behavior of signed propagation depends critically on the strength and organization of positive and negative edges. To address this limitation, we leverage the theory of structural balance, which promotes stable, cluster-preserving dynamics by connecting similar nodes with positive edges and dissimilar ones with negative edges. We propose Structural Balanced Propagation (SBP), a plug-and-play method that assigns signed edges based on either labels or feature similarity to explicitly enhance structural balance in the constructed signed graphs. Experiments on nine benchmarks across both homophilic and heterophilic settings demonstrate that SBP consistently improves classification accuracy and mitigates oversmoothing, even at depths of up to 300 layers. Our results provide a principled explanation for prior oversmoothing remedies and introduce a new direction for signed message-passing design in deep GNNs.",
+          "authors": [
+            "Jiaqi Wang",
+            "Xinyi Wu",
+            "James Cheng",
+            "Yifei Wang"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "Robust Deep Signed Graph Clustering via Weak Balance Theory",
+          "id": "http://arxiv.org/abs/2502.05472v1",
+          "date": "2025-02-08T07:14:17Z",
+          "source": "arXiv",
+          "abstract": "Signed graph clustering is a critical technique for discovering community structures in graphs that exhibit both positive and negative relationships. We have identified two significant challenges in this domain: i) existing signed spectral methods are highly vulnerable to noise, which is prevalent in real-world scenarios; ii) the guiding principle ``an enemy of my enemy is my friend'', rooted in \\textit{Social Balance Theory}, often narrows or disrupts cluster boundaries in mainstream signed graph neural networks. Addressing these challenges, we propose the \\underline{D}eep \\underline{S}igned \\underline{G}raph \\underline{C}lustering framework (DSGC), which leverages \\textit{Weak Balance Theory} to enhance preprocessing and encoding for robust representation learning. First, DSGC introduces Violation Sign-Refine to denoise the signed network by correcting noisy edges with high-order neighbor information. Subsequently, Density-based Augmentation enhances semantic structures by adding positive edges within clusters and negative edges across clusters, following \\textit{Weak Balance} principles. The framework then utilizes \\textit{Weak Balance} principles to develop clustering-oriented signed neural networks to broaden cluster boundaries by emphasizing distinctions between negatively linked nodes. Finally, DSGC optimizes clustering assignments by minimizing a regularized clustering loss. Comprehensive experiments on synthetic and real-world datasets demonstrate DSGC consistently outperforms all baselines, establishing a new benchmark in signed graph clustering.",
+          "authors": [
+            "Peiyao Zhao",
+            "Xin Li",
+            "Zeyu Zhang",
+            "Mingzhong Wang",
+            "Xueying Zhu",
+            "Lejian Liao"
+          ]
+        }
+      ]
+    },
+    {
+      "records": [
+        {
+          "title": "KAN KAN Buff Signed Graph Neural Networks?",
+          "id": "http://arxiv.org/abs/2501.00709v3",
+          "date": "2025-01-01T03:12:18Z",
+          "source": "arXiv",
+          "abstract": "Graph Representation Learning aims to create effective embeddings for nodes and edges that encapsulate their features and relationships. Graph Neural Networks (GNNs) leverage neural networks to model complex graph structures. Recently, the Kolmogorov-Arnold Neural Network (KAN) has emerged as a promising alternative to the traditional Multilayer Perceptron (MLP), offering improved accuracy and interpretability with fewer parameters. In this paper, we propose the integration of KANs into Signed Graph Convolutional Networks (SGCNs), leading to the development of KAN-enhanced SGCNs (KASGCN). We evaluate KASGCN on tasks such as signed community detection and link sign prediction to improve embedding quality in signed networks. Our experimental results indicate that KASGCN exhibits competitive or comparable performance to standard SGCNs across the tasks evaluated, with performance variability depending on the specific characteristics of the signed graph and the choice of parameter settings. These findings suggest that KASGCNs hold promise for enhancing signed graph analysis with context-dependent effectiveness.",
+          "authors": [
+            "Muhieddine Shebaro",
+            "Jelena Tešić"
+          ]
+        }
+      ]
+    }
+  ]
+}

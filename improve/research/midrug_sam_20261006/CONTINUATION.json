@@ -1,0 +1,78 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "current_turn": "progress: 6 differentiable-completion fits audited, literature methods reviewed, 12 SAM/random fits and checkpoint replays",
+  "best": {
+    "config": "sam_rec10",
+    "mean_inner_auc": 0.9536515191509426,
+    "mean_inner_ap": 0.9130176559113764,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0010517240961912904,
+          "fold_deltas": [
+            0.0020514594809921682,
+            0.0006635224150324248,
+            0.00044019039254927783
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.001192546816511153,
+          "fold_deltas": [
+            0.0034688319791907896,
+            -0.0002616512868177656,
+            0.0003704597571604351
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -6.0962859228704445e-05,
+          "fold_deltas": [
+            0.00030091506511287225,
+            5.153572155580655e-06,
+            -0.0004889572149545662
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0010729255426720579,
+          "fold_deltas": [
+            -0.00028961064810373305,
+            -0.0009087427257458147,
+            -0.0020204232541666256
+          ]
+        }
+      },
+      "random_rec10": {
+        "auc": {
+          "mean_delta": -0.00014709300871999323,
+          "fold_deltas": [
+            8.54238201960511e-05,
+            -0.0001395759125474294,
+            -0.0003871269338086014
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0010657260476862513,
+          "fold_deltas": [
+            -0.0005124723762284233,
+            -0.0012254376666176459,
+            -0.001459268100212685
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0010729255426720579
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "If promoted freeze outer-validation confirmation. Otherwise parameter sensitivity was reduced without sufficient dual-metric gain: do not revisit this grid; review pair-representation perturbation and existing related implementations before any new frozen experiment.",
+  "post_selection_sensitivity": {
+    "status": "passed",
+    "selection_changed": false,
+    "artifact_sha256": "2780f73534a9b8ec37ae91023a84c8d8631e1aeaeec9d537a7e81bf50652da1a"
+  }
+}

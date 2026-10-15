@@ -1,0 +1,1 @@
+训练前检查发现PyG FX GraphModule深复制后conv1变成普通Module，不能按关系索引。改为逐层逐关系显式深复制到ModuleDict，教师仍为相同参数副本；尚无正式拟合。

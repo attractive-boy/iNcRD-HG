@@ -1,0 +1,192 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn_classification": "progress:12 boundary-supervision fits/replays and source review",
+  "current_turn": "progress:12 original expression-column attention fits, independent all-parameter gradient oracle and12 new checkpoint replays",
+  "best": {
+    "config": "drug_rec10",
+    "mean_inner_auc": 0.9536227312933505,
+    "mean_inner_ap": 0.9137895006539609,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0010229362385991703,
+          "fold_deltas": [
+            0.0018353243379333195,
+            0.0006351777681765647,
+            0.0005983066096876266
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0019643915590957426,
+          "fold_deltas": [
+            0.0034414855587335813,
+            0.0010257647607779807,
+            0.0014259243577756653
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -8.975071682082447e-05,
+          "fold_deltas": [
+            8.477992205402352e-05,
+            -2.319107470027948e-05,
+            -0.00033084099781621745
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00030108080008746835,
+          "fold_deltas": [
+            -0.0003169570685609413,
+            0.00037867332184993163,
+            -0.0009649586535513954
+          ]
+        }
+      },
+      "mean_rec10": {
+        "auc": {
+          "mean_delta": -0.00017441711601233015,
+          "fold_deltas": [
+            -0.0004170313634198619,
+            0.00020055984972167096,
+            -0.0003067798343387995
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00027592548596181804,
+          "fold_deltas": [
+            -0.00015365263684496977,
+            0.0002387643379507809,
+            -0.0009128881589912652
+          ]
+        }
+      }
+    },
+    "selection_score": -0.00030108080008746835
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "If promoted, freeze original-validation confirmation. Otherwise use matched mean-query and column-alignment diagnostics before another mechanism; do not automatically sweep attention widths, heads or temperatures.",
+  "component_diagnostics": {
+    "status": "passed",
+    "selection_unchanged": true,
+    "means": [
+      {
+        "config": "drug",
+        "full": {
+          "auc": 0.9525351478296468,
+          "ap": 0.9117291581600052
+        },
+        "zero_projection": {
+          "auc": 0.9520252479809242,
+          "ap": 0.9110843082050387
+        },
+        "swapped_condition": {
+          "auc": 0.9525351478296468,
+          "ap": 0.9117291581600052
+        },
+        "misaligned_columns": {
+          "auc": 0.9525351478296468,
+          "ap": 0.9117291581600052
+        },
+        "zero_mean_abs_probability_shift": 0.01899934560060501,
+        "swapped_mean_abs_probability_shift": 1.5872647492661447e-08,
+        "misalignment_mean_abs_probability_shift": 1.4764943874941613e-07,
+        "projection_weight_norm": 1.2829797267913818,
+        "addition_rms": 0.30369527141253155,
+        "base_pre_activation_rms": 15.33832581837972,
+        "normalized_attention_entropy": 0.9999999205271403,
+        "effective_columns": 938.0001017252604,
+        "mean_max_attention": 0.0010661020642146468
+      },
+      {
+        "config": "drug_rec10",
+        "full": {
+          "auc": 0.9536228028375886,
+          "ap": 0.913789870652958
+        },
+        "zero_projection": {
+          "auc": 0.9534956613346696,
+          "ap": 0.9133857272551068
+        },
+        "swapped_condition": {
+          "auc": 0.9536227312933505,
+          "ap": 0.9137895006539609
+        },
+        "misaligned_columns": {
+          "auc": 0.9536230892137049,
+          "ap": 0.9137902189672538
+        },
+        "zero_mean_abs_probability_shift": 0.020246466156095266,
+        "swapped_mean_abs_probability_shift": 7.480587408773923e-09,
+        "misalignment_mean_abs_probability_shift": 2.810241994666285e-06,
+        "projection_weight_norm": 1.3761824766794841,
+        "addition_rms": 0.2662995507319768,
+        "base_pre_activation_rms": 2.6007026831309,
+        "normalized_attention_entropy": 0.9999999205271403,
+        "effective_columns": 938.0002034505209,
+        "mean_max_attention": 0.0010661135893315077
+      },
+      {
+        "config": "mean",
+        "full": {
+          "auc": 0.9525573190221855,
+          "ap": 0.9116920875767868
+        },
+        "zero_projection": {
+          "auc": 0.9521517863857015,
+          "ap": 0.9111538925002985
+        },
+        "swapped_condition": {
+          "auc": 0.9525573190221855,
+          "ap": 0.9116920875767868
+        },
+        "misaligned_columns": {
+          "auc": 0.9525573190221855,
+          "ap": 0.9116922346547648
+        },
+        "zero_mean_abs_probability_shift": 0.016271687112748623,
+        "swapped_mean_abs_probability_shift": 1.4861320174475168e-08,
+        "misalignment_mean_abs_probability_shift": 3.734865951325143e-07,
+        "projection_weight_norm": 1.2582250038782756,
+        "addition_rms": 0.2933056751887004,
+        "base_pre_activation_rms": 14.697247187296549,
+        "normalized_attention_entropy": 0.9999999602635702,
+        "effective_columns": 938.0,
+        "mean_max_attention": 0.0010660999299337466
+      },
+      {
+        "config": "mean_rec10",
+        "full": {
+          "auc": 0.9537971484093628,
+          "ap": 0.9140654261399228
+        },
+        "zero_projection": {
+          "auc": 0.953691465347226,
+          "ap": 0.9137292559812084
+        },
+        "swapped_condition": {
+          "auc": 0.9537971484093628,
+          "ap": 0.9140654261399228
+        },
+        "misaligned_columns": {
+          "auc": 0.9537967189448935,
+          "ap": 0.9140650392023537
+        },
+        "zero_mean_abs_probability_shift": 0.01829591269294421,
+        "swapped_mean_abs_probability_shift": 7.3967898472915294e-09,
+        "misalignment_mean_abs_probability_shift": 2.86104091173911e-06,
+        "projection_weight_norm": 1.3653064568837483,
+        "addition_rms": 0.19848941763242087,
+        "base_pre_activation_rms": 2.691293160120646,
+        "normalized_attention_entropy": 0.9999999602635702,
+        "effective_columns": 938.0001017252604,
+        "mean_max_attention": 0.0010661273651445906
+      }
+    ]
+  }
+}

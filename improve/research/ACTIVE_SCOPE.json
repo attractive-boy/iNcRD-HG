@@ -1,0 +1,69 @@
+{
+  "user_instruction": "不要使用 lncRNA 我做的是专门的mirna的",
+  "allowed_node_types": [
+    "miRNA",
+    "drug"
+  ],
+  "forbidden": [
+    "lncRNA nodes",
+    "lncRNA features",
+    "lncRNA relations",
+    "LncDrug auxiliary supervision"
+  ],
+  "active_directory": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_drug_name_transfer_20261007",
+  "target": {
+    "user_clarification": "AUC 和 AP 都增加 0.02",
+    "reference": "original iNcRD-HG, frozen MiDrug split, mean seeds 42/43/44",
+    "minimum_absolute_gain": {
+      "auc": 0.02,
+      "ap": 0.02
+    },
+    "original_test": {
+      "auc": 0.9533929274189016,
+      "ap": 0.9136833737326769
+    },
+    "target_test": {
+      "auc": 0.9733929274189016,
+      "ap": 0.933683373732677
+    },
+    "protected_plmf_test": {
+      "MDR": {
+        "auc": 0.9483092900780825,
+        "ap": 0.9436701561780362
+      },
+      "MDS": {
+        "auc": 0.950897883727978,
+        "ap": 0.9490119743588824
+      }
+    },
+    "external_datasets_allowed": false,
+    "status": "active_not_achieved",
+    "user_scope_clarification": "不要使用 lncRNA 我做的是专门的mirna的",
+    "allowed_node_types": [
+      "miRNA",
+      "drug"
+    ],
+    "lncrna_features_relations_supervision_allowed": false
+  },
+  "goal_status": "active",
+  "latest_continuation": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_drug_name_transfer_20261007/CONTINUATION.json",
+  "latest_research_review": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_static_dynamic_review_20261007/REPORT.md",
+  "latest_research_continuation": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_drug_name_transfer_20261007/CONTINUATION.json",
+  "next_action": "Both uses of original Drug_Name failed frozen dual-metric gates. Preserve both archives and do not tune the vocabulary, direct transfer family or promote controls. Inspect the residual joint AUC/AP errors against prior diagnostic coverage before selecting a distinct miRNA-only mechanism; original test +.02 and PLMF protection remain active.",
+  "latest_archive_check": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_drug_name_transfer_20261007/archive_recheck.json",
+  "latest_experiment_archive_check": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_drug_name_transfer_20261007/archive_recheck.json",
+  "latest_research_archive_check": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_static_dynamic_review_20261007/archive_recheck.json",
+  "latest_component_diagnostics": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_drug_name_transfer_20261007/SUPPORT_DIAGNOSTICS.md",
+  "latest_component_diagnostics_archive_check": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_drug_name_transfer_20261007/archive_recheck.json",
+  "latest_diagnostic_finding": {
+    "candidate": "aligned_name_transfer",
+    "mean_internal_auc": 0.9535774026277837,
+    "mean_internal_ap": 0.9134770883519004,
+    "promotion_gate_passed": false,
+    "original_validation_evaluated": false,
+    "test_evaluated": false
+  },
+  "current_stage": "completed_and_audited",
+  "current_plan": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_drug_name_transfer_20261007/results/plan.json",
+  "processes_expected_live": []
+}

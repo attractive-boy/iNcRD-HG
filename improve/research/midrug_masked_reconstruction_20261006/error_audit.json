@@ -1,0 +1,356 @@
+{
+  "scope": "descriptive ranking diagnostics on original-training inner held-outs only; not causal attribution or final test analysis",
+  "records": [
+    {
+      "fold": 0,
+      "config": "control",
+      "prediction_sha256": "9db00e8748d7d5fb702cb5f36a33fe6379c58926490559e88f5aacdefe2f55b2",
+      "metrics": {
+        "auc": 0.9516144887384361,
+        "ap": 0.911851819447599
+      },
+      "positive_degree_error_buckets": [
+        {
+          "miRNA_positive_training_degree": "0-0",
+          "positive_queries": 56,
+          "auc_error_mass": 0.0023695451632303253
+        },
+        {
+          "miRNA_positive_training_degree": "1-1",
+          "positive_queries": 105,
+          "auc_error_mass": 0.006361713644759678
+        },
+        {
+          "miRNA_positive_training_degree": "2-4",
+          "positive_queries": 365,
+          "auc_error_mass": 0.017389971758627484
+        },
+        {
+          "miRNA_positive_training_degree": "5-15",
+          "positive_queries": 532,
+          "auc_error_mass": 0.021410471758412854
+        },
+        {
+          "miRNA_positive_training_degree": "16-1000000",
+          "positive_queries": 21,
+          "auc_error_mass": 0.0008538089365335358
+        }
+      ],
+      "conditional": {
+        "within_miRNA": {
+          "auc": 0.9317323259579061,
+          "positive_negative_comparisons": 3706,
+          "groups": 435,
+          "share_of_all_comparisons": 0.0015908576766180409
+        },
+        "within_drug": {
+          "auc": 0.7190673723358604,
+          "positive_negative_comparisons": 6991,
+          "groups": 105,
+          "share_of_all_comparisons": 0.0030009946079969574
+        }
+      },
+      "drug_positive_degree_only": {
+        "auc": 0.9313643214322356,
+        "ap": 0.8765085413504472
+      },
+      "miRNA_positive_degree_only": {
+        "auc": 0.6545102274634577,
+        "ap": 0.4655594410275202
+      }
+    },
+    {
+      "fold": 0,
+      "config": "masked1",
+      "prediction_sha256": "971887dd259d3d1f38620b0fe5f5c54f757741a50aff3f16c348dbd3787060d5",
+      "metrics": {
+        "auc": 0.9522566698189059,
+        "ap": 0.9126945887609169
+      },
+      "positive_degree_error_buckets": [
+        {
+          "miRNA_positive_training_degree": "0-0",
+          "positive_queries": 56,
+          "auc_error_mass": 0.0025185002667884636
+        },
+        {
+          "miRNA_positive_training_degree": "1-1",
+          "positive_queries": 105,
+          "auc_error_mass": 0.006602531549935804
+        },
+        {
+          "miRNA_positive_training_degree": "2-4",
+          "positive_queries": 365,
+          "auc_error_mass": 0.017139710014032687
+        },
+        {
+          "miRNA_positive_training_degree": "5-15",
+          "positive_queries": 532,
+          "auc_error_mass": 0.020670418160331494
+        },
+        {
+          "miRNA_positive_training_degree": "16-1000000",
+          "positive_queries": 21,
+          "auc_error_mass": 0.0008121701900057565
+        }
+      ],
+      "conditional": {
+        "within_miRNA": {
+          "auc": 0.934430652995143,
+          "positive_negative_comparisons": 3706,
+          "groups": 435,
+          "share_of_all_comparisons": 0.0015908576766180409
+        },
+        "within_drug": {
+          "auc": 0.7239307681304534,
+          "positive_negative_comparisons": 6991,
+          "groups": 105,
+          "share_of_all_comparisons": 0.0030009946079969574
+        }
+      },
+      "drug_positive_degree_only": {
+        "auc": 0.9313643214322356,
+        "ap": 0.8765085413504472
+      },
+      "miRNA_positive_degree_only": {
+        "auc": 0.6545102274634577,
+        "ap": 0.4655594410275202
+      }
+    },
+    {
+      "fold": 1,
+      "config": "control",
+      "prediction_sha256": "4a37ce800583533a4f1a5be10ff390a0232169603b278bd3186dd7a1134bbeec",
+      "metrics": {
+        "auc": 0.9555182303320362,
+        "ap": 0.9192275595789781
+      },
+      "positive_degree_error_buckets": [
+        {
+          "miRNA_positive_training_degree": "0-0",
+          "positive_queries": 64,
+          "auc_error_mass": 0.004689750661589826
+        },
+        {
+          "miRNA_positive_training_degree": "1-1",
+          "positive_queries": 89,
+          "auc_error_mass": 0.0038793514401227924
+        },
+        {
+          "miRNA_positive_training_degree": "2-4",
+          "positive_queries": 334,
+          "auc_error_mass": 0.014734492257187301
+        },
+        {
+          "miRNA_positive_training_degree": "5-15",
+          "positive_queries": 568,
+          "auc_error_mass": 0.02068987434732156
+        },
+        {
+          "miRNA_positive_training_degree": "16-1000000",
+          "positive_queries": 24,
+          "auc_error_mass": 0.000488300961742457
+        }
+      ],
+      "conditional": {
+        "within_miRNA": {
+          "auc": 0.9506008010680908,
+          "positive_negative_comparisons": 3745,
+          "groups": 420,
+          "share_of_all_comparisons": 0.0016083439768913824
+        },
+        "within_drug": {
+          "auc": 0.7651925820256776,
+          "positive_negative_comparisons": 7010,
+          "groups": 101,
+          "share_of_all_comparisons": 0.0030105450675590364
+        }
+      },
+      "drug_positive_degree_only": {
+        "auc": 0.9315195479286504,
+        "ap": 0.8785615395506898
+      },
+      "miRNA_positive_degree_only": {
+        "auc": 0.6700075413939209,
+        "ap": 0.4873484461418166
+      }
+    },
+    {
+      "fold": 1,
+      "config": "masked1",
+      "prediction_sha256": "53a2fca2b30fa492836421d32a09e998257233f5bed07ccd23e1806118a7022b",
+      "metrics": {
+        "auc": 0.955941252713141,
+        "ap": 0.9203869010624777
+      },
+      "positive_degree_error_buckets": [
+        {
+          "miRNA_positive_training_degree": "0-0",
+          "positive_queries": 64,
+          "auc_error_mass": 0.004834480146292735
+        },
+        {
+          "miRNA_positive_training_degree": "1-1",
+          "positive_queries": 89,
+          "auc_error_mass": 0.0037268915971864934
+        },
+        {
+          "miRNA_positive_training_degree": "2-4",
+          "positive_queries": 334,
+          "auc_error_mass": 0.01439349756622555
+        },
+        {
+          "miRNA_positive_training_degree": "5-15",
+          "positive_queries": 568,
+          "auc_error_mass": 0.020641344876189724
+        },
+        {
+          "miRNA_positive_training_degree": "16-1000000",
+          "positive_queries": 24,
+          "auc_error_mass": 0.00046253310096449105
+        }
+      ],
+      "conditional": {
+        "within_miRNA": {
+          "auc": 0.9476635514018692,
+          "positive_negative_comparisons": 3745,
+          "groups": 420,
+          "share_of_all_comparisons": 0.0016083439768913824
+        },
+        "within_drug": {
+          "auc": 0.75848787446505,
+          "positive_negative_comparisons": 7010,
+          "groups": 101,
+          "share_of_all_comparisons": 0.0030105450675590364
+        }
+      },
+      "drug_positive_degree_only": {
+        "auc": 0.9315195479286504,
+        "ap": 0.8785615395506898
+      },
+      "miRNA_positive_degree_only": {
+        "auc": 0.6700075413939209,
+        "ap": 0.4873484461418166
+      }
+    },
+    {
+      "fold": 2,
+      "config": "control",
+      "prediction_sha256": "c2a2265d47dc85cc42aa2c0d612e17618874fbe2c9083e51f6dc3c75d6eae0de",
+      "metrics": {
+        "auc": 0.9506666660937818,
+        "ap": 0.9043959482580187
+      },
+      "positive_degree_error_buckets": [
+        {
+          "miRNA_positive_training_degree": "0-0",
+          "positive_queries": 51,
+          "auc_error_mass": 0.002617081191818173
+        },
+        {
+          "miRNA_positive_training_degree": "1-1",
+          "positive_queries": 88,
+          "auc_error_mass": 0.005746321434801551
+        },
+        {
+          "miRNA_positive_training_degree": "2-4",
+          "positive_queries": 350,
+          "auc_error_mass": 0.01898168000199364
+        },
+        {
+          "miRNA_positive_training_degree": "5-15",
+          "positive_queries": 567,
+          "auc_error_mass": 0.020981549384249044
+        },
+        {
+          "miRNA_positive_training_degree": "16-1000000",
+          "positive_queries": 22,
+          "auc_error_mass": 0.0010067018933557674
+        }
+      ],
+      "conditional": {
+        "within_miRNA": {
+          "auc": 0.9483593329747176,
+          "positive_negative_comparisons": 3718,
+          "groups": 416,
+          "share_of_all_comparisons": 0.00159748938945657
+        },
+        "within_drug": {
+          "auc": 0.731915404950733,
+          "positive_negative_comparisons": 8322,
+          "groups": 102,
+          "share_of_all_comparisons": 0.0035756607582188207
+        }
+      },
+      "drug_positive_degree_only": {
+        "auc": 0.9278528161443531,
+        "ap": 0.86149399719442
+      },
+      "miRNA_positive_degree_only": {
+        "auc": 0.6640885416442883,
+        "ap": 0.4770647173988869
+      }
+    },
+    {
+      "fold": 2,
+      "config": "masked1",
+      "prediction_sha256": "ffc87a182c90752033532704dcef25de5c3bf45f3650771c5777f9e1289bd896",
+      "metrics": {
+        "auc": 0.9512366149036564,
+        "ap": 0.9049674695408059
+      },
+      "positive_degree_error_buckets": [
+        {
+          "miRNA_positive_training_degree": "0-0",
+          "positive_queries": 51,
+          "auc_error_mass": 0.0025711071830306926
+        },
+        {
+          "miRNA_positive_training_degree": "1-1",
+          "positive_queries": 88,
+          "auc_error_mass": 0.005270683792486214
+        },
+        {
+          "miRNA_positive_training_degree": "2-4",
+          "positive_queries": 350,
+          "auc_error_mass": 0.018544712086695808
+        },
+        {
+          "miRNA_positive_training_degree": "5-15",
+          "positive_queries": 567,
+          "auc_error_mass": 0.021464276476517594
+        },
+        {
+          "miRNA_positive_training_degree": "16-1000000",
+          "positive_queries": 22,
+          "auc_error_mass": 0.0009126055576131669
+        }
+      ],
+      "conditional": {
+        "within_miRNA": {
+          "auc": 0.9467455621301775,
+          "positive_negative_comparisons": 3718,
+          "groups": 416,
+          "share_of_all_comparisons": 0.00159748938945657
+        },
+        "within_drug": {
+          "auc": 0.7345590002403268,
+          "positive_negative_comparisons": 8322,
+          "groups": 102,
+          "share_of_all_comparisons": 0.0035756607582188207
+        }
+      },
+      "drug_positive_degree_only": {
+        "auc": 0.9278528161443531,
+        "ap": 0.86149399719442
+      },
+      "miRNA_positive_degree_only": {
+        "auc": 0.6640885416442883,
+        "ap": 0.4770647173988869
+      }
+    }
+  ],
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false
+}

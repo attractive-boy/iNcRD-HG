@@ -1,0 +1,216 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "degree",
+    "mean_inner_auc": 0.952254009310049,
+    "mean_inner_ap": 0.9117819650148262,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": -0.0003457857447023797,
+          "fold_deltas": [
+            -0.00018029147981102334,
+            -0.001632823444630671,
+            0.0007757576903345553
+          ]
+        },
+        "ap": {
+          "mean_delta": -4.314408003902592e-05,
+          "fold_deltas": [
+            -0.00034020809833079646,
+            -0.0015901570505886253,
+            0.001800932908802344
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.0014584727001223745,
+          "fold_deltas": [
+            -0.0019308358956903193,
+            -0.0022911922875075152,
+            -0.00015338991716928874
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0023086164392222366,
+          "fold_deltas": [
+            -0.004098650725625319,
+            -0.0022372484895166744,
+            -0.0005899501025247167
+          ]
+        }
+      },
+      "random": {
+        "auc": {
+          "mean_delta": 0.001468719511332169,
+          "fold_deltas": [
+            -0.00020733520178284337,
+            0.002356900332491141,
+            0.0022565934032882096
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0019659484266415506,
+          "fold_deltas": [
+            -0.00029562021519669024,
+            0.002823928756477967,
+            0.003369536738643375
+          ]
+        }
+      },
+      "uniform": {
+        "auc": {
+          "mean_delta": -0.0009340122641688561,
+          "fold_deltas": [
+            -0.0017990514092569576,
+            -0.0015276046797871867,
+            0.0005246192965375762
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0013729287316463317,
+          "fold_deltas": [
+            -0.0025739047026138717,
+            -0.00082728943331567,
+            -0.0007175920590094531
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0023086164392222366
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 9,
+  "new_checkpoint_replays": 9,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Use frozen residual/routing diagnostics to choose a distinct next hypothesis; no retrospective random-arm promotion or group/width/lr sweep.",
+  "component_diagnostics": {
+    "status": "passed",
+    "means": [
+      {
+        "config": "degree",
+        "train": {
+          "full": {
+            "auc": 0.9611074237575354,
+            "ap": 0.9245986234504038
+          },
+          "without_experts": {
+            "auc": 0.9467504486392784,
+            "ap": 0.9092679769430396
+          },
+          "uniform_gate_intervention": {
+            "auc": 0.9484905338775508,
+            "ap": 0.9069946677898848
+          },
+          "bce": 0.23825927575429282,
+          "mean_absolute_residual": 2.489546457926432,
+          "rms_residual": 3.4065006573994956,
+          "mean_absolute_probability_change": 0.1861831098794937
+        },
+        "val": {
+          "full": {
+            "auc": 0.952254009310049,
+            "ap": 0.911781911849431
+          },
+          "without_experts": {
+            "auc": 0.9428992223736552,
+            "ap": 0.9017974836797652
+          },
+          "uniform_gate_intervention": {
+            "auc": 0.9456428790459173,
+            "ap": 0.9027492661620725
+          },
+          "bce": 0.26400009791056317,
+          "mean_absolute_residual": 2.4610222975413003,
+          "rms_residual": 3.3546573321024575,
+          "mean_absolute_probability_change": 0.18638481696446738
+        }
+      },
+      {
+        "config": "random",
+        "train": {
+          "full": {
+            "auc": 0.9633600345012856,
+            "ap": 0.9298472697485517
+          },
+          "without_experts": {
+            "auc": 0.9505754651289308,
+            "ap": 0.9084044959174021
+          },
+          "uniform_gate_intervention": {
+            "auc": 0.9568746956090793,
+            "ap": 0.9198939544972529
+          },
+          "bce": 0.23145157098770142,
+          "mean_absolute_residual": 1.516668438911438,
+          "rms_residual": 1.9523109594980876,
+          "mean_absolute_probability_change": 0.10647257914145787
+        },
+        "val": {
+          "full": {
+            "auc": 0.9507852897987168,
+            "ap": 0.909815967838519
+          },
+          "without_experts": {
+            "auc": 0.9470413814687134,
+            "ap": 0.9000835138866665
+          },
+          "uniform_gate_intervention": {
+            "auc": 0.9521656683563716,
+            "ap": 0.9118868667079895
+          },
+          "bce": 0.2653341591358185,
+          "mean_absolute_residual": 1.5193034807840984,
+          "rms_residual": 1.9561590751012166,
+          "mean_absolute_probability_change": 0.1071882074077924
+        }
+      },
+      {
+        "config": "uniform",
+        "train": {
+          "full": {
+            "auc": 0.9593867878618223,
+            "ap": 0.9233486463087616
+          },
+          "without_experts": {
+            "auc": 0.953281840241693,
+            "ap": 0.9131568934758111
+          },
+          "uniform_gate_intervention": {
+            "auc": 0.9593867878618223,
+            "ap": 0.9233486463087616
+          },
+          "bce": 0.24320493141810098,
+          "mean_absolute_residual": 0.9957538644472758,
+          "rms_residual": 1.2092862129211426,
+          "mean_absolute_probability_change": 0.06491938481728236
+        },
+        "val": {
+          "full": {
+            "auc": 0.9531880215742179,
+            "ap": 0.9131548684991838
+          },
+          "without_experts": {
+            "auc": 0.9482979879505516,
+            "ap": 0.903445478939997
+          },
+          "uniform_gate_intervention": {
+            "auc": 0.9531880215742179,
+            "ap": 0.9131548684991838
+          },
+          "bce": 0.25824292997519177,
+          "mean_absolute_residual": 0.9910783569018046,
+          "rms_residual": 1.2071207364400227,
+          "mean_absolute_probability_change": 0.06498036533594131
+        }
+      }
+    ],
+    "selection_unchanged": true
+  }
+}

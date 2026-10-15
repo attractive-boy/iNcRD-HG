@@ -1,0 +1,75 @@
+{
+  "status": "reviewed_after_frozen_selection",
+  "promoted": false,
+  "selected_inner_auc": 0.9535636613905556,
+  "selected_inner_ap": 0.9137288643052557,
+  "normalized_attention_diagnostics": [
+    {
+      "config": "drug_rec10",
+      "full": {
+        "auc": 0.9535636613905556,
+        "ap": 0.9137288987006501
+      },
+      "zero_projection": {
+        "auc": 0.9536544442623098,
+        "ap": 0.9134258241803644
+      },
+      "swapped_condition": {
+        "auc": 0.9535797463362533,
+        "ap": 0.913742530523232
+      },
+      "misaligned_columns": {
+        "auc": 0.9535596329314763,
+        "ap": 0.9135885553887482
+      },
+      "zero_mean_abs_probability_shift": 0.013587189372628927,
+      "swapped_mean_abs_probability_shift": 0.0032487662150136507,
+      "misalignment_mean_abs_probability_shift": 0.0022087441223751134,
+      "projection_weight_norm": 1.4869505167007446,
+      "addition_rms": 0.19682957977056503,
+      "base_pre_activation_rms": 2.955796003341675,
+      "normalized_attention_entropy": 0.7265712221463522,
+      "effective_columns": 126.8278071085612,
+      "mean_max_attention": 0.10000478103756905
+    },
+    {
+      "config": "mean_rec10",
+      "full": {
+        "auc": 0.9538221764445991,
+        "ap": 0.9140018445952944
+      },
+      "zero_projection": {
+        "auc": 0.9536512212292069,
+        "ap": 0.9134993937117537
+      },
+      "swapped_condition": {
+        "auc": 0.9538220333561233,
+        "ap": 0.9140020588226726
+      },
+      "misaligned_columns": {
+        "auc": 0.9537824002071073,
+        "ap": 0.9140108102590468
+      },
+      "zero_mean_abs_probability_shift": 0.01694648837049802,
+      "swapped_mean_abs_probability_shift": 4.3671108092742844e-07,
+      "misalignment_mean_abs_probability_shift": 0.0021952051793050487,
+      "projection_weight_norm": 1.3840413490931194,
+      "addition_rms": 0.22825255493323007,
+      "base_pre_activation_rms": 2.5620659987131753,
+      "normalized_attention_entropy": 0.6434725522994995,
+      "effective_columns": 383.2140197753906,
+      "mean_max_attention": 0.3163108769804239
+    }
+  ],
+  "interpretation": "Fixed-radius attention reduces effective columns from938 to126.83 for the drug arm, but the matched mean-query arm is better in both metrics in all three folds. Uniform attention alone does not explain the missing classification gain.",
+  "decision": "No automatic attention width/head/temperature/weight-decay sweep. Review joint ensemble fusion on original M123 features, distinguishing it from historical mixed-RNA handcrafted GraphTabM.",
+  "literature_review": "improve/research/midrug_literature_20261006/TABM_SCOPE_REVIEW.md",
+  "source_hashes": {
+    "improve/research/midrug_cell_qknorm_20261007/selection.json": "d86cdeed9e98684de8ac2a620e472b9c42974b28e8037acb01c9574808eea4cd",
+    "improve/research/midrug_cell_qknorm_20261007/component_diagnostics.json": "0d92cac7f0869b4cc55a0b6ab0ac21fb2ca25313fffcc024127b3a40a0d3d2a9",
+    "improve/research/midrug_literature_20261006/tabm_scope_manifest.json": "d3b10551cf255c8dbbd8fdd88f5c90895c57ef69a450af9186af6dd02b9b3788"
+  },
+  "goal_status": "active",
+  "final_target_achieved": false,
+  "no_lncrna": true
+}

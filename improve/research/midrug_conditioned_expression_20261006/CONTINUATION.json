@@ -1,0 +1,160 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn_classification": "progress:12 original-ChemBERTa adaptation fits/replays archived",
+  "current_turn": "progress:12 conditioned-expression/mean fits, exact two-layer deletion and12 new checkpoint replays",
+  "best": {
+    "config": "conditioned_rec10",
+    "mean_inner_auc": 0.9534836605083594,
+    "mean_inner_ap": 0.9130585526404142,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0008838654536079312,
+          "fold_deltas": [
+            0.0011414167733748704,
+            0.0015787109369966856,
+            -6.853134954776241e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0012334435455489585,
+          "fold_deltas": [
+            0.001784134000374027,
+            0.001999679419242728,
+            -8.348278296987921e-05
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.00022882150181206354,
+          "fold_deltas": [
+            -0.0006091276425044256,
+            0.0009203420941198415,
+            -0.0009976789570516065
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0010320288136342521,
+          "fold_deltas": [
+            -0.0019743086269204957,
+            0.001352587980314679,
+            -0.00247436579429694
+          ]
+        }
+      },
+      "mean_rec10": {
+        "auc": {
+          "mean_delta": 5.744584634056101e-05,
+          "fold_deltas": [
+            0.000432699551546345,
+            -3.0491968587065266e-05,
+            -0.0002298700439375967
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.00010280511638053695,
+          "fold_deltas": [
+            9.580539763476281e-05,
+            7.226686515382497e-05,
+            0.00014034308635302306
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0010320288136342521
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "If promoted, freeze original-validation confirmation. Otherwise use the matched conditioned/mean and component evidence before selecting a distinct next hypothesis; do not start an automatic FiLM width/depth grid.",
+  "component_diagnostics": {
+    "status": "passed",
+    "selection_unchanged": true,
+    "means": [
+      {
+        "config": "conditioned",
+        "full": {
+          "auc": 0.9528053450937625,
+          "ap": 0.9122359146668977
+        },
+        "zero_projection": {
+          "auc": 0.9506128075505954,
+          "ap": 0.9094489850499387
+        },
+        "swapped_condition": {
+          "auc": 0.9527860205225779,
+          "ap": 0.9122037994512008
+        },
+        "projection_weight_norm": 4.4513115882873535,
+        "addition_rms": 0.5238022406895956,
+        "base_pre_activation_rms": 12.60834789276123,
+        "zero_mean_abs_probability_shift": 0.031688133254647255,
+        "swapped_mean_abs_probability_shift": 0.0003737497900146991
+      },
+      {
+        "config": "conditioned_rec10",
+        "full": {
+          "auc": 0.9534836605083593,
+          "ap": 0.9130585526404142
+        },
+        "zero_projection": {
+          "auc": 0.9504517323909919,
+          "ap": 0.9091515069744401
+        },
+        "swapped_condition": {
+          "auc": 0.9534732173727808,
+          "ap": 0.9130538689502515
+        },
+        "projection_weight_norm": 2.90171480178833,
+        "addition_rms": 0.3593863844871521,
+        "base_pre_activation_rms": 4.495491663614909,
+        "zero_mean_abs_probability_shift": 0.04163036619623502,
+        "swapped_mean_abs_probability_shift": 0.0003375114902155474
+      },
+      {
+        "config": "mean",
+        "full": {
+          "auc": 0.9526537541114037,
+          "ap": 0.9122015853492785
+        },
+        "zero_projection": {
+          "auc": 0.9504780296902765,
+          "ap": 0.90955436173136
+        },
+        "swapped_condition": {
+          "auc": 0.9526624144788558,
+          "ap": 0.9122113489960025
+        },
+        "projection_weight_norm": 4.305596828460693,
+        "addition_rms": 0.5066569844881693,
+        "base_pre_activation_rms": 12.953190167744955,
+        "zero_mean_abs_probability_shift": 0.03222655629118284,
+        "swapped_mean_abs_probability_shift": 0.00016291277521910766
+      },
+      {
+        "config": "mean_rec10",
+        "full": {
+          "auc": 0.9534262146620187,
+          "ap": 0.9129557475240336
+        },
+        "zero_projection": {
+          "auc": 0.9505509192172242,
+          "ap": 0.9092952113974507
+        },
+        "swapped_condition": {
+          "auc": 0.9534333741295097,
+          "ap": 0.9129530309353502
+        },
+        "projection_weight_norm": 2.8817033767700195,
+        "addition_rms": 0.3593149284521739,
+        "base_pre_activation_rms": 4.74048654238383,
+        "zero_mean_abs_probability_shift": 0.038857643802960716,
+        "swapped_mean_abs_probability_shift": 0.00010711075932097931
+      }
+    ]
+  }
+}

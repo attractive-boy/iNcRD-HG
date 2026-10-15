@@ -1,0 +1,96 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn": "progress: feature-only soft completion completed and audited",
+  "current_turn": "progress: raw-feature and graph-conditioned soft completion, 36 fits and 48 checkpoint replays; post-selection component diagnostics; independently verified dual bound for 56 fixed probability mixtures per fold",
+  "best": {
+    "config": "soft_rec10",
+    "mean_inner_auc": 0.9535842823789195,
+    "mean_inner_ap": 0.9141986060564301,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.000984487324168078,
+          "fold_deltas": [
+            0.0020746398141109346,
+            0.00011810269523215844,
+            0.0007607194631611414
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.002373496961564895,
+          "fold_deltas": [
+            0.004120220786969719,
+            0.00121941852642804,
+            0.0017808515712969264
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.0001281996312519166,
+          "fold_deltas": [
+            0.0003240953982316386,
+            -0.0005402661476446857,
+            -0.0001684281443427027
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.00010802460238168443,
+          "fold_deltas": [
+            0.0003617781596751968,
+            0.0005723270874999908,
+            -0.0006100314400301343
+          ]
+        }
+      },
+      "direct_rec10": {
+        "auc": {
+          "mean_delta": -1.9880139076167147e-05,
+          "fold_deltas": [
+            -8.799941276482759e-05,
+            -2.5767860778458385e-06,
+            3.0935781614171987e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": 7.633422500663567e-05,
+          "fold_deltas": [
+            0.0004687499663875716,
+            -0.0001162174284283779,
+            -0.0001235298629392867
+          ]
+        }
+      },
+      "uniform_rec10": {
+        "auc": {
+          "mean_delta": -0.0003104901093381092,
+          "fold_deltas": [
+            -0.0002614226457259283,
+            -0.0004904482834739987,
+            -0.00017959939881440068
+          ]
+        },
+        "ap": {
+          "mean_delta": 8.050116723875196e-05,
+          "fold_deltas": [
+            0.00020059937332406186,
+            0.0007161354943056031,
+            -0.000675231365913409
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0003104901093381092
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Do not keep fitting weights on these 56 saved probabilities. Assess fully differentiable completion versus the archived stopped-gradient graph completion, retaining exact first-layer row/column query repair; require forward identity and explicit deletion/gradient checks before registering new fits.",
+  "component_diagnostics": "component_diagnostics.json",
+  "mixture_bound": "MIXTURE_BOUND.md",
+  "mean_fixed_probability_mixture_auc_upper_bound": 0.9681940174416094,
+  "launcher_session_finished": 64808
+}

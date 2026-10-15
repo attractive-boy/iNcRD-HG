@@ -1,0 +1,179 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "independent_rec10",
+    "mean_inner_auc": 0.9536736009107543,
+    "mean_inner_ap": 0.912490479264601,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0010738058560029924,
+          "fold_deltas": [
+            0.0017685735638602873,
+            0.00013699912646947254,
+            0.0013158448776792175
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0006653701697358164,
+          "fold_deltas": [
+            0.00253832986635516,
+            -0.0022360507370140503,
+            0.0016938313798663396
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -3.8881099417002275e-05,
+          "fold_deltas": [
+            1.802914798099131e-05,
+            -0.0005213697164073716,
+            0.0003866972701753735
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0016001021894473944,
+          "fold_deltas": [
+            -0.0012201127609393625,
+            -0.0028831421759420994,
+            -0.0006970516314607211
+          ]
+        }
+      },
+      "mixture_rec10": {
+        "auc": {
+          "mean_delta": -6.669485395349728e-05,
+          "fold_deltas": [
+            -0.0002459690903136025,
+            -0.0007330956391330412,
+            0.0007789801675861519
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0005073171841829168,
+          "fold_deltas": [
+            0.00017953115038726875,
+            -0.001476286928383752,
+            -0.00022519577455226703
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0016001021894473944
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 6,
+  "new_checkpoint_replays": 6,
+  "reused_control_checks": 6,
+  "new_candidate_test_evaluations": 0,
+  "no_lncrna": true,
+  "processes_expected_live": [],
+  "next_action": "Use frozen gate and individual-versus-ensemble diagnostics before another model; no retrospective member selection or automatic member-count sweep.",
+  "component_diagnostics": {
+    "status": "passed",
+    "selection_unchanged": true,
+    "means": [
+      {
+        "config": "independent_rec10",
+        "train": {
+          "ensemble": {
+            "auc": 0.9575505845311959,
+            "ap": 0.9207921806299358
+          },
+          "mean_individual": {
+            "auc": 0.957306733863661,
+            "ap": 0.9202681368915525
+          },
+          "fixed_first_member": {
+            "auc": 0.9572858270927123,
+            "ap": 0.9201387483440983
+          },
+          "mean_logit_prediction": {
+            "auc": 0.9575450723826554,
+            "ap": 0.9207699348854049
+          },
+          "mean_individual_bce": 0.24806974828243256,
+          "mixture_bce": 0.2472659001747767,
+          "mean_member_probability_std": 0.00965252642830213,
+          "pair_vote_disagreement": 0.007715959412356217,
+          "mean_absolute_first_member_difference": 0.007345352787524462
+        },
+        "val": {
+          "ensemble": {
+            "auc": 0.9536736009107543,
+            "ap": 0.912490479264601
+          },
+          "mean_individual": {
+            "auc": 0.9534512267641181,
+            "ap": 0.9120656967344708
+          },
+          "fixed_first_member": {
+            "auc": 0.9535929987931366,
+            "ap": 0.912248532712654
+          },
+          "mean_logit_prediction": {
+            "auc": 0.9536891954248526,
+            "ap": 0.9125261137445149
+          },
+          "mean_individual_bce": 0.25893935561180115,
+          "mixture_bce": 0.258144478003184,
+          "mean_member_probability_std": 0.009698949133356413,
+          "pair_vote_disagreement": 0.007844827137887478,
+          "mean_absolute_first_member_difference": 0.007352095407744248
+        }
+      },
+      {
+        "config": "mixture_rec10",
+        "train": {
+          "ensemble": {
+            "auc": 0.9645508776985731,
+            "ap": 0.9335111347120123
+          },
+          "mean_individual": {
+            "auc": 0.9414235055767289,
+            "ap": 0.8941182449210955
+          },
+          "fixed_first_member": {
+            "auc": 0.9123668434273643,
+            "ap": 0.8792065590482615
+          },
+          "mean_logit_prediction": {
+            "auc": 0.9583223978602602,
+            "ap": 0.920557057622144
+          },
+          "mean_individual_bce": 0.41297635436058044,
+          "mixture_bce": 0.22625111043453217,
+          "mean_member_probability_std": 0.10628472020228703,
+          "pair_vote_disagreement": 0.09746956825256348,
+          "mean_absolute_first_member_difference": 0.14249135305484137
+        },
+        "val": {
+          "ensemble": {
+            "auc": 0.953740295764708,
+            "ap": 0.9129977964487841
+          },
+          "mean_individual": {
+            "auc": 0.9372843512355015,
+            "ap": 0.8875228121457762
+          },
+          "fixed_first_member": {
+            "auc": 0.9126703254603724,
+            "ap": 0.8714498281536214
+          },
+          "mean_logit_prediction": {
+            "auc": 0.9527193344546693,
+            "ap": 0.9111887348804703
+          },
+          "mean_individual_bce": 0.4328926702340444,
+          "mixture_bce": 0.26089297731717426,
+          "mean_member_probability_std": 0.10562919328610103,
+          "pair_vote_disagreement": 0.09595716993014018,
+          "mean_absolute_first_member_difference": 0.1418196608622869
+        }
+      }
+    ]
+  }
+}

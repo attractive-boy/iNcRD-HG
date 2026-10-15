@@ -1,0 +1,65 @@
+{
+  "configs": {
+    "control": {
+      "channels": 0,
+      "hidden": 128,
+      "drop": 0.0,
+      "standalone": false,
+      "aux": 0.0
+    },
+    "pos128_d0": {
+      "channels": 1,
+      "hidden": 128,
+      "drop": 0.0,
+      "standalone": false,
+      "aux": 0.1
+    },
+    "pos128_d2": {
+      "channels": 1,
+      "hidden": 128,
+      "drop": 0.2,
+      "standalone": false,
+      "aux": 0.1
+    },
+    "pos256_d5": {
+      "channels": 1,
+      "hidden": 256,
+      "drop": 0.5,
+      "standalone": false,
+      "aux": 0.1
+    },
+    "signed128_d2": {
+      "channels": 2,
+      "hidden": 128,
+      "drop": 0.2,
+      "standalone": false,
+      "aux": 0.1
+    },
+    "signed256_d5": {
+      "channels": 2,
+      "hidden": 256,
+      "drop": 0.5,
+      "standalone": false,
+      "aux": 0.1
+    },
+    "only_pos256_d5": {
+      "channels": 1,
+      "hidden": 256,
+      "drop": 0.5,
+      "standalone": true,
+      "aux": 0.0
+    },
+    "only_signed256_d5": {
+      "channels": 2,
+      "hidden": 256,
+      "drop": 0.5,
+      "standalone": true,
+      "aux": 0.0
+    }
+  },
+  "seed": 42,
+  "source_sha256": "ef406cb74342a8d882c94d9c3f0006ddcf63806864dc8f32b6c9b189daa6e849",
+  "model_sha256": "732c69ae4c07d42dd3deea14a17edc92b43f5241a1556c27b683fb184ecc120a",
+  "selection": "min(validation AUC gain, validation AP gain)",
+  "test_evaluated": false
+}

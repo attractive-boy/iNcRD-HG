@@ -1,0 +1,173 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "direction_scale",
+    "mean_inner_auc": 0.9530360726550205,
+    "mean_inner_ap": 0.9118112790343574,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.00043627760026913415,
+          "fold_deltas": [
+            0.0014474830236254066,
+            -0.0007455501051760738,
+            0.0006068998823580696
+          ]
+        },
+        "ap": {
+          "mean_delta": -1.3830060507813435e-05,
+          "fold_deltas": [
+            0.0013098881447971555,
+            -0.002069480531694201,
+            0.0007181022053736053
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.0006764093551508606,
+          "fold_deltas": [
+            -0.0003030613922538894,
+            -0.001403918948052918,
+            -0.0003222477251457745
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.002279302419691024,
+          "fold_deltas": [
+            -0.002448554482497367,
+            -0.00271657197062225,
+            -0.0016727808059534555
+          ]
+        }
+      },
+      "raw": {
+        "auc": {
+          "mean_delta": -0.0009230762253374566,
+          "fold_deltas": [
+            -0.0010697294468786644,
+            -0.0014649028852274926,
+            -0.00023459634390621265
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.002562710732853709,
+          "fold_deltas": [
+            -0.0032409180181717234,
+            -0.003094089317445481,
+            -0.0013531248629439219
+          ]
+        }
+      },
+      "direction": {
+        "auc": {
+          "mean_delta": -0.0002009803955956476,
+          "fold_deltas": [
+            -0.0001725647021048049,
+            -0.00031565629453023103,
+            -0.00011472019015190682
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0006848214421049104,
+          "fold_deltas": [
+            -0.0007060086717775027,
+            -0.00021518200359926798,
+            -0.0011332736509379604
+          ]
+        }
+      }
+    },
+    "selection_score": -0.002562710732853709
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 9,
+  "new_checkpoint_replays": 9,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Use frozen fusion diagnostics to decide next distinct hypothesis; no retrospective control promotion or normalization sweep.",
+  "component_diagnostics": {
+    "status": "passed",
+    "means": [
+      {
+        "config": "direction_scale",
+        "train": {
+          "auc": 0.963328971406615,
+          "ap": 0.9304108901003375
+        },
+        "val": {
+          "auc": 0.9530360726550205,
+          "ap": 0.9118112790343574
+        },
+        "scale_input_gradient_l1_fraction": 0.007652953577538331,
+        "scale_weight_norm_over_original_columns": 0.023410075654586155,
+        "M1_geometry": {
+          "miRNA": {
+            "raw": 2.3926191445976177,
+            "direction": 4.60336370383
+          },
+          "drug": {
+            "raw": 1.5066196131214538,
+            "direction": 3.821182996888085
+          }
+        },
+        "without_scale_inputs": {
+          "auc": 0.9529453343377398,
+          "ap": 0.911608162861694,
+          "mean_abs_probability_change": 0.0022717371272544065
+        }
+      },
+      {
+        "config": "direction",
+        "train": {
+          "auc": 0.964835766022993,
+          "ap": 0.9330798949652362
+        },
+        "val": {
+          "auc": 0.9532370530506161,
+          "ap": 0.9124961004764623
+        },
+        "scale_input_gradient_l1_fraction": 0.0,
+        "scale_weight_norm_over_original_columns": 0.0,
+        "M1_geometry": {
+          "miRNA": {
+            "raw": 2.289425555865199,
+            "direction": 4.705716587390472
+          },
+          "drug": {
+            "raw": 1.7728552427578144,
+            "direction": 4.297694045776322
+          }
+        }
+      },
+      {
+        "config": "raw",
+        "train": {
+          "auc": 0.9604084864984014,
+          "ap": 0.9259520183845654
+        },
+        "val": {
+          "auc": 0.953959148880358,
+          "ap": 0.9143739897672112
+        },
+        "scale_input_gradient_l1_fraction": 0.0,
+        "scale_weight_norm_over_original_columns": 0.0,
+        "M1_geometry": {
+          "miRNA": {
+            "raw": 2.6635394123042224,
+            "direction": 5.344498305788193
+          },
+          "drug": {
+            "raw": 1.4306766458707163,
+            "direction": 4.1939077068869315
+          }
+        }
+      }
+    ],
+    "selection_unchanged": true
+  }
+}

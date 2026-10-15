@@ -1,0 +1,80 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn_classification": "progress:12 pair perturbation fits and sensitivity/source review",
+  "current_turn": "progress:12 full-graph source/uniform fits, exact nonlinear deletion/gradient verification and12 new checkpoint replays",
+  "best": {
+    "config": "source_rec10",
+    "mean_inner_auc": 0.9535764848536322,
+    "mean_inner_ap": 0.9130770696501544,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.00097668979888077,
+          "fold_deltas": [
+            0.0018179390880943558,
+            0.0001163848378470389,
+            0.000995745470700915
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0012519605552891628,
+          "fold_deltas": [
+            0.0031353028199556654,
+            -0.0008754022810731898,
+            0.0014959811269850132
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.00013599715653922484,
+          "fold_deltas": [
+            6.739467221505979e-05,
+            -0.0005419840050298053,
+            6.659786319707095e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0010135118038940478,
+          "fold_deltas": [
+            -0.0006231398073388572,
+            -0.001522493720001239,
+            -0.0008949018843420475
+          ]
+        }
+      },
+      "uniform_rec10": {
+        "auc": {
+          "mean_delta": -0.0001367146929115067,
+          "fold_deltas": [
+            0.00017599882552987722,
+            -0.0007498447486385951,
+            0.00016370184437419777
+          ]
+        },
+        "ap": {
+          "mean_delta": -1.7364953173911363e-05,
+          "fold_deltas": [
+            0.0004757278123965758,
+            -0.0007977155829110849,
+            0.000269892910992775
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0010135118038940478
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Freeze outer-validation confirmation only if promoted; otherwise use the matched source/uniform evidence and component diagnostics to identify a distinct next hypothesis. Do not claim this complete-graph3-layer transfer is a new family.",
+  "component_diagnostics": {
+    "status": "passed",
+    "selection_unchanged": true,
+    "finding": "The no-reconstruction source branch is nearly boundary-insensitive (mean probability swap shift .0002177). Reconstruction uses the marker (shift .058855) but neither candidate passes the paired gate. Zero projection cannot undo jointly trained backbone changes."
+  },
+  "archive_verified_files": 32
+}

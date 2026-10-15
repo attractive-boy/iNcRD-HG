@@ -1,0 +1,380 @@
+{
+  "epmc_mda_2025_2026": {
+    "query": "(TITLE_ABS:miRNA OR TITLE_ABS:microRNA) AND TITLE_ABS:drug AND (TITLE_ABS:prediction OR TITLE_ABS:association) AND FIRST_PDATE:[2025-01-01 TO 2026-10-06]",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3AmiRNA+OR+TITLE_ABS%3AmicroRNA%29+AND+TITLE_ABS%3Adrug+AND+%28TITLE_ABS%3Aprediction+OR+TITLE_ABS%3Aassociation%29+AND+FIRST_PDATE%3A%5B2025-01-01+TO+2026-10-06%5D&format=json&resultType=core&pageSize=100&sort=FIRST_PDATE_D",
+    "error": "HTTP Error 503: "
+  },
+  "crossref_recent_mda": {
+    "query": "miRNA drug association prediction multi view learning",
+    "url": "https://api.crossref.org/works?query=miRNA+drug+association+prediction+multi+view+learning&filter=from-pub-date%3A2025-01-01%2Cuntil-pub-date%3A2026-10-06&rows=20",
+    "rows": [
+      {
+        "title": [
+          "Multi-view Graph Learning Framework with Spectral Encoding and Sparse Cross-Attention for miRNA-Drug Association Prediction"
+        ],
+        "doi": "10.1109/tcbbio.2026.3729865",
+        "id": null,
+        "abstract": null,
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "Drug-microbe association prediction using graph neural network with triple-view contrastive learning"
+        ],
+        "doi": "10.2139/ssrn.7560374",
+        "id": null,
+        "abstract": "<jats:p>Motivation. Microbial communities, including bacteria, archaea, viruses, protozoa and fungi, interact with drugs through metabolism, detoxification, resistance and therapeutic response. Experimental screening of drug-microbe associations is slow and costly while computational prediction of pairs can support drug repurposing, antimicrobial discovery and precision medicine. Many models of graph neural network (GNN) represent drugs and microbes with similarities, such as Gaussian interaction profile (GIP) kernels, computed from the drug-microbe interaction matrix. Since these similarities are derived from the same associations being predicted, their random-split evaluation would be sensitive to the feature-construction protocol. This motivates the models that rely on chemical and biological covariates and evaluations that state clearly which information is available to the models.,Results. We introduce a novel GNN that leverages contrastive learning to predict drug-microbe associations. Our approach is built upon a multi-view representation strategy, wherein each drug is characterized by three complementary chemical modalities and each microbe is encoded through three distinct biological views. This heterogeneous feature fusion enables the model to capture complex interactional patterns from diverse biomedical data sources. The model comprises three parallel branches, each corresponding to a distinct view pair that combines one drug view with one microbe view. Within each branch, we construct a heterogeneous graph, in which drug-drug and microbe-microbe edges are defined by similarity scores, while drug-microbe edges are derived exclusively from the known training associations. Every branch processes its graph through a dedicated graph convolutional network (GCN). Subsequently, a link predictor is applied to score candidate drug-microbe pairs, and a projection head is employed to align the learned representations across branches, ensuring consistency among the complementary views. We evaluate our model using fivefold crossvalidation (5-CV) on a complete set of experimentally verified drug-microbe associations in three publicly available benchmark datasets: MDAD, aBiofilm, and DrugVirus. To ensure unbiased assessment, we employ a dedicated evaluation split, which was withheld from training and previously used solely for viewpair selection. Moreover, we evaluate our model on an independent hold-out test set and on an external database, and present case studies. Our model achieves strong performance across all datasets, with AUC/AUPR scores of 0.940/0.948 on MDAD, 0.926/0.931 on aBiofilm, and 0.878/0.870 on DrugVirus. In a complementary analysis, we investigate the impact of incorporating GIP features under a standard randomsplit evaluation protocol. While the inclusion of GIP features improves predictive accuracy, we emphasize that this improvement reflects a protocolsensitivity effect rather than a corrected or enhanced performance estimate for our model or prior work.</jats:p>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "Molecular-Driven Multi-View Hypergraph Contrastive Learning for Drug-Drug Interaction Prediction"
+        ],
+        "doi": "10.2139/ssrn.5397945",
+        "id": null,
+        "abstract": null,
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "Molecular-Driven Multi-View Hypergraph Contrastive Learning for Drug-Drug Interaction Prediction"
+        ],
+        "doi": "10.2139/ssrn.5214161",
+        "id": null,
+        "abstract": null,
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "GIL-DDI: Multi-View Graph Invariant Learning for Unknown Drug-Drug Interaction Prediction"
+        ],
+        "doi": "10.21203/rs.3.rs-6731543/v1",
+        "id": null,
+        "abstract": "<title>Abstract</title>\n                <p>Drug-Drug Interaction (DDI) prediction is essential for evaluating the side effects of a new drug and adverse interactions before the clinical application.The latest research applies multi-view data to enhance the generalization ability of models to predict new drug interactions, mainly unknown Drug-Drug Interaction (uDDI).However, a new drug's feature inevitably encounters the feature-shift problem; the trained models have not previously learned information about the new drug, significantly decreasing the uDDI prediction's accuracy.Thus, we proposed the GIL-DDI model that tries to extract the invariant features of known drugs, alleviating the impact of the feature-shift problem on the prediction of uDDI.In detail, the graph attention network(GAT) models embed multi-view drug graphs, including drug-chemical entities, drug substructures, drug-drug interactions, and molecular structures. Then, invariant features corresponding to the new drug are learned from the knowledge graph of the previous drugs.After that, a variant feature of the new drug is embedded through the GAT models and fused with learned invariant drug features to predict the DDI.Extensive experiments on real-world drug datasets indicate that the proposed method achieves new state-of-the-art records on new drug DDI prediction tasks. The source code is available at https://anonymous.4open.science/r/GIL-DDI-F701/README.md.</p>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              18
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "Integrating Molecular Large Model with Multi-View Representations for miRNA-Drug Association Prediction"
+        ],
+        "doi": "10.1109/bibm66473.2025.11356634",
+        "id": null,
+        "abstract": null,
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              15
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "A Multi-view Hierarchical Semantic-aware Heterogeneous Graph Neural Network for Drug\u2013Disease Association Prediction"
+        ],
+        "doi": "10.2139/ssrn.5498647",
+        "id": null,
+        "abstract": null,
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "Multi-view Graph Attention Contrastive Learning for Predicting miRNA-Disease Association"
+        ],
+        "doi": "10.65286/icic.v21i2.76657",
+        "id": null,
+        "abstract": "<jats:p>MicroRNAs  miRNAs  are an important class of endogenous non-coding RNAs that regulate critical biological processes, such as cell differentiation, proliferation, and apoptosis, through post-transcriptional mechanisms. Recent studies have shown that aberrant miRNA expression is closely linked to the pathogenesis of complex diseases, including cancer and neurodegenerative disorders. This study introduces a novel prediction model, MGACMDA, which combines multi-view contrastive learning and residual graph attention to overcome several limitations of existing miRNA-disease association prediction methods, such as limited robustness to data sparsity, high sensitivity to network noise, and insufficient extraction of deep topological information. We propose three data enhancement methods to construct global, local and topological views, and design a graph attention encoder with residual connection to fuse shallow topological features with deep representations through residual mechanism. Finally, a momentum-driven multi-view contrastive learning module is designed, and momentum encoder is used to maintain the global negative sample queue, which significantly improves the discrimination ability of sparse association. We applied MGACMDA to benchmark datasets, including HMDD v2.0 and HMDD v3.2, using 5-fold cross-validation. The evaluation metrics, including F1 score, AUC and AUPR values, and case studies of experimental results indicate that our method is efficient and robust for predicting miRNA-disease associations.</jats:p>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "RGCNMDA: pathway-bridged relational graph learning with adaptive multi-view fusion for human miRNA\u2013disease association prediction"
+        ],
+        "doi": "10.1093/bioinformatics/btag620",
+        "id": null,
+        "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Motivation</jats:title>\n                    <jats:p>MicroRNAs are key post-transcriptional regulators whose dysregulation is associated with complex human diseases. Computational prediction can prioritize candidate miRNA\u2013disease associations, but reliable evaluation is complicated by sparse labels, cold-start entities, limited biological context in bipartite graphs, and leakage when association-derived features are constructed before data splitting.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>We present RGCNMDA, a leakage-controlled multi-view framework that integrates global latent structure, local profiles and similarities, and pathway context. Within every fold, interaction profiles, GIP similarities, PCA inputs, MDMF factors, and miRNA\u2013disease graph edges are reconstructed exclusively from training positives. Four independent factorized encoders transform the miRNA and disease interaction profiles and GIP similarities, while a fold-local MDMF branch captures global latent structure. These representations are integrated with a pathway-bridged graph containing miRNA, disease, and pathway nodes connected by six directed relation types. A relational graph convolutional network performs type- and direction-specific message passing, and node-wise gates adaptively fuse graph, MDMF, and combined profile and similarity representations before an MLP pair decoder scores candidate associations. On HMDD v4.0, RGCNMDA achieved AUCs of 0.9589, 0.9109, and 0.8836 under random, cold-disease, and cold-miRNA evaluation, respectively; on the processed independent-source RNADisease v4.0 benchmark, the corresponding values were 0.9580, 0.8446, and 0.8913. Same-protocol baseline comparisons and diagnostic analyses showed that the benefits of RGCNMDA were setting dependent, with the strongest pathway-related improvement under cold-disease evaluation. These results support the robustness of leakage-controlled multi-view learning across standard and cold-start evaluation settings.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Availability and implementation</jats:title>\n                    <jats:p>https://github.com/hnuchao/pathway-RGCNMDA</jats:p>\n                  </jats:sec>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              25
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "A Comprehensive Multi-Dimensional Disease Similarity Computation Framework for miRNA-Disease Association Prediction"
+        ],
+        "doi": "10.21203/rs.3.rs-9053024/v1",
+        "id": null,
+        "abstract": "<title>Abstract</title>\n                <p>In light of the explosive growth of gene and disease association data driven by the rapid development of high-throughput sequencing technologies, mining potential molecular associations between diseases from massive biomedical data has emerged as a crucial direction in bioinformatics research. To address this, we propose and implement a macroscopic gene-associated disease similarity computational framework tailored for bioinformatics mining. Leveraging the latest miRNA-disease association dataset (HMDD v4.0) [1] as the core data source, this framework deeply integrates gene-disease association information from the DisGeNET database [2] and the hierarchical structure data of MeSH (Medical Subject Headings) to construct a multi-source heterogeneous disease association network. The objective is to provide a comprehensive and precise disease similarity prediction strategy for biomedical research through multi-dimensional data fusion analysis. Technically, the framework integrates multiple core computational mechanisms, including target-based disease functional similarity, MeSH-based semantic similarity, and network topology-based Gaussian Interaction Profile similarity. Notably, the semantic similarity algorithm incorporates Information Content (IC) weights upon classical structural decay; the functional similarity algorithm introduces an exponential penalty term to address the long-tail distribution problem, effectively resolving the illusion of false-positive associations caused by unequal research depth between common and rare diseases, thereby achieving a multi-perspective quantification of disease similarity. Based on the calculated similarity matrices, we conducted extensive evaluations (e.g., AUC, AUPR, Accuracy) using state-of-the-art deep learning models, such as graph neural networks (TriFusion) [9] and Transformer architectures (MDformer) [8]. Experimental results demonstrate that this multi-dimensional similarity feature enhancement strategy can effectively reveal potential biological associations between diseases, validating its application value in drug repositioning and rare disease auxiliary prediction, while exhibiting robust generalized predictive performance and high scalability.</p>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              18
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "Transformer-based multi-modal representation learning and hybrid interaction modeling for miRNA\u2013disease association prediction"
+        ],
+        "doi": "10.1186/s12859-026-06668-w",
+        "id": null,
+        "abstract": null,
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              21
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "MAGMDA: A Multi-order Adaptive Graph-based MiRNA-Disease Association Prediction Model"
+        ],
+        "doi": "10.21203/rs.3.rs-8697093/v1",
+        "id": null,
+        "abstract": "<title>Abstract</title>\n                <p>Background\n MicroRNAs are key biomarkers for human diseases; however, experimentally identifying miRNA-disease associations was costly and inefficient. To improve the robustness and interpretability of computational models, we developed a multi-order adaptive graph-based miRNA-disease association model (MAGMDA).\nResults\n MAGMDA introduced an adaptive moment-order selection mechanism and a dynamic threshold network, which replaced the fixed moment orders and manually defined thresholds commonly used in traditional high-order statistical modeling with learnable components. By integrating numerically stable high-order moment computation with cross-order attention aggregation, MAGMDA enhanced model robustness and interpretability while maintaining computational efficiency. Five-fold cross-validation on the HMDD v2.0 dataset showed that MAGMDA achieved an AUC of 93.58% and an AUPR of 93.48%. Across multiple evaluation metrics, MAGMDA outperformed representative existing methods, exhibiting particularly consistent advantages on ranking-related metrics such as AUC and AUPR, while maintaining smaller performance variations across different cross-validation folds, indicating stable predictive ability under different data partitions. Mechanistic diagnostic analysis further verified the stable utilization of the adaptive modules across different training folds. To demonstrate biological utility, we applied MAGMDA to hepatocellular carcinoma research. Based on the model predictions and analysis of the TCGA-LIHC cohort, we constructed a seven-gene prognostic signature, which was successfully validated in independent datasets and showed strong prognostic stratification ability, highlighting its potential for clinical translation.\nConclusions\n MAGMDA effectively improved miRNA-disease association prediction through an adaptive multi-order moment modeling framework and, supported by systematic biological validation, provided a powerful tool for translational research from computational discovery to clinical application. The MAGMDA framework and data resources are publicly available at https://github.com/zhangclbio/MAGMDA.</p>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              11
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "A Heterogeneous Graph Transformer with Dose-Aware Cross-Layer Attention for Joint lncRNA-miRNA-Drug Resistance Association Prediction in Cancer"
+        ],
+        "doi": "10.2139/ssrn.7211818",
+        "id": null,
+        "abstract": "<jats:p>Cancer drug resistance is increasingly understood to be mediated by long non-coding RNA (lncRNA) and microRNA (miRNA) regulatory networks, yet computational models typically treat lncRNA-drug and miRNA-drug resistance as separate, static prediction tasks. This paper proposes a Dose-Aware Heterogeneous Graph Transformer (HGT) that jointly models lncRNA, miRNA, and drug entities as a single heterogeneous graph, extending meta-relation-typed attention with a dose-conditioned gating mechanism and a cross-layer attention pooling module for interpretability. Because no real dataset was available in this working environment, the architecture is validated as a proof-of-concept (PoC) on a synthetic heterogeneous graph, implemented and trained from scratch in numpy (no GPU deep-learning framework was available), with manual backpropagation verified against numerical gradients. Two implementations are compared: a fixed-projection encoder with a trained prediction head, and a fully end-to-end trainable encoder. Both recover above-chance predictive signal (AUC 0.52-0.60), but a 5-seed replication with paired significance testing finds no statistically detectable benefit from dose-conditioning (p = 0.895) or cross-layer attention (p = 0.635) at this scale, a properly tested null result rather than an unresolved limitation. We report these results transparently, situate them against the closest published models (iNcRD-HG; MHGTMDA) via a qualitative comparative-positioning table, and specify the real-data validation required before the architecture's specific contributions can be properly evaluated.</jats:p>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "A multi-view framework integrating structure-aware Mamba and hypergraph representation learning for circRNA\u2013disease association prediction"
+        ],
+        "doi": "10.2139/ssrn.6806918",
+        "id": null,
+        "abstract": "<jats:p>Circular RNAs are stable biomolecular regulators whose disease associations remain difficult to verify experimentally. To support computational screening, we propose MVMHCDA, a multi-view modelling framework for circRNA\u2013disease association prediction. The method constructs a similarity-guided heterogeneous biomolecular network and integrates graph attention, a Mamba-based long-range encoder, hypergraph convolution, and semantic attribute encoding to capture local, non-local, and group-level interaction patterns. A gated fusion module combines these representations for prediction. Experiments on two benchmark datasets show that MVMHCDA outperforms representative methods, and case studies indicate biologically meaningful candidates.</jats:p>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "DMCRL: Deep Multi-View Contrastive Representation Learning for Drug-Target Affinity Prediction"
+        ],
+        "doi": "10.1109/bibm66473.2025.11356336",
+        "id": null,
+        "abstract": null,
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              15
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "MV-HAGCN: Prediction of miRNA-Disease Association Based on Multi-View Hybrid Attention Graph Convolutional Network"
+        ],
+        "doi": "10.3390/ijms27083533",
+        "id": null,
+        "abstract": "<jats:p>Accurate identification of disease-associated microRNAs (miRNAs) is crucial for elucidating pathogenic mechanisms and advancing therapeutic discovery. Although computational methods, particularly those based on biological networks, have become essential tools for predicting miRNA-disease associations, existing approaches often struggle to comprehensively learn from heterogeneous data and optimize feature representations. To overcome these limitations, we propose the Multi-view Hybrid Attention Graph Convolutional Network (MV-HAGCN). This framework constructs a comprehensive heterogeneous network by integrating multi-source biological information, simultaneously capturing miRNA similarity and disease similarity. We design a hierarchical attention mechanism to enable refined feature learning: first, the Efficient Channel Attention (ECA) module prioritizes information-rich input features, ensuring the model focuses on high-value biological characteristics. Subsequently, the Multi-Head Self-Attention Graph Convolutional Network operates on these refined features. Through iterative message passing and multi-head self-attention, it captures not only direct first-order relationships between nodes but also explicitly models and infers complex, indirect higher-order relationships within the network. This hierarchical design progressively refines feature representations, from channel-level recalibration to global structural dependency modeling, enabling the model to capture both local and high-order relational patterns. Furthermore, a dynamic weight learning strategy adaptively integrates multi-perspective similarity matrices, achieving superior feature complementarity and synergy. Finally, the high-order node representations learned through multi-layer graph convolutions are fed into a multi-layer perceptron for integration and nonlinear transformation, enabling precise prediction of potential miRNA-disease associations. Comprehensive evaluation through five-fold cross-validation on HMDD v2.0 and v3.2 benchmark datasets demonstrates that MV-HAGCN consistently outperforms existing state-of-the-art methods in predictive performance. Case studies targeting key diseases such as breast cancer, lung tumors, and pancreatic disorders revealed that the top 50 miRNAs associated with each of these three conditions were all validated in databases, confirming the practical value of this model in screening candidate miRNAs with high biological relevance.</jats:p>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              15
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "LncRNA-Cervical Cancer Association Prediction Based on Multi-View Variational Autoencoder Driven by Knowledge Distillation Transfer Learning"
+        ],
+        "doi": "10.21203/rs.3.rs-7730156/v1",
+        "id": null,
+        "abstract": "<title>Abstract</title>\n                <p>Long non-coding RNAs (lncRNAs) play crucial regulatory roles in the pathogenesis of cervical cancer. Accurate identification of lncRNA-cervical cancer associations is of great significance for understanding disease molecular mechanisms and discovering potential therapeutic targets. However, the extreme scarcity of cervical cancer-specific lncRNA association data has become the core bottleneck constraining the performance of existing computational prediction methods. To address this challenge, we propose a Multi-View Collaborative Variational Autoencoder based on Knowledge Distillation Transfer Learning (MVCVAE), which innovatively integrates the two technical advantages of multi-source heterogeneous data fusion and cross-disease knowledge transfer. The multi-view collaborative variational autoencoder constructs dual-view feature representations of lncRNA similarity and disease similarity, utilizing symmetric encoder-decoder architecture to learn complex lncRNA-disease association patterns in latent space. The knowledge distillation transfer learning framework adopts a teacher-student network design, where the teacher model is pre-trained on a large-scale dataset containing 12,865 lncRNA-disease associations to learn universal association patterns, and effectively transfers rich prior knowledge to the student model targeting 92 cervical cancer associations through feature distillation and prediction distillation strategies. In five-fold cross-validation, MVCVAE achieved an AUC of 0.9228\u00b10.0058. Through the synergistic effect of multi-view heterogeneous information fusion and cross-domain knowledge transfer, MVCVAE achieves excellent performance in lncRNA-cervical cancer association prediction, effectively alleviating the bottleneck constraint of cervical cancer-specific lncRNA association data scarcity.</p>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              17
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "DHGCMDA: a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction"
+        ],
+        "doi": "10.1186/s12859-026-06436-w",
+        "id": null,
+        "abstract": null,
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              1
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "Enhancing Drug Peptide Sequence Prediction Using Multi-view Feature Fusion Learning"
+        ],
+        "doi": "10.2174/0115748936294345240510112941",
+        "id": null,
+        "abstract": "<jats:sec>\n<jats:title>Background:</jats:title>\n<jats:p>Currently, various types of peptides have broad implications for human\nhealth and disease. Some drug peptides play significant roles in sensory science, drug research, and\ncancer biology. The prediction and classification of peptide sequences are of significant importance\nto various industries. However, predicting peptide sequences through biological experiments is a\ntime-consuming and expensive process. Moreover, the task of protein sequence classification and\nprediction faces challenges due to the high dimensionality, nonlinearity, and irregularity of protein\nsequence data, along with the presence of numerous unknown or unlabeled protein sequences.\nTherefore, an accurate and efficient method for predicting peptide category is necessary.</jats:p>\n</jats:sec>\n<jats:sec>\n<jats:title>Methods:</jats:title>\n<jats:p>In our work, we used two pre-trained models to extract sequence features, TextCNN\n(Convolutional Neural Networks for Text Classification) and Transformer. We extracted the overall\nsemantic information of the sequences using Transformer Encoder and extracted the local semantic\ninformation between sequences using TextCNN and concatenated them into a new feature. Finally,\nwe used the concatenated feature for classification prediction. To validate this approach, we conducted\nexperiments on the BP dataset, THP dataset and DPP-IV dataset and compared them with\nsome pre-trained models.</jats:p>\n</jats:sec>\n<jats:sec>\n<jats:title>Results:</jats:title>\n<jats:p>Since TextCNN and Transformer Encoder extract features from different perspectives, the\nconcatenated feature contains multi-view information, which improves the accuracy of the peptide\npredictor.</jats:p>\n</jats:sec>\n<jats:sec>\n<jats:title>Conclusion:</jats:title>\n<jats:p>Ultimately, our model demonstrated superior metrics, highlighting its efficacy in peptide\nsequence prediction and classification.</jats:p>\n</jats:sec>",
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      },
+      {
+        "title": [
+          "MolP-PC: a multi-view fusion and multi-task learning framework for drug ADMET property prediction"
+        ],
+        "doi": "10.1016/s1875-5364(25)60945-9",
+        "id": null,
+        "abstract": null,
+        "firstPublicationDate": null,
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              11
+            ]
+          ]
+        },
+        "source": "crossref_recent_mda"
+      }
+    ]
+  },
+  "crossref_lp_calibration": {
+    "query": "link prediction degree calibration generalization graph neural network",
+    "url": "https://api.crossref.org/works?query=link+prediction+degree+calibration+generalization+graph+neural+network&filter=from-pub-date%3A2025-01-01%2Cuntil-pub-date%3A2026-10-06&rows=20",
+    "error": "HTTP Error 429: Too Many Requests"
+  }
+}

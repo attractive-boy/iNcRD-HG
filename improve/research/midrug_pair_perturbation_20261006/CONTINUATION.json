@@ -1,0 +1,97 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn_classification": "progress:12 SAM fits and sensitivity diagnosis",
+  "current_turn": "progress:12 pair-representation perturbation fits and new checkpoint replays,12 immutable control checks",
+  "best": {
+    "config": "adv_rec10",
+    "mean_inner_auc": 0.953517524680538,
+    "mean_inner_ap": 0.912549554731144,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.00091772962578666,
+          "fold_deltas": [
+            0.0018196561498068364,
+            0.0002722803955537145,
+            0.000661252331999429
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0007244456362787144,
+          "fold_deltas": [
+            0.0037364918986820816,
+            -0.002920610875311924,
+            0.0013574558854659857
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.00019495732963333476,
+          "fold_deltas": [
+            6.911173392754044e-05,
+            -0.00038608844732312964,
+            -0.00026789527550441505
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0015410267229044965,
+          "fold_deltas": [
+            -2.1950728612440962e-05,
+            -0.0035677023142399733,
+            -0.001033427125861075
+          ]
+        }
+      },
+      "random_rec10": {
+        "auc": {
+          "mean_delta": -0.0003361052989382755,
+          "fold_deltas": [
+            -0.0006653614135880836,
+            -0.0002843053972501064,
+            -5.864908597663643e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0014966924949491405,
+          "fold_deltas": [
+            -0.0006963298491462488,
+            -0.0031756726704579297,
+            -0.0006180749652432427
+          ]
+        }
+      },
+      "weight_sam_rec10": {
+        "auc": {
+          "mean_delta": -0.0001339944704046303,
+          "fold_deltas": [
+            -0.0002318033311853318,
+            -0.0003912420194787103,
+            0.00022106193945015118
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00046810118023243863,
+          "fold_deltas": [
+            0.0002676599194912921,
+            -0.0026589595884941586,
+            0.0009869961283055506
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0015410267229044965
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Review full-graph source/query-conditioned propagation and historical path/Bellman-Ford implementations before a new frozen mechanism. See POST_EXPERIMENT_REVIEW.json; do not repeat ID embeddings, local subgraphs or perturbation grids as if new.",
+  "post_selection_sensitivity": {
+    "status": "passed",
+    "artifact_sha256": "4b32e4a51da620a8a883cbd244adcc54facb5c03558ba229098107bd0d2f0712",
+    "selection_changed": false
+  }
+}

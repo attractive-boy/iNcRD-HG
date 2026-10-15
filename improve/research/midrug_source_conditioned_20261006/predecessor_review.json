@@ -1,0 +1,103 @@
+{
+  "previous_turn_classification": "progress:12 pair-perturbation fits, checkpoint replays and sensitivity evidence",
+  "previous_selection_sha256": "1e8d40fe63b8e9e5e5ade918ba4d00d8914b96b8817ef6af121dccb21712da90",
+  "previous_archive_sha256": "e88bac0b7d5ec51fe16422576c5422fe724830447a4bbd3e1f13660dd99b7d07",
+  "previous_best": {
+    "config": "adv_rec10",
+    "mean_inner_auc": 0.953517524680538,
+    "mean_inner_ap": 0.912549554731144,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.00091772962578666,
+          "fold_deltas": [
+            0.0018196561498068364,
+            0.0002722803955537145,
+            0.000661252331999429
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0007244456362787144,
+          "fold_deltas": [
+            0.0037364918986820816,
+            -0.002920610875311924,
+            0.0013574558854659857
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.00019495732963333476,
+          "fold_deltas": [
+            6.911173392754044e-05,
+            -0.00038608844732312964,
+            -0.00026789527550441505
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0015410267229044965,
+          "fold_deltas": [
+            -2.1950728612440962e-05,
+            -0.0035677023142399733,
+            -0.001033427125861075
+          ]
+        }
+      },
+      "random_rec10": {
+        "auc": {
+          "mean_delta": -0.0003361052989382755,
+          "fold_deltas": [
+            -0.0006653614135880836,
+            -0.0002843053972501064,
+            -5.864908597663643e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0014966924949491405,
+          "fold_deltas": [
+            -0.0006963298491462488,
+            -0.0031756726704579297,
+            -0.0006180749652432427
+          ]
+        }
+      },
+      "weight_sam_rec10": {
+        "auc": {
+          "mean_delta": -0.0001339944704046303,
+          "fold_deltas": [
+            -0.0002318033311853318,
+            -0.0003912420194787103,
+            0.00022106193945015118
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00046810118023243863,
+          "fold_deltas": [
+            0.0002676599194912921,
+            -0.0026589595884941586,
+            0.0009869961283055506
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0015410267229044965
+  },
+  "source_hashes": {
+    "improve/research/plmf_enc_20260924/run_enc.py": "857f76d5ec3777ce8c654b19de425c999f67986770b3130b5dcea9a25f8eee86",
+    "improve/research/plmf_enc_20260924/REPORT_ENC.md": "efbde3e6e5b96c2e631a7751aa4f998a8955dc6a9af75641484a47d64de14a63",
+    "improve/biopath_models.py": "df300b878edb371a1f3f35233a327fe6c999055d85e7915c3010ac5cf9b0619b",
+    "improve/biopath_experiment.py": "e60ca7885d6f381da6edad38d2fa39de866cc95e87c25373dfd33b679873f3ff",
+    "improve/research/path_geometry_20260914/SELECTED_SOURCE.md": "e92fbb0b934b5e8e0dcabf77050a7fe234c6b5196a7f94d863ef1a1cc92e09cb",
+    "improve/research/midrug_subgraph_20261006/model.py": "91da8e312e60931fc47d7715fddf25f4cd223a3eff93710faa40fd5863d3649a"
+  },
+  "historical_loaders_executed": false,
+  "findings": [
+    "PLMF NBF source-conditioned3-layer exact query deletion already exists; complete-channel PLMF gains were small, so this is a transfer study, not a new family or guaranteed improvement.",
+    "Historical BioPathNet study used other nodes/background annotations/pretrained parent and OOF-group deletion; none of those inputs or weights are used here.",
+    "Pure-miRNA enclosing-subgraph branch was capped16/32 nodes/type; present propagation spans all605 miRNAs and216 drugs but uses only3 layers.",
+    "Drug-source and equal-norm uniform boundaries keep initial miRNA states zero, so layer1 deletion affects only query miRNA; the three-layer correction remains valid for both.",
+    "Unlike previous PLMF dense batched operator, use sparse matmul over all source contexts; same-type operators use receiver-by-sender orientation and include weighted/directed test cases.",
+    "New condition features join original fusion before lin1 nonlinearity via zero-initialized projection. Original base and reconstruction initialization exactly match corresponding frozen controls."
+  ],
+  "no_lncrna": true
+}

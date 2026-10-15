@@ -1,0 +1,263 @@
+{
+  "previous_selection_sha256": "f3abc855cd184121492d709a6fad336a44f828bd56c75565eeaaa48d40e05728",
+  "previous_archive_sha256": "c9bd4c898ab4e6ebdbbcc8a32493b06ace802a06a776cc1be5bad1b298b1f52b",
+  "previous_best": {
+    "config": "full_rec10",
+    "mean_inner_auc": 0.9536760195659838,
+    "mean_inner_ap": 0.9140345802842952,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0010762245112324968,
+          "fold_deltas": [
+            0.0021287272580541305,
+            0.00044707238449770426,
+            0.0006528738911456555
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0022094711894298977,
+          "fold_deltas": [
+            0.003787698169551934,
+            0.0005591654614593988,
+            0.00228154993727836
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -3.6462444187497965e-05,
+          "fold_deltas": [
+            0.00037818284217483455,
+            -0.0002112964583791399,
+            -0.00027627371635818854
+          ]
+        },
+        "ap": {
+          "mean_delta": -5.600116975331323e-05,
+          "fold_deltas": [
+            2.925554225741145e-05,
+            -8.792597746865027e-05,
+            -0.00010933307404870085
+          ]
+        }
+      },
+      "soft_rec10": {
+        "auc": {
+          "mean_delta": 9.173718706441865e-05,
+          "fold_deltas": [
+            5.408744394319598e-05,
+            0.0003289696892655458,
+            -0.00010784557201548584
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00016402577213499767,
+          "fold_deltas": [
+            -0.0003325226174177853,
+            -0.0006602530649686411,
+            0.0005006983659814335
+          ]
+        }
+      },
+      "direct_rec10": {
+        "auc": {
+          "mean_delta": 7.18570479882515e-05,
+          "fold_deltas": [
+            -3.391196882163161e-05,
+            0.0003263929031877,
+            -7.690979040131385e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -8.769154712836198e-05,
+          "fold_deltas": [
+            0.00013622734896978628,
+            -0.000776470493397019,
+            0.0003771685030421468
+          ]
+        }
+      },
+      "uniform_rec10": {
+        "auc": {
+          "mean_delta": -0.0002187529222736906,
+          "fold_deltas": [
+            -0.00020733520178273235,
+            -0.0001614785942084529,
+            -0.0002874449708298865
+          ]
+        },
+        "ap": {
+          "mean_delta": -8.352460489624569e-05,
+          "fold_deltas": [
+            -0.00013192324409372347,
+            5.588242933696197e-05,
+            -0.00017453299993197557
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0002187529222736906
+  },
+  "promoted": false,
+  "hypothesis": "Assess exact SAM vs same-radius random direction, motivated by late training-loss reduction with heldout-score decline; sharp minima not established by those curves alone",
+  "control_curves": [
+    {
+      "name": "control",
+      "fold": 0,
+      "metadata_sha256": "991d9cb79419d1714158d5f7edd5ec4ebdf3928ed5d372c4262a25994853030d",
+      "curves_sha256": "75b69cbed6c2086859fe7070704d16b1f7bd15a7ae7590dc079db2b69b45378f",
+      "selected": {
+        "epoch": 336,
+        "loss": 0.2381967157125473,
+        "inner_auc": 0.9516144887384361,
+        "inner_ap": 0.911851819447599,
+        "selection_score": 0.9317331540930176
+      },
+      "last": {
+        "epoch": 536,
+        "loss": 0.22074981033802032,
+        "inner_auc": 0.9487079325246258,
+        "inner_ap": 0.9079913317350428,
+        "selection_score": 0.9283496321298343
+      }
+    },
+    {
+      "name": "control",
+      "fold": 1,
+      "metadata_sha256": "e74412e70af7d21b5b45261a1cb8fd42f3373d914a5316cbcf45e949d50b35f1",
+      "curves_sha256": "97e53b31ddcf5adea2eb782a5ebedcf04188eecd0f42f753a0ca2a6c9a87658a",
+      "selected": {
+        "epoch": 553,
+        "loss": 0.23277510702610016,
+        "inner_auc": 0.9555182303320362,
+        "inner_ap": 0.9192275595789781,
+        "selection_score": 0.9373728949555071
+      },
+      "last": {
+        "epoch": 753,
+        "loss": 0.22645825147628784,
+        "inner_auc": 0.9546923703941022,
+        "inner_ap": 0.9177940094407689,
+        "selection_score": 0.9362431899174355
+      }
+    },
+    {
+      "name": "control",
+      "fold": 2,
+      "metadata_sha256": "1f18dfca5295e136d67df6dd6c7dda29753c5d093a6cd2413444b60e32e51415",
+      "curves_sha256": "7d8ff748f4985121e2e66a2eb9fe944cfa4523f3eccd556b1db162e011e41fe2",
+      "selected": {
+        "epoch": 377,
+        "loss": 0.23412084579467773,
+        "inner_auc": 0.9506666660937818,
+        "inner_ap": 0.9043959482580187,
+        "selection_score": 0.9275313071759003
+      },
+      "last": {
+        "epoch": 577,
+        "loss": 0.21825328469276428,
+        "inner_auc": 0.9492455536258884,
+        "inner_ap": 0.8999617223281018,
+        "selection_score": 0.9246036379769951
+      }
+    },
+    {
+      "name": "unmasked10",
+      "fold": 0,
+      "metadata_sha256": "8f12f8c098c497d270cbcca3b1f22f2306dd9f61465fafd5b9936cb9a7cff131",
+      "curves_sha256": "094a7b5c83e98e55e682376f90b0757ffbec9040c631e6b8b44bbe0b139e17ef",
+      "selected": {
+        "epoch": 244,
+        "loss": 7.379324913024902,
+        "bce": 0.24592100083827972,
+        "reconstruction": 0.7133404016494751,
+        "reconstruction_rna": 0.8293002247810364,
+        "reconstruction_drug": 0.5973805785179138,
+        "weight": 10.0,
+        "inner_auc": 0.9533650331543154,
+        "inner_ap": 0.9156102620748935,
+        "selection_score": 0.9344876476146045
+      },
+      "last": {
+        "epoch": 444,
+        "loss": 5.48402214050293,
+        "bce": 0.23432853817939758,
+        "reconstruction": 0.5249693393707275,
+        "reconstruction_rna": 0.5564302802085876,
+        "reconstruction_drug": 0.4935084581375122,
+        "weight": 10.0,
+        "inner_auc": 0.9523854494473423,
+        "inner_ap": 0.9128627744080455,
+        "selection_score": 0.9326241119276939
+      }
+    },
+    {
+      "name": "unmasked10",
+      "fold": 1,
+      "metadata_sha256": "e2a54497f269b0e1b3524795c1c8c3ed1f48ba726e6cc62e1999edd3f029620f",
+      "curves_sha256": "36105ccf7478aea96e5dddb9dc4b637d672d411a20dfa94210ba15ac050eb5a9",
+      "selected": {
+        "epoch": 512,
+        "loss": 5.2056756019592285,
+        "bce": 0.2346682846546173,
+        "reconstruction": 0.49710071086883545,
+        "reconstruction_rna": 0.5350522398948669,
+        "reconstruction_drug": 0.45914921164512634,
+        "weight": 10.0,
+        "inner_auc": 0.956176599174913,
+        "inner_ap": 0.9198746510179061,
+        "selection_score": 0.9380256250964096
+      },
+      "last": {
+        "epoch": 712,
+        "loss": 4.725619792938232,
+        "bce": 0.22346797585487366,
+        "reconstruction": 0.4502151906490326,
+        "reconstruction_rna": 0.454580157995224,
+        "reconstruction_drug": 0.4458502233028412,
+        "weight": 10.0,
+        "inner_auc": 0.9555989696291403,
+        "inner_ap": 0.9188547719630165,
+        "selection_score": 0.9372268707960784
+      }
+    },
+    {
+      "name": "unmasked10",
+      "fold": 2,
+      "metadata_sha256": "abd5bd99263378a07394fa2a9ef2dad71b6b4dfaaefe0fd546aa864fbc075c36",
+      "curves_sha256": "a469c45ce7985cb396efa69da06ffa02121738534b668164f2f09885bce7ec11",
+      "selected": {
+        "epoch": 327,
+        "loss": 5.873793125152588,
+        "bce": 0.23631328344345093,
+        "reconstruction": 0.5637480020523071,
+        "reconstruction_rna": 0.6210815906524658,
+        "reconstruction_drug": 0.5064144134521484,
+        "weight": 10.0,
+        "inner_auc": 0.9515958137012857,
+        "inner_ap": 0.9067868312693458,
+        "selection_score": 0.9291913224853157
+      },
+      "last": {
+        "epoch": 527,
+        "loss": 5.051156997680664,
+        "bce": 0.2244880497455597,
+        "reconstruction": 0.48266685009002686,
+        "reconstruction_rna": 0.531528115272522,
+        "reconstruction_drug": 0.43380558490753174,
+        "weight": 10.0,
+        "inner_auc": 0.9502952218825971,
+        "inner_ap": 0.902612167831761,
+        "selection_score": 0.9264536948571791
+      }
+    }
+  ],
+  "prior_objectives": {
+    "source": "improve/research/midrug_signedpaths_20261006/dual_objective.py",
+    "sha256": "5c1f79e6244b64ffc5e59a30198b2394b8a579465b24836aeee83fa701303d68",
+    "scope": "Historical full graph; source read only, not executed or eligible"
+  },
+  "literature_notes_sha256": "213728cb7ed34092d3ffe517d3feace1bee0af78e8d654bb49ca446dd3c621f3",
+  "no_lncrna": true
+}

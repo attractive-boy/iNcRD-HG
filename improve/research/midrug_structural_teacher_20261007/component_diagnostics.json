@@ -1,0 +1,736 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "config": "block_ema",
+      "fold": 0,
+      "train": {
+        "auc": 0.9591175425421313,
+        "ap": 0.9225849971187564
+      },
+      "val": {
+        "auc": 0.9537522305704808,
+        "ap": 0.9150004389893287
+      },
+      "teacher_student_cosine": {
+        "miRNA": 0.8673825263977051,
+        "drug": 0.8102221488952637
+      },
+      "teacher_centered_rms": {
+        "miRNA": 8.032750129699707,
+        "drug": 2.8472800254821777
+      },
+      "selected_checkpoint_masks": [
+        {
+          "mask_epoch": 291,
+          "latent": 0.42769914865493774,
+          "typed_latent": {
+            "miRNA": 0.6413562297821045,
+            "drug": 0.21404209733009338
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.5,
+              "mean_visible_degree": 3.9536423683166504
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 1.0,
+              "mean_visible_degree": 0.0
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5648148059844971,
+              "mean_visible_degree": 4.342592716217041
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.25827813148498535,
+              "mean_visible_degree": 2.1125826835632324
+            }
+          }
+        },
+        {
+          "mask_epoch": 292,
+          "latent": 0.377725213766098,
+          "typed_latent": {
+            "miRNA": 0.4175511598587036,
+            "drug": 0.33789926767349243
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.4039735198020935,
+              "mean_visible_degree": 3.9172184467315674
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 1.0,
+              "mean_visible_degree": 0.0
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.42592594027519226,
+              "mean_visible_degree": 5.916666507720947
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.33112582564353943,
+              "mean_visible_degree": 1.5529801845550537
+            }
+          }
+        }
+      ],
+      "mean_latent": 0.4027121812105179
+    },
+    {
+      "config": "random_ema",
+      "fold": 0,
+      "train": {
+        "auc": 0.958355173973925,
+        "ap": 0.9213021007902875
+      },
+      "val": {
+        "auc": 0.953275316679838,
+        "ap": 0.9153097161346766
+      },
+      "teacher_student_cosine": {
+        "miRNA": 0.7814772725105286,
+        "drug": 0.6713688969612122
+      },
+      "teacher_centered_rms": {
+        "miRNA": 9.329689025878906,
+        "drug": 3.8307015895843506
+      },
+      "selected_checkpoint_masks": [
+        {
+          "mask_epoch": 251,
+          "latent": 0.30148184299468994,
+          "typed_latent": {
+            "miRNA": 0.42902910709381104,
+            "drug": 0.17393454909324646
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.1357615888118744,
+              "mean_visible_degree": 12.54966926574707
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 0.49074074625968933,
+              "mean_visible_degree": 0.9351851940155029
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5,
+              "mean_visible_degree": 4.759259223937988
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.2450331151485443,
+              "mean_visible_degree": 2.023178815841675
+            }
+          }
+        },
+        {
+          "mask_epoch": 252,
+          "latent": 0.29825592041015625,
+          "typed_latent": {
+            "miRNA": 0.38674628734588623,
+            "drug": 0.20976553857326508
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.14900662004947662,
+              "mean_visible_degree": 12.523179054260254
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 0.5740740895271301,
+              "mean_visible_degree": 0.9351851940155029
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5,
+              "mean_visible_degree": 5.703703880310059
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.33112582564353943,
+              "mean_visible_degree": 1.695364236831665
+            }
+          }
+        }
+      ],
+      "mean_latent": 0.2998688817024231
+    },
+    {
+      "config": "block_current",
+      "fold": 0,
+      "train": {
+        "auc": 0.9623372852140125,
+        "ap": 0.9291292949586772
+      },
+      "val": {
+        "auc": 0.9534577544867896,
+        "ap": 0.9152846613041057
+      },
+      "teacher_student_cosine": {
+        "miRNA": 1.0,
+        "drug": 1.0
+      },
+      "teacher_centered_rms": {
+        "miRNA": 5.304695129394531,
+        "drug": 1.8647308349609375
+      },
+      "selected_checkpoint_masks": [
+        {
+          "mask_epoch": 445,
+          "latent": 0.5251448750495911,
+          "typed_latent": {
+            "miRNA": 0.6587207317352295,
+            "drug": 0.39156898856163025
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.45695364475250244,
+              "mean_visible_degree": 2.8013246059417725
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 1.0,
+              "mean_visible_degree": 0.0
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.43518519401550293,
+              "mean_visible_degree": 6.777777671813965
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.40066224336624146,
+              "mean_visible_degree": 1.1655628681182861
+            }
+          }
+        },
+        {
+          "mask_epoch": 446,
+          "latent": 0.5137182474136353,
+          "typed_latent": {
+            "miRNA": 0.3678204119205475,
+            "drug": 0.6596161127090454
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.39403972029685974,
+              "mean_visible_degree": 2.834437131881714
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 1.0,
+              "mean_visible_degree": 0.0
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.6111111044883728,
+              "mean_visible_degree": 3.2685184478759766
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.19205297529697418,
+              "mean_visible_degree": 2.413907289505005
+            }
+          }
+        }
+      ],
+      "mean_latent": 0.5194315612316132
+    },
+    {
+      "config": "block_ema",
+      "fold": 1,
+      "train": {
+        "auc": 0.9609948586664743,
+        "ap": 0.9271062889950761
+      },
+      "val": {
+        "auc": 0.9562891188336434,
+        "ap": 0.9195280271618975
+      },
+      "teacher_student_cosine": {
+        "miRNA": 0.9391759037971497,
+        "drug": 0.8963302969932556
+      },
+      "teacher_centered_rms": {
+        "miRNA": 6.30292272567749,
+        "drug": 1.8129154443740845
+      },
+      "selected_checkpoint_masks": [
+        {
+          "mask_epoch": 467,
+          "latent": 0.5888775587081909,
+          "typed_latent": {
+            "miRNA": 0.6534247994422913,
+            "drug": 0.5243303775787354
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.5231788158416748,
+              "mean_visible_degree": 3.78145694732666
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 1.0,
+              "mean_visible_degree": 0.0
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.4166666567325592,
+              "mean_visible_degree": 6.0
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.2847682237625122,
+              "mean_visible_degree": 1.6456953287124634
+            }
+          }
+        },
+        {
+          "mask_epoch": 468,
+          "latent": 0.26941779255867004,
+          "typed_latent": {
+            "miRNA": 0.2605125904083252,
+            "drug": 0.2783229947090149
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.3509933650493622,
+              "mean_visible_degree": 3.8013246059417725
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 1.0,
+              "mean_visible_degree": 0.0
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.6203703880310059,
+              "mean_visible_degree": 4.611111164093018
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.25827813148498535,
+              "mean_visible_degree": 2.139072895050049
+            }
+          }
+        }
+      ],
+      "mean_latent": 0.4291476756334305
+    },
+    {
+      "config": "random_ema",
+      "fold": 1,
+      "train": {
+        "auc": 0.9634053351937732,
+        "ap": 0.93129959956653
+      },
+      "val": {
+        "auc": 0.9560683741596455,
+        "ap": 0.9201529883737399
+      },
+      "teacher_student_cosine": {
+        "miRNA": 0.8948677778244019,
+        "drug": 0.9149248600006104
+      },
+      "teacher_centered_rms": {
+        "miRNA": 5.008296966552734,
+        "drug": 1.5482925176620483
+      },
+      "selected_checkpoint_masks": [
+        {
+          "mask_epoch": 597,
+          "latent": 0.1901746392250061,
+          "typed_latent": {
+            "miRNA": 0.1875823587179184,
+            "drug": 0.1927669197320938
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.13245032727718353,
+              "mean_visible_degree": 12.37417221069336
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 0.49074074625968933,
+              "mean_visible_degree": 0.9537037014961243
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5092592835426331,
+              "mean_visible_degree": 3.879629611968994
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.21192052960395813,
+              "mean_visible_degree": 2.10927152633667
+            }
+          }
+        },
+        {
+          "mask_epoch": 598,
+          "latent": 0.17648306488990784,
+          "typed_latent": {
+            "miRNA": 0.17995531857013702,
+            "drug": 0.17301082611083984
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.1589404046535492,
+              "mean_visible_degree": 12.367549896240234
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 0.5833333134651184,
+              "mean_visible_degree": 0.9537037014961243
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5277777910232544,
+              "mean_visible_degree": 5.898148059844971
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.3874172270298004,
+              "mean_visible_degree": 1.387417197227478
+            }
+          }
+        }
+      ],
+      "mean_latent": 0.18332885205745697
+    },
+    {
+      "config": "block_current",
+      "fold": 1,
+      "train": {
+        "auc": 0.9614711347287922,
+        "ap": 0.9279993622860417
+      },
+      "val": {
+        "auc": 0.9563732938455182,
+        "ap": 0.9199784045835409
+      },
+      "teacher_student_cosine": {
+        "miRNA": 1.0,
+        "drug": 1.0
+      },
+      "teacher_centered_rms": {
+        "miRNA": 5.488136291503906,
+        "drug": 1.6988766193389893
+      },
+      "selected_checkpoint_masks": [
+        {
+          "mask_epoch": 479,
+          "latent": 0.37126731872558594,
+          "typed_latent": {
+            "miRNA": 0.27304017543792725,
+            "drug": 0.469494491815567
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.3344370722770691,
+              "mean_visible_degree": 5.056291580200195
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 0.9722222089767456,
+              "mean_visible_degree": 0.0833333358168602
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5370370149612427,
+              "mean_visible_degree": 4.296296119689941
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.2615894079208374,
+              "mean_visible_degree": 2.1291391849517822
+            }
+          }
+        },
+        {
+          "mask_epoch": 480,
+          "latent": 0.572931170463562,
+          "typed_latent": {
+            "miRNA": 0.5259310603141785,
+            "drug": 0.6199312806129456
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.44701987504959106,
+              "mean_visible_degree": 5.016556262969971
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 0.9629629850387573,
+              "mean_visible_degree": 0.0833333358168602
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5,
+              "mean_visible_degree": 5.953703880310059
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.2847682237625122,
+              "mean_visible_degree": 1.5364238023757935
+            }
+          }
+        }
+      ],
+      "mean_latent": 0.472099244594574
+    },
+    {
+      "config": "block_ema",
+      "fold": 2,
+      "train": {
+        "auc": 0.9618871058081688,
+        "ap": 0.9293130087035136
+      },
+      "val": {
+        "auc": 0.9512735659761399,
+        "ap": 0.906328957454695
+      },
+      "teacher_student_cosine": {
+        "miRNA": 0.9173688888549805,
+        "drug": 0.8447828888893127
+      },
+      "teacher_centered_rms": {
+        "miRNA": 7.834136486053467,
+        "drug": 2.301344156265259
+      },
+      "selected_checkpoint_masks": [
+        {
+          "mask_epoch": 389,
+          "latent": 0.33210253715515137,
+          "typed_latent": {
+            "miRNA": 0.24430955946445465,
+            "drug": 0.4198955297470093
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.3410595953464508,
+              "mean_visible_degree": 6.364238262176514
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 1.0,
+              "mean_visible_degree": 0.0
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5185185074806213,
+              "mean_visible_degree": 5.5
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.3476821184158325,
+              "mean_visible_degree": 1.4801324605941772
+            }
+          }
+        },
+        {
+          "mask_epoch": 390,
+          "latent": 0.36308911442756653,
+          "typed_latent": {
+            "miRNA": 0.48681387305259705,
+            "drug": 0.23936434090137482
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.443708598613739,
+              "mean_visible_degree": 6.364238262176514
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 1.0,
+              "mean_visible_degree": 0.0
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5,
+              "mean_visible_degree": 4.166666507720947
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.22847682237625122,
+              "mean_visible_degree": 1.9437086582183838
+            }
+          }
+        }
+      ],
+      "mean_latent": 0.34759582579135895
+    },
+    {
+      "config": "random_ema",
+      "fold": 2,
+      "train": {
+        "auc": 0.9610284834210417,
+        "ap": 0.9275294038916752
+      },
+      "val": {
+        "auc": 0.9513367265302686,
+        "ap": 0.9057682686282471
+      },
+      "teacher_student_cosine": {
+        "miRNA": 0.9019462466239929,
+        "drug": 0.8056671023368835
+      },
+      "teacher_centered_rms": {
+        "miRNA": 9.104375839233398,
+        "drug": 2.953181266784668
+      },
+      "selected_checkpoint_masks": [
+        {
+          "mask_epoch": 325,
+          "latent": 0.17958205938339233,
+          "typed_latent": {
+            "miRNA": 0.20500385761260986,
+            "drug": 0.1541602462530136
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.14900662004947662,
+              "mean_visible_degree": 12.433774948120117
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 0.5185185074806213,
+              "mean_visible_degree": 0.9166666865348816
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5555555820465088,
+              "mean_visible_degree": 5.268518447875977
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.2947019934654236,
+              "mean_visible_degree": 1.774834394454956
+            }
+          }
+        },
+        {
+          "mask_epoch": 326,
+          "latent": 0.18758870661258698,
+          "typed_latent": {
+            "miRNA": 0.22388283908367157,
+            "drug": 0.15129457414150238
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.12913906574249268,
+              "mean_visible_degree": 12.400662422180176
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 0.5277777910232544,
+              "mean_visible_degree": 0.9166666865348816
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.49074074625968933,
+              "mean_visible_degree": 4.981481552124023
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.24834437668323517,
+              "mean_visible_degree": 1.8741722106933594
+            }
+          }
+        }
+      ],
+      "mean_latent": 0.18358538299798965
+    },
+    {
+      "config": "block_current",
+      "fold": 2,
+      "train": {
+        "auc": 0.9604114861112273,
+        "ap": 0.9263846279919519
+      },
+      "val": {
+        "auc": 0.9514200812751729,
+        "ap": 0.9062115779938367
+      },
+      "teacher_student_cosine": {
+        "miRNA": 1.0,
+        "drug": 1.0
+      },
+      "teacher_centered_rms": {
+        "miRNA": 6.664118766784668,
+        "drug": 1.9148186445236206
+      },
+      "selected_checkpoint_masks": [
+        {
+          "mask_epoch": 299,
+          "latent": 0.4448102116584778,
+          "typed_latent": {
+            "miRNA": 0.279151052236557,
+            "drug": 0.610469400882721
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.33774834871292114,
+              "mean_visible_degree": 6.778145790100098
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 1.0,
+              "mean_visible_degree": 0.0
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5740740895271301,
+              "mean_visible_degree": 3.2685184478759766
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.18543046712875366,
+              "mean_visible_degree": 2.347681999206543
+            }
+          }
+        },
+        {
+          "mask_epoch": 300,
+          "latent": 0.5249365568161011,
+          "typed_latent": {
+            "miRNA": 0.6325403451919556,
+            "drug": 0.41733282804489136
+          },
+          "visible_context": {
+            "miRNA|MiMi|miRNA": {
+              "empty_fraction": 0.40066224336624146,
+              "mean_visible_degree": 6.748344421386719
+            },
+            "drug|DrugDrug|drug": {
+              "empty_fraction": 1.0,
+              "mean_visible_degree": 0.0
+            },
+            "miRNA|MiDrug|drug": {
+              "empty_fraction": 0.5092592835426331,
+              "mean_visible_degree": 6.611111164093018
+            },
+            "drug|rev_MiDrug|miRNA": {
+              "empty_fraction": 0.38410595059394836,
+              "mean_visible_degree": 1.1688741445541382
+            }
+          }
+        }
+      ],
+      "mean_latent": 0.48487338423728943
+    }
+  ],
+  "means": [
+    {
+      "config": "block_ema",
+      "train": {
+        "auc": 0.9606665023389248,
+        "ap": 0.9263347649391154
+      },
+      "val": {
+        "auc": 0.9537716384600881,
+        "ap": 0.9136191412019737
+      },
+      "mean_latent": 0.3931518942117691,
+      "teacher_student_cosine": {
+        "miRNA": 0.9079757730166117,
+        "drug": 0.8504451115926107
+      }
+    },
+    {
+      "config": "random_ema",
+      "train": {
+        "auc": 0.9609296641962466,
+        "ap": 0.9267103680828308
+      },
+      "val": {
+        "auc": 0.9535601391232508,
+        "ap": 0.9137436577122212
+      },
+      "mean_latent": 0.22226103891928992,
+      "teacher_student_cosine": {
+        "miRNA": 0.8594304323196411,
+        "drug": 0.797320286432902
+      }
+    },
+    {
+      "config": "block_current",
+      "train": {
+        "auc": 0.9614066353513441,
+        "ap": 0.927837761745557
+      },
+      "val": {
+        "auc": 0.9537503765358268,
+        "ap": 0.9138248812938278
+      },
+      "mean_latent": 0.4921347300211589,
+      "teacher_student_cosine": {
+        "miRNA": 1.0,
+        "drug": 1.0
+      }
+    }
+  ],
+  "selection_sha256": "8f038e085a3f3a6249ec3e6839d42809cf2c3cb9c87046663151a83c43a8acb7",
+  "selection_changed": false,
+  "no_parameter_or_buffer_updates": true,
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false
+}

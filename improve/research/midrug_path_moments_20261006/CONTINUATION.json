@@ -1,0 +1,56 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn": "progress: observed-context experiment and common-ranking-error bound",
+  "current_turn": "progress: exact joint path moments, independent enumeration and gradient checks, 18 fits and 24 checkpoint replays",
+  "best": {
+    "config": "independent_rec10",
+    "mean_inner_auc": 0.9537463219185764,
+    "mean_inner_ap": 0.9139028710119175,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0011465268638250297,
+          "fold_deltas": [
+            0.0021368833011883304,
+            0.000555297399765009,
+            0.0007473998905217494
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0020777619170521864,
+          "fold_deltas": [
+            0.003806815906254757,
+            0.00023190964029973227,
+            0.0021945602046020696
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 3.383990840503485e-05,
+          "fold_deltas": [
+            0.0003863388853090344,
+            -0.00010307144311183514,
+            -0.0001817477169820947
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00018771044213102458,
+          "fold_deltas": [
+            4.8373278960234245e-05,
+            -0.00041518179862831683,
+            -0.00019632280672499114
+          ]
+        }
+      }
+    },
+    "selection_score": -0.00018771044213102458
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Freeze original-validation confirmation if promoted; otherwise use paired controls to determine the next mechanism."
+}

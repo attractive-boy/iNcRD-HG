@@ -1,0 +1,79 @@
+{
+  "previous_turn": "progress: audited12 fits + fixed-radius sensitivity diagnosis",
+  "previous_best": {
+    "config": "sam_rec10",
+    "mean_inner_auc": 0.9536515191509426,
+    "mean_inner_ap": 0.9130176559113764,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0010517240961912904,
+          "fold_deltas": [
+            0.0020514594809921682,
+            0.0006635224150324248,
+            0.00044019039254927783
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.001192546816511153,
+          "fold_deltas": [
+            0.0034688319791907896,
+            -0.0002616512868177656,
+            0.0003704597571604351
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -6.0962859228704445e-05,
+          "fold_deltas": [
+            0.00030091506511287225,
+            5.153572155580655e-06,
+            -0.0004889572149545662
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0010729255426720579,
+          "fold_deltas": [
+            -0.00028961064810373305,
+            -0.0009087427257458147,
+            -0.0020204232541666256
+          ]
+        }
+      },
+      "random_rec10": {
+        "auc": {
+          "mean_delta": -0.00014709300871999323,
+          "fold_deltas": [
+            8.54238201960511e-05,
+            -0.0001395759125474294,
+            -0.0003871269338086014
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0010657260476862513,
+          "fold_deltas": [
+            -0.0005124723762284233,
+            -0.0012254376666176459,
+            -0.001459268100212685
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0010729255426720579
+  },
+  "previous_selection_sha256": "d9702d4a14818a8d86f4c594be878cd3dc1fafac18906f0c938c309eab838e34",
+  "previous_archive_sha256": "6b1e3fad10abed5f451a91dcf8014d764c06b74605d6dd593a1120e20a1aeadb",
+  "previous_sensitivity_sha256": "2780f73534a9b8ec37ae91023a84c8d8631e1aeaeec9d537a7e81bf50652da1a",
+  "motivation": "Standard SAM reduces measured weight sensitivity but not enough heldout ranking error; test nonlinear pair-feature regularization with matched random direction",
+  "historical_code_read_only": {
+    "improve/stochastic_augmentation_graph_v1.py": "c0729af933fbc8b083ff27b768c13a534af0d29b24779383a471cc15183f307a",
+    "improve/anchor_stochastic_augmentation_v1.py": "9e0bd879a59f8ff98aa14e61aba3420d43e650899abd2a67193409cf72325ff4",
+    "improve/sharpness_graph_v1.py": "49f346bb2d84281082c9cd38f65254abacdfe6b0d78fa0dd238320451d347982"
+  },
+  "historical_code_executed": false,
+  "historical_difference": "Diffusion score network, node representation sampling, ranking and contrastive losses on historical input/ordinary backbone; not the present pure M123 experiment",
+  "literature_notes_sha256": "213728cb7ed34092d3ffe517d3feace1bee0af78e8d654bb49ca446dd3c621f3",
+  "implementation_distinction": "No cVAE or logit-energy proxy; temporary hook before nonlinear fusion head, linearized per-pair BCE ascent in train-standardized ellipsoid; original inference unchanged",
+  "no_lncrna": true
+}

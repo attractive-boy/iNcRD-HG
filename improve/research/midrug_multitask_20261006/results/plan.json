@@ -1,0 +1,48 @@
+{
+  "configs": {
+    "control": {
+      "rank": 0,
+      "aux_weight": 0.0,
+      "shared": true
+    },
+    "raw32": {
+      "rank": 32,
+      "aux_weight": 0.0,
+      "shared": true
+    },
+    "shared32_a01": {
+      "rank": 32,
+      "aux_weight": 0.1,
+      "shared": true
+    },
+    "shared32_a03": {
+      "rank": 32,
+      "aux_weight": 0.3,
+      "shared": true
+    },
+    "shared128_a01": {
+      "rank": 128,
+      "aux_weight": 0.1,
+      "shared": true
+    },
+    "drugshared32_a01": {
+      "rank": 32,
+      "aux_weight": 0.1,
+      "shared": false
+    }
+  },
+  "folds": [
+    0,
+    1,
+    2
+  ],
+  "seed": 42,
+  "source_sha256": "35179b907628450292ed1999b54e839ca7dbea299be60ce108dc303b383ecba6",
+  "model_sha256": "489e78dec20b06cff884e1a7274c64a22325d5670c319a6f4430a9ee695f7d20",
+  "data_sha256": "d9b8790e493317869678d071e50b00c61247787793c03b4611304df048e7535f",
+  "checkpoint_selection": "mean(inner AUC, inner AP)",
+  "config_selection": "minimum of paired mean inner AUC/AP gains over control",
+  "outer_promotion_minimum_both_gains": 0.002,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false
+}

@@ -1,0 +1,35 @@
+{
+  "teachers": [
+    {
+      "seed": 42,
+      "checkpoint_sha256": "cc435467ef0b69a94e3a31e361d8d8b2763d8584e1908b84a6e41b0435260c4d"
+    },
+    {
+      "seed": 43,
+      "checkpoint_sha256": "1db2785c543d38d2bb85806def6d3bf7077b4785dce918f7bc816a208ec15ed5"
+    },
+    {
+      "seed": 44,
+      "checkpoint_sha256": "140b05feb93db10df0cc4e00bba61c648651a4d5266f906b8794c527d0dd845f"
+    }
+  ],
+  "quotas": [
+    0,
+    200,
+    600,
+    1200
+  ],
+  "ranking": "minimum probability across three fixed teacher seeds",
+  "training_labels": "Original train labels only; pseudo edges provide message context, not new loss targets",
+  "candidate_pool": "All original-node pairs except supplied training positives and negatives",
+  "split_sha256": "1b5aad5cf7715939df77c78b6a6e233f0b031834de9d9b623be5a5ed0723eca1",
+  "source_sha256": "94a8a7d0a1947fa808cfada75b7a134f6634bbc5813924bf794c8535f718802f",
+  "pseudo_sha256": "0e692ac9580e54a4ecb959dad2cc26738ee21b271cdbd1d8991dfccadb552aeb",
+  "test_labels_used": false,
+  "external_data_used": false,
+  "threshold_by_quota": {
+    "200": 0.994716227054596,
+    "600": 0.9840726256370544,
+    "1200": 0.966494083404541
+  }
+}

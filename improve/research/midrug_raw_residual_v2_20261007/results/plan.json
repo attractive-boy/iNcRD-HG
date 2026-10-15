@@ -1,0 +1,148 @@
+{
+  "frozen_utc": "2026-10-07T00:23:22.446284+00:00",
+  "configs": {
+    "raw": {
+      "features": "raw"
+    },
+    "pca32": {
+      "features": "pca32"
+    },
+    "structure": {
+      "features": "structure"
+    }
+  },
+  "params": {
+    "objective": "binary:logistic",
+    "tree_method": "hist",
+    "device": "cpu",
+    "max_depth": 2,
+    "min_child_weight": 10.0,
+    "reg_lambda": 10.0,
+    "learning_rate": 0.03,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "seed": 42,
+    "nthread": 2,
+    "disable_default_eval_metric": 1
+  },
+  "folds": [
+    0,
+    1,
+    2
+  ],
+  "seed": 42,
+  "new_fits": 9,
+  "maximum_rounds": 1600,
+  "minimum_rounds": 300,
+  "patience": 150,
+  "stage0_included": true,
+  "checkpoint_selection": "earliest maximum mean(inner AUC,AP)",
+  "controls": {
+    "control": {
+      "0": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/results/control_f0_s42.json",
+        "metadata_sha256": "991d9cb79419d1714158d5f7edd5ec4ebdf3928ed5d372c4262a25994853030d",
+        "checkpoint_sha256": "c74d3c4d43373234059324472101bef6969b0b7146dc755d4b91587d0bb6bcdc",
+        "probability_sha256": "9db00e8748d7d5fb702cb5f36a33fe6379c58926490559e88f5aacdefe2f55b2"
+      },
+      "1": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/results/control_f1_s42.json",
+        "metadata_sha256": "e74412e70af7d21b5b45261a1cb8fd42f3373d914a5316cbcf45e949d50b35f1",
+        "checkpoint_sha256": "46b6fd0605774d17cc382d300ae389504a3b64a1def17ca7d3e7eca2d924ca38",
+        "probability_sha256": "4a37ce800583533a4f1a5be10ff390a0232169603b278bd3186dd7a1134bbeec"
+      },
+      "2": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/results/control_f2_s42.json",
+        "metadata_sha256": "1f18dfca5295e136d67df6dd6c7dda29753c5d093a6cd2413444b60e32e51415",
+        "checkpoint_sha256": "2c9636db413aa58be4e5dfb88f11f6647005614d17cc66202106b514d67dfee6",
+        "probability_sha256": "c2a2265d47dc85cc42aa2c0d612e17618874fbe2c9083e51f6dc3c75d6eae0de"
+      }
+    },
+    "unmasked10": {
+      "0": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f0_s42.json",
+        "metadata_sha256": "8f12f8c098c497d270cbcca3b1f22f2306dd9f61465fafd5b9936cb9a7cff131",
+        "checkpoint_sha256": "a11576369b5dd2d40f803403d11d46e0762b4668644651d363d5bbbaef495344",
+        "probability_sha256": "6d339fac8a5489b62bfa16ee1bacf918baad4bfefb36d98777156d4c206bb78a"
+      },
+      "1": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f1_s42.json",
+        "metadata_sha256": "e2a54497f269b0e1b3524795c1c8c3ed1f48ba726e6cc62e1999edd3f029620f",
+        "checkpoint_sha256": "dcbfcf183485cea00d9eef2229bde39e8fed6ed8adcb6c25aad4ced6543d730c",
+        "probability_sha256": "23ba91f6769535c946cf58dec176dc22881d7273f8088389c12d73e038217901"
+      },
+      "2": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f2_s42.json",
+        "metadata_sha256": "abd5bd99263378a07394fa2a9ef2dad71b6b4dfaaefe0fd546aa864fbc075c36",
+        "checkpoint_sha256": "75f1b60da781be28d03ac16359c550b17c79aa5bbfd9e06cd7499e54d208544b",
+        "probability_sha256": "2b5ec3c419ba679cb36b4645eb413d046e3d5dff1cfce1e370bb2ead8a9ec1a4"
+      }
+    }
+  },
+  "eligible_candidates": [
+    "raw"
+  ],
+  "comparators": [
+    "control",
+    "unmasked10",
+    "pca32",
+    "structure"
+  ],
+  "promotion_minimum_both_gains_over_each_control": 0.002,
+  "source_hashes": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/freeze.py": "7d6daafffa02cdd4c016b0909c3e23e233a7f94d12b89fb6302bca36afca8fe0",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/recheck.py": "56213341806da80a74105fea55a539b296434f1f41871c4d6976552e2df99000",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/check.py": "5d83e30c81dd1181cf45a8d708fec3e76e79fb87c266cec8ad81f047871a0d86",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/model.py": "c3cf80a983ab2949b625e725fa21ce59427ea3b1c946ede9626bb5732edec073",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/prepare.py": "15f2930edb630eb96fc69f6ce92b9d7fa7e4abbe8f845ea6edd14b1b01ad6415",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/train.py": "33fb8c2f83ead394f0140731d3cf8984e98c896f9f8eb1d5f2ee4c20e3867626",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/common.py": "0c0bd3bbb7a2e4b3e0b903d7d6512b471b16c9dba96cf0ce9f92db59095bdb70",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/audit.py": "973907bee0c757d23e6f8dd1e11deafa7e6a0e666bf5f94f7ff29ddb86f1f058",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/launch.py": "d1bcd7b315ffb5c9630db60f2819a2eb3fb156db439805cf6afcbe76ccb014a6",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/summarize.py": "612bbe1985dabf28dd57f40ed94e72a8e763d96b36aaf7d36dd08043dac8e66f",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/README.md": "155ac391a7e99b8e0f7b8f22b8c237222ed12f6f3b5f828b81b3573813ae053a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_subgraph_20261006/common.py": "2f1e6622c5ff3c9f4048b4047f74249c196028897dd7f7d5c98171fa37421f47",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/model.py": "add0aa09a917f33ab104f097f6fe635246afaeda23029b64948ae5aedff2bd81",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/pair_channels.py": "d3d9ccd5a872a4aa64ade4ca454a8a86f5c1a9785cc63ecddbd9558ae91f480e",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/adapter.py": "94bd2976dc121bd93991191e6f577d5b3af4832681db649a2916f1ada45a4e90",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/model.py": "ccec94eb49c8ee848c2d39d913752dc6284140dde2c9362696944f9c2a458368",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/config.py": "805cca85435792f17c7e5e2b88903c71e656ea9f788f3a0f5c94e83953cba98e",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/engine.py": "e40eec70c73cf1307cffac5411fcea5bc3f9b39890529a87b35545392136490c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/__init__.py": "1f258c2e4f152ad4c4f8159512f9bae29e2b98c232fe56c71ea90cea40bfb43c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/encoder.py": "7e8efa3a928905ce38d8d8ffd530c23b309fd8d692f619f3836fdb9327eaf755",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/data.py": "d4b1c2764b49d05f74233e49112a520c540b3276f894243d65d4e70778b13a29"
+  },
+  "evidence_hashes": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/plan.json": "d89ef3fdaa42fe2b1e919571cb02afe5f670a7b197e60a4048e2b10102f277e8",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/initial_checks.json": "79d93745404301e1d1d1652af6f425e0128a65d5b73223ef859320a163edc298",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/input_manifest.json": "7bb7f64554eca5b1b0fb290dc0c3607b3847df174b004901a1d494f757a20489",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_decoupling_review_20261007/REPORT.md": "0be23fed5c8199f231e110d2aad9b81f401b7f3d44e85711423af6b0bd686d38",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_decoupling_review_20261007/archive_manifest.json": "c587cd063283a3f639e1c94c8c1d0a56aa452bec5ce3fd218142710a44b777b0",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_20261007/precheck.log": "02c81329d31c8be7d0c7d83d340264a40ee55501ebab782217fe9e807c5522e6",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_20261007/model.py": "5ce21bd10a5442e1898ba2c1c2722a68a80ea39c5a014f386b3086f1f72e688c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_20261007/check.py": "602a4389f0a8116ac76dc4621193fca9d7f9887c58c984ddf93a1caf6c43f87c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_20261007/input_manifest.json": "661a114fb052b8528a768693c5b39efd769e9859c7f0346e083583a8534e71e4"
+  },
+  "input_hashes": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/raw_f1.npz": "e3c4c6c67dcf52719556134c606e0455f33c0ba7c45e9a7427517ce9235b3767",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/pca32_f0.npz": "2113dd8e42f6715510d6a156b35a6dea862dda949aaaa7b97ab4ea5e9f0696fe",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/common_f0.npz": "c6a143d57c617d274c64ef402b2be2aabc8afbfc88335069134ed35174a7e8ee",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/raw_f0.npz": "9b906d5d1e6fca33e70c8178b11244b3cdff3960444ddf80d5aca9865723ecf3",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/structure_f0.npz": "a0a3ef80e72377e91eea0de3905434221ed9e6ef1ac6b5bf4105c95202409d51",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/structure_f1.npz": "85f038d0eb597866dac4c5795f250aecaaf71b9ee355f83f5b7bf31352b2fdb2",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/pca32_f2.npz": "c75594a176d4efb5c208b36373d599f3c05218864efdd686ea6255e4cf5a910e",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/common_f1.npz": "0bc4b340a99219158d5c2fbf77f1d47fc1f962bb701f04931d6cf3293fb1c2de",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/raw_f2.npz": "cd42781d9e5dad6c6b3ebf7840da4636e2453bb72f49848fcca9c8324357f307",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/structure_f2.npz": "d18250e5caf8f6e1610b2885e5ad7a58201952e8087ec5c6fc90c0dbf3a1c72a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/pca32_f1.npz": "b6ee1f0dde49ce6cd3f1c92e6a8a60565eb9281256be69b379161ecdc5827785",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_raw_residual_v2_20261007/inputs/common_f2.npz": "50bbc754b8bbaf33a7b8a04d55c505cf735a961bb5daf8e22291e8920ad6e8c0",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f0_s42.pt": "a11576369b5dd2d40f803403d11d46e0762b4668644651d363d5bbbaef495344",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f1_s42.pt": "dcbfcf183485cea00d9eef2229bde39e8fed6ed8adcb6c25aad4ced6543d730c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f2_s42.pt": "75f1b60da781be28d03ac16359c550b17c79aa5bbfd9e06cd7499e54d208544b",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/graph.pt": "d820c480082b1cb2eeba7e1c9cf5d2f79bf0e86e582a48a4cbf9dda761729ec6",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/inner_data.npz": "996df3c7fb99b85100e0961b5b5f973ab6171fa53de1a2184274327e510951d3"
+  },
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false
+}

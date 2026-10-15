@@ -1,0 +1,51 @@
+{
+  "configs": {
+    "offset_l001": {
+      "offset": true,
+      "penalty": 0.01
+    },
+    "offset_l01": {
+      "offset": true,
+      "penalty": 0.1
+    },
+    "independent25": {
+      "offset": false,
+      "penalty": 0.0,
+      "inference_weight": 0.25
+    }
+  },
+  "subgraph": {
+    "k": 16,
+    "hops": 1,
+    "hidden": 32,
+    "layers": 3,
+    "covariates": false,
+    "signed": false
+  },
+  "folds": [
+    0,
+    1,
+    2
+  ],
+  "seed": 42,
+  "epochs": 800,
+  "minimum_epochs": 300,
+  "patience": 200,
+  "optimizer": "AdamW lr=0.001 weight_decay=0.001",
+  "checkpoint_selection": "mean(inner AUC, inner AP)",
+  "config_selection": "minimum of three-fold mean AUC/AP gains over fixed-300 base",
+  "promotion_minimum_both_gains": 0.002,
+  "also_require_both_gains_over_previous_optimized_control": 0.002,
+  "source_hashes": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_crossfit_20261006/common.py": "cd811e9b90acd76d5b1b3f68b130cbe25880deb0033dac417daecd1883a58c7a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_crossfit_20261006/residual.py": "863e03a53dfacd5453ee3bb2f81a61527fe1ca5b83d7958e3e6b440a4a503eca",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_subgraph_20261006/common.py": "2f1e6622c5ff3c9f4048b4047f74249c196028897dd7f7d5c98171fa37421f47",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_subgraph_20261006/model.py": "91da8e312e60931fc47d7715fddf25f4cd223a3eff93710faa40fd5863d3649a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_subgraph_20261006/extract.py": "619b3682b2a32607fd76df8fa6fdc08822581b4a750daaea403474b676cea9cc"
+  },
+  "base_verification_sha256": "fd3ee4d54f718f66face0af0b490453e4a404a542a0aa040cfaf6d3376e41974",
+  "base_plan_sha256": "fce3fc7b1b762aa10e108d4e6144bf7d625d64d8bee868031744ebc0426d30af",
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false
+}

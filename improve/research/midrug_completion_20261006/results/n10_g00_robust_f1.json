@@ -1,0 +1,66 @@
+{
+  "tag": "n10_g00_robust_f1",
+  "config": "n10_g00_robust",
+  "settings": {
+    "nuclear_fraction": 0.1,
+    "graph_weight": 0.0,
+    "error_cost": 0.25
+  },
+  "fold": 1,
+  "inner_auc": 0.9220831425795861,
+  "inner_ap": 0.8810956904773579,
+  "checkpoint_sha256": "416b8b5d313fb6ee62cef0ff625731ee3ea84ede36c00639103d25ad600c18c0",
+  "prediction_sha256": "17ebd03ff33fe9749515f6f4c94a5524e8bbd9d78ca51b2c5f7e29875adb995e",
+  "elapsed_seconds": 3.7369539737701416,
+  "fit_info": {
+    "intercept": -1.9469692608244018,
+    "nominal_intercept": -0.6940739646855963,
+    "lambda_max": 5.235560557964627,
+    "nuclear_weight": 0.5235560557964627,
+    "step_size": 4.0,
+    "iterations": 150,
+    "converged": true,
+    "curves": [
+      {
+        "iteration": 1,
+        "objective": 2505.5244215769553,
+        "nuclear_penalty": 134.4195126084074,
+        "rank": 133,
+        "stationarity_residual": 0.24150107835624332,
+        "observed_loss": 2371.104908968548,
+        "graph_penalty": 0.0
+      },
+      {
+        "iteration": 50,
+        "objective": 1045.137247523393,
+        "nuclear_penalty": 694.5464040575749,
+        "rank": 26,
+        "stationarity_residual": 0.00022457955874064694,
+        "observed_loss": 350.590843465818,
+        "graph_penalty": 0.0
+      },
+      {
+        "iteration": 100,
+        "objective": 1042.046569515362,
+        "nuclear_penalty": 690.7140240432786,
+        "rank": 24,
+        "stationarity_residual": 2.2444976634628994e-05,
+        "observed_loss": 351.33254547208344,
+        "graph_penalty": 0.0
+      },
+      {
+        "iteration": 150,
+        "objective": 1041.9684925460342,
+        "nuclear_penalty": 689.4973779451925,
+        "rank": 23,
+        "stationarity_residual": 4.62510420387804e-06,
+        "observed_loss": 352.4711146008417,
+        "graph_penalty": 0.0
+      }
+    ]
+  },
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false,
+  "training_stopping": "training objective and stationarity only; no heldout inputs to fit"
+}

@@ -1,0 +1,147 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "block_ema",
+    "mean_inner_auc": 0.9537716384600881,
+    "mean_inner_ap": 0.9136191412019737,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0011718434053366404,
+          "fold_deltas": [
+            0.002137741832044626,
+            0.0007708885016072253,
+            0.0006068998823580696
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0017940321071084897,
+          "fold_deltas": [
+            0.003148619541729736,
+            0.0003004675829194614,
+            0.001933009196676272
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 5.915644991664563e-05,
+          "fold_deltas": [
+            0.0003871974161653302,
+            0.00011251965873038117,
+            -0.0003222477251457745
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0004714402520747211,
+          "fold_deltas": [
+            -0.0006098230855647868,
+            -0.0003466238560085877,
+            -0.0004578738146507888
+          ]
+        }
+      },
+      "random_ema": {
+        "auc": {
+          "mean_delta": 0.00021149933683732117,
+          "fold_deltas": [
+            0.00047691389064274947,
+            0.00022074467399790798,
+            -6.316055412869392e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00012451651024747434,
+          "fold_deltas": [
+            -0.0003092771453478971,
+            -0.0006249612118424119,
+            0.000560688826447886
+          ]
+        }
+      },
+      "block_current": {
+        "auc": {
+          "mean_delta": 2.1261924261143744e-05,
+          "fold_deltas": [
+            0.0002944760836911531,
+            -8.417501187474308e-05,
+            -0.00014651529903297877
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0002057400918539972,
+          "fold_deltas": [
+            -0.0002842223147769829,
+            -0.00045037742164333316,
+            0.00011737946085832451
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0004714402520747211
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 9,
+  "new_checkpoint_replays": 9,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Use frozen masked-context and teacher diagnostics to decide next hypothesis; no retrospective control promotion or momentum/mask/weight sweep.",
+  "component_diagnostics": {
+    "status": "passed",
+    "means": [
+      {
+        "config": "block_ema",
+        "train": {
+          "auc": 0.9606665023389248,
+          "ap": 0.9263347649391154
+        },
+        "val": {
+          "auc": 0.9537716384600881,
+          "ap": 0.9136191412019737
+        },
+        "mean_latent": 0.3931518942117691,
+        "teacher_student_cosine": {
+          "miRNA": 0.9079757730166117,
+          "drug": 0.8504451115926107
+        }
+      },
+      {
+        "config": "random_ema",
+        "train": {
+          "auc": 0.9609296641962466,
+          "ap": 0.9267103680828308
+        },
+        "val": {
+          "auc": 0.9535601391232508,
+          "ap": 0.9137436577122212
+        },
+        "mean_latent": 0.22226103891928992,
+        "teacher_student_cosine": {
+          "miRNA": 0.8594304323196411,
+          "drug": 0.797320286432902
+        }
+      },
+      {
+        "config": "block_current",
+        "train": {
+          "auc": 0.9614066353513441,
+          "ap": 0.927837761745557
+        },
+        "val": {
+          "auc": 0.9537503765358268,
+          "ap": 0.9138248812938278
+        },
+        "mean_latent": 0.4921347300211589,
+        "teacher_student_cosine": {
+          "miRNA": 1.0,
+          "drug": 1.0
+        }
+      }
+    ],
+    "selection_unchanged": true
+  }
+}

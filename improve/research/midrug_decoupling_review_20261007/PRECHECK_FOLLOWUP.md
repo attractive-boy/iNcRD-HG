@@ -1,0 +1,1 @@
+原始浮点M3树输入预检未通过完整查询删除，保留在midrug_raw_residual_20261007；尚无新内部指标。后续改为int64精确拓扑计数，目录midrug_raw_residual_v2_20261007。完整M123不变，详见新版README。

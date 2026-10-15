@@ -1,0 +1,51 @@
+{
+  "status": "offline_prepared",
+  "model_id": "seyonec/ChemBERTa-zinc-base-v1",
+  "revision": "761d6a18cf99db371e0b43baf3e2d21b3e865a20",
+  "model_directory": "/data1/licheng/incrd-hg/.external/models/hf_home/hub/models--seyonec--ChemBERTa-zinc-base-v1/snapshots/761d6a18cf99db371e0b43baf3e2d21b3e865a20",
+  "weight_hashes": {
+    "config.json": "a484ab1497bf438b2dcbda35c6ce518ca8043539ff1a56d713aa84bcf2cba225",
+    "pytorch_model.bin": "bf8a23d93cca196c3712c94ec379494a74be64c83d86a63b08f03e26db547267",
+    "vocab.json": "791f9dd0e7dacb628c2f3155671a702044b1da537784eaa5663fb36ee7b8d42f",
+    "merges.txt": "f8c368d3b2f44cf4eec62aa576b69945302fcfa8eba065048d3725259671f2bb",
+    "tokenizer_config.json": "36557a021e64d222c7ff0fef5369bc87ae6e0780264af0f35d8c6461cf106577",
+    "special_tokens_map.json": "7638f5bbbe86ef6d604ef28ad3647dc690d6d117c81c0d63e885416be8da1150"
+  },
+  "original_input_hashes": {
+    "Drug.csv": "2d4d5ad734b3ec29c8a6175cdb2f1c22050a87c74110f0096e75867185027096",
+    "drug_smiles.csv": "21b46bfc44100a468bd257cdabed0b0713f25e75bcf374d4850e63c41504d1f3",
+    "drug_features-chemBertA.csv": "5f595f71664c9416e56b2b0b6f717de7515e230fe61e49b350f88b9c603c9a2f"
+  },
+  "cache_sha256": "ddf33222e204b394ea381e9e6dd63819a91772f3c2bd6329a5e6d2b6400b04ee",
+  "last_layer_sha256": "a6d0beece1cdfcaa4a23ac12694822e9b595233f7a196f61f54fed697bbe01e8",
+  "source_sha256": "7007bfc3c9de28fbaa1a86ab9a8ad20615419dacdbd7467cd2ffdc019bdf4c6e",
+  "n_drugs": 216,
+  "tensor_shape": [
+    216,
+    512,
+    768
+  ],
+  "token_length_min": 3,
+  "token_length_max": 1146,
+  "truncated_drugs": [
+    {
+      "cid": 145994598,
+      "tokens": 1146
+    }
+  ],
+  "original_feature_discrepancy": {
+    "raw_max_abs": 3.337860107421875e-06,
+    "raw_mean_abs": 3.2367645985686977e-07,
+    "normalized_max_abs": 1.0728836059570312e-06,
+    "normalized_mean_abs": 1.192764500501653e-07,
+    "normalized_vs_masked_mean_abs": 0.10845261812210083,
+    "row_cosine_mean": 1.0
+  },
+  "last_layer_replay_max_error": 0.0,
+  "external_data_used": false,
+  "new_weights_downloaded": false,
+  "lncrna_used": false,
+  "labels_used": false,
+  "torch_version": "1.13.1+cu117",
+  "pooling_note": "Original code averages every padded position. Masked mean here includes real special tokens and excludes padding only."
+}

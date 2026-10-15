@@ -1,0 +1,43 @@
+{
+  "config": "oof_pca32",
+  "fold": 1,
+  "seed": 42,
+  "tag": "oof_pca32_f1_s42",
+  "best_round": 36,
+  "rounds_run": 300,
+  "inner_auc": 0.9560612879979317,
+  "inner_ap": 0.9191421905279439,
+  "selection_score": 0.9376017392629378,
+  "settings": {
+    "features": "pca32",
+    "offset": "oof"
+  },
+  "params": {
+    "objective": "binary:logistic",
+    "tree_method": "hist",
+    "device": "cpu",
+    "max_depth": 2,
+    "min_child_weight": 10.0,
+    "reg_lambda": 10.0,
+    "learning_rate": 0.03,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "seed": 42,
+    "nthread": 2,
+    "disable_default_eval_metric": 1
+  },
+  "xgboost_version": "2.1.4",
+  "n_features": 72,
+  "plan_sha256": "11d6d5453dd9400496cfdf9b6253b972e454c8c7895ed1b7aaf359d81aa59db1",
+  "artifact_hashes": {
+    "oof_pca32_f1_s42_model.json": "e73f93e429194d7c4d1de44fc350f7571c27a97686f311252dc24bcd09c0678c",
+    "oof_pca32_f1_s42_final_model.json": "1a446f83dca463649797dd11b6fecb2725224c6d6ed92113b8e2add6f6a8dd52",
+    "oof_pca32_f1_s42_inner.npz": "8fa99ab992722bbf8da67dd5deb8e88b608a9b319d472a7effdb2a518daba37a",
+    "oof_pca32_f1_s42_curves.json": "d1f3fd111bc2200c00f251d8c988c0cf03516d132f9b795c5a6efe5ebe7eee92"
+  },
+  "elapsed_seconds": 1.6299188137054443,
+  "no_lncrna": true,
+  "original_m123_frozen": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false
+}

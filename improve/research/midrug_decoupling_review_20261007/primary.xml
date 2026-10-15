@@ -1,0 +1,1292 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article xml:lang="en" article-type="research-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Brief Bioinform</journal-id><journal-id journal-id-type="iso-abbrev">Brief Bioinform</journal-id><journal-id journal-id-type="pmc-domain-id">721</journal-id><journal-id journal-id-type="pmc-domain">bib</journal-id><journal-id journal-id-type="nlm-id">100912837</journal-id><journal-id journal-id-type="publisher-id">bib</journal-id><journal-title-group><journal-title>Briefings in Bioinformatics</journal-title></journal-title-group><issn pub-type="ppub">1467-5463</issn><issn pub-type="epub">1477-4054</issn><?publisher_abbrev oup?><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13544631</article-id><article-id pub-id-type="pmcid-ver">PMC13544631.1</article-id><article-id pub-id-type="pmcaid">13544631</article-id><article-id pub-id-type="pmcaiid">13544631</article-id><article-id pub-id-type="pmid">42696755</article-id><article-id pub-id-type="doi">10.1093/bib/bbag471</article-id><article-id pub-id-type="publisher-id">bbag471</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="heading"><subject>Problem Solving Protocol</subject></subj-group><subj-group subj-group-type="category-taxonomy-collection"><subject>AcademicSubjects/SCI01060</subject></subj-group></article-categories><title-group><article-title>Decoupling topological and molecular features for interpretable biomolecular interaction prediction</article-title></title-group><contrib-group><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0009-3425-2947</contrib-id><name name-style="western"><surname>Wu</surname><given-names initials="Q">Qi</given-names></name><aff>
+<institution>School of Artificial Intelligence, Wuhan University</institution>, No. 129 Baoyi Road, Wuchang District, <addr-line>Wuhan, Hubei 430072</addr-line>, <country country="CN">China</country></aff><xref rid="afn1" ref-type="author-notes"/></contrib><contrib contrib-type="author"><name name-style="western"><surname>Liu</surname><given-names initials="Y">Yinbo</given-names></name><aff>
+<institution>School of Artificial Intelligence, Wuhan University</institution>, No. 129 Baoyi Road, Wuchang District, <addr-line>Wuhan, Hubei 430072</addr-line>, <country country="CN">China</country></aff><xref rid="afn1" ref-type="author-notes"/></contrib><contrib contrib-type="author"><name name-style="western"><surname>Yang</surname><given-names initials="F">Feng</given-names></name><aff>
+<institution>School of Artificial Intelligence, Wuhan University</institution>, No. 129 Baoyi Road, Wuchang District, <addr-line>Wuhan, Hubei 430072</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><name name-style="western"><surname>Huang</surname><given-names initials="W">Weihong</given-names></name><aff>
+<institution>School of Artificial Intelligence, Wuhan University</institution>, No. 129 Baoyi Road, Wuchang District, <addr-line>Wuhan, Hubei 430072</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><name name-style="western"><surname>Zhu</surname><given-names initials="X">Xiaolei</given-names></name><aff>
+<institution>School of Information and Artificial Intelligence, Anhui Agricultural University</institution>, No. 130 Changjiang West Road, Shushan District, <addr-line>Hefei, Anhui 230036</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-9344-7415</contrib-id><name name-style="western"><surname>Liu</surname><given-names initials="J">Juan</given-names></name><aff>
+<institution>School of Artificial Intelligence, Wuhan University</institution>, No. 129 Baoyi Road, Wuchang District, <addr-line>Wuhan, Hubei 430072</addr-line>, <country country="CN">China</country></aff><xref rid="cor1" ref-type="corresp"/></contrib></contrib-group><author-notes><corresp id="cor1">Corresponding author. School of Artificial Intelligence, Wuhan University, No. 129 Bayi Road, Wuchang District, Wuhan, Hubei 430072, China. E-mail: <email>liujuan@whu.edu.cn</email></corresp><fn id="afn1"><p>Qi Wu and Yinbo Liu contributed equally.</p></fn></author-notes><pub-date pub-type="collection"><month>9</month><year>2026</year></pub-date><pub-date pub-type="epub" iso-8601-date="2026-09-04"><day>04</day><month>9</month><year>2026</year></pub-date><volume>27</volume><issue>5</issue><issue-id pub-id-type="pmc-issue-id">520588</issue-id><elocation-id>bbag471</elocation-id><history><date date-type="received"><day>31</day><month>1</month><year>2026</year></date><date date-type="rev-recd"><day>27</day><month>6</month><year>2026</year></date><date date-type="accepted"><day>31</day><month>7</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>04</day><month>09</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>05</day><month>09</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-09-08 10:30:19.397"><day>08</day><month>09</month><year>2026</year></date></event></pub-history><permissions><copyright-statement>© The Author(s) 2026. Published by Oxford University Press.</copyright-statement><copyright-year>2026</copyright-year><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbynclicense">https://creativecommons.org/licenses/by-nc/4.0/</ali:license_ref><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc/4.0/">https://creativecommons.org/licenses/by-nc/4.0/</ext-link>), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited. For commercial re-use, please contact journals.permissions@oup.com</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="bbag471.pdf"><?pdf-name bbag471.pdf?><?pdf-size 3957334?><?pdf-md5 c6d71c4d6cf93583aef589114f1e1ad1?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:350e/13544631/c6d71c4d6cf9/bbag471.pdf?></self-uri><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="bbag471.pdf"/><abstract><title>Abstract</title><p>Predicting biomolecular interactions is fundamental to understanding cellular mechanisms and advancing drug discovery. However, biomolecular interactions exhibit immense diversity across multiple dimensions. Most existing computational methods are designed to handle one specific task or data modality, which limits their applicability and generalization capability in broader scenarios. To address this methodological rigidity, we propose a flexible framework for multi-modal feature fusion in biomolecular interaction prediction (FlexBIP). The core of FlexBIP lies in its modular architecture, which decouples intrinsic molecular features from complex graph topologies, enabling the adaptive integration of node attributes, edge properties, and auxiliary graph information. The flexible fusion methodology breaks through the limitations of task-specific models. This design enables FlexBIP to adaptively process and integrate biological data of different types and from various sources, including homogeneous interactions between molecules of the same type, heterogeneous interactions between different molecular classes, as well as qualitative binary, multi-class, and quantitative regression prediction tasks. Our research has yielded exciting results. In extensive testing across 15 benchmark datasets, covering 8 major categories of biomolecular associations, FlexBIP’s performance comprehensively surpasses that of 25 state-of-the-art specialized models. Crucially, in data-scarce “cold-start” scenarios that simulate the discovery of new molecules, FlexBIP continues to demonstrate remarkable robustness and predictive accuracy. Furthermore, FlexBIP provides robust and reliable interpretability for various downstream analysis tasks.</p></abstract><abstract abstract-type="graphical"><title>Graphical Abstract</title><p>
+<fig position="float" id="ga1" orientation="portrait"><label>Graphical Abstract</label><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bbag471ga1.webp"><?image-name bbag471ga1.webp?><?image-size 264428?><?image-md5 1f3f4238ff5c653b1f8d989214b3a40f?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1363?><?image-original-width 1600?><?image-scaled-height 1363?><?image-scaled-width 1600?><?image-cloudpmc-urn urn:cdn:blobs/350e/13544631/1f3f4238ff5c/bbag471ga1.webp?><?thumb-name bbag471ga1.gif?><?thumb-size 21104?><?thumb-md5 c4033fdf47a71de7c84c1f5adf4f9d5e?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 170?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/350e/13544631/c4033fdf47a7/bbag471ga1.gif?><alt-text>For graphical abstract description, please refer to the textual abstract.</alt-text></graphic></fig>
+</p></abstract><kwd-group><kwd>decoupled feature representation</kwd><kwd>multi-modal fusion</kwd><kwd>bioinformatics</kwd><kwd>deep learning</kwd><kwd>interaction prediction</kwd></kwd-group><funding-group><award-group award-type="grant"><funding-source>
+<institution-wrap><institution>National Key Research and Development Program of China</institution><institution-id institution-id-type="DOI">10.13039/501100012166</institution-id></institution-wrap>
+</funding-source><award-id>2019YFA0904303</award-id></award-group></funding-group><counts><page-count count="15"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="sec1"><title>Introduction</title><p>Biological systems are governed by intricate molecular interaction networks spanning multiple organizational levels, where interactions between different biomolecules collectively form the fundamental regulatory framework underlying life processes. The systematic prediction of these interactions is crucial for elucidating disease mechanisms, discovering therapeutic targets, and ensuring clinical safety [<xref rid="ref1" ref-type="bibr">1–3</xref>]. However, the predictive modeling of these networks faces a fundamental challenge rooted in their inherent diversity. Biomolecular interactions can be systematically categorized along two key dimensions. The first is Entity Type, where interactions can occur in homogeneous scenarios between molecules of the same type, or in heterogeneous scenarios between different molecular classes. The second is Prediction Goal, which, based on its complexity, can be divided into three task types: binary qualitative prediction, multi-class qualitative prediction, and quantitative prediction.</p><p>This diversity has spurred the development of numerous highly specialized computational methods, which, despite their success, are often limited in their design to a single prediction task. For instance, in the field of protein–protein interactions (PPIs) [<xref rid="ref4" ref-type="bibr">4</xref>], researchers have developed specialized models such as HIGH-PPI [<xref rid="ref5" ref-type="bibr">5</xref>], which focuses on capturing the hierarchical structure of protein complexes; the DNE [<xref rid="ref6" ref-type="bibr">6</xref>] framework, for learning network embeddings to identify functional modules; and the MCGLPPI [<xref rid="ref7" ref-type="bibr">7</xref>] model, which balances predictive accuracy with computational efficiency through coarse-grained molecular representations. Similarly, in the domain of drug–drug interactions (DDIs), models also focus on specific sub-problems. For example, DGAT-DDI [<xref rid="ref8" ref-type="bibr">8</xref>] is specifically designed to capture the prevalent asymmetry in these interactions, while EmerGNN [<xref rid="ref9" ref-type="bibr">9</xref>] is dedicated to solving the cold-start challenge for emerging drugs. Furthermore, this trend of specialization extends to models for predicting a wide range of other associations, including drug–target interactions (DTIs) [<xref rid="ref10" ref-type="bibr">10–13</xref>], drug–target affinities (DTAs) [<xref rid="ref14" ref-type="bibr">14–16</xref>], circular RNA (circRNA)–drug interactions [<xref rid="ref17" ref-type="bibr">17</xref>], drug–gene interactions [<xref rid="ref18" ref-type="bibr">18</xref>], and miRNA–disease interactions [<xref rid="ref19" ref-type="bibr">19</xref>]. Even though some methods can handle multiple subtasks, they are often limited to specific domains. For example, the DTIAM [<xref rid="ref16" ref-type="bibr">16</xref>] model is capable of handling multiple subtasks within the drug and target, but it cannot be applied to other interaction classes like PPIs. While these specialized models demonstrate strong performance, critical gaps remain unaddressed. This “one model for one task” paradigm creates computational silos, limits the potential for cross-domain knowledge transfer, leads to redundancy in model development, and possesses insufficient capabilities for downstream biomolecular analysis.</p><p>Flexible tools have become standard in many other areas of biological analysis. Fields like single-cell sequencing, spatial transcriptomics, and metabolomics analysis now benefit from simple, general, and flexible model frameworks with high generalization capabilities. In contrast, the field of molecular interaction prediction urgently needs a similar end-to-end tool that spans from data preprocessing and predictive modeling to downstream analysis. Furthermore, different molecular entities possess unique features, making it difficult for previous methods to establish a flexible modeling paradigm. In contrast, feature-aware Graph Neural Networks (GNNs) can directly adapt to graph structures with diverse features for end-to-end learning. Their inherent versatility serves as an ideal technological foundation for achieving flexible cross-network prediction. Inspired by this, we propose Flexible Biomolecular Interaction Prediction (FlexBIP), a framework designed to address this challenge through a flexible, multi-modal fusion architecture (<xref rid="f1" ref-type="fig">Fig. 1</xref>). The core of FlexBIP’s generalizability lies in its modular design; the framework utilizes a multi-feature-aware GNN architecture and an adaptive graph structure processing mechanism, making it highly adaptable to diverse biomolecular interaction prediction tasks.</p><fig position="float" id="f1" orientation="portrait"><label>Figure 1</label><caption><p>Overview of FlexBIP.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bbag471f1.webp"><?image-name bbag471f1.webp?><?image-size 136998?><?image-md5 c829ab5414bffa484182a5e5af9397f5?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 857?><?image-original-width 1600?><?image-scaled-height 857?><?image-scaled-width 1600?><?image-cloudpmc-urn urn:cdn:blobs/350e/13544631/c829ab5414bf/bbag471f1.webp?><?thumb-name bbag471f1.gif?><?thumb-size 13898?><?thumb-md5 5d0ae7ba19e81b5bd4f807f979fedba5?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 107?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/350e/13544631/5d0ae7ba19e8/bbag471f1.gif?><alt-text>Schematic overview of the FlexBIP workflow. Two biomolecular inputs, including proteins, RNA, and drugs, are processed through feature extraction and decoupling of intrinsic molecular and topological attributes. Node, edge, and auxiliary-graph features are fused with a sequence-pair encoder, followed by contrastive learning, interaction prediction, and visualization and interpretability modules.</alt-text></graphic></fig><p>Built upon conventional GNN models, FlexBIP is designed for methodological flexibility, supporting multiple types of feature fusion, including node, edge, and auxiliary data features. By utilizing edge-feature-aware and node-feature-aware layers to process edge and node features from different perspectives, it obtains more comprehensive node representations. This enhances the model’s ability to learn topological information between nodes and strengthens its perception of edge information by incorporating additional node features. A dynamic multi-class contrastive loss function is employed to balance learning across different classes. Furthermore, for multi-hop association prediction, FlexBIP can also learn features from an auxiliary graph to enhance learning on the primary graph.</p><p>To validate the generalizability of this fusion architecture, we extensively evaluated FlexBIP by comparing it with 25 state-of-the-art methods across 15 datasets spanning 8 distinct types of biological associations, conducting 10 repeated experiments. Our work demonstrates that FlexBIP consistently outperforms various specialized models in both classic prediction tasks and challenging cold-start scenarios. In addition, we also conducted a variety of downstream analysis tasks, including principal component analysis (PCA) and hierarchical clustering analysis, multi-class comparisons based on PCA, visualization of biomolecular 3D structures and their interaction relationships, interaction network visualization, interaction association prediction result visualization, and performance evaluation of DTA prediction models. Furthermore, our model can perform interaction attribution analysis, quantifying the contribution strength of specific sites (such as drug–target pairs) in biomolecular interactions and outputting an interaction score to characterize binding affinity or functional association.</p></sec><sec id="sec2"><title>Materials and methods</title><sec id="sec3"><title>Datasets and preprocessing</title><p>To comprehensively validate the versatility and robustness of a flexible prediction framework, our benchmark must represent the inherent diversity of biomolecular interactions. Inspired by this, we first systematically categorize interaction prediction tasks along two key dimensions based on their core biological and computational properties. The first dimension is entity type, which distinguishes between homogeneous interactions that occur between molecules of the same type, and heterogeneous interactions that occur between different molecular classes. The second dimension is prediction goal, which differentiates tasks based on the nature and complexity of their output. This includes binary qualitative prediction, which aims to predict the existence of a single type of interaction and is computationally a binary classification task; multi-class qualitative prediction, which aims to predict which specific type of interaction manifests between two entities from multiple possibilities and is a multi-class classification task; and quantitative prediction, which aims to predict the strength or degree of an interaction and is a regression task.</p><p>Based on the classification framework above, for homogeneous interactions, we addressed both multi-class qualitative prediction, for which we selected the PPI01 and DDI02 datasets. The PPI01 dataset, derived from the STRING) [<xref rid="ref20" ref-type="bibr">20</xref>] database’s SHS27k [<xref rid="ref21" ref-type="bibr">21</xref>] subset, focuses on <italic toggle="yes">Homo sapiens</italic> protein interactions and is a multi-classification dataset encompassing various PPI types, while the DDI02 dataset leverages the TWOSIDES [<xref rid="ref22" ref-type="bibr">22</xref>] public dataset, known for its multiple interaction types between drug pairs, making it suitable for multi-type DDI prediction. The binary qualitative prediction, for which we used the PPI02 and DDI01 datasets, the PPI02 dataset contains <italic toggle="yes">Saccharomyces cerevisiae</italic> [<xref rid="ref23" ref-type="bibr">23</xref>] protein interactions from its interactome, while the DDI01 dataset uses asymmetric DDI data from DrugBank [<xref rid="ref24" ref-type="bibr">24</xref>]. For heterogeneous interactions, we selected the DTI01 and DTI02 datasets for binary qualitative prediction in the domain of DTIs. The DTI01 dataset is the large-scale, heterogeneous Hetionet dataset, compiled by Himmelstein <italic toggle="yes">et al</italic>. [<xref rid="ref25" ref-type="bibr">25</xref>] from 29 public biomedical resources. The DTI02 dataset is composed of four subsets, sourced from the Kyoto Encyclopedia of Genes and Genomes (KEGG) BRITE [<xref rid="ref26" ref-type="bibr">26</xref>], BRENDA [<xref rid="ref27" ref-type="bibr">27</xref>], SuperTarget [<xref rid="ref28" ref-type="bibr">28</xref>], and DrugBank databases [<xref rid="ref29" ref-type="bibr">29</xref>]. Finally, for quantitative prediction, we used the DTA01 dataset. The DTA01 dataset employs the KIBA dataset constructed by Tang <italic toggle="yes">et al</italic>. [<xref rid="ref30" ref-type="bibr">30</xref>], which is a large-scale kinase inhibitor bioactivity dataset integrating various measurement types like K<sub>i</sub>, K<sub>d</sub>, and IC<sub>50</sub>. To ensure result stability, all datasets underwent 10 repeated experiments. In each experiment, 20% of the dataset was randomly sampled as an independent test set for evaluating the model’s generalization, with the remainder used as the training set for parameter learning and optimization. <xref rid="TB1" ref-type="table">Table 1</xref> presents the topological feature statistics for all seven datasets, and <xref rid="sup1" ref-type="supplementary-material">Supplementary Table S1</xref> contains more pertinent information about the datasets.</p><table-wrap position="float" id="TB1" orientation="portrait"><label>Table 1</label><caption><p>Dataset topological features.</p></caption><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/></colgroup><thead><tr><td rowspan="1" colspan="1"/><th align="left" rowspan="1" colspan="1">
+<bold>PPI01</bold>
+</th><th align="left" rowspan="1" colspan="1">
+<bold>PPI02</bold>
+</th><th align="left" rowspan="1" colspan="1">
+<bold>DDI01</bold>
+</th><th align="left" rowspan="1" colspan="1">
+<bold>DDI02</bold>
+</th><th align="left" rowspan="1" colspan="1">
+<bold>DTI01</bold>
+</th><th align="left" rowspan="1" colspan="1">
+<bold>DTI02</bold>
+</th><th align="left" rowspan="1" colspan="1">
+<bold>DTA01</bold>
+</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"># Source nodes</td><td align="left" rowspan="1" colspan="1">1553</td><td align="left" rowspan="1" colspan="1">2674</td><td align="left" rowspan="1" colspan="1">1700</td><td align="left" rowspan="1" colspan="1">604</td><td align="left" rowspan="1" colspan="1">1384</td><td align="left" rowspan="1" colspan="1">791</td><td align="left" rowspan="1" colspan="1">1184</td></tr><tr><td align="left" rowspan="1" colspan="1"># Target nodes</td><td align="left" rowspan="1" colspan="1">1553</td><td align="left" rowspan="1" colspan="1">2674</td><td align="left" rowspan="1" colspan="1">1670</td><td align="left" rowspan="1" colspan="1">604</td><td align="left" rowspan="1" colspan="1">5763</td><td align="left" rowspan="1" colspan="1">989</td><td align="left" rowspan="1" colspan="1">624</td></tr><tr><td align="left" rowspan="1" colspan="1"># Total edges</td><td align="left" rowspan="1" colspan="1">24 11 809</td><td align="left" rowspan="1" colspan="1">71 50 276</td><td align="left" rowspan="1" colspan="1">28 39 000</td><td align="left" rowspan="1" colspan="1">3 64 816</td><td align="left" rowspan="1" colspan="1">79 75 992</td><td align="left" rowspan="1" colspan="1">7 82 299</td><td align="left" rowspan="1" colspan="1">7 38 816</td></tr><tr><td align="left" rowspan="1" colspan="1"># Connected edges</td><td align="left" rowspan="1" colspan="1">26 640</td><td align="left" rowspan="1" colspan="1">14 150</td><td align="left" rowspan="1" colspan="1">10 08 936</td><td align="left" rowspan="1" colspan="1">57 778</td><td align="left" rowspan="1" colspan="1">99 884</td><td align="left" rowspan="1" colspan="1">10 254</td><td align="left" rowspan="1" colspan="1">/</td></tr><tr><td align="left" rowspan="1" colspan="1">Conn. edge ratio</td><td align="left" rowspan="1" colspan="1">0.01105</td><td align="left" rowspan="1" colspan="1">0.00198</td><td align="left" rowspan="1" colspan="1">0.35538</td><td align="left" rowspan="1" colspan="1">0.15838</td><td align="left" rowspan="1" colspan="1">0.01252</td><td align="left" rowspan="1" colspan="1">0.01311</td><td align="left" rowspan="1" colspan="1">/</td></tr><tr><td align="left" rowspan="1" colspan="1">Max degree</td><td align="left" rowspan="1" colspan="1">364</td><td align="left" rowspan="1" colspan="1">140</td><td align="left" rowspan="1" colspan="1">1185</td><td align="left" rowspan="1" colspan="1">364</td><td align="left" rowspan="1" colspan="1">580</td><td align="left" rowspan="1" colspan="1">132</td><td align="left" rowspan="1" colspan="1">/</td></tr></tbody></table><table-wrap-foot><p>Note: “Conn. edge ratio” is the abbreviation for “connected edge ratio.” For the “# connected edges” in the table, if a dataset contains bidirectional edges, the value of “# connected edges” in the table is twice the actual number of edges. The DDI01 dataset has undergone homogeneous graph heterogenization, which means the DDI01 dataset was originally a homogeneous graph (with nodes of the same type) and was converted into a heterogeneous graph (distinguishing between source nodes and target nodes) during processing.</p></table-wrap-foot></table-wrap></sec><sec id="sec4"><title>Modular and interpretable architecture</title><p>First, the FlexBIP model can flexibly handle various types of biomolecular inputs; whether it is a protein, drug, or target, it can be accepted as the initial input. The key to this design is its universality, which lays the foundation for subsequent flexible processing. The core design philosophy of the framework is to decouple the intrinsic features of a node from its graph structure information within the network. Rather than a purely architectural separation followed by naive concatenation, our decoupling is mechanistically enforced to prevent the semantic dilution of molecular features. FlexBIP strictly isolates the sequence-pair attention encoding from the graph convolutions. Furthermore, the integration of these decoupled streams is executed through a Conditional Fusion module. Instead of standard linear concatenation, the decoupled topological embeddings serve as contextual conditions that dynamically modulate the molecular interaction representations. In the processing workflow, the input node features are first encoded into information-dense node embedding vectors by a Feedforward Neural Network. Concurrently, edge information describing the connections between nodes is also extracted. Subsequently, the node feature matrix and edge information are jointly fed into a Graph Convolutional Network (GCN) [<xref rid="ref31" ref-type="bibr">31</xref>] core. Within this module, the model integrates the graph’s topological structure into each node’s representation through an iterative aggregation of neighborhood information, thereby generating context-rich graph embeddings. To further refine key information, the FlexBIP model also utilizes a graph attention aggregation network to process node and edge features. This allows the model to dynamically assign different importance weights to different neighboring nodes, thereby extracting the most relevant edge information embeddings for a specific node. Furthermore, the framework supports the fusion of an Auxiliary Graph. When an external knowledge base or auxiliary dataset is available, its graph information can similarly be processed by an independent GCN to generate auxiliary graph embeddings, providing additional informational dimensions to the main model.</p><p>As shown in <xref rid="f1" ref-type="fig">Fig. 1</xref>, after the node, graph, edge, and potential auxiliary graph embeddings are obtained, these feature representations from different dimensions are concatenated to form a comprehensive and rich combined feature vector. This vector is then input into a multi-class similarity decoder, which ultimately predicts whether an interaction exists between a specific pair of molecules and outputs a prediction score. Furthermore, when the input data includes sequence text information, such as the amino acid sequences of proteins and the Simplified Molecular-Input Line-Entry System (SMILES) strings of drugs, FlexBIP activates a powerful Bidirectional Encoder Representations from Transformers (BERT)-like [<xref rid="ref32" ref-type="bibr">32</xref>] sequence-pair encoder. This encoder can process biological sequence pairs as if they were natural language, deeply capturing complex dependencies within and between sequences through a multi-head attention mechanism. This process not only generates highly informative sequence-pair embeddings but also calculates the attention weights for various sites (e.g. amino acid residues or chemical groups) between the molecule pair. These weights intuitively reflect which key regions the model focused on when making a prediction (such as the highlighted ASP (aspartic acid)-231 residue in the figure), thereby greatly enhancing the interpretability of the model’s prediction results and helping researchers understand the underlying mechanisms of intermolecular interactions.</p></sec><sec id="sec5"><title>Flexible graph data representation</title><p>We define a flexible graph data structure <inline-formula><tex-math notation="LaTeX" id="ineq01"><?equation-image-name ineq01.gif?><?equation-image-status READY?><?equation-image-md5 c4d44b347144d27c0afe656c13918f0d?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/c4d44b347144/ineq01.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal{G}=\left(\mathcal{V},\mathcal{\varepsilon},X,{E}_{attr}\right)$\end{document}</tex-math></inline-formula> where: <inline-formula><tex-math notation="LaTeX" id="ineq02"><?equation-image-name ineq02.gif?><?equation-image-status READY?><?equation-image-md5 baca8500d6d9a49913eaa4f6bd5ede3f?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/baca8500d6d9/ineq02.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal{V}$\end{document}</tex-math></inline-formula> denotes the set of nodes, which can be drug molecules, proteins, or targets; <inline-formula><italic toggle="yes">\varepsilon</italic></inline-formula> denotes the set of edges, representing interaction relationships between biomolecules; <inline-formula><tex-math notation="LaTeX" id="ineq04"><?equation-image-name ineq04.gif?><?equation-image-status READY?><?equation-image-md5 115f0384009ee98cc766704ea4c40dd5?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/115f0384009e/ineq04.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$X\in{\mathbb{R}}^{\mid \mathcal{V}\mid \times d}$\end{document}</tex-math></inline-formula> represents the node feature matrix; <inline-formula><tex-math notation="LaTeX" id="ineq05"><?equation-image-name ineq05.gif?><?equation-image-status READY?><?equation-image-md5 4c19c07ed2e0dcbc88cbdaa866eb54a0?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/4c19c07ed2e0/ineq05.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${E}_{attr}\in{\mathbb{R}}^{\mid \varepsilon \mid \times f}$\end{document}</tex-math></inline-formula> represents the edge attribute matrix.</p><p>For heterogeneous graph data, we further divide the node set into source nodes <inline-formula><tex-math notation="LaTeX" id="ineq06"><?equation-image-name ineq06.gif?><?equation-image-status READY?><?equation-image-md5 9317c034d42f4aa2a9e36c88210b8546?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/9317c034d42f/ineq06.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathcal{V}}_s$\end{document}</tex-math></inline-formula> and target nodes <inline-formula><tex-math notation="LaTeX" id="ineq07"><?equation-image-name ineq07.gif?><?equation-image-status READY?><?equation-image-md5 9bcc9cee5ff4133c921e9f7824e18f7a?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/9bcc9cee5ff4/ineq07.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathcal{V}}_t$\end{document}</tex-math></inline-formula>, where <inline-formula><tex-math notation="LaTeX" id="ineq08"><?equation-image-name ineq08.gif?><?equation-image-status READY?><?equation-image-md5 19834176cd67422db34547eede573c0e?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/19834176cd67/ineq08.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal{V}={\mathcal{V}}_s\cup{\mathcal{V}}_t$\end{document}</tex-math></inline-formula>. Details of the core algorithms of the FlexBIP framework are provided in <xref rid="sup1" ref-type="supplementary-material">Supplementary Section 1: Algorithms</xref>.</p></sec><sec id="sec6"><title>Multi-modal fusion architecture</title><p>The FlexBIP framework adopts a multi-module fusion strategy, integrating multiple graphs embedding methods: </p><disp-formula id="deqn01">
+<label>(1)</label>
+<tex-math notation="LaTeX" id="DmEquation1"><?equation-image-name DmEquation1.gif?><?equation-image-status READY?><?equation-image-md5 a25b36f5b6aca9b6431116fc9d7c5eaa?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/a25b36f5b6ac/DmEquation1.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {H}^{\left(l+1\right)}=\mathrm{\sigma} \left({\overset{\sim }{D}}^{-\frac{1}{2}}\overset{\sim }{A}{\overset{\sim }{D}}^{-\frac{1}{2}}{H}^{(0)}{W}^{(l)}\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn02">
+<label>(2)</label>
+<tex-math notation="LaTeX" id="DmEquation2"><?equation-image-name DmEquation2.gif?><?equation-image-status READY?><?equation-image-md5 1ce57ff47e3d89e08b2d7eb5badd5fa0?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/1ce57ff47e3d/DmEquation2.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {H}_{graph}=\Big\Vert \left({H}^{(1)},{H}^{(2)}\dots{H}^{\left(l+1\right)}\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math notation="LaTeX" id="ineq09"><?equation-image-name ineq09.gif?><?equation-image-status READY?><?equation-image-md5 daa625c69feff5b7b01e6d032b37e607?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/daa625c69fef/ineq09.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\overset{\sim }{A}=A+I$\end{document}</tex-math></inline-formula> is the adjacency matrix with self-loops added, <inline-formula><tex-math notation="LaTeX" id="ineq10"><?equation-image-name ineq10.gif?><?equation-image-status READY?><?equation-image-md5 e04df430598c4bf181d3ed6f62031f54?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/e04df430598c/ineq10.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\overset{\sim }{D}$\end{document}</tex-math></inline-formula> is the degree matrix of <inline-formula><tex-math notation="LaTeX" id="ineq11"><?equation-image-name ineq11.gif?><?equation-image-status READY?><?equation-image-md5 c947d57588eb6db7b9ea530707f91a8d?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/c947d57588eb/ineq11.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\overset{\sim }{A}$\end{document}</tex-math></inline-formula>, <inline-formula><tex-math notation="LaTeX" id="ineq12"><?equation-image-name ineq12.gif?><?equation-image-status READY?><?equation-image-md5 31d3d369f6cf775e0015bf001462168e?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/31d3d369f6cf/ineq12.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${W}^{(l)}$\end{document}</tex-math></inline-formula> is a learnable weight matrix, <inline-formula><tex-math notation="LaTeX" id="ineq13"><?equation-image-name ineq13.gif?><?equation-image-status READY?><?equation-image-md5 18459ab61bc85153d13324a1719a81a6?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/18459ab61bc8/ineq13.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathrm{\sigma}$\end{document}</tex-math></inline-formula> is an activation function, <inline-formula><tex-math notation="LaTeX" id="ineq14"><?equation-image-name ineq14.gif?><?equation-image-status READY?><?equation-image-md5 3c0878612d862869859b1fddbfbd016c?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/3c0878612d86/ineq14.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${H}^{(0)}$\end{document}</tex-math></inline-formula> is One-Hot encoding about node <inline-formula><tex-math notation="LaTeX" id="ineq15"><?equation-image-name ineq15.gif?><?equation-image-status READY?><?equation-image-md5 baca8500d6d9a49913eaa4f6bd5ede3f?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/baca8500d6d9/ineq15.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal{V}$\end{document}</tex-math></inline-formula>, and <inline-formula><italic toggle="yes">∥</italic></inline-formula> denotes the concatenation operation. </p><disp-formula id="deqn03">
+<label>(3)</label>
+<tex-math notation="LaTeX" id="DmEquation3"><?equation-image-name DmEquation3.gif?><?equation-image-status READY?><?equation-image-md5 5f3282c838e63e9fe7879d5ad8002d4e?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/5f3282c838e6/DmEquation3.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {H}_{node}={MLP}_{node}(X) \end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn03a">
+<label>(4)</label>
+<tex-math notation="LaTeX" id="DmEquation3a"><?equation-image-name DmEquation3a.gif?><?equation-image-status READY?><?equation-image-md5 95a9e8c6cbbe9e18563e8916e4e301e6?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/95a9e8c6cbbe/DmEquation3a.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*}{E}_{edge}={MLP}_{E_{edge}}\left({e}_{attr}\right)\end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn03b">
+<label>(5)</label>
+<tex-math notation="LaTeX" id="DmEquation3b"><?equation-image-name DmEquation3b.gif?><?equation-image-status READY?><?equation-image-md5 c040c6cf80512ed647b08e28838b13d1?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/c040c6cf8051/DmEquation3b.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*}{E}_{node}={MLP}_{E_{node}}\left({H}^{(0)}\right)\end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn04">
+<label>(6)</label>
+<tex-math notation="LaTeX" id="DmEquation4"><?equation-image-name DmEquation4.gif?><?equation-image-status READY?><?equation-image-md5 0a0a19bc43869e5d6d3c9f9d29f3333b?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/0a0a19bc4386/DmEquation4.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {H}_{edge}=\mathrm{\sigma} \Big({E}_{node}+ Aggregation\left({E}_{node},\kern0.5em {E}_{edge}\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn05">
+<label>(7)</label>
+<tex-math notation="LaTeX" id="DmEquation5"><?equation-image-name DmEquation5.gif?><?equation-image-status READY?><?equation-image-md5 eb76853a8ace4275d291ff2c0667d859?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/eb76853a8ace/DmEquation5.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {H}_{final}=\left({H}_{graph}\bullet \mathrm{ReLU}\left(\alpha \right)\right)\Vert \left({H}_{node}\bullet \mathrm{ReLU}\left(\beta \right)\right)\Vert\left({H}_{edge}\bullet \mathrm{ReLU}\left(\mathrm{\gamma} \right)\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math notation="LaTeX" id="ineq19"><?equation-image-name ineq19.gif?><?equation-image-status READY?><?equation-image-md5 ba54f1b6b694eabbb2066ac52ae8c805?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/ba54f1b6b694/ineq19.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${MLP}_{node}$\end{document}</tex-math></inline-formula> is a multi-layer perceptron for node features, <inline-formula><tex-math notation="LaTeX" id="ineq20"><?equation-image-name ineq20.gif?><?equation-image-status READY?><?equation-image-md5 a540ff9e3276f75e9c6248c3168947b3?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/a540ff9e3276/ineq20.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${MLP}_{E- edge}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math notation="LaTeX" id="ineq21"><?equation-image-name ineq21.gif?><?equation-image-status READY?><?equation-image-md5 10e957c83e021a8875f8e3ab21593e6a?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/10e957c83e02/ineq21.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${MLP}_{E- node}$\end{document}</tex-math></inline-formula> are multi-layer perceptron for edge features, <inline-formula><italic toggle="yes">Aggregation</italic></inline-formula> is an Aggregation mechanism used to integrate edge features into node representations, and <inline-formula><tex-math notation="LaTeX" id="ineq23"><?equation-image-name ineq23.gif?><?equation-image-status READY?><?equation-image-md5 705bf3152afeb2d5dc2025e0dd40ac74?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/705bf3152afe/ineq23.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\alpha, \kern0.5em \beta, \mathrm{\gamma}$\end{document}</tex-math></inline-formula> are learnable fusion weight.</p><p>For scenarios with auxiliary information, we introduce an auxiliary graph structure <inline-formula><tex-math notation="LaTeX" id="ineq24"><?equation-image-name ineq24.gif?><?equation-image-status READY?><?equation-image-md5 23ac7f19bcd067ab833c3fed7f743835?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/23ac7f19bcd0/ineq24.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathcal{G}}_{aux}=\left({\mathcal{V}}_{aux},{\varepsilon}_{aux},{\mathrm{X}}_{aux},{E}_{aux}\right)$\end{document}</tex-math></inline-formula>, and fuse information in the following way:</p><p>
+<inline-formula>
+<tex-math notation="LaTeX" id="ineq25"><?equation-image-name ineq25.gif?><?equation-image-status READY?><?equation-image-md5 acefd8dc18f60bacc077e8e4fd34c1f9?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/acefd8dc18f6/ineq25.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${H}_{aux}={GCN}_{aux}\Big({\mathrm{X}}_{aux},{\mathrm{\varepsilon}}_{aux}$\end{document}</tex-math>
+</inline-formula>) (8)</p><disp-formula id="deqn06">
+<label>(9)</label>
+<tex-math notation="LaTeX" id="DmEquation7"><?equation-image-name DmEquation7.gif?><?equation-image-status READY?><?equation-image-md5 23cadad91e07ac0bbd210973fc142a35?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/23cadad91e07/DmEquation7.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {H}_{fusion}={H}_{final}\parallel{H}_{aux}\left[ idx\right] \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math notation="LaTeX" id="ineq26"><?equation-image-name ineq26.gif?><?equation-image-status READY?><?equation-image-md5 dc940967dcdc59681d19b034cbd17151?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/dc940967dcdc/ineq26.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${GCN}_{aux}$\end{document}</tex-math></inline-formula> is the GCN for the auxiliary graph, <inline-formula><italic toggle="yes">idx</italic></inline-formula> is the index mapping of main graph nodes in the auxiliary graph, and <inline-formula><italic toggle="yes">∥</italic></inline-formula> denotes the concatenation operation.</p></sec><sec id="sec7"><title>Sequence attention encoding</title><p>The input text sequence pair <inline-formula><tex-math notation="LaTeX" id="ineq29"><?equation-image-name ineq29.gif?><?equation-image-status READY?><?equation-image-md5 6d76bdc49a0fd528bc77637b3fb94bda?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/6d76bdc49a0f/ineq29.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\left({s}_1,{s}_2\right)$\end{document}</tex-math></inline-formula> is preprocessed to form source node and target node sequences with special tokens:</p><disp-formula id="deqn07">
+<label>(10)</label>
+<tex-math notation="LaTeX" id="DmEquation8"><?equation-image-name DmEquation8.gif?><?equation-image-status READY?><?equation-image-md5 754922230d1eac0b84f7559e1ac0a3e9?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/754922230d1e/DmEquation8.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} seq=\left[\left[ CLS\right]\right]+{s}_1+\left[\left[ SEP\right]\right]+{s}_2+\left[\left[ SEP\right]\right] \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math notation="LaTeX" id="ineq30"><?equation-image-name ineq30.gif?><?equation-image-status READY?><?equation-image-md5 a3fd91029a817b2a59dc4394b1a81abc?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/a3fd91029a81/ineq30.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\left[ CLS\right]$\end{document}</tex-math></inline-formula> is the “classification token” with a fixed index of 1. <inline-formula><tex-math notation="LaTeX" id="ineq31"><?equation-image-name ineq31.gif?><?equation-image-status READY?><?equation-image-md5 74bc23f1dc4b0d8232dd904610ca1a98?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/74bc23f1dc4b/ineq31.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\left[ SEP\right]$\end{document}</tex-math></inline-formula> is the “separator token,” which clearly distinguishes the boundaries between the two sequences, helps the model distinguish different parts in the input, and has a fixed index of 2.</p><p>The input sequence obtains initial features through the fusion of three types of embeddings:</p><disp-formula id="deqn08">
+<label>(11)</label>
+<tex-math notation="LaTeX" id="DmEquation9"><?equation-image-name DmEquation9.gif?><?equation-image-status READY?><?equation-image-md5 5a769959b8e67aa4d194ac42a25c6070?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/5a769959b8e6/DmEquation9.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} E={E}_{token}+{E}_{pos}+{E}_{seg} \end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn09">
+<label>(12)</label>
+<tex-math notation="LaTeX" id="DmEquation10"><?equation-image-name DmEquation10.gif?><?equation-image-status READY?><?equation-image-md5 58a8c71639f45c449895decd9c56077c?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/58a8c71639f4/DmEquation10.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {E}_{token}={Embedding}_{vocab}(seq) \end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn10">
+<label>(13)</label>
+<tex-math notation="LaTeX" id="DmEquation11"><?equation-image-name DmEquation11.gif?><?equation-image-status READY?><?equation-image-md5 2306db70c34ee2ffaffed29f180ac913?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/2306db70c34e/DmEquation11.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {E}_{pos}={Embedding}_{pos}\left(\left\{0,1,\dots, L-1\right\}\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn11">
+<label>(14)</label>
+<tex-math notation="LaTeX" id="DmEquation12"><?equation-image-name DmEquation12.gif?><?equation-image-status READY?><?equation-image-md5 1a9c521ae3baa2891a24d0df43cf2371?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/1a9c521ae3ba/DmEquation12.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {E}_{seg}={Embedding}_{seg}\left({\mathit{\operatorname{seg}}}_{id}\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math notation="LaTeX" id="ineq32"><?equation-image-name ineq32.gif?><?equation-image-status READY?><?equation-image-md5 1552acd16134c8656ed970694bec5e14?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/1552acd16134/ineq32.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$E,{E}_{token},{E}_{pos},{E}_{seg}\in{\mathbb{R}}^{L\times{d}_e}$\end{document}</tex-math></inline-formula>, in <inline-formula><tex-math notation="LaTeX" id="ineq33"><?equation-image-name ineq33.gif?><?equation-image-status READY?><?equation-image-md5 4f48bb02790dbab94910560e3fa33462?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/4f48bb02790d/ineq33.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathit{\operatorname{seg}}}_{id}$\end{document}</tex-math></inline-formula>, 1 corresponds to <inline-formula><tex-math notation="LaTeX" id="ineq34"><?equation-image-name ineq34.gif?><?equation-image-status READY?><?equation-image-md5 5ea61b08db151d66d2d40921e615212b?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/5ea61b08db15/ineq34.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${seq}_1$\end{document}</tex-math></inline-formula>, and 2 corresponds to <inline-formula><tex-math notation="LaTeX" id="ineq35"><?equation-image-name ineq35.gif?><?equation-image-status READY?><?equation-image-md5 17575b4db7e08a013073f444a8c86a57?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/17575b4db7e0/ineq35.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${seq}_2$\end{document}</tex-math></inline-formula>.</p><p>Given multi-head self-attention calculates attention weights and outputs features based on the given single-head self-attention outputs:</p><disp-formula id="deqn12">
+<label>(15)</label>
+<tex-math notation="LaTeX" id="DmEquation13"><?equation-image-name DmEquation13.gif?><?equation-image-status READY?><?equation-image-md5 a488e715b78a7d35f307216c03a997e7?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/a488e715b78a/DmEquation13.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} Attn\left(Q,K,V\right)= softmax\left(\frac{Q{K}^T}{\sqrt{d_k}}\right)V \end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn13">
+<label>(16)</label>
+<tex-math notation="LaTeX" id="DmEquation14"><?equation-image-name DmEquation14.gif?><?equation-image-status READY?><?equation-image-md5 64df3115461ea882fda3996554535dd2?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/64df3115461e/DmEquation14.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} MultiHead(E)=\Big\Vert \left({Attn}_1,\dots, {Attn}_h\right){W}^o \end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn14">
+<label>(17)</label>
+<tex-math notation="LaTeX" id="DmEquation15"><?equation-image-name DmEquation15.gif?><?equation-image-status READY?><?equation-image-md5 07619797da23064c971f08cbd6bf0399?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/07619797da23/DmEquation15.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {H}_1= LayerNorm\left(E+ MultiHead(E)\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><italic toggle="yes">Q=K=V=E</italic></inline-formula>. After concatenating multi-head outputs, they are integrated through a projection matrix. <inline-formula><tex-math notation="LaTeX" id="ineq37"><?equation-image-name ineq37.gif?><?equation-image-status READY?><?equation-image-md5 a72b0f9645240e14fa38be3b86f2d2d9?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/a72b0f964524/ineq37.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${W}^o$\end{document}</tex-math></inline-formula> is a learnable parameter matrix, and <inline-formula><tex-math notation="LaTeX" id="ineq38"><?equation-image-name ineq38.gif?><?equation-image-status READY?><?equation-image-md5 7be5f4150b466772cab145ae5a8812f0?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/7be5f4150b46/ineq38.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${Attn}_i\ \left(i=1,2,\dots, h\right)$\end{document}</tex-math></inline-formula>denotes the output of the <inline-formula><italic toggle="yes">i</italic></inline-formula>-th attention head and <inline-formula><tex-math notation="LaTeX" id="ineq40"><?equation-image-name ineq40.gif?><?equation-image-status READY?><?equation-image-md5 d90f96e887a442d37067d92107982d09?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/d90f96e887a4/ineq40.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$MultiHead(E)\in{\mathbb{R}}^{L\times{d}_e}$\end{document}</tex-math></inline-formula>. <inline-formula><tex-math notation="LaTeX" id="ineq41"><?equation-image-name ineq41.gif?><?equation-image-status READY?><?equation-image-md5 dabdefde0b51a4811adcbf4d0ada0278?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/dabdefde0b51/ineq41.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${H}_1\in{\mathbb{R}}^{L\times{d}_e}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math notation="LaTeX" id="ineq42"><?equation-image-name ineq42.gif?><?equation-image-status READY?><?equation-image-md5 4cbf0758b9de9b58e8a2fa28b6239b9b?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/4cbf0758b9de/ineq42.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$LayerNorm\left(\bullet \right)$\end{document}</tex-math></inline-formula> denotes the normalization process applied to the result of the residual connection.</p><p>Perform a nonlinear transformation on the attention output:</p><disp-formula id="deqn15">
+<label>(18)</label>
+<tex-math notation="LaTeX" id="DmEquation16"><?equation-image-name DmEquation16.gif?><?equation-image-status READY?><?equation-image-md5 369605003d0a4e11d5b592168c65c3df?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/369605003d0a/DmEquation16.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} FFN(x)={W}_2\bullet GELU\left({W}_1x+{b}_1\right)+{b}_2 \end{equation*}\end{document}</tex-math>
+</disp-formula><disp-formula id="deqn16">
+<label>(19)</label>
+<tex-math notation="LaTeX" id="DmEquation17"><?equation-image-name DmEquation17.gif?><?equation-image-status READY?><?equation-image-md5 869403891d999cde35c8af3ae90f42a8?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/869403891d99/DmEquation17.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {H}_2= LayerNorm\left({H}_1+ FFN\left({H}_1\right)\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math notation="LaTeX" id="ineq43"><?equation-image-name ineq43.gif?><?equation-image-status READY?><?equation-image-md5 2469a61550b8caa395210a40599801db?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/2469a61550b8/ineq43.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${W}_1$\end{document}</tex-math></inline-formula> is the weight matrix of the first linear transformation, a learnable parameter, <inline-formula><tex-math notation="LaTeX" id="ineq44"><?equation-image-name ineq44.gif?><?equation-image-status READY?><?equation-image-md5 77849668fb1cf7233d25fa396418f0f5?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/77849668fb1c/ineq44.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${W}_1\in{\mathbb{R}}^{4{d}_e\times{d}_e}$\end{document}</tex-math></inline-formula>, <inline-formula><tex-math notation="LaTeX" id="ineq45"><?equation-image-name ineq45.gif?><?equation-image-status READY?><?equation-image-md5 40cea97f15b64602d9a03c887a6cb5fb?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/40cea97f15b6/ineq45.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${b}_1$\end{document}</tex-math></inline-formula>is the bias vector of the first linear transformation, a learnable parameter. <inline-formula><tex-math notation="LaTeX" id="ineq46"><?equation-image-name ineq46.gif?><?equation-image-status READY?><?equation-image-md5 7e96f3fb7852d184392f2acc74cad26f?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/7e96f3fb7852/ineq46.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$GELU\left(\bullet \right)$\end{document}</tex-math></inline-formula> is Gaussian Error Linear Unit activation function, a smooth nonlinear activation function defined as <inline-formula><tex-math notation="LaTeX" id="ineq47"><?equation-image-name ineq47.gif?><?equation-image-status READY?><?equation-image-md5 d241f8cd9f499823126ed441a2456cb4?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/d241f8cd9f49/ineq47.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$GELU(x)=x\bullet \varPhi (x)$\end{document}</tex-math></inline-formula> (<inline-formula><italic toggle="yes">\varPhi (x)</italic></inline-formula> is the cumulative distribution function of the standard normal distribution). <inline-formula><tex-math notation="LaTeX" id="ineq49"><?equation-image-name ineq49.gif?><?equation-image-status READY?><?equation-image-md5 fe6a66f0e2bbdc53513fe29918ca7748?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/fe6a66f0e2bb/ineq49.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${W}_2$\end{document}</tex-math></inline-formula> is the weight matrix of the second linear transformation, <inline-formula><tex-math notation="LaTeX" id="ineq50"><?equation-image-name ineq50.gif?><?equation-image-status READY?><?equation-image-md5 cd244da60b420ce3821c70e10db7eb7a?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/cd244da60b42/ineq50.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${W}_2\in{\mathbb{R}}^{d_e\times 4{d}_e}$\end{document}</tex-math></inline-formula>, <inline-formula><tex-math notation="LaTeX" id="ineq51"><?equation-image-name ineq51.gif?><?equation-image-status READY?><?equation-image-md5 9d6ddd0d59bdbd0dfa02952158abb6f4?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/9d6ddd0d59bd/ineq51.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${b}_2$\end{document}</tex-math></inline-formula>is the bias vector of the second linear transformation, a learnable parameter, where <inline-formula><tex-math notation="LaTeX" id="ineq52"><?equation-image-name ineq52.gif?><?equation-image-status READY?><?equation-image-md5 0b9194a5202ff7de32e5421bdb39b91d?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/0b9194a5202f/ineq52.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${H}_2\in{\mathbb{R}}^{L\times{d}_e}$\end{document}</tex-math></inline-formula>.</p><p>Take the feature at the <inline-formula><tex-math notation="LaTeX" id="ineq53"><?equation-image-name ineq53.gif?><?equation-image-status READY?><?equation-image-md5 a3fd91029a817b2a59dc4394b1a81abc?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/a3fd91029a81/ineq53.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\left[ CLS\right]$\end{document}</tex-math></inline-formula> position (index 0) in the final feature matrix <inline-formula><tex-math notation="LaTeX" id="ineq54"><?equation-image-name ineq54.gif?><?equation-image-status READY?><?equation-image-md5 1591d752ca9bf23c9f826612792db080?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/1591d752ca9b/ineq54.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${H}_2$\end{document}</tex-math></inline-formula>, and obtain the overall sequence representation through linear transformation:</p><disp-formula id="deqn17">
+<label>(20)</label>
+<tex-math notation="LaTeX" id="DmEquation18"><?equation-image-name DmEquation18.gif?><?equation-image-status READY?><?equation-image-md5 0d52c599e552b7b5b303cd3d086ab1a5?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/0d52c599e552/DmEquation18.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {H}_a= Linear\left({H}_2\left[0,:\right]\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math notation="LaTeX" id="ineq55"><?equation-image-name ineq55.gif?><?equation-image-status READY?><?equation-image-md5 1361dcfcb367d91530d31259f1b6bae9?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/1361dcfcb367/ineq55.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${H}_a\in{\mathbb{R}}^{d_h}$\end{document}</tex-math></inline-formula>, <inline-formula><tex-math notation="LaTeX" id="ineq56"><?equation-image-name ineq56.gif?><?equation-image-status READY?><?equation-image-md5 a4a677c1f6b5ca92a2da846cb91cfe08?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/a4a677c1f6b5/ineq56.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${H}_2\left[0,:\right]$\end{document}</tex-math></inline-formula> denotes extracting the feature vector of the [<italic toggle="yes">CLS</italic>] token (at position 0); <inline-formula><tex-math notation="LaTeX" id="ineq57"><?equation-image-name ineq57.gif?><?equation-image-status READY?><?equation-image-md5 e218b80409f1a02cd654a3a3887734f1?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/e218b80409f1/ineq57.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$Linear\left(\bullet \right)$\end{document}</tex-math></inline-formula>represents mapping the dimension from <inline-formula><tex-math notation="LaTeX" id="ineq58"><?equation-image-name ineq58.gif?><?equation-image-status READY?><?equation-image-md5 4e88d1e37979e66998a07f6ea2cd0aa2?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/4e88d1e37979/ineq58.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${d}_e$\end{document}</tex-math></inline-formula> to <inline-formula><tex-math notation="LaTeX" id="ineq59"><?equation-image-name ineq59.gif?><?equation-image-status READY?><?equation-image-md5 6cfa2f38f51c193a7c8436c488849305?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/6cfa2f38f51c/ineq59.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${d}_h$\end{document}</tex-math></inline-formula> (hidden dimension).</p><p>The weight matrix of the <inline-formula><italic toggle="yes">k</italic></inline-formula>-th attention head:</p><disp-formula id="deqn18">
+<label>(21)</label>
+<tex-math notation="LaTeX" id="DmEquation19"><?equation-image-name DmEquation19.gif?><?equation-image-status READY?><?equation-image-md5 120394ef76cbf671671ca288ff85b2de?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/120394ef76cb/DmEquation19.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {A}_k=\frac{Q_k{K}_k^T}{\sqrt{d_k}} \end{equation*}\end{document}</tex-math>
+</disp-formula><p>
+<inline-formula>
+<tex-math notation="LaTeX" id="ineq61"><?equation-image-name ineq61.gif?><?equation-image-status READY?><?equation-image-md5 32c85f29f7e95144876b719ad7cab657?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/32c85f29f7e9/ineq61.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${Q}_k$\end{document}</tex-math>
+</inline-formula> and <inline-formula><tex-math notation="LaTeX" id="ineq62"><?equation-image-name ineq62.gif?><?equation-image-status READY?><?equation-image-md5 bd49ff9af28dae8486d597eb19c8d7d5?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/bd49ff9af28d/ineq62.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${K}_k$\end{document}</tex-math></inline-formula> are the query and key matrices of the <inline-formula><italic toggle="yes">k</italic></inline-formula>-th head, respectively. We use the attention weights before applying softmax as the importance scores of the sites.</p><p>The weight matrices of <italic toggle="yes">h</italic> attention heads are averaged to obtain the overall attention weight matrix <inline-formula><tex-math notation="LaTeX" id="ineq64"><?equation-image-name ineq64.gif?><?equation-image-status READY?><?equation-image-md5 b1dd77231fb8edcc809dc8757fae1389?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/b1dd77231fb8/ineq64.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\overline{A}$\end{document}</tex-math></inline-formula>:</p><disp-formula id="deqn19">
+<label>(22)</label>
+<tex-math notation="LaTeX" id="DmEquation20"><?equation-image-name DmEquation20.gif?><?equation-image-status READY?><?equation-image-md5 0e145abe52c6f693a522ea3291ba22a0?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/0e145abe52c6/DmEquation20.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} \overline{A}=\frac{1}{h}{\sum}_{k=1}^h{A}_k \end{equation*}\end{document}</tex-math>
+</disp-formula><p>Attention weight slicing between sequence pairs:</p><disp-formula id="deqn20">
+<label>(23)</label>
+<tex-math notation="LaTeX" id="DmEquation21"><?equation-image-name DmEquation21.gif?><?equation-image-status READY?><?equation-image-md5 cbeefeca91f2fd763c4053a3e7be915d?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/cbeefeca91f2/DmEquation21.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {W}_{s_1,{s}_2}=\overline{A}\left[1:{L}_1-1,{L}_1:L\right] \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math notation="LaTeX" id="ineq65"><?equation-image-name ineq65.gif?><?equation-image-status READY?><?equation-image-md5 c8b51040d134ff7a05c994117b8fc626?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/c8b51040d134/ineq65.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${L}_1$\end{document}</tex-math></inline-formula> is the length of the first sequence. The slicing operation extracts the attention weights between <inline-formula><tex-math notation="LaTeX" id="ineq66"><?equation-image-name ineq66.gif?><?equation-image-status READY?><?equation-image-md5 616659b67f5d1b7042b1b7fa78a03044?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/616659b67f5d/ineq66.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${s}_1$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math notation="LaTeX" id="ineq67"><?equation-image-name ineq67.gif?><?equation-image-status READY?><?equation-image-md5 d4baa0a4c6c0f405585f177335cea7dd?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/d4baa0a4c6c0/ineq67.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${s}_2$\end{document}</tex-math></inline-formula>.</p></sec><sec id="sec8"><title>Adaptive graph structure processing mechanism</title><p>Our framework can adaptively handle both homogeneous and heterogeneous graphs through the following unified formula:</p><disp-formula id="deqn21">
+<label>(24)</label>
+<tex-math notation="LaTeX" id="DmEquation22"><?equation-image-name DmEquation22.gif?><?equation-image-status READY?><?equation-image-md5 b6080547afc52bfb7bc5dfe9ca26e28c?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/b6080547afc5/DmEquation22.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {h}_{i,j}=\mid{h}_i- {h}_j\mid \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math notation="LaTeX" id="ineq68"><?equation-image-name ineq68.gif?><?equation-image-status READY?><?equation-image-md5 81ada3f68d6b598bcdb03fd5793f2165?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/81ada3f68d6b/ineq68.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${h}_i$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math notation="LaTeX" id="ineq69"><?equation-image-name ineq69.gif?><?equation-image-status READY?><?equation-image-md5 51e0fdc4e035699c8543d3948c9041ca?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/51e0fdc4e035/ineq69.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${h}_j$\end{document}</tex-math></inline-formula> are the embedding representations of nodes <inline-formula><italic toggle="yes">i</italic></inline-formula> and <inline-formula><italic toggle="yes">j</italic></inline-formula>, the <inline-formula><tex-math notation="LaTeX" id="ineq72"><?equation-image-name ineq72.gif?><?equation-image-status READY?><?equation-image-md5 2a40b063662fe2a23d56feaa7f797fdb?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/2a40b063662f/ineq72.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mid \bullet \mid$\end{document}</tex-math></inline-formula> denote the absolute value. The decoder is a decoding function selected according to the task type:</p><disp-formula id="deqn22">
+<label>(25)</label>
+<tex-math notation="LaTeX" id="DmEquation24"><?equation-image-name DmEquation24.gif?><?equation-image-status READY?><?equation-image-md5 3b2b49fd2ad53e6ef21c39d843283cf0?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/3b2b49fd2ad5/DmEquation24.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {\hat{y}}_{i,j}=\sigma \left({h}_{i,j}{W}^C+b\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><italic toggle="yes">σ</italic></inline-formula> is the sigmoid function, <inline-formula><tex-math notation="LaTeX" id="ineq74"><?equation-image-name ineq74.gif?><?equation-image-status READY?><?equation-image-md5 071e6234a92dce6a2dc18d64e083c093?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/071e6234a92d/ineq74.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${W}^C\in{\mathbb{R}}^{d_h\times{d}_c}$\end{document}</tex-math></inline-formula>, <inline-formula><tex-math notation="LaTeX" id="ineq75"><?equation-image-name ineq75.gif?><?equation-image-status READY?><?equation-image-md5 9b4c9be4ec2bcce3cda1b2495afbe5fd?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/9b4c9be4ec2b/ineq75.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${d}_c$\end{document}</tex-math></inline-formula> is the number of categories, <inline-formula><tex-math notation="LaTeX" id="ineq76"><?equation-image-name ineq76.gif?><?equation-image-status READY?><?equation-image-md5 6cfa2f38f51c193a7c8436c488849305?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/6cfa2f38f51c/ineq76.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${d}_h$\end{document}</tex-math></inline-formula> is the dimension of <inline-formula><tex-math notation="LaTeX" id="ineq77"><?equation-image-name ineq77.gif?><?equation-image-status READY?><?equation-image-md5 b440b090d22072c042e88cd32c8d721c?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/b440b090d220/ineq77.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${h}_{i,j}$\end{document}</tex-math></inline-formula>, and <inline-formula><italic toggle="yes">b</italic></inline-formula> is a learnable parameters.</p></sec><sec id="sec9"><title>Unified loss function</title><p>Our framework accommodates multi-task learning by defining the total loss <inline-formula><tex-math notation="LaTeX" id="ineq79"><?equation-image-name ineq79.gif?><?equation-image-status READY?><?equation-image-md5 b6007b538d50e755070a437cd592d440?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/b6007b538d50/ineq79.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal{L}$\end{document}</tex-math></inline-formula> as a weighted sum over a set of tasks <inline-formula><tex-math notation="LaTeX" id="ineq80"><?equation-image-name ineq80.gif?><?equation-image-status READY?><?equation-image-md5 76a37e60a7bc3d584235f7123efb31d5?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/76a37e60a7bc/ineq80.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal{T}$\end{document}</tex-math></inline-formula>:</p><disp-formula id="deqn23">
+<label>(26)</label>
+<tex-math notation="LaTeX" id="DmEquation25"><?equation-image-name DmEquation25.gif?><?equation-image-status READY?><?equation-image-md5 d5702e28a685199decf05f133fdf06e1?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/d5702e28a685/DmEquation25.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} \mathcal{L}={\sum}_{t\in \mathcal{T}}{\lambda}_t{\mathcal{L}}_t \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math notation="LaTeX" id="ineq81"><?equation-image-name ineq81.gif?><?equation-image-status READY?><?equation-image-md5 f07d570b97ae06dc3404fa60ae0d4027?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/f07d570b97ae/ineq81.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathcal{L}}_t$\end{document}</tex-math></inline-formula> is the loss for a specific task, and <inline-formula><tex-math notation="LaTeX" id="ineq82"><?equation-image-name ineq82.gif?><?equation-image-status READY?><?equation-image-md5 0717fbff0e370032f2b8ad9355e94296?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/0717fbff0e37/ineq82.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\lambda}_t$\end{document}</tex-math></inline-formula> is its corresponding weight, set to 1 by default.</p><p>To address the severe class imbalance inherent in biomolecular interaction data, we implemented a margin-based contrastive loss for each task <inline-formula><tex-math notation="LaTeX" id="ineq83"><?equation-image-name ineq83.gif?><?equation-image-status READY?><?equation-image-md5 f07d570b97ae06dc3404fa60ae0d4027?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/f07d570b97ae/ineq83.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathcal{L}}_t$\end{document}</tex-math></inline-formula>. This approach mitigates the dominance of negative samples by employing a dynamic negative sampling strategy during training. Specifically, for each training batch and for each interaction class <inline-formula><italic toggle="yes">c</italic></inline-formula>, we use all <inline-formula><tex-math notation="LaTeX" id="ineq85"><?equation-image-name ineq85.gif?><?equation-image-status READY?><?equation-image-md5 b5ab31fc960a1817d391efe30b368314?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/b5ab31fc960a/ineq85.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${N}_{pos,c}$\end{document}</tex-math></inline-formula> positive samples but randomly sample only <inline-formula><tex-math notation="LaTeX" id="ineq86"><?equation-image-name ineq86.gif?><?equation-image-status READY?><?equation-image-md5 516564066de868719ad4cd091461e41a?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/516564066de8/ineq86.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${k}_{neg,c}$\end{document}</tex-math></inline-formula> negative samples, where <inline-formula><tex-math notation="LaTeX" id="ineq87"><?equation-image-name ineq87.gif?><?equation-image-status READY?><?equation-image-md5 885be5905af5778541cb843fda670149?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/885be5905af5/ineq87.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${k}_{neg,c}=\mathit{\min}\left({N}_{pos,c},{N}_{neg,c}\right).$\end{document}</tex-math></inline-formula> This ensures that the training objective remains balanced between positive and negative examples. The <inline-formula><tex-math notation="LaTeX" id="ineq88"><?equation-image-name ineq88.gif?><?equation-image-status READY?><?equation-image-md5 0515de18e700a6f188ac02444ff28e24?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/0515de18e700/ineq88.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathit{\min}\left(\ \right)$\end{document}</tex-math></inline-formula> function acts as a self-adaptive gradient balancer. In highly sparse biomolecular networks (<xref rid="TB1" ref-type="table">Table 1</xref>), it addresses the issues of traditional fixed-ratio sampling discarding critical negative topological context and the dominant negative class overwhelming the gradients, which has been validated in subsequent ablation studies.</p><p>The task-specific loss <inline-formula><tex-math notation="LaTeX" id="ineq89"><?equation-image-name ineq89.gif?><?equation-image-status READY?><?equation-image-md5 f07d570b97ae06dc3404fa60ae0d4027?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/f07d570b97ae/ineq89.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathcal{L}}_t$\end{document}</tex-math></inline-formula> is then computed as the average of the per-class losses:</p><disp-formula id="deqn24">
+<label>(27)</label>
+<tex-math notation="LaTeX" id="DmEquation26"><?equation-image-name DmEquation26.gif?><?equation-image-status READY?><?equation-image-md5 9c8595cbcd876e1d6b33ce47b49b7692?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/9c8595cbcd87/DmEquation26.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{equation*} {\mathcal{L}}_t=\frac{1}{C}\sum_{c=1}^C\frac{1}{N_{pos,c}+{k}_{neg,c}}\left(\sum_{i\in{Pos}_c}\mathit{\max}{\left(0,m-{\hat{y}}_{ic}\right)}^2+\sum_{j\in{SampledNeg}_c}{\left({\hat{y}}_{jc}\right)}^2\right) \end{equation*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><italic toggle="yes">C</italic></inline-formula> is the total number of classes. For a given class <inline-formula><italic toggle="yes">c</italic></inline-formula>, <inline-formula><tex-math notation="LaTeX" id="ineq92"><?equation-image-name ineq92.gif?><?equation-image-status READY?><?equation-image-md5 5e2302d4fed9072912a20be12c0f0e9f?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/5e2302d4fed9/ineq92.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${Pos}_c$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math notation="LaTeX" id="ineq93"><?equation-image-name ineq93.gif?><?equation-image-status READY?><?equation-image-md5 f0909f68d67d64509a74d707b0de2002?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/f0909f68d67d/ineq93.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${SampledNeg}_c$\end{document}</tex-math></inline-formula>represent the sets of positive and sampled negative interactions, respectively. <inline-formula><tex-math notation="LaTeX" id="ineq94"><?equation-image-name ineq94.gif?><?equation-image-status READY?><?equation-image-md5 9a6be7002d975386a137bb930465ffba?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/9a6be7002d97/ineq94.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\hat{y}}_{ic}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math notation="LaTeX" id="ineq95"><?equation-image-name ineq95.gif?><?equation-image-status READY?><?equation-image-md5 0714895ad290b509661f1b1398fcc407?><?equation-image-cloudpmc-urn urn:cdn:blobs/350e/13544631/0714895ad290/ineq95.gif?>\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\hat{y}}_{jc}$\end{document}</tex-math></inline-formula> are the predicted scores for these interactions. The margin <italic toggle="yes">m</italic>, a hyperparameter set to 1.0, enforces a separation between the scores of positive and negative pairs. This loss formulation enhances model robustness and predictive performance, particularly in data-scarce and imbalanced scenarios.</p></sec></sec><sec id="sec10"><title>Results and discussion</title><sec id="sec11"><title>Performance on multiple biomolecular network prediction tasks</title><p>For a comprehensive validation of a flexible prediction framework’s versatility and robustness, we carefully selected seven representative benchmark datasets. These datasets cover the main combinations within our framework, allowing for a rigorous test of the model’s generalization capabilities. We compared FlexBIP against various baseline methods (K-Nearest Neighbors (KNN) [<xref rid="ref33" ref-type="bibr">33</xref>], Random Forest (RF) [<xref rid="ref34" ref-type="bibr">34</xref>], Logistic Regression (LR) [<xref rid="ref35" ref-type="bibr">35</xref>], GCN [<xref rid="ref31" ref-type="bibr">31</xref>], MCGLPPI [<xref rid="ref7" ref-type="bibr">7</xref>], DeepNano [<xref rid="ref36" ref-type="bibr">36</xref>], HIGH-PPI [<xref rid="ref5" ref-type="bibr">5</xref>], GRACE [<xref rid="ref37" ref-type="bibr">37</xref>], VGNAE [<xref rid="ref38" ref-type="bibr">38</xref>], DNE [<xref rid="ref6" ref-type="bibr">6</xref>], DeepDDI [<xref rid="ref39" ref-type="bibr">39</xref>], MeTDDI [<xref rid="ref40" ref-type="bibr">40</xref>], DGAT-DDI [<xref rid="ref8" ref-type="bibr">8</xref>], CompGCN [<xref rid="ref41" ref-type="bibr">41</xref>], SkipGNN [<xref rid="ref42" ref-type="bibr">42</xref>], EmerGNN [<xref rid="ref9" ref-type="bibr">9</xref>], KGE_NFM [<xref rid="ref10" ref-type="bibr">10</xref>], MPNN_CNN [<xref rid="ref11" ref-type="bibr">11</xref>], DTIAM [<xref rid="ref16" ref-type="bibr">16</xref>], IHDFN-DTI [<xref rid="ref12" ref-type="bibr">12</xref>], TransformerCPI [<xref rid="ref13" ref-type="bibr">13</xref>], DeepDTA [<xref rid="ref14" ref-type="bibr">14</xref>], and GraphDTA [<xref rid="ref15" ref-type="bibr">15</xref>]) on the PPI01, PPI02, DDI01, DDI02, DTI01, DTI02, and DTA01 datasets. The results presented in <xref rid="f2" ref-type="fig">Fig. 2</xref> demonstrate that FlexBIP possesses significant advantages across multiple datasets and tasks, validating its generalization capability across diverse scenarios. Furthermore, FlexBIP not only achieves highly statistically significant performance improvements over the top-performing baselines (Wilcoxon signed-rank test, <italic toggle="yes">P</italic> &lt; .01, as annotated with ** in <xref rid="f2" ref-type="fig">Fig. 2</xref>), but is also less susceptible to random fluctuations, thereby exhibiting stronger robustness. An overview of methods for molecular interaction prediction is presented in <xref rid="sup1" ref-type="supplementary-material">Supplementary Section 2: Additional Analysis</xref>. Evaluation metrics for molecular interaction prediction models are provided in <xref rid="sup1" ref-type="supplementary-material">Supplementary Section 3: Evaluation Metrics</xref>.</p><fig position="float" id="f2" orientation="portrait"><label>Figure 2</label><caption><p>Performance of FlexBIP and other methods; (a) ROC and PR curves evaluating performance on PPI01 and PPI02 datasets; (b) bar charts comparing ROC–AUC, RMSE, and Rp metrics across various baseline models on DDI01, DDI02, DTI01, DTI02, and DTA01 datasets; (c) heatmap illustrating the accuracy comparison across different datasets and methods; abbreviations: ROC, receiver operating characteristic; PR, precision–recall; AUC, area under the curve; RMSE, root mean square error; Rp, Pearson correlation coefficient.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bbag471f2.webp"><?image-name bbag471f2.webp?><?image-size 229070?><?image-md5 7b38a198464809c5a13ee7605534c323?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1215?><?image-original-width 1333?><?image-scaled-height 1215?><?image-scaled-width 1333?><?image-cloudpmc-urn urn:cdn:blobs/350e/13544631/7b38a1984648/bbag471f2.webp?><?thumb-name bbag471f2.gif?><?thumb-size 16376?><?thumb-md5 602e767bf718a60373940bd2f49f0b59?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 182?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/350e/13544631/602e767bf718/bbag471f2.gif?><alt-text>Composite performance comparison of FlexBIP with baseline methods. Panel a shows ROC and precision–recall curves for the PPI01 and PPI02 datasets. Panel b presents bar charts of classification and affinity-prediction metrics across DDI01, DDI02, DTI01, DTI02, and DTA01. Panel c is a heatmap comparing accuracy across datasets and methods, with FlexBIP showing consistently strong performance.</alt-text></graphic></fig></sec><sec id="sec12"><title>Ablation and parameter sensitivity study</title><p>To explore the role of the components of the FlexBIP model in different graph structures and task types, we designed ablation experiments for homogeneous graphs and heterogeneous graphs, and compared the performance changes of the model in multi-classification, single-classification, and affinity prediction tasks. We constructed four FlexBIP model variants: one (“w/ BCELoss”, i.e., with Binary Cross-Entropy Loss) refers to the modification where the multi-class contrastive loss function of the FlexBIP model is removed, and the BCE loss function is adopted instead; another did not use node features (“w/o NodeFeat”) to observe the impact of missing node-related information on the model; the third omitted edge feature processing (“w/o EdgeFeat”) to evaluate the importance of edge features; and the fourth (“w Dot Decoder”) indicates the removal of the similarity linear decoder from the FlexBIP model, with the dot product decoder being used in its place.</p><p>The superior performance of FlexBIP stems from three core mechanisms: (i) structural feature decoupling: FlexBIP isolates intrinsic molecular features from complex graph topologies, integrating node, edge, and auxiliary features adaptively. Ablation studies (e.g. “w/o NodeFeat,” “w/o EdgeFeat”) confirm their necessity for capturing context-rich embeddings. (ii) Dynamic multi-class contrastive loss: to combat severe class imbalance in biomolecular networks, we utilize a margin-based contrastive loss with dynamic negative sampling to balance training objectives. (iii) Sequence-pair attention encoding: a BERT-like encoder captures complex intra- and inter-sequence dependencies via multi-head attention, generating informative embeddings and pinpointing interaction sites for enhanced accuracy and interpretability.</p><p>To investigate how the model responds to diverse parameters and shed light on how different hyperparameters influence its performance, we carried out a comprehensive sensitivity analysis of the model’s parameters. As shown in <xref rid="f3" ref-type="fig">Fig. 3b</xref>, by systematically adjusting parameters such as the number of GCN network layers, the number of hidden features, the dropout rate, the learning rate, and the weight decay coefficient, we deeply explored the relationship between different hyperparameters and the model performance. The parameter sensitivity analysis for other datasets can be found in <xref rid="sup1" ref-type="supplementary-material">Supplementary Fig. S1</xref>.</p><fig position="float" id="f3" orientation="portrait"><label>Figure 3</label><caption><p>Comprehensive performance analysis of the FlexBIP model; (a) radar charts illustrating the ablation study results across different graph structures and four task types: heterogeneous binary-class, heterogeneous affinity, homogeneous multi-class, and homogeneous binary-class; (b) line plots displaying the parameter sensitivity analysis across the PPI01, DDI02, DTI01, and DTA01 datasets.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bbag471f3.webp"><?image-name bbag471f3.webp?><?image-size 223050?><?image-md5 3712c88f16a806a188a2f48d983a0824?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1619?><?image-original-width 1333?><?image-scaled-height 1619?><?image-scaled-width 1333?><?image-cloudpmc-urn urn:cdn:blobs/350e/13544631/3712c88f16a8/bbag471f3.webp?><?thumb-name bbag471f3.gif?><?thumb-size 14886?><?thumb-md5 d2ab7883b243b5672342b69db9debc8c?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 200?><?thumb-scaled-width 165?><?thumb-cloudpmc-urn urn:cdn:blobs/350e/13544631/d2ab7883b243/bbag471f3.gif?><alt-text>Comprehensive ablation and parameter-sensitivity analysis. Panel a contains four radar charts comparing FlexBIP and ablated variants for heterogeneous binary-class, heterogeneous affinity, homogeneous multi-class, and homogeneous binary-class tasks. Panel b shows line plots of model performance as GCN layers, hidden features, dropout rate, learning rate, and weight decay vary across four datasets.</alt-text></graphic></fig><p>For practical deployment, we recommend the following parameter strategies: (a) architecture: use 4–8 GCN layers and 128–256 hidden features for standard datasets but switch to shallower layers for massive graphs to avoid over-smoothing and avoid dimensions over 500 to prevent overfitting. (b) Regularization: apply moderate dropout (0.1–0.2) and low weight decay (1 × 10<sup>−5</sup>) for standard tasks but enforce stricter constraints for cold-start scenarios. (c) Optimization: maintain an initial learning rate of 0.001–0.002 for stable convergence.</p></sec><sec id="sec13"><title>Generalization capability and cold-start analysis</title><p>To validate the generalization capability of the model, we compared the FlexBIP model in eight types of biological interaction tasks (DTAs [<xref rid="ref16" ref-type="bibr">16</xref>], circRNA–drug interactions [<xref rid="ref17" ref-type="bibr">17</xref>], drug–gene interactions [<xref rid="ref18" ref-type="bibr">18</xref>], gene–disease interactions [<xref rid="ref42" ref-type="bibr">42</xref>], miRNA–disease interactions [<xref rid="ref19" ref-type="bibr">19</xref>], DDIs [<xref rid="ref42" ref-type="bibr">42</xref>], DTIs [<xref rid="ref42" ref-type="bibr">42</xref>], and PPIs [<xref rid="ref42" ref-type="bibr">42</xref>]), and comprehensively demonstrated the performance of the model on multiple datasets, focusing on verifying the generalizability and task adaptability of the model. <xref rid="f4" ref-type="fig">Figure 4</xref> illustrates the experimental results. The detailed performance comparison on these multiple datasets is presented in <xref rid="sup1" ref-type="supplementary-material">Supplementary Tables S2</xref>–<xref rid="sup1" ref-type="supplementary-material">S4</xref>.</p><fig position="float" id="f4" orientation="portrait"><label>Figure 4</label><caption><p>It shows the performance of FlexBIP in different biological interaction prediction tasks from multiple evaluation metric dimensions.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bbag471f4.webp"><?image-name bbag471f4.webp?><?image-size 163790?><?image-md5 19e8a539620c59966b42aac273d163f6?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1117?><?image-original-width 1600?><?image-scaled-height 1117?><?image-scaled-width 1600?><?image-cloudpmc-urn urn:cdn:blobs/350e/13544631/19e8a539620c/bbag471f4.webp?><?thumb-name bbag471f4.gif?><?thumb-size 15260?><?thumb-md5 f51502276f5e3bd7d341590c1c973c8f?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 140?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/350e/13544631/f51502276f5e/bbag471f4.gif?><alt-text>Grouped bar charts showing FlexBIP performance across seven biomolecular interaction datasets and multiple evaluation metrics, including ROC–AUC, PR–AUC, F1 score, accuracy, recall, specificity, and precision. A separate panel reports RMSE, MSE, Pearson correlation, and Spearman correlation for the DTA02 affinity-prediction task.</alt-text></graphic></fig><p>For practical applications, researchers often need to predict interactions involving newly discovered biological molecules or under scenarios with limited known data. Therefore, to further evaluate the performance of our model in such specific contexts, we designed experiments on cold-start scenarios with different data scarcity levels. Specifically, for cold-start scenarios with varying masking ratios (20%, 30%, 40%, and 50%), we randomly masked the corresponding proportions of entries in the association matrix (simulating scarce known data) and trained models (FlexBIP, DNE, and GRACE) to predict the association probabilities of the masked entries. We visually demonstrate the models’ degree of restoration of the true association matrix (<xref rid="f5" ref-type="fig">Fig. 5</xref>). For the optimal binary classification threshold results, please refer to <xref rid="sup1" ref-type="supplementary-material">Supplementary Fig. S2</xref>. The prediction matrix of FlexBIP is closer to the true matrix under various masking ratios, indicating that it has stronger robustness in the scenario of data missing and can mine potential interactions even when there is very little data.</p><fig position="float" id="f5" orientation="portrait"><label>Figure 5</label><caption><p>The prediction results of FlexBIP, DNE, and GRACE are compared under different masking ratios.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bbag471f5.webp"><?image-name bbag471f5.webp?><?image-size 173842?><?image-md5 4b64f1d2012a58be8ca30bc4679d0e6a?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1006?><?image-original-width 1600?><?image-scaled-height 1006?><?image-scaled-width 1600?><?image-cloudpmc-urn urn:cdn:blobs/350e/13544631/4b64f1d2012a/bbag471f5.webp?><?thumb-name bbag471f5.gif?><?thumb-size 12416?><?thumb-md5 d45c46228910db6276cd56f9e26fc04e?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 126?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/350e/13544631/d45c46228910/bbag471f5.gif?><alt-text>Matrix heatmaps comparing reconstruction of the PPI02 association matrix by FlexBIP, DNE, and GRACE under 20%, 30%, 40%, and 50% masking ratios. Each column pairs the true matrix with model predictions. FlexBIP retains a pattern closer to the true associations as the proportion of masked data increases.</alt-text></graphic></fig><p>Additionally, to cover more realistic cold-start scenarios, we further conducted experiments on three typical cold-start settings: source cold-start (scarcity in the source dataset), target cold-start (scarcity in the target objects), and source-target cold-start (scarcity in both the source dataset and target objects). In homogeneous graphs, we conducted source-target cold-start experiments; in heterogeneous graphs, we carried out three types of cold-start experiments, namely source cold-start, target cold-start, and source-target cold start. As shown in <xref rid="f6" ref-type="fig">Fig. 6</xref>, for additional evaluation metrics, please refer to <xref rid="sup1" ref-type="supplementary-material">Supplementary Figs S3</xref>–<xref rid="sup1" ref-type="supplementary-material">S5</xref>. The FlexBIP model achieves higher prediction accuracy and is well-suited for cold-start tasks in biomolecular interaction prediction. These experiments were repeated multiple times on relevant datasets to ensure the reliability of the results, aiming to comprehensively assess the models’ predictive capabilities under data-scarce conditions.</p><fig position="float" id="f6" orientation="portrait"><label>Figure 6</label><caption><p>The results presented here are based on the area under the receiver operating characteristic curve (AUROC) metric; (a) performance comparison on homogeneous graphs (PPI01, PPI02, DDI01, and DDI02) under the source-target cold start setting; (b) performance on heterogeneous graphs (DTI01, DTI02) under three distinct settings: source cold start (top), target cold start (middle), and source-target cold start (bottom); “/” indicates not applicable.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bbag471f6.webp"><?image-name bbag471f6.webp?><?image-size 79046?><?image-md5 3419fdd4716022a15ed97f99f41ed9cd?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 988?><?image-original-width 1333?><?image-scaled-height 988?><?image-scaled-width 1333?><?image-cloudpmc-urn urn:cdn:blobs/350e/13544631/3419fdd47160/bbag471f6.webp?><?thumb-name bbag471f6.gif?><?thumb-size 11422?><?thumb-md5 4d8c2707e85016df21bb72a7099930e2?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 148?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/350e/13544631/4d8c2707e850/bbag471f6.gif?><alt-text>Heatmaps of AUROC values for cold-start experiments. Panel a compares methods on homogeneous PPI01, PPI02, DDI01, and DDI02 graphs under source–target cold start. Panel b compares methods on heterogeneous DTI01 and DTI02 graphs under source, target, and source–target cold-start settings. Slashes mark combinations that are not applicable.</alt-text></graphic></fig></sec><sec id="sec14"><title>Downstream analysis and interpretability</title><p>The FlexBIP model has conducted a series of downstream tasks focusing on the relationships between biological molecules, verifying the model’s performance and the value of embedded features from multiple dimensions. As shown in <xref rid="f7" ref-type="fig">Fig. 7</xref>, by visualizing the multi-class homogeneous graph, edges of the same class are clustered together. This indicates that the embeddings learned by the FlexBIP model can effectively capture the differences between interactions and non-interactions (<xref rid="f7" ref-type="fig">Fig. 7a</xref>). Furthermore, the visualization demonstrates that the embedding features learned by the model can capture the similarity between proteins, causing proteins with similar functions/attributes to naturally cluster in the space. Proteins within the same cluster are clearly aggregated in the 2D PCA space, while different clusters have distinct boundaries in the low-dimensional space. This reflects that the model’s embeddings can effectively distinguish proteins from different groups and verifies the discriminative ability of the embedding features (<xref rid="f7" ref-type="fig">Fig. 7b</xref>). <xref rid="sup1" ref-type="supplementary-material">Supplementary Figs S6</xref> and <xref rid="sup1" ref-type="supplementary-material">S7</xref> show that other biomolecular interaction pairs within the same cluster clearly aggregate in the 2D PCA space, indicating that the embedding features learned by the model can effectively capture the similarities among these pairs, and the cluster centers marked in the figures are representative.</p><fig position="float" id="f7" orientation="portrait"><label>Figure 7</label><caption><p>Visualization and clustering analysis of learned embedding; (a) PCA visualization of edges in a multi-class homogeneous graph, demonstrating the model’s ability to cluster edges of the same class and distinguish them from unknown edges; (b) PCA scatter plot of protein embeddings showing distinct cluster aggregations (left) and the corresponding hierarchical clustering dendrogram (right); (c) bar chart comparing the AMI scores of FlexBIP against other baseline methods across three biological classification standards (GOBP, IntAct, and KEGG).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bbag471f7.webp"><?image-name bbag471f7.webp?><?image-size 174102?><?image-md5 36005406b70ad3688b1240a05d953a0c?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 794?><?image-original-width 1333?><?image-scaled-height 794?><?image-scaled-width 1333?><?image-cloudpmc-urn urn:cdn:blobs/350e/13544631/36005406b70a/bbag471f7.webp?><?thumb-name bbag471f7.gif?><?thumb-size 12674?><?thumb-md5 b56370e7574afc8784f367d9ee7ed241?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 119?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/350e/13544631/b56370e7574a/bbag471f7.gif?><alt-text>Visualization and clustering analysis of learned embeddings. Panel a shows PCA projections of multi-class interaction edges and unknown edges. Panel b shows a PCA scatter plot of protein embeddings beside a hierarchical clustering dendrogram. Panel c compares AMI scores of FlexBIP and baseline methods using GOBP, IntAct, and KEGG biological classification standards.</alt-text></graphic></fig><p>Adjusted mutual information (AMI) [<xref rid="ref43" ref-type="bibr">43</xref>] is used to measure the consistency between clustering results and real class labels. By comparing the AMI of multiple models under different standards [Interaction Actor (IntAct) protein complexes [<xref rid="ref44" ref-type="bibr">44</xref>], KEGG pathways, and Gene Ontology Biological Processes (GOBP)], FlexBIP achieves the highest AMI value, indicating that the clustering structure of its learned embedding features is closest to the real biological classification (<xref rid="f7" ref-type="fig">Fig. 7c</xref>).</p><p>The attention-based sequence-pair encoder in the FlexBIP model enables the model to focus on key interactions within the input. The pairs of sites marked with yellow stars have high weights, indicating that the model pays attention to real key interactions, making the predictions more reliable (<xref rid="f8" ref-type="fig">Fig. 8a</xref>). By incorporating the 3D structure of DTI sites, the reliability of the model in quantifying the contribution intensity of specific sites in biomolecular interactions is verified. The left panel of <xref rid="f8" ref-type="fig">Fig. 8b</xref> shows the overall structure of the protein (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:entrez-protein" xlink:href="O00141">O00141</ext-link>) and drug (CHEMBL1087421), and the right side zooms in on the core interaction region, presenting the spatial interaction pattern between the drug molecule CHEMBL1087421 (the chlorine atom) and the protein residue (ASP-231, corresponding to site 231 of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:entrez-protein" xlink:href="O00141">O00141</ext-link> protein). <xref rid="sup1" ref-type="supplementary-material">Supplementary Figs S8</xref>–<xref rid="sup1" ref-type="supplementary-material">S11</xref> display additional examples of protein–drug interactions, intuitively reflecting the model’s capability to identify and focus on key interaction regions.</p><fig position="float" id="f8" orientation="portrait"><label>Figure 8</label><caption><p>Visualization of sequence-pair encoder and prediction assessment; (a) attention weight matrix highlighting key interaction sites; (b) 3D spatial visualization of the drug and target interaction; (c) scatter plots evaluating the affinity prediction performance of KNN, DTIAM, and FlexBIP.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bbag471f8.webp"><?image-name bbag471f8.webp?><?image-size 178876?><?image-md5 1e91d3be28a33a71965a7db13225daef?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 870?><?image-original-width 1333?><?image-scaled-height 870?><?image-scaled-width 1333?><?image-cloudpmc-urn urn:cdn:blobs/350e/13544631/1e91d3be28a3/bbag471f8.webp?><?thumb-name bbag471f8.gif?><?thumb-size 17803?><?thumb-md5 9ea0857ab0f361394b6a4d0756b9f7f7?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 131?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/350e/13544631/9ea0857ab0f3/bbag471f8.gif?><alt-text>Sequence-pair interpretability and affinity-prediction assessment. Panel a displays an attention weight matrix and positional importance profile highlighting key interacting sites. Panel b shows a 3D drug–target complex with a magnified interaction involving ASP-231 and the drug molecule. Panel c compares observed and predicted affinities for KNN, DTIAM, and FlexBIP.</alt-text></graphic></fig><p>By comparing the performance of KNN, DTIAM, and FlexBIP in predicting drug–target affinity (<xref rid="f8" ref-type="fig">Fig. 8c</xref>), it is found that the scatter points of FlexBIP are closely clustered near the ideal diagonal line, and the regression line almost coincides with the ideal diagonal line. With the smallest root mean square error (RMSE) and an Rp closest to 1, it indicates that FlexBIP has the highest prediction accuracy and the strongest linear correlation, achieving the optimal performance in drug–target affinity prediction. Meanwhile, the real association matrix and model-predicted association matrix of other biomolecular interaction relationships are displayed (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figs S12</xref>–<xref rid="sup1" ref-type="supplementary-material">S14</xref>).</p></sec><sec id="sec15"><title>Case studies</title><p>We carried out detailed case analyses of the FlexBIP model to visualize its predictive performance in real-world biological networks (<xref rid="f9" ref-type="fig">Fig. 9</xref>). In the Drug–circRNA interaction network, FlexBIP accurately captured numerous known associations for drugs MS-275 and BAY 61-3606 (indicated by blue solid lines), consistent with established biological databases. Notably, the model predicted several novel interactions with potential targets such as amyloid precursor protein (APP), katanin regulatory subunit B1 (KATNB1), and notch receptor 2 (NOTCH2) for MS-275, and lamin A/C (LMNA) for BAY 61-3606 (indicated by red dashed lines).</p><fig position="float" id="f9" orientation="portrait"><label>Figure 9</label><caption><p>Visualization of biomolecular interaction networks predicted by FlexBIP.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bbag471f9.webp"><?image-name bbag471f9.webp?><?image-size 125080?><?image-md5 1f881dddb296a2a3de41e45128f29201?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 768?><?image-original-width 1599?><?image-scaled-height 768?><?image-scaled-width 1599?><?image-cloudpmc-urn urn:cdn:blobs/350e/13544631/1f881dddb296/bbag471f9.webp?><?thumb-name bbag471f9.gif?><?thumb-size 9031?><?thumb-md5 32530a97ffde1b1d02f9abc2bac23fa6?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 96?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/350e/13544631/32530a97ffde/bbag471f9.gif?><alt-text>Two biomolecular interaction network visualizations predicted by FlexBIP. The left network shows drug–circRNA associations centered on MS-275 and BAY 61-3606, and the right network shows DDIs centered on DB00252. Node symbols distinguish source, known targets, and predicted targets; solid and dashed edges distinguish known and predicted interactions.</alt-text></graphic></fig><p>Similarly, in the DDI03 interaction network centered on DB00252, FlexBIP not only recovered extensive known DDIs but also identified unverified potential associations with drugs such as DB00648, DB00307, and DB00188. These results indicate that the model’s predictions have high accuracy and reliability. Meanwhile, the discovery of these new interactions demonstrates FlexBIP’s potential in uncovering previously unknown biological relationships, providing candidates for further experimental validation. Case studies on other biomolecular interactions have also been conducted, and their visualized network associations can be found in <xref rid="sup1" ref-type="supplementary-material">Supplementary Figs S15</xref>–<xref rid="sup1" ref-type="supplementary-material">S20</xref>.</p></sec></sec><sec id="sec16"><title>Conclusion</title><p>Predicting diverse biomolecular interactions is central to advancing systems biology and medicine, as these interactions collectively regulate cellular functions, disease mechanisms, and therapeutic outcomes. Despite recent advancements that have improved prediction accuracy, most existing tools are still limited to single interaction types [<xref rid="ref5" ref-type="bibr">5</xref>, <xref rid="ref9" ref-type="bibr">9</xref>, <xref rid="ref10" ref-type="bibr">10</xref>]. They lack the ability to unify modeling across multiple biological networks, offer poor interpretability, and often struggle to integrate multimodal features or support comprehensive downstream analysis.</p><p>FlexBIP addresses these limitations by providing a flexible framework for multi-type biomolecular interaction prediction. It performs effectively across various association prediction tasks, including DDIs, PPIs, DTIs, DTAs, circRNA–drug interactions, drug–gene interactions, miRNA–disease interactions, and gene–disease interactions. Its feature-aware design provides broad applicability, enabling the model to handle diverse biomolecular interaction and affinity prediction problems, demonstrating strong generalization capabilities to adapt to different data features and structural challenges. FlexBIP also supports a variety of downstream analyses and performs well even in cold-start scenarios involving new molecules.</p><p>Like other graph-based methods, FlexBIP has a potential limitation: it relies on the availability of underlying network structures. Nevertheless, FlexBIP’s versatility allows it to extend beyond the tested interaction types, with promising applications for modeling other crucial interactions, such as microRNA–target or circRNA–protein interactions. Its interpretable downstream analyses, including interaction attribution scores, further enhance its utility in mechanistic exploration. To biologically contextualize these outcomes, FlexBIP provides a robust mechanistic basis with significant clinical implications for developing improved treatment protocols. Specifically, pinpointing exact binding affinities guides the optimization of lead compounds to reduce off-target toxicity. Furthermore, our network-level predictions provide actionable hypotheses for drug repurposing and preemptive risk assessment of adverse effects, ultimately enhancing patient safety prior to clinical trials.</p><p>We anticipate that FlexBIP, as an open-source tool, will become a powerful framework for advancing biomolecular interaction research, empowering researchers to leverage multimodal network data for prediction and functional interpretation in low-data and cross-task scenarios.</p><boxed-text id="box01" position="float" orientation="portrait"><sec id="sec24a"><title>Key Points</title><list list-type="bullet"><list-item><p>Flexible Biomolecular Interaction Prediction (FlexBIP) decouples molecular features from graph topologies to effectively fuse node, edge, and auxiliary features for diverse interaction prediction.</p></list-item><list-item><p>FlexBIP incorporates a sequence-pair encoder to capture positional feature importance and quantify site-specific contribution strength.</p></list-item><list-item><p>FlexBIP implements a dynamic multi-class contrastive loss function to enhance model performance in complex multi-label prediction tasks.</p></list-item><list-item><p>FlexBIP serves as a user-friendly tool equipped with a visualization module, facilitating downstream analysis and robust interpretability.</p></list-item></list></sec></boxed-text></sec><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material id="sup1" position="float" content-type="local-data" orientation="portrait"><label>Supplementary_Material_bbag471</label><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="supplementary_material_bbag471.docx" position="float" orientation="portrait"><?suppdata-name supplementary_material_bbag471.docx?><?suppdata-size 20842944?><?suppdata-md5 52df1cffcc9039b4acabca57444fa235?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type vnd.openxmlformats-officedocument.wordprocessingml.document?><?suppdata-cloudpmc-urn urn:app:350e/13544631/52df1cffcc90/supplementary_material_bbag471.docx?></media></supplementary-material></sec></body><back><ack id="bbag471-ack"><title>Acknowledgments</title><p>The numerical calculations in this article have been done on the supercomputing system in the Supercomputing Center of Wuhan University. We are deeply grateful to the anonymous reviewers and editors for their insightful comments and suggestions.</p></ack><sec id="sec17"><title>Author contributions</title><p>Qi Wu (Conceptualization) [lead], (Methodology) [lead], (Investigation) [lead], (Writing – original draft) [lead], Yinbo Liu (Conceptualization) [supporting], (Methodology) [equal], (Investigation) [equal], (Software) [lead], Feng Yang (Conceptualization) [supporting], (Methodology) [equal], (Formal analysis) [equal], Weihong Huang (Methodology) [supporting], (Software) [equal], (Formal analysis) [supporting], Xiaolei Zhu (Investigation) [equal], (Formal analysis) [equal], and Juan Liu (Supervision) [lead], (Conceptualization) [supporting], (Methodology) [equal], (Formal analysis) [equal]</p></sec><sec sec-type="COI-statement" id="sec19"><title>Conflicts of interest</title><p>The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this article.</p></sec><sec sec-type="data-availability" id="sec20"><title>Data availability</title><p>All the code and data related to this article have been made publicly available on our GitHub Repository (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/qiqi5757/FlexBIP" ext-link-type="uri">https://github.com/qiqi5757/FlexBIP</ext-link>). All datasets used in this study are publicly available. Detailed information on data sources and access links is provided in the <xref rid="sup1" ref-type="supplementary-material">Supplementary Materials</xref>.</p></sec><sec id="sec21"><title>Funding</title><p>This work was partly supported by the National Key Research and Development Program of China (2019YFA0904303).</p></sec><ref-list id="bib1"><title>References</title><ref id="ref1"><label>1.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Ullanat</surname>  <given-names>V</given-names></string-name>, <string-name name-style="western"><surname>Jing</surname>  <given-names>B</given-names></string-name>, <string-name name-style="western"><surname>Sledzieski</surname>  <given-names>S</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Learning the language of protein–protein interactions</article-title>. <source><italic toggle="yes">Nat Commun</italic></source>  <year>2026</year>;<volume>17</volume>:<fpage>1199</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-025-67971-3</pub-id><pub-id pub-id-type="pmid">41501061</pub-id>
+<pub-id pub-id-type="pmcid">PMC12859026</pub-id></mixed-citation></ref><ref id="ref2"><label>2.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Arteaga</surname>  <given-names>D</given-names></string-name>, <string-name name-style="western"><surname>Chervov</surname>  <given-names>N</given-names></string-name>, <string-name name-style="western"><surname>Poptsova</surname>  <given-names>M</given-names></string-name></person-group>. <article-title>Multimodal graph, surface, and language-based model for protein protein interaction prediction</article-title>. <source><italic toggle="yes">Sci Rep</italic></source>  <year>2026</year>;<volume>16</volume>:<fpage>4772</fpage>. <pub-id pub-id-type="doi">10.1038/s41598-025-34758-x</pub-id><pub-id pub-id-type="pmid">41495146</pub-id>
+<pub-id pub-id-type="pmcid">PMC12873117</pub-id></mixed-citation></ref><ref id="ref3"><label>3.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Kumar</surname>  <given-names>A</given-names></string-name>, <string-name name-style="western"><surname>Sun</surname>  <given-names>R</given-names></string-name>, <string-name name-style="western"><surname>Habib</surname>  <given-names>B</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Identification of medication–microbiome interactions that affect gut infection</article-title>. <source><italic toggle="yes">Nature</italic></source>  <year>2025</year>;<volume>644</volume>:<fpage>506</fpage>–<lpage>15</lpage>. <pub-id pub-id-type="doi">10.1038/s41586-025-09273-8</pub-id><pub-id pub-id-type="pmid">40670788</pub-id>
+<pub-id pub-id-type="pmcid">PMC13092348</pub-id></mixed-citation></ref><ref id="ref4"><label>4.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Zhang</surname>  <given-names>Z</given-names></string-name>, <string-name name-style="western"><surname>Zou</surname>  <given-names>Q</given-names></string-name>, <string-name name-style="western"><surname>Wang</surname>  <given-names>C</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Improving protein–protein interaction modulator predictions via knowledge-fused language models</article-title>. <source><italic toggle="yes">Inf Fusion</italic></source>  <year>2025</year>;<volume>123</volume>:<elocation-id>103227</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.inffus.2025.103227</pub-id></mixed-citation></ref><ref id="ref5"><label>5.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Gao</surname>  <given-names>Z</given-names></string-name>, <string-name name-style="western"><surname>Jiang</surname>  <given-names>C</given-names></string-name>, <string-name name-style="western"><surname>Zhang</surname>  <given-names>J</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Hierarchical graph learning for protein–protein interaction</article-title>. <source><italic toggle="yes">Nat Commun</italic></source>  <year>2023</year>;<volume>14</volume>:<fpage>1093</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-023-36736-1</pub-id><pub-id pub-id-type="pmid">36841846</pub-id>
+<pub-id pub-id-type="pmcid">PMC9968329</pub-id></mixed-citation></ref><ref id="ref6"><label>6.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Yan</surname>  <given-names>R</given-names></string-name>, <string-name name-style="western"><surname>Islam</surname>  <given-names>MT</given-names></string-name>, <string-name name-style="western"><surname>Xing</surname>  <given-names>L</given-names></string-name></person-group>. <article-title>Deep representation learning of protein–protein interaction networks for enhanced pattern discovery</article-title>. <source><italic toggle="yes">Sci Adv</italic></source>  <volume>10</volume>:<fpage>eadq4324</fpage>. <pub-id pub-id-type="doi">10.1126/sciadv.adq4324</pub-id><pub-id pub-id-type="pmcid">PMC11654695</pub-id><pub-id pub-id-type="pmid">39693438</pub-id></mixed-citation></ref><ref id="ref7"><label>7.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Yue</surname>  <given-names>Y</given-names></string-name>, <string-name name-style="western"><surname>Li</surname>  <given-names>S</given-names></string-name>, <string-name name-style="western"><surname>Cheng</surname>  <given-names>Y</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Integration of molecular coarse-grained model into geometric representation learning framework for protein-protein complex property prediction</article-title>. <source><italic toggle="yes">Nat Commun</italic></source>  <year>2024</year>;<volume>15</volume>:<fpage>9629</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-024-53583-w</pub-id><pub-id pub-id-type="pmid">39511202</pub-id>
+<pub-id pub-id-type="pmcid">PMC11544137</pub-id></mixed-citation></ref><ref id="ref8"><label>8.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Feng</surname>  <given-names>Y-Y</given-names></string-name>, <string-name name-style="western"><surname>Yu</surname>  <given-names>H</given-names></string-name>, <string-name name-style="western"><surname>Feng</surname>  <given-names>YH</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Directed graph attention networks for predicting asymmetric drug–drug interactions</article-title>. <source><italic toggle="yes">Brief Bioinform</italic></source>  <year>2022</year>;<volume>23</volume>:<fpage>bbac151</fpage>. <pub-id pub-id-type="doi">10.1093/bib/bbac151</pub-id><pub-id pub-id-type="pmid">35470854</pub-id>
+</mixed-citation></ref><ref id="ref9"><label>9.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Zhang</surname>  <given-names>Y</given-names></string-name>, <string-name name-style="western"><surname>Yao</surname>  <given-names>Q</given-names></string-name>, <string-name name-style="western"><surname>Yue</surname>  <given-names>L</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Emerging drug interaction prediction enabled by a flow-based graph neural network with biomedical network</article-title>. <source><italic toggle="yes">Nat Comput Sci</italic></source>  <year>2023</year>;<volume>3</volume>:<fpage>1023</fpage>–<lpage>33</lpage>. <pub-id pub-id-type="doi">10.1038/s43588-023-00558-4</pub-id><pub-id pub-id-type="pmid">38177736</pub-id>
+</mixed-citation></ref><ref id="ref10"><label>10.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Ye</surname>  <given-names>Q</given-names></string-name>, <string-name name-style="western"><surname>Hsieh</surname>  <given-names>CY</given-names></string-name>, <string-name name-style="western"><surname>Yang</surname>  <given-names>Z</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>A unified drug–target interaction prediction framework based on knowledge graph and recommendation system</article-title>. <source><italic toggle="yes">Nat Commun</italic></source>  <year>2021</year>;<volume>12</volume>:<fpage>6775</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-021-27137-3</pub-id><pub-id pub-id-type="pmid">34811351</pub-id>
+<pub-id pub-id-type="pmcid">PMC8635420</pub-id></mixed-citation></ref><ref id="ref11"><label>11.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Gilmer</surname>  <given-names>J</given-names></string-name>, <string-name name-style="western"><surname>Schoenholz</surname>  <given-names>SS</given-names></string-name>, <string-name name-style="western"><surname>Riley</surname>  <given-names>PF</given-names></string-name>  <etal>et al</etal></person-group>. <part-title>Neural message passing for quantum chemistry</part-title>. In: Precup D, Teh YW, (eds.), <italic toggle="yes">Proceedings of the 34th</italic>  <source><italic toggle="yes">International Conference on Machine Learning (ICML 2017)</italic></source>. Sydney, NSW, Australia: PMLR; <year>2017</year>.</mixed-citation></ref><ref id="ref12"><label>12.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Zhang</surname>  <given-names>Y</given-names></string-name>, <string-name name-style="western"><surname>Wang</surname>  <given-names>Q</given-names></string-name>, <string-name name-style="western"><surname>Zhang</surname>  <given-names>C</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>IHDFN-DTI: interpretable hybrid deep feature fusion network for drug–target interaction prediction</article-title>. <source><italic toggle="yes">Interdiscip Sci Comput Life Sci</italic></source>  <year>2025</year>;<volume>18</volume>:<fpage>687</fpage>–<lpage>701</lpage>. <pub-id pub-id-type="doi">10.1007/s12539-025-00712-8</pub-id><pub-id pub-id-type="pmid">40353937</pub-id></mixed-citation></ref><ref id="ref13"><label>13.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Chen</surname>  <given-names>L</given-names></string-name>, <string-name name-style="western"><surname>Tan</surname>  <given-names>X</given-names></string-name>, <string-name name-style="western"><surname>Wang</surname>  <given-names>D</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>TransformerCPI: improving compound–protein interaction prediction by sequence-based deep learning with self-attention mechanism and label reversal experiments</article-title>. <source><italic toggle="yes">Bioinformatics</italic></source>  <year>2020</year>;<volume>36</volume>:<fpage>4406</fpage>–<lpage>14</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btaa524</pub-id><pub-id pub-id-type="pmid">32428219</pub-id>
+</mixed-citation></ref><ref id="ref14"><label>14.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Öztürk</surname>  <given-names>H</given-names></string-name>, <string-name name-style="western"><surname>Özgür</surname>  <given-names>A</given-names></string-name>, <string-name name-style="western"><surname>Ozkirimli</surname>  <given-names>E</given-names></string-name></person-group>. <article-title>DeepDTA: deep drug–target binding affinity prediction</article-title>. <source><italic toggle="yes">Bioinformatics</italic></source>  <year>2018</year>;<volume>34</volume>:<fpage>i821</fpage>–<lpage>9</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/bty593</pub-id><pub-id pub-id-type="pmid">30423097</pub-id>
+<pub-id pub-id-type="pmcid">PMC6129291</pub-id></mixed-citation></ref><ref id="ref15"><label>15.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Nguyen</surname>  <given-names>T</given-names></string-name>, <string-name name-style="western"><surname>le</surname>  <given-names>H</given-names></string-name>, <string-name name-style="western"><surname>Quinn</surname>  <given-names>TP</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>GraphDTA: predicting drug–target binding affinity with graph neural networks</article-title>. <source><italic toggle="yes">Bioinformatics</italic></source>  <year>2020</year>;<volume>37</volume>:<fpage>1140</fpage>–<lpage>7</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btaa921</pub-id><pub-id pub-id-type="pmid">33119053</pub-id></mixed-citation></ref><ref id="ref16"><label>16.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Lu</surname>  <given-names>Z</given-names></string-name>, <string-name name-style="western"><surname>Song</surname>  <given-names>G</given-names></string-name>, <string-name name-style="western"><surname>Zhu</surname>  <given-names>H</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>DTIAM: a unified framework for predicting drug-target interactions, binding affinities and drug mechanisms</article-title>. <source><italic toggle="yes">Nat Commun</italic></source>  <year>2025</year>;<volume>16</volume>:<fpage>2548</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-025-57828-0</pub-id><pub-id pub-id-type="pmid">40089473</pub-id>
+<pub-id pub-id-type="pmcid">PMC11910601</pub-id></mixed-citation></ref><ref id="ref17"><label>17.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Liu</surname>  <given-names>Y</given-names></string-name>, <string-name name-style="western"><surname>Ren</surname>  <given-names>X</given-names></string-name>, <string-name name-style="western"><surname>Li</surname>  <given-names>J</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Prediction of circRNA-drug sensitivity using random auto-encoders and multi-layer heterogeneous graph transformers</article-title>. <source><italic toggle="yes">Appl Intell</italic></source>  <year>2024</year>;<volume>55</volume>:<fpage>238</fpage>. <pub-id pub-id-type="doi">10.1007/s10489-024-05859-3</pub-id></mixed-citation></ref><ref id="ref18"><label>18.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Tao</surname>  <given-names>W</given-names></string-name>, <string-name name-style="western"><surname>Liu</surname>  <given-names>Y</given-names></string-name>, <string-name name-style="western"><surname>Lin</surname>  <given-names>X</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Prediction of multi-relational drug–gene interaction via dynamic hyperGraph contrastive learning</article-title>. <source><italic toggle="yes">Brief Bioinform</italic></source>  <year>2023</year>;<volume>24</volume>:<fpage>bbad371</fpage>. <pub-id pub-id-type="doi">10.1093/bib/bbad371</pub-id><pub-id pub-id-type="pmid">37864294</pub-id>
+</mixed-citation></ref><ref id="ref19"><label>19.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Dai</surname>  <given-names>Q</given-names></string-name>, <string-name name-style="western"><surname>Chu</surname>  <given-names>Y</given-names></string-name>, <string-name name-style="western"><surname>Li</surname>  <given-names>Z</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>MDA-CF: predicting MiRNA–disease associations based on a cascade forest model by fusing multi-source information</article-title>. <source><italic toggle="yes">Comput Biol Med</italic></source>  <year>2021</year>;<volume>136</volume>:<elocation-id>104706</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.compbiomed.2021.104706</pub-id><pub-id pub-id-type="pmid">34371319</pub-id>
+</mixed-citation></ref><ref id="ref20"><label>20.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Szklarczyk</surname>  <given-names>D</given-names></string-name>, <string-name name-style="western"><surname>Gable</surname>  <given-names>AL</given-names></string-name>, <string-name name-style="western"><surname>Lyon</surname>  <given-names>D</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets</article-title>. <source><italic toggle="yes">Nucleic Acids Res</italic></source>  <year>2019</year>;<volume>47</volume>:<fpage>D607</fpage>–<lpage>13</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gky1131</pub-id><pub-id pub-id-type="pmid">30476243</pub-id>
+<pub-id pub-id-type="pmcid">PMC6323986</pub-id></mixed-citation></ref><ref id="ref21"><label>21.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Chen</surname>  <given-names>M</given-names></string-name>, <string-name name-style="western"><surname>Ju</surname>  <given-names>CJT</given-names></string-name>, <string-name name-style="western"><surname>Zhou</surname>  <given-names>G</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Multifaceted protein–protein interaction prediction based on Siamese residual RCNN</article-title>. <source><italic toggle="yes">Bioinformatics</italic></source>  <year>2019</year>;<volume>35</volume>:<fpage>i305</fpage>–<lpage>14</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btz328</pub-id><pub-id pub-id-type="pmid">31510705</pub-id>
+<pub-id pub-id-type="pmcid">PMC6681469</pub-id></mixed-citation></ref><ref id="ref22"><label>22.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Tatonetti</surname>  <given-names>NP</given-names></string-name>, <string-name name-style="western"><surname>Ye</surname>  <given-names>PP</given-names></string-name>, <string-name name-style="western"><surname>Daneshjou</surname>  <given-names>R</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Data-driven prediction of drug effects and interactions</article-title>. <source><italic toggle="yes">Sci Transl Med</italic></source>  <year>2012</year>;<volume>4</volume>:<fpage>125ra31</fpage>. <pub-id pub-id-type="doi">10.1126/scitranslmed.3003377</pub-id><pub-id pub-id-type="pmcid">PMC3382018</pub-id><pub-id pub-id-type="pmid">22422992</pub-id></mixed-citation></ref><ref id="ref23"><label>23.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Krogan</surname>  <given-names>NJ</given-names></string-name>, <string-name name-style="western"><surname>Cagney</surname>  <given-names>G</given-names></string-name>, <string-name name-style="western"><surname>Yu</surname>  <given-names>H</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Global landscape of protein complexes in the yeast <italic toggle="yes">Saccharomyces cerevisiae</italic></article-title>. <source><italic toggle="yes">Nature</italic></source>  <year>2006</year>;<volume>440</volume>:<fpage>637</fpage>–<lpage>43</lpage>. <pub-id pub-id-type="doi">10.1038/nature04670</pub-id><pub-id pub-id-type="pmid">16554755</pub-id>
+</mixed-citation></ref><ref id="ref24"><label>24.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Wishart</surname>  <given-names>DS</given-names></string-name>, <string-name name-style="western"><surname>Feunang</surname>  <given-names>YD</given-names></string-name>, <string-name name-style="western"><surname>Guo</surname>  <given-names>AC</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>DrugBank 5.0: a major update to the DrugBank database for 2018</article-title>. <source><italic toggle="yes">Nucleic Acids Res</italic></source>  <year>2018</year>;<volume>46</volume>:<fpage>D1074</fpage>–<lpage>82</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkx1037</pub-id><pub-id pub-id-type="pmid">29126136</pub-id>
+<pub-id pub-id-type="pmcid">PMC5753335</pub-id></mixed-citation></ref><ref id="ref25"><label>25.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Himmelstein</surname>  <given-names>DS</given-names></string-name>, <string-name name-style="western"><surname>Lizee</surname>  <given-names>A</given-names></string-name>, <string-name name-style="western"><surname>Hessler</surname>  <given-names>C</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Systematic integration of biomedical knowledge prioritizes drugs for repurposing</article-title>. <source><italic toggle="yes">Elife</italic></source>  <year>2017</year>;<volume>6</volume>:<elocation-id>e26726</elocation-id>. <pub-id pub-id-type="doi">10.7554/eLife.26726</pub-id><pub-id pub-id-type="pmid">28936969</pub-id>
+<pub-id pub-id-type="pmcid">PMC5640425</pub-id></mixed-citation></ref><ref id="ref26"><label>26.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Kanehisa</surname>  <given-names>M</given-names></string-name>, <string-name name-style="western"><surname>Goto</surname>  <given-names>S</given-names></string-name>, <string-name name-style="western"><surname>Hattori</surname>  <given-names>M</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>From genomics to chemical genomics: new developments in KEGG</article-title>. <source><italic toggle="yes">Nucleic Acids Res</italic></source>  <year>2006</year>;<volume>34</volume>:<fpage>D354</fpage>–<lpage>7</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkj102</pub-id><pub-id pub-id-type="pmid">16381885</pub-id>
+<pub-id pub-id-type="pmcid">PMC1347464</pub-id></mixed-citation></ref><ref id="ref27"><label>27.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Schomburg</surname>  <given-names>I</given-names></string-name>, <string-name name-style="western"><surname>Chang</surname>  <given-names>A</given-names></string-name>, <string-name name-style="western"><surname>Ebeling</surname>  <given-names>C</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>BRENDA, the enzyme database: updates and major new developments</article-title>. <source><italic toggle="yes">Nucleic Acids Res</italic></source>  <year>2004</year>;<volume>32</volume>:<fpage>431D</fpage>–<lpage>3D</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkh081</pub-id><pub-id pub-id-type="pmcid">PMC308815</pub-id><pub-id pub-id-type="pmid">14681450</pub-id></mixed-citation></ref><ref id="ref28"><label>28.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Günther</surname>  <given-names>S</given-names></string-name>, <string-name name-style="western"><surname>Kuhn</surname>  <given-names>M</given-names></string-name>, <string-name name-style="western"><surname>Dunkel</surname>  <given-names>M</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>SuperTarget and matador: resources for exploring drug-target relationships</article-title>. <source><italic toggle="yes">Nucleic Acids Res</italic></source>  <year>2007</year>;<volume>36</volume>:<fpage>D919</fpage>–<lpage>22</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkm862</pub-id><pub-id pub-id-type="pmid">17942422</pub-id>
+<pub-id pub-id-type="pmcid">PMC2238858</pub-id></mixed-citation></ref><ref id="ref29"><label>29.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Wishart</surname>  <given-names>DS</given-names></string-name>, <string-name name-style="western"><surname>Knox</surname>  <given-names>C</given-names></string-name>, <string-name name-style="western"><surname>Guo</surname>  <given-names>AC</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>DrugBank: a knowledgebase for drugs, drug actions and drug targets</article-title>. <source><italic toggle="yes">Nucleic Acids Res</italic></source>  <year>2007</year>;<volume>36</volume>:<fpage>D901</fpage>–<lpage>6</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkm958</pub-id><pub-id pub-id-type="pmid">18048412</pub-id>
+<pub-id pub-id-type="pmcid">PMC2238889</pub-id></mixed-citation></ref><ref id="ref30"><label>30.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Tang</surname>  <given-names>J</given-names></string-name>, <string-name name-style="western"><surname>Szwajda</surname>  <given-names>A</given-names></string-name>, <string-name name-style="western"><surname>Shakyawar</surname>  <given-names>S</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Making sense of large-scale kinase inhibitor bioactivity data sets: a comparative and integrative analysis</article-title>. <source><italic toggle="yes">J Chem Inf Model</italic></source>  <year>2014</year>;<volume>54</volume>:<fpage>735</fpage>–<lpage>43</lpage>. <pub-id pub-id-type="doi">10.1021/ci400709d</pub-id><pub-id pub-id-type="pmid">24521231</pub-id>
+</mixed-citation></ref><ref id="ref31"><label>31.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Kipf</surname>  <given-names>T</given-names></string-name>
+</person-group>. <article-title>Semi-supervised classification with graph convolutional networks</article-title>. In: <italic toggle="yes">5th International Conference on Learning Representations (ICLR 2017).</italic> Toulon, France; 2017.</mixed-citation></ref><ref id="ref32"><label>32.</label><mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Devlin</surname>  <given-names>J</given-names></string-name>, <string-name name-style="western"><surname>Chang</surname>  <given-names>M-W</given-names></string-name>, <string-name name-style="western"><surname>Lee</surname>  <given-names>K</given-names></string-name>  <etal>et al</etal></person-group>. <part-title>Bert: pre-training of deep bidirectional transformers for language understanding</part-title>. In: Burstein J, Doran C, Solorio T, (eds.), <source>Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)</source>. Minneapolis, Minnesota: Association for Computational Linguistics; 2019. p. 4171–4186.</mixed-citation></ref><ref id="ref33"><label>33.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Peterson</surname>  <given-names>LE</given-names></string-name>
+</person-group>. <article-title>K-nearest neighbor</article-title>. <source><italic toggle="yes">Scholarpedia</italic></source>  <year>2009</year>;<volume>4</volume>:<fpage>1883</fpage>. <pub-id pub-id-type="doi">10.4249/scholarpedia.1883</pub-id></mixed-citation></ref><ref id="ref34"><label>34.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Breiman</surname>  <given-names>L</given-names></string-name>
+</person-group>. <article-title>Random forests</article-title>. <source><italic toggle="yes">Mach Learn</italic></source>  <year>2001</year>;<volume>45</volume>:<fpage>5</fpage>–<lpage>32</lpage>. <pub-id pub-id-type="doi">10.1023/A:1010933404324</pub-id></mixed-citation></ref><ref id="ref35"><label>35.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Hosmer</surname>  <given-names>DW</given-names>  <suffix>Jr</suffix></string-name>, <string-name name-style="western"><surname>Lemeshow</surname>  <given-names>S</given-names></string-name>, <string-name name-style="western"><surname>Sturdivant</surname>  <given-names>RX</given-names></string-name></person-group>. <source>Applied Logistic Regression</source>. 3rd ed. Hoboken, New Jersey: <publisher-name>John Wiley &amp; Sons</publisher-name>, <year>2013</year>.</mixed-citation></ref><ref id="ref36"><label>36.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Deng</surname>  <given-names>J</given-names></string-name>, <string-name name-style="western"><surname>Gu</surname>  <given-names>M</given-names></string-name>, <string-name name-style="western"><surname>Zhang</surname>  <given-names>P</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Nanobody–antigen interaction prediction with ensemble deep learning and prompt-based protein language models</article-title>. <source><italic toggle="yes">Nat Mach Intell</italic></source>  <year>2024</year>;<volume>6</volume>:<fpage>1594</fpage>–<lpage>604</lpage>. <pub-id pub-id-type="doi">10.1038/s42256-024-00940-5</pub-id></mixed-citation></ref><ref id="ref37"><label>37.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Zhu</surname>  <given-names>Y</given-names></string-name>, <string-name name-style="western"><surname>Xu</surname>  <given-names>Y</given-names></string-name>, <string-name name-style="western"><surname>Yu</surname>  <given-names>F</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Deep graph contrastive representation learning</article-title>. In: <italic toggle="yes">Proceedings of the ICML 2020 Workshop on Graph Representation Learning and Beyond, Virtual, 2020.</italic></mixed-citation></ref><ref id="ref38"><label>38.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Ahn</surname>  <given-names>SJ</given-names></string-name>, <string-name name-style="western"><surname>Kim</surname>  <given-names>M</given-names></string-name></person-group>. <part-title>Variational graph normalized AutoEncoders</part-title>. In: Demartini G, Zuccon G, Culpepper JS, <etal>et al.</etal> (eds.), <source>Proceedings of the 30th ACM International Conference on Information &amp; Knowledge Management</source>, pp. <fpage>2827</fpage>–<lpage>31</lpage>. <publisher-loc>Queensland, Australia</publisher-loc>: <publisher-name>Association for Computing Machinery: Virtual Event</publisher-name>, <year>2021</year>.</mixed-citation></ref><ref id="ref39"><label>39.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Ryu</surname>  <given-names>JY</given-names></string-name>, <string-name name-style="western"><surname>Kim</surname>  <given-names>HU</given-names></string-name>, <string-name name-style="western"><surname>Lee</surname>  <given-names>SY</given-names></string-name></person-group>. <article-title>Deep learning improves prediction of drug–drug and drug–food interactions</article-title>. <source><italic toggle="yes">Proc Natl Acad Sci U S A</italic></source>  <year>2018</year>;<volume>115</volume>:<fpage>E4304</fpage>–<lpage>11</lpage>. <pub-id pub-id-type="doi">10.1073/pnas.1803294115</pub-id><pub-id pub-id-type="pmid">29666228</pub-id>
+<pub-id pub-id-type="pmcid">PMC5939113</pub-id></mixed-citation></ref><ref id="ref40"><label>40.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Zhong</surname>  <given-names>Y</given-names></string-name>, <string-name name-style="western"><surname>Li</surname>  <given-names>G</given-names></string-name>, <string-name name-style="western"><surname>Yang</surname>  <given-names>J</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>Learning motif-based graphs for drug–drug interaction prediction via local–global self-attention</article-title>. <source><italic toggle="yes">Nat Mach Intell</italic></source>  <year>2024</year>;<volume>6</volume>:<fpage>1094</fpage>–<lpage>105</lpage>. <pub-id pub-id-type="doi">10.1038/s42256-024-00888-6</pub-id></mixed-citation></ref><ref id="ref41"><label>41.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Karim</surname>  <given-names>MR</given-names></string-name>, <string-name name-style="western"><surname>Cochez</surname>  <given-names>M</given-names></string-name>, <string-name name-style="western"><surname>Jares</surname>  <given-names>JB</given-names></string-name>  <etal>et al</etal></person-group>. <part-title>Drug–drug interaction prediction based on knowledge graph embeddings and convolutional-LSTM network</part-title>. In: Shi XM, Buck M, Ma J, Veltri P, (eds.), <source>Proceedings of the 10th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics</source>, pp. <fpage>113</fpage>–<lpage>23</lpage>. <publisher-loc>Niagara Falls, NY, USA</publisher-loc>: <publisher-name>Association for Computing Machinery</publisher-name>, <year>2019</year>.</mixed-citation></ref><ref id="ref42"><label>42.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Huang</surname>  <given-names>K</given-names></string-name>, <string-name name-style="western"><surname>Xiao</surname>  <given-names>C</given-names></string-name>, <string-name name-style="western"><surname>Glass</surname>  <given-names>LM</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>SkipGNN: predicting molecular interactions with skip-graph networks</article-title>. <source><italic toggle="yes">Sci Rep</italic></source>  <year>2020</year>;<volume>10</volume>:<fpage>21092</fpage>. <pub-id pub-id-type="doi">10.1038/s41598-020-77766-9</pub-id><pub-id pub-id-type="pmid">33273494</pub-id>
+<pub-id pub-id-type="pmcid">PMC7713130</pub-id></mixed-citation></ref><ref id="ref43"><label>43.</label><mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Vinh</surname>  <given-names>NX</given-names></string-name>, <string-name name-style="western"><surname>Epps</surname>  <given-names>J</given-names></string-name>, <string-name name-style="western"><surname>Bailey</surname>  <given-names>J</given-names></string-name></person-group>. <part-title>Information theoretic measures for clusterings comparison: is a correction for chance necessary?</part-title> In: Danyluk AP, Bottou L, Littman ML, (eds.), <source>Proceedings of the 26th Annual International Conference on Machine Learning (ICML 2009)</source>. Montreal, Quebec, Canada: ACM (Association for Computing Machinery); 2009. p. 1073–1080.</mixed-citation></ref><ref id="ref44"><label>44.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Orchard</surname>  <given-names>S</given-names></string-name>, <string-name name-style="western"><surname>Ammari</surname>  <given-names>M</given-names></string-name>, <string-name name-style="western"><surname>Aranda</surname>  <given-names>B</given-names></string-name>  <etal>et al</etal></person-group>. <article-title>The MIntAct project—IntAct as a common curation platform for 11 molecular interaction databases</article-title>. <source><italic toggle="yes">Nucleic Acids Res</italic></source>  <year>2013</year>;<volume>42</volume>:<fpage>D358</fpage>–<lpage>63</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkt1115</pub-id><pub-id pub-id-type="pmid">24234451</pub-id>
+<pub-id pub-id-type="pmcid">PMC3965093</pub-id></mixed-citation></ref></ref-list></back></article>

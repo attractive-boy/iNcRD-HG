@@ -1,0 +1,2360 @@
+[
+  {
+    "title": "A foundation for systematic analysis of transformers and RNNs for tractography",
+    "id": "http://arxiv.org/abs/2610.01894v1",
+    "date": "2026-10-01T15:43:32Z",
+    "abstract": "Machine learning (ML) has emerged as a promising approach for improving diffusion MRI (dMRI) tractography, a task that remains limited by the intrinsic tension between local diffusion information and global anatomical plausibility. In this work, we systematically evaluate recurrent neural networks (RNNs) and Transformer models for iterative tractography, with particular attention to training strategies, input representations (including convolutional neural network (CNN)-based embeddings and end-of-sequence (EOS) tokens), and hyperparameter selection. We introduce a generation-validation phase enabling supervision at the streamline level during training, allowing supervision despite the mismatch between local loss functions and global streamline quality. Using the ISMRM2015 tractography challenge dataset, our models achieve the highest reported performance to date. Through controlled experiments, we quantify the impact of missing bundles, noisy or imperfect training streamlines, and invalid fibers in the training set. Finally, we demonstrate the applicability of our best-performing models for in vivo data from the Tractoinferno database. Overall, our results highlight both the potential and the limits of sequence-based deep learning models such as Transformers and RNNs for tractography, and emphasize the need for improved phantoms and evaluation methods for in vivo validation. We provide takeaways and recommendations for future researchers training and validating sequence-based supervised methods for tractography.",
+    "authors": [
+      "Emmanuelle Renauld",
+      "Philippe Poulin",
+      "Hugo Larochelle",
+      "Antoine Théberge",
+      "Maxime Descoteaux"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Beyond One Epoch: Uncertainty-Weighted Sensitivity Regularization for Recommendation Models",
+    "id": "http://arxiv.org/abs/2609.34083v1",
+    "date": "2026-09-28T01:20:02Z",
+    "abstract": "Recommendation models with sparse embeddings and a shared consumer often exhibit the one-epoch phenomenon: a second epoch lowers training loss while sharply degrading generalization. We present a view based on the violation of the prequential principle. On the first epoch, an example's label has not affected the embedding rows used to score it. On later epochs, those rows contain a displacement induced by the labels earlier update. This creates an incentive for the shared consumer to exploit this displacement in subsequent epochs, which fails to generalize. We call this self-influence asymmetry. Using an exact scalar model and local influence analysis, we connect this mismatch to the uncertainty in the embeddings and the consumers incentive to exploit it in subsequent epochs. We verify this hypothesis using an embedding-consumer-update interventions in deep recommendation models and propose uncertainty-weighted sensitivity regularization (UWSR) which counteracts this mismatch by augmenting the loss function to penalize the consumer for relying on uncertain embeddings. Unlike existing remedies, UWSR preserves the learned embeddings and across three benchmarks, four-epoch UWSR reduces test cross-entropy by 1.38%-6.78% and improves AUC by 0.0058-0.0231 relative to one-epoch training.",
+    "authors": [
+      "Richard Lettich",
+      "Shagun Gupta"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "A Framework Integrating the Dynamic Stiffness Matrix with Physics-Informed Neural Networks for Solving Eigenvalue Problems and Analysing Dynamic Response",
+    "id": "http://arxiv.org/abs/2608.28683v1",
+    "date": "2026-08-26T08:54:35Z",
+    "abstract": "This paper introduces a framework that integrates the dynamic stiffness matrix (DSM) with physics-informed neural networks (PINN). The DSM-PINN embeds physical constraints within the model and demonstrates robustness, particularly when addressing limited datasets across diverse investigations. In this approach, deep neural network outputs approximate the displacement fields of element nodes. Unlike the finite element method (FEM), the element shape functions are homogeneous solutions to the governing partial differential equation, forming the basis of the exact dynamic stiffness matrix, thereby avoiding high-order derivative terms. This matrix also serves as a frequency-domain spectral element, resulting in a strong-form PINN. The loss function is produced by connecting neural networks with dynamic stiffness matrices. We focus on utilising PINNs to resolve eigenvalue problems by employing the Wittrick-Williams algorithm, which overcomes the challenge of neural networks failing to converge to higher-order eigenvalues. Additionally, the frequency domain-PINN method is used to analyse structural dynamic responses under moving and impulsive loads, addressing the limitation of neural networks in handling complex numbers. Theoretical convergence stability of the suggested approach is also analysed even DSM is an indefinite matrix after implementing the boundary condition. The numerical results validate the practicality and efficacy of the recommended approach.",
+    "authors": [
+      "Yi An",
+      "Zhijiang Chen",
+      "Zhiqiang Feng",
+      "Qian Cheng",
+      "Jack C. P. Cheng",
+      "Haijiang Li",
+      "Dalei Wang"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "From Gradient-Boosted Trees to Deep Recommenders: Practical Lessons from Migrating a Production Customer Support Recommender",
+    "id": "http://arxiv.org/abs/2608.24132v1",
+    "date": "2026-08-25T06:50:39Z",
+    "abstract": "Product catalogs in fast-moving service businesses are shifting from static, independently priced SKUs toward dynamically bundled, discount-coupled offerings--a shift that strains the tree-based classifiers traditionally preferred for sparse and highly imbalanced data. These classifiers assume a fixed, slowly changing label space and struggle to incorporate multimodal signals such as tabular data and transcripts. We present the migration of a live, production conversational recommendation system from a gradient-boosted multiclass model to a pairwise-binary deep recommender. Because this system is critical to ecosystem growth initiatives and downstream features like dynamic pitching--surfacing the most relevant pitch text to a support agent in real time during a live customer conversation--maintaining live recommendation quality was a non-negotiable constraint. We detail the techniques that made this migration successful--reformulating recommendation as pairwise binary prediction to learn jointly from user and item features, and enhancing learned representations via negative sampling and noise injection. To efficiently incorporate long, live conversation context, we apply attention pooling over transcript chunks and benchmark it against TF-IDF and sentence-embedding baselines. Finally, we explore multiple architectures (including two-tower models, DeepFM, and their variants) and loss functions such as contrastive loss. Evaluating against a CatBoost baseline across all conversational stages, we demonstrate that our approach achieves parity at conversation beginning and outperforms at later conversational stages.",
+    "authors": [
+      "Sonia Sharma",
+      "Jeyendran Balakrishnan",
+      "Shreya Rajpal",
+      "Swapnil Parekh",
+      "Nagaraj Janardhana",
+      "Andrew Mattarella-Micke"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "A Physics-informed Neural Network Approach for Robust Buckling Load Prediction and Reliability-Based Design of Thin Truncated Conical Shells",
+    "id": "http://arxiv.org/abs/2608.21818v1",
+    "date": "2026-08-22T07:35:35Z",
+    "abstract": "Thin-walled truncated conical shells are widely used in aerospace, marine, offshore, and lightweight infrastructure systems due to their high strength-to-weight ratio and geometric efficiency. Their buckling resistance under axial compression, however, is highly sensitive to geometric imperfections, manufacturing tolerances, material variability, and nonlinear instability effects. Conventional design procedures rely on conservative knockdown factors (KDFs), such as those recommended in NASA SP-8019, which do not explicitly account for shell geometry, fabrication quality, data uncertainty, or target reliability. This study develops a physics-informed neural network (PiNN) framework for predicting critical buckling loads of thin truncated conical shells and integrates the trained surrogate within a reliability-based design (RBD) formulation. The model combines geometric and material descriptors with mechanics-informed features derived from shell stability theory and the localized reduced stiffness method (LRSM). A physics-informed loss function penalizes mechanically inadmissible predictions exceeding the theoretical elastic buckling load. The framework is trained and evaluated using 133 experimental Mylar conical shell tests under axial compression. Compared with a conventional deep neural network (DNN), the PiNN improves predictive accuracy, reduces mean absolute error, and enhances physical consistency. The trained PiNN is then used to evaluate reliability indices and calibrate safety-consistent KDFs for prescribed target reliability levels. Results demonstrate that the PiNN-RBD framework provides an efficient approach for uncertainty-aware design of imperfection-sensitive shell structures.",
+    "authors": [
+      "Devasmit Dutta",
+      "Budhaditya De",
+      "Rohan Majumder",
+      "Sudip Kumar Mishra"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Constructing Predictive Surgical Path for AI-based Capsulorhexis Skill Transfer",
+    "id": "http://arxiv.org/abs/2608.21441v1",
+    "date": "2026-08-18T08:55:14Z",
+    "abstract": "Automated training of surgeons is one of the most crucial factors that significantly minimize surgical training risks and expenses. With recent advances in artificial intelligence (AI) knowledge and available data from various surgeries, AI's involvement in surgical training is becoming very promising. It is recommended that at the early stages of AI development, it interferes in the surgery as a third agent alongside the trainer. As trust in AI increases, this process will lead to an AI agent acting as a trainer in the future. The first phase in which AI can intervene in the training process is to suggest an improved surgical path to the trainer. A platform must be constructed in the first step, to accomplish this task and to enhance the movement path of trainee surgeons. This paper introduces this platform along with an annotated capsulorhexis surgery dataset called the ARAS-Farabi dataset. In this research, a deep convolutional neural network is pre-trained with JIGSAWS and ARAS-Farabi surgical datasets that can extract surgical skill characteristics from surgery tool tip motion data. The proposed platform develops a reference model from the feature space of an expert surgeon's movement trajectory and proposes an improved path to enhance the skill of a novice surgeon. An optimization with two loss functions is utilized to create a path that raises the skill level of the novice surgeon's path while simultaneously predicting and preserving his/her intent. The results of this study reveal that, with the assistance of an AI agent, the trainee surgeon's movement path can be enhanced by at least 20 percent while maintaining his intentional objective. In addition to the recommended deep network, various tangible indicators have also been developed in this research to verify the level of trainee improvement.",
+    "authors": [
+      "Mohammad Javad Ahmadi",
+      "Hamid D. Taghirad"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "DrEM: Dual-Side Robust Ensemble Ranking from Noisy User Preference Predictions in Video Recommendation",
+    "id": "http://arxiv.org/abs/2608.12778v1",
+    "date": "2026-08-13T03:36:09Z",
+    "abstract": "Industrial video recommendation systems typically adopt a multi-stage architecture. At the ensemble ranking stage, multi-dimensional user preference predictions (pxtrs) from an upstream multi-task model are fused into a unified ranking score to reflect user satisfaction. Since users' true satisfaction is difficult to observe directly, ensemble ranking models commonly use pxtrs both as input features and as a source for constructing proxy preferences. However, as outputs of an upstream prediction model, pxtrs inevitably contain prediction noise, which propagates to downstream learning across two sides. On the supervision side, noisy pxtrs may flip proxy preferences and introduce erroneous gradients. On the feature side, pxtr noise may propagate through model inputs and destabilize ranking scores. Existing ensemble ranking methods typically treat pxtrs as reliable signals and overlook such prediction noise. To address this, we propose DrEM, a dual-side robust ensemble ranking framework. Our DrEM introduces a risk-denoising robust loss that corrects the empirical risk using estimated preference flip probability. Meanwhile, it samples perturbations from the distribution of prediction noise and introduces a preference-preserving ranking consistency regularizer to improve feature-side output stability. Theoretically, we obtain an approximate distribution of the prediction noise and prove that the robust loss remains superior under flip probability estimation error. Extensive offline experiments and large-scale online A/B tests demonstrate the effectiveness and robustness of our DrEM.",
+    "authors": [
+      "Canwei Huang",
+      "Tiantian He",
+      "Xiaoxiao Xu",
+      "Jun Zhang",
+      "Ziran Deng",
+      "Weike Pan",
+      "Chunjie Chen",
+      "Kaiqiao Zhan"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "PolypVision: A Three-Stage Hierarchical Deep Learning Framework for Classification and Segmentation of Colorectal Polyps",
+    "id": "http://arxiv.org/abs/2608.10649v1",
+    "date": "2026-08-11T08:33:17Z",
+    "abstract": "Colorectal cancer (CRC) remains one of the leading causes of cancer-related mortality worldwide, predominantly arising from precancerous polyps. Accurate detection, segmentation, and endoscopic and histological classification of colorectal polyps are crucial for timely clinical intervention. In this study, we present PolypVision, a three-stage hierarchical deep learning framework that sequentially performs: (Stage 1) binary classification of polyps as adenomatous or hyperplastic, with simultaneous Paris and JNet classification, using EfficientNetV2-M with Focal Loss; (Stage 2) polyp segmentation with recommended resection method using a UNet++ decoder with the Stage 1 backbone as encoder, optimized with Dice and BCE losses; and (Stage 3) adenoma subtype classification (tubular, tubulovillous, villous) using EfficientNetV2-M with transfer learning from Stage 2. Evaluated on three public datasets -- PolypGen, Kvasir-SEG, and CVC-ClinicDB -- PolypVision achieves an AUC of approximately 0.99 for frame classification and a detection mAP@50 of 94.4% on Kvasir-SEG, outperforming or matching state-of-the-art methods. Gradient-weighted Class Activation Maps (Grad-CAM) confirm that the model attends to clinically relevant lesion features. The framework is device-independent, operating across diverse endoscopic imaging systems without hardware-specific adaptation. These results demonstrate that a hierarchical, transfer-learning-driven pipeline with task-specific loss functions offers a robust, device-independent, and clinically meaningful approach to automated colorectal polyp analysis. PolypVision is freely available as a web application at https://polypvision.com, a DataBioX initiative, with a free usage tier open to all users.",
+    "authors": [
+      "Hamidreza Bolhasani",
+      "Hamidreza Rastad",
+      "Amir Mohammad Akbari",
+      "Mohammad Tashakoripour",
+      "Parnian Asadollahi",
+      "Ata Khodami",
+      "Mojgan Forootan"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Cleo: A Transparent and Controllable Chatbot for Conversational Commerce",
+    "id": "http://arxiv.org/abs/2608.06068v1",
+    "date": "2026-08-06T14:12:14Z",
+    "abstract": "We demonstrate Cleo, a transparent and controllable conversational product advisor that addresses the challenges of opacity, unpredictability of LLMs, and the complexity of comparisons in conversational commerce. With our chatbot system, we make four contributions: First, we introduce transparency by prompting the LLM to reflect on interpreted user needs, while an auditable ranking mechanism reveals loss values per attribute, explaining ranking decisions. Second, we propose controllability through a hybrid architecture separating deterministic ranking from language generation. A ranker applies categorical filters and numeric loss functions over 3,638 product specifications. Meanwhile, a constrained LLM generates grounded descriptions constrained to catalog evidence, thus mitigating the risk of hallucinated or persuasive content. Third, we provide decision support in the form of natural-language comparisons and a highlights feature. These aim to reduce mental workload by contextualizing specifications relative to user needs. Fourth, we contribute an extensible experimental system for IR and HCI researchers, as well as practitioners of conversational search and recommendation. Unlike traditional faceted search or opaque LLM-only recommenders, our approach allows for fluid conversation while maintaining algorithmic transparency. In a live demonstration, attendees will experience information needs elicitation and reflection, conversational refinement with real-time re-ranking, inspection of per-attribute loss explanations, and AI-generated multi-item comparisons. The system aims to advance the design of transparent and controllable conversational systems that provide support for decision-making during online product search.",
+    "authors": [
+      "Kevin Schott",
+      "Jan Lattenkamp",
+      "Daniel Hienert",
+      "Dagmar Kern"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Cardinality-Decomposed Loss: Matching Training Objectives to Relation Structure in Heterogeneous Recommendation Graphs",
+    "id": "http://arxiv.org/abs/2607.20737v1",
+    "date": "2026-07-22T21:33:02Z",
+    "abstract": "Graph Neural Networks trained on heterogenous bipartite graphs form a common basis in recommendation systems. These graphs often express relations that vary in cardinality, for example, user-item preferences are one-to-many and user-attribute features are one-to-one. Traditionally, a unique loss function is applied for all of the network components which is often Bayesian Personalized Ranking (BPR). While BPR works well for the recommendation task, we find that it causes attribute embeddings to collapse to near-random geometry -- a silent failure that leaves standard ranking metrics largely unaffected and therefore invisible to conventional evaluation. This in turn pollutes user node embeddings, which are shaped by both edge types simultaneously, hurting downstream tasks like personalization, segmentation, etc. Here we propose a Cardinality-Decomposed Loss (CDL) that combines both Cross Entropy (CE) and BPR to enable the model to collectively optimize for relations across cardinalities. We confirm this CE-BPR conflict by showing the two losses compete in the shared encoder's parameter space. We evaluate CDL on five datasets spanning two structural configurations -- one-to-one attributes on user nodes (MovieLens-1M, Last.fm-360K, PayPal Audience Factory, BookCrossing) and on item nodes (Yelp) -- and find that CDL consistently improves discriminability in attribute embeddings. We also show that ranking (NDCG) improves when attributes carry meaningful preference signal, but conflicts with it when the correlation is weak. We use a lambda parameter to navigate this trade-off, and a lambda-sweep reveals that dataset behavior is governed by two graph properties -- semantic alignment and topology leakage. Semantic alignment measures whether the attribute predicts preferences, while topology leakage measures whether the graph's connectivity already encodes it.",
+    "authors": [
+      "Parul Maheshwari",
+      "Amulya Paruchuri",
+      "Yiqing Zou",
+      "Alireza Sahami Shirazi",
+      "Farhad Farahani",
+      "Prakhar Mehrotra"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "DaV-Gen: End-to-End Generative Retrieval via Draft-and-Verify",
+    "id": "http://arxiv.org/abs/2607.08365v1",
+    "date": "2026-07-09T11:22:50Z",
+    "abstract": "Mainstream industrial information retrieval systems (e.g., search and recommendation) are usually built upon Multi-Stage Cascade Architectures (MCAs), which balance effectiveness and efficiency through a coarse-to-fine ``retrieval-ranking'' pipeline. However, the optimization objectives across different stages are substantially inconsistent, propagating or even amplifying the early-stage errors that ultimately degrade the quality of final results. While emerging end-to-end generative models offer a potential solution by unifying the pipeline, their online serving performance is severely hindered by the auto-regressive process inherited from the standard decoder-only structure. To bridge this gap, we introduce \\textbf{DaV-Gen}, a novel unified solution designed to fundamentally refactor the paradigm for both search and recommendation via a ``Draft-and-Verify'' mechanism. Inspired by the process used by speculative decoding, our framework redesigns the generation task into two synergistic operations within a single model. During training, the model is concurrently optimized for both candidate drafting and fine-grained verification. This is achieved by a composite loss function that jointly trains the model on two distinct but related objectives: 1) a contrastive loss that structures the embedding space for efficient drafting, and 2) a fusion loss that combines generative likelihood with vector similarity to produce a superior verification score. This integrated training strategy equips the model with dual capabilities. At inference time, it first performs highly efficient vector-based drafting to generate a candidate set, and then verifies these candidates using the more powerful fused scoring function, thereby achieving both the speed of sparse drafting and the precision of advanced generative models within a unified, end-to-end architecture.",
+    "authors": [
+      "Meng Zhao",
+      "Chunmei Liu",
+      "Qinyong Wang"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Choosing A Headline Estimand from Matching, DID, and Hybrid Designs: A Minimax-Regret Approach",
+    "id": "http://arxiv.org/abs/2606.20435v1",
+    "date": "2026-06-18T16:14:39Z",
+    "abstract": "Researchers using panel data to estimate causal effects routinely choose among three approaches to using past outcomes: difference-in-differences (DID), conditioning on lagged outcomes (matching, M), and a hybrid that does both (DIDM). The corresponding identifying assumptions are non-nested, leaving little guidance on which to report. We give conditions under which the corresponding estimands are ordered, with DIDM bracketed between matching and DID. This makes DIDM the minimax-regret choice among the three under a broad class of loss functions. We recommend reporting DIDM as the headline estimate, with matching and DID as bounds. We illustrate in applications.",
+    "authors": [
+      "Yechan Park",
+      "Yuya Sasaki"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Linear and Neural Dueling Bandits with Delayed Feedback",
+    "id": "http://arxiv.org/abs/2605.26554v1",
+    "date": "2026-05-26T05:07:25Z",
+    "abstract": "Contextual dueling bandits form a cornerstone of preference-based decision-making, with critical applications in recommender systems and large language model alignment. However, standard algorithms rely on the idealized assumption of immediate feedback, a condition frequently violated in real-world scenarios such as prompt optimization. This setting introduces a unique theoretical challenge: unlike linear bandits, dueling bandit estimators lack closed-form solutions, rendering naive adaptations of standard weighting techniques biased. To address this, we formalize the problem of Contextual Dueling Bandits with Stochastic Delayed Feedback and propose two novel algorithms: Linear (LDB-DF) and Neural (NDB-DF) Dueling Bandits with Delayed Feedback. Central to our approach is a novel estimator that integrates an Inverse Probability Weighting (IPW) mechanism directly into the loss function, ensuring unbiased correction for delayed or missing feedback. We provide comprehensive theoretical analysis, establishing an O(d*sqrt(T)) regret bound for the linear setting and sub-linear guarantees for the neural setting. Extensive experiments on both simulated and real-world datasets demonstrate the effectiveness of our propose.",
+    "authors": [
+      "Xiangyi Wang",
+      "Pingchen Lu",
+      "Jie Mao",
+      "Mingze Kong",
+      "Zhi Hong",
+      "Zhiyong Wang",
+      "Zhongxiang Dai"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Enhancing Deep Neural Network Reliability with Refinement and Calibration",
+    "id": "http://arxiv.org/abs/2605.23249v1",
+    "date": "2026-05-22T05:43:41Z",
+    "abstract": "Although deep neural networks (DNNs) achieve high predictive accuracy, their confidence estimates are often unreliable, potentially compromising user trust in their decisions. This has motivated research on calibrated models, where calibration measures how well a model's predicted confidence aligns with the empirical probability of correctness. However, calibration metrics can often be improved through post-processing techniques that merely mimic training-time uncertainty without genuinely improving the model's understanding. For this reason, statisticians recommend that models be not only calibrated but also refined. Intuitively, a model is considered more refined if it assigns significantly different confidence scores to correct and incorrect predictions, a property also referred to as sharpness. We observe that many existing calibration methods improve calibration at the cost of reduced refinement. To address this limitation, we propose: (1) a novel loss function that explicitly promotes refinement and can be optimized through supervised contrastive learning; and (2) a unified training framework, RefCal, that jointly optimizes calibration, refinement, and accuracy to improve DNN reliability. On the CIFAR-100-LT dataset with 10 percent class imbalance, RefCal achieves (accuracy, refinement, ECE) of (58.81, 95.67, 0.08), substantially outperforming the widely used Correctness Ranking Loss, which achieves (46.27, 93.7, 0.22).",
+    "authors": [
+      "Ramya Hebbalaguppe",
+      "Ajay Shastry",
+      "Soumya Suvra Ghosal",
+      "Chetan Arora"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Driving Engagement in Daily Fantasy Sports with a Scalable and Urgency-Aware Ranking Engine",
+    "id": "http://arxiv.org/abs/2604.13796v1",
+    "date": "2026-04-15T12:34:20Z",
+    "abstract": "In daily fantasy sports (DFS), match participation is highly time-sensitive. Users must act within a narrow window before a game begins, making match recommendation a time-critical task to prevent missed engagement and revenue loss. Existing recommender systems, typically designed for static item catalogs, are ill-equipped to handle the hard temporal deadlines inherent in these live events. To address this, we designed and deployed a recommendation engine using the Deep Interest Network (DIN) architecture. We adapt the DIN architecture by injecting temporality at two levels: first, through real-time urgency features for each candidate match (e.g., time-to-round-lock), and second, via temporal positional encodings that represent the time-gap between each historical interaction and the current recommendation request, allowing the model to dynamically weigh the recency of past actions. This approach, combined with a listwise neuralNDCG loss function, produces highly relevant and urgency-aware rankings. To support this at industrial scale, we developed a multi-node, multi-GPU training architecture on Ray and PyTorch. Our system, validated on a massive industrial dataset with over 650k users and over 100B interactions, achieves a +9% lift in nDCG@1 over a heavily optimized LightGBM baseline with handcrafted features. The strong offline performance of this model establishes its viability as a core component for our planned on-device (edge) recommendation system, where on-line A/B testing will be conducted.",
+    "authors": [
+      "Unmesh Padalkar"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Pay Attention to Sequence Split: Uncovering the Impacts of Sub-Sequence Splitting on Sequential Recommendation Models",
+    "id": "http://arxiv.org/abs/2604.05309v1",
+    "date": "2026-04-07T01:28:14Z",
+    "abstract": "Sub-sequence splitting (SSS) has been demonstrated as an effective approach to mitigate data sparsity in sequential recommendation (SR) by splitting a raw user interaction sequence into multiple sub-sequences. Previous studies have demonstrated its ability to enhance the performance of SR models significantly. However, in this work, we discover that \\textbf{(i). SSS may interfere with the evaluation of the model's actual performance.} We observed that many recent state-of-the-art SR models employ SSS during the data reading stage (not mentioned in the papers). When we removed this operation, performance significantly declined, even falling below that of earlier classical SR models. The varying improvements achieved by SSS and different splitting methods across different models prompt us to analyze further when SSS proves effective. We find that \\textbf{(ii). SSS demonstrates strong capabilities only when specific splitting methods, target strategies, and loss functions are used together.} Inappropriate combinations may even harm performance. Furthermore, we analyze why sub-sequence splitting yields such remarkable performance gains and find that \\textbf{(iii). it evens out the distribution of training data while increasing the likelihood that different items are targeted.} Finally, we provide suggestions for overcoming SSS interference, along with a discussion on data augmentation methods and future directions. We hope this work will prompt the broader community to re-examine the impact of data splitting on SR and promote fairer, more rigorous model evaluation. All analysis code and data will be made available upon acceptance. We provide a simple, anonymous implementation at https://github.com/KingGugu/SSS4SR.",
+    "authors": [
+      "Yizhou Dang",
+      "Yifan Wu",
+      "Minhan Huang",
+      "Chuang Zhao",
+      "Lianbo Ma",
+      "Guibing Guo",
+      "Xingwei Wang",
+      "Zhu Sun"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Semantics-Aware Denoising: A PLM-Guided Sample Reweighting Strategy for Robust Recommendation",
+    "id": "http://arxiv.org/abs/2602.15359v1",
+    "date": "2026-02-17T04:58:21Z",
+    "abstract": "Implicit feedback, such as user clicks, serves as the primary data source for modern recommender systems. However, click interactions inherently contain substantial noise, including accidental clicks, clickbait-induced interactions, and exploratory browsing behaviors that do not reflect genuine user preferences. Training recommendation models with such noisy positive samples leads to degraded prediction accuracy and unreliable recommendations. In this paper, we propose SAID (Semantics-Aware Implicit Denoising), a simple yet effective framework that leverages semantic consistency between user interests and item content to identify and downweight potentially noisy interactions. Our approach constructs textual user interest profiles from historical behaviors and computes semantic similarity with target item descriptions using pre-trained language model (PLM) based text encoders. The similarity scores are then transformed into sample weights that modulate the training loss, effectively reducing the impact of semantically inconsistent clicks. Unlike existing denoising methods that require complex auxiliary networks or multi-stage training procedures, SAID only modifies the loss function while keeping the backbone recommendation model unchanged. Extensive experiments on two real-world datasets demonstrate that SAID consistently improves recommendation performance, achieving up to 2.2% relative improvement in AUC over strong baselines, with particularly notable robustness under high noise conditions.",
+    "authors": [
+      "Xikai Yang",
+      "Yang Wang",
+      "Yilin Li",
+      "Sebastian Sun"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Boundary-Aware Multi-Behavior Dynamic Graph Transformer for Sequential Recommendation",
+    "id": "http://arxiv.org/abs/2602.10493v1",
+    "date": "2026-02-11T03:53:08Z",
+    "abstract": "In the landscape of contemporary recommender systems, user-item interactions are inherently dynamic and sequential, often characterized by various behaviors. Prior research has explored the modeling of user preferences through sequential interactions and the user-item interaction graph, utilizing advanced techniques such as graph neural networks and transformer-based architectures. However, these methods typically fall short in simultaneously accounting for the dynamic nature of graph topologies and the sequential pattern of interactions in user preference models. Moreover, they often fail to adequately capture the multiple user behavior boundaries during model optimization. To tackle these challenges, we introduce a boundary-aware Multi-Behavioral Dynamic Graph Transformer (MB-DGT) model that dynamically refines the graph structure to reflect the evolving patterns of user behaviors and interactions. Our model involves a transformer-based dynamic graph aggregator for user preference modeling, which assimilates the changing graph structure and the sequence of user behaviors. This integration yields a more comprehensive and dynamic representation of user preferences. For model optimization, we implement a user-specific multi-behavior loss function that delineates the interest boundaries among different behaviors, thereby enriching the personalized learning of user preferences. Comprehensive experiments across three datasets indicate that our model consistently delivers remarkable recommendation performance.",
+    "authors": [
+      "Jingsong Su",
+      "Xuetao Ma",
+      "Mingming Li",
+      "Qiannan Zhu",
+      "Yu Guo"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Optimizing Deep Learning Photometric Redshifts for the Roman Space Telescope with HST/CANDELS",
+    "id": "http://arxiv.org/abs/2602.10207v2",
+    "date": "2026-02-10T19:01:05Z",
+    "abstract": "Photometric redshifts (photo-$z$'s) will be crucial for studies of galaxy evolution, large-scale structure, and transients with the Nancy Grace Roman Space Telescope. Deep learning methods leverage pixel-level information from ground-based images to achieve the best photo-$z$'s for low-redshift galaxies, but their efficacy at higher redshifts with deep, space-based imaging remains largely untested. We used Hubble Space Telescope CANDELS optical and near-infrared imaging to evaluate fully-supervised, self-supervised, and semi-supervised deep learning photo-$z$ algorithms out to $z\\sim3$. Compared to template-based and classical machine learning photometry methods, the fully-supervised and semi-supervised models achieved better performance. Our new semi-supervised model, PITA (Photo-$z$ Inference with a Triple-task Algorithm), outperformed all others by learning from unlabeled and labeled data through a three-part loss function that incorporates images and colors for all objects as well as redshifts when available. PITA produces a latent space that varies smoothly in magnitude, color, and redshift, resulting in the best photo-$z$ performance even when the redshift training set was significantly reduced. In contrast, the self-supervised approach produced a latent space with significant color and redshift fluctuations that hindered photo-$z$ inference. Looking forward to Roman, we recommend using semi supervised deep learning to take full advantage of the information contained in the hundreds of millions of high-resolution images and color measurements, together with the limited redshift measurements available, to achieve the most accurate photo-$z$ estimates for both faint and bright sources.",
+    "authors": [
+      "Ashod Khederlarian",
+      "Brett H. Andrews",
+      "Jeffrey A. Newman",
+      "Tianqing Zhang",
+      "Biprateep Dey"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "A General Mixture Loss Function to Optimize a Personalized Predictive Model",
+    "id": "http://arxiv.org/abs/2601.20788v2",
+    "date": "2026-01-28T17:25:26Z",
+    "abstract": "Advances in precision medicine increasingly drive methodological innovation in health research. A key development is the use of personalized prediction models (PPMs), which are fit using a similar subpopulation tailored to a specific index patient, and have been shown to outperform one-size-fits-all models, particularly in terms of model discrimination performance. We propose a generalized loss function that enables tuning of the subpopulation size used to fit a PPM. This loss function allows joint optimization of discrimination and calibration, allowing both the performance measures and their relative weights to be specified by the user. To reduce computational burden, we conducted extensive simulation studies to identify practical bounds for the grid of subpopulation sizes. Based on these results, we recommend using a lower bound of 20\\% and an upper bound of 70\\% of the entire training dataset. We apply the proposed method to both simulated and real-world datasets and demonstrate that previously observed relationships between subpopulation size and model performance are robust. Furthermore, we show that the choice of performance measures in the loss function influences the optimal subpopulation size selected. These findings support the flexible and computationally efficient implementation of PPMs in precision health research.",
+    "authors": [
+      "Tatiana Krikella",
+      "Joel A. Dubin"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Reproducibility and Leakage-Controlled Evaluation of Machine-Learning Models for Chronic Kidney Disease Classification",
+    "id": "http://arxiv.org/abs/2610.04926v1",
+    "date": "2026-10-04T04:10:01Z",
+    "abstract": "Near-perfect classification of small clinical datasets can hinge on preprocessing, data leakage, missing-data handling, and the evaluation sample. We reproduced a published chronic kidney disease (CKD) classification study on the UCI CKD dataset (400 records, 24 predictors) under explicit leakage controls. A stratified 70:30 development-holdout partition was fixed before any learned preprocessing; imputation, encoding, scaling, supervised feature selection, and PCA were fitted only within training folds. Nine classifiers, three feature representations, and three missing-data strategies were compared by 5x3 repeated stratified cross-validation and ranked on training cross-validation only (ties reported); a frozen set of finalists was evaluated once on the holdout (discrimination, calibration, Brier score), treated as a locked historical internal sample. Ablation, grouped SHAP values, three further seeds, and post hoc sensitivity analyses examined robustness. The top-ranked selected-feature pipeline (KNN imputation, Extra Trees) reached a repeated cross-validation accuracy of 0.9869 and a holdout accuracy of 0.9833 (exact 95% interval 0.9411-0.9980). PCA (27 components, 95.96% of variance) gave only a marginal, seed-dependent advantage over interpretable original-feature representations, and several pipelines were statistically indistinguishable. Nested resampling of the selection procedure gave an outer accuracy of 0.9845, 0.0095 below the top-ranked pipeline on the same folds; missingness indicators alone yielded a ROC area of 0.85-0.88, and removing renal, urinary, and hematologic fields cut accuracy to 0.89. High internal performance persisted after leakage controls but appears driven largely by clinically proximal laboratory and urinalysis variables and CKD-associated missingness; it is not clinical validation, and external, prospective evaluation remains necessary.",
+    "authors": [
+      "Lening Yang",
+      "Yichuan Zhao"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "HADRec: A Hierarchy-Aware Drug Recommendation Framework by Fusing Molecular Knowledge and Electronic Health Record",
+    "id": "http://arxiv.org/abs/2610.00984v1",
+    "date": "2026-10-01T03:20:54Z",
+    "abstract": "Accurate medication recommendation is central to clinical decision-making, directly determining therapeutic efficacy and patient safety. However, existing methods suffer from two key limitations: drugs are often abstracted as discrete tokens, ignoring their molecular structures and pharmacological mechanisms, and the commonly used \"flat\" recommendation paradigm fails to leverage the hierarchical logic of the internationally standardized Anatomical Therapeutic Chemical (ATC) classification system. To address these issues, we propose HADRec, a Hierarchy-Aware Drug Recommendation framework that integrates molecular knowledge with electronic health records (EHRs). HADRec employs LLaMA-7B to encode clinical notes for rich patient representations and ChemBERTa to encode drug Simplified Molecular Input Line Entry System strings, building a global molecular knowledge base. A cross-attention mechanism then performs deep multimodal fusion between patient states and drug features. The framework further incorporates a hierarchical predictor and a novel consistency constraint loss to enforce strict adherence to ATC logical dependencies. Extensive experiments on MIMIC-III demonstrate that HADRec achieves state-of-the-art performance across Jaccard, F1, and PR-AUC. External validation on MIMIC-IV confirms strong generalization under distribution shifts, and calibration analysis shows well-calibrated predictive confidence on MIMIC-IV with ECE = 0.04, and Brier = 0.06. Counterfactual evaluation reveals clinically aligned reasoning, disentangling disease-specific treatments from general care. Together, these results establish HADRec as a high-performance, interpretable, and clinically grounded pathway toward safe and reliable AI-driven medication recommendation.",
+    "authors": [
+      "Junke Wang",
+      "Hongshun Ling",
+      "Li Zhang",
+      "Jinjing Wu",
+      "Tong Shao",
+      "Fang Wang",
+      "Yuan Gao"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "A Unified Uncertainty Representation for Graph Neural Networks via Doubly-Spectral Stochastic Expansion",
+    "id": "http://arxiv.org/abs/2609.35703v1",
+    "date": "2026-09-28T17:42:52Z",
+    "abstract": "Reliable deployment of graph neural networks requires calibration, out-of-distribution (OOD) detection, and robustness to distribution shift, yet existing methods address these needs with separate models and objectives. We model uncertain node embeddings as random graph signals: graph Fourier filters capture structural variation, and a scalar orthogonal-polynomial chaos coordinate captures latent stochastic variation. The resulting doubly-spectral stochastic (DSS) expansion supplies task-matched readouts from one representation: the mean coefficient encodes class evidence for the energy-based OOD score, the higher-order coefficients encode structured logit variation, and quadrature averaging over the chaos coordinate defines the single predictive distribution used for prediction and calibration. A capacity theorem shows that, under a full-rank feature assumption, a restricted subfamily matches the chaos coefficients of any Gaussian-latent random graph signal, with exponentially decaying truncation error under a growth condition; the task-level claims are established empirically. DSS-GNN has two deployment modes: standalone, or as a residual branch beside a deterministic encoder (DSS-Hybrid). Standalone DSS-GNN achieves the lowest Brier score among the compared uncertainty-aware baselines on all 14 node classification benchmarks without post-hoc correction; DSS-Hybrid achieves the best AUROC on most node-OOD settings, competitive cross-graph OOD detection, and the strongest shifted accuracy on all 7 GOOD concept-shift benchmarks under standard empirical risk minimization (ERM). Cross-evaluating both modes on all three tasks shows that each remains effective on the other's tasks, with documented exceptions, and yields explicit deployment guidance.",
+    "authors": [
+      "Fred Xu",
+      "Thomas Markovich",
+      "Florence Regol",
+      "Yizhou Sun"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "DR-net-Mamba: Selective State-Space Modeling for Long-Range ECG Time-Series Denoising",
+    "id": "http://arxiv.org/abs/2609.35634v1",
+    "date": "2026-09-28T17:03:04Z",
+    "abstract": "Electrocardiogram (ECG) recordings are corrupted by non-stationary noise sources that degrade diagnostic reliability, particularly in ambulatory and long-duration recordings. Deep learning denoisers exist, but convolutional architectures are limited by their receptive field, transformer-based models scale quadratically with sequence length, and diffusion-based approaches incur prohibitive inference cost. We propose a Mamba-augmented model that inserts selective state-space blocks at the convolutional bottleneck, combining local feature extraction with long-range temporal modeling at linear complexity. We comprehensively evaluate the proposed model with respect to reconstruction fidelity, noise robustness, recording-length scaling, and downstream diagnostic classification across over 40 pathology classes. On synthetic and real datasets, our model achieves the highest SNR and lowest RMSE, with the Mamba advantage increasing with sequence length and in low-SNR regimes. On classification with two independent classifiers, the proposed Mamba-based models achieve the best macro AUROC among all denoisers and improve over their convolutional base models. Calibration is more nuanced and classifier-dependent: denoising improves Binary Cross-Entropy and Brier score on Inception1D but often fails to beat the noisy input on ResNet1D-Wang, and the lead-specific Mamba variant is the only denoiser to improve both calibration metrics over the noisy baseline on both classifiers. Per-class analysis reveals a morphology-dependent benefit: Mamba substantially improves ST/T-change diagnoses, which depend on broad, context-sensitive waveforms.",
+    "authors": [
+      "Basile Morel",
+      "Samuel Ruiperez-Campillo",
+      "Andreas P. Streich",
+      "Julia E. Vogt",
+      "Thomas Hofmann"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "LWCal: Loss-Weighted Calibration for Tabular Classifiers with Noisy Calibration Labels",
+    "id": "http://arxiv.org/abs/2609.26839v1",
+    "date": "2026-09-22T00:41:17Z",
+    "abstract": "Post-hoc probability calibration is usually evaluated under an optimistic assumption: the held-out calibration labels are clean. In many AI deployment settings, however, labels come from weak annotators, historical decisions, heuristics, or distant supervision, so the same label noise that corrupts training also corrupts calibration. We study this overlooked failure mode for tabular classifiers and propose LWCal, a CPU-only post-hoc calibrator that down-weights calibration examples whose noisy labels are contradicted by the base model's held-out probability. LWCal requires no clean validation labels, no noise-rate estimate, and no retraining of the base classifier. A second variant, Gated-LWCal, adds a conservative disagreement gate that backs off toward the raw score when the calibration split appears extremely inconsistent. On nine local binary tabular tasks, six random seeds, symmetric and asymmetric label corruption, and three tree-based base learners, LWCal obtains the lowest average calibration error while Gated-LWCal obtains the best average proper-score tradeoff. In the main random-forest study over 432 noisy cells, Gated-LWCal reduces expected calibration error from 0.188 to 0.122 and negative log likelihood from 0.438 to 0.396 relative to the raw classifier. Paired bootstrap intervals for Gated-LWCal versus raw, Platt, isotonic, and beta calibration exclude zero on ECE, Brier score, and NLL. The artifact contains all scripts, result tables, figures, and the compiled paper.",
+    "authors": [
+      "Zeming Liu",
+      "Hang Lyu",
+      "Jingtao Zhang",
+      "Yuan Xie"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Bayesian classification of astronomical spectra with class uncertainties",
+    "id": "http://arxiv.org/abs/2609.21694v1",
+    "date": "2026-09-18T12:28:56Z",
+    "abstract": "Context: We developed a probabilistic machine learning method with the aim of performing the O(10)-way classification of low- and high-resolution spectra of stellar and extragalactic targets for the upcoming 4MOST survey. In fulfilment of the survey requirements, this method should be able to express uncertainty in the input data as well as uncertainty introduced in its prediction. Aims: Four different methods are explored: (1) convolutional neural networks (CNNs), (2) the Dirichlet distribution, (3) Monte Carlo dropout (MCD), (4) Bayesian neural Networks (BNNs) + variational inference (VI). Training and validation was performed using labelled spectra from the SDSS database and a custom 4MOST mock dataset. All the methods were compared in terms of the same metrics: accuracy, area under the curve (AUC), expected calibration error (ECE), Shannon entropy, negative log-likelihood (NLL), Brier score, training time, and inference time. Methods: A CNN with simple architecture and about 20,000 parameters was trained to achieve classification accuracies of 91.5% on SDSS data and 92.8% on 4MOST mock data. The direct Dirichlet prediction and VI models tested provide uncertainties on class membership probabilities, but they confuse classes more often. The MCD on a CNN is found to be the most suitable; it boosts the point-estimate accuracies to 92.6% and 93.9%, while still providing fast training and sufficiently fast inference. Compared to a standard CNN, the method additionally provides well-calibrated uncertainties at marginal extra cost.",
+    "authors": [
+      "Simon Barton",
+      "Martin Sahlén",
+      "Andreas Korn",
+      "Christian Glaser"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Decentralized Gossip Learning and Federated Averaging for Histopathology Image Classification",
+    "id": "http://arxiv.org/abs/2609.16448v2",
+    "date": "2026-09-15T00:09:18Z",
+    "abstract": "Breast histopathology analysis increasingly relies on distributed learning because direct data pooling across institutions is often restricted by privacy, governance, and communication constraints. This study compares server-based Federated Averaging (FedAvg), fully decentralized gossip learning, and Hybrid Gossip-FedAvg for invasive ductal carcinoma (IDC) patch classification. Experiments used 277,524 color image patches with patient-disjoint training, validation, and test partitions and a workload-balanced, Dirichlet-guided allocation across six nodes. Ring, random degree-3, and fully connected gossip topologies were evaluated together with sensitivity analyses for statistical heterogeneity, mixing coefficient, learning rate, model drift, prediction disagreement, calibration, clinically motivated operating points, communication payload, and patient-level IDC burden, together with auxiliary backbone robustness analyses. In the principal alpha=0.3 experiment, Hybrid Gossip-FedAvg achieved a test area under the receiver operating characteristic curve (ROC-AUC) of 0.8811, closely followed by FedAvg at 0.8801 and fully connected gossip at 0.8751. Across three independent patient-level repetitions, FedAvg and Hybrid Gossip-FedAvg obtained the same mean ROC-AUC of 0.9082, with standard deviations of 0.0037 and 0.0043, respectively. Hybrid achieved the highest mean area under the precision-recall curve of 0.8240, whereas FedAvg produced the lowest mean Brier score of 0.1335. Denser gossip graphs improved discrimination but increased theoretical model payload, while ring gossip remained sensitive to learning rate and mixing strength. Overall, FedAvg provided the most consistently reliable server-based baseline, topology-aware gossip offered a viable decentralized alternative, and Hybrid Gossip-FedAvg provided a balanced compromise between peer-to-peer diffusion and periodic global coordination.",
+    "authors": [
+      "Yusuf Ozturk",
+      "Bengisu Atli",
+      "Enes Goktekin",
+      "Akin Ozturk",
+      "Ulas Bagci"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Learning Sign Language Recognition under Label Noise: A Study of Noise-Robust Losses for Isolated and Continuous Settings",
+    "id": "http://arxiv.org/abs/2609.12885v1",
+    "date": "2026-09-11T14:11:20Z",
+    "abstract": "In sign language recognition, the isolated (ISLR) classification loss treats a single label as ground truth, as does the frame-level auxiliary classifier over pseudo-labels we add to continuous (CSLR) methods, which lack one. Stylistic variation blurs ISLR annotation and the lack of temporal boundaries in CSLR forces pseudo-labels; both are noisy. We therefore apply symmetric and generalized cross entropy (SCE, GCE), robust alternatives to cross entropy (CE) from image classification, not to connectionist temporal classification but to the preceding single-label classifier. On ASL Citizen with injected symmetric noise on three backbones (three seeds for ST-GCN), robust losses cost at most 2.5 pt when labels are clean and beat CE by 2.9-10.0 pt in all six conditions at noise rate 0.2, one of which only after q was re-selected on dev. GCE gains more, but its optimal q does not transfer across backbones, whereas one SCE setting works in all nine conditions; both vary 2-11 times more than CE across runs, so a favorable point estimate does not establish stability. For CSLR (PHOENIX-2014) we report no gain; our frame-level targets carry a systematic assignment bias, making that study a diagnosis of a single configuration. At lambda_aux = 25 the pseudo-label CE auxiliary raises word error rate above the no-auxiliary baseline on VAC, CorrNet and SlowFastSign, and GCE/SCE improve on CE by 1.7-3.2 pt (three of six conditions return below that baseline). However, the three losses differ by more than an order of magnitude in effective gradient at a common lambda_aux: matching the initial gradient shrinks the gap to 0.4-0.9 pt, and lowering the CE weight alone already beats that baseline, so neither the degradation nor the improvement can be separated from the effect of the weight. We use only symmetric noise; multi-seed evaluation covers only ST-GCN and VAC isolated.",
+    "authors": [
+      "Akihisa Shitara",
+      "Yoichi Ochiai"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Adaptation Interfaces for In-Context Tabular Foundation Models in Time-to-Event Prediction",
+    "id": "http://arxiv.org/abs/2609.04901v2",
+    "date": "2026-09-04T09:01:16Z",
+    "abstract": "Tabular foundation models (TabFMs) achieve strong performance on structured data, particularly for standard classification and regression problems. Yet, extending them to censored time-to-event prediction is challenging because it requires properly handling censoring and event-time dynamics. Building on our prior work, we further link TabFMs with CoxPH and DeepHit and revise the context-resampled training procedure. We evaluate temporal zero-shot reformulation, classification-based fine-tuning, and survival-head adaptation using frozen TabFM backbones on 74 single-risk data sets, and we additionally study 4 competing-risk data sets. Zero-shot inference is effective on smaller single-risk data sets, whereas supervised adaptation becomes increasingly advantageous as data sets scale. Cox provides the most reliably strong interface, especially for Integrated Brier Score (IBS) on larger data sets. DeepHit is relatively stronger for the time-dependent Concordance Index than for IBS, while cause-specific MTLR ranks highest among the TabFM survival heads in the four-data-set competing-risk analysis. Classification fine-tuning becomes more competitive with zero-shot inference as data sets grow but remains weaker for probabilistic prediction. Overall, our results indicate that effective TabFM transfer depends on the data regime and on the statistical structure represented by the chosen adaptation interface. The implementation scripts used for this work are available at https://github.com/kaylode/survival-fm.",
+    "authors": [
+      "Minh-Khoi Pham",
+      "Luca Cotugno",
+      "Dan Cernei",
+      "Alina Sirbu",
+      "Stefano Masi",
+      "Giuseppe Prencipe",
+      "Alessandro Pingitore",
+      "Patrizia Landi",
+      "Tai Tan Mai",
+      "Martin Crane",
+      "Marija Bezbradica"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Reliability-Aware Hybrid-K Ensemble Selection for Cervical Cytology Classification: Integrating Discrimination, Calibration, and Selective Prediction",
+    "id": "http://arxiv.org/abs/2609.09189v1",
+    "date": "2026-09-01T02:30:41Z",
+    "abstract": "High classification accuracy alone is insufficient for clinical image analysis, where calibrated confidence and reliable uncertainty estimates are essential. This study proposes a reliability-aware Hybrid-K ensemble selection framework for multiclass cervical cytology classification using the SIPaKMeD dataset. Nine deep learning architectures were evaluated using a fixed stratified five-fold partition and three training seeds. After post-hoc temperature scaling, models were assessed using macro-F1, accuracy, AUROC, expected calibration error (ECE), worst-class ECE (WC-ECE), area under the risk-coverage curve (AURC), Brier score, and negative log-likelihood (NLL). Models were ranked using an equal-weight composite score, and Hybrid-K ensembles were formed from the top-ranked models using soft voting. Robustness was examined using 5,000 Dirichlet-sampled metric-weight vectors, leave-one-metric-out analysis, and corrected paired testing across 15 fold-by-seed evaluations. The final Hybrid-2 ensemble, comprising Swin-Tiny and TinyViT-5M, reduced AURC by 43%, NLL by 17%, and WC-ECE by 36% relative to the best individual model. It was selected in 96.8% of random weighting scenarios, remained unchanged across all leave-one-metric-out analyses, and improved the full composite score. However, per-metric gains were not statistically significant after Holm-Bonferroni correction (all adjusted p >= 0.168). Because post-hoc calibration did not use a fully independent calibration set, calibration-dependent results should be interpreted as exploratory internal estimates. Overall, the framework identified a compact ensemble robust to alternative metric weightings and improved reliability point estimates under internal validation on a single dataset.",
+    "authors": [
+      "Nisreen Albzour",
+      "Sarah S. Lam"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Reliability- and Anatomy-Consistency-Aware Multimodal Learning for Robust Fracture Classification from Bangladeshi Radiographs",
+    "id": "http://arxiv.org/abs/2608.21482v1",
+    "date": "2026-08-21T09:41:05Z",
+    "abstract": "Background: Multimodal fracture classifiers may benefit from patient and anatomical metadata, but they can also become brittle when contextual information is missing or mismatched. Methods: We studied 1493 radiographs from the Bangladeshi OrthoFrac-XR dataset using leakage-safe age, sex, bone type, and laterality. A ConvNeXt image encoder was combined with a clinical multilayer perceptron through concatenation, late fusion, reliability-gated residual fusion, and a hierarchical state-location formulation. We additionally introduced an anatomy-consistency gate that attenuates metadata corrections when an image-side anatomical prediction disagrees with the reported bone type. Results: Across five folds and three seeds, hierarchical residual fusion achieved a macro-F1 of 0.6046 +/- 0.0279, compared with 0.5727 +/- 0.0270 for image-only learning, while improving the Brier score from 0.5239 to 0.4948. In a five-fold robustness experiment, anatomy-consistency fusion reduced the macro-F1 loss under shuffled metadata from 0.0567 to 0.0203 relative to ordinary residual fusion, although its clean-data macro-F1 was lower. Without bone type at inference, auxiliary anatomy supervision improved macro-F1 from 0.5620 +/- 0.0330 to 0.5899 +/- 0.0289. Conclusions: Structured context improves fracture classification, and consistency-aware gating limits harm from mismatched metadata. The observed clean-performance-robustness trade-off and the absence of patient-level identifiers motivate external and prospective validation.",
+    "authors": [
+      "Musa Tur Farazi",
+      "K G Subarno Bithi"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "A Leakage-Proof Benchmark and Conformal Selective Triage for Electrohysterogram-Based Preterm Birth Prediction",
+    "id": "http://arxiv.org/abs/2608.17712v1",
+    "date": "2026-08-18T12:35:30Z",
+    "abstract": "Preterm birth remains a major cause of neonatal morbidity and mortality worldwide. Electrohysterography (EHG), a noninvasive measure of uterine myoelectrical activity, has been studied for preterm-birth prediction, but performance estimates may be biased when segments from the same maternal record are split across training and validation data. We formalized the distinction between segment-level and patient-independent record-grouped validation, established a patient-independent benchmark on the Term-Preterm Electrohysterogram Database, and evaluated class-conditional conformal selective prediction. All 300 records (38 preterm) were analyzed across three prespecified regimes. A 92-feature elastic-net logistic model was evaluated with record-grouped nested cross-validation; preprocessing, model fitting, Platt calibration, and conformal estimation were confined to training data, and performance was calculated from strictly out-of-fold record-level predictions with 1,000 bootstrap resamples. Under patient-independent evaluation, AUROC was 0.493 (95% CI 0.467-0.520), AUPRC 0.122 (0.095-0.152), and Brier score 0.115 (0.094-0.137). AUROC was 0.514 at or before 26 weeks and 0.469 thereafter. At miscoverage alpha=0.10, marginal coverage was 0.897, abstention 72.7%, and singleton-prediction accuracy 0.624. These findings establish a record-separated reference benchmark for EHG prediction and a broader validation principle for segmented physiological data: the unit of resampling should correspond to the unit at which predictive performance is intended to generalize. Conformal prediction further quantifies when the available information supports a singleton classification and when uncertainty warrants deferral.",
+    "authors": [
+      "Sunday A. Adetunji",
+      "Rhoda O. Oyewusi"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "When Single-Dataset Conclusions Fail: A 45-Task Study of Threshold Tuning and Resampling for Imbalanced Classification",
+    "id": "http://arxiv.org/abs/2608.16147v1",
+    "date": "2026-08-17T05:58:33Z",
+    "abstract": "Class-imbalance handling is routinely evaluated on a single benchmark dataset, and the resulting conclusions are reported as if they were properties of the method. We show this practice is unsafe. On the public Kaggle credit-card fraud dataset, under a leakage-free nested cross-validation protocol in which the decision threshold is selected on a held-out inner validation fold, a plain Random Forest at the default 0.5 threshold attains F1 = 0.861 +/- 0.021, and threshold tuning yields it no benefit (delta-F1 = -0.002). Read alone, this supports an appealing conclusion: for a well-calibrated ensemble, imbalance handling is unnecessary. We then apply the identical protocol to 45 binary tasks spanning imbalance ratios from 1:1.5 to 1:178 (2,025 model fits, four model families). The conclusion reverses. Random Forest benefits most from threshold tuning across the suite (delta-F1 = +0.101 +/- 0.134), not least, while three other families replicate their fraud-dataset behaviour almost exactly. SMOTE likewise harms the fraud dataset but helps across the suite (mean delta-F1 = +0.076; 138 wins, 39 losses; Wilcoxon p = 2.7e-17). Two further results. Threshold-tuning benefit is non-monotonic in the imbalance ratio: near zero below 1:5, peaking at +0.120 in the 1:15-1:40 band, declining to +0.045 beyond 1:100 - explaining why the fraud dataset, at 1:577, is an unrepresentative place to study the question. And we reject an intuitive heuristic: validation-set calibration error does not predict tuning benefit (expected calibration error r = -0.087; Brier r = +0.137), so calibration diagnostics cannot tell a practitioner whether tuning is worthwhile. We release the protocol, the 45-task harness, and all per-run metrics.",
+    "authors": [
+      "Diyorbek Musaev"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Defensive Boosting for Online Probabilistic Forecasting",
+    "id": "http://arxiv.org/abs/2608.13554v1",
+    "date": "2026-08-13T17:59:35Z",
+    "abstract": "We study online probabilistic forecasting of binary outcomes chosen by an adaptive adversary. Given an online learning algorithm for a weak hypothesis class $H$, we would like to efficiently obtain two incomparable guarantees that existing online boosting techniques provide separately. Online gradient boosting competes in Brier score with the best predictor induced by the span of $H$ on every sequence, but promises nothing when the span does not contain an accurate predictor. Online weak-to-strong boosting drives classification error to zero under a weak-learning condition, but promises little when that condition fails. We give a simple defensive forecasting algorithm, the Defensive Booster, that obtains both guarantees. On every adaptive sequence, its Brier score is competitive with the best prediction induced by the span of $H$ at the same rate as online gradient boosting; simultaneously, whenever the realized transcript satisfies the smooth weak-learning condition, its Brier score and randomized classification error satisfy the same rate guarantee as online classification boosting. This is achieved by operationalizing the \"dual view\" of boosting: When the algorithm's randomized classification error is persistently high, its mistake weights form a smooth reweighting on which every weak hypothesis has low edge, yielding an ex-post hard-core certificate that the weak-learning condition fails. We also develop a strongly adaptive variant, which satisfies both guarantees on every time interval. The Defensive Booster is very efficient: it accesses just one weak-class learner, whereas the prior online boosting methods we compare against maintain large weak-learner ensembles. Experiments on synthetic and real data streams demonstrate its strong predictive performance (sometimes substantially improving over all prior baselines) coupled with orders-of-magnitude faster runtime.",
+    "authors": [
+      "Georgy Noarov",
+      "Aaron Roth"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "LLM Ensemble Fault Classification for Automotive HiL Validation",
+    "id": "http://arxiv.org/abs/2608.10710v1",
+    "date": "2026-08-11T09:31:18Z",
+    "abstract": "Automotive HiL validation generates large multivariate test recordings whose analysis remains challenging due to manual review effort, rule-based limitations, and the need for explainable diagnostic decisions. Recent machine-learning and deep-learning approaches have improved fault diagnosis, but they often require large labelled datasets, generalise poorly across operating conditions, and provide limited insight into their predictions. This paper proposes an explainable multi-LLM ensemble framework for sensor-level fault classification in automotive validation. The framework uses compact evidence representations of fault-injection recordings and combines the outputs of heterogeneous large language models to improve diagnostic robustness, ranking quality, confidence reliability, and interpretability. The approach is evaluated on gasoline-engine and electric-vehicle HiL systems across three driving settings and ten single-fault classes. Among the individual models, Mistral Small~24B provides the strongest overall single-model trade-off, achieving 0.903 Top-1 accuracy, 0.887 MCC, and the lowest Brier score of 0.102. The final Top-3 ensemble combines Mistral Small~24B, Qwen2.5~32B, and Phi-4~14B using confidence-weighted voting, improving the scenario-averaged results to 0.917 Top-1 accuracy, 0.913 macro F1, and 0.902 MCC, while also providing the best calibration among the tested ensemble strategies. A Top-5 ensemble does not improve over the Top-3 configuration, indicating that model complementarity is more important than ensemble size. The results show that coordinated multi-LLM reasoning can support robust, calibrated, and engineer-interpretable fault classification for automotive HiL validation.",
+    "authors": [
+      "Hamza Ouarrad",
+      "Mohammad Abboush",
+      "Andreas Rausch"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "ProbGuard: Calibrated Safety Risk Estimation from LLM Output Distributions",
+    "id": "http://arxiv.org/abs/2608.10621v1",
+    "date": "2026-08-11T08:08:41Z",
+    "abstract": "Recent research on Large Language Model (LLM) safety has widely adopted guardrails to identify unsafe LLM outputs. Existing guardrails typically formulate safety assessment as a deterministic classification task, mapping a discrete token sequence to a discrete safety label. However, this paradigm has two limitations: First, safety assessment is inherently an uncertain problem, particularly during the early generation state. Second, relying solely on discrete token sequences discards the rich probabilistic information embedded in the LLM output distribution. To address these limitations, we propose the first completely probabilistic architecture-agnostic guardrail \\textsc{ProbGuard} to leverage the LLM early output distributional signals for estimating and calibrating the safety probability, thereby enabling early stopping of unsafe ongoing outputs. Specifically, given an LLM's generated prefix distribution, we formulate the safety risk as the unsafe probability of its continued generation dynamics and estimate this risk by Monte-Carlo sampling. Through post-training on the distributional signals and calibrated safety risk, \\textsc{ProbGuard} achieves the best calibration performance across all nine model--dataset combination settings, reducing the average Brier score and ECE by 79.6\\% and 71.9\\%, respectively, over the best baseline. \\textsc{ProbGuard} further limits the attack success rate to at most 1\\% across six representative jailbreak attacks after observing the LLM early output distributions from only the first ten decoding steps.",
+    "authors": [
+      "Xinzhe Huang",
+      "Biwu Yao",
+      "Kedong Xiu",
+      "Mengnan Zhao",
+      "Di Wang",
+      "Puning Zhao",
+      "Tianhang Zheng"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "SoftMCC: An MCC-Brier Calibration Bridge for Threshold-Free Model Selection under Class Imbalance",
+    "id": "http://arxiv.org/abs/2608.08984v1",
+    "date": "2026-08-10T01:08:33Z",
+    "abstract": "Model selection for imbalanced binary classification often uses the Matthews correlation coefficient (MCC), but thresholding makes validation rankings threshold-dependent. SoftMCC is a post-training MCC validation framework on established probability-valued confusion counts, coupling an MCC-specific calibrated identity with a tie-aware, shared-pool selection protocol. Its core score is a covariance-normalized probability-label association, reduces exactly to MCC for hard predictions, and is Pearson-bounded. Under perfect population calibration it equals the Brier skill score with identical candidate ordering; outside that regime the gap does not identify calibration error. Across 18 settings with 12 duplicate-safe grouped repeats, SoftMCC attains the best stability mean rank (2.31) and highest mean tie-corrected Kendall's W (0.659), with a significant Friedman test (p=0.007); Nemenyi analysis separates it from AUPRC and MCC@0.5, while 14-source-family sensitivity retains only the latter. Selected-model utility shows no advantage. Three of six prespecified comparisons have negative mean test-MCC differences, only F1@best survives Holm correction (p=0.014), and the dataset-level test is not significant (p=0.117). Label permutation lowers mean W to 0.092; temperature scaling shifts SoftMCC rankings (mean Spearman 0.851) whereas rank-based and threshold-optimized metrics remain invariant. SoftMCC is a calibration-sensitive MCC-family selector with bounded stability and utility evidence.",
+    "authors": [
+      "Özkan Canay"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "When Calibration Depends on the Scoring Rule: Quantized Biomedical LLM Classification",
+    "id": "http://arxiv.org/abs/2608.03854v4",
+    "date": "2026-08-04T15:57:21Z",
+    "abstract": "Quantized large language models can run on consumer hardware, which motivates interest in on-premises processing of sensitive data. The reliability of their confidence estimates depends on implementation choices (prompt template, label wording, and scoring normalization) that are seldom treated as experimental variables. We evaluate three 7-billion-parameter Mistral variants (a base model, BioMistral, and an instruction-tuned checkpoint evaluated without its chat template) at FP16, INT8, and INT4 on five-class sentence classification in medical abstracts. We test two primary templates on n = 2,000 test sentences and two auxiliary templates on n = 200 validation sentences. Our central observation, made without post-hoc calibration, is that switching from summed to mean-token log-likelihood reverses which model appears better calibrated: BioMistral's mean calibration error across matched conditions nearly triples, while the instruction-tuned model's drops by more than half. Accuracy changes by at most 1.4 percentage points for these two checkpoints. Negative log-likelihood and Brier score show the same reversal. The two primary templates were selected using test-derived examples, so absolute performance with them is exploratory. Between them, prompt choice changes mean accuracy across precisions by 2.9 to 17.8 percentage points. Eight-bit quantization changes accuracy by at most 1.1 percentage points for the adapted checkpoints; four-bit quantization shows mixed but non-catastrophic effects. Post-hoc temperature scaling reduces calibration error under summed scoring but was not fitted under mean-token scoring, so whether the reversal survives per-scorer calibration is unknown. These exploratory results suggest that calibration comparisons of decoder-based classifiers should treat scoring normalization and prompt design as first-order experimental decisions.",
+    "authors": [
+      "Anton Rasmussen",
+      "Hong Qin"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "MS-MLB: An Open Machine Learning Benchmark for Blood-Based MS Classification",
+    "id": "http://arxiv.org/abs/2608.05196v1",
+    "date": "2026-08-04T11:20:36Z",
+    "abstract": "Multiple sclerosis (MS) is diagnosed through clinical assessment, magnetic resonance imaging, laboratory evidence when appropriate, and exclusion of better explanations. Blood RNA expression data may contain disease associated immune signal, but a blood RNA classifier cannot be treated as a replacement for clinical diagnosis. This paper presents MS-MLB (Multiple Sclerosis Machine Learning Benchmark), a reproducible open benchmark for machine learning based MS research classification from whole blood RNA expression data. MS-MLB uses the public GSE17048 cohort, converts it into an MS versus healthy control task, and evaluates multiple algorithms under a shared, leakage controlled pipeline that a researcher can rerun without reconfiguring the evaluation. The evaluation includes nested cross-validation, an untouched stratified holdout set, bootstrap confidence intervals, ROC and precision recall analysis, calibration measurement, and an exploratory MS Research Score. In the final benchmark summary, Gradient Boosting ranked first by MS Research Score on the holdout set, with an MS Research Score of 93.83, AUC-ROC of 0.989, sensitivity of 0.950, specificity of 0.778, $F_{1}$ score of 0.927, and Brier score of 0.050. Prior studies have applied machine learning to MS blood transcriptomic data, including PBMC stage classification and whole blood diagnostic signature modeling. The contribution here is different and narrower. To our knowledge, MS-MLB is the first open benchmark focused on MS versus healthy control classification from GSE17048 whole blood RNA expression data with a documented external model submission pathway built into the framework. The score is intended for research comparison only and has not been clinically validated. The benchmark is accessible here: https://github.com/duckyquang/MS-MLB.",
+    "authors": [
+      "Adam Simson",
+      "Ankush Dutta",
+      "Quang Bui"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Start Classifying: Categorical Critics for LLM Reinforcement Learning",
+    "id": "http://arxiv.org/abs/2608.02181v1",
+    "date": "2026-08-03T13:05:38Z",
+    "abstract": "Proximal Policy Optimization (PPO) for large language models typically trains its critic by mean-squared-error (MSE) regression on scalar value targets. Although scalar MSE is statistically valid for estimating the conditional expected return, sparse binary rewards in reinforcement learning with verifiable rewards (RLVR) make critic optimization and calibration especially consequential: small value errors directly distort the scalar advantages used by PPO. We study whether a classification-based training objective can improve this critic signal. HL-Gauss PPO replaces the scalar MSE head with a categorical predictor over a discretized value support, trained by cross-entropy against smoothed HL-Gauss targets. Its output is decoded to a scalar expectation for standard GAE and PPO; the actor update is therefore unchanged and is not distributional. Across mathematical reasoning, tool-augmented math, and Search-R1, and on both Qwen2.5 and Qwen3 backbones, HL-Gauss PPO consistently improves over strong PPO and DAPO baselines. Controls with one-hot, two-hot, and Bernoulli two-bin critics show that neither a larger output head nor binary classification alone explains the gains. On a common collection of reasoning prefixes, HL-Gauss improves Brier score and calibration error and yields more symmetric, lower-variance advantages. These results position categorical value learning as an effective optimization surrogate for PPO critics in RLVR.",
+    "authors": [
+      "Zhijian Zhou",
+      "Long Li",
+      "Xuan Zhang",
+      "Zongkai Liu",
+      "Yulei Qin",
+      "Ke Li",
+      "Xing Sun",
+      "Xiaoyu Tan",
+      "Chao Qu",
+      "Yuan Qi"
+    ],
+    "sources": [
+      "arxiv"
+    ]
+  },
+  {
+    "title": "Robust Link Prediction over Noisy Hyper-Relational Knowledge Graphs via Active Learning",
+    "doi": "10.1145/3589334.3645686",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          13
+        ]
+      ]
+    },
+    "journal": [
+      "Proceedings of the ACM Web Conference 2024"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0009-3278-4966",
+        "authenticated-orcid": false,
+        "given": "Weijian",
+        "family": "Yu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Internet of Things for Smart City and Department of Computer and Information Science, University of Macau, Macau, Macau"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0350-0313",
+        "authenticated-orcid": false,
+        "given": "Jie",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Delft University of Technology, Delft, Netherlands"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6831-0422",
+        "authenticated-orcid": false,
+        "given": "Dingqi",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Internet of Things for Smart City and Department of Computer and Information Science, University of Macau, Macau, Macau"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "RMNS: Robust Hyper-relational Link Prediction Model Based on Multi-level Negative Sampling",
+    "doi": "10.1007/978-981-95-3058-8_30",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          11,
+          18
+        ]
+      ]
+    },
+    "journal": [
+      "Lecture Notes in Computer Science",
+      "Knowledge Science, Engineering and Management"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0009-8712-667X",
+        "authenticated-orcid": false,
+        "given": "Xikai",
+        "family": "Ke",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7211-6991",
+        "authenticated-orcid": false,
+        "given": "Fang",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0004-3400-0313",
+        "authenticated-orcid": false,
+        "given": "Zhehao",
+        "family": "Hou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Min",
+        "family": "Jiang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Weike",
+        "family": "Xia",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tongliang",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hezhong",
+        "family": "Jiang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1204-8880",
+        "authenticated-orcid": false,
+        "given": "Wei",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "On the Robust Classification Forest with Expectile Link Loss for Diabetes Probability Prediction",
+    "doi": "10.1109/icdsg67714.2025.11381359",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          11,
+          26
+        ]
+      ]
+    },
+    "journal": [
+      "2025 1st International Conference on Data Science and Geoinformatics (ICDSG)"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Rinda",
+        "family": "Nariswari",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Bina Nusantara University,School of Computer Science,Statistics Department,Jakarta,Indonesia,11480"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Wisnowan Hendy",
+        "family": "Saputra",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Bina Nusantara University,School of Computer Science,Computer Science Department,Jakarta,Indonesia,11480"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Viska",
+        "family": "Noviantri",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Bina Nusantara University,School of Computer Science,Mathematics Department,Jakarta,Indonesia,11480"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Mohd Zaki Awang",
+        "family": "Chek",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Universiti Teknologi MARA,Faculty of Computer &amp; Mathematical Sciences,Actuarial Science Department,Perak,Malaysia,35400"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Matthew",
+        "family": "Owen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Bina Nusantara University,School of Computer Science,Statistics Department,Jakarta,Indonesia,11480"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Removing noisy links benefits link prediction in complex network",
+    "doi": "10.1016/j.physa.2026.131415",
+    "date": {
+      "date-parts": [
+        [
+          2026,
+          4
+        ]
+      ]
+    },
+    "journal": [
+      "Physica A: Statistical Mechanics and its Applications"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Zian",
+        "family": "Le",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5996-3395",
+        "authenticated-orcid": false,
+        "given": "Mingyang",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hao",
+        "family": "Liao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiangrong",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Rui",
+        "family": "Mao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Robust-GBDT: leveraging robust loss for noisy and imbalanced classification with GBDT",
+    "doi": "10.1007/s10115-025-02595-z",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          9,
+          19
+        ]
+      ]
+    },
+    "journal": [
+      "Knowledge and Information Systems"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Jiaqi",
+        "family": "Luo",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yuedong",
+        "family": "Quan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shixin",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Robust-GBDT: Leveraging Robust Loss for Noisy and Imbalanced Classification with GBDT",
+    "doi": "10.21203/rs.3.rs-4660657/v1",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          23
+        ]
+      ]
+    },
+    "journal": null,
+    "abstract": "<title>Abstract</title>\n        <p>Dealing with label noise in tabular classification tasks poses a challenge in machine learning. This paper introduces Robust-GBDT, a novel approach to enhance the robustness of Gradient Boosting Decision Trees (GBDT) models against label noise and class imbalance in tabular data classification. We present a theoretical insight demonstrating that nonconvex loss functions, under specific constraints, can be effectively employed in GBDT models. Leveraging this foundation, Robust-GBDT integrates advanced GBDT frameworks with robust loss functions, including a newly proposed Robust Focal Loss designed to address class imbalance. Our method overcomes limitations of existing noise-robust boosting techniques, such as binary classification constraints, inability to handle imbalanced datasets and missing values, and computational inefficiency. Experimental results show that Robust-GBDT outperforms existing bagging and robust boosting methods, delivering more accurate predictions and improved generalization capabilities in scenarios with label noise and class imbalance.</p>",
+    "authors": [
+      {
+        "given": "Jiaqi",
+        "family": "Luo",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Duke Kunshan University"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yuedong",
+        "family": "Quan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Duke Kunshan University"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Shixin",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Duke Kunshan University"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Progressively Robust Loss for Deep Learning with Noisy Labels",
+    "doi": "10.1109/ijcnn60899.2024.10650630",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          30
+        ]
+      ]
+    },
+    "journal": [
+      "2024 International Joint Conference on Neural Networks (IJCNN)"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Zhenhuang",
+        "family": "Cai",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Hohai University,Nanjing,China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Shuai",
+        "family": "Yan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Nanjing University of Science and Technology,Nanjing,China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yuanbo",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Beijing Research Institute of Mechanical and Electrical Engineering,Beijing,China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Chuanyi",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Hohai University,Nanjing,China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Zeren",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Nanjing University of Science and Technology,Nanjing,China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yazhou",
+        "family": "Yao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Nanjing University of Science and Technology,Nanjing,China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Correntropy Meets Cross-Entropy: A Robust Loss Against Noisy Labels",
+    "doi": "10.2139/ssrn.5394370",
+    "date": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "journal": null,
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Nan",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Qing",
+        "family": "Deng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Wenjun",
+        "family": "Luo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Xiuyu",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yuanhua",
+        "family": "Du",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Badong",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Witold",
+        "family": "Pedrycz",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Correntropy meets cross-entropy: A robust loss against noisy labels",
+    "doi": "10.1016/j.engappai.2026.113830",
+    "date": {
+      "date-parts": [
+        [
+          2026,
+          3
+        ]
+      ]
+    },
+    "journal": [
+      "Engineering Applications of Artificial Intelligence"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-0434-6231",
+        "authenticated-orcid": false,
+        "given": "Nan",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Qing",
+        "family": "Deng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wenjun",
+        "family": "Luo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiuyu",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yuanhua",
+        "family": "Du",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1710-3818",
+        "authenticated-orcid": false,
+        "given": "Badong",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Witold",
+        "family": "Pedrycz",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Robust Loss Functions for Training Decision Trees with Noisy Labels",
+    "doi": "10.1609/aaai.v38i14.29516",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          24
+        ]
+      ]
+    },
+    "journal": [
+      "Proceedings of the AAAI Conference on Artificial Intelligence"
+    ],
+    "abstract": "<jats:p>We consider training decision trees using noisily labeled data, focusing on loss functions that can lead to robust learning algorithms. Our contributions are threefold. First, we offer novel theoretical insights on the robustness of many existing loss functions in the context of decision tree learning. We show that some of the losses belong to a class of what we call conservative losses, and the conservative losses lead to an early stopping behavior during training and noise-tolerant predictions during testing. Second, we introduce a framework for constructing robust loss functions, called distribution losses. These losses apply percentile-based penalties based on an assumed margin distribution, and they naturally allow adapting to different noise rates via a robustness parameter. In particular, we introduce a new loss called the negative exponential loss, which leads to an efficient greedy impurity-reduction learning algorithm. Lastly, our experiments on multiple datasets and noise settings validate our theoretical insight and the effectiveness of our adaptive negative exponential loss.</jats:p>",
+    "authors": [
+      {
+        "given": "Jonathan",
+        "family": "Wilton",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Nan",
+        "family": "Ye",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Correntropy Meets Cross-Entropy: A Robust Loss Against Noisy Labels",
+    "doi": "10.2139/ssrn.4875114",
+    "date": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "journal": null,
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Qing",
+        "family": "Deng",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Xiuyu",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Wenjun",
+        "family": "Luo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yuanhua",
+        "family": "Du",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Nan",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Kaibo",
+        "family": "Shi",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Badong",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Correntropy Meets Cross-Entropy: A Robust Loss Against Noisy Labels",
+    "doi": "10.2139/ssrn.4951447",
+    "date": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "journal": null,
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Nan",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Qing",
+        "family": "Deng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Xiuyu",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Wenjun",
+        "family": "Luo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yuanhua",
+        "family": "Du",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Badong",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Unsupervised Subdomain Adaptation Robust to Noisy Pseudo Labels Using Symmetric Loss",
+    "doi": "10.21203/rs.3.rs-3828810/v1",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          3
+        ]
+      ]
+    },
+    "journal": null,
+    "abstract": "<jats:title>Abstract</jats:title>\n        <jats:p>Alignment of subdomain distribution plays an important role in preventing negative transfer in domain adaptation. Due to the lack of labeled data in the target domain, the current mainstream methods prefer using pseudo labels to align the features of corresponding categories between the source and the target domains. However, the noises present in pseudo labels affect the effectiveness of subdomain alignment. In the community of domain adaptation, samples with higher confidences are believed to be more reliable when generating pseudo labels. However, we found that this conclusion does not hold for hard samples. To address this issue, we propose a pseudo label screening mechanism which considers the trade-off of quantity and quality. The qualified target samples participate in the subdomain adaptation, while the unqualified samples are randomly assigned with labels. Thus, the asymmetric noises of hard samples are converted into symmetric noises. Symmetric loss is proved to be robust to symmetric noises. Inspired by this observation, we propose a symmetric subdomain adaptation loss (SSAL) and construct a robust subdomain adaptation network (RSAN) based on SSAL accordingly. Leveraging the random label assignments of hard samples and SSAL, we reconstruct the relation between sample’s confidence and the probability being correctly classified. The effectiveness of our method has been validated on public benchmarks. Compared with the SOTA method, our RSAN obtains an improvement of 2.7% in terms of average accuracy on the challenging VisDA-2017 transfer task.</jats:p>",
+    "authors": [
+      {
+        "given": "Yundong",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "North China University of Technology"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yunlong",
+        "family": "Yan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "North China University of Technology"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Unsupervised Subdomain Adaptation Robust to Noisy Pseudo Labels Using Symmetric Loss",
+    "doi": "10.1007/978-981-97-5603-2_23",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          8,
+          1
+        ]
+      ]
+    },
+    "journal": [
+      "Lecture Notes in Computer Science",
+      "Advanced Intelligent Computing Technology and Applications"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0000-5016-2989",
+        "authenticated-orcid": false,
+        "given": "Longxia",
+        "family": "Guo",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yunlong",
+        "family": "Yan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yundong",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "A Radial Basis Function-Based Graph Attention Network With Squeeze Loss Optimization for Link Prediction",
+    "doi": "10.1109/tai.2023.3265947",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          2
+        ]
+      ]
+    },
+    "journal": [
+      "IEEE Transactions on Artificial Intelligence"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-2425-5641",
+        "authenticated-orcid": false,
+        "given": "Jiusheng",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "College of Electronic Information and Automation, Civil Aviation University of China, Tianjin, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0001-9699-864X",
+        "authenticated-orcid": false,
+        "given": "Chengyuan",
+        "family": "Fang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Electronic Information and Automation, Civil Aviation University of China, Tianjin, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5933-1977",
+        "authenticated-orcid": false,
+        "given": "Xiaoyu",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Electronic Information and Automation, Civil Aviation University of China, Tianjin, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1911-9354",
+        "authenticated-orcid": false,
+        "given": "Jun",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Aeronautical Engineering, Civil Aviation University of China, Tianjin, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-9486-8606",
+        "authenticated-orcid": false,
+        "given": "Runxia",
+        "family": "Guo",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Electronic Information and Automation, Civil Aviation University of China, Tianjin, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Estimates of Loss Function Concentration in Noisy Parametrized Quantum Circuits",
+    "doi": "10.1103/dw2h-ll6r",
+    "date": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          26
+        ]
+      ]
+    },
+    "journal": [
+      "PRX Quantum"
+    ],
+    "abstract": "<jats:p>Variational quantum computing offers a powerful framework with applications across diverse fields such as quantum chemistry, machine learning, and optimization. However, its scalability is hindered by the exponential concentration of the loss function, known as the barren plateau problem. While significant progress has been made and prior work has separately analyzed barren plateaus in unitary and noisy settings, their combined impact remains poorly understood, largely due to limitations in conventional Lie-algebraic approaches. In this work, we introduce an analytical framework based on non-negative matrix theory that enables the description of the variance in layered noisy quantum circuits with arbitrary noise channels. This approach enables the derivation of exact expressions in the deep-circuit regime, uncovering the complex interplay between unitary layers and noise. Notably, we identify a noise-induced absorption mechanism—a phenomenon absent in purely unitary dynamics—which provides new insight into how noise shapes circuit behavior. We further present a controlled convergence analysis, establishing general lower bounds on the variance of both deep and shallow circuits. This leads to a principled connection between noise resilience and the expressive capacity of parameterized quantum circuits, particularly under smart initialization strategies. Our theoretical results are supported by numerical simulations and illustrative applications.</jats:p>",
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0005-6999-8061",
+        "authenticated-orcid": true,
+        "given": "Giulio",
+        "family": "Crognaletti",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "id": [
+              {
+                "id": "https://ror.org/02n742c10",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "University of Trieste"
+          },
+          {
+            "id": [
+              {
+                "id": "https://ror.org/05j3snm48",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "Istituto Nazionale di Fisica Nucleare, Trieste Section"
+          },
+          {
+            "id": [
+              {
+                "id": "https://ror.org/01ggx4157",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "European Organization for Nuclear Research (CERN)"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1718-1314",
+        "authenticated-orcid": true,
+        "given": "Michele",
+        "family": "Grossi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "id": [
+              {
+                "id": "https://ror.org/01ggx4157",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "European Organization for Nuclear Research (CERN)"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7500-387X",
+        "authenticated-orcid": true,
+        "given": "Angelo",
+        "family": "Bassi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "id": [
+              {
+                "id": "https://ror.org/02n742c10",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "University of Trieste"
+          },
+          {
+            "id": [
+              {
+                "id": "https://ror.org/05j3snm48",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "Istituto Nazionale di Fisica Nucleare, Trieste Section"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Link Polarity Prediction from Sparse and Noisy Labels via Multiscale Social Balance",
+    "doi": "10.1145/3627673.3679786",
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          10,
+          21
+        ]
+      ]
+    },
+    "journal": [
+      "Proceedings of the 33rd ACM International Conference on Information and Knowledge Management"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-9641-8916",
+        "authenticated-orcid": false,
+        "given": "Marco",
+        "family": "Minici",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Pisa &amp; ICAR-CNR, Pisa, Italy"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6696-9637",
+        "authenticated-orcid": false,
+        "given": "Federico",
+        "family": "Cinus",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Sapienza University &amp; CENTAI, Rome, Italy"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9464-8315",
+        "authenticated-orcid": false,
+        "given": "Francesco",
+        "family": "Bonchi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "CENTAI &amp; Eurecat, Turin, Italy"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9672-3833",
+        "authenticated-orcid": false,
+        "given": "Giuseppe",
+        "family": "Manco",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "ICAR-CNR, Rende, Italy"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Robust Radio-Frequency Fingerprinting in Noisy Channels Using Cwt and Sincere Loss",
+    "doi": "10.2139/ssrn.5012295",
+    "date": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "journal": null,
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Xuelin",
+        "family": "Yang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Mutala",
+        "family": "Mohammed",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Zhi",
+        "family": "Chai",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Mingye",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Rahel",
+        "family": "Abayneh",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jing",
+        "family": "Wen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Noise Suppression Variance Loss for Robust Facial Expression Recognition on Noisy Data",
+    "doi": "10.5626/jok.2026.53.4.319",
+    "date": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          30
+        ]
+      ]
+    },
+    "journal": [
+      "Journal of KIISE"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "given": "Jisu",
+        "family": "Jeong",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Ji-Hyeong",
+        "family": "Han",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Link prediction via robust bidirectional deep nonnegative matrix factorization",
+    "doi": "10.1016/j.eswa.2025.128108",
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          8
+        ]
+      ]
+    },
+    "journal": [
+      "Expert Systems with Applications"
+    ],
+    "abstract": null,
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-7925-9522",
+        "authenticated-orcid": false,
+        "given": "Tongfeng",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ruisheng",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yabing",
+        "family": "Yao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5086-7572",
+        "authenticated-orcid": false,
+        "given": "Yunwu",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jun",
+        "family": "Ma",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "crossref"
+    ]
+  }
+]

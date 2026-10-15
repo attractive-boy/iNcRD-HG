@@ -1,0 +1,56 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn": "progress: matrix completion and strict audit",
+  "current_turn": "progress: 18 degree-aware encoder fits with complete query-deletion replays",
+  "best": {
+    "config": "all05",
+    "mean_inner_auc": 0.9536767184992625,
+    "mean_inner_ap": 0.913165964379227,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0010769234445110465,
+          "fold_deltas": [
+            0.002473427396835648,
+            -0.00013098662562149865,
+            0.0008883295623189902
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.001340855284361897,
+          "fold_deltas": [
+            0.004664649358866013,
+            -0.0021164568844049825,
+            0.0014743733786246604
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -3.576351090894825e-05,
+          "fold_deltas": [
+            0.000722882980956352,
+            -0.0007893554684983428,
+            -4.081804518485388e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0009246170748213137,
+          "fold_deltas": [
+            0.0009062067315714906,
+            -0.0027635483233330316,
+            -0.0009165096327024003
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0009246170748213137
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "No promotion. Original-SMILES molecular descriptors have been prepared separately; freeze molecular-encoder / atom-bag / original-ChemBERTa controls before new training. See NEXT_EXPERIMENT.md."
+}

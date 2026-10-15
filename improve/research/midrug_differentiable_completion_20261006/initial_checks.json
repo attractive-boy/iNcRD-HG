@@ -1,0 +1,483 @@
+{
+  "status": "passed",
+  "gradient_checks": [
+    {
+      "pair": [
+        0,
+        0
+      ],
+      "max_gradient_error": 6.591949208711867e-17,
+      "logit_error": 5.551115123125783e-17,
+      "stopped_forward_error": 0.0,
+      "path_gradient_l1": 36.431446407596674
+    },
+    {
+      "pair": [
+        3,
+        1
+      ],
+      "max_gradient_error": 2.7755575615628914e-17,
+      "logit_error": 0.0,
+      "stopped_forward_error": 0.0,
+      "path_gradient_l1": 56.3209696242694
+    },
+    {
+      "pair": [
+        4,
+        3
+      ],
+      "max_gradient_error": 0.0,
+      "logit_error": 0.0,
+      "stopped_forward_error": 0.0,
+      "path_gradient_l1": 0.0
+    },
+    {
+      "pair": [
+        2,
+        1
+      ],
+      "max_gradient_error": 6.938893903907228e-18,
+      "logit_error": 0.0,
+      "stopped_forward_error": 0.0,
+      "path_gradient_l1": 113.32715031314535
+    }
+  ],
+  "records": [
+    {
+      "config": "full",
+      "nonzero_head_forward_identity_error": 5.066394805908203e-07,
+      "step_seconds": 0.0650932788848877,
+      "peak_cuda_gib": 0.44850587844848633,
+      "branch_gradients": {
+        "scorer.mi.0.weight": 0.0010674127843230963,
+        "scorer.mi.0.bias": 0.0011600313009694219,
+        "scorer.mi.1.weight": 0.030016319826245308,
+        "scorer.mi.1.bias": 0.002090150723233819,
+        "scorer.mi.3.weight": 0.02441914565861225,
+        "scorer.mi.3.bias": 0.005733529105782509,
+        "scorer.drug.0.weight": 0.0032227837946265936,
+        "scorer.drug.0.bias": 0.00249539059586823,
+        "scorer.drug.1.weight": 0.0988810807466507,
+        "scorer.drug.1.bias": 0.004446742124855518,
+        "scorer.drug.3.weight": 0.0685812309384346,
+        "scorer.drug.3.bias": 0.0014453287003561854,
+        "scorer.mi_bias.weight": 0.004205323755741119,
+        "scorer.mi_bias.bias": 0.0028431862592697144,
+        "scorer.drug_bias.weight": 0.0330648273229599,
+        "scorer.drug_bias.bias": 0.0028431862592697144,
+        "head.0.weight": 0.7712792754173279,
+        "head.0.bias": 0.05611076578497887,
+        "head.2.weight": 1.7369760274887085,
+        "head.2.bias": 0.03185375779867172
+      },
+      "enumerated_features": [
+        {
+          "pair": [
+            260,
+            191
+          ],
+          "field_error": 2.2636606367143486e-08,
+          "direct_error": 5.960464477539063e-08
+        },
+        {
+          "pair": [
+            436,
+            18
+          ],
+          "field_error": 1.2658138892618354e-07,
+          "direct_error": 2.9802322387695312e-08
+        },
+        {
+          "pair": [
+            194,
+            4
+          ],
+          "field_error": 2.494525572771522e-07,
+          "direct_error": 2.9802322387695312e-08
+        },
+        {
+          "pair": [
+            110,
+            61
+          ],
+          "field_error": 8.38211793308119e-08,
+          "direct_error": 2.384185791015625e-07
+        },
+        {
+          "pair": [
+            107,
+            113
+          ],
+          "field_error": 8.87428734941409e-08,
+          "direct_error": 0.0
+        },
+        {
+          "pair": [
+            180,
+            40
+          ],
+          "field_error": 1.9037361020934895e-07,
+          "direct_error": 0.0
+        }
+      ],
+      "explicit_deletions": [
+        {
+          "pair": [
+            260,
+            191
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 14,
+          "errors": {
+            "M1_miRNA": 7.62939453125e-06,
+            "M1_drug": 4.76837158203125e-07,
+            "M2_0": 0.0,
+            "M2_1": 0.0,
+            "M2_2": 0.0,
+            "M2_3": 0.0,
+            "full_logit": 5.960464477539063e-08
+          }
+        },
+        {
+          "pair": [
+            558,
+            0
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 1,
+          "errors": {
+            "M1_miRNA": 3.814697265625e-06,
+            "M1_drug": 6.103515625e-05,
+            "M2_0": 0.0,
+            "M2_1": 0.0,
+            "M2_2": 1.52587890625e-05,
+            "M2_3": 0.0,
+            "full_logit": 0.0
+          }
+        },
+        {
+          "pair": [
+            587,
+            3
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 1,
+          "errors": {
+            "M1_miRNA": 3.8743019104003906e-07,
+            "M1_drug": 1.52587890625e-05,
+            "M2_0": 0.0,
+            "M2_1": 0.0,
+            "M2_2": 0.0,
+            "M2_3": 0.0,
+            "full_logit": 0.0
+          }
+        },
+        {
+          "pair": [
+            178,
+            4
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 3,
+          "errors": {
+            "M1_miRNA": 3.814697265625e-06,
+            "M1_drug": 9.1552734375e-05,
+            "M2_0": 1.52587890625e-05,
+            "M2_1": 6.103515625e-05,
+            "M2_2": 7.62939453125e-06,
+            "M2_3": 0.0,
+            "full_logit": 0.0
+          }
+        },
+        {
+          "pair": [
+            247,
+            0
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 6,
+          "errors": {
+            "M1_miRNA": 6.103515625e-05,
+            "M1_drug": 9.1552734375e-05,
+            "M2_0": 1.52587890625e-05,
+            "M2_1": 3.0517578125e-05,
+            "M2_2": 4.57763671875e-05,
+            "M2_3": 0.0,
+            "full_logit": 7.62939453125e-06
+          }
+        },
+        {
+          "pair": [
+            237,
+            4
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 1,
+          "errors": {
+            "M1_miRNA": 5.7220458984375e-06,
+            "M1_drug": 6.103515625e-05,
+            "M2_0": 0.0,
+            "M2_1": 0.0,
+            "M2_2": 1.1444091796875e-05,
+            "M2_3": 0.0,
+            "full_logit": 7.62939453125e-06
+          }
+        },
+        {
+          "pair": [
+            110,
+            61
+          ],
+          "label": 0,
+          "miRNA_positive_degree": 12,
+          "errors": {
+            "M1_miRNA": 7.62939453125e-06,
+            "M1_drug": 0.0,
+            "M2_0": 0.0,
+            "M2_1": 0.0,
+            "M2_2": 0.0,
+            "M2_3": 0.0,
+            "full_logit": 0.0
+          }
+        },
+        {
+          "pair": [
+            107,
+            113
+          ],
+          "label": 0,
+          "miRNA_positive_degree": 8,
+          "errors": {
+            "M1_miRNA": 7.62939453125e-06,
+            "M1_drug": 0.0,
+            "M2_0": 5.7220458984375e-06,
+            "M2_1": 3.0517578125e-05,
+            "M2_2": 0.0,
+            "M2_3": 0.0,
+            "full_logit": 7.152557373046875e-07
+          }
+        }
+      ]
+    },
+    {
+      "config": "full_rec10",
+      "nonzero_head_forward_identity_error": 6.854534149169922e-07,
+      "step_seconds": 0.07420659065246582,
+      "peak_cuda_gib": 0.4741349220275879,
+      "branch_gradients": {
+        "scorer.mi.0.weight": 0.00377051904797554,
+        "scorer.mi.0.bias": 0.003990267403423786,
+        "scorer.mi.1.weight": 0.11057717353105545,
+        "scorer.mi.1.bias": 0.0071120294742286205,
+        "scorer.mi.3.weight": 0.0938926711678505,
+        "scorer.mi.3.bias": 0.020310258492827415,
+        "scorer.drug.0.weight": 0.011230912059545517,
+        "scorer.drug.0.bias": 0.006441778037697077,
+        "scorer.drug.1.weight": 0.3394101560115814,
+        "scorer.drug.1.bias": 0.011851806193590164,
+        "scorer.drug.3.weight": 0.23046408593654633,
+        "scorer.drug.3.bias": 0.015723804011940956,
+        "scorer.mi_bias.weight": 0.03404198959469795,
+        "scorer.mi_bias.bias": 0.021559692919254303,
+        "scorer.drug_bias.weight": 0.06423211097717285,
+        "scorer.drug_bias.bias": 0.021559692919254303,
+        "head.0.weight": 0.7474567890167236,
+        "head.0.bias": 0.05727441608905792,
+        "head.2.weight": 1.3090713024139404,
+        "head.2.bias": 0.04414302110671997
+      },
+      "enumerated_features": [
+        {
+          "pair": [
+            260,
+            191
+          ],
+          "field_error": 1.0062899047369456e-07,
+          "direct_error": 2.9802322387695312e-08
+        },
+        {
+          "pair": [
+            436,
+            18
+          ],
+          "field_error": 2.2066619909111296e-07,
+          "direct_error": 1.4901161193847656e-08
+        },
+        {
+          "pair": [
+            194,
+            4
+          ],
+          "field_error": 1.1111759867787896e-07,
+          "direct_error": 8.940696716308594e-08
+        },
+        {
+          "pair": [
+            110,
+            61
+          ],
+          "field_error": 2.0978310288910507e-07,
+          "direct_error": 5.960464477539063e-08
+        },
+        {
+          "pair": [
+            107,
+            113
+          ],
+          "field_error": 2.0478454576533522e-07,
+          "direct_error": 0.0
+        },
+        {
+          "pair": [
+            180,
+            40
+          ],
+          "field_error": 5.2076229550834796e-08,
+          "direct_error": 6.51925802230835e-08
+        }
+      ],
+      "explicit_deletions": [
+        {
+          "pair": [
+            260,
+            191
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 14,
+          "errors": {
+            "M1_miRNA": 1.1444091796875e-05,
+            "M1_drug": 4.76837158203125e-07,
+            "M2_0": 0.0,
+            "M2_1": 0.0,
+            "M2_2": 0.0,
+            "M2_3": 0.0,
+            "full_logit": 1.1920928955078125e-07
+          }
+        },
+        {
+          "pair": [
+            558,
+            0
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 1,
+          "errors": {
+            "M1_miRNA": 1.1444091796875e-05,
+            "M1_drug": 6.103515625e-05,
+            "M2_0": 0.0,
+            "M2_1": 0.0,
+            "M2_2": 7.62939453125e-06,
+            "M2_3": 0.0,
+            "full_logit": 0.0
+          }
+        },
+        {
+          "pair": [
+            587,
+            3
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 1,
+          "errors": {
+            "M1_miRNA": 3.2782554626464844e-07,
+            "M1_drug": 3.0517578125e-05,
+            "M2_0": 0.0,
+            "M2_1": 0.0,
+            "M2_2": 0.0,
+            "M2_3": 0.0,
+            "full_logit": 3.814697265625e-06
+          }
+        },
+        {
+          "pair": [
+            178,
+            4
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 3,
+          "errors": {
+            "M1_miRNA": 7.62939453125e-06,
+            "M1_drug": 6.103515625e-05,
+            "M2_0": 1.52587890625e-05,
+            "M2_1": 6.103515625e-05,
+            "M2_2": 1.52587890625e-05,
+            "M2_3": 0.0,
+            "full_logit": 0.0
+          }
+        },
+        {
+          "pair": [
+            247,
+            0
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 6,
+          "errors": {
+            "M1_miRNA": 3.0517578125e-05,
+            "M1_drug": 9.1552734375e-05,
+            "M2_0": 1.52587890625e-05,
+            "M2_1": 4.57763671875e-05,
+            "M2_2": 6.103515625e-05,
+            "M2_3": 0.0,
+            "full_logit": 7.62939453125e-06
+          }
+        },
+        {
+          "pair": [
+            237,
+            4
+          ],
+          "label": 1,
+          "miRNA_positive_degree": 1,
+          "errors": {
+            "M1_miRNA": 3.814697265625e-06,
+            "M1_drug": 6.103515625e-05,
+            "M2_0": 0.0,
+            "M2_1": 0.0,
+            "M2_2": 1.1444091796875e-05,
+            "M2_3": 0.0,
+            "full_logit": 0.0
+          }
+        },
+        {
+          "pair": [
+            110,
+            61
+          ],
+          "label": 0,
+          "miRNA_positive_degree": 12,
+          "errors": {
+            "M1_miRNA": 7.62939453125e-06,
+            "M1_drug": 0.0,
+            "M2_0": 0.0,
+            "M2_1": 0.0,
+            "M2_2": 0.0,
+            "M2_3": 0.0,
+            "full_logit": 0.0
+          }
+        },
+        {
+          "pair": [
+            107,
+            113
+          ],
+          "label": 0,
+          "miRNA_positive_degree": 8,
+          "errors": {
+            "M1_miRNA": 7.62939453125e-06,
+            "M1_drug": 0.0,
+            "M2_0": 5.7220458984375e-06,
+            "M2_1": 4.57763671875e-05,
+            "M2_2": 0.0,
+            "M2_3": 0.0,
+            "full_logit": 2.384185791015625e-07
+          }
+        }
+      ]
+    }
+  ],
+  "heldout_flip_error": 8.940696716308594e-07,
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false
+}

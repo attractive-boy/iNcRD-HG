@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/aNwSEGHIiYPPHabh7QPcjo061TQ</id>
+  <title>arXiv Query: search_query=&amp;id_list=2608.22786v1,2606.20283v2,2609.34711v1&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-06T15:43:05Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2608.22786v1,2606.20283v2,2609.34711v1" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.20283v2</id>
+    <title>Boundary Embedding Shaping with Adaptive Contrastive Learning for Graph Structural Disentanglement</title>
+    <updated>2026-07-22T04:59:00Z</updated>
+    <link href="https://arxiv.org/abs/2606.20283v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20283v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph neural networks (GNNs) excel at aggregating neighbor information for classification, yet their performance is hindered by graph structural entanglement, where spurious correlations from semantically irrelevant neighbors contaminate node embeddings. This challenge is most acute for nodes near class boundaries in the embedding space, where amplified structural noise blurs decision boundaries and destabilizes predictions. Existing robust GNN methods largely treat all nodes uniformly, ignoring boundary vulnerabilities. In this paper, to improve classification performance, we tackle graph structural disentanglement by identifying boundary-region entanglement as the primary bottleneck and propose Boundary Embedding Shaping (BES), an adaptive contrastive learning GNN plug-in module that selectively suppresses spurious structural noise at decision boundaries with minimal model parameter perturbation. Extensive experiments demonstrate that BES consistently improves boundary discrimination and outperforms existing leading methods. Notably, BES boosts GCN performance by an average of 3.3% in node classification (up to 5.0% on WikiCS) and achieves superior accuracy in link prediction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T14:28:10Z</published>
+    <arxiv:comment>Accepted at ICML 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jiaqing Chen</name>
+    </author>
+    <author>
+      <name>Zidu Yin</name>
+    </author>
+    <author>
+      <name>Yichao Cai</name>
+    </author>
+    <author>
+      <name>Yuhang Liu</name>
+    </author>
+    <author>
+      <name>Zhen Zhang</name>
+    </author>
+    <author>
+      <name>Dong Gong</name>
+    </author>
+    <author>
+      <name>Javen Qinfeng Shi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.22786v1</id>
+    <title>ReCoG: Reciprocal Co-Evolution for Multimodal Graph Learning</title>
+    <updated>2026-08-24T04:16:13Z</updated>
+    <link href="https://arxiv.org/abs/2608.22786v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.22786v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal graph learning requires jointly training over graph structure and heterogeneous node attributes, yet existing methods largely decouple these processes: prior multimodal graph neural networks (GNNs) focus on aligning modalities in a shared embedding space while operating on fixed or weakly adapted graph structures, and graph structure learning approaches infer topology from unimodal node representations without accounting for multimodal interactions. This separation fundamentally limits the ability of GNNs to capture semantically meaningful relationships in multimodal settings, where observed edges are often noisy, incomplete, or misaligned with underlying semantics. We propose ReCoG (Reciprocal Co-Evolution for Multimodal Graph Learning), a new learning paradigm that tightly couples graph structure learning and multimodal representation learning through end-to-end reciprocal interaction. Concretely, ReCoG integrates (i) a multimodal graph refiner that infers and corrects edges using cross-modal semantic evidence, and (ii) a coupled cross-modal message passing mechanism that performs joint intra- and inter-modality propagation over the refined graph. This unified design yields greater expressiveness than decoupled or two-stage formulations and allows dynamic interaction between topology and representation learning. Across diverse benchmarks for node classification and link prediction, ReCoG consistently outperforms strong multimodal graph structure learning baselines, including graph foundation models. Our results demonstrate that reciprocal co-evolution of structure and semantics is important for effective multimodal graph learning, challenging the prevailing separation between topology and representation learning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-24T04:16:13Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Rui Xue</name>
+    </author>
+    <author>
+      <name>Tianfu Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.34711v1</id>
+    <title>Learning Propagation Geometry from Message-Passing Feedback</title>
+    <updated>2026-09-28T09:22:49Z</updated>
+    <link href="https://arxiv.org/abs/2609.34711v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.34711v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning local geometry enables graph neural networks (GNNs) to adapt how they compare and integrate neighborhood information. However, estimating geometry from aggregated representations can overlook variation among individual messages and dependencies across feature dimensions. We propose GeoF, a recurrent framework that jointly evolves node features and propagation geometry through message-passing feedback. Each node maintains a local symmetric positive-definite geometry, initialized from a structure-aware prototype atlas and parameterized in block log-triangular coordinates. At each step, the geometry determines neighborhood weights, while triangular frame transport maps transformed source messages into the target node's local coordinates before aggregation. Weighted second-order statistics of residuals between aligned messages and the transformed target state capture directional variation and within-block dependencies, yielding a geometric update target. A shared controller learns complementary corrections through task supervision. A bounded log-triangular update combines these corrections, the target, and the previous geometric state while preserving positive definiteness. The geometry governs subsequent propagation, closing the feedback loop. With parameters shared across recurrent steps, task-specific readouts support node classification, link prediction, and graph classification. Experiments on benchmark datasets show that GeoF consistently outperforms state-of-the-art GNN baselines.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-28T09:22:49Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yingxu Wang</name>
+    </author>
+    <author>
+      <name>Kunyu Zhang</name>
+    </author>
+    <author>
+      <name>Xinwang Liu</name>
+    </author>
+    <author>
+      <name>Mengzhu Wang</name>
+    </author>
+    <author>
+      <name>Siyang Gao</name>
+    </author>
+    <author>
+      <name>Chang Tang</name>
+    </author>
+    <author>
+      <name>Nan Yin</name>
+    </author>
+  </entry>
+</feed>

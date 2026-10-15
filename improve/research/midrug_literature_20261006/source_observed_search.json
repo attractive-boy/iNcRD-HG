@@ -1,0 +1,504 @@
+[
+  {
+    "name": "arxiv_negative_condition",
+    "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22link+prediction%22+AND+%28all%3A%22negative%22+OR+all%3A%22conditional%22+OR+all%3A%22source%22%29%29+AND+submittedDate%3A%5B202501010000+TO+202610062359%5D&max_results=25&sortBy=relevance",
+    "status": "ok",
+    "path": "improve/research/midrug_literature_20261006/raw/source_observed_arxiv_negative_condition.xml",
+    "records": [
+      {
+        "title": "Optimal Embedding Guided Negative Sample Generation for Knowledge Graph Link Prediction",
+        "id": "http://arxiv.org/abs/2504.03327v1",
+        "date": "2025-04-04T10:10:18Z",
+        "abstract": "Knowledge graph embedding (KGE) models encode the structural information of knowledge graphs to predicting new links. Effective training of these models requires distinguishing between positive and negative samples with high precision. Although prior research has shown that improving the quality of negative samples can significantly enhance model accuracy, identifying high-quality negative samples remains a challenging problem. This paper theoretically investigates the condition under which negative samples lead to optimal KG embedding and identifies a sufficient condition for an effective negative sample distribution. Based on this theoretical foundation, we propose \\textbf{E}mbedding \\textbf{MU}tation (\\textsc{EMU}), a novel framework that \\emph{generates} negative samples satisfying this condition, in contrast to conventional methods that focus on \\emph{identifying} challenging negative samples within the training data. Importantly, the simplicity of \\textsc{EMU} ensures seamless integration with existing KGE models and negative sampling methods. To evaluate its efficacy, we conducted comprehensive experiments across multiple datasets. The results consistently demonstrate significant improvements in link prediction performance across various KGE models and negative sampling methods. Notably, \\textsc{EMU} enables performance improvements comparable to those achieved by models with embedding dimension five times larger. An implementation of the method and experiments are available at https://github.com/nec-research/EMU-KG."
+      },
+      {
+        "title": "Structural Alignment in Link Prediction",
+        "id": "http://arxiv.org/abs/2505.04939v1",
+        "date": "2025-05-08T04:27:15Z",
+        "abstract": "While Knowledge Graphs (KGs) have become increasingly popular across various scientific disciplines for their ability to model and interlink huge quantities of data, essentially all real-world KGs are known to be incomplete. As such, with the growth of KG use has been a concurrent development of machine learning tools designed to predict missing information in KGs, which is referred to as the Link Prediction Task. The majority of state-of-the-art link predictors to date have followed an embedding-based paradigm. In this paradigm, it is assumed that the information content of a KG is best represented by the (individual) vector representations of its nodes and edges, and that therefore node and edge embeddings are particularly well-suited to performing link prediction.\n  This thesis proposes an alternative perspective on the field's approach to link prediction and KG data modelling. Specifically, this work re-analyses KGs and state-of-the-art link predictors from a graph-structure-first perspective that models the information content of a KG in terms of whole triples, rather than individual nodes and edges.\n  Following a literature review and two core sets of experiments, this thesis concludes that a structure-first perspective on KGs and link prediction is both viable and useful for understanding KG learning and for enabling cross-KG transfer learning for the link prediction task. This observation is used to create and propose the Structural Alignment Hypothesis, which postulates that link prediction can be understood and modelled as a structural task.\n  All code and data used for this thesis are open-sourced. This thesis was written bilingually, with the main document in English and an informal extended summary in Irish. An Irish-language translation dictionary of machine learning terms (the Focl\u00f3ir Tr\u00e1chtais) created for this work is open-sourced as well."
+      },
+      {
+        "title": "Demystifying Distributed Training of Graph Neural Networks for Link Prediction",
+        "id": "http://arxiv.org/abs/2506.20818v1",
+        "date": "2025-06-25T20:32:23Z",
+        "abstract": "Graph neural networks (GNNs) are powerful tools for solving graph-related problems. Distributed GNN frameworks and systems enhance the scalability of GNNs and accelerate model training, yet most are optimized for node classification. Their performance on link prediction remains underexplored. This paper demystifies distributed training of GNNs for link prediction by investigating the issue of performance degradation when each worker trains a GNN on its assigned partitioned subgraph without having access to the entire graph. We discover that the main sources of the issue come from not only the information loss caused by graph partitioning but also the ways of drawing negative samples during model training. While sharing the complete graph information with each worker resolves the issue and preserves link prediction accuracy, it incurs a high communication cost. We propose SpLPG, which effectively leverages graph sparsification to mitigate the issue of performance degradation at a reduced communication cost. Experiment results on several public real-world datasets demonstrate the effectiveness of SpLPG, which reduces the communication overhead by up to about 80% while mostly preserving link prediction accuracy."
+      },
+      {
+        "title": "Bridging Source and Target Domains via Link Prediction for Unsupervised Domain Adaptation on Graphs",
+        "id": "http://arxiv.org/abs/2505.24055v1",
+        "date": "2025-05-29T22:54:40Z",
+        "abstract": "Graph neural networks (GNNs) have shown great ability for node classification on graphs. However, the success of GNNs relies on abundant labeled data, while obtaining high-quality labels is costly and challenging, especially for newly emerging domains. Hence, unsupervised domain adaptation (UDA), which trains a classifier on the labeled source graph and adapts it to the unlabeled target graph, is attracting increasing attention. Various approaches have been proposed to alleviate the distribution shift between the source and target graphs to facilitate the classifier adaptation. However, most of them simply adopt existing UDA techniques developed for independent and identically distributed data to gain domain-invariant node embeddings for graphs, which do not fully consider the graph structure and message-passing mechanism of GNNs during the adaptation and will fail when label distribution shift exists among domains. In this paper, we proposed a novel framework that adopts link prediction to connect nodes between source and target graphs, which can facilitate message-passing between the source and target graphs and augment the target nodes to have ``in-distribution'' neighborhoods with the source domain. This strategy modified the target graph on the input level to reduce its deviation from the source domain in the embedding space and is insensitive to disproportional label distributions across domains. To prevent the loss of discriminative information in the target graph, we further design a novel identity-preserving learning objective, which guides the learning of the edge insertion module together with reconstruction and adaptation losses. Experimental results on real-world datasets demonstrate the effectiveness of our framework."
+      },
+      {
+        "title": "Exploiting Meta-Learning-based Poisoning Attacks for Graph Link Prediction",
+        "id": "http://arxiv.org/abs/2504.06492v2",
+        "date": "2025-04-08T23:36:29Z",
+        "abstract": "Link prediction in graph data uses various algorithms and Graph Nerual Network (GNN) models to predict potential relationships between graph nodes. These techniques have found widespread use in numerous real-world applications, including recommendation systems, community/social networks, and biological structures. However, recent research has highlighted the vulnerability of GNN models to adversarial attacks, such as poisoning and evasion attacks. Addressing the vulnerability of GNN models is crucial to ensure stable and robust performance in GNN applications. Although many works have focused on enhancing the robustness of node classification on GNN models, the robustness of link prediction has received less attention. To bridge this gap, this article introduces an unweighted graph poisoning attack that leverages meta-learning with weighted scheme strategies to degrade the link prediction performance of GNNs. We conducted comprehensive experiments on diverse datasets across multiple link prediction applications to evaluate the proposed method and its parameters, comparing it with existing approaches under similar conditions. Our results demonstrate that our approach significantly reduces link prediction performance and consistently outperforms other state-of-the-art baselines."
+      },
+      {
+        "title": "Sequence Diffusion Model for Temporal Link Prediction in Continuous-Time Dynamic Graph",
+        "id": "http://arxiv.org/abs/2601.23233v1",
+        "date": "2026-01-30T18:02:12Z",
+        "abstract": "Temporal link prediction in dynamic graphs is a fundamental problem in many real-world systems. Existing temporal graph neural networks mainly focus on learning representations of historical interactions. Despite their strong performance, these models are still purely discriminative, producing point estimates for future links and lacking an explicit mechanism to capture the uncertainty and sequential structure of future temporal interactions. In this paper, we propose SDG, a novel sequence-level diffusion framework that unifies dynamic graph learning with generative denoising. Specifically, SDG injects noise into the entire historical interaction sequence and jointly reconstructs all interaction embeddings through a conditional denoising process, thereby enabling the model to capture more comprehensive interaction distributions. To align the generative process with temporal link prediction, we employ a cross-attention denoising decoder to guide the reconstruction of the destination sequence and optimize the model in an end-to-end manner. Extensive experiments on various temporal graph benchmarks show that SDG consistently achieves state-of-the-art performance in the temporal link prediction task."
+      },
+      {
+        "title": "Link prediction in ecological networks under extreme taxonomic bias",
+        "id": "http://arxiv.org/abs/2506.23370v2",
+        "date": "2025-06-29T19:09:37Z",
+        "abstract": "Ecological networks offer powerful insights into community function, but without first characterizing these networks accurately, our ability to detect and interpret changes under environmental stress is limited. We develop an approach to reduce bias in link prediction in the common scenario in which data are derived from studies focused on a small number of species. Our Extended Covariate-Informed Link Prediction (COIL+) framework employs a latent factor model that flexibly borrows information across species, incorporates species traits and phylogeny, and leverages information from multiple studies to address uncertainty in species occurrence. We also propose a trait-matching procedure that allows heterogeneity in species-level trait-interaction associations. We illustrate the approach with a literature-based dataset of 268 sources reporting Afrotropical frugivory and compare performance with and without correction for occurrence uncertainty. COIL+ substantially improves link prediction and reduces sampling bias, revealing 5637 likely but unobserved frugivory interactions (a median of nine additional interactions per frugivore). Newly predicted interactions are concentrated among poorly sampled frugivores, such as the water chevrotain (Hyemoschus aquaticus, a small forest-dwelling ungulate) and the rufous-bellied helmetshrike (Prionops rufiventris, a passerine bird of East African tropical forests). Additionally, the method improves model discrimination compared to existing methods under strong taxonomic bias and narrow study focus. This framework generalizes to diverse network contexts and provides a useful tool for link prediction in the face of biased interaction data."
+      },
+      {
+        "title": "Future Link Prediction Without Memory or Aggregation",
+        "id": "http://arxiv.org/abs/2505.19408v1",
+        "date": "2025-05-26T01:53:27Z",
+        "abstract": "Future link prediction on temporal graphs is a fundamental task with wide applicability in real-world dynamic systems. These scenarios often involve both recurring (seen) and novel (unseen) interactions, requiring models to generalize effectively across both types of edges. However, existing methods typically rely on complex memory and aggregation modules, yet struggle to handle unseen edges. In this paper, we revisit the architecture of existing temporal graph models and identify two essential but overlooked modeling requirements for future link prediction: representing nodes with unique identifiers and performing target-aware matching between source and destination nodes. To this end, we propose Cross-Attention based Future Link Predictor on Temporal Graphs (CRAFT), a simple yet effective architecture that discards memory and aggregation modules and instead builds on two components: learnable node embeddings and cross-attention between the destination and the source's recent interactions. This design provides strong expressive power and enables target-aware modeling of the compatibility between candidate destinations and the source's interaction patterns. Extensive experiments on diverse datasets demonstrate that CRAFT consistently achieves superior performance with high efficiency, making it well-suited for large-scale real-world applications."
+      },
+      {
+        "title": "WBT-BGRL: A Non-Contrastive Weighted Bipartite Link Prediction Model for Inductive Learning",
+        "id": "http://arxiv.org/abs/2510.24927v1",
+        "date": "2025-10-28T19:56:13Z",
+        "abstract": "Link prediction in bipartite graphs is crucial for applications like recommendation systems and failure detection, yet it is less studied than in monopartite graphs. Contrastive methods struggle with inefficient and biased negative sampling, while non-contrastive approaches rely solely on positive samples. Existing models perform well in transductive settings, but their effectiveness in inductive, weighted, and bipartite scenarios remains untested. To address this, we propose Weighted Bipartite Triplet-Bootstrapped Graph Latents (WBT-BGRL), a non-contrastive framework that enhances bootstrapped learning with a novel weighting mechanism in the triplet loss. Using a bipartite architecture with dual GCN encoders, WBT-BGRL is evaluated against adapted state-of-the-art models (T-BGRL, BGRL, GBT, CCA-SSG). Results on real-world datasets (Industry and E-commerce) show competitive performance, especially when weighting is applied during pretraining-highlighting the value of weighted, non-contrastive learning for inductive link prediction in bipartite graphs."
+      },
+      {
+        "title": "A Scalable Pretraining Framework for Link Prediction with Efficient Adaptation",
+        "id": "http://arxiv.org/abs/2508.04645v1",
+        "date": "2025-08-06T17:10:31Z",
+        "abstract": "Link Prediction (LP) is a critical task in graph machine learning. While Graph Neural Networks (GNNs) have significantly advanced LP performance recently, existing methods face key challenges including limited supervision from sparse connectivity, sensitivity to initialization, and poor generalization under distribution shifts. We explore pretraining as a solution to address these challenges. Unlike node classification, LP is inherently a pairwise task, which requires the integration of both node- and edge-level information. In this work, we present the first systematic study on the transferability of these distinct modules and propose a late fusion strategy to effectively combine their outputs for improved performance. To handle the diversity of pretraining data and avoid negative transfer, we introduce a Mixture-of-Experts (MoE) framework that captures distinct patterns in separate experts, facilitating seamless application of the pretrained model on diverse downstream datasets. For fast adaptation, we develop a parameter-efficient tuning strategy that allows the pretrained model to adapt to unseen datasets with minimal computational overhead. Experiments on 16 datasets across two domains demonstrate the effectiveness of our approach, achieving state-of-the-art performance on low-resource link prediction while obtaining competitive results compared to end-to-end trained methods, with over 10,000x lower computational overhead."
+      },
+      {
+        "title": "Graph Neural Networks for O-RAN Mobility Management: A Link Prediction Approach",
+        "id": "http://arxiv.org/abs/2502.02170v3",
+        "date": "2025-02-04T09:44:41Z",
+        "abstract": "Mobility performance has been a key focus in cellular networks up to 5G. To enhance handover (HO) performance, 3GPP introduced Conditional Handover (CHO) and Layer 1/Layer 2 Triggered Mobility (LTM) mechanisms in 5G. While these reactive HO strategies address the trade-off between HO failures (HOF) and ping-pong effects, they often result in inefficient radio resource utilization due to additional HO preparations. To overcome these challenges, this article proposes a proactive HO framework for mobility management in O-RAN, leveraging user-cell link predictions to identify the optimal target cell for HO. We explore various categories of Graph Neural Networks (GNNs) for link prediction and analyze the complexity of applying them to the mobility management domain. Two GNN models are compared using a real-world dataset, with experimental results demonstrating their ability to capture the dynamic and graph-structured nature of cellular networks. Finally, we present key insights from our study and outline future steps to enable the integration of GNN-based link prediction for mobility management in O-RAN networks."
+      },
+      {
+        "title": "QSearchNet: A Quantum Walk Search Framework for Link Prediction",
+        "id": "http://arxiv.org/abs/2510.00325v1",
+        "date": "2025-09-30T22:32:34Z",
+        "abstract": "Link prediction is one of the fundamental problems in graph theory, critical for understanding and forecasting the evolution of complex systems like social and biological networks. While classical heuristics capture certain aspects of graph topology, they often struggle to optimally integrate local and global structural information or adapt to complex dependencies. Quantum computing offers a powerful alternative by leveraging superposition for simultaneous multi-path exploration and interference-driven integration of both local and global graph features. In this work, we introduce QSearchNet, a quantum-inspired framework based on Discrete-Time Quantum Walk (DTQW) dynamics and Grover's amplitude amplification. QSearchNet simulates a topology-aware quantum evolution to propagate amplitudes across multiple nodes simultaneously. By aligning interference patterns through quantum reflection and oracle-like phase-flip operation, it adaptively prioritizes multi-hop dependencies and amplifies structurally relevant paths corresponding to potential connections. Experiments on diverse real-world networks demonstrate competitive performance, particularly with hard negative samples under realistic evaluation conditions."
+      },
+      {
+        "title": "Multi-Faceted Continual Knowledge Graph Embedding for Semantic-Aware Link Prediction",
+        "id": "http://arxiv.org/abs/2604.10947v2",
+        "date": "2026-04-13T03:41:01Z",
+        "abstract": "Continual Knowledge Graph Embedding (CKGE) aims to continually learn embeddings for new knowledge, i.e., entities and relations, while retaining previously acquired knowledge. Most existing CKGE methods mitigate catastrophic forgetting via regularization or replaying old knowledge. They conflate new and old knowledge of an entity within the same embedding space to seek a balance between them. However, entities inherently exhibit multi-faceted semantics that evolve dynamically as their relational contexts change over time. A shared embedding fails to capture and distinguish these temporal semantic variations, degrading lifelong link prediction accuracy across snapshots. To address this, we propose a Multi-Faceted CKGE framework (MF-CKGE) for semantic-aware link prediction. During offline learning, MF-CKGE separates temporal old and new knowledge into distinct embedding spaces to prevent knowledge entanglement and employs semantic decoupling to reduce semantic redundancy, thereby improving space efficiency. During online inference, MF-CKGE adaptively identifies semantically query-relevant entity embeddings by quantifying their semantic importance, reducing interference from query-irrelevant noise. Experiments on eight datasets show that MF-CKGE achieves an average (maximum) improvement of 1.7% (2.7%) and 1.4% (3.8%) in MRR and Hits@10, respectively, over the best baseline. Our source code and datasets are available at: https://anonymous.4open.science/r/MF-CKGE-04E5."
+      },
+      {
+        "title": "Domain matters: Towards domain-informed evaluation for link prediction",
+        "id": "http://arxiv.org/abs/2512.23371v1",
+        "date": "2025-12-29T11:04:36Z",
+        "abstract": "Link prediction, a foundational task in complex network analysis, has extensive applications in critical scenarios such as social recommendation, drug target discovery, and knowledge graph completion. However, existing evaluations of algorithmic often rely on experiments conducted on a limited number of networks, assuming consistent performance rankings across domains. Despite the significant disparities in generative mechanisms and semantic contexts, previous studies often improperly highlight ``universally optimal\" algorithms based solely on naive average over networks across domains. This paper systematically evaluates 12 mainstream link prediction algorithms across 740 real-world networks spanning seven domains. We present substantial empirical evidence elucidating the performance of algorithms in specific domains. This findings reveal a notably low degree of consistency in inter-domain algorithm rankings, a phenomenon that stands in stark contrast to the high degree of consistency observed within individual domains. Principal Component Analysis shows that response vectors formed by the rankings of the 12 algorithms cluster distinctly by domain in low-dimensional space, thus confirming domain attributes as a pivotal factor affecting algorithm performance. We propose a metric called Winner Score that could identify the superior algorithm in each domain: Non-Negative Matrix Factorization for social networks, Neighborhood Overlap-aware Graph Neural Networks for economics, Graph Convolutional Networks for chemistry, and L3-based Resource Allocation for biology. However, these domain-specific top-performing algorithms tend to exhibit suboptimal performance in other domains. This finding underscores the importance of aligning an algorithm's mechanism with the network structure."
+      },
+      {
+        "title": "Oracle, will I ever learn? A study of prediction convergence and complementarity across link prediction models",
+        "id": "http://arxiv.org/abs/2609.02638v1",
+        "date": "2026-09-02T14:14:36Z",
+        "abstract": "Knowledge graphs have become an important source of structured knowledge for Web applications, including search, question answering, and recommender systems. In these applications, link prediction can serve either as a prediction task itself or as a means to enrich incomplete knowledge graphs for downstream tasks. Interestingly, different link prediction models, or even different training runs of the same model, can produce substantially different predictions for the same query. This suggests a variability in the capture of the underlying knowledge by models, thus raising a fundamental question: to what extent do different models capture complementary knowledge, and how much of this knowledge could be recovered by combining them? We propose to measure model complementarity through the performance of an oracle that, for each query, selects the best prediction among a considered set of models, hence providing an upper bound on the performance achievable through model combination. Across several architectures and benchmarks, we find a substantial gap between individual models and their oracle, revealing that different models capture complementary knowledge. Yet, this complementarity rapidly saturates as more models are added, leaving a persistent subset of queries unsolved even by a large number of models. These findings reveal both the potential of model complementarity and a fundamental limit to what current link prediction models can collectively recover; thereby highlighting the need for further research to build robust Web applications."
+      },
+      {
+        "title": "Are We Really Measuring Progress? Transferring Insights from Evaluating Recommender Systems to Temporal Link Prediction",
+        "id": "http://arxiv.org/abs/2506.12588v1",
+        "date": "2025-06-14T17:53:10Z",
+        "abstract": "Recent work has questioned the reliability of graph learning benchmarks, citing concerns around task design, methodological rigor, and data suitability. In this extended abstract, we contribute to this discussion by focusing on evaluation strategies in Temporal Link Prediction (TLP). We observe that current evaluation protocols are often affected by one or more of the following issues: (1) inconsistent sampled metrics, (2) reliance on hard negative sampling often introduced as a means to improve robustness, and (3) metrics that implicitly assume equal base probabilities across source nodes by combining predictions. We support these claims through illustrative examples and connections to longstanding concerns in the recommender systems community. Our ongoing work aims to systematically characterize these problems and explore alternatives that can lead to more robust and interpretable evaluation. We conclude with a discussion of potential directions for improving the reliability of TLP benchmarks."
+      },
+      {
+        "title": "Norm Augmented Graph AutoEncoders for Link Prediction",
+        "id": "http://arxiv.org/abs/2502.05868v1",
+        "date": "2025-02-09T12:08:02Z",
+        "abstract": "Link Prediction (LP) is a crucial problem in graph-structured data. Graph Neural Networks (GNNs) have gained prominence in LP, with Graph AutoEncoders (GAEs) being a notable representation. However, our empirical findings reveal that GAEs' LP performance suffers heavily from the long-tailed node degree distribution, i.e., low-degree nodes tend to exhibit inferior LP performance compared to high-degree nodes. \\emph{What causes this degree-related bias, and how can it be mitigated?} In this study, we demonstrate that the norm of node embeddings learned by GAEs exhibits variation among nodes with different degrees, underscoring its central significance in influencing the final performance of LP. Specifically, embeddings with larger norms tend to guide the decoder towards predicting higher scores for positive links and lower scores for negative links, thereby contributing to superior performance. This observation motivates us to improve GAEs' LP performance on low-degree nodes by increasing their embedding norms, which can be implemented simply yet effectively by introducing additional self-loops into the training objective for low-degree nodes. This norm augmentation strategy can be seamlessly integrated into existing GAE methods with light computational cost. Extensive experiments on various datasets and GAE methods show the superior performance of norm-augmented GAEs."
+      },
+      {
+        "title": "Inductive Link Prediction on N-ary Relational Facts via Semantic Hypergraph Reasoning",
+        "id": "http://arxiv.org/abs/2503.20676v1",
+        "date": "2025-03-26T16:09:54Z",
+        "abstract": "N-ary relational facts represent semantic correlations among more than two entities. While recent studies have developed link prediction (LP) methods to infer missing relations for knowledge graphs (KGs) containing n-ary relational facts, they are generally limited to transductive settings. Fully inductive settings, where predictions are made on previously unseen entities, remain a significant challenge. As existing methods are mainly entity embedding-based, they struggle to capture entity-independent logical rules. To fill in this gap, we propose an n-ary subgraph reasoning framework for fully inductive link prediction (ILP) on n-ary relational facts. This framework reasons over local subgraphs and has a strong inductive inference ability to capture n-ary patterns. Specifically, we introduce a novel graph structure, the n-ary semantic hypergraph, to facilitate subgraph extraction. Moreover, we develop a subgraph aggregating network, NS-HART, to effectively mine complex semantic correlations within subgraphs. Theoretically, we provide a thorough analysis from the score function optimization perspective to shed light on NS-HART's effectiveness for n-ary ILP tasks. Empirically, we conduct extensive experiments on a series of inductive benchmarks, including transfer reasoning (with and without entity features) and pairwise subgraph reasoning. The results highlight the superiority of the n-ary subgraph reasoning framework and the exceptional inductive ability of NS-HART. The source code of this paper has been made publicly available at https://github.com/yin-gz/Nary-Inductive-SubGraph."
+      },
+      {
+        "title": "CGLE: Class-label Graph Link Estimator for Link Prediction",
+        "id": "http://arxiv.org/abs/2511.06982v1",
+        "date": "2025-11-10T11:34:36Z",
+        "abstract": "Link prediction is a pivotal task in graph mining with wide-ranging applications in social networks, recommendation systems, and knowledge graph completion. However, many leading Graph Neural Network (GNN) models often neglect the valuable semantic information aggregated at the class level. To address this limitation, this paper introduces CGLE (Class-label Graph Link Estimator), a novel framework designed to augment GNN-based link prediction models. CGLE operates by constructing a class-conditioned link probability matrix, where each entry represents the probability of a link forming between two node classes. This matrix is derived from either available ground-truth labels or from pseudo-labels obtained through clustering. The resulting class-based prior is then concatenated with the structural link embedding from a backbone GNN, and the combined representation is processed by a Multi-Layer Perceptron (MLP) for the final prediction. Crucially, CGLE's logic is encapsulated in an efficient preprocessing stage, leaving the computational complexity of the underlying GNN model unaffected. We validate our approach through extensive experiments on a broad suite of benchmark datasets, covering both homophilous and sparse heterophilous graphs. The results show that CGLE yields substantial performance gains over strong baselines such as NCN and NCNC, with improvements in HR@100 of over 10 percentage points on homophilous datasets like Pubmed and DBLP. On sparse heterophilous graphs, CGLE delivers an MRR improvement of over 4% on the Chameleon dataset. Our work underscores the efficacy of integrating global, data-driven semantic priors, presenting a compelling alternative to the pursuit of increasingly complex model architectures. Code to reproduce our findings is available at: https://github.com/data-iitd/cgle-icdm2025."
+      },
+      {
+        "title": "Link Prediction or Perdition: the Seeds of Instability in Knowledge Graph Embeddings",
+        "id": "http://arxiv.org/abs/2606.03365v1",
+        "date": "2026-06-02T09:13:50Z",
+        "abstract": "Embedding models (KGEMs) constitute the main link prediction approach to complete knowledge graphs. Standard evaluation protocols emphasize rank-based metrics such as MRR or Hits@$K$, but usually overlook the influence of random seeds on result stability. Moreover, these metrics conceal potential instabilities in individual predictions and in the organization of embedding spaces. In this work, we conduct a systematic stability analysis of multiple KGEMs across several datasets. We find that high-performance models actually produce divergent predictions at the triple level and highly variable embedding spaces. By isolating stochastic factors (i.e., initialization, triple ordering, negative sampling, dropout, hardware), we show that each independently induces instability of comparable magnitude. Furthermore, for a given model, hyperparameter configurations with better MRR are not guaranteed to be more stable. Moreover, voting, albeit a known remediation mechanism, only provides a limited enhancement of stability. These findings highlight critical limitations of current benchmarking protocols, and raise concerns about the reliability of KGEMs for knowledge graph completion."
+      },
+      {
+        "title": "Utilizing Graph Neural Networks for Effective Link Prediction in Microservice Architectures",
+        "id": "http://arxiv.org/abs/2501.15019v1",
+        "date": "2025-01-25T01:51:30Z",
+        "abstract": "Managing microservice architectures in distributed systems is complex and resource intensive due to the high frequency and dynamic nature of inter service interactions. Accurate prediction of these future interactions can enhance adaptive monitoring, enabling proactive maintenance and resolution of potential performance issues before they escalate. This study introduces a Graph Neural Network GNN based approach, specifically using a Graph Attention Network GAT, for link prediction in microservice Call Graphs. Unlike social networks, where interactions tend to occur sporadically and are often less frequent, microservice Call Graphs involve highly frequent and time sensitive interactions that are essential to operational performance. Our approach leverages temporal segmentation, advanced negative sampling, and GATs attention mechanisms to model these complex interactions accurately. Using real world data, we evaluate our model across performance metrics such as AUC, Precision, Recall, and F1 Score, demonstrating its high accuracy and robustness in predicting microservice interactions. Our findings support the potential of GNNs for proactive monitoring in distributed systems, paving the way for applications in adaptive resource management and performance optimization."
+      },
+      {
+        "title": "Diffusion Signals Reveal Hidden Connections: A Physics-Inspired Framework for Link Prediction via Personalized PageRank Signals",
+        "id": "http://arxiv.org/abs/2511.17569v1",
+        "date": "2025-11-14T09:06:47Z",
+        "abstract": "Link prediction in complex networks--identifying the missing or future connections--remains a cornerstone problem for understanding network evolution and function, yet existing methods struggle to balance computational efficiency with theoretical rigor across heterogeneous topologies. This work introduces a physically principled framework, Diffusion Distance with Personalized PageRank (D-PPR), which unifies static topology with dynamic information flow by modeling nodes as signal sources propagating through the network via Personalized PageRank (PPR) vectors. The method quantifies node-pair similarity through the graph Laplacian-governed diffusion distance between their topology-aware signal distributions, thereby bridging microscopic interactions with macroscopic network dynamics. Systematic benchmarking on synthetic (Barab\u00e1si-Albert, LFR) and seven large-scale real-world networks spanning technology, biology, and social domains demonstrates that D-PPR achieves highly competitive performance, yielding favorable results when compared to representative local and global heuristics, particularly in sparse and modular networks. These findings establish a rigorous foundation for physics-inspired link prediction by revealing that incorporating dynamical processes into structural similarity metrics enables deeper insights into network connectivity patterns, offering both methodological advances and new theoretical perspectives on the interplay between topology and dynamics."
+      },
+      {
+        "title": "Graph Attention-based Adaptive Transfer Learning for Link Prediction",
+        "id": "http://arxiv.org/abs/2512.22252v1",
+        "date": "2025-12-24T05:11:34Z",
+        "abstract": "Graph neural networks (GNNs) have brought revolutionary advancements to the field of link prediction (LP), providing powerful tools for mining potential relationships in graphs. However, existing methods face challenges when dealing with large-scale sparse graphs and the need for a high degree of alignment between different datasets in transfer learning. Besides, although self-supervised methods have achieved remarkable success in many graph tasks, prior research has overlooked the potential of transfer learning to generalize across different graph datasets. To address these limitations, we propose a novel Graph Attention Adaptive Transfer Network (GAATNet). It combines the advantages of pre-training and fine-tuning to capture global node embedding information across datasets of different scales, ensuring efficient knowledge transfer and improved LP performance. To enhance the model's generalization ability and accelerate training, we design two key strategies: 1) Incorporate distant neighbor embeddings as biases in the self-attention module to capture global features. 2) Introduce a lightweight self-adapter module during fine-tuning to improve training efficiency. Comprehensive experiments on seven public datasets demonstrate that GAATNet achieves state-of-the-art performance in LP tasks. This study provides a general and scalable solution for LP tasks to effectively integrate GNNs with transfer learning. The source code and datasets are publicly available at https://github.com/DSI-Lab1/GAATNet"
+      },
+      {
+        "title": "A Hybrid TGN-SEAL Model for Dynamic Graph Link Prediction",
+        "id": "http://arxiv.org/abs/2602.14239v3",
+        "date": "2026-02-15T17:16:47Z",
+        "abstract": "Predicting links in sparse, continuously evolving networks is a central challenge in network science. Conventional heuristic methods and deep learning models, including Graph Neural Networks (GNNs), are typically designed for static graphs and thus struggle to capture temporal dependencies. Snapshot-based techniques partially address this issue but often encounter data sparsity and class imbalance, particularly in networks with transient interactions such as telecommunication call detail records (CDRs). Temporal Graph Networks (TGNs) model dynamic graphs by updating node embeddings over time; however, their predictive accuracy under sparse conditions remains limited. In this study, we improve the TGN framework by extracting enclosing subgraphs around candidate links, enabling the model to jointly learn structural and temporal information. Experiments on a sparse CDR, email, message dataset show that our approach increases average precision by at least 2% over standard TGNs, demonstrating the advantages of integrating local topology for robust link prediction in dynamic networks."
+      },
+      {
+        "title": "Network analysis and link prediction in competitive women's basketball",
+        "id": "http://arxiv.org/abs/2601.23193v1",
+        "date": "2026-01-30T17:19:12Z",
+        "abstract": "Network structure and its role in prediction are examined in competitive basketball at the team and player levels. Adversarial game outcome networks from NCAA Division I women's basketball from 2021 to 2024 are used to compute the common out-neighbor score and PageRank, which are combined into a low-key leader strength that identifies competitors influential through structural similarity despite relatively low centrality. This measure is related to changes in NCAA NET rankings by grouping teams into quantiles and comparing average rank changes across seasons for both previous-to-current and current-to-next transitions. Link prediction is then studied using node2vec embeddings across three interaction settings. For NCAA regular-season game networks, cosine similarity between team embeddings is used in a logistic regression model to predict March Madness matchups. For WNBA shot-blocking networks, future directed blocking interactions are predicted via logistic regression on concatenated source-target player embeddings. For WNBA passing networks, region embeddings learned from first-quarter passes are evaluated for their ability to predict subsequent passing connections. Across NCAA and WNBA settings, embedding-based models provide statistically significant evidence that higher-order network structure contains predictive signals for future interactions, while the passing experiment shows weaker predictive performance but yields interpretable similarity patterns consistent with passing feasibility."
+      }
+    ]
+  },
+  {
+    "name": "crossref_conditional",
+    "url": "https://api.crossref.org/works?query=link+prediction+source+conditioned+negative+edges&filter=from-pub-date%3A2025-01-01%2Cuntil-pub-date%3A2026-10-06&rows=15",
+    "status": "ok",
+    "path": "improve/research/midrug_literature_20261006/raw/source_observed_crossref_conditional.json",
+    "records": [
+      {
+        "title": [
+          "Explainable Link Prediction Via Position-Aware Associative Path Representation in Open-Source Networks"
+        ],
+        "doi": "10.2139/ssrn.5223110",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null
+      },
+      {
+        "title": [
+          "Principal component analysis of link prediction scores to propose a binary classification model for the betweenness of edges in complex networks"
+        ],
+        "doi": "10.1007/s13278-025-01438-7",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              10
+            ]
+          ]
+        },
+        "abstract": null
+      },
+      {
+        "title": [
+          "Explainable topology-guided matrix factorization for link prediction in open-source software networks"
+        ],
+        "doi": "10.1016/j.neucom.2025.131326",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              11
+            ]
+          ]
+        },
+        "abstract": null
+      },
+      {
+        "title": [
+          "Capsule Routing over Stacked GCN-GAT Embeddings with Negative Sampling for Graph Link Prediction"
+        ],
+        "doi": "10.1109/iccke68588.2025.11273827",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              28
+            ]
+          ]
+        },
+        "abstract": null
+      },
+      {
+        "title": [
+          "Link Prediction with Genetic Programming: A Novel Machine Learning and Genetic Programming Approach for Link Prediction"
+        ],
+        "doi": "10.2139/ssrn.5365682",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null
+      },
+      {
+        "title": [
+          "Link prediction using motif-based dual graph-regularized autoencoder-like non-negative matrix factorization"
+        ],
+        "doi": "10.1016/j.physleta.2025.131078",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              12
+            ]
+          ]
+        },
+        "abstract": null
+      },
+      {
+        "title": [
+          "GraspMind: Multi-Granularity Language-Conditioned Affordance Prediction for Robotic Grasping"
+        ],
+        "doi": "10.2139/ssrn.6365601",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Developing embodied AI systems that interpret free-form natural language and execute appropriate manipulation actions in cluttered environments remains a central challenge in multimodal decision- making. Existing language-conditioned grasping methods typically accommodate only a single instruction granularity (e.g., object names), which limits their capacity to resolve ambiguity when multiple semantically similar objects coexist. We present GraspMind, a multimodal expert framework for multi-granularity language-conditioned affordance prediction that accommodates instructions across six levels of specificity: object category, visual attribute, spatial relation, functional purpose, part-level reference, and their combinations. GraspMind couples a frozen CLIP text encoder with a PointNet++ 3D backbone through cross-attention fusion, enabling per-point alignment between linguistic semantics and geometric features while producing interpretable word-level attention maps that explicate the system\u2019s decision rationale. To prevent shortcut learning in multi-object settings, we propose the Instruction-Aware Scene Curriculum (IASC), a principled data generation strategy that constructs adversarial scenes containing granularity-specific distractors by decomposing each instruction into discriminative and confounding semantic dimensions. Comprehensive experiments conducted in ManiSkill3/SAPIEN with YCB objects demonstrate that GraspMind achieves strong affordance prediction on object, attribute, spatial, and functional instructions, with IASC contributing a 40% relative improvement over random scene compositions. We further evaluate robustness to sensor noise, open-vocabulary generalization, and multi-seed consistency, identifying part-level and mixed-granularity instructions as open challenges that necessitate richer input modalities. Code is available at https://anonymous.4open.science/r/GraspMind-8330/.</jats:p>"
+      },
+      {
+        "title": [
+          "Temperature-conditioned molecular representation for organic solubility prediction"
+        ],
+        "doi": "10.2139/ssrn.6759617",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Solubility prediction across temperature is crucial for solvent selection and process design, yet remains challenging for data-driven models because temperature is typically treated as a simple scalar input. Such treatment limits the ability of data-driven methods to represent temperature-dependent solute\u2013solvent interactions within their latent feature spaces. Here, we introduce a temperature-conditioned (T-conditioned) molecular representation that embeds temperature directly into learned features through feature-wise linear modulation (FiLM) after dimension expansion. We evaluate this approach using two representative solubility prediction architectures: Chemprop, based on learned graph-based representations, and Fastprop, based on fixed descriptors. Trained on BigSolDB and assessed under both interpolation and extrapolation to unseen solutes using the Leeds and SolProp datasets, Tconditioning consistently reduces prediction error by up to 38% for Chemprop, with particularly strong improvements at elevated temperatures (up to 51% RMSE reduction above 330 K), while gains for Fastprop remain modest. Analysis of the T-conditioning parameters reveals that temperature-dependent modulation increases with temperature, indicating that the T-conditioning layer captures temperature-sensitive latent features relevant to solubility. An application study on pyrazinamide solubility prediction further demonstrates improved agreement with experimental trends and highlights the utility of representation-level conditioning when mechanistic models are constrained by parameters. These results demonstrate that T-conditioning enables accurate and physically meaningful prediction of temperature-dependent properties by embedding temperature directly into molecular representations.</jats:p>"
+      },
+      {
+        "title": [
+          "History Doesn\u2019t Repeat, but Its Patterns Echo: A Parallel Pairwise Negative-Sampling Framework for Temporal Link Prediction"
+        ],
+        "doi": "10.24963/ijcai.2026/302",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              9
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Temporal link prediction with temporal graph neural networks (TGNNs) is increasingly used to model spatio-temporal dependencies in temporal graphs and to forecast future interactions among entities. Existing sampling-based training methods typically rely on random negative sampling and pointwise loss formulations, which often lead to suboptimal convergence and limited generalization due to low-quality negative samples. We propose ATNSF, a temporal graph learning framework with a hybrid negative sampling strategy that uses a portion of historical edges as hard negatives. For efficiency, we design an asynchronous parallel training pipeline for scalable optimization and introduce a pairwise sampled softmax loss that contrasts each positive instance with a batch of negatives to learn more discriminative representations. Finally, we theoretically show that jointly designing the loss function and negative sampling strategy is crucial for improving performance and generalization. Extensive experiments across six temporal graph datasets demonstrate that ATNSF improves the average AP from 0.724 to 0.827 (+0.103). Remarkably, it also accelerates training by 1.37\u00d7 to 6.85\u00d7, achieving a 2.57\u00d7 geometric mean speedup. The source code of this paper can be found at https://github.com/yongqiu-star/ATNSF.</jats:p>"
+      },
+      {
+        "title": [
+          "Temporal Link Prediction Using Multi-metric Fusion Temporal Non-negative Latent Factorization of Tensors"
+        ],
+        "doi": "10.1145/3766671.3766853",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              13
+            ]
+          ]
+        },
+        "abstract": null
+      },
+      {
+        "title": [
+          "Evaluation Of Link Prediction Techniques"
+        ],
+        "doi": "10.2139/ssrn.5027301",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Since the beginnings of social and behavioural sciences, the link prediction problem has \n&lt;br&gt;\n grabbed much attention. \n&lt;br&gt;\n For instance, social networks such as Facebook, Twitter, and LinkedIN change enduringly as \n&lt;br&gt;\n new connections appear in the graph. For these networks, one of the biggest challenges is to \n&lt;br&gt;\n find accurately the best recommendations to the users. \n&lt;br&gt;\n Within the meaning of the graph, the main objective of the link prediction problem is to \n&lt;br&gt;\n predict the upcoming links from the actual state of a graph. \n&lt;br&gt;\n Link prediction methods use some score functions, such as \n&lt;br&gt;\n \u25cf Jaccard coefficient \n&lt;br&gt;\n \u25cf Preferential attachment, \n&lt;br&gt;\n to measure the probability of adding the links to the network. \n&lt;br&gt;\n These metrics are widely used in various applications due to their simplicity and their \n&lt;br&gt;\n interpretability; however, the majority of them are designed for a specific domain. \n&lt;br&gt;\n Social networks become very large with a several number of users that are connected with \n&lt;br&gt;\n different kinds of links. \n&lt;br&gt;\n Predicting those links is still a challenging task, as we need to find the best way to perform \n&lt;br&gt;\n predictions as accurate as possible.</jats:p>"
+      },
+      {
+        "title": [
+          "Symptom-conditioned prediction of comorbidity in the hEDS\u2013POTS\u2013MCAS triad"
+        ],
+        "doi": "10.64898/2026.07.27.26358921",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              28
+            ]
+          ]
+        },
+        "abstract": "<jats:title>Abstract</jats:title>\n                <jats:sec>\n                  <jats:title>Background</jats:title>\n                  <jats:p>Hypermobile Ehlers\u2013Danlos syndrome (hEDS), postural orthostatic tachycardia syndrome (POTS) and mast cell activation syndrome (MCAS) are reported to co-occur frequently. It is unclear how strongly, whether symptom profiles sharpen prediction of a second diagnosis given a first, and whether the published literature can support such inference at all.</jats:p>\n                </jats:sec>\n                <jats:sec>\n                  <jats:title>Methods</jats:title>\n                  <jats:p>We pooled 22 published cohorts\u2014aggregate prevalence data, no primary human-subjects data\u2014using Bayesian hierarchical random-effects models on the logit scale, and propagated the resulting posteriors through naive and tempered symptom updating. We introduce a feasibility screen derived from the Fr\u00e9chet\u2013Hoeffding bounds that tests whether separately pooled marginals can describe a single population, and we characterise the identifiability of latent class structure under disease-selected sampling.</jats:p>\n                </jats:sec>\n                <jats:sec>\n                  <jats:title>Results</jats:title>\n                  <jats:p>\n                    Directed comorbidity is strongly asymmetric:\n                    <jats:italic>\u03c0</jats:italic>\n                    <jats:sub>POTS|hEDS</jats:sub>\n                    = 46.6% (95% CrI [32.5, 61.5]) against\n                    <jats:italic>\u03c0</jats:italic>\n                    <jats:sub>hEDS|POTS</jats:sub>\n                    = 12.1% ([3.5, 38.5]), a near-fourfold gap, with\n                    <jats:italic>\u03c0</jats:italic>\n                    <jats:sub>MCAS|POTS</jats:sub>\n                    lowest at 3.9% ([0.7, 21.6]). Prediction intervals exceed credible intervals throughout, indicating substantial between-cohort heterogeneity. The feasibility screen finds 26 of 102 testable cells (25.5%) incompatible with\n                    <jats:italic>any</jats:italic>\n                    joint distribution; critically, 21 of these fail the upper Fr\u00e9chet bound and are invisible to the one-sided screen that is the natural first implementation. Among cells surviving the screen, symptom evidence is informative in four of six directions\u2014\u2119(hEDS|POTS,\n                    <jats:bold>S</jats:bold>\n                    ) rises from 12.1% to 49.7% on a four-symptom panel under tempered updating, and \u2119(POTS|MCAS,\n                    <jats:bold>S</jats:bold>\n                    ) from 49.5% to 82.1%\u2014but inert in both hEDS-cohort directions. A pathway-dispersion contrast excludes zero in two of six directions, in opposite signs and by margins of 0.1\u20130.2 percentage points, consistent with chance at this number of comparisons. We show latent class structure is not identified from disease-selected aggregate data, and that the single cohort reporting trivariate structure (\n                    <jats:italic>N</jats:italic>\n                    = 8) yields an exactly balanced table (OR = 1.00, 95% CI [0.063, 15.99]).\n                  </jats:p>\n                </jats:sec>\n                <jats:sec>\n                  <jats:title>Conclusions</jats:title>\n                  <jats:p>The pooled directional probabilities are usable as clinical priors, with intervals wide enough to preclude precision. Symptom-conditioned prediction is supported in some directions but not those most often invoked clinically, and every estimate rests on cohorts dominated by self-reported ascertainment. The principal methodological contribution is the two-sided feasibility screen: applied here it shows that a quarter of the testable literature cannot describe one coherent population, and that a one-sided implementation understates this sixfold.</jats:p>\n                </jats:sec>"
+      },
+      {
+        "title": [
+          "Observer-conditioned stochastic source attribution for compressible aeroacoustics"
+        ],
+        "doi": "10.2139/ssrn.7083740",
+        "date": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Aeroacoustic source attribution is often visualized as a local source map, but a locally intense source need not be important to a specified observer. It may be nearly silent after propagation, cancel another source coherently, or represent deterministic conversion of pre-existing entropy or vortical content rather than fresh emission. We formulate source attribution as an observer-conditioned stochastic covariance problem. Mechanism-resolved source channels are mapped to an outgoing detector through a positive-semidefinite radiativity operator $K_\\Theta$. Deterministic observer power is a bilinear form, $\\Pi_\\Theta=S^\\dagger K_\\Theta S$, while stochastic observer power is the trace budget $\\E\\Pi_\\Theta=\\sum_{\\alpha,\\beta}\\tr(K^\\Theta_{\\beta\\alpha}\\Phi_{\\alpha\\beta})$, where $\\Phi_{\\alpha\\beta}$ is the cross-spectral covariance between source channels. The formulation preserves self-radiation, cross-channel interference, cancellation, and observer dependence. A controlled verification and demonstration ladder is developed using two-patch Helmholtz radiation, a direct full-state quasi-one-dimensional nozzle case with direct and indirect noise, a compressed hidden-observable identifiability test, a direct full-state moving-shock-layer case, and a radiation-aware covariance-closure study with prior-mismatch, noise, observer-sparsity, and multiple-truth ablations. The results show that radiating importance is not equivalent to source energy: energy-ranked low-rank models can capture high-variance but nearly silent directions, whereas observer-radiativity-ranked models recover held-out observer powers and channel budgets at much lower rank. The framework replaces a universal local radiating-source density by an interference-aware source-to-observer covariance budget.</jats:p>"
+      },
+      {
+        "title": [
+          "Bridging Source and Target Domains via Link Prediction for Unsupervised Domain Adaptation on Graphs"
+        ],
+        "doi": "10.1145/3701551.3703519",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              10
+            ]
+          ]
+        },
+        "abstract": null
+      },
+      {
+        "title": [
+          "Stock Prediction with FinGAN++: A Multimodal Generative Framework for Market Simulation and Sentiment-Conditioned Forecasting"
+        ],
+        "doi": "10.2139/ssrn.5285701",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "abstract": null
+      }
+    ]
+  },
+  {
+    "name": "pmc_mirna_negative",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28miRNA+OR+microRNA%29+AND+drug+AND+%28%22negative+sample%22+OR+%22negative+sampling%22+OR+%22negative+association%22%29+AND+FIRST_PDATE%3A%5B2025-01-01+TO+2026-10-06%5D&pageSize=15&format=json&resultType=core",
+    "status": "ok",
+    "path": "improve/research/midrug_literature_20261006/raw/source_observed_pmc_mirna_negative.json",
+    "records": [
+      {
+        "title": "DVCH-LMI: A dual-view contrastive framework for lncRNA-miRNA interaction prediction under class imbalance.",
+        "doi": "10.1016/j.ijbiomac.2026.152448",
+        "id": "42106043",
+        "firstPublicationDate": "2026-05-07",
+        "abstractText": "Identifying long non-coding RNA (lncRNA) and microRNA (miRNA) interactions (LMIs) is essential for elucidating post-transcriptional regulation and disease-related molecular mechanisms. Accurate identification of LMIs can facilitate biomarker discovery, RNA-targeted therapeutics, and data-driven drug design. However, robust prediction and candidate prioritization remain challenging due to the limited number of experimentally validated interactions and the large number of unknown pairs. Accordingly, we propose DVCH-LMI, a dual-view contrastive heterogeneous representation learning framework. DVCH-LMI initializes node features with Doc2Vec embeddings trained on k-mer vectors, constructs an adjacency view and a similarity view over shared bipartite interaction semantics, and learns complementary embeddings using two heterogeneous encoders with identical architectures but independent parameters. A symmetric information noise-contrastive estimation (InfoNCE) loss is further introduced to achieve node-level cross-view alignment. The aligned embeddings are then fused, and interaction prediction is performed by a hybrid scorer composed of a similarity branch and a multi-layer perceptron (MLP) branch. To better align with candidate prioritization tasks in computational biology and therapeutic design, we integrate random negative sampling and hard negative sampling to enhance the model's candidate prioritization ability in an imbalanced candidate space. On an animal benchmark dataset, DVCH-LMI achieves AUC of 0.9465 and AUPR of 0.9468 under the 1:1 setting, and it maintains strong positive-oriented ranking performance under more imbalanced settings such as 1:20 and 1:50. Ablation studies verify the effectiveness of key components. Case studies on MALAT1 and NEAT1 further show that DVCH-LMI prioritizes literature-supported interactions. Cross-view alignment visualizations and structure-consistency analyses provide additional representational evidence for the interpretability and reliability of our model. Overall, DVCH-LMI serves as both an effective LMI predictive model and a robust candidate prioritization framework for data-sparse and highly class-imbalanced scenarios, with promising potential for RNA regulatory mechanism studies and RNA-guided drug design."
+      },
+      {
+        "title": "HybridGNN: a graph neural network approach for human miRNA-disease association prediction.",
+        "doi": "10.1093/bioinformatics/btag171",
+        "id": "41936073",
+        "firstPublicationDate": "2026-05-01",
+        "abstractText": "<h4>Motivation</h4>MicroRNAs (miRNAs) are small non-coding RNAs, typically 18-24 nucleotides in length, that play a pivotal role in RNA silencing and the post-transcriptional regulation of gene expression by targeting messenger RNAs (mRNAs). Dysregulation of these miRNAs has consistently been implicated in the onset and progression of a variety of complex human diseases.<h4>Results</h4>In this study, we propose a novel HybridGNN model that integrates a Graph Convolutional Network (GCN), a Graph Attention Network (GAT), and Matrix Decomposition with Matrix Factorization (MDMF) to predict potential miRNA-disease associations (MDAs). We incorporate five types of similarity in which three are derived from miRNAs and two are derived from diseases, to comprehensively explore and optimize multi-source feature information. The complementary interactions among these modules also help to mitigate the oversmoothing problem. The model utilizes neighboring nodes in a heterogeneous network to generate node embeddings via a message-passing mechanism. To improve computational efficiency, we employ a mini-batch gradient descent approach that partitions the graph into smaller sub-graphs, thereby enhancing the model's accuracy, speed, and scalability. As a result of these advanced techniques, HybridGNN achieved an area under the receiver operating characteristic curve (AUC-ROC) of 0.9715 using a dot-product classifier, outperforming several existing methods and underscoring its potential as a robust and accurate tool for predicting MDAs.<h4>Availability</h4>Code and data are freely available at https://github.com/mbasharatahmad/HybridGNN-miRNA-disease/."
+      },
+      {
+        "title": "Expression quantitative trait methylation across multiple cancer types with functional and therapeutic characterization using Onco-eQTM.",
+        "doi": "10.1093/nargab/lqag101",
+        "id": "42639287",
+        "firstPublicationDate": "2026-08-24",
+        "abstractText": "DNA methylation plays a crucial role in gene expression and tumorigenesis. Most pan-cancer resources primarily focus on genetic variants and their association with gene expression without clearly demonstrating how methylation itself regulates gene activity and clinical features. To address this gap, we developed Onco-eQTM, a web-based database that links DNA methylation at CpG sites to gene regulation and multiple functional and clinical layers across 27 cancer types. These layers include miRNA regulation and biological pathways, as well as immune cell infiltration and predicted drug response, enabling both functional and therapeutic interpretation. We analyzed 6880 TCGA samples and identified 5.25 million CpG-gene associations. Beyond gene expression, Onco-eQTM links CpG methylation to 4.52 million miRNA-related associations, 14.45 million drug-response associations, 13.6 million pathway activity associations from PARADIGM, and 3.55 million immune-infiltration associations covering 68 immune cell types. The database enables users to visualize how methylation impacts these biological and clinical factors. Onco-eQTM enables researchers to gain a deeper understanding of cancer-related methylation changes and identify potential therapeutic targets. The database is freely available at https://project.iith.ac.in/cgntlab/OncoeQTM/."
+      },
+      {
+        "title": "Low Tumor miR-369-3p Levels Combined with Plasma Hepatitis B Virus Pre-S2 Gene Deletion Mutation Predict Higher Hepatocellular Carcinoma Recurrence.",
+        "doi": "10.2147/jhc.s591511",
+        "id": "42299360",
+        "firstPublicationDate": "2026-06-10",
+        "abstractText": "<h4>Introduction</h4>Although resection surgery is a curative treatment for hepatocellular carcinoma (HCC), high HCC recurrence leads to poor patient survival. Chronic hepatitis B virus (HBV) infection is an important risk factor for HCC. Deletion mutation in HBV pre-S2 gene results in expression of pre-S2 mutant oncoprotein and represents an independent prognostic biomarker for HCC recurrence. MicroRNAs (miRNAs) are small non-coding RNAs that play key roles in HBV-related HCC.<h4>Methods</h4>This study aimed to identify the miRNAs whose expression levels in tumor tissues were correlated with pre-S2 gene deletion mutation and post-resection HCC recurrence and investigate their potential in combination with pre-S2 gene deletion mutation to predict HCC recurrence in a retrospective cohort of patients.<h4>Results</h4>The results showed that the expression level of miR-369-3p was decreased in tumor tissues of patients with pre-S2 gene deletion mutation or HCC recurrence. miR-369-3p was identified as a prognostic biomarker for HCC recurrence. Patients with pre-S2 gene deletion mutation combined with a low level of miR-369-3p had a higher risk of HCC recurrence than patients with either one or none of these two biomarkers. The combination of pre-S2 gene deletion mutation and miR-369-3p expression level showed a greater prognostic potential for HCC recurrence than either biomarker alone.<h4>Conclusion</h4>Collectively, miR-369-3p held exploratory promise in serving as a combination biomarker with pre-S2 gene deletion mutation to provide a better potential in predicting HBV-related HCC recurrence after curative surgical resection."
+      },
+      {
+        "title": "Cellular miRNA-31 and miRNA-125b as predictors of remission and major disease improvement in patients with early rheumatoid arthritis.",
+        "doi": "10.1038/s41598-026-46990-0",
+        "id": "42000839",
+        "firstPublicationDate": "2026-04-18",
+        "abstractText": "Rheumatoid arthritis (RA) is an autoimmune disease that impairs quality of life, highlighting the need for novel biomarkers for early diagnosis and improve disease management. This study explored the cellular microRNAs (miRNAs) profile in early RA to identify potential predictors of therapeutic response. We measured a panel of 768 miRNAs in peripheral blood mononuclear cells (PBMCs) from two early RA cohorts (<\u20096\u00a0months), stratified by sustained SDAI/CDAI remission and non-response to conventional therapy over 12\u00a0months. Initial screening identified 13 differentially expressed miRNAs (\u2265\u20091.5-fold change), which were validated in an independent cohort comprising 59 early RA patients and 54 healthy controls. MiRNA levels were quantified by qPCR, and predictive performance was assessed by receiver operating characteristic (ROC) curve. Among the 13 candidates, baseline levels of miRNA-31 and miRNA-125b predicted SDAI/CDAI remission at 6 months. Moreover, changes in their expression after 1 month of therapy predicted Boolean2.0 remission and achievement of major disease improvement (\u2265\u200985% reduction in disease activity) at 6 months. Higher baseline expressions of both miRNAs were consistently observed in patients who achieved remission. These findings suggest that cellular expression of miRNA-31 and miRNA-125b may serve as promising prognostic biomarkers for 6-month remission in early RA."
+      },
+      {
+        "title": "Metastasis of triple negative breast cancer is regulated by a targetable miR-342-E2F network.",
+        "doi": "10.1038/s44321-026-00496-4",
+        "id": "42629473",
+        "firstPublicationDate": "2026-08-21",
+        "abstractText": "Triple-negative breast cancer (TNBC) has a high incidence of metastasis and limited therapeutic options. Here, we identify a multimodal and targetable miR-342-E2F network that regulates metastatic outgrowth in TNBC. Through integrating clinical and experimental datasets, we uncover miR-342 as a suppressor of TNBC metastasis. Temporal re-expression of miR-342 significantly inhibited metastatic progression in both immunocompetent and xenograft TNBC models by specifically limiting the outgrowth of disseminated tumour cells. Using multi-omics profiling, we identified the global complement of miR-342 targets, demonstrating that it directly suppresses transcriptional and post-transcriptional networks that converge to dampen E2F signalling. Single-cell analysis of matched primary and metastatic patient-derived TNBC samples reveals activation of E2F signalling in metastasis that corresponds with reduced miR-342 host gene EVL expression. Furthermore, pharmacologic inhibition of this pathway with the CDK4/6 inhibitor palbociclib specifically reduces metastatic outgrowth of pre-established TNBC lesions. Our findings reveal that TNBCs with low miR-342/high E2F signalling have increased metastatic competency and may be amenable to CDK4/6 inhibitor therapy, offering a potential strategy for targeted intervention to limit TNBC metastasis."
+      },
+      {
+        "title": "Population-specific MicroRNA biomarker discovery in breast ductal carcinoma via explainable graph neural multi-omics modeling.",
+        "doi": "10.1186/s12885-026-16060-9",
+        "id": "42032484",
+        "firstPublicationDate": "2026-04-24",
+        "abstractText": "BACKGROUND: Ductal carcinoma, including ductal carcinoma in situ (DCIS) and Invasive ductal carcinoma (IDC), represents a major global health burden, yet South Asian populations remain markedly under-represented in molecular oncology research. MicroRNAs (miRNAs) play critical roles in tumor progression, immune regulation, and therapy response; however, their population-specific relevance remains unclear. This study characterizes miRNA dysregulation in South Asian breast ductal carcinoma and evaluates their diagnostic, prognostic, and therapeutic potential using multi-omics integration, explainable machine learning, and functional validation. METHODS: Tumor and matched adjacent-normal tissues from clinically confirmed ductal carcinoma patients (n\u2009=\u2009800; 500 IDC, 300 DCIS) underwent miRNA-sequencing and clinical annotation. Differential expression, survival modeling, and pathway enrichment analyzes were performed. A Graph Attention Network (GAT) classifier with SHAP-based interpretability was developed for subtype prediction and treatment-response stratification. External validation was performed using the TCGA-BRCA dataset. Anti-miR-21 lipid nanoparticle (LNP) inhibition assays were conducted for functional assessment. RESULTS: miR-21, miR-155, and miR-200b showed significant dysregulation in discovery cohort analysis, with diagnostic performance ranging from AUC 0.78\u20130.92. The GAT model achieved AUC\u2009=\u20090.96 (95% CI: 0.93\u20130.98), outperforming Random Forest (AUC\u2009=\u20090.94), and SHAP analysis highlighted miR-21 and miR-155 as the dominant contributors. Proof-of-concept anti-miR-21 LNP assays demonstrated 92% encapsulation efficiency, IC\u2085\u2080\u2009=\u200921.4\u00a0nM, and\u2009~\u200945% tumor volume reduction in preclinical murine models. CONCLUSIONS: This study presents the first large-scale characterization of miRNA dysregulation in South Asian breast ductal carcinoma and reveals distinct population-specific prognostic behavior, particularly for miR-155. The combined genomic profiling, explainable GNN-based prediction, and preclinical therapeutic validation support further investigation of miRNA biomarkers for clinical translation. Findings support development of region-tailored liquid biopsy panels and precision therapy strategies for South Asian breast cancer patients."
+      },
+      {
+        "title": "miCDER: a context-aware transformer model for joint miRNA-disease entity and multi-level regulatory relation extraction.",
+        "doi": "10.1186/s12864-025-12342-x",
+        "id": "41310422",
+        "firstPublicationDate": "2025-11-27",
+        "abstractText": "<h4>Background</h4>Dysregulation of microRNAs (miRNAs) is closely linked to the progression of diverse human diseases. However, the lack of a standardized, fine-grained dataset of miRNA-disease regulatory interactions and the limited ability of existing methods to capture multi-level regulatory relations hinder full understanding of these mechanisms.<h4>Results</h4>We constructed a fine-grained, multi-level annotated biomedical dataset covering ten entity types and thirteen relation categories, tailored for modeling microRNA-disease interactions. We then propose miCDER, a transformer-based model that jointly extracts entities and relations through contextual encoding and inter-span transformer attention. miCDER achieves state-of-the-art performance in both named entity recognition (NER F1\u2009=\u200987.34%) and relation extraction (RE F1\u2009=\u200977.28%), significantly outperforming all methods, including SpERT, STER, BiLSTM-CRF, and CNN. Compared to the strongest baseline SpERT, our model achieved improvements of 8.84% in NER F1 and 12.35% in RE F1, respectively. To validate generalizability, we evaluated miCDER on two public benchmark datasets and compared it with state-of-the-art methods, achieving competitive performance on CoNLL04 (NER F1\u2009=\u200988.83%, RE F1\u2009=\u200972.31%) and superior results on the biomedical ADE dataset (NER F1\u2009=\u200990.42%, RE F1\u2009=\u200982.81%). Applied to 27,051 curated miRNA-related text segments from PubMed, miCDER automatically extracted 93,221 high-confidence regulatory triplets to construct the miRNA-disease knowledge graph, MAAD-HCD-KG. Among these, 1,735 targeting relations not found in the microRNA target database (miRTarBase) demonstrate miCDER's ability to capture literature-supported regulatory associations that are not yet included in manually curated databases.<h4>Conclusion</h4>Our proposed miCDER model can serve as an effective tool for extracting fine-grained regulatory information from biomedical texts. The resultant knowledge graph constitutes a significant resource for the advancement of research on diseases related to microRNA."
+      },
+      {
+        "title": "MicroRNA-VEGF axis in gastric cancer: a novel therapeutic frontier.",
+        "doi": "10.1007/s12672-026-04724-8",
+        "id": "41758317",
+        "firstPublicationDate": "2026-02-27",
+        "abstractText": "Gastric cancer (GC) remains a major global health burden, characterized by high mortality and frequent diagnosis at advanced stages. A key driver of its aggressive progression is angiogenesis, predominantly regulated by vascular endothelial growth factor (VEGF). In parallel, microRNAs (miRNAs)\u2014small non-coding RNAs\u2014have emerged as critical post-transcriptional regulators whose dysregulation profoundly contributes to tumor development and progression. This review highlights the intricate interplay between miRNAs and VEGF in GC, focusing on the molecular mechanisms by which specific miRNAs modulate VEGF expression and downstream signaling. Tumor-suppressive miRNAs, such as miR-29a, miR-126, and miR-4316, directly target VEGF-A to inhibit tumor growth and angiogenesis, whereas oncogenic miRNAs, including miR-210, enhance VEGF expression and pro-angiogenic phenotypes. Targeting this miRNA\u2013VEGF axis represents a promising therapeutic strategy through the restoration of tumor-suppressive miRNAs or inhibition of oncogenic counterparts, potentially in synergy with existing treatments. However, clinical translation is challenged by issues related to in vivo delivery, stability, and specificity. Emerging technologies, including nanoparticle-based delivery systems and exosome-mediated transport, are beginning to overcome these obstacles. Integrating miRNA profiling into personalized treatment approaches may offer a new frontier in GC management, enabling targeted interventions to improve patient outcomes."
+      },
+      {
+        "title": "Association of Selected miRNAs (hsa-miR-27b, hsa-miR-128-3p, hsa-miR-145-5p, hsa-miR-552-3p) with HER2 Status and Chromosome 17 Centromere Copy Number Increase in Gastric Cancer",
+        "doi": null,
+        "id": "PMC13300470",
+        "firstPublicationDate": "2026-06-01",
+        "abstractText": null
+      },
+      {
+        "title": "Characterization of ZIC5 expression in esophageal squamous cell carcinoma and its association with patient survival.",
+        "doi": "10.3892/ol.2026.15834",
+        "id": "42698844",
+        "firstPublicationDate": "2026-08-26",
+        "abstractText": "Esophageal squamous cell carcinoma (ESCC) is a prevalent malignancy known for its aggressive nature and poor prognosis. The present study aimed to investigate the expression levels and clinical importance of the Zic family member 5 (ZIC5) gene in ESCC. Gene expression data and survival information obtained from The Cancer Genome Atlas and Gene Expression Omnibus were utilized. In 176 patients with surgically resected ESCC, immunohistochemical analysis was conducted to validate the expression of ZIC5 protein in cancerous and adjacent tissues. The findings of the present study revealed a significant upregulation of ZIC5 in ESCC compared with normal tissues (P<0.05), which was further corroborated by immunohistochemistry exhibiting a notable association between ZIC5 expression and clinical parameters such as tumor size, invasion depth, lymph node metastasis and TNM staging (P<0.05). Survival analysis further indicated that high ZIC5 expression was an independent prognostic factor for poor outcomes in patients with ESCC (hazard ratio=1.519; 95% CI: 1.017-2.269; P<0.05). In addition, bioinformatic analyses predicted that hsa-microRNA-212-5p may regulate ZIC5 mRNA and gene enrichment analysis suggested that ZIC5 may facilitate ESCC progression through involvement in the cell cycle and DNA repair pathways. In conclusion, ZIC5 is highly expressed in ESCC and associated with a poor prognosis, indicating its potential as a therapeutic target and biomarker for ESCC management. Further studies are warranted to elucidate the precise mechanisms underlying the role of ZIC5 in ESCC progression."
+      },
+      {
+        "title": "DHGCMDA: a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction.",
+        "doi": "10.1186/s12859-026-06436-w",
+        "id": "41922959",
+        "firstPublicationDate": "2026-04-01",
+        "abstractText": "BACKGROUND: Accumulating evidence demonstrates that microRNA (miRNA) dysregulation drives the pathogenesis of diverse human diseases via intricate, context-dependent molecular mechanisms. Hence, prediction of miRNA-disease association types is a critical prerequisite for dissecting functional roles of miRNAs in disease initiation and progression. Although computational methods offer cost-effective, time-efficient alternatives to wet-lab experiments for miRNA-disease association type prediction, most of them are hampered by three key limitations: excessive reliance on association-derived similarity metrics gives rise to quantification bias, traditional pairwise graph architectures inadequately capture high-order biological interactions, and existing representation learning strategies fail to generate consistent embeddings across heterogeneous views and modalities. RESULTS: To address these issues, this study presents DHGCMDA, a dual-view heterogeneous graph contrastive learning framework for miRNA-disease association type prediction. Specifically, dual-view hypergraphs are first constructed based on heterogeneous similarity data to avoid excessive reliance on association-derived similarity metrics. A hypergraph convolutional network is then employed to capture high-order topological relationships between miRNAs and diseases, with its convolution cooperatively integrated with contrastive learning, intra-modality for cross-view consistency and cross-modality for embedding space alignment, to enhance feature representation quality. Finally, an attention-guided adaptive view fusion strategy dynamically weights and integrates distinct view representations, and type-aware message passing via heterogeneous graph Transformer simultaneously enables prediction of association presence and functional types. 5-fold cross-validation on HMDD v2.0 and v3.2 datasets demonstrates that DHGCMDA outperforms several state-of-the-art methods. Furthermore, case studies on breast neoplasms and hepatocellular carcinoma reveal that most predicted association types are corroborated by published literature, thereby validating the efficacy of DHGCMDA in miRNA-disease association type prediction. CONCLUSIONS: DHGCMDA exhibits robust discriminative power and generalization capability, providing a reliable computational alternative for miRNA-disease association type prediction. The source code is publicly available at https://github.com/CDMBlab/DHGCMDA ."
+      },
+      {
+        "title": "Increased Expression of miR-326 Mediates Chemosensitivity in Pediatric Acute Lymphoblastic Leukemia Through &lt;i&gt;ABCA2&lt;/i&gt; and &lt;i&gt;YY1&lt;/i&gt; Downregulation: An Observational and Experimental Study.",
+        "doi": "10.1002/hsr2.72720",
+        "id": "42376363",
+        "firstPublicationDate": "2026-06-28",
+        "abstractText": "<h4>Background and aims</h4>Multidrug resistance (MDR) is a major determinant of relapse-associated mortality in pediatric acute lymphoblastic leukemia (pALL). Although miR-326 downregulation has been associated with poor prognosis, its role in chemoresistance remains undefined. This study investigated the mechanistic contribution of miR-326 to MDR in pALL.<h4>Methods</h4>miR-326 expression was quantified by RT-qPCR in 58 fresh bone marrow samples and 14 paired diagnosis-relapse slides from pALL patients. A multidrug-resistant CD10<sup>-</sup>CD34<sup>-</sup> B-cell acute lymphoblastic leukemia (B-ALL) cell line was transfected with miR-326 mimic, and drug sensitivity was assessed by MTT assay. Bioinformatic analyses identified ABCA2 and YY1 as potential targets of miR-326, which were validated by RT-qPCR, Western blotting, and dual-luciferase reporter assays.<h4>Results</h4>Low miR-326 expression was associated with relapse and reduced 4-year disease-free survival. Restoration of miR-326 expression enhanced chemosensitivity and downregulated ABCA2 and YY1 at both mRNA and protein levels. Reporter assays confirmed direct targeting of both genes.<h4>Conclusion</h4>miR-326 attenuates MDR in pALL through direct suppression of ABCA2 and YY1, highlighting its potential as a therapeutic target for overcoming chemoresistance in pediatric B-ALL."
+      },
+      {
+        "title": "Role of non-coding RNAs in O&lt;sup&gt;6&lt;/sup&gt;-methylguanine-DNA methyltransferase-positive glioblastoma (Review).",
+        "doi": "10.3892/ol.2026.15550",
+        "id": "41947894",
+        "firstPublicationDate": "2026-03-26",
+        "abstractText": "Glioblastoma (GBM) is the most aggressive primary tumor of the central nervous system. The standard treatment consists of maximal surgical resection followed by concurrent radiotherapy and temozolomide (TMZ) chemoradiotherapy; however, the frequent emergence of TMZ resistance remains a major determinant of poor prognosis. The expression of O<sup>6</sup>-methylguanine-DNA methyltransferase (MGMT) represents a central mechanism underlying resistance to TMZ chemotherapy. Although MGMT expression is primarily regulated by the methylation status of its promoter, it is also influenced by additional regulatory mechanisms. The present review therefore aims to systematically summarize the current understanding of how non-coding RNAs (ncRNAs), as key regulators, govern MGMT expression and contribute to this complex regulatory network. Specifically, it focuses on the roles of microRNAs (miRNAs/miRs), long ncRNAs (lncRNAs) and circular RNAs (circRNAs) in regulating MGMT expression. miRNAs regulate MGMT by directly binding to its mRNA or indirectly modulating upstream transcription factors. lncRNAs primarily act indirectly through competing endogenous RNA (ceRNA) networks, epigenetic remodeling or modulation of signaling pathways. circRNAs, often functioning as stable ceRNA molecules, provide an additional layer of complexity and stability in this regulatory network. Notably, interactions among different ncRNAs may be synergistic or antagonistic. Examples include the cooperative repression of MGMT by miR-181d and miR-409-3p, and the sequestration of miR-182-5p by lncRNA urothelial carcinoma-associated 1. Overall, the findings suggested that MGMT expression is governed by a dynamic, multi-layered regulatory system. Understanding this network has notable implications for elucidating GBM chemoresistance and identifying novel therapeutic strategies to reverse drug resistance."
+      },
+      {
+        "title": "lncRNA &lt;i&gt;TUG1&lt;/i&gt; mediates palmitic acid\u2011induced neuronal lipotoxic injury via the miR\u2011449a\u20115p/caspase\u20113 and Akt/GSK\u20113\u03b2 axes.",
+        "doi": "10.3892/ijmm.2026.5966",
+        "id": "42663279",
+        "firstPublicationDate": "2026-08-28",
+        "abstractText": "A close relationship exists between excessive lipids and structural and functional brain dysfunction, with the long non\u2011coding (lncRNA)\u2011microRNA (miR)\u2011mRNA network having an emerging role. Given the increasingly recognized role of the lncRNA taurine upregulated gene 1 (<i>TUG1</i>) in metabolic and neurodegenerative diseases, the present study investigated its function and mechanism in palmitic acid (PA)\u2011induced neuronal injury. Results showed that lncRNA <i>TUG1</i> expression was elevated in PA\u2011treated HT\u201122 and SH\u2011SY5Y cells. Moreover, cell\u2011based <i>in vitro</i> detection including reverse transcription\u2011quantitative polymerase chain reaction, western blotting and lactate dehydrogenase cytotoxicity assays demonstrated a positive association between lncRNA <i>TUG1</i> expression and lactate dehydrogenase release and cleaved caspase\u20113 levels, whereas a negative association was observed with the expression levels of Bcl\u20112 and synaptic proteins (synapsin\u20111, synaptotagmin\u20111 and brain\u2011derived neurotrophic factor) and the ratios of phosphorylated (p\u2011)Akt/Akt and p\u2011GSK\u20113\u03b2/GSK\u20113\u03b2. The downregulation of lncRNA <i>TUG1</i> reversed PA\u2011induced damage in HT\u201122 cells. Bioinformatics and dual\u2011luciferase assays identified miR\u2011449a\u20115p as the direct target of lncRNA <i>TUG1</i>. Rescue experiments revealed that miR\u2011449a\u20115p mediated the effects of lncRNA <i>TUG1</i> by targeting caspase\u20113 via the Akt/GSK\u20113\u03b2 pathway. Collectively, these findings establish a causal axis in which lncRNA <i>TUG1</i> derepresses caspase\u20113 and suppresses Akt/GSK\u20113\u03b2 signaling by sponging miR\u2011449a\u20115p, thereby driving neuronal lipotoxic injury."
+      }
+    ]
+  }
+]

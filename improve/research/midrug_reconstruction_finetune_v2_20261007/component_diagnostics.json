@@ -1,0 +1,1154 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "config": "keep",
+      "fold": 0,
+      "checkpoint_sha256": "9a5ee68dbfe41fc286c3bae457bce2ddc7fe533f7eb6b7b6c5674b8851d358c4",
+      "selected_stage_epoch": 0,
+      "selected": {
+        "train": {
+          "auc": 0.9576249153087881,
+          "ap": 0.9197651013100059,
+          "bce": 0.2481040507555008
+        },
+        "val": {
+          "auc": 0.9533650331543154,
+          "ap": 0.9156102620748934,
+          "bce": 0.25645068287849426
+        },
+        "full_node_reconstruction": {
+          "mean": 0.6818634271621704,
+          "miRNA": 0.7699447870254517,
+          "drug": 0.5937821269035339
+        },
+        "train_minus_val": {
+          "auc": 0.004259882154472705,
+          "ap": 0.004154839235112506
+        }
+      },
+      "selected_parameter_shift_from_source": {
+        "encoder": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 32
+        },
+        "reconstruction": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 14
+        },
+        "head": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 24
+        }
+      },
+      "final_step": {
+        "stage_epoch": 100,
+        "auc": 0.9523481033550957,
+        "ap": 0.9132094715647896,
+        "train_mode_pre_update_bce": 0.2358335703611374,
+        "sampled_pre_update_reconstruction": 0.5752780437469482
+      },
+      "final_minus_source": {
+        "auc": -0.0010169297992197457,
+        "ap": -0.0024007905101038896
+      },
+      "curve_snapshots": [
+        {
+          "stage_epoch": 0,
+          "optimizer_update": false,
+          "inner_auc": 0.9533650331543154,
+          "inner_ap": 0.9156102620748935,
+          "selection_score": 0.9344876476146045
+        },
+        {
+          "stage_epoch": 1,
+          "optimizer_update": true,
+          "inner_auc": 0.9518042240576657,
+          "inner_ap": 0.9123221109172209,
+          "selection_score": 0.9320631674874433,
+          "bce": 0.2481040060520172,
+          "reconstruction": 0.700937032699585,
+          "weight": 10.0,
+          "loss": 7.257474422454834
+        },
+        {
+          "stage_epoch": 10,
+          "optimizer_update": true,
+          "inner_auc": 0.9522721233743182,
+          "inner_ap": 0.9130141814623889,
+          "selection_score": 0.9326431524183536,
+          "bce": 0.24266646802425385,
+          "reconstruction": 0.6211948394775391,
+          "weight": 10.0,
+          "loss": 6.454614639282227
+        },
+        {
+          "stage_epoch": 50,
+          "optimizer_update": true,
+          "inner_auc": 0.9521781142455596,
+          "inner_ap": 0.9128084288543491,
+          "selection_score": 0.9324932715499543,
+          "bce": 0.23924702405929565,
+          "reconstruction": 0.5869659781455994,
+          "weight": 10.0,
+          "loss": 6.1089067459106445
+        },
+        {
+          "stage_epoch": 99,
+          "optimizer_update": true,
+          "inner_auc": 0.9525318289583318,
+          "inner_ap": 0.9134488590189289,
+          "selection_score": 0.9329903439886303,
+          "bce": 0.23610062897205353,
+          "reconstruction": 0.5821442008018494,
+          "weight": 10.0,
+          "loss": 6.05754280090332
+        },
+        {
+          "stage_epoch": 100,
+          "optimizer_update": true,
+          "inner_auc": 0.9523481033550957,
+          "inner_ap": 0.9132094715647896,
+          "selection_score": 0.9327787874599427,
+          "bce": 0.2358335703611374,
+          "reconstruction": 0.5752780437469482,
+          "weight": 10.0,
+          "loss": 5.988614082336426
+        }
+      ]
+    },
+    {
+      "config": "off",
+      "fold": 0,
+      "checkpoint_sha256": "065b6e02de7d55b9a65172a0d5804bf26123d5bb22a69feabbceb6825ea65921",
+      "selected_stage_epoch": 0,
+      "selected": {
+        "train": {
+          "auc": 0.9576249153087881,
+          "ap": 0.9197651013100059,
+          "bce": 0.2481040507555008
+        },
+        "val": {
+          "auc": 0.9533650331543154,
+          "ap": 0.9156102620748934,
+          "bce": 0.25645068287849426
+        },
+        "full_node_reconstruction": {
+          "mean": 0.6818634271621704,
+          "miRNA": 0.7699447870254517,
+          "drug": 0.5937821269035339
+        },
+        "train_minus_val": {
+          "auc": 0.004259882154472705,
+          "ap": 0.004154839235112506
+        }
+      },
+      "selected_parameter_shift_from_source": {
+        "encoder": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 32
+        },
+        "reconstruction": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 14
+        },
+        "head": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 24
+        }
+      },
+      "final_step": {
+        "stage_epoch": 100,
+        "auc": 0.9527550469809548,
+        "ap": 0.9135506918034686,
+        "train_mode_pre_update_bce": 0.23167984187602997,
+        "sampled_pre_update_reconstruction": 0.7020835280418396
+      },
+      "final_minus_source": {
+        "auc": -0.0006099861733606105,
+        "ap": -0.002059570271424893
+      },
+      "curve_snapshots": [
+        {
+          "stage_epoch": 0,
+          "optimizer_update": false,
+          "inner_auc": 0.9533650331543154,
+          "inner_ap": 0.9156102620748935,
+          "selection_score": 0.9344876476146045
+        },
+        {
+          "stage_epoch": 1,
+          "optimizer_update": true,
+          "inner_auc": 0.9427840696165501,
+          "inner_ap": 0.8920856478003094,
+          "selection_score": 0.9174348587084298,
+          "bce": 0.2481040060520172,
+          "reconstruction": 0.700937032699585,
+          "weight": 0.0,
+          "loss": 0.2481040060520172
+        },
+        {
+          "stage_epoch": 10,
+          "optimizer_update": true,
+          "inner_auc": 0.9529211727016377,
+          "inner_ap": 0.9139131958657851,
+          "selection_score": 0.9334171842837113,
+          "bce": 0.24210822582244873,
+          "reconstruction": 0.6779763698577881,
+          "weight": 0.0,
+          "loss": 0.24210822582244873
+        },
+        {
+          "stage_epoch": 50,
+          "optimizer_update": true,
+          "inner_auc": 0.9530147525649684,
+          "inner_ap": 0.9139856486383336,
+          "selection_score": 0.9335002006016511,
+          "bce": 0.23691602051258087,
+          "reconstruction": 0.6846115589141846,
+          "weight": 0.0,
+          "loss": 0.23691602051258087
+        },
+        {
+          "stage_epoch": 99,
+          "optimizer_update": true,
+          "inner_auc": 0.9527322959132644,
+          "inner_ap": 0.9136120778608523,
+          "selection_score": 0.9331721868870584,
+          "bce": 0.23179638385772705,
+          "reconstruction": 0.7111548185348511,
+          "weight": 0.0,
+          "loss": 0.23179638385772705
+        },
+        {
+          "stage_epoch": 100,
+          "optimizer_update": true,
+          "inner_auc": 0.9527550469809548,
+          "inner_ap": 0.9135506918034686,
+          "selection_score": 0.9331528693922118,
+          "bce": 0.23167984187602997,
+          "reconstruction": 0.7020835280418396,
+          "weight": 0.0,
+          "loss": 0.23167984187602997
+        }
+      ]
+    },
+    {
+      "config": "decay",
+      "fold": 0,
+      "checkpoint_sha256": "d0c20a0943692f2702375a54a6e476eed9a8e8713dbbcf67f516937450ac7f65",
+      "selected_stage_epoch": 0,
+      "selected": {
+        "train": {
+          "auc": 0.9576249153087881,
+          "ap": 0.9197651013100059,
+          "bce": 0.2481040507555008
+        },
+        "val": {
+          "auc": 0.9533650331543154,
+          "ap": 0.9156102620748934,
+          "bce": 0.25645068287849426
+        },
+        "full_node_reconstruction": {
+          "mean": 0.6818634271621704,
+          "miRNA": 0.7699447870254517,
+          "drug": 0.5937821269035339
+        },
+        "train_minus_val": {
+          "auc": 0.004259882154472705,
+          "ap": 0.004154839235112506
+        }
+      },
+      "selected_parameter_shift_from_source": {
+        "encoder": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 32
+        },
+        "reconstruction": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 14
+        },
+        "head": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 24
+        }
+      },
+      "final_step": {
+        "stage_epoch": 100,
+        "auc": 0.952678208469321,
+        "ap": 0.9136568133162556,
+        "train_mode_pre_update_bce": 0.23405404388904572,
+        "sampled_pre_update_reconstruction": 0.578342080116272
+      },
+      "final_minus_source": {
+        "auc": -0.0006868246849943693,
+        "ap": -0.001953448758637899
+      },
+      "curve_snapshots": [
+        {
+          "stage_epoch": 0,
+          "optimizer_update": false,
+          "inner_auc": 0.9533650331543154,
+          "inner_ap": 0.9156102620748935,
+          "selection_score": 0.9344876476146045
+        },
+        {
+          "stage_epoch": 1,
+          "optimizer_update": true,
+          "inner_auc": 0.9518050825885219,
+          "inner_ap": 0.9123246254949677,
+          "selection_score": 0.9320648540417449,
+          "bce": 0.2481040060520172,
+          "reconstruction": 0.700937032699585,
+          "weight": 9.9,
+          "loss": 7.187380313873291
+        },
+        {
+          "stage_epoch": 10,
+          "optimizer_update": true,
+          "inner_auc": 0.9523257815528333,
+          "inner_ap": 0.9131028577405799,
+          "selection_score": 0.9327143196467066,
+          "bce": 0.24264025688171387,
+          "reconstruction": 0.6213811635971069,
+          "weight": 9.0,
+          "loss": 5.835070610046387
+        },
+        {
+          "stage_epoch": 50,
+          "optimizer_update": true,
+          "inner_auc": 0.9522983085654336,
+          "inner_ap": 0.912977903303822,
+          "selection_score": 0.9326381059346278,
+          "bce": 0.23879466950893402,
+          "reconstruction": 0.589072048664093,
+          "weight": 5.0,
+          "loss": 3.184154748916626
+        },
+        {
+          "stage_epoch": 99,
+          "optimizer_update": true,
+          "inner_auc": 0.9526696231607588,
+          "inner_ap": 0.9136540914739368,
+          "selection_score": 0.9331618573173478,
+          "bce": 0.23415756225585938,
+          "reconstruction": 0.587903618812561,
+          "weight": 0.10000000000000009,
+          "loss": 0.292947918176651
+        },
+        {
+          "stage_epoch": 100,
+          "optimizer_update": true,
+          "inner_auc": 0.952678208469321,
+          "inner_ap": 0.9136568133162556,
+          "selection_score": 0.9331675108927884,
+          "bce": 0.23405404388904572,
+          "reconstruction": 0.578342080116272,
+          "weight": 0.0,
+          "loss": 0.23405404388904572
+        }
+      ]
+    },
+    {
+      "config": "keep",
+      "fold": 1,
+      "checkpoint_sha256": "957f7106a488c8a9a58db2a4953ce16216ce5d407796ffbbed5e7609afe4b15b",
+      "selected_stage_epoch": 0,
+      "selected": {
+        "train": {
+          "auc": 0.9616077044202412,
+          "ap": 0.9283934020359863,
+          "bce": 0.23483508825302124
+        },
+        "val": {
+          "auc": 0.956176599174913,
+          "ap": 0.9198746510179061,
+          "bce": 0.2500387132167816
+        },
+        "full_node_reconstruction": {
+          "mean": 0.5020349025726318,
+          "miRNA": 0.5216284990310669,
+          "drug": 0.48244136571884155
+        },
+        "train_minus_val": {
+          "auc": 0.005431105245328194,
+          "ap": 0.008518751018080195
+        }
+      },
+      "selected_parameter_shift_from_source": {
+        "encoder": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 32
+        },
+        "reconstruction": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 14
+        },
+        "head": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 24
+        }
+      },
+      "final_step": {
+        "stage_epoch": 100,
+        "auc": 0.9555942455213311,
+        "ap": 0.9182420110790757,
+        "train_mode_pre_update_bce": 0.2231602668762207,
+        "sampled_pre_update_reconstruction": 0.4262852370738983
+      },
+      "final_minus_source": {
+        "auc": -0.0005823536535819462,
+        "ap": -0.0016326399388304491
+      },
+      "curve_snapshots": [
+        {
+          "stage_epoch": 0,
+          "optimizer_update": false,
+          "inner_auc": 0.956176599174913,
+          "inner_ap": 0.9198746510179061,
+          "selection_score": 0.9380256250964096
+        },
+        {
+          "stage_epoch": 1,
+          "optimizer_update": true,
+          "inner_auc": 0.9547220034339969,
+          "inner_ap": 0.9163502917066132,
+          "selection_score": 0.935536147570305,
+          "bce": 0.2348351627588272,
+          "reconstruction": 0.49580344557762146,
+          "weight": 10.0,
+          "loss": 5.192869663238525
+        },
+        {
+          "stage_epoch": 10,
+          "optimizer_update": true,
+          "inner_auc": 0.9557561535798859,
+          "inner_ap": 0.9186685160963036,
+          "selection_score": 0.9372123348380947,
+          "bce": 0.2311541587114334,
+          "reconstruction": 0.46021533012390137,
+          "weight": 10.0,
+          "loss": 4.833307266235352
+        },
+        {
+          "stage_epoch": 50,
+          "optimizer_update": true,
+          "inner_auc": 0.9555701955179383,
+          "inner_ap": 0.9182432626199043,
+          "selection_score": 0.9369067290689213,
+          "bce": 0.22668950259685516,
+          "reconstruction": 0.4305676817893982,
+          "weight": 10.0,
+          "loss": 4.5323662757873535
+        },
+        {
+          "stage_epoch": 99,
+          "optimizer_update": true,
+          "inner_auc": 0.9554662651461339,
+          "inner_ap": 0.9180006333120331,
+          "selection_score": 0.9367334492290835,
+          "bce": 0.22301769256591797,
+          "reconstruction": 0.41403600573539734,
+          "weight": 10.0,
+          "loss": 4.363377571105957
+        },
+        {
+          "stage_epoch": 100,
+          "optimizer_update": true,
+          "inner_auc": 0.9555942455213311,
+          "inner_ap": 0.9182420110790757,
+          "selection_score": 0.9369181283002034,
+          "bce": 0.2231602668762207,
+          "reconstruction": 0.4262852370738983,
+          "weight": 10.0,
+          "loss": 4.4860124588012695
+        }
+      ]
+    },
+    {
+      "config": "off",
+      "fold": 1,
+      "checkpoint_sha256": "86c07618f75d2664ef64d9bf8812c57860cd629df6159def4e347e4a4acee1f9",
+      "selected_stage_epoch": 0,
+      "selected": {
+        "train": {
+          "auc": 0.9616077044202412,
+          "ap": 0.9283934020359863,
+          "bce": 0.23483508825302124
+        },
+        "val": {
+          "auc": 0.956176599174913,
+          "ap": 0.9198746510179059,
+          "bce": 0.2500387132167816
+        },
+        "full_node_reconstruction": {
+          "mean": 0.5020349025726318,
+          "miRNA": 0.5216284990310669,
+          "drug": 0.48244136571884155
+        },
+        "train_minus_val": {
+          "auc": 0.005431105245328194,
+          "ap": 0.008518751018080417
+        }
+      },
+      "selected_parameter_shift_from_source": {
+        "encoder": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 32
+        },
+        "reconstruction": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 14
+        },
+        "head": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 24
+        }
+      },
+      "final_step": {
+        "stage_epoch": 100,
+        "auc": 0.9555912392709071,
+        "ap": 0.9185776779687452,
+        "train_mode_pre_update_bce": 0.2204124629497528,
+        "sampled_pre_update_reconstruction": 0.4924376606941223
+      },
+      "final_minus_source": {
+        "auc": -0.0005853599040059887,
+        "ap": -0.0012969730491608766
+      },
+      "curve_snapshots": [
+        {
+          "stage_epoch": 0,
+          "optimizer_update": false,
+          "inner_auc": 0.956176599174913,
+          "inner_ap": 0.9198746510179061,
+          "selection_score": 0.9380256250964096
+        },
+        {
+          "stage_epoch": 1,
+          "optimizer_update": true,
+          "inner_auc": 0.9510148671967402,
+          "inner_ap": 0.9102528345296741,
+          "selection_score": 0.9306338508632072,
+          "bce": 0.2348351627588272,
+          "reconstruction": 0.49580344557762146,
+          "weight": 0.0,
+          "loss": 0.2348351627588272
+        },
+        {
+          "stage_epoch": 10,
+          "optimizer_update": true,
+          "inner_auc": 0.9558892875272389,
+          "inner_ap": 0.919320694482535,
+          "selection_score": 0.9376049910048869,
+          "bce": 0.23007702827453613,
+          "reconstruction": 0.484026700258255,
+          "weight": 0.0,
+          "loss": 0.23007702827453613
+        },
+        {
+          "stage_epoch": 50,
+          "optimizer_update": true,
+          "inner_auc": 0.9557394044703803,
+          "inner_ap": 0.9187410683343714,
+          "selection_score": 0.9372402364023759,
+          "bce": 0.2248024344444275,
+          "reconstruction": 0.4810504913330078,
+          "weight": 0.0,
+          "loss": 0.2248024344444275
+        },
+        {
+          "stage_epoch": 99,
+          "optimizer_update": true,
+          "inner_auc": 0.9554460803218577,
+          "inner_ap": 0.9188352026709414,
+          "selection_score": 0.9371406414963996,
+          "bce": 0.22039496898651123,
+          "reconstruction": 0.48829370737075806,
+          "weight": 0.0,
+          "loss": 0.22039496898651123
+        },
+        {
+          "stage_epoch": 100,
+          "optimizer_update": true,
+          "inner_auc": 0.9555912392709071,
+          "inner_ap": 0.9185776779687452,
+          "selection_score": 0.9370844586198261,
+          "bce": 0.2204124629497528,
+          "reconstruction": 0.4924376606941223,
+          "weight": 0.0,
+          "loss": 0.2204124629497528
+        }
+      ]
+    },
+    {
+      "config": "decay",
+      "fold": 1,
+      "checkpoint_sha256": "a0ff88b10bce5529fae84c247cbf138b9dfcb7bff19b7aba376d63b04fc9aa06",
+      "selected_stage_epoch": 0,
+      "selected": {
+        "train": {
+          "auc": 0.9616077044202412,
+          "ap": 0.9283934020359863,
+          "bce": 0.23483508825302124
+        },
+        "val": {
+          "auc": 0.956176599174913,
+          "ap": 0.9198746510179061,
+          "bce": 0.250038743019104
+        },
+        "full_node_reconstruction": {
+          "mean": 0.5020349025726318,
+          "miRNA": 0.5216284990310669,
+          "drug": 0.48244136571884155
+        },
+        "train_minus_val": {
+          "auc": 0.005431105245328194,
+          "ap": 0.008518751018080195
+        }
+      },
+      "selected_parameter_shift_from_source": {
+        "encoder": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 32
+        },
+        "reconstruction": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 14
+        },
+        "head": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 24
+        }
+      },
+      "final_step": {
+        "stage_epoch": 100,
+        "auc": 0.9554761428260987,
+        "ap": 0.9181290716924753,
+        "train_mode_pre_update_bce": 0.22111572325229645,
+        "sampled_pre_update_reconstruction": 0.43207988142967224
+      },
+      "final_minus_source": {
+        "auc": -0.0007004563488143267,
+        "ap": -0.001745579325430846
+      },
+      "curve_snapshots": [
+        {
+          "stage_epoch": 0,
+          "optimizer_update": false,
+          "inner_auc": 0.956176599174913,
+          "inner_ap": 0.9198746510179061,
+          "selection_score": 0.9380256250964096
+        },
+        {
+          "stage_epoch": 1,
+          "optimizer_update": true,
+          "inner_auc": 0.9547215739696506,
+          "inner_ap": 0.9163482268037394,
+          "selection_score": 0.9355349003866951,
+          "bce": 0.2348351627588272,
+          "reconstruction": 0.49580344557762146,
+          "weight": 9.9,
+          "loss": 5.143289089202881
+        },
+        {
+          "stage_epoch": 10,
+          "optimizer_update": true,
+          "inner_auc": 0.9557664607241971,
+          "inner_ap": 0.9186703787237831,
+          "selection_score": 0.9372184197239901,
+          "bce": 0.23105783760547638,
+          "reconstruction": 0.4597017467021942,
+          "weight": 9.0,
+          "loss": 4.368373394012451
+        },
+        {
+          "stage_epoch": 50,
+          "optimizer_update": true,
+          "inner_auc": 0.9555938160569848,
+          "inner_ap": 0.9182927358585179,
+          "selection_score": 0.9369432759577514,
+          "bce": 0.22618956863880157,
+          "reconstruction": 0.4308657944202423,
+          "weight": 5.0,
+          "loss": 2.380518674850464
+        },
+        {
+          "stage_epoch": 99,
+          "optimizer_update": true,
+          "inner_auc": 0.9554336258558151,
+          "inner_ap": 0.9183394351080092,
+          "selection_score": 0.9368865304819122,
+          "bce": 0.22120681405067444,
+          "reconstruction": 0.4202969968318939,
+          "weight": 0.10000000000000009,
+          "loss": 0.26323652267456055
+        },
+        {
+          "stage_epoch": 100,
+          "optimizer_update": true,
+          "inner_auc": 0.9554761428260987,
+          "inner_ap": 0.9181290716924753,
+          "selection_score": 0.936802607259287,
+          "bce": 0.22111572325229645,
+          "reconstruction": 0.43207988142967224,
+          "weight": 0.0,
+          "loss": 0.22111572325229645
+        }
+      ]
+    },
+    {
+      "config": "keep",
+      "fold": 2,
+      "checkpoint_sha256": "38ff054515b35d8fc362a45fd80d04439d5169cc1402a068df134e984a81248e",
+      "selected_stage_epoch": 0,
+      "selected": {
+        "train": {
+          "auc": 0.9609962810562289,
+          "ap": 0.9276792523526055,
+          "bce": 0.23765772581100464
+        },
+        "val": {
+          "auc": 0.9515958137012857,
+          "ap": 0.9067868312693458,
+          "bce": 0.26274606585502625
+        },
+        "full_node_reconstruction": {
+          "mean": 0.600196361541748,
+          "miRNA": 0.6362701058387756,
+          "drug": 0.5641226768493652
+        },
+        "train_minus_val": {
+          "auc": 0.009400467354943265,
+          "ap": 0.020892421083259727
+        }
+      },
+      "selected_parameter_shift_from_source": {
+        "encoder": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 32
+        },
+        "reconstruction": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 14
+        },
+        "head": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 24
+        }
+      },
+      "final_step": {
+        "stage_epoch": 100,
+        "auc": 0.9513753962572858,
+        "ap": 0.9057485790819385,
+        "train_mode_pre_update_bce": 0.2277670055627823,
+        "sampled_pre_update_reconstruction": 0.5183548927307129
+      },
+      "final_minus_source": {
+        "auc": -0.00022041744399980967,
+        "ap": -0.0010382521874072737
+      },
+      "curve_snapshots": [
+        {
+          "stage_epoch": 0,
+          "optimizer_update": false,
+          "inner_auc": 0.9515958137012857,
+          "inner_ap": 0.9067868312693458,
+          "selection_score": 0.9291913224853157
+        },
+        {
+          "stage_epoch": 1,
+          "optimizer_update": true,
+          "inner_auc": 0.9501684711107063,
+          "inner_ap": 0.9021162813334109,
+          "selection_score": 0.9261423762220586,
+          "bce": 0.2376575469970703,
+          "reconstruction": 0.5931730270385742,
+          "weight": 10.0,
+          "loss": 6.1693878173828125
+        },
+        {
+          "stage_epoch": 10,
+          "optimizer_update": true,
+          "inner_auc": 0.9509169451603118,
+          "inner_ap": 0.9043938447828388,
+          "selection_score": 0.9276553949715753,
+          "bce": 0.23463992774486542,
+          "reconstruction": 0.555133581161499,
+          "weight": 10.0,
+          "loss": 5.785975933074951
+        },
+        {
+          "stage_epoch": 50,
+          "optimizer_update": true,
+          "inner_auc": 0.9512297402855201,
+          "inner_ap": 0.905485367342644,
+          "selection_score": 0.928357553814082,
+          "bce": 0.23118841648101807,
+          "reconstruction": 0.5546846389770508,
+          "weight": 10.0,
+          "loss": 5.778034687042236
+        },
+        {
+          "stage_epoch": 99,
+          "optimizer_update": true,
+          "inner_auc": 0.9510922479227911,
+          "inner_ap": 0.9050419543629183,
+          "selection_score": 0.9280671011428547,
+          "bce": 0.22753341495990753,
+          "reconstruction": 0.5407371520996094,
+          "weight": 10.0,
+          "loss": 5.634904861450195
+        },
+        {
+          "stage_epoch": 100,
+          "optimizer_update": true,
+          "inner_auc": 0.9513753962572858,
+          "inner_ap": 0.9057485790819385,
+          "selection_score": 0.9285619876696122,
+          "bce": 0.2277670055627823,
+          "reconstruction": 0.5183548927307129,
+          "weight": 10.0,
+          "loss": 5.41131591796875
+        }
+      ]
+    },
+    {
+      "config": "off",
+      "fold": 2,
+      "checkpoint_sha256": "7760ba23ad42a679f6e4e3ce32f14c2ef86888a8c1754ab1b532e27c0192cc25",
+      "selected_stage_epoch": 0,
+      "selected": {
+        "train": {
+          "auc": 0.9609962810562289,
+          "ap": 0.9276792523526055,
+          "bce": 0.23765771090984344
+        },
+        "val": {
+          "auc": 0.9515958137012857,
+          "ap": 0.9067868312693458,
+          "bce": 0.26274606585502625
+        },
+        "full_node_reconstruction": {
+          "mean": 0.600196361541748,
+          "miRNA": 0.6362701058387756,
+          "drug": 0.5641226768493652
+        },
+        "train_minus_val": {
+          "auc": 0.009400467354943265,
+          "ap": 0.020892421083259727
+        }
+      },
+      "selected_parameter_shift_from_source": {
+        "encoder": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 32
+        },
+        "reconstruction": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 14
+        },
+        "head": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 24
+        }
+      },
+      "final_step": {
+        "stage_epoch": 100,
+        "auc": 0.9502780353372559,
+        "ap": 0.9021133946270645,
+        "train_mode_pre_update_bce": 0.2216397225856781,
+        "sampled_pre_update_reconstruction": 0.6192412376403809
+      },
+      "final_minus_source": {
+        "auc": -0.001317778364029798,
+        "ap": -0.004673436642281259
+      },
+      "curve_snapshots": [
+        {
+          "stage_epoch": 0,
+          "optimizer_update": false,
+          "inner_auc": 0.9515958137012857,
+          "inner_ap": 0.9067868312693458,
+          "selection_score": 0.9291913224853157
+        },
+        {
+          "stage_epoch": 1,
+          "optimizer_update": true,
+          "inner_auc": 0.949802827358574,
+          "inner_ap": 0.9029899910609955,
+          "selection_score": 0.9263964092097847,
+          "bce": 0.2376575469970703,
+          "reconstruction": 0.5931730270385742,
+          "weight": 0.0,
+          "loss": 0.2376575469970703
+        },
+        {
+          "stage_epoch": 10,
+          "optimizer_update": true,
+          "inner_auc": 0.9509435843055906,
+          "inner_ap": 0.9046565046606605,
+          "selection_score": 0.9278000444831256,
+          "bce": 0.23253311216831207,
+          "reconstruction": 0.5905517339706421,
+          "weight": 0.0,
+          "loss": 0.23253311216831207
+        },
+        {
+          "stage_epoch": 50,
+          "optimizer_update": true,
+          "inner_auc": 0.9505607540081172,
+          "inner_ap": 0.9031273108947124,
+          "selection_score": 0.9268440324514149,
+          "bce": 0.22652828693389893,
+          "reconstruction": 0.6261368989944458,
+          "weight": 0.0,
+          "loss": 0.22652828693389893
+        },
+        {
+          "stage_epoch": 99,
+          "optimizer_update": true,
+          "inner_auc": 0.9502466698920082,
+          "inner_ap": 0.9023017139786375,
+          "selection_score": 0.9262741919353228,
+          "bce": 0.22174280881881714,
+          "reconstruction": 0.6350898742675781,
+          "weight": 0.0,
+          "loss": 0.22174280881881714
+        },
+        {
+          "stage_epoch": 100,
+          "optimizer_update": true,
+          "inner_auc": 0.9502780353372559,
+          "inner_ap": 0.9021133946270645,
+          "selection_score": 0.9261957149821602,
+          "bce": 0.2216397225856781,
+          "reconstruction": 0.6192412376403809,
+          "weight": 0.0,
+          "loss": 0.2216397225856781
+        }
+      ]
+    },
+    {
+      "config": "decay",
+      "fold": 2,
+      "checkpoint_sha256": "7836ab8b3c4d334745186af484d4c10b8f2774a62d53e0099c8dddd324acb017",
+      "selected_stage_epoch": 0,
+      "selected": {
+        "train": {
+          "auc": 0.9609962810562289,
+          "ap": 0.9276792523526055,
+          "bce": 0.23765772581100464
+        },
+        "val": {
+          "auc": 0.9515958137012857,
+          "ap": 0.9067868312693458,
+          "bce": 0.26274606585502625
+        },
+        "full_node_reconstruction": {
+          "mean": 0.600196361541748,
+          "miRNA": 0.6362701058387756,
+          "drug": 0.5641226768493652
+        },
+        "train_minus_val": {
+          "auc": 0.009400467354943265,
+          "ap": 0.020892421083259727
+        }
+      },
+      "selected_parameter_shift_from_source": {
+        "encoder": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 32
+        },
+        "reconstruction": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 14
+        },
+        "head": {
+          "l2": 0.0,
+          "relative_l2": 0.0,
+          "parameter_tensors": 24
+        }
+      },
+      "final_step": {
+        "stage_epoch": 100,
+        "auc": 0.9511502525133175,
+        "ap": 0.9053527121168733,
+        "train_mode_pre_update_bce": 0.2254399210214615,
+        "sampled_pre_update_reconstruction": 0.5252597332000732
+      },
+      "final_minus_source": {
+        "auc": -0.00044556118796812427,
+        "ap": -0.0014341191524724906
+      },
+      "curve_snapshots": [
+        {
+          "stage_epoch": 0,
+          "optimizer_update": false,
+          "inner_auc": 0.9515958137012857,
+          "inner_ap": 0.9067868312693458,
+          "selection_score": 0.9291913224853157
+        },
+        {
+          "stage_epoch": 1,
+          "optimizer_update": true,
+          "inner_auc": 0.9501671821198058,
+          "inner_ap": 0.9021142406943055,
+          "selection_score": 0.9261407114070557,
+          "bce": 0.2376575469970703,
+          "reconstruction": 0.5931730270385742,
+          "weight": 9.9,
+          "loss": 6.11007022857666
+        },
+        {
+          "stage_epoch": 10,
+          "optimizer_update": true,
+          "inner_auc": 0.9509113595330759,
+          "inner_ap": 0.9043890878501399,
+          "selection_score": 0.927650223691608,
+          "bce": 0.23459571599960327,
+          "reconstruction": 0.555150032043457,
+          "weight": 9.0,
+          "loss": 5.230946063995361
+        },
+        {
+          "stage_epoch": 50,
+          "optimizer_update": true,
+          "inner_auc": 0.951176032331329,
+          "inner_ap": 0.9054081506005122,
+          "selection_score": 0.9282920914659205,
+          "bce": 0.23068906366825104,
+          "reconstruction": 0.5570613145828247,
+          "weight": 5.0,
+          "loss": 3.015995502471924
+        },
+        {
+          "stage_epoch": 99,
+          "optimizer_update": true,
+          "inner_auc": 0.9511764619949625,
+          "inner_ap": 0.9054505018200969,
+          "selection_score": 0.9283134819075297,
+          "bce": 0.2255532592535019,
+          "reconstruction": 0.5475703477859497,
+          "weight": 0.10000000000000009,
+          "loss": 0.2803103029727936
+        },
+        {
+          "stage_epoch": 100,
+          "optimizer_update": true,
+          "inner_auc": 0.9511502525133175,
+          "inner_ap": 0.9053527121168733,
+          "selection_score": 0.9282514823150954,
+          "bce": 0.2254399210214615,
+          "reconstruction": 0.5252597332000732,
+          "weight": 0.0,
+          "loss": 0.2254399210214615
+        }
+      ]
+    }
+  ],
+  "means": [
+    {
+      "config": "keep",
+      "selected_train": {
+        "auc": 0.9600763002617528,
+        "ap": 0.9252792518995325,
+        "bce": 0.24019895493984222
+      },
+      "selected_val": {
+        "auc": 0.9537124820101713,
+        "ap": 0.9140905814540484,
+        "bce": 0.2564118206501007
+      },
+      "selected_reconstruction": 0.5946982304255167,
+      "final_val": {
+        "auc": 0.9531059150445708,
+        "ap": 0.9124000205752679
+      },
+      "final_minus_source": {
+        "auc": -0.0006065669656005005,
+        "ap": -0.0016905608787805375
+      },
+      "final_train_mode_pre_update_bce": 0.22892028093338013
+    },
+    {
+      "config": "off",
+      "selected_train": {
+        "auc": 0.9600763002617528,
+        "ap": 0.9252792518995325,
+        "bce": 0.24019894997278848
+      },
+      "selected_val": {
+        "auc": 0.9537124820101713,
+        "ap": 0.9140905814540483,
+        "bce": 0.2564118206501007
+      },
+      "selected_reconstruction": 0.5946982304255167,
+      "final_val": {
+        "auc": 0.9528747738630393,
+        "ap": 0.911413921466426
+      },
+      "final_minus_source": {
+        "auc": -0.0008377081471321324,
+        "ap": -0.002676659987622343
+      },
+      "final_train_mode_pre_update_bce": 0.22457734247048697
+    },
+    {
+      "config": "decay",
+      "selected_train": {
+        "auc": 0.9600763002617528,
+        "ap": 0.9252792518995325,
+        "bce": 0.24019895493984222
+      },
+      "selected_val": {
+        "auc": 0.9537124820101713,
+        "ap": 0.9140905814540484,
+        "bce": 0.2564118305842082
+      },
+      "selected_reconstruction": 0.5946982304255167,
+      "final_val": {
+        "auc": 0.9531015346029124,
+        "ap": 0.9123795323752013
+      },
+      "final_minus_source": {
+        "auc": -0.0006109474072589401,
+        "ap": -0.0017110490788470785
+      },
+      "final_train_mode_pre_update_bce": 0.22686989605426788
+    }
+  ],
+  "selection_sha256": "40bbbac698cdb7cabdeba018accf64f9ffa194e5252b22984d924be7b74b32b7",
+  "selection_changed": false,
+  "no_parameter_or_buffer_updates": true,
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false,
+  "limitation": "Final checkpoint weights were not saved. Final metrics and pre-update train-mode losses come from frozen training curves; selected train/eval gaps and parameter shifts use replayed selected models only."
+}

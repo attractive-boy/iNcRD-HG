@@ -1,0 +1,156 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "full_head",
+    "mean_inner_auc": 0.9537124820101713,
+    "mean_inner_ap": 0.9140905814540484,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0011126869554199947,
+          "fold_deltas": [
+            0.001750544415879296,
+            0.0006583688428768442,
+            0.0009291476075038441
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0022654723591832107,
+          "fold_deltas": [
+            0.0037584426272945226,
+            0.0006470914389280491,
+            0.0023908830113270607
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 0.0,
+          "fold_deltas": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0,
+          "fold_deltas": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "frozen_full": {
+        "auc": {
+          "mean_delta": -0.00017314886549949873,
+          "fold_deltas": [
+            -4.292654281146113e-06,
+            -2.7485718163133832e-05,
+            -0.0004876682240542163
+          ]
+        },
+        "ap": {
+          "mean_delta": -6.24747167527288e-05,
+          "fold_deltas": [
+            1.9362643688403125e-07,
+            -4.639207814571833e-06,
+            -0.00018297856888049857
+          ]
+        }
+      },
+      "frozen_mean": {
+        "auc": {
+          "mean_delta": -0.0003344889542232776,
+          "fold_deltas": [
+            -1.7170617123696275e-06,
+            -0.000486583104357341,
+            -0.0005151666966001223
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.00010576400312922729,
+          "fold_deltas": [
+            2.2888931650033584e-07,
+            -1.729972877262398e-05,
+            -0.00030022116993155823
+          ]
+        }
+      },
+      "mean_head": {
+        "auc": {
+          "mean_delta": 0.0,
+          "fold_deltas": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0,
+          "fold_deltas": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "head_only": {
+        "auc": {
+          "mean_delta": 0.0,
+          "fold_deltas": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0,
+          "fold_deltas": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0003344889542232776
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 9,
+  "new_checkpoint_replays": 9,
+  "final_state_inspections": 9,
+  "reused_control_checks": 12,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "component_diagnostics": {
+    "full_head": {
+      "train_auc": 0.9600763002617528,
+      "train_ap": 0.9252792518995325,
+      "final_inner_auc": 0.9484938224565758,
+      "final_inner_ap": 0.9062813764759129,
+      "head_relative_parameter_change": 0.0,
+      "val_added_lin1_rms": 0.0
+    },
+    "mean_head": {
+      "train_auc": 0.9600763002617528,
+      "train_ap": 0.9252792518995325,
+      "final_inner_auc": 0.9495433881263701,
+      "final_inner_ap": 0.9079550471816752,
+      "head_relative_parameter_change": 0.0,
+      "val_added_lin1_rms": 0.0
+    },
+    "head_only": {
+      "train_auc": 0.9600763002617528,
+      "train_ap": 0.9252792518995325,
+      "final_inner_auc": 0.9530956404811998,
+      "final_inner_ap": 0.9123140176344494,
+      "head_relative_parameter_change": 0.0,
+      "val_added_lin1_rms": 0.0
+    }
+  },
+  "next_action": "Use the frozen matched head/feedback comparisons to decide a distinct next hypothesis; do not interpret freezing as an established bottleneck or retrospectively sweep head learning rates or feedback constants."
+}

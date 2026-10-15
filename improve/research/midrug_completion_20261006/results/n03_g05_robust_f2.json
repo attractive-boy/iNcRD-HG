@@ -1,0 +1,66 @@
+{
+  "tag": "n03_g05_robust_f2",
+  "config": "n03_g05_robust",
+  "settings": {
+    "nuclear_fraction": 0.03,
+    "graph_weight": 0.05,
+    "error_cost": 0.25
+  },
+  "fold": 2,
+  "inner_auc": 0.8914179845166413,
+  "inner_ap": 0.8085764468681462,
+  "checkpoint_sha256": "1a9c8727a7646cb39b3ae2a5837d05083422619dba16f48cf9e52d33fa37dc8a",
+  "prediction_sha256": "0e7c211e282618010313fa3df9e6f75652eccfcfb962c7aab8e7b5b0237c6d3b",
+  "elapsed_seconds": 4.821737289428711,
+  "fit_info": {
+    "intercept": -1.9461749094487049,
+    "nominal_intercept": -0.6933788497373975,
+    "lambda_max": 5.133445174100031,
+    "nuclear_weight": 0.15400335522300093,
+    "step_size": 2.857142857142857,
+    "iterations": 150,
+    "converged": true,
+    "curves": [
+      {
+        "iteration": 1,
+        "objective": 2424.3215028981977,
+        "nuclear_penalty": 59.14754841230007,
+        "rank": 216,
+        "stationarity_residual": 0.308050544000542,
+        "observed_loss": 2352.9004517217872,
+        "graph_penalty": 12.273502764110155
+      },
+      {
+        "iteration": 50,
+        "objective": 843.5005206139463,
+        "nuclear_penalty": 313.4418359396907,
+        "rank": 153,
+        "stationarity_residual": 0.00034191616093407086,
+        "observed_loss": 320.10443269473376,
+        "graph_penalty": 209.95425197952187
+      },
+      {
+        "iteration": 100,
+        "objective": 826.0715587257396,
+        "nuclear_penalty": 330.70207917750344,
+        "rank": 141,
+        "stationarity_residual": 5.0290240377446194e-05,
+        "observed_loss": 291.7235934458038,
+        "graph_penalty": 203.64588610243229
+      },
+      {
+        "iteration": 150,
+        "objective": 825.6591777246754,
+        "nuclear_penalty": 328.5996402193497,
+        "rank": 140,
+        "stationarity_residual": 8.399099163349861e-06,
+        "observed_loss": 292.89333140915977,
+        "graph_penalty": 204.16620609616592
+      }
+    ]
+  },
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false,
+  "training_stopping": "training objective and stationarity only; no heldout inputs to fit"
+}

@@ -1,0 +1,43 @@
+{
+  "config": "insample_raw",
+  "fold": 1,
+  "seed": 42,
+  "tag": "insample_raw_f1_s42",
+  "best_round": 179,
+  "rounds_run": 329,
+  "inner_auc": 0.9560748161248402,
+  "inner_ap": 0.919795901651046,
+  "selection_score": 0.9379353588879431,
+  "settings": {
+    "features": "raw",
+    "offset": "in_sample"
+  },
+  "params": {
+    "objective": "binary:logistic",
+    "tree_method": "hist",
+    "device": "cpu",
+    "max_depth": 2,
+    "min_child_weight": 10.0,
+    "reg_lambda": 10.0,
+    "learning_rate": 0.03,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "seed": 42,
+    "nthread": 2,
+    "disable_default_eval_metric": 1
+  },
+  "xgboost_version": "2.1.4",
+  "n_features": 1714,
+  "plan_sha256": "11d6d5453dd9400496cfdf9b6253b972e454c8c7895ed1b7aaf359d81aa59db1",
+  "artifact_hashes": {
+    "insample_raw_f1_s42_model.json": "947af62938d898f9f7a4ad8468febb71239a15c0d6ac001f5945873c9a70b1c5",
+    "insample_raw_f1_s42_final_model.json": "aebd391c9a02b67469a25e1b778f89b2b2bd321c5882cf1b48a8abb593abfc95",
+    "insample_raw_f1_s42_inner.npz": "d8ad9c21218fb9f3c6323765b28bdbe4f4f5241b57411bfc9bfc2ab378efd7da",
+    "insample_raw_f1_s42_curves.json": "ea4cedc73fcce6485edab95d39251831bbf0d63f810e748f184448cd72bb1e28"
+  },
+  "elapsed_seconds": 19.042299270629883,
+  "no_lncrna": true,
+  "original_m123_frozen": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false
+}

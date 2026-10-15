@@ -1,0 +1,296 @@
+{
+  "status": "frozen_diagnostic_assessment",
+  "means": [
+    {
+      "config": "control",
+      "size": "half",
+      "fraction": 0.5,
+      "mean_train_count": 3236.6666666666665,
+      "train": {
+        "auc": 0.9533804149363094,
+        "ap": 0.915795507243502
+      },
+      "val": {
+        "auc": 0.9439603909634685,
+        "ap": 0.8982736207702064
+      },
+      "train_minus_val": {
+        "auc": 0.009420023972840771,
+        "ap": 0.01752188647329563
+      },
+      "mean_train_bce": 0.26323697964350384
+    },
+    {
+      "config": "unmasked10",
+      "size": "half",
+      "fraction": 0.5,
+      "mean_train_count": 3236.6666666666665,
+      "train": {
+        "auc": 0.951583559923756,
+        "ap": 0.9115019078938937
+      },
+      "val": {
+        "auc": 0.9458410621747481,
+        "ap": 0.9012630404395964
+      },
+      "train_minus_val": {
+        "auc": 0.005742497749008035,
+        "ap": 0.010238867454297437
+      },
+      "mean_train_bce": 0.26307593782742816
+    },
+    {
+      "config": "control",
+      "size": "three_quarter",
+      "fraction": 0.75,
+      "mean_train_count": 4854.666666666667,
+      "train": {
+        "auc": 0.959137248966095,
+        "ap": 0.9226006046172001
+      },
+      "val": {
+        "auc": 0.9491155062333476,
+        "ap": 0.9060078740779036
+      },
+      "train_minus_val": {
+        "auc": 0.0100217427327474,
+        "ap": 0.01659273053929648
+      },
+      "mean_train_bce": 0.24960668881734213
+    },
+    {
+      "config": "unmasked10",
+      "size": "three_quarter",
+      "fraction": 0.75,
+      "mean_train_count": 4854.666666666667,
+      "train": {
+        "auc": 0.9572945766267237,
+        "ap": 0.9203224932602554
+      },
+      "val": {
+        "auc": 0.9508835355583031,
+        "ap": 0.9092459559073331
+      },
+      "train_minus_val": {
+        "auc": 0.006411041068420646,
+        "ap": 0.011076537352922244
+      },
+      "mean_train_bce": 0.24793762465318045
+    },
+    {
+      "config": "control",
+      "size": "full",
+      "fraction": 1.0,
+      "mean_train_count": 6474.666666666667,
+      "train": {
+        "auc": 0.9636573854866869,
+        "ap": 0.9309286452188331
+      },
+      "val": {
+        "auc": 0.9525997950547515,
+        "ap": 0.9118251090948654
+      },
+      "train_minus_val": {
+        "auc": 0.011057590431935512,
+        "ap": 0.019103536123967906
+      },
+      "mean_train_bce": 0.23591841757297516
+    },
+    {
+      "config": "unmasked10",
+      "size": "full",
+      "fraction": 1.0,
+      "mean_train_count": 6474.666666666667,
+      "train": {
+        "auc": 0.9600763002617528,
+        "ap": 0.9252792518995325
+      },
+      "val": {
+        "auc": 0.9537124820101713,
+        "ap": 0.9140905814540484
+      },
+      "train_minus_val": {
+        "auc": 0.006363818251581388,
+        "ap": 0.011188670445484106
+      },
+      "mean_train_bce": 0.24019895493984222
+    }
+  ],
+  "reconstruction_gains": [
+    {
+      "size": "half",
+      "fraction": 0.5,
+      "mean": {
+        "auc": 0.0018806712112793278,
+        "ap": 0.0029894196693899255
+      },
+      "fold_deltas": {
+        "auc": [
+          0.0026872015800404325,
+          0.0013560336734403933,
+          0.0015987783803571576
+        ],
+        "ap": [
+          0.0030581607498035845,
+          0.0011553387945925087,
+          0.004754759463773683
+        ]
+      }
+    },
+    {
+      "size": "three_quarter",
+      "fraction": 0.75,
+      "mean": {
+        "auc": 0.0017680293249555297,
+        "ap": 0.003238081829429529
+      },
+      "fold_deltas": {
+        "auc": [
+          0.0023467940955399502,
+          0.0011002876552193008,
+          0.0018570062241073382
+        ],
+        "ap": [
+          0.004221359901854238,
+          0.0010718338662099036,
+          0.004421051720224445
+        ]
+      }
+    },
+    {
+      "size": "full",
+      "fraction": 1.0,
+      "mean": {
+        "auc": 0.0011126869554199947,
+        "ap": 0.0022654723591832107
+      },
+      "fold_deltas": {
+        "auc": [
+          0.001750544415879296,
+          0.0006583688428768442,
+          0.0009291476075038441
+        ],
+        "ap": [
+          0.0037584426272945226,
+          0.0006470914389280491,
+          0.0023908830113270607
+        ]
+      }
+    }
+  ],
+  "successive_size_increments": [
+    {
+      "config": "control",
+      "from_size": "half",
+      "to_size": "three_quarter",
+      "mean": {
+        "auc": 0.005155115269878922,
+        "ap": 0.00773425330769717
+      },
+      "fold_deltas": {
+        "auc": [
+          0.006253968022301382,
+          0.0036304768514421326,
+          0.0055809009358932515
+        ],
+        "ap": [
+          0.007527536075254693,
+          0.0046732286502763065,
+          0.01100199519756051
+        ]
+      }
+    },
+    {
+      "config": "control",
+      "from_size": "three_quarter",
+      "to_size": "full",
+      "mean": {
+        "auc": 0.003484288821403836,
+        "ap": 0.0058172350169616305
+      },
+      "fold_deltas": {
+        "auc": [
+          0.002570012118163101,
+          0.0064157678693674836,
+          0.0014670864766809233
+        ],
+        "ap": [
+          0.003215919480534346,
+          0.009051802404270282,
+          0.005183983166080264
+        ]
+      }
+    },
+    {
+      "config": "unmasked10",
+      "from_size": "half",
+      "to_size": "three_quarter",
+      "mean": {
+        "auc": 0.005042473383555124,
+        "ap": 0.007982915467736773
+      },
+      "fold_deltas": {
+        "auc": [
+          0.005913560537800899,
+          0.00337473083322104,
+          0.005839128779643432
+        ],
+        "ap": [
+          0.008690735227305346,
+          0.0045897237218937015,
+          0.010668287454011272
+        ]
+      }
+    },
+    {
+      "config": "unmasked10",
+      "from_size": "three_quarter",
+      "to_size": "full",
+      "mean": {
+        "auc": 0.0028289464518683007,
+        "ap": 0.004844625546715313
+      },
+      "fold_deltas": {
+        "auc": [
+          0.0019737624385024466,
+          0.005973849057025027,
+          0.0005392278600774292
+        ],
+        "ap": [
+          0.0027530022059746306,
+          0.008627059976988427,
+          0.0031538144571828797
+        ]
+      }
+    }
+  ],
+  "plan_sha256": "d89ef3fdaa42fe2b1e919571cb02afe5f670a7b197e60a4048e2b10102f277e8",
+  "verification_sha256": "5bc28744d969684dd142af4963df85f0db49eccc7d4c39fd3af724d001c3fea0",
+  "point_metadata_hashes": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/control_half_f0_s42.json": "42f95fecfe70cfc18d74a96119b16107f9eb78b00ad975810a13d8c5075fdca3",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/unmasked10_half_f0_s42.json": "eeb48d6927d42c13863a5f20b01cfa854ea4a9873d5a1416cb5bc1f490de02d2",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/control_three_quarter_f0_s42.json": "818b7db64c7228822919e12edac68d93970fc4f88c7ac6ab2dba936d0c5cbd89",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/unmasked10_three_quarter_f0_s42.json": "49e38aeb7ae5e74efd022f8ba8978934ef53ae0201490f5624e912bbc5137043",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/results/control_f0_s42.json": "991d9cb79419d1714158d5f7edd5ec4ebdf3928ed5d372c4262a25994853030d",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f0_s42.json": "8f12f8c098c497d270cbcca3b1f22f2306dd9f61465fafd5b9936cb9a7cff131",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/control_half_f1_s42.json": "45d1d2f81d0c424045aed30a52c813c08c1b998eb0ff81d99b06da1e7ebe1cd3",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/unmasked10_half_f1_s42.json": "bc1f6d7664c8d91c61fe52df9d62a90fb72920db4a20650936dd1548a070f74d",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/control_three_quarter_f1_s42.json": "bcdbd0e237bb171b61184c3a0a354b2f7e872fd43187f6809b23b1b21df3a494",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/unmasked10_three_quarter_f1_s42.json": "88d130ad41a054cc9acb7b4e68c460411237c81452e3ff8c57e845df6550255a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/results/control_f1_s42.json": "e74412e70af7d21b5b45261a1cb8fd42f3373d914a5316cbcf45e949d50b35f1",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f1_s42.json": "e2a54497f269b0e1b3524795c1c8c3ed1f48ba726e6cc62e1999edd3f029620f",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/control_half_f2_s42.json": "59fb00a52c381c1ff413f6f89c7b89e8b195eed4e4ddde7c506ecb481887f5a0",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/unmasked10_half_f2_s42.json": "c7e109aaf84ce2341427a8fcd63ada232d0848dddf336f45c0719484f7fa9ebf",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/control_three_quarter_f2_s42.json": "a1ede98cadb27eb03fc7fbc1bcb0efa994d57f0b779fec1aa4ec172a6b02e9c2",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_training_size_20261007/results/unmasked10_three_quarter_f2_s42.json": "905360e562d127eb20868d182f7b2cb187523f140df85d03947ba8e06bc1057f",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/results/control_f2_s42.json": "1f18dfca5295e136d67df6dd6c7dda29753c5d093a6cd2413444b60e32e51415",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f2_s42.json": "abd5bd99263378a07394fa2a9ef2dad71b6b4dfaaefe0fd546aa864fbc075c36"
+  },
+  "no_candidate_selection": true,
+  "no_performance_extrapolation": true,
+  "no_automatic_outer_promotion": true,
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false,
+  "goal_achieved": false
+}

@@ -1,0 +1,234 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "varcov",
+    "mean_inner_auc": 0.9538041699705841,
+    "mean_inner_ap": 0.9141198981254393,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0012043749158326955,
+          "fold_deltas": [
+            0.0020269913515894578,
+            0.0008610760143302754,
+            0.0007250573815783534
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0022947890305740812,
+          "fold_deltas": [
+            0.003234118788406626,
+            0.0014799429509845252,
+            0.0021703053523310922
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 9.168796041270078e-05,
+          "fold_deltas": [
+            0.00027644693571016177,
+            0.0002027071714534312,
+            -0.00020409022592549064
+          ]
+        },
+        "ap": {
+          "mean_delta": 2.931667139087028e-05,
+          "fold_deltas": [
+            -0.0005243238388878968,
+            0.0008328515120564761,
+            -0.00022057765899596848
+          ]
+        }
+      },
+      "var": {
+        "auc": {
+          "mean_delta": 0.00023022533862104844,
+          "fold_deltas": [
+            0.00011032121502718706,
+            0.0002602553938575447,
+            0.00032009940697841355
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0006826082562955508,
+          "fold_deltas": [
+            -0.00010040654650900205,
+            0.0012249350827907568,
+            0.0009232962326048977
+          ]
+        }
+      },
+      "cov": {
+        "auc": {
+          "mean_delta": 0.00014526980103239198,
+          "fold_deltas": [
+            5.237038223082635e-05,
+            7.708885016088907e-05,
+            0.00030635017070546056
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.00017306749118436068,
+          "fold_deltas": [
+            8.504825908861591e-05,
+            -8.175762391748886e-05,
+            0.000515911838381955
+          ]
+        }
+      }
+    },
+    "selection_score": 2.931667139087028e-05
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 9,
+  "new_checkpoint_replays": 9,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Use frozen endpoint geometry diagnostics to select next hypothesis; no retrospective var/cov promotion or regularization-weight sweep.",
+  "component_diagnostics": {
+    "status": "passed",
+    "means": [
+      {
+        "config": "varcov",
+        "train": {
+          "auc": 0.9629417135571335,
+          "ap": 0.9302854615653896
+        },
+        "val": {
+          "auc": 0.9538041699705841,
+          "ap": 0.9141198981254393
+        },
+        "geometry": {
+          "miRNA": {
+            "variance_loss": 0.6070854282717341,
+            "covariance_loss": 0.619706588949767,
+            "mean_row_norm": 116.76235453287761,
+            "mean_normalized_column_std": 0.39278127749760944,
+            "raw": {
+              "participation_rank": 1.842815475075363,
+              "entropy_rank": 3.037154550724233,
+              "leading_variance_fraction": 0.7319766916334732
+            },
+            "normalized": {
+              "participation_rank": 10.580266272830002,
+              "entropy_rank": 13.948457897074947,
+              "leading_variance_fraction": 0.16121660600578538
+            }
+          },
+          "drug": {
+            "variance_loss": 0.6344318620550495,
+            "covariance_loss": 0.5320831366920581,
+            "mean_row_norm": 68.21929423014323,
+            "mean_normalized_column_std": 0.36542512973149616,
+            "raw": {
+              "participation_rank": 1.19664859003891,
+              "entropy_rank": 1.5989305744286382,
+              "leading_variance_fraction": 0.9153443055309523
+            },
+            "normalized": {
+              "participation_rank": 9.00232047859594,
+              "entropy_rank": 13.390080656110925,
+              "leading_variance_fraction": 0.20604788682693476
+            }
+          }
+        }
+      },
+      {
+        "config": "var",
+        "train": {
+          "auc": 0.9604374003719521,
+          "ap": 0.9259669022981886
+        },
+        "val": {
+          "auc": 0.953573944631963,
+          "ap": 0.9134372898691439
+        },
+        "geometry": {
+          "miRNA": {
+            "variance_loss": 0.14714041860835286,
+            "covariance_loss": 34.78336100439564,
+            "mean_row_norm": 85.46796162923177,
+            "mean_normalized_column_std": 0.8851481676101685,
+            "raw": {
+              "participation_rank": 2.676373427273223,
+              "entropy_rank": 3.7429419186675923,
+              "leading_variance_fraction": 0.5594089687255609
+            },
+            "normalized": {
+              "participation_rank": 4.851012909520069,
+              "entropy_rank": 7.44861009774888,
+              "leading_variance_fraction": 0.3710513692933219
+            }
+          },
+          "drug": {
+            "variance_loss": 0.18954539980262589,
+            "covariance_loss": 36.85951481356095,
+            "mean_row_norm": 41.3735605875651,
+            "mean_normalized_column_std": 0.8423992991447449,
+            "raw": {
+              "participation_rank": 1.370124300227958,
+              "entropy_rank": 2.000400599154629,
+              "leading_variance_fraction": 0.8522072608758556
+            },
+            "normalized": {
+              "participation_rank": 3.8849776061064225,
+              "entropy_rank": 6.819907951142556,
+              "leading_variance_fraction": 0.45351888172156535
+            }
+          }
+        }
+      },
+      {
+        "config": "cov",
+        "train": {
+          "auc": 0.9633688385474529,
+          "ap": 0.9309295870198305
+        },
+        "val": {
+          "auc": 0.9536589001695517,
+          "ap": 0.9139468306342549
+        },
+        "geometry": {
+          "miRNA": {
+            "variance_loss": 0.6051726197315278,
+            "covariance_loss": 0.6953944834800151,
+            "mean_row_norm": 106.3166020711263,
+            "mean_normalized_column_std": 0.39469337463378906,
+            "raw": {
+              "participation_rank": 1.8434735047883724,
+              "entropy_rank": 2.9982587190779064,
+              "leading_variance_fraction": 0.7263768183105594
+            },
+            "normalized": {
+              "participation_rank": 9.870279108970731,
+              "entropy_rank": 13.482762689158406,
+              "leading_variance_fraction": 0.19145904603524266
+            }
+          },
+          "drug": {
+            "variance_loss": 0.6462767502882064,
+            "covariance_loss": 0.5206480720117038,
+            "mean_row_norm": 66.177978515625,
+            "mean_normalized_column_std": 0.35357510050137836,
+            "raw": {
+              "participation_rank": 1.17693540139142,
+              "entropy_rank": 1.5373792279087308,
+              "leading_variance_fraction": 0.9209037030865866
+            },
+            "normalized": {
+              "participation_rank": 8.145568736407444,
+              "entropy_rank": 12.617312695727797,
+              "leading_variance_fraction": 0.23042615661903565
+            }
+          }
+        }
+      }
+    ],
+    "selection_unchanged": true
+  }
+}

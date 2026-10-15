@@ -1,0 +1,2097 @@
+[
+  {
+    "source": "arxiv",
+    "query": "all:\"link prediction\" AND (all:\"query\" OR all:\"edge-centric\" OR all:\"non-backtracking\") AND submittedDate:[202501010000 TO 202610062359]",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22link+prediction%22+AND+%28all%3A%22query%22+OR+all%3A%22edge-centric%22+OR+all%3A%22non-backtracking%22%29+AND+submittedDate%3A%5B202501010000+TO+202610062359%5D&max_results=20&sortBy=submittedDate&sortOrder=descending",
+    "retrieved_utc": "2026-10-06T21:18:54.040957+00:00",
+    "raw_file": "raw/arxiv_b452abd9c6.txt",
+    "papers": [
+      {
+        "title": "Neural Structural Reasoner: A Brain-inspired Architecture for Reasoning over Structured Knowledge",
+        "id": "http://arxiv.org/abs/2609.36620v1",
+        "date": "2026-09-29T03:31:46Z",
+        "abstract": "Structural reasoning, the ability to recognize and make inferences over the relational structure between objects and concepts, is a hallmark of human cognition, yet prevailing methods often collapse relational topology into flat embeddings, cannot discover hidden structure and lack interpretability. We introduce Neural Structural Reasoner (NSR), a brain-inspired network that preserves relational structure directly in the connectivity and dynamics of coupled neuronal populations. NSR draws inspiration from three biological mechanisms: multi-layered architecture for encoding hierarchical knowledge, stable representations of entity and concepts, and path integration for input-driven state inference. At query time, NSR parallelizes computation over candidate relational structures and leverages confidence-weighted scores to perform link prediction. Across standard knowledge-graph benchmarks, NSR achieves competitive accuracy without leading on every dataset, and has lower reported training times than several neural baselines. Because reasoning is implemented through sequences of human-readable neuron activations, NSR affords native interpretability by tracking intermediate inference steps. The model further extracts latent relational hierarchies and compositional rules, demonstrating the brain-inspired architecture as an effective, efficient, and highly interpretable substrate for structural reasoning.",
+        "authors": [
+          "Zixing Jia",
+          "Yuhang Pan",
+          "Ni Ji"
+        ]
+      },
+      {
+        "title": "ICE: Task-Aligned Clifford Latent Fields for Multimodal Graph Foundation Models",
+        "id": "http://arxiv.org/abs/2609.29398v1",
+        "date": "2026-09-24T11:24:08Z",
+        "abstract": "Multimodal attributed graphs connect entities, visual content, language, and observed relations. Learning one foundation across such graphs requires more than compressing each node into a fused Euclidean vector. The representation must preserve entity semantics, construct interaction state from graph neighborhoods, and expose that state to prediction units with different geometry. Our empirical study shows why these requirements are inseparable. Higher-grade channels recover pair relations across the foundation graphs, specialized queries reveal information hidden by a generic readout, and rigid blade isolation removes cross-grade capacity. We therefore introduce ICE (Interaction-aware Clifford Encoder), a multimodal graph foundation model built on a node-indexed Clifford latent field. Topology, text, and images enter explicit Cl(3) addresses. Edge-aware geometric products transform these directions into scalar, bivector, and trivector relations over observed neighborhoods. A protected Grade-1 route preserves entity semantics, while the full grade and depth bank remains available to fresh node and link heads. We establish exact cross-grade reachability, node-permutation equivariance, and a bound on the task residual around the semantic score. Experiments span one shared foundation over eleven graphs, six node-classification datasets, three link-prediction datasets, and matched few-shot tasks. ICE ranks first in all 30 reported supervised and few-shot comparisons. Core removals reduce every task summary, and mechanism controls connect the gains to higher-order transport, retained multidepth structure, semantic protection, and direct field access.",
+        "authors": [
+          "Xunkai Li",
+          "Xu Wang",
+          "Yinlin Zhu",
+          "Xiong Yongfu",
+          "Yi Liu",
+          "Rong-Hua Li",
+          "Guoren Wang"
+        ]
+      },
+      {
+        "title": "Budgeted Task-Aware Acquisition of Dynamic Networks",
+        "id": "http://arxiv.org/abs/2609.05862v1",
+        "date": "2026-09-05T03:52:26Z",
+        "abstract": "Learning on dynamic graphs is difficult when changes in the underlying network are only partially observed. Acquiring current graph information incurs observation and computational costs, making complete updates impractical under limited resources. This paper focuses on budgeted task-aware acquisition on dynamic networks, where a model needs to decide which stale graph information to refresh for a downstream task. We propose Scout, a lightweight framework that learns the task value of querying each node from the maintained graph and observation history. Our evaluation covers one synthetic and four real-world dynamic networks, two downstream tasks, nine acquisition baselines, and several query budgets. Scout achieves the highest mean downstream performance in 19 of the 21 benchmark-budget settings. Task-utility supervision also outperforms structural-change supervision in 13 of the 16 real-world settings. On the same dynamic network, task-matched acquisition improves link-prediction AUC by 0.012-0.016 and node-classification accuracy by 0.064-0.09 over task-mismatched acquisition. These results show that useful graph observations depend on the downstream task and that limited observation budgets can be allocated more effectively by learning directly from downstream utility.",
+        "authors": [
+          "Zihe Zhou"
+        ]
+      },
+      {
+        "title": "Oracle, will I ever learn? A study of prediction convergence and complementarity across link prediction models",
+        "id": "http://arxiv.org/abs/2609.02638v1",
+        "date": "2026-09-02T14:14:36Z",
+        "abstract": "Knowledge graphs have become an important source of structured knowledge for Web applications, including search, question answering, and recommender systems. In these applications, link prediction can serve either as a prediction task itself or as a means to enrich incomplete knowledge graphs for downstream tasks. Interestingly, different link prediction models, or even different training runs of the same model, can produce substantially different predictions for the same query. This suggests a variability in the capture of the underlying knowledge by models, thus raising a fundamental question: to what extent do different models capture complementary knowledge, and how much of this knowledge could be recovered by combining them? We propose to measure model complementarity through the performance of an oracle that, for each query, selects the best prediction among a considered set of models, hence providing an upper bound on the performance achievable through model combination. Across several architectures and benchmarks, we find a substantial gap between individual models and their oracle, revealing that different models capture complementary knowledge. Yet, this complementarity rapidly saturates as more models are added, leaving a persistent subset of queries unsolved even by a large number of models. These findings reveal both the potential of model complementarity and a fundamental limit to what current link prediction models can collectively recover; thereby highlighting the need for further research to build robust Web applications.",
+        "authors": [
+          "Guillaume Méroué",
+          "Fabien Gandon",
+          "Pierre Monnin"
+        ]
+      },
+      {
+        "title": "Neural Regression with Embeddings for Numerical Attribute Prediction in Knowledge Graphs",
+        "id": "http://arxiv.org/abs/2608.26729v2",
+        "date": "2026-08-27T07:21:48Z",
+        "abstract": "In recent years, transductive knowledge graph embedding models have been applied to tasks such as link prediction and query answering. Although knowledge graphs often contain rich numerical attributes, most embedding models neglect them, limiting their ability to represent real-world knowledge graphs with diverse information. In this work, we propose a neural regression model (LitEm) that enables transductive knowledge graph embedding models to predict numerical attributes within knowledge graphs. Experimental results demonstrate that LitEm achieves the best or second-best results on most attributes across FB15K-237, YAGO15K, DB15K, and Mutagenesis. Furthermore, we propose a co-training framework that jointly trains state-of-the-art transductive knowledge graph embedding models with LitEm, which improves link prediction performance mainly for bilinear models and simultaneously enables them to predict numerical attributes. In addition, the literal-awareness evaluation demonstrates that co-training helps models to encode and exploit attribute information in a \"literal-aware'' manner, suggesting that the observed gains are not merely due to additional parameters. We publicly release our implementation at https://github.com/dice-group/dice-embeddings.",
+        "authors": [
+          "Rupesh Sapkota",
+          "Louis Mozart Kamdem Teyou",
+          "Moshood Yekini",
+          "Caglar Demir",
+          "Axel-Cyrille Ngonga Ngomo"
+        ]
+      },
+      {
+        "title": "Beyond Accuracy: Measuring Logical Compliance of Predictive Models",
+        "id": "http://arxiv.org/abs/2606.20208v1",
+        "date": "2026-06-18T13:21:04Z",
+        "abstract": "Machine learning models are predominantly evaluated through predictive performance metrics such as ranking quality, prediction error, or classification accuracy. While these metrics effectively quantify how closely predictions match the ground truth, they do not assess whether model outputs respect predefined logical or domain-specific constraints. In high-stakes applications, including healthcare, finance, and autonomous systems, logical consistency can be as critical as predictive accuracy, yet no standard metric captures this dimension. We introduce the Rule Violation Score (RVS), a complementary evaluation metric that quantifies the extent to which a predictive model respects a given set of logical rules, independently of predictive accuracy. RVS treats hard rules (strict constraints) and soft rules (statistical regularities) differently, can be evaluated on any dataset and on any predictive model expressed over a relational vocabulary, and can be computed using SQL queries that are automatically generated for Horn rules. Beyond evaluating models, RVS can also evaluate the logical consistency of training datasets and help identify poorly defined rules. We evaluate RVS on three benchmarks covering knowledge graph link prediction and relational regression, including rule-based, embedding-based, and neuro-symbolic predictive models. Our results demonstrate that two models achieving comparable predictive accuracy can exhibit substantially different levels of logical compliance, revealing differences in model behavior that standard metrics fail to capture.",
+        "authors": [
+          "Guillaume Olivier Delplanque",
+          "Pierre Genevès",
+          "Nabil Layaïda",
+          "Zephirin Faure"
+        ]
+      },
+      {
+        "title": "Generative Representation Learning on Hyper-relational Knowledge Graphs via Masked Discrete Diffusion",
+        "id": "http://arxiv.org/abs/2605.24064v1",
+        "date": "2026-05-22T04:18:30Z",
+        "abstract": "Hyper-relational knowledge graphs (HKGs) effectively represent complex facts. While inferring new knowledge in HKGs is a critical problem, current methods cast it as a simple link prediction, assuming that nearly all entities and relations within a fact are known, leaving only a single blank to be filled. However, this restricted assumption may not hold in real-world scenarios in which multiple, or even all, constituent components of a fact may be missing simultaneously. To bridge this gap, we introduce a task called fact generation: generating a valid hyper-relational fact from an arbitrarily masked query, i.e., completing a partially observed fact or generating a fact from scratch. We propose KREPE, the first generative representation learning method for HKGs that learns to model the probability distributions of missing components conditioned on the local fact components and global structure of HKGs via a masked discrete diffusion. KREPE models both the intra-fact dependencies by contextual message passing and inter-fact correlations by aggregating stochastically sampled contexts. KREPE seamlessly unifies link prediction and fact generation within a single training framework, achieving state-of-the-art performance on standard HKG link prediction benchmarks and outperforming LLM-based baselines in generating novel and correct facts.",
+        "authors": [
+          "Jaejun Lee",
+          "Seheon Kim",
+          "Joyce Jiyoung Whang"
+        ]
+      },
+      {
+        "title": "Leveraging Graph Structure in Seq2Seq Models for Knowledge Graph Link Prediction",
+        "id": "http://arxiv.org/abs/2605.18211v1",
+        "date": "2026-05-18T10:56:14Z",
+        "abstract": "We introduce Graph-Augmented Sequence-to-Sequence (GA-S2S), a novel framework that integrates a T5-small encoder-decoder with a Relational Graph Attention Network (RGAT) to improve link prediction in knowledge graphs. While existing Seq2Seq models rely solely on surface-level textual descriptions of entities and relations and at best, flatten the neighborhoods of a query entity into a single linear sequence, thereby discarding the inherent graph structure, GA-S2S jointly encodes both textual features and the full $k$-hop subgraph topology surrounding the query entity. By integrating raw encoder outputs with RGAT's relation-aware embeddings, our model captures and leverages richer multi-hop relational patterns and textual information. Our preliminary experiments on the CoDEx dataset demonstrate that GA-S2S outperforms competitive Seq2Seq-based baseline models, achieving up to a 19\\% relative gain in link prediction accuracy.",
+        "authors": [
+          "Luu Huu Phuc",
+          "Ratan Bahadur Thapa",
+          "Mojtaba Nayyeri",
+          "Jingcheng Wu",
+          "Evgeny Kharlamov",
+          "Steffen Staab"
+        ]
+      },
+      {
+        "title": "Multi-Faceted Continual Knowledge Graph Embedding for Semantic-Aware Link Prediction",
+        "id": "http://arxiv.org/abs/2604.10947v2",
+        "date": "2026-04-13T03:41:01Z",
+        "abstract": "Continual Knowledge Graph Embedding (CKGE) aims to continually learn embeddings for new knowledge, i.e., entities and relations, while retaining previously acquired knowledge. Most existing CKGE methods mitigate catastrophic forgetting via regularization or replaying old knowledge. They conflate new and old knowledge of an entity within the same embedding space to seek a balance between them. However, entities inherently exhibit multi-faceted semantics that evolve dynamically as their relational contexts change over time. A shared embedding fails to capture and distinguish these temporal semantic variations, degrading lifelong link prediction accuracy across snapshots. To address this, we propose a Multi-Faceted CKGE framework (MF-CKGE) for semantic-aware link prediction. During offline learning, MF-CKGE separates temporal old and new knowledge into distinct embedding spaces to prevent knowledge entanglement and employs semantic decoupling to reduce semantic redundancy, thereby improving space efficiency. During online inference, MF-CKGE adaptively identifies semantically query-relevant entity embeddings by quantifying their semantic importance, reducing interference from query-irrelevant noise. Experiments on eight datasets show that MF-CKGE achieves an average (maximum) improvement of 1.7% (2.7%) and 1.4% (3.8%) in MRR and Hits@10, respectively, over the best baseline. Our source code and datasets are available at: https://anonymous.4open.science/r/MF-CKGE-04E5.",
+        "authors": [
+          "Jing Qi",
+          "Yuxiang Wang",
+          "Zhiyuan Yu",
+          "Xiaoliang Xu",
+          "Yuanshi Zheng",
+          "Tianxing Wu"
+        ]
+      },
+      {
+        "title": "DynamicGTR: Leveraging Graph Topology Representation Preferences to Boost VLM Capabilities on Graph QAs",
+        "id": "http://arxiv.org/abs/2602.21864v1",
+        "date": "2026-02-25T12:45:45Z",
+        "abstract": "Vision-Language Models (VLMs) have emerged as versatile solutions for zero-shot question answering (QA) across various domains. However, enabling VLMs to effectively comprehend structured graphs and perform accurate, efficient QA remains challenging. Existing approaches typically rely on one single graph topology representation (GTR), such as fixed-style visual images or unified text descriptions. This ``one-size-fits-all'' strategy often neglects model-specific and task-specific preferences, resulting in inaccurate or over-lengthy responses to graph-related queries. To address this, we propose the $\\mbox{DynamicGTR}$ framework, which dynamically selects the optimal GTR for each query during inference, thereby enhancing the zero-shot graph QA capabilities of VLMs with a customizable accuracy and brevity trade-off. Extensive experiments show that DynamicGTR not only improves VLM-based graph algorithm QA performance but also successfully transfers the experience trained from synthetic graph algorithm tasks to real-world applications like link prediction and node classification, without any additional training. Additionally, DynamicGTR demonstrates strong transferability across tasks, domains, and models, suggesting its potential as a flexible solution for broad graph scenarios.",
+        "authors": [
+          "Yanbin Wei",
+          "Jiangyue Yan",
+          "Chun Kang",
+          "Yang Chen",
+          "Hua Liu",
+          "James Kwok",
+          "Yu Zhang"
+        ]
+      },
+      {
+        "title": "Autoregressive Models for Knowledge Graph Generation",
+        "id": "http://arxiv.org/abs/2602.06707v1",
+        "date": "2026-02-06T13:50:22Z",
+        "abstract": "Knowledge Graph (KG) generation requires models to learn complex semantic dependencies between triples while maintaining domain validity constraints. Unlike link prediction, which scores triples independently, generative models must capture interdependencies across entire subgraphs to produce semantically coherent structures. We present ARK (Auto-Regressive Knowledge Graph Generation), a family of autoregressive models that generate KGs by treating graphs as sequences of (head, relation, tail) triples. ARK learns implicit semantic constraints directly from data, including type consistency, temporal validity, and relational patterns, without explicit rule supervision. On the IntelliGraphs benchmark, our models achieve 89.2% to 100.0% semantic validity across diverse datasets while generating novel graphs not seen during training. We also introduce SAIL, a variational extension of ARK that enables controlled generation through learned latent representations, supporting both unconditional sampling and conditional completion from partial graphs. Our analysis reveals that model capacity (hidden dimensionality >= 64) is more critical than architectural depth for KG generation, with recurrent architectures achieving comparable validity to transformer-based alternatives while offering substantial computational efficiency. These results demonstrate that autoregressive models provide an effective framework for KG generation, with practical applications in knowledge base completion and query answering.",
+        "authors": [
+          "Thiviyan Thanapalasingam",
+          "Antonis Vozikis",
+          "Peter Bloem",
+          "Paul Groth"
+        ]
+      },
+      {
+        "title": "Implementing Tensor Logic: Unifying Datalog and Neural Reasoning via Tensor Contraction",
+        "id": "http://arxiv.org/abs/2601.17188v1",
+        "date": "2026-01-23T21:38:19Z",
+        "abstract": "The unification of symbolic reasoning and neural networks remains a central challenge in artificial intelligence. Symbolic systems offer reliability and interpretability but lack scalability, while neural networks provide learning capabilities but sacrifice transparency. Tensor Logic, proposed by Domingos, suggests that logical rules and Einstein summation are mathematically equivalent, offering a principled path toward unification. This paper provides empirical validation of this framework through three experiments. First, we demonstrate the equivalence between recursive Datalog rules and iterative tensor contractions by computing the transitive closure of a biblical genealogy graph containing 1,972 individuals and 1,727 parent-child relationships, converging in 74 iterations to discover 33,945 ancestor relationships. Second, we implement reasoning in embedding space by training a neural network with learnable transformation matrices, demonstrating successful zero-shot compositional inference on held-out queries. Third, we validate the Tensor Logic superposition construction on FB15k-237, a large-scale knowledge graph with 14,541 entities and 237 relations. Using Domingos's relation matrix formulation $R_r = E^\\top A_r E$, we achieve MRR of 0.3068 on standard link prediction and MRR of 0.3346 on a compositional reasoning benchmark where direct edges are removed during training, demonstrating that matrix composition enables multi-hop inference without direct training examples.",
+        "authors": [
+          "Swapn Shah",
+          "Wlodek Zadrozny"
+        ]
+      },
+      {
+        "title": "GraphSearch: Agentic Search-Augmented Reasoning for Zero-Shot Graph Learning",
+        "id": "http://arxiv.org/abs/2601.08621v1",
+        "date": "2026-01-13T15:00:57Z",
+        "abstract": "Recent advances in search-augmented large reasoning models (LRMs) enable the retrieval of external knowledge to reduce hallucinations in multistep reasoning. However, their ability to operate on graph-structured data, prevalent in domains such as e-commerce, social networks, and scientific citations, remains underexplored. Unlike plain text corpora, graphs encode rich topological signals that connect related entities and can serve as valuable priors for retrieval, enabling more targeted search and improved reasoning efficiency. Yet, effectively leveraging such structure poses unique challenges, including the difficulty of generating graph-expressive queries and ensuring reliable retrieval that balances structural and semantic relevance. To address this gap, we introduce GraphSearch, the first framework that extends search-augmented reasoning to graph learning, enabling zero-shot graph learning without task-specific fine-tuning. GraphSearch combines a Graph-aware Query Planner, which disentangles search space (e.g., 1-hop, multi-hop, or global neighbors) from semantic queries, with a Graph-aware Retriever, which constructs candidate sets based on topology and ranks them using a hybrid scoring function. We further instantiate two traversal modes: GraphSearch-R, which recursively expands neighborhoods hop by hop, and GraphSearch-F, which flexibly retrieves across local and global neighborhoods without hop constraints. Extensive experiments across diverse benchmarks show that GraphSearch achieves competitive or even superior performance compared to supervised graph learning methods, setting state-of-the-art results in zero-shot node classification and link prediction. These findings position GraphSearch as a flexible and generalizable paradigm for agentic reasoning over graphs.",
+        "authors": [
+          "Jiajin Liu",
+          "Yuanfu Sun",
+          "Dongzhe Fan",
+          "Qiaoyu Tan"
+        ]
+      },
+      {
+        "title": "HyperJoin: LLM-augmented Hypergraph Link Prediction for Joinable Table Discovery",
+        "id": "http://arxiv.org/abs/2601.01015v1",
+        "date": "2026-01-03T00:54:55Z",
+        "abstract": "As a pivotal task in data lake management, joinable table discovery has attracted widespread interest. While existing language model-based methods achieve remarkable performance by combining offline column representation learning with online ranking, their design insufficiently accounts for the underlying structural interactions: (1) offline, they directly model tables into isolated or pairwise columns, thereby struggling to capture the rich inter-table and intra-table structural information; and (2) online, they rank candidate columns based solely on query-candidate similarity, ignoring the mutual interactions among the candidates, leading to incoherent result sets. To address these limitations, we propose HyperJoin, a large language model (LLM)-augmented Hypergraph framework for Joinable table discovery. Specifically, we first construct a hypergraph to model tables using both the intra-table hyperedges and the LLM-augmented inter-table hyperedges. Consequently, the task of joinable table discovery is formulated as link prediction on this constructed hypergraph. We then design HIN, a Hierarchical Interaction Network that learns expressive column representations through bidirectional message passing over columns and hyperedges. To strengthen coherence and internal consistency in the result columns, we cast online ranking as a coherence-aware top-k column selection problem. We then introduce a reranking module that leverages a maximum spanning tree algorithm to prune noisy connections and maximize coherence. Experiments demonstrate the superiority of HyperJoin, achieving average improvements of 21.4% (Precision@15) and 17.2% (Recall@15) over the best baseline.",
+        "authors": [
+          "Shiyuan Liu",
+          "Jianwei Wang",
+          "Xuemin Lin",
+          "Lu Qin",
+          "Wenjie Zhang",
+          "Ying Zhang"
+        ]
+      },
+      {
+        "title": "A Systematic Study of Model Extraction Attacks on Graph Foundation Models",
+        "id": "http://arxiv.org/abs/2511.11912v1",
+        "date": "2025-11-14T22:43:42Z",
+        "abstract": "Graph machine learning has advanced rapidly in tasks such as link prediction, anomaly detection, and node classification. As models scale up, pretrained graph models have become valuable intellectual assets because they encode extensive computation and domain expertise. Building on these advances, Graph Foundation Models (GFMs) mark a major step forward by jointly pretraining graph and text encoders on massive and diverse data. This unifies structural and semantic understanding, enables zero-shot inference, and supports applications such as fraud detection and biomedical analysis. However, the high pretraining cost and broad cross-domain knowledge in GFMs also make them attractive targets for model extraction attacks (MEAs). Prior work has focused only on small graph neural networks trained on a single graph, leaving the security implications for large-scale and multimodal GFMs largely unexplored. This paper presents the first systematic study of MEAs against GFMs. We formalize a black-box threat model and define six practical attack scenarios covering domain-level and graph-specific extraction goals, architectural mismatch, limited query budgets, partial node access, and training data discrepancies. To instantiate these attacks, we introduce a lightweight extraction method that trains an attacker encoder using supervised regression of graph embeddings. Even without contrastive pretraining data, this method learns an encoder that stays aligned with the victim text encoder and preserves its zero-shot inference ability on unseen graphs. Experiments on seven datasets show that the attacker can approximate the victim model using only a tiny fraction of its original training cost, with almost no loss in accuracy. These findings reveal that GFMs greatly expand the MEA surface and highlight the need for deployment-aware security defenses in large-scale graph learning systems.",
+        "authors": [
+          "Haoyan Xu",
+          "Ruizhi Qian",
+          "Jiate Li",
+          "Yushun Dong",
+          "Minghao Lin",
+          "Hanson Yan",
+          "Zhengtao Yao",
+          "Qinghua Liu",
+          "Junhao Dong",
+          "Ruopeng Huang",
+          "Yue Zhao",
+          "Mengyuan Li"
+        ]
+      },
+      {
+        "title": "Parameter Averaging in Link Prediction",
+        "id": "http://arxiv.org/abs/2510.25361v1",
+        "date": "2025-10-29T10:32:39Z",
+        "abstract": "Ensemble methods are widely employed to improve generalization in machine learning. This has also prompted the adoption of ensemble learning for the knowledge graph embedding (KGE) models in performing link prediction. Typical approaches to this end train multiple models as part of the ensemble, and the diverse predictions are then averaged. However, this approach has some significant drawbacks. For instance, the computational overhead of training multiple models increases latency and memory overhead. In contrast, model merging approaches offer a promising alternative that does not require training multiple models. In this work, we introduce model merging, specifically weighted averaging, in KGE models. Herein, a running average of model parameters from a training epoch onward is maintained and used for predictions. To address this, we additionally propose an approach that selectively updates the running average of the ensemble model parameters only when the generalization performance improves on a validation dataset. We evaluate these two different weighted averaging approaches on link prediction tasks, comparing the state-of-the-art benchmark ensemble approach. Additionally, we evaluate the weighted averaging approach considering literal-augmented KGE models and multi-hop query answering tasks as well. The results demonstrate that the proposed weighted averaging approach consistently improves performance across diverse evaluation settings.",
+        "authors": [
+          "Rupesh Sapkota",
+          "Caglar Demir",
+          "Arnab Sharma",
+          "Axel-Cyrille Ngonga Ngomo"
+        ]
+      },
+      {
+        "title": "CQD-SHAP: Explainable Complex Query Answering via Shapley Values",
+        "id": "http://arxiv.org/abs/2510.15623v2",
+        "date": "2025-10-17T13:09:26Z",
+        "abstract": "Complex query answering (CQA) goes beyond the widely studied link prediction task by addressing more sophisticated queries that require multi-hop reasoning over incomplete knowledge graphs (KGs). Research on neural and neurosymbolic CQA methods is still an emerging field. Almost all of these methods can be regarded as black-box models, which may raise concerns about user trust. Although neurosymbolic approaches like CQD are slightly more interpretable, allowing intermediate results to be tracked, the importance of different parts of the query remains unexplained. In this paper, we propose CQD-SHAP, a novel framework that computes the contribution of each query part to the ranking of a specific answer. This contribution explains the value of leveraging a neural predictor that can infer new knowledge from an incomplete KG, rather than a symbolic approach relying solely on existing facts in the KG. CQD-SHAP is formulated based on Shapley values from cooperative game theory and satisfies all fundamental Shapley axioms. Automated evaluation of these explanations in terms of necessary and sufficient explanations, and comparisons with various baselines, show the consistent effectiveness of this approach across all studied datasets and query types.",
+        "authors": [
+          "Parsa Abbasi",
+          "Stefan Heindorf"
+        ]
+      },
+      {
+        "title": "RNA-KG v2.0: An RNA-centered Knowledge Graph with Properties",
+        "id": "http://arxiv.org/abs/2508.07427v1",
+        "date": "2025-08-10T16:58:42Z",
+        "abstract": "RNA-KG is a recently developed knowledge graph that integrates the interactions involving coding and non-coding RNA molecules extracted from public data sources. It can be used to support the classification of new molecules, identify new interactions through the use of link prediction methods, and reveal hidden patterns among the represented entities. In this paper, we propose RNA-KG v2.0, a new release of RNA-KG that integrates around 100M manually curated interactions sourced from 91 linked open data repositories and ontologies. Relationships are characterized by standardized properties that capture the specific context (e.g., cell line, tissue, pathological state) in which they have been identified. In addition, the nodes are enriched with detailed attributes, such as descriptions, synonyms, and molecular sequences sourced from platforms such as OBO ontologies, NCBI repositories, RNAcentral, and Ensembl. The enhanced repository enables the expression of advanced queries that take into account the context in which the experiments were conducted. It also supports downstream applications in RNA research, including \"context-aware\" link prediction techniques that combine both topological and semantic information.",
+        "authors": [
+          "Emanuele Cavalleri",
+          "Paolo Perlasca",
+          "Marco Mesiti"
+        ]
+      },
+      {
+        "title": "Context Pooling: Query-specific Graph Pooling for Generic Inductive Link Prediction in Knowledge Graphs",
+        "id": "http://arxiv.org/abs/2507.07595v1",
+        "date": "2025-07-10T09:54:37Z",
+        "abstract": "Recent investigations on the effectiveness of Graph Neural Network (GNN)-based models for link prediction in Knowledge Graphs (KGs) show that vanilla aggregation does not significantly impact the model performance. In this paper, we introduce a novel method, named Context Pooling, to enhance GNN-based models' efficacy for link predictions in KGs. To our best of knowledge, Context Pooling is the first methodology that applies graph pooling in KGs. Additionally, Context Pooling is first-of-its-kind to enable the generation of query-specific graphs for inductive settings, where testing entities are unseen during training. Specifically, we devise two metrics, namely neighborhood precision and neighborhood recall, to assess the neighbors' logical relevance regarding the given queries, thereby enabling the subsequent comprehensive identification of only the logically relevant neighbors for link prediction. Our method is generic and assessed by being applied to two state-of-the-art (SOTA) models on three public transductive and inductive datasets, achieving SOTA performance in 42 out of 48 settings.",
+        "authors": [
+          "Zhixiang Su",
+          "Di Wang",
+          "Chunyan Miao"
+        ]
+      },
+      {
+        "title": "Unify Graph Learning with Text: Unleashing LLM Potentials for Session Search",
+        "id": "http://arxiv.org/abs/2505.14156v1",
+        "date": "2025-05-20T10:05:06Z",
+        "abstract": "Session search involves a series of interactive queries and actions to fulfill user's complex information need. Current strategies typically prioritize sequential modeling for deep semantic understanding, overlooking the graph structure in interactions. While some approaches focus on capturing structural information, they use a generalized representation for documents, neglecting the word-level semantic modeling. In this paper, we propose Symbolic Graph Ranker (SGR), which aims to take advantage of both text-based and graph-based approaches by leveraging the power of recent Large Language Models (LLMs). Concretely, we first introduce a set of symbolic grammar rules to convert session graph into text. This allows integrating session history, interaction process, and task instruction seamlessly as inputs for the LLM. Moreover, given the natural discrepancy between LLMs pre-trained on textual corpora, and the symbolic language we produce using our graph-to-text grammar, our objective is to enhance LLMs' ability to capture graph structures within a textual format. To achieve this, we introduce a set of self-supervised symbolic learning tasks including link prediction, node content generation, and generative contrastive learning, to enable LLMs to capture the topological information from coarse-grained to fine-grained. Experiment results and comprehensive analysis on two benchmark datasets, AOL and Tiangong-ST, confirm the superiority of our approach. Our paradigm also offers a novel and effective methodology that bridges the gap between traditional search strategies and modern LLMs.",
+        "authors": [
+          "Songhao Wu",
+          "Quan Tu",
+          "Hong Liu",
+          "Jia Xu",
+          "Zhongyi Liu",
+          "Guannan Zhang",
+          "Ran Wang",
+          "Xiuying Chen",
+          "Rui Yan"
+        ]
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "source": "arxiv",
+    "query": "all:\"graph\" AND (all:\"conditional message passing\" OR all:\"pairwise message passing\") AND submittedDate:[202501010000 TO 202610062359]",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22graph%22+AND+%28all%3A%22conditional+message+passing%22+OR+all%3A%22pairwise+message+passing%22%29+AND+submittedDate%3A%5B202501010000+TO+202610062359%5D&max_results=20&sortBy=submittedDate&sortOrder=descending",
+    "retrieved_utc": "2026-10-06T21:18:54.043329+00:00",
+    "raw_file": "raw/arxiv_44d00a15bd.txt",
+    "papers": [
+      {
+        "title": "Robust and Interpretable Graph Neural Networks for Power Systems State Estimation",
+        "id": "http://arxiv.org/abs/2603.23357v1",
+        "date": "2026-03-24T15:56:54Z",
+        "abstract": "This study analyzes Graph Neural Networks (GNNs) for distribution system state estimation (DSSE) by employing an interpretable Graph Neural Additive Network (GNAN) and by utilizing an edge-conditioned message-passing mechanism. The architectures are benchmarked against the standard Graph Attention Network (GAT) architecture. Multiple SimBench grids with topology changes and various measurement penetration rates were used to evaluate performance. Empirically, GNAN trails GAT in accuracy but serves as a useful probe for graph learning when accompanied with the proposed edge attention mechanism. Together, they demonstrate that incorporating information from distant nodes could improve learning depending on the grid topology and available data. This study advances the state-of-the-art understanding of learning on graphs for the state estimation task and contributes toward reliable GNN-based DSSE prediction technologies.",
+        "authors": [
+          "Arbel Yaniv",
+          "Kilian Golinski",
+          "Christoph Goebel"
+        ]
+      },
+      {
+        "title": "TopoOR: A Unified Topological Scene Representation for the Operating Room",
+        "id": "http://arxiv.org/abs/2603.09466v1",
+        "date": "2026-03-10T10:19:42Z",
+        "abstract": "Surgical Scene Graphs abstract the complexity of surgical operating rooms (OR) into a structure of entities and their relations, but existing paradigms suffer from strictly dyadic structural limitations. Frameworks that predominantly rely on pairwise message passing or tokenized sequences flatten the manifold geometry inherent to relational structures and lose structure in the process. We introduce TopoOR, a new paradigm that models multimodal operating rooms as a higher-order structure, innately preserving pairwise and group relationships. By lifting interactions between entities into higher-order topological cells, TopoOR natively models complex dynamics and multimodality present in the OR. This topological representation subsumes traditional scene graphs, thereby offering strictly greater expressivity. We also propose a higher-order attention mechanism that explicitly preserves manifold structure and modality-specific features throughout hierarchical relational attention. In this way, we circumvent combining 3D geometry, audio, and robot kinematics into a single joint latent representation, preserving the precise multimodal structure required for safety-critical reasoning, unlike existing methods. Extensive experiments demonstrate that our approach outperforms traditional graph and LLM-based baselines across sterility breach detection, robot phase prediction, and next-action anticipation",
+        "authors": [
+          "Tony Danjun Wang",
+          "Ka Young Kim",
+          "Tolga Birdal",
+          "Nassir Navab",
+          "Lennart Bastian"
+        ]
+      },
+      {
+        "title": "Pairwise is Not Enough: Hypergraph Neural Networks for Multi-Agent Pathfinding",
+        "id": "http://arxiv.org/abs/2602.06733v2",
+        "date": "2026-02-06T14:28:54Z",
+        "abstract": "Multi-Agent Path Finding (MAPF) is a representative multi-agent coordination problem, where multiple agents are required to navigate to their respective goals without collisions. Solving MAPF optimally is known to be NP-hard, leading to the adoption of learning-based approaches to alleviate the online computational burden. Prevailing approaches, such as Graph Neural Networks (GNNs), are typically constrained to pairwise message passing between agents. However, this limitation leads to suboptimal behaviours and critical issues, such as attention dilution, particularly in dense environments where group (i.e. beyond just two agents) coordination is most critical. Despite the importance of such higher-order interactions, existing approaches have not been able to fully explore them. To address this representational bottleneck, we introduce HMAGAT (Hypergraph Multi-Agent Attention Network), a novel architecture that leverages attentional mechanisms over directed hypergraphs to explicitly capture group dynamics. Empirically, HMAGAT establishes a new state-of-the-art among learning-based MAPF solvers: e.g., despite having just 1M parameters and being trained on 100$\\times$ less data, it outperforms the current SoTA 85M parameter model. Through detailed analysis of HMAGAT's attention values, we demonstrate how hypergraph representations mitigate the attention dilution inherent in GNNs and capture complex interactions where pairwise methods fail. Our results illustrate that appropriate inductive biases are often more critical than the training data size or sheer parameter count for multi-agent problems.",
+        "authors": [
+          "Rishabh Jain",
+          "Keisuke Okumura",
+          "Michael Amir",
+          "Pietro Lio",
+          "Amanda Prorok"
+        ]
+      },
+      {
+        "title": "Breaking the Reasoning Horizon in Entity Alignment Foundation Models",
+        "id": "http://arxiv.org/abs/2601.21174v3",
+        "date": "2026-01-29T02:18:45Z",
+        "abstract": "Entity alignment (EA) is critical for knowledge graph (KG) fusion. Existing EA models lack transferability and are incapable of aligning unseen KGs without retraining. While using graph foundation models (GFMs) offer a solution, we find that directly adapting GFMs to EA remains largely ineffective. This stems from a critical \"reasoning horizon gap\": unlike link prediction in GFMs, EA necessitates capturing long-range dependencies across sparse and heterogeneous KG structuresTo address this challenge, we propose a EA foundation model driven by a parallel encoding strategy. We utilize seed EA pairs as local anchors to guide the information flow, initializing and encoding two parallel streams simultaneously. This facilitates anchor-conditioned message passing and significantly shortens the inference trajectory by leveraging local structural proximity instead of global search. Additionally, we incorporate a merged relation graph to model global dependencies and a learnable interaction module for precise matching. Extensive experiments verify the effectiveness of our framework, highlighting its strong generalizability to unseen KGs.",
+        "authors": [
+          "Yuanning Cui",
+          "Zequn Sun",
+          "Wei Hu",
+          "Kexuan Xin",
+          "Zhangjie Fu"
+        ]
+      },
+      {
+        "title": "DualHNIE: Dual-Channel Hypergraph Learning for Node Importance Estimation in Heterogeneous Knowledge Graphs",
+        "id": "http://arxiv.org/abs/2512.12477v3",
+        "date": "2025-12-13T22:21:33Z",
+        "abstract": "Estimating node importance in heterogeneous knowledge graphs is a fundamental problem underlying recommendation, search, and knowledge decision systems. However, most existing methods rely on pairwise message passing mechanisms that fail to capture higher-order interactions induced by meta-relational structures. Furthermore, structural topology and semantic attributes are typically entangled within a unified embedding space, which obscures their distinct inductive biases and limits the discriminative capacity of learned importance representations. To address these limitations, we propose DualHNIE, a principled dual-channel hypergraph learning framework for node importance estimation. DualHNIE first constructs a higher-order knowledge graph by forming typed hyperedges from meta-path sequences, enabling explicit modeling of higher-order relational patterns. It then introduces two complementary encoders: a structure-aware hypergraph attention network that performs locally normalized aggregation over meta-path--induced hyperedges to capture localized structural dependencies, and a sparse--chunked hypergraph transformer that captures global semantic interactions while maintaining scalable computation. We further design a contrastive alignment mechanism with auxiliary supervision, ensuring cross-view consistency while preserving modality-specific representation. Extensive experiments on multiple benchmark datasets demonstrate that DualHNIE outperforms state-of-the-art methods, validating the effectiveness of explicit high-order modeling and disentangled dual-channel representation learning for heterogeneous knowledge graphs. Code and datasets are available\\footnote[1]{https://github.com/jiawenchen10/DualHNIE}.",
+        "authors": [
+          "Jiawen Chen",
+          "Yanyan He",
+          "Qi Shao",
+          "Mengli Wei",
+          "Duxin Chen",
+          "Wenwu Yu",
+          "Yanlong Zhao"
+        ]
+      },
+      {
+        "title": "MoSE: Unveiling Structural Patterns in Graphs via Mixture of Subgraph Experts",
+        "id": "http://arxiv.org/abs/2509.09337v1",
+        "date": "2025-09-11T10:45:50Z",
+        "abstract": "While graph neural networks (GNNs) have achieved great success in learning from graph-structured data, their reliance on local, pairwise message passing restricts their ability to capture complex, high-order subgraph patterns. leading to insufficient structural expressiveness. Recent efforts have attempted to enhance structural expressiveness by integrating random walk kernels into GNNs. However, these methods are inherently designed for graph-level tasks, which limits their applicability to other downstream tasks such as node classification. Moreover, their fixed kernel configurations hinder the model's flexibility in capturing diverse subgraph structures. To address these limitations, this paper proposes a novel Mixture of Subgraph Experts (MoSE) framework for flexible and expressive subgraph-based representation learning across diverse graph tasks. Specifically, MoSE extracts informative subgraphs via anonymous walks and dynamically routes them to specialized experts based on structural semantics, enabling the model to capture diverse subgraph patterns with improved flexibility and interpretability. We further provide a theoretical analysis of MoSE's expressivity within the Subgraph Weisfeiler-Lehman (SWL) Test, proving that it is more powerful than SWL. Extensive experiments, together with visualizations of learned subgraph experts, demonstrate that MoSE not only outperforms competitive baselines but also provides interpretable insights into structural patterns learned by the model.",
+        "authors": [
+          "Junda Ye",
+          "Zhongbao Zhang",
+          "Li Sun",
+          "Siqiang Luo"
+        ]
+      },
+      {
+        "title": "Beyond Completion: A Foundation Model for General Knowledge Graph Reasoning",
+        "id": "http://arxiv.org/abs/2505.21926v1",
+        "date": "2025-05-28T03:21:28Z",
+        "abstract": "In natural language processing (NLP) and computer vision (CV), the successful application of foundation models across diverse tasks has demonstrated their remarkable potential. However, despite the rich structural and textual information embedded in knowledge graphs (KGs), existing research of foundation model for KG has primarily focused on their structural aspects, with most efforts restricted to in-KG tasks (e.g., knowledge graph completion, KGC). This limitation has hindered progress in addressing more challenging out-of-KG tasks. In this paper, we introduce MERRY, a foundation model for general knowledge graph reasoning, and investigate its performance across two task categories: in-KG reasoning tasks (e.g., KGC) and out-of-KG tasks (e.g., KG question answering, KGQA). We not only utilize the structural information, but also the textual information in KGs. Specifically, we propose a multi-perspective Conditional Message Passing (CMP) encoding architecture to bridge the gap between textual and structural modalities, enabling their seamless integration. Additionally, we introduce a dynamic residual fusion module to selectively retain relevant textual information and a flexible edge scoring mechanism to adapt to diverse downstream tasks. Comprehensive evaluations on 28 datasets demonstrate that MERRY outperforms existing baselines in most scenarios, showcasing strong reasoning capabilities within KGs and excellent generalization to out-of-KG tasks such as KGQA.",
+        "authors": [
+          "Yin Hua",
+          "Zhiqiang Liu",
+          "Mingyang Chen",
+          "Zheng Fang",
+          "Chi Man Wong",
+          "Lingxiao Li",
+          "Chi Man Vong",
+          "Huajun Chen",
+          "Wen Zhang"
+        ]
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "source": "crossref",
+    "query": "query conditioned graph link prediction",
+    "url": "https://api.crossref.org/works?query.title=query+conditioned+graph+link+prediction&filter=from-pub-date%3A2024-01-01%2Cuntil-pub-date%3A2026-10-06&rows=20",
+    "retrieved_utc": "2026-10-06T21:18:54.044725+00:00",
+    "raw_file": "raw/crossref_103b505d79.txt",
+    "papers": [
+      {
+        "title": "Context Pooling: Query-specific Graph Pooling for Generic Inductive Link Prediction in Knowledge Graphs",
+        "doi": "10.1145/3711896.3736890",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              3
+            ]
+          ]
+        },
+        "journal": [
+          "Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2957-3673",
+            "authenticated-orcid": false,
+            "given": "Zhixiang",
+            "family": "Su",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Nanyang Technological University, Singapore, Singapore"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3171-4001",
+            "authenticated-orcid": false,
+            "given": "Di",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Nanyang Technological University, Singapore, Singapore"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0300-3448",
+            "authenticated-orcid": false,
+            "given": "Chunyan",
+            "family": "Miao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Nanyang Technological University, Singapore, Singapore"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "CGLE: Class-Label Graph Link Estimator for Link Prediction",
+        "doi": "10.1109/icdm65498.2025.00067",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              12
+            ]
+          ]
+        },
+        "journal": [
+          "2025 IEEE International Conference on Data Mining (ICDM)"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Ankit",
+            "family": "Mazumder",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Yardi School of Artificial Intelligence, Indian Institute of Technology,Delhi,India"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Srikanta",
+            "family": "Bedathur",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Yardi School of Artificial Intelligence, Indian Institute of Technology,Department of Computer Science and Engineering,Delhi,India"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Learning entity-query dependency and query classification for temporal knowledge graph prediction",
+        "doi": "10.1016/j.eswa.2025.128016",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              8
+            ]
+          ]
+        },
+        "journal": [
+          "Expert Systems with Applications"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Mingsheng",
+            "family": "He",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lin",
+            "family": "Zhu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Luyi",
+            "family": "Bai",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Helpormer: Heterogeneous Graph Transformer for Link Prediction",
+        "doi": "10.2139/ssrn.5297031",
+        "date": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "journal": null,
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Haoyang",
+            "family": "Fan",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Ziyang",
+            "family": "Fan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yifan",
+            "family": "Lu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Pengfei",
+            "family": "Jiao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Ning",
+            "family": "Ruan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Conformalized Link Prediction on Graph Neural Networks",
+        "doi": "10.1145/3637528.3672061",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              24
+            ]
+          ]
+        },
+        "journal": [
+          "Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0005-5239-9871",
+            "authenticated-orcid": false,
+            "given": "Tianyi",
+            "family": "Zhao",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Southern California, Los Angeles, CA, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3902-7131",
+            "authenticated-orcid": false,
+            "given": "Jian",
+            "family": "Kang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Rochester, Rochester, NY, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2503-2522",
+            "authenticated-orcid": false,
+            "given": "Lu",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Illinois Chicago, Chicago, IL, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Norm Augmented Graph AutoEncoders for Link Prediction",
+        "doi": "10.1109/icassp49660.2025.10890143",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              6
+            ]
+          ]
+        },
+        "journal": [
+          "ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Yunhui",
+            "family": "Liu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Nanjing University,State Key Laboratory for Novel Software Technology,Nanjing,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Huaisong",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Tsinghua University,Tsinghua Shenzhen International Graduate School,Shenzhen,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xinyi",
+            "family": "Gao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "The University of Queensland,School of Electrical Engineering and Computer Science,Brisbane,Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Liuye",
+            "family": "Guo",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Nanjing University,State Key Laboratory for Novel Software Technology,Nanjing,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhen",
+            "family": "Tao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Nanjing University,State Key Laboratory for Novel Software Technology,Nanjing,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tieke",
+            "family": "He",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Nanjing University,State Key Laboratory for Novel Software Technology,Nanjing,China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Decoupled Variational Graph Autoencoder for Link Prediction",
+        "doi": "10.1145/3589334.3645601",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              13
+            ]
+          ]
+        },
+        "journal": [
+          "Proceedings of the ACM Web Conference 2024"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-9110-7414",
+            "authenticated-orcid": false,
+            "given": "Yoon-Sik",
+            "family": "Cho",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Chung-Ang University, Seoul, Republic of Korea"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Link prediction heuristics for temporal graph benchmark",
+        "doi": "10.14428/esann/2024.es2024-141",
+        "date": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "journal": [
+          "ESANN 2024 proceesdings"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Manuel",
+            "family": "Dileo",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Matteo",
+            "family": "Zignani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Temporal Link Prediction via Auxiliary Graph Transformer",
+        "doi": "10.1109/tnse.2024.3485093",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              11
+            ]
+          ]
+        },
+        "journal": [
+          "IEEE Transactions on Network Science and Engineering"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0003-7977-9749",
+            "authenticated-orcid": false,
+            "given": "Tao",
+            "family": "Tan",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Electronic and Information Engineering, Beihang University, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5042-7884",
+            "authenticated-orcid": false,
+            "given": "Xianbin",
+            "family": "Cao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Electronic and Information Engineering, Beihang University, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0002-2124-3303",
+            "authenticated-orcid": false,
+            "given": "Fansheng",
+            "family": "Song",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Electronic and Information Engineering, Beihang University, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7581-9876",
+            "authenticated-orcid": false,
+            "given": "Shenwen",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Electronic and Information Engineering, Beihang University, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6561-6362",
+            "authenticated-orcid": false,
+            "given": "Wenbo",
+            "family": "Du",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Electronic and Information Engineering, Beihang University, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6852-4471",
+            "authenticated-orcid": false,
+            "given": "Yumeng",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Electronic and Information Engineering, Beihang University, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Path-Based Knowledge Graph Link Prediction Method With Graph Context",
+        "doi": "10.1109/tcss.2026.3669923",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              6
+            ]
+          ]
+        },
+        "journal": [
+          "IEEE Transactions on Computational Social Systems"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-0475-0194",
+            "authenticated-orcid": false,
+            "given": "Jiawei",
+            "family": "Lu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "China Jiliang University, Hangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0003-6898-6080",
+            "authenticated-orcid": false,
+            "given": "Jianwei",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "China Jiliang University, Hangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0004-7371-0924",
+            "authenticated-orcid": false,
+            "given": "Haotian",
+            "family": "Zhu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang University of Technology, Hangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0002-9910-0572",
+            "authenticated-orcid": false,
+            "given": "Zhongcheng",
+            "family": "Xiao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang University of Technology, Hangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0806-2156",
+            "authenticated-orcid": false,
+            "given": "Gang",
+            "family": "Xiao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "China Jiliang University, Hangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2014-2714",
+            "authenticated-orcid": false,
+            "given": "Qibing",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "China Jiliang University, Hangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Temporal knowledge graph link predictions with query-guided temporal representation learning",
+        "doi": "10.1016/j.ins.2025.122035",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              8
+            ]
+          ]
+        },
+        "journal": [
+          "Information Sciences"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2344-6892",
+            "authenticated-orcid": false,
+            "given": "Linhua",
+            "family": "Dong",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xiaofei",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8054-8185",
+            "authenticated-orcid": false,
+            "given": "Bo",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Qiannan",
+            "family": "Zhu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Fan",
+            "family": "Meng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Temporal Graph Prototype-conditioned Conformal Prediction for Fraud Detection",
+        "doi": "10.1145/3770855.3818061",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              8
+            ]
+          ]
+        },
+        "journal": [
+          "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0000-4892-2598",
+            "authenticated-orcid": false,
+            "given": "Xudong",
+            "family": "Chen",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Emory University, Atlanta, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7482-6524",
+            "authenticated-orcid": false,
+            "given": "Shengbo",
+            "family": "Gong",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Emory University, Atlanta, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2503-2522",
+            "authenticated-orcid": false,
+            "given": "Lu",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Illinois at Chicago, Chicago, IL, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5054-954X",
+            "authenticated-orcid": false,
+            "given": "Wei",
+            "family": "Jin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Emory University, Atlanta, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Graph Autoencoder-based Link Prediction for Disease-Symptom Knowledge Graph Completion",
+        "doi": "10.1109/icssas68835.2026.11559445",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              28
+            ]
+          ]
+        },
+        "journal": [
+          "2026 4th International Conference on Self Sustainable Artificial Intelligence Systems (ICSSAS)"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Remya R.K.",
+            "family": "Menon",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Amrita School of Computing, Amrita Vishwa Vidyapeetham,Department of Computer Science and Applications,Amritapuri,India"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ameena",
+            "family": "N",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Amrita School of Computing, Amrita Vishwa Vidyapeetham,Department of Computer Science and Applications,Amritapuri,India"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Haripriya",
+            "family": "J",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Amrita School of Computing, Amrita Vishwa Vidyapeetham,Department of Computer Science and Applications,Amritapuri,India"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Link Prediction with Physics-Inspired Graph Neural Networks",
+        "doi": "10.1109/ijcnn64981.2025.11227954",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              30
+            ]
+          ]
+        },
+        "journal": [
+          "2025 International Joint Conference on Neural Networks (IJCNN)"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Andrea Giuseppe",
+            "family": "Di Francesco",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Sapienza University of Rome,Department of Computer Science, Control and Management Engineering,Rome,Italy"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Francesco",
+            "family": "Caso",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sapienza University of Rome,Department of Computer Science, Control and Management Engineering,Rome,Italy"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Maria Sofia",
+            "family": "Bucarelli",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sapienza University of Rome,Department of Computer Science, Control and Management Engineering,Rome,Italy"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Fabrizio",
+            "family": "Silvestri",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sapienza University of Rome,Department of Computer Science, Control and Management Engineering,Rome,Italy"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Evolving graph attention networks for dynamic link prediction",
+        "doi": "10.1371/journal.pone.0349685",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              1
+            ]
+          ]
+        },
+        "journal": [
+          "PLOS One"
+        ],
+        "abstract": "<jats:p>Graph neural networks (GNNs), which learn node representations via aggregating their neighbors, have shown superior performance and become the de facto efficient toolkit for analyzing and learning from data with structured properties. However, most existing GNNs are designed for static graphs and assume fixed graph structures and node sets. In many real-world applications, graphs evolve continuously over time—with nodes and edges appearing or disappearing—rendering static models insufficient for capturing these temporal dynamics. In this paper, we propose Evolving Graph Attention Networks (EGAT), a novel framework for dynamic graph representation learning. Specifically, EGAT leverages the anisotropic attention mechanism of Graph Attention Networks (GATs) to capture complex inter-node relationships. Crucially, the multi-head attention weights of the GAT are evolved over time via a recurrent neural network (RNN), enabling the model to adaptively adjust the importance of different neighbors as the graph topology and relational dynamics change. This weight-evolving paradigm couples the anisotropic attention mechanism of GATs with a recurrent subnetwork, enabling the joint modeling of topological evolution and temporal relational dynamics. Extensive experiments on benchmark datasets demonstrate that the proposed model consistently outperforms state-of-the-art baselines.</jats:p>",
+        "authors": [
+          {
+            "given": "Yucai",
+            "family": "Jiang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0008-4803-0184",
+            "authenticated-orcid": true,
+            "given": "Rongying",
+            "family": "Shan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Gang",
+            "family": "Fu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhuolin",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jingjing",
+            "family": "Sun",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhongyun",
+            "family": "Bao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Feifei",
+            "family": "Wei",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Inductive Link Prediction for Sequential-emerging Knowledge Graph",
+        "doi": "10.1109/icde60146.2024.10637914",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              13
+            ]
+          ]
+        },
+        "journal": [
+          "2024 IEEE 40th International Conference on Data Engineering (ICDE)"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "given": "Yufeng",
+            "family": "Zhang",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Soochow University,School of Computer Science and Technology"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Wei",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Soochow University,School of Computer Science and Technology"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xi",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Soochow University,School of Computer Science and Technology"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Qingzhi",
+            "family": "Ma",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Soochow University,School of Computer Science and Technology"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lei",
+            "family": "Zhao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Soochow University,School of Computer Science and Technology"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Graph Link‐Based Prediction for API Usage Recommendation",
+        "doi": "10.1002/smr.70114",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              12
+            ]
+          ]
+        },
+        "journal": [
+          "Journal of Software: Evolution and Process"
+        ],
+        "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:p>Application programming interface (API) is an important form and is widely used in software projects in the software reuse field. However, it is not easy for developers to find out the appropriate APIs for their programming tasks, especially for unfamiliar tasks. Technologies that recommend suitable APIs for developers can help a lot. Although those technologies make the process of API reuse more convenient than searching directly on the Web, the recommendation performance still needs to be further improved, especially when a new project starts. How to get as much information as possible is very important. In this paper, we focus on this problem and incorporate multi‐source information to improve API recommendation effectively. Here, we propose a new approach, named graph link‐based prediction for API recommendation (GLBPAPI), which uses graph neural networks to learn fine‐grained representations between APIs and predict potential links inductively based on the API similarity. In addition, we combine the graph link prediction and probability model together as the recommendation engine in GLBPAPI to improve the effectiveness of the API recommendation. We evaluate our approach on 2210 open‐source Java projects extracted from GitHub and Maven Central. The experimental results show that it outperforms existing approaches in terms of mean average precision (MAP).</jats:p>",
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-4905-1290",
+            "authenticated-orcid": false,
+            "given": "Junxia",
+            "family": "Guo",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "College of Information Science and Technology Beijing University of Chemical Technology  Beijing China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yingjie",
+            "family": "Tao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "College of Information Science and Technology Beijing University of Chemical Technology  Beijing China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Baoqiang",
+            "family": "Lai",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "College of Information Science and Technology Beijing University of Chemical Technology  Beijing China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Bowen",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "College of Information Science and Technology Beijing University of Chemical Technology  Beijing China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3938-7033",
+            "authenticated-orcid": false,
+            "given": "Zheng",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "College of Information Science and Technology Beijing University of Chemical Technology  Beijing China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Graph-Based Link Prediction for Epilepsy Drug Discovery",
+        "doi": "10.21203/rs.3.rs-6653352/v1",
+        "date": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              29
+            ]
+          ]
+        },
+        "journal": null,
+        "abstract": "<title>Abstract</title>\n        <p>Epilepsy is one of the most prevalent neurological disorders, affecting approximately 23 million people in Asia alone. It isa disorder with severe social impacts and is going to progressively damage the brain. It encompasses a wide range ofsyndromes and each one of them differs significantly in treatment options. seizures is the common symptom in all of them.Despite being one of the most researched clinical conditions, the exact mechanism is still unknown, and this poses challengesfor coming up with an effective treatment mechanism. Conventional treatment which includes Anti-Epileptic Drugs (AEDs)come with a lot of limitations. Inspired by Ayurveda, we propose a computational framework to predict phytochemical-proteininteractions for potential epilepsy treatment. We propose that the interaction can be modelled as a bipartite graph, wherenodes represent phytochemicals and proteins and edges are represented by interactions. We employ Graph neural networksto capture both local and global information about the graph. Initially, the entire graph was trained using Graph ConvolutionalNetwork (GCN), Graph Attention Network (GAT), and GraphSAGE. To enhance predictive performance, we then constructedone-hop enclosing subgraphs for both positive and negative samples and trained the same three models on this refined dataset.Our best-performing model achieved an accuracy of 0.9778, precision of 0.9574, F1-score of 0.9782, and ROC-AUC score of0.9994.</p>",
+        "authors": [
+          {
+            "given": "Xiaolong",
+            "family": "Shi",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Guangzhou University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Sundareswaran",
+            "family": "Raman",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sri Sivasubramaniya Nadar College of Engineering"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Shanmugapriya",
+            "family": "M.",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sri Sivasubramaniya Nadar College of Engineering"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Nikilesh",
+            "family": "Jayaguptha",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sri Sivasubramaniya Nadar College of Engineering"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Aysha",
+            "family": "Khan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Technology and Applied Sciences, Musanna"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Graph Neural Networks Based Analog Circuit Link Prediction",
+        "doi": "10.1016/j.engappai.2025.113035",
+        "date": {
+          "date-parts": [
+            [
+              2026,
+              1
+            ]
+          ]
+        },
+        "journal": [
+          "Engineering Applications of Artificial Intelligence"
+        ],
+        "abstract": null,
+        "authors": [
+          {
+            "ORCID": "https://orcid.org/0009-0008-9150-8454",
+            "authenticated-orcid": false,
+            "given": "Guanyuan",
+            "family": "Pan",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tiansheng",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jianxiang",
+            "family": "Zhao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhi",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yugui",
+            "family": "Lin",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Bingtao",
+            "family": "Ma",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yaqi",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Pietro",
+            "family": "Liò",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shuai",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Structural Information Enhanced Graph Representation for Link Prediction",
+        "doi": "10.1609/aaai.v38i13.29417",
+        "date": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              24
+            ]
+          ]
+        },
+        "journal": [
+          "Proceedings of the AAAI Conference on Artificial Intelligence"
+        ],
+        "abstract": "<jats:p>Link prediction is a fundamental task of graph machine learning, and Graph Neural Network (GNN) based methods have become the mainstream approach due to their good performance. However, the typical practice learns node representations through neighborhood aggregation, lacking awareness of the structural relationships between target nodes. Recently, some methods have attempted to address this issue by node labeling tricks. However, they still rely on the node-centric neighborhood message passing of GNNs, which we believe involves two limitations in terms of information perception and transmission for link prediction. First, it cannot perceive long-range structural information due to the restricted receptive fields. Second, there may be information loss of node-centric model on link-centric task. In addition, we empirically find that the neighbor node features could introduce noise for link prediction. To address these issues, we propose a structural information enhanced link prediction framework, which involves removing the neighbor node features while fitting neighborhood graph structures more focused through GNN. Furthermore, we introduce Binary Structural Transformer (BST) to encode the structural relationships between target nodes, complementing the deficiency of GNN. Our approach achieves remarkable results on multiple popular benchmarks, including ranking first on ogbl-ppa, ogbl-citation2 and Pubmed.</jats:p>",
+        "authors": [
+          {
+            "given": "Lei",
+            "family": "Shi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Bin",
+            "family": "Hu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Deng",
+            "family": "Zhao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jianshan",
+            "family": "He",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhiqiang",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jun",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "ok"
+  }
+]

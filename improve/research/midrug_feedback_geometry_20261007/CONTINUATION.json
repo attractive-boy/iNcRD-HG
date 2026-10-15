@@ -1,0 +1,144 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "full",
+    "mean_inner_auc": 0.9538856308756708,
+    "mean_inner_ap": 0.9141530561708012,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0012858358209194936,
+          "fold_deltas": [
+            0.001754837070160442,
+            0.000685854561039978,
+            0.0014168158315580603
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0023279470759359397,
+          "fold_deltas": [
+            0.0037582490008576386,
+            0.0006517306467426209,
+            0.0025738615802075593
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 0.00017314886549949873,
+          "fold_deltas": [
+            4.292654281146113e-06,
+            2.7485718163133832e-05,
+            0.0004876682240542163
+          ]
+        },
+        "ap": {
+          "mean_delta": 6.24747167527288e-05,
+          "fold_deltas": [
+            -1.9362643688403125e-07,
+            4.639207814571833e-06,
+            0.00018297856888049857
+          ]
+        }
+      },
+      "diagonal": {
+        "auc": {
+          "mean_delta": 3.4950227479827824e-05,
+          "fold_deltas": [
+            1.7170617124806498e-06,
+            -3.092143293370597e-05,
+            0.0001340550536607088
+          ]
+        },
+        "ap": {
+          "mean_delta": -1.9964106019935517e-05,
+          "fold_deltas": [
+            -6.57429150285882e-06,
+            -4.675184089031337e-05,
+            -6.566185666634361e-06
+          ]
+        }
+      },
+      "mean": {
+        "auc": {
+          "mean_delta": -0.0001613400887237789,
+          "fold_deltas": [
+            2.575592568776486e-06,
+            -0.00045909738619420715,
+            -2.7498472545905983e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": -4.32892863764985e-05,
+          "fold_deltas": [
+            3.526287961630459e-08,
+            -1.2660520958052146e-05,
+            -0.00011724260105105966
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0001613400887237789
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 9,
+  "new_checkpoint_replays": 9,
+  "final_state_inspections": 9,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "component_diagnostics": {
+    "full": {
+      "train_auc": 0.9605615265149283,
+      "train_ap": 0.9260442340326575,
+      "inner_auc": 0.9538856308756708,
+      "inner_ap": 0.9141530561708012,
+      "mean_effective_incoming_events": 4.05908203125,
+      "rms_first_step_coordinates": 0.9121946493784586,
+      "rms_second_step_coordinate_change": 0.32848499218622845,
+      "moment_offdiagonal_energy_fraction": 0.3385249078273773,
+      "max_second_step_frame_condition": 37.63191604614258,
+      "mean_second_step_frame_condition": 4.976715087890625,
+      "minimum_frame_singular_value": 0.027263652843733627,
+      "offdiagonal_clip_fraction": 0.0002706726275694867,
+      "logdiagonal_clip_fraction": 0.0,
+      "val_rms_added_lin1_activation": 0.046484320890158415
+    },
+    "diagonal": {
+      "train_auc": 0.9609596743228531,
+      "train_ap": 0.9265406898940495,
+      "inner_auc": 0.9538506806481911,
+      "inner_ap": 0.914173020276821,
+      "mean_effective_incoming_events": 3.9567492802937827,
+      "rms_first_step_coordinates": 0.8886424700419108,
+      "rms_second_step_coordinate_change": 0.3103027641773224,
+      "moment_offdiagonal_energy_fraction": 0.0,
+      "max_second_step_frame_condition": 265.617914835612,
+      "mean_second_step_frame_condition": 5.085411190986633,
+      "minimum_frame_singular_value": 0.022712049501327176,
+      "offdiagonal_clip_fraction": 0.0,
+      "logdiagonal_clip_fraction": 0.0,
+      "val_rms_added_lin1_activation": 0.07759913460661967
+    },
+    "mean": {
+      "train_auc": 0.9611536138545667,
+      "train_ap": 0.9269820367895488,
+      "inner_auc": 0.9540469709643946,
+      "inner_ap": 0.9141963454571777,
+      "mean_effective_incoming_events": 4.169643084208171,
+      "rms_first_step_coordinates": 1.0539418458938599,
+      "rms_second_step_coordinate_change": 0.46084821224212646,
+      "moment_offdiagonal_energy_fraction": 0.4695850610733032,
+      "max_second_step_frame_condition": 492.6079632441203,
+      "mean_second_step_frame_condition": 11.390250364939371,
+      "minimum_frame_singular_value": 0.017629881234218676,
+      "offdiagonal_clip_fraction": 0.0002706726275694867,
+      "logdiagonal_clip_fraction": 0.0,
+      "val_rms_added_lin1_activation": 0.13425031079289815
+    }
+  },
+  "next_action": "Use the frozen full/diagonal/mean results and geometry diagnostics to decide the next distinct hypothesis; do not retrospectively sweep feedback weights, temperature, block size or depth."
+}

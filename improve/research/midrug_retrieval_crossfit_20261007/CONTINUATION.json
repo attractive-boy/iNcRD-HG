@@ -1,0 +1,158 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "oof_label",
+    "mean_inner_auc": 0.9538581990202939,
+    "mean_inner_ap": 0.913448068694033,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.001258403965542591,
+          "fold_deltas": [
+            0.0017153446507733872,
+            0.0012600483920424121,
+            0.0007998188538119733
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0016229595991678798,
+          "fold_deltas": [
+            0.0022708441999192974,
+            0.0010460949383942486,
+            0.0015519396591900936
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 0.0001457170101225961,
+          "fold_deltas": [
+            -3.519976510590883e-05,
+            0.000601679549165568,
+            -0.0001293287536918708
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.000642512760015331,
+          "fold_deltas": [
+            -0.0014875984273752252,
+            0.0003990034994661995,
+            -0.0008389433521369671
+          ]
+        }
+      },
+      "full300": {
+        "auc": {
+          "mean_delta": 0.0005239071100432054,
+          "fold_deltas": [
+            0.00046360666237132975,
+            0.0008997278054974078,
+            0.00020838686226087866
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0008571909769447364,
+          "fold_deltas": [
+            0.0002395256876565055,
+            0.0015282463372878752,
+            0.0008038009058898288
+          ]
+        }
+      },
+      "insample_label": {
+        "auc": {
+          "mean_delta": 0.0002112871150067678,
+          "fold_deltas": [
+            8.07019004869236e-05,
+            0.0005329652537576779,
+            2.0194190775701948e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0005069827304247468,
+          "fold_deltas": [
+            -6.060862965617808e-06,
+            0.0011327117996552394,
+            0.00039429725458461906
+          ]
+        }
+      },
+      "oof_features": {
+        "auc": {
+          "mean_delta": 0.00016528868972024804,
+          "fold_deltas": [
+            0.00018329633780789223,
+            0.0004857241756647257,
+            -0.00017315444431187377
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.00034761734486832285,
+          "fold_deltas": [
+            -3.3292974898291305e-05,
+            0.0010755779214476346,
+            5.6708805562522e-07
+          ]
+        }
+      }
+    },
+    "selection_score": -0.000642512760015331
+  },
+  "promote_to_outer_validation": false,
+  "new_fits": 27,
+  "new_base_fits": 18,
+  "new_case_fits": 9,
+  "new_checkpoint_replays": 27,
+  "final_case_state_inspections": 9,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "component_diagnostics": {
+    "oof_label": {
+      "train_inference_auc": 0.9633029531626155,
+      "train_inference_ap": 0.9310257787950351,
+      "fitted_offset_auc": 0.955955703236485,
+      "fitted_offset_ap": 0.9179964530101651,
+      "inner_auc": 0.9538581990202939,
+      "inner_ap": 0.913448068694033,
+      "mean_abs_residual_logit": 0.24771839380264282,
+      "rms_residual_logit": 0.2819103846947352,
+      "mean_effective_neighbors": 31.31736437479655,
+      "same_miRNA_mass": 0.08138577391703923,
+      "same_drug_mass": 0.3174774944782257,
+      "positive_label_mass": 0.3782862226168315
+    },
+    "insample_label": {
+      "train_inference_auc": 0.9618360278516036,
+      "train_inference_ap": 0.9284188543366357,
+      "fitted_offset_auc": 0.961836009953107,
+      "fitted_offset_ap": 0.9284188543366357,
+      "inner_auc": 0.9536469119052872,
+      "inner_ap": 0.9129410859636083,
+      "mean_abs_residual_logit": 0.17291872203350067,
+      "rms_residual_logit": 0.207316925128301,
+      "mean_effective_neighbors": 31.273534774780273,
+      "same_miRNA_mass": 0.08372315019369125,
+      "same_drug_mass": 0.30608852704366046,
+      "positive_label_mass": 0.36784900228182477
+    },
+    "oof_features": {
+      "train_inference_auc": 0.961438792365458,
+      "train_inference_ap": 0.9276996777536001,
+      "fitted_offset_auc": 0.9536573665120153,
+      "fitted_offset_ap": 0.9139897281670133,
+      "inner_auc": 0.9536929103305738,
+      "inner_ap": 0.9131004513491648,
+      "mean_abs_residual_logit": 0.16161493708690008,
+      "rms_residual_logit": 0.19187009086211523,
+      "mean_effective_neighbors": 31.53753153483073,
+      "same_miRNA_mass": 0.14813238382339478,
+      "same_drug_mass": 0.24321435391902924,
+      "positive_label_mass": 0.3871399760246277
+    }
+  },
+  "next_action": "Use frozen comparisons and diagnostics to identify a distinct evidence-supported hypothesis; do not retrospectively tune this case branch."
+}

@@ -1,0 +1,57 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "current_turn": "progress: 24 observed-entry logistic matrix fits, robust/graph ablations and fixed-blend evaluation",
+  "best_blend": {
+    "config": "n03_g00_logistic",
+    "kind": "blend",
+    "weight": 0.1,
+    "mean_inner_auc": 0.9539794096165838,
+    "mean_inner_ap": 0.9146406577286624,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.001379614561832443,
+          "fold_deltas": [
+            0.0017647101750071226,
+            0.0008675179795247789,
+            0.0015066155309654272
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0028155486337972193,
+          "fold_deltas": [
+            0.003583770944744602,
+            0.0013040389109658657,
+            0.0035588360456811907
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 0.00026692760641244817,
+          "fold_deltas": [
+            1.4165759127826583e-05,
+            0.00020914913664793477,
+            0.0005774679234615832
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0005500762746140087,
+          "fold_deltas": [
+            -0.0001746716825499206,
+            0.0006569474720378166,
+            0.00116795303435413
+          ]
+        }
+      }
+    },
+    "selection_score": 0.00026692760641244817
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Seek a substantively different representation or training hypothesis; matched sparse-error and graph-smoothing variants did not help. Do not repeat these grids or evaluate original test without a frozen promising candidate."
+}

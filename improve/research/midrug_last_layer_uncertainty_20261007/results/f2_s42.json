@@ -1,0 +1,152 @@
+{
+  "fold": 2,
+  "seed": 42,
+  "source_metadata": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f2_s42.json",
+  "source_record": {
+    "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f2_s42.json",
+    "metadata_sha256": "abd5bd99263378a07394fa2a9ef2dad71b6b4dfaaefe0fd546aa864fbc075c36",
+    "checkpoint_sha256": "75f1b60da781be28d03ac16359c550b17c79aa5bbfd9e06cd7499e54d208544b",
+    "probability_sha256": "2b5ec3c419ba679cb36b4645eb413d046e3d5dff1cfce1e370bb2ead8a9ec1a4"
+  },
+  "train_metrics": {
+    "point": {
+      "auc": 0.9673852302351008,
+      "ap": 0.9407335524908278,
+      "bce": 0.21625935829402818,
+      "brier": 0.06514115768756522
+    },
+    "laplace": {
+      "auc": 0.9673193227284506,
+      "ap": 0.940727065925103,
+      "bce": 0.21762236437421065,
+      "brier": 0.06536270983953166
+    },
+    "sandwich": {
+      "auc": 0.9682935516052558,
+      "ap": 0.9428090812121341,
+      "bce": 0.21463007805230624,
+      "brier": 0.06479143481244369
+    },
+    "constant": {
+      "auc": 0.9673852302351008,
+      "ap": 0.9407335524908278,
+      "bce": 0.21730841321983374,
+      "brier": 0.06535083525815136
+    }
+  },
+  "inner_metrics": {
+    "point": {
+      "auc": 0.9458172674939697,
+      "ap": 0.8902209997247618,
+      "bce": 0.2889599682650833,
+      "brier": 0.08648670322194581
+    },
+    "laplace": {
+      "auc": 0.9463668072812519,
+      "ap": 0.8912499558904854,
+      "bce": 0.2821790055863805,
+      "brier": 0.08565427667955612
+    },
+    "sandwich": {
+      "auc": 0.9462877491726827,
+      "ap": 0.8912030320404516,
+      "bce": 0.28293066199940287,
+      "brier": 0.08571434782990439
+    },
+    "constant": {
+      "auc": 0.9458172674939697,
+      "ap": 0.8902209997247618,
+      "bce": 0.28507119268288067,
+      "brier": 0.08590796947493874
+    }
+  },
+  "convergence": [
+    {
+      "iteration": 0,
+      "objective": 0.6931471805599475,
+      "gradient_inf": 0.36886880040661,
+      "step_size": 1.0,
+      "newton_decrement": 0.721815090668093
+    },
+    {
+      "iteration": 1,
+      "objective": 0.2878875990046803,
+      "gradient_inf": 0.08408691554679419,
+      "step_size": 1.0,
+      "newton_decrement": 0.08430955876963302
+    },
+    {
+      "iteration": 2,
+      "objective": 0.2361750088483417,
+      "gradient_inf": 0.027269967231735574,
+      "step_size": 1.0,
+      "newton_decrement": 0.02246722335281502
+    },
+    {
+      "iteration": 3,
+      "objective": 0.22241734404050661,
+      "gradient_inf": 0.00859883773490498,
+      "step_size": 1.0,
+      "newton_decrement": 0.005555987535464357
+    },
+    {
+      "iteration": 4,
+      "objective": 0.21910626474162787,
+      "gradient_inf": 0.0023995924911596046,
+      "step_size": 1.0,
+      "newton_decrement": 0.0008817369968507118
+    },
+    {
+      "iteration": 5,
+      "objective": 0.2186103853515115,
+      "gradient_inf": 0.0004462090350386338,
+      "step_size": 1.0,
+      "newton_decrement": 4.746985357966675e-05
+    },
+    {
+      "iteration": 6,
+      "objective": 0.2185856192647236,
+      "gradient_inf": 2.9633207900013156e-05,
+      "step_size": 1.0,
+      "newton_decrement": 2.427014015720865e-07
+    },
+    {
+      "iteration": 7,
+      "objective": 0.21858549742067176,
+      "gradient_inf": 1.8789181167094282e-07,
+      "step_size": 1.0,
+      "newton_decrement": 9.732764388882025e-12
+    },
+    {
+      "iteration": 8,
+      "objective": 0.21858549741580516,
+      "gradient_inf": 9.634937650233183e-12
+    }
+  ],
+  "original_gradient_inf": 0.016066739698504997,
+  "quadrature_error": {
+    "point": 0.0,
+    "laplace": 8.42511303777993e-12,
+    "sandwich": 2.8745363866988782e-09,
+    "constant": 4.440892098500626e-16
+  },
+  "variance_summary": {
+    "laplace": {
+      "mean": 0.6926473775950664,
+      "std": 0.49064215049412685,
+      "max": 5.279262310112491
+    },
+    "sandwich": {
+      "mean": 0.5697935631138903,
+      "std": 0.4492242253251514,
+      "max": 6.356913400877209
+    }
+  },
+  "constant_variance": 0.5462166236498615,
+  "artifacts_sha256": "4c47af806d5524fd0b51b09bfd2e13c9d1860bd04f33566f1fe3cfc34e622b25",
+  "plan_sha256": "9a523552263202c5c4cb45ebcd9a22af39d390502681bcd1ede5ca7365d6394d",
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false,
+  "elapsed_seconds": 12.045108318328857
+}

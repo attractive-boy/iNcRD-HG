@@ -1,0 +1,117 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "best": {
+    "config": "mean",
+    "mean_inner_auc": 0.9530092751419632,
+    "mean_inner_ap": 0.9119746859910403,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.0004094800872119035,
+          "fold_deltas": [
+            0.0009813007686857445,
+            0.0002843053972499954,
+            -3.716590430002942e-05
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.00014957689617508171,
+          "fold_deltas": [
+            0.0013740599926503894,
+            -1.527063838535625e-05,
+            -0.000910058665739788
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": -0.0007032068682080913,
+          "fold_deltas": [
+            -0.0007692436471935515,
+            -0.0003740634456268488,
+            -0.0009663135118038735
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0021158954630081292,
+          "fold_deltas": [
+            -0.0023843826346441332,
+            -0.0006623620773134054,
+            -0.0033009416770668487
+          ]
+        }
+      },
+      "raw": {
+        "auc": {
+          "mean_delta": -0.0006724743147890436,
+          "fold_deltas": [
+            -0.0010757391628721802,
+            -0.00029933664937076276,
+            -0.000642347132124188
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0017691754612850774,
+          "fold_deltas": [
+            -0.0021346228612183493,
+            -0.00023635868570981433,
+            -0.0029365448369270686
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0021158954630081292
+  },
+  "promote_to_outer_validation": false,
+  "new_training_trajectories": 3,
+  "new_checkpoint_replays": 6,
+  "reused_control_checks": 6,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Read frozen diagnostics before choosing another hypothesis; no retrospective averaging-window or validation-gated member search.",
+  "component_diagnostics": {
+    "status": "passed",
+    "means": [
+      {
+        "config": "raw",
+        "train": {
+          "auc": 0.9601127277157028,
+          "ap": 0.9252826664390765,
+          "bce": 0.24098106225331625
+        },
+        "val": {
+          "auc": 0.9536817494567523,
+          "ap": 0.9137438614523253,
+          "bce": 0.25826483964920044
+        },
+        "reconstruction": 0.5911524295806885,
+        "train_minus_val": {
+          "auc": 0.006430978258950411,
+          "ap": 0.011538804986751083
+        }
+      },
+      {
+        "config": "mean",
+        "train": {
+          "auc": 0.9598708547790226,
+          "ap": 0.9251538181231155,
+          "bce": 0.240399440129598
+        },
+        "val": {
+          "auc": 0.9530092751419632,
+          "ap": 0.9119746859910403,
+          "bce": 0.25898293654123944
+        },
+        "reconstruction": 0.5945298671722412,
+        "train_minus_val": {
+          "auc": 0.006861579637059208,
+          "ap": 0.013179132132075258
+        }
+      }
+    ],
+    "selection_unchanged": true
+  }
+}

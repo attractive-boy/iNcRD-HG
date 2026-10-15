@@ -1,0 +1,63 @@
+{
+  "configs": {
+    "baseline": {
+      "rank": 0,
+      "power": 0.0,
+      "temperature": 1.0,
+      "reg": 0.0
+    },
+    "degree05": {
+      "rank": 0,
+      "power": 0.5,
+      "temperature": 1.0,
+      "reg": 0.0
+    },
+    "attn16": {
+      "rank": 16,
+      "power": 0.0,
+      "temperature": 1.0,
+      "reg": 0.0001
+    },
+    "attn16_deg": {
+      "rank": 16,
+      "power": 0.5,
+      "temperature": 1.0,
+      "reg": 0.0001
+    },
+    "attn64_deg": {
+      "rank": 64,
+      "power": 0.5,
+      "temperature": 1.0,
+      "reg": 0.0001
+    },
+    "attn16_t3": {
+      "rank": 16,
+      "power": 0.5,
+      "temperature": 3.0,
+      "reg": 0.0001
+    },
+    "attn64_t3": {
+      "rank": 64,
+      "power": 0.5,
+      "temperature": 3.0,
+      "reg": 0.0001
+    },
+    "attn16_reg": {
+      "rank": 16,
+      "power": 0.5,
+      "temperature": 1.0,
+      "reg": 0.01
+    }
+  },
+  "seeds": [
+    42
+  ],
+  "max_epochs": 700,
+  "patience": 200,
+  "minimum_epochs": 300,
+  "source_sha256": "ae1e1f8efb354c775b787d6b89adce0ce8adc37938250fee7ce78b49618645f8",
+  "model_sha256": "cbb7c05e6453c6a9f5b067b9d2801fc6e8140c9e501df48febd23445fdb60d94",
+  "graph": "Frozen original lncRNA/miRNA/drug graph; target train positives only",
+  "selection": "min(validation AUC gain, validation AP gain)",
+  "test_evaluated": false
+}

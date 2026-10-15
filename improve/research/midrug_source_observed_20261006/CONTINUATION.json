@@ -1,0 +1,181 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "stage": "completed_and_audited",
+  "previous_turn_classification": "progress:full-source experiment archived and component effects verified",
+  "current_turn": "progress:12 source-conditioned observation fits, exact dual-relation deletion and12 new checkpoint replays",
+  "best": {
+    "config": "zero_rec10",
+    "mean_inner_auc": 0.9540070839315687,
+    "mean_inner_ap": 0.9139373370919547,
+    "comparisons": {
+      "control": {
+        "auc": {
+          "mean_delta": 0.001407288876817366,
+          "fold_deltas": [
+            0.002243770392790778,
+            0.0006248706238655144,
+            0.0013532256137958054
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.002112227997089433,
+          "fold_deltas": [
+            0.0033535964361582904,
+            -0.0009196649981563221,
+            0.003902752553266331
+          ]
+        }
+      },
+      "unmasked10": {
+        "auc": {
+          "mean_delta": 0.00029460192139737124,
+          "fold_deltas": [
+            0.0004932259769114822,
+            -3.3498219011329766e-05,
+            0.00042407800629196135
+          ]
+        },
+        "ap": {
+          "mean_delta": -0.0001532443620937777,
+          "fold_deltas": [
+            -0.0004048461911362322,
+            -0.0015667564370843712,
+            0.0015118695419392703
+          ]
+        }
+      },
+      "source_rec10": {
+        "auc": {
+          "mean_delta": 0.0004305990779365961,
+          "fold_deltas": [
+            0.0004258313046964224,
+            0.0005084857860184755,
+            0.0003574801430948904
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0008602674418002702,
+          "fold_deltas": [
+            0.000218293616202625,
+            -4.426271708313223e-05,
+            0.002406771426281318
+          ]
+        }
+      },
+      "positive_rec10": {
+        "auc": {
+          "mean_delta": 0.000448690148642276,
+          "fold_deltas": [
+            0.000980871503257652,
+            3.263929031871449e-05,
+            0.0003325596523504615
+          ]
+        },
+        "ap": {
+          "mean_delta": 0.0008439111139429597,
+          "fold_deltas": [
+            0.0010991319694656498,
+            -0.00032071352946583254,
+            0.0017533149018290617
+          ]
+        }
+      }
+    },
+    "selection_score": -0.0001532443620937777
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "If promoted, freeze original-validation confirmation. Otherwise use matched observation and component evidence to choose a distinct next hypothesis; do not repeat a relation/depth grid automatically.",
+  "component_diagnostics": {
+    "status": "passed",
+    "selection_unchanged": true,
+    "means": [
+      {
+        "config": "zero",
+        "full": {
+          "auc": 0.9524041694240086,
+          "ap": 0.911474017990015
+        },
+        "zero_observation": {
+          "auc": 0.9516466150024127,
+          "ap": 0.9105370006857857
+        },
+        "zero_projection": {
+          "auc": 0.9504876987470214,
+          "ap": 0.9096568984228522
+        },
+        "observation_weight_norm": 1.2358710368474324,
+        "projection_weight_norm": 4.948341528574626,
+        "observation_mean_abs_probability_shift": 0.011678935028612614,
+        "source_mean_abs_probability_shift": 0.06304014722506206
+      },
+      {
+        "config": "zero_rec10",
+        "full": {
+          "auc": 0.9540070839315687,
+          "ap": 0.9139373370919547
+        },
+        "zero_observation": {
+          "auc": 0.953397360220103,
+          "ap": 0.9129244472158242
+        },
+        "zero_projection": {
+          "auc": 0.9525392917344645,
+          "ap": 0.9105219752918569
+        },
+        "observation_weight_norm": 1.8075331846872966,
+        "projection_weight_norm": 5.6344380378723145,
+        "observation_mean_abs_probability_shift": 0.012476847196618715,
+        "source_mean_abs_probability_shift": 0.06298451001445453
+      },
+      {
+        "config": "positive",
+        "full": {
+          "auc": 0.9523849691492524,
+          "ap": 0.9118006804300226
+        },
+        "zero_observation": {
+          "auc": 0.9520391884202529,
+          "ap": 0.9114793859309192
+        },
+        "zero_projection": {
+          "auc": 0.950143194351969,
+          "ap": 0.909316925802727
+        },
+        "observation_weight_norm": 1.3570339679718018,
+        "projection_weight_norm": 4.614174048105876,
+        "observation_mean_abs_probability_shift": 0.002737386773029963,
+        "source_mean_abs_probability_shift": 0.06463123733798663
+      },
+      {
+        "config": "positive_rec10",
+        "full": {
+          "auc": 0.9535583937829264,
+          "ap": 0.9130934259780118
+        },
+        "zero_observation": {
+          "auc": 0.9534110853352405,
+          "ap": 0.9129058489096057
+        },
+        "zero_projection": {
+          "auc": 0.9518863556666264,
+          "ap": 0.9095896434096177
+        },
+        "observation_weight_norm": 1.7537062168121338,
+        "projection_weight_norm": 5.5050272941589355,
+        "observation_mean_abs_probability_shift": 0.00853112464149793,
+        "source_mean_abs_probability_shift": 0.0834140032529831
+      }
+    ]
+  },
+  "component_findings": {
+    "selected_model_full_minus_zero_observation": {
+      "auc": 0.0006097237114657261,
+      "ap": 0.0010128898761304628
+    },
+    "interpretation": "Additional observation messages affect predictions; this intervention cannot undo joint training and does not override the failed paired gate."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "graph-conditioned scorer replacing raw-feature scorer; previous failure kept unchanged",
+  "files": {
+    "improve/research/midrug_soft_paths_20261006/model.py": "b3576a9bc6ea5b896e22faf89d9812e25c58d765709f7d3323e884ec35f9397f",
+    "improve/research/midrug_soft_paths_20261006/selection.json": "137de9b2157d63c0111419139c8108cd524ddc41e4be82ad59f6b73c07c199fe",
+    "release/iNcRD-HG-M1M2M3/incrd_hg_m123/encoder.py": "7e8efa3a928905ce38d8d8ffd530c23b309fd8d692f619f3836fdb9327eaf755",
+    "improve/research/midrug_literature_20261006/raw/ncn_official_model.py": "5b6cfe26074c83d57900f589b37a4ef57fc7b8eb6dff3179fc52e3f6943aa5e3"
+  },
+  "differences": [
+    "Shared first-layer graph states instead of original feature-only states",
+    "Auxiliary/direct query logits use exactly deleted first-layer endpoint states",
+    "Completion rows and columns repaired for each query; middle states unchanged",
+    "Same one-unknown/two-positive path operator, not a new method family"
+  ]
+}

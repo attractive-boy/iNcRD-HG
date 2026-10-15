@@ -1,0 +1,63 @@
+{
+  "goal_status": "active",
+  "completion_proven": false,
+  "previous_goal_turn": "progress: strict scope, 12 grouping runs and audits",
+  "current_turn": "progress: 12 pure-miRNA subgraph runs, 3 reused controls replayed, query deletion and context/fitting diagnostics",
+  "current_target": {
+    "user_clarification": "AUC 和 AP 都增加 0.02",
+    "reference": "original iNcRD-HG, frozen MiDrug split, mean seeds 42/43/44",
+    "minimum_absolute_gain": {
+      "auc": 0.02,
+      "ap": 0.02
+    },
+    "original_test": {
+      "auc": 0.9533929274189016,
+      "ap": 0.9136833737326769
+    },
+    "target_test": {
+      "auc": 0.9733929274189016,
+      "ap": 0.933683373732677
+    },
+    "protected_plmf_test": {
+      "MDR": {
+        "auc": 0.9483092900780825,
+        "ap": 0.9436701561780362
+      },
+      "MDS": {
+        "auc": 0.950897883727978,
+        "ap": 0.9490119743588824
+      }
+    },
+    "external_datasets_allowed": false,
+    "status": "active_not_achieved",
+    "user_scope_clarification": "不要使用 lncRNA 我做的是专门的mirna的",
+    "allowed_node_types": [
+      "miRNA",
+      "drug"
+    ],
+    "lncrna_features_relations_supervision_allowed": false
+  },
+  "inner_selection": {
+    "config": "sg1_struct",
+    "mean_inner_auc": 0.9527972385043689,
+    "mean_inner_ap": 0.9124223545615716,
+    "mean_auc_gain": 0.00019744344961754776,
+    "mean_ap_gain": 0.0005972454667063642,
+    "fold_auc_gains": [
+      0.00042797763183699544,
+      -1.374285908173345e-05,
+      0.00017809557609738125
+    ],
+    "fold_ap_gains": [
+      0.0017998503991990544,
+      -0.00035214244563719355,
+      0.00034402844655723186
+    ],
+    "selection_score": 0.00019744344961754776
+  },
+  "promote_to_outer_validation": false,
+  "no_lncrna": true,
+  "new_candidate_test_evaluations": 0,
+  "processes_expected_live": [],
+  "next_action": "Nested training-only cross-fitted residual learning; never use current inner validation labels to fit residuals; see NEXT_EXPERIMENT.md"
+}

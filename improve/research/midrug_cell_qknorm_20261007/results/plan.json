@@ -1,0 +1,156 @@
+{
+  "configs": {
+    "drug_rec10": {
+      "conditioned": true,
+      "hidden": 32,
+      "chunk_size": 256,
+      "branch_lr": 0.0003,
+      "reconstruction_weight": 10.0
+    },
+    "mean_rec10": {
+      "conditioned": false,
+      "hidden": 32,
+      "chunk_size": 256,
+      "branch_lr": 0.0003,
+      "reconstruction_weight": 10.0
+    }
+  },
+  "folds": [
+    0,
+    1,
+    2
+  ],
+  "seed": 42,
+  "epochs": 800,
+  "minimum_epochs": 300,
+  "patience": 200,
+  "controls": {
+    "control": {
+      "0": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/results/control_f0_s42.json",
+        "metadata_sha256": "991d9cb79419d1714158d5f7edd5ec4ebdf3928ed5d372c4262a25994853030d",
+        "checkpoint_sha256": "c74d3c4d43373234059324472101bef6969b0b7146dc755d4b91587d0bb6bcdc",
+        "probability_sha256": "9db00e8748d7d5fb702cb5f36a33fe6379c58926490559e88f5aacdefe2f55b2"
+      },
+      "1": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/results/control_f1_s42.json",
+        "metadata_sha256": "e74412e70af7d21b5b45261a1cb8fd42f3373d914a5316cbcf45e949d50b35f1",
+        "checkpoint_sha256": "46b6fd0605774d17cc382d300ae389504a3b64a1def17ca7d3e7eca2d924ca38",
+        "probability_sha256": "4a37ce800583533a4f1a5be10ff390a0232169603b278bd3186dd7a1134bbeec"
+      },
+      "2": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_mirna_only_20261006/results/control_f2_s42.json",
+        "metadata_sha256": "1f18dfca5295e136d67df6dd6c7dda29753c5d093a6cd2413444b60e32e51415",
+        "checkpoint_sha256": "2c9636db413aa58be4e5dfb88f11f6647005614d17cc66202106b514d67dfee6",
+        "probability_sha256": "c2a2265d47dc85cc42aa2c0d612e17618874fbe2c9083e51f6dc3c75d6eae0de"
+      }
+    },
+    "unmasked10": {
+      "0": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f0_s42.json",
+        "metadata_sha256": "8f12f8c098c497d270cbcca3b1f22f2306dd9f61465fafd5b9936cb9a7cff131",
+        "checkpoint_sha256": "a11576369b5dd2d40f803403d11d46e0762b4668644651d363d5bbbaef495344",
+        "probability_sha256": "6d339fac8a5489b62bfa16ee1bacf918baad4bfefb36d98777156d4c206bb78a"
+      },
+      "1": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f1_s42.json",
+        "metadata_sha256": "e2a54497f269b0e1b3524795c1c8c3ed1f48ba726e6cc62e1999edd3f029620f",
+        "checkpoint_sha256": "dcbfcf183485cea00d9eef2229bde39e8fed6ed8adcb6c25aad4ced6543d730c",
+        "probability_sha256": "23ba91f6769535c946cf58dec176dc22881d7273f8088389c12d73e038217901"
+      },
+      "2": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/phase2/results/unmasked10_f2_s42.json",
+        "metadata_sha256": "abd5bd99263378a07394fa2a9ef2dad71b6b4dfaaefe0fd546aa864fbc075c36",
+        "checkpoint_sha256": "75f1b60da781be28d03ac16359c550b17c79aa5bbfd9e06cd7499e54d208544b",
+        "probability_sha256": "2b5ec3c419ba679cb36b4645eb413d046e3d5dff1cfce1e370bb2ead8a9ec1a4"
+      }
+    },
+    "dot_drug_rec10": {
+      "0": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_tokens_20261007/results/drug_rec10_f0_s42.json",
+        "metadata_sha256": "1b14ba7d83cd58cadc970d9c4de33b47ef65e78f00a83813de63c0fddd2dceff",
+        "checkpoint_sha256": "21ec82db8fbca4cb5da83aa308b97cfa94559fc59e294e76ad3a8764f292d8af",
+        "probability_sha256": "9813ef4e4a593ce2ae91f4e53c639e38ba7fef6eea19d555d6c5ccef0f3feaac"
+      },
+      "1": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_tokens_20261007/results/drug_rec10_f1_s42.json",
+        "metadata_sha256": "b14b0ca306654a625fa43c25ba3e9a1abda886aa50b91e1ad4b36681e5cd711b",
+        "checkpoint_sha256": "f1671fd2aee75de42bf6a5451df9f5cec6406ad5527cb7bb03c32a69c4aa3f1d",
+        "probability_sha256": "ef89cc6059242fd8b2ac49ea2f618632d97cc03066174ea15dea108c1615f41c"
+      },
+      "2": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_tokens_20261007/results/drug_rec10_f2_s42.json",
+        "metadata_sha256": "6215b861b1b76bf87b0e8cb87cf4ec1d3e2dea91a27d38eaf003ab77bc554dcb",
+        "checkpoint_sha256": "9f6ff7811cae288b7ea4c30d460435cba819c123c799f681850b06ffd2002a7e",
+        "probability_sha256": "493af0c8f2ddc1e64cb29721ee09f09220582e193cef263ca3448a22d1d0ce17"
+      }
+    },
+    "dot_mean_rec10": {
+      "0": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_tokens_20261007/results/mean_rec10_f0_s42.json",
+        "metadata_sha256": "1cf83f42cd343e6f5e6f0945c9db4a11701834594936f9db0f0279f11cae2ead",
+        "checkpoint_sha256": "daa15c294b11ef002ef2a254340b7342f1960f5b5a4d912a56671c81bef52362",
+        "probability_sha256": "7e69cd52d00c0141104e70589763df40ada55dfa9ef0916c22563130f59e1238"
+      },
+      "1": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_tokens_20261007/results/mean_rec10_f1_s42.json",
+        "metadata_sha256": "76709e278b7c525443a03df6a63590e9bfca383b2bb1f687a04df0235e4236f6",
+        "checkpoint_sha256": "850f6f028c6ae1b16578a9f7920d5430f3118884228c73c0a55a52d47e6aa631",
+        "probability_sha256": "5ba1db05295ce55148a9d09643f829c2927922c28801538e054c228ff8e4ff49"
+      },
+      "2": {
+        "path": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_tokens_20261007/results/mean_rec10_f2_s42.json",
+        "metadata_sha256": "44e66a831b9498405b1fc8431df25f5ccec05b1d387d5988763f2f61429e8259",
+        "checkpoint_sha256": "92d5f3d62b651bbc134193c3e846cfe8cb0b201362c0d156c8a7a0b5c2245967",
+        "probability_sha256": "bd160bea112e8cee04ea1beec6dd007270e6da49ec530c59cee358d1ef5c285a"
+      }
+    }
+  },
+  "eligible_candidates": [
+    "drug_rec10"
+  ],
+  "comparators": {
+    "drug_rec10": [
+      "control",
+      "unmasked10",
+      "dot_drug_rec10",
+      "mean_rec10"
+    ]
+  },
+  "source_hashes": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_qknorm_20261007/common.py": "0c0bd3bbb7a2e4b3e0b903d7d6512b471b16c9dba96cf0ce9f92db59095bdb70",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_qknorm_20261007/model.py": "00f7ccdd8a6db852dac77b1ffb3c6de054fa35e36a94af38d2f719e1486cf683",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_qknorm_20261007/train.py": "b59965f761e6059c4d76d13518dd295b1c795897fbb7e724c344ac832388b4ba",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_qknorm_20261007/launch.py": "7d6d32bb496534c0f5d8dddf57e94d1128339218b97fbd9622dd1f072572f183",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_qknorm_20261007/check.py": "6fd2e6c97d7128ab53bb82738cc703399ed6dafbb18dcc31addb0b8eb782352a",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_subgraph_20261006/common.py": "2f1e6622c5ff3c9f4048b4047f74249c196028897dd7f7d5c98171fa37421f47",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_masked_reconstruction_20261006/model.py": "add0aa09a917f33ab104f097f6fe635246afaeda23029b64948ae5aedff2bd81",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/pair_channels.py": "d3d9ccd5a872a4aa64ade4ca454a8a86f5c1a9785cc63ecddbd9558ae91f480e",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/adapter.py": "94bd2976dc121bd93991191e6f577d5b3af4832681db649a2916f1ada45a4e90",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/model.py": "ccec94eb49c8ee848c2d39d913752dc6284140dde2c9362696944f9c2a458368",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/config.py": "805cca85435792f17c7e5e2b88903c71e656ea9f788f3a0f5c94e83953cba98e",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/engine.py": "e40eec70c73cf1307cffac5411fcea5bc3f9b39890529a87b35545392136490c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/__init__.py": "1f258c2e4f152ad4c4f8159512f9bae29e2b98c232fe56c71ea90cea40bfb43c",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/encoder.py": "7e8efa3a928905ce38d8d8ffd530c23b309fd8d692f619f3836fdb9327eaf755",
+    "/data1/licheng/incrd-hg/iNcRD-HG/release/iNcRD-HG-M1M2M3/incrd_hg_m123/data.py": "d4b1c2764b49d05f74233e49112a520c540b3276f894243d65d4e70778b13a29"
+  },
+  "graph_sha256": "d820c480082b1cb2eeba7e1c9cf5d2f79bf0e86e582a48a4cbf9dda761729ec6",
+  "data_sha256": "996df3c7fb99b85100e0961b5b5f973ab6171fa53de1a2184274327e510951d3",
+  "evidence_hashes": {
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_qknorm_20261007/README.md": "40d79956d73e45da4d3bdacd4fd85f590729a9e9dd7637f44b99710590855633",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_qknorm_20261007/shrinkage_precheck.json": "9744905a9fcaeddbe0a8c5fef8d6840e482cc458d691fb704354e69313ea55bc",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_qknorm_20261007/precheck.py": "a75ea093e03ff880bb457e53dfe84c8c1d4cdf2097a2601ade2f6cc844322056",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_qknorm_20261007/initial_checks.json": "e3f86e620cbd7a39abb03f1390574acc41f324d995169a77ce1d7da4392d8314",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_tokens_20261007/archive_recheck.json": "20a6bc73d4c11a611c1fae33fb1e85268d92eb7481209912c85937dfdd6b51f3",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_tokens_20261007/selection.json": "bc3c28d41faa0d29ff179cf3dc795b99356b24b2632825803ec47c9b25b75a53",
+    "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_cell_tokens_20261007/verification.json": "25e21caa204523843a05d65ef9e985f441849defba26c98ff02b66bab11e09f3"
+  },
+  "mechanism": "sqrt(32) times cosine(query,key), epsilon1e-8; all938 original columns retained",
+  "checkpoint_selection": "mean(inner AUC, inner AP)",
+  "promotion_minimum_both_gains_over_each_control": 0.002,
+  "new_fits": 6,
+  "immutable_reused_controls": 12,
+  "no_lncrna": true,
+  "outer_validation_evaluated": false,
+  "test_evaluated": false
+}

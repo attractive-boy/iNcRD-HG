@@ -1,0 +1,29 @@
+{
+  "status": "failed_protocol_audit",
+  "cause": "RMSprop zero_grad default set_to_none=False retained zero decoder gradients after decay weight reached zero; weight decay still updated the decoder at step100.",
+  "affected_configs": [
+    "decay"
+  ],
+  "folds": [
+    0,
+    1,
+    2
+  ],
+  "expected_decoder_final_updates": 99,
+  "observed_decoder_final_updates": 100,
+  "selected_stage_epochs": {
+    "decay_f2_s42": 0,
+    "keep_f1_s42": 0,
+    "off_f0_s42": 0,
+    "off_f1_s42": 0,
+    "off_f2_s42": 0,
+    "keep_f0_s42": 0,
+    "decay_f0_s42": 0,
+    "decay_f1_s42": 0,
+    "keep_f2_s42": 0
+  },
+  "result_promoted": false,
+  "repair_directory": "/data1/licheng/incrd-hg/iNcRD-HG/improve/research/midrug_reconstruction_finetune_v2_20261007",
+  "repair": "Set optimizer.zero_grad(set_to_none=True); add step99-to100 and100-to101 decoder parameter/state invariance checks; repeat the same frozen nine-arm protocol without tuning.",
+  "no_original_validation_or_test": true
+}
